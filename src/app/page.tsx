@@ -50,7 +50,7 @@ function Section({ children, className = "", glass = false, ...props }: { childr
 
 export default function Page() {
   return (
-    <main className="min-h-screen h-screen flex flex-col items-center justify-between relative text-white font-sans overflow-y-auto scroll-snap-y-mandatory">
+    <main className="min-h-screen h-screen flex flex-col items-center justify-between relative text-white font-sans overflow-y-auto">
       <DeepCosmicBackground />
       <HeroSection />
       <WhatIsSection />

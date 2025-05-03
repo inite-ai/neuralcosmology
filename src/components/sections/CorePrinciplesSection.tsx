@@ -33,14 +33,14 @@ export default function CorePrinciplesSection() {
             background: { color: "transparent" },
             fpsLimit: 60,
             particles: {
-              number: { value: 40, density: { enable: true, area: 800 } },
-              color: { value: ["#ffffff", "#a5b4fc", "#4f56ff"] },
+              number: { value: 70, density: { enable: true, area: 800 } },
+              color: { value: ["#ffffff", "#a5b4fc", "#4f56ff", "#c4b5fd"] },
               shape: { type: "circle" },
-              opacity: { value: 0.7 },
-              size: { value: { min: 1, max: 3 } },
+              opacity: { value: 0.9 },
+              size: { value: { min: 1.5, max: 4 } },
               move: {
                 enable: true,
-                speed: 0.3,
+                speed: 0.5,
                 direction: "none",
                 random: false,
                 straight: false,
@@ -49,14 +49,14 @@ export default function CorePrinciplesSection() {
               },
               links: {
                 enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.2,
-                width: 1,
+                distance: 180,
+                color: "#6366f1",
+                opacity: 0.4,
+                width: 1.2,
                 triangles: {
                   enable: true,
                   color: "#4f56ff",
-                  opacity: 0.02
+                  opacity: 0.05
                 }
               }
             },
@@ -65,20 +65,27 @@ export default function CorePrinciplesSection() {
                 onHover: {
                   enable: true,
                   mode: "grab"
+                },
+                onClick: {
+                  enable: true,
+                  mode: "push"
                 }
               },
               modes: {
                 grab: {
-                  distance: 140,
+                  distance: 180,
                   links: {
-                    opacity: 0.5
+                    opacity: 0.8
                   }
+                },
+                push: {
+                  quantity: 4
                 }
               }
             },
             detectRetina: true
           }}
-          className="absolute inset-0 w-full h-full -z-20 pointer-events-none"
+          className="absolute inset-0 w-full h-full z-0 pointer-events-auto"
         />
       )}
       {/* Subtle cosmic timeline line */}

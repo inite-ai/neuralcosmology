@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const commandments = [
   {
@@ -93,13 +95,71 @@ const commandments = [
 
 export default function TabletSection() {
   const [active, setActive] = useState(4);
+  const [init, setInit] = useState(false);
   const visibleCount = 3; // center + 2 neighbors
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
 
   const handlePrev = () => setActive((prev) => Math.max(prev - 1, 0));
   const handleNext = () => setActive((prev) => Math.min(prev + 1, commandments.length - 1));
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-br from-[#181c2e] via-[#232946] to-[#10182a] overflow-hidden scroll-snap-align-start">
+      {/* Cosmic aurora/nebula effect */}
+      {init && (
+        <Particles
+          id="tablet-particles"
+          options={{
+            fullScreen: false,
+            background: { color: "transparent" },
+            fpsLimit: 60,
+            particles: {
+              number: { value: 200, density: { enable: true, area: 900 } },
+              color: { value: ["#a78bfa", "#818cf8", "#c084fc", "#2563eb", "#ffffff"] },
+              shape: { type: "circle" },
+              opacity: { value: 0.8 },
+              size: { value: { min: 2, max: 12 } },
+              move: {
+                enable: true,
+                speed: 0.5,
+                direction: "none",
+                random: true,
+                straight: false,
+                outModes: { default: "out" },
+                attract: { enable: false }
+              },
+              life: {
+                duration: { value: 5 },
+                count: 1
+              },
+              tilt: {
+                enable: true,
+                value: { min: 0, max: 360 },
+                animation: {
+                  enable: true,
+                  speed: 30
+                }
+              },
+              roll: {
+                enable: true,
+                speed: 15
+              },
+              wobble: {
+                enable: true,
+                distance: 10,
+                speed: 10
+              }
+            },
+            detectRetina: true,
+          }}
+          className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        />
+      )}
+      {/* Glassy cosmic slab */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

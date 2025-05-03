@@ -1,10 +1,93 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 export default function CallToClaritySection() {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#10182a] via-[#232946] to-[#181c2e] overflow-hidden scroll-snap-align-start">
+      {/* Cosmic portal/vortex effect */}
+      {init && (
+        <Particles
+          id="portal-particles"
+          options={{
+            fullScreen: false,
+            background: { color: "transparent" },
+            fpsLimit: 60,
+            particles: {
+              number: { value: 300, density: { enable: true, area: 800 } },
+              color: { value: ["#60a5fa", "#ffffff", "#93c5fd", "#1e40af", "#38bdf8"] },
+              shape: { type: "circle" },
+              opacity: { value: { min: 0.3, max: 0.9 } },
+              size: { value: { min: 1.5, max: 4 } },
+              move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: false,
+                straight: false,
+                outModes: { default: "out" },
+                path: {
+                  enable: true,
+                  delay: {
+                    value: 0.1
+                  },
+                  options: {
+                    size: 5,
+                    draw: false,
+                    increment: 0.001
+                  },
+                  generator: "curvesPathGenerator"
+                },
+                attract: {
+                  enable: true,
+                  distance: 100,
+                  rotate: { x: 600, y: 1200 }
+                }
+              },
+              zIndex: {
+                value: {
+                  min: 0,
+                  max: 50
+                },
+                opacityRate: 0.5
+              }
+            },
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: "repulse"
+                },
+                onClick: {
+                  enable: true,
+                  mode: "push"
+                }
+              },
+              modes: {
+                repulse: {
+                  distance: 150
+                },
+                push: {
+                  quantity: 10
+                }
+              }
+            },
+            detectRetina: true
+          }}
+          className="absolute inset-0 w-full h-full z-0 pointer-events-auto"
+        />
+      )}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
