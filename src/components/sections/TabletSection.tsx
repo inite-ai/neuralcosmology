@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -104,6 +104,20 @@ export default function TabletSection() {
     }).then(() => setInit(true));
   }, []);
 
+  // Add keyboard navigation
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      setActive((prev) => Math.max(prev - 1, 0));
+    } else if (e.key === "ArrowRight") {
+      setActive((prev) => Math.min(prev + 1, commandments.length - 1));
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
   const handlePrev = () => setActive((prev) => Math.max(prev - 1, 0));
   const handleNext = () => setActive((prev) => Math.min(prev + 1, commandments.length - 1));
 
@@ -178,10 +192,11 @@ export default function TabletSection() {
           <button
             onClick={handlePrev}
             disabled={active === 0}
-            className="absolute left-0 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-blue-200 disabled:opacity-30 disabled:pointer-events-none transition"
+            className="absolute left-4 sm:left-2 lg:left-0 z-20 p-3 rounded-full bg-white/5 hover:bg-white/20 text-blue-200 backdrop-blur-md border border-white/10 shadow-lg disabled:opacity-30 disabled:pointer-events-none transition-all group"
             aria-label="Previous"
           >
-            <ChevronLeft size={32} />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse-glow"></div>
+            <ChevronLeft size={30} className="group-hover:scale-110 transition-transform" />
           </button>
           <div className="flex items-center justify-center w-full gap-0 md:gap-8" style={{ perspective: 1200 }}>
             {commandments.map((cmd, i) => {
@@ -246,10 +261,11 @@ export default function TabletSection() {
           <button
             onClick={handleNext}
             disabled={active === commandments.length - 1}
-            className="absolute right-0 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-blue-200 disabled:opacity-30 disabled:pointer-events-none transition"
+            className="absolute right-4 sm:right-2 lg:right-0 z-20 p-3 rounded-full bg-white/5 hover:bg-white/20 text-blue-200 backdrop-blur-md border border-white/10 shadow-lg disabled:opacity-30 disabled:pointer-events-none transition-all group"
             aria-label="Next"
           >
-            <ChevronRight size={32} />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse-glow"></div>
+            <ChevronRight size={30} className="group-hover:scale-110 transition-transform" />
           </button>
         </div>
       </motion.div>

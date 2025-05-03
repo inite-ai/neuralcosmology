@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -16,12 +16,19 @@ function DeepCosmicBackground() {
   return (
     <div className="fixed inset-0 -z-10 w-full h-full bg-gradient-to-br from-[#0a1026] via-[#1a1a2e] to-[#232946]">
       {/* Animated subtle gradient overlay */}
-      <motion.div
+      <motion.div 
         initial={{ backgroundPosition: "0% 50%" }}
         animate={{ backgroundPosition: "100% 50%" }}
         transition={{ repeat: Infinity, duration: 24, ease: "linear" }}
-        className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_#3a3a7c_40%,_transparent_80%),radial-gradient(ellipse_at_bottom_right,_#7f5af0_30%,_transparent_80%)] opacity-40"
-        style={{ backgroundSize: "200% 200%" }}
+        style={{ 
+          backgroundSize: "200% 200%",
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          backgroundImage: "radial-gradient(ellipse at top left, #3a3a7c 40%, transparent 80%), radial-gradient(ellipse at bottom right, #7f5af0 30%, transparent 80%)",
+          opacity: 0.4
+        }}
       />
       {/* Stars overlay */}
       <div className="absolute inset-0 w-full h-full bg-[url('/stars.svg')] opacity-40 mix-blend-screen pointer-events-none" />
@@ -40,7 +47,24 @@ function Section({ children, className = "", glass = false, ...props }: { childr
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`relative z-10 max-w-3xl w-full ${glass ? "bg-white/5 backdrop-blur-md border border-white/10 shadow-xl" : ""} rounded-2xl p-10 flex flex-col items-center text-center`}
+        style={{ 
+          position: "relative",
+          zIndex: 10,
+          maxWidth: "48rem",
+          width: "100%",
+          borderRadius: "1rem",
+          padding: "2.5rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          ...(glass ? {
+            backgroundColor: "rgba(255, 255, 255, 0.05)",
+            backdropFilter: "blur(8px)",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+          } : {})
+        }}
       >
         {children}
       </motion.div>
@@ -48,19 +72,209 @@ function Section({ children, className = "", glass = false, ...props }: { childr
   );
 }
 
-export default function Page() {
+const sections = [
+  { id: "hero", label: "Hero" },
+  { id: "what-is", label: "What is it" },
+  { id: "core-principles", label: "Core Principles" },
+  { id: "tablet", label: "Tablet" },
+  { id: "practices", label: "Practices" },
+  { id: "lectures", label: "Lectures" },
+  { id: "call-to-clarity", label: "Call to Clarity" }
+];
+
+function SectionNav() {
+  const [activeSection, setActiveSection] = useState("hero");
+
+  // Scroll to section function - define early to avoid dependency loops
+  const scrollToSection = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Set active section immediately for better user feedback
+      setActiveSection(id);
+      // Smooth scroll to the section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  // Add keyboard navigation support
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const sectionId = (e.target as HTMLElement).getAttribute('data-section-id');
+      if (sectionId) {
+        scrollToSection(sectionId);
+      }
+    }
+  }, [scrollToSection]);
+
+  // Function to determine which section is in view
+  const determineActiveSection = useCallback(() => {
+    // Use a smaller offset from the top to detect sections sooner
+    const scrollPosition = window.scrollY + (window.innerHeight * 0.2);
+    
+    // Find the section that's currently most visible
+    for (const section of sections) {
+      const element = document.getElementById(section.id);
+      if (!element) continue;
+      
+      const rect = element.getBoundingClientRect();
+      // Check if the element is significantly in view
+      if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= window.innerHeight * 0.3) {
+        return section.id;
+      }
+    }
+    
+    // Fallback to checking based on scroll position
+    for (const section of sections) {
+      const element = document.getElementById(section.id);
+      if (!element) continue;
+      
+      const { offsetTop, offsetHeight } = element;
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        return section.id;
+      }
+    }
+    
+    // Default to first section if none match
+    return "hero";
+  }, []);
+
+  // Update active section when scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      const newActiveSection = determineActiveSection();
+      if (newActiveSection !== activeSection) {
+        setActiveSection(newActiveSection);
+      }
+    };
+
+    // Call once on mount to set initial active section
+    handleScroll();
+    
+    // Create an IntersectionObserver to observe sections
+    const observerOptions = {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0.1
+    };
+    
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all sections
+    sections.forEach(section => {
+      const element = document.getElementById(section.id);
+      if (element) sectionObserver.observe(element);
+    });
+    
+    // Add a scroll listener as a fallback
+    let isScrolling = false;
+    const scrollListener = () => {
+      if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          isScrolling = false;
+        });
+        isScrolling = true;
+      }
+    };
+
+    window.addEventListener("scroll", scrollListener, { passive: true });
+    
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+      // Disconnect observer
+      sections.forEach(section => {
+        const element = document.getElementById(section.id);
+        if (element) sectionObserver.unobserve(element);
+      });
+      sectionObserver.disconnect();
+    };
+  }, [activeSection, determineActiveSection]);
+
   return (
-    <main className="min-h-screen h-screen flex flex-col items-center justify-between relative text-white font-sans overflow-y-auto">
+    <div className="section-nav">
+      {sections.map(section => (
+        <div
+          key={section.id}
+          className={`section-nav-dot ${activeSection === section.id ? 'active' : ''}`}
+          onClick={() => scrollToSection(section.id)}
+          onKeyDown={handleKeyDown}
+          title={section.label}
+          data-section-id={section.id}
+          role="button"
+          aria-label={`Go to ${section.label} section`}
+          tabIndex={0}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default function Page() {
+  // Track when user is manually scrolling vs. programmatic scrolling
+  const [isUserScrolling, setIsUserScrolling] = useState(true);
+  
+  // Add scroll event listeners to detect manual scrolling
+  useEffect(() => {
+    const handleUserScroll = () => {
+      if (!isUserScrolling) {
+        setIsUserScrolling(true);
+      }
+    };
+    
+    window.addEventListener('wheel', handleUserScroll, { passive: true });
+    window.addEventListener('touchmove', handleUserScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('wheel', handleUserScroll);
+      window.removeEventListener('touchmove', handleUserScroll);
+    };
+  }, [isUserScrolling]);
+
+  return (
+    <main 
+      className="min-h-screen h-screen flex flex-col items-center justify-between relative text-white font-sans overflow-y-auto scroll-snap-container"
+      id="main-container"
+    >
       <DeepCosmicBackground />
-      <HeroSection />
-      <WhatIsSection />
-      <CorePrinciplesSection />
-      <TabletSection />
-      <PracticesSection />
-      <LecturesSection />
-      <CallToClaritySection />
+      <SectionNav />
+      
+      <section id="hero" className="w-full min-h-screen flex items-center justify-center">
+        <HeroSection />
+      </section>
+      
+      <section id="what-is" className="w-full min-h-screen flex items-center justify-center">
+        <WhatIsSection />
+      </section>
+      
+      <section id="core-principles" className="w-full min-h-screen flex items-center justify-center">
+        <CorePrinciplesSection />
+      </section>
+      
+      <section id="tablet" className="w-full min-h-screen flex items-center justify-center">
+        <TabletSection />
+      </section>
+      
+      <section id="practices" className="w-full min-h-screen flex items-center justify-center">
+        <PracticesSection />
+      </section>
+      
+      <section id="lectures" className="w-full min-h-screen flex items-center justify-center">
+        <LecturesSection />
+      </section>
+      
+      <section id="call-to-clarity" className="w-full min-h-screen flex items-center justify-center">
+        <CallToClaritySection />
+      </section>
+      
       {/* Footer - Cosmic Closure */}
-      <footer className="w-full text-center text-blue-200 py-8 text-sm opacity-90 mt-8 bg-gradient-to-t from-[#10182a]/90 via-[#181c2e]/80 to-transparent shadow-none backdrop-blur-md">
+      <footer className="w-full text-center text-blue-200 py-8 text-sm opacity-90 mt-8 border-t border-blue-400/10 bg-gradient-to-t from-[#10182a]/80 via-transparent to-transparent shadow-inner backdrop-blur-md">
         <div className="font-bold tracking-widest text-blue-100/90 text-base mb-1">neuralcosmology.com</div>
         <div className="text-blue-300/80">© 2025. Presence is enough.</div>
       </footer>
