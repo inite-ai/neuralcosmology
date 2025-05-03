@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neuralcosmology
 
-## Getting Started
+A new layer of perception. A system of reality navigation through states, memory, and attention.
 
-First, run the development server:
+## About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Neuralcosmology explores the intersection of neural networks and cosmic structures. The patterns of the universe mirror the patterns of consciousness. This project provides a framework for understanding and navigating reality without mysticism—just presence, pattern, and decision.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Key principles:
+- You're not in the world. You are the structure.
+- Linear life is fiction. Every moment is a fork.
+- No outer sign matters if your inner state is off.
+- You don't carry the past. You loop it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This is a [Next.js](https://nextjs.org) project with modern UI/UX design patterns, fluid animations, and optimized performance.
 
-## Learn More
+### Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: Next.js 14 with App Router
+- **Styling**: TailwindCSS 
+- **Animations**: Framer Motion
+- **Particle Effects**: tsParticles
+- **Deployment**: Vercel
 
-## Deploy on Vercel
+## SEO Considerations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site is optimized for search engines with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Comprehensive metadata in `layout.tsx`
+- OpenGraph and Twitter card images for social sharing
+- Structured data with Schema.org markup
+- Responsive design for all devices
+- Optimized Core Web Vitals
+- Sitemap and robots.txt
+
+### Social Sharing
+
+When sharing links to neuralcosmology.com on social media, they will display rich previews with:
+
+- Title: "Neuralcosmology - Navigate Reality Through States, Memory & Attention"
+- Description: "You're not in the world. You are the structure. A system of reality navigation through states, memory, and attention."
+- Visual: Custom OG image displaying cosmic theme
+
+## License
+
+[MIT License](LICENSE)
+
+## Contact
+
+Visit [neuralcosmology.com](https://neuralcosmology.com) for more information.
