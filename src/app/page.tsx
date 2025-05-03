@@ -24,8 +24,8 @@ function DeepCosmicBackground() {
           backgroundSize: "200% 200%",
           position: "absolute",
           inset: 0,
-          width: "100%",
-          height: "100%",
+          width: "100vw",
+          height: "100vh",
           backgroundImage: "radial-gradient(ellipse at top left, #3a3a7c 40%, transparent 80%), radial-gradient(ellipse at bottom right, #7f5af0 30%, transparent 80%)",
           opacity: 0.4
         }}
@@ -231,53 +231,68 @@ export default function Page() {
     window.addEventListener('wheel', handleUserScroll, { passive: true });
     window.addEventListener('touchmove', handleUserScroll, { passive: true });
     
+    // Add keyboard key handling to scroll to footer with End key
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'End') {
+        document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' });
+      } else if (e.key === 'Home') {
+        document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    
     return () => {
       window.removeEventListener('wheel', handleUserScroll);
       window.removeEventListener('touchmove', handleUserScroll);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isUserScrolling]);
 
   return (
     <main 
-      className="min-h-screen h-screen flex flex-col items-center justify-between relative text-white font-sans overflow-y-auto scroll-snap-container"
+      className="w-full min-h-screen flex flex-col items-center relative text-white font-sans overflow-y-auto scroll-snap-container"
       id="main-container"
     >
       <DeepCosmicBackground />
       <SectionNav />
       
-      <section id="hero" className="w-full min-h-screen flex items-center justify-center">
+      <section id="hero" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
         <HeroSection />
       </section>
       
-      <section id="what-is" className="w-full min-h-screen flex items-center justify-center">
+      <section id="what-is" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
         <WhatIsSection />
       </section>
       
-      <section id="core-principles" className="w-full min-h-screen flex items-center justify-center">
+      <section id="core-principles" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
         <CorePrinciplesSection />
       </section>
       
-      <section id="tablet" className="w-full min-h-screen flex items-center justify-center">
+      <section id="tablet" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
         <TabletSection />
       </section>
       
-      <section id="practices" className="w-full min-h-screen flex items-center justify-center">
+      <section id="practices" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
         <PracticesSection />
       </section>
       
-      <section id="lectures" className="w-full min-h-screen flex items-center justify-center">
+      <section id="lectures" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
         <LecturesSection />
       </section>
       
-      <section id="call-to-clarity" className="w-full min-h-screen flex items-center justify-center">
+      {/* Call to Clarity section with footer embedded */}
+      <section id="call-to-clarity" className="w-full min-h-screen flex flex-col items-center justify-between scroll-snap-align-start pb-0">
         <CallToClaritySection />
+        
+        {/* Footer embedded within Call to Clarity section */}
+        <div className="w-full text-center text-blue-200 py-6 text-sm opacity-90 border-t border-blue-400/10 bg-gradient-to-t from-[#10182a]/80 via-transparent to-transparent shadow-inner backdrop-blur-md z-20">
+          <div className="flex flex-col items-center justify-center py-2">
+            <div className="font-bold tracking-widest text-blue-100/90 text-base mb-1">neuralcosmology.com</div>
+            <div className="text-blue-300/80">© 2025. Presence is enough.</div>
+          </div>
+        </div>
       </section>
-      
-      {/* Footer - Cosmic Closure */}
-      <footer className="w-full text-center text-blue-200 py-8 text-sm opacity-90 mt-8 border-t border-blue-400/10 bg-gradient-to-t from-[#10182a]/80 via-transparent to-transparent shadow-inner backdrop-blur-md">
-        <div className="font-bold tracking-widest text-blue-100/90 text-base mb-1">neuralcosmology.com</div>
-        <div className="text-blue-300/80">© 2025. Presence is enough.</div>
-      </footer>
     </main>
   );
 }
