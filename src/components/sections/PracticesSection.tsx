@@ -1,6 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 const practices = [
   "Spot your loops.",
@@ -12,8 +15,60 @@ const practices = [
 ];
 
 export default function PracticesSection() {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#10182a] via-[#232946] to-[#181c2e] overflow-hidden scroll-snap-align-start">
+      {/* Dense particle cloud effect */}
+      {init && (
+        <Particles
+          id="practices-particles"
+          options={{
+            fullScreen: false,
+            background: { color: "transparent" },
+            fpsLimit: 120,
+            particles: {
+              number: { value: 600, density: { enable: true, area: 1000 } },
+              color: { 
+                value: ["#3b82f6", "#1e40af", "#f97316", "#0c4a6e"] 
+              },
+              shape: { type: "circle" },
+              opacity: { value: { min: 0.1, max: 0.8 } },
+              size: { value: { min: 1, max: 4 } },
+              move: {
+                enable: true,
+                speed: 1,
+                direction: "none",
+                random: true,
+                straight: false,
+                outModes: { default: "out" },
+                trail: {
+                  enable: true,
+                  length: 4,
+                  fillColor: "#000"
+                }
+              },
+              zIndex: {
+                value: {
+                  min: 0,
+                  max: 100
+                },
+                opacityRate: 0.5,
+                sizeRate: 1,
+                velocityRate: 2
+              }
+            },
+            detectRetina: true
+          }}
+          className="absolute inset-0 w-full h-full -z-20 pointer-events-none"
+        />
+      )}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

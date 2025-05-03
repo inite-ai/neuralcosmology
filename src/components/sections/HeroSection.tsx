@@ -26,40 +26,44 @@ export default function HeroSection() {
             background: { color: "transparent" },
             fpsLimit: 60,
             particles: {
-              number: {
-                value: 80,
-                density: { enable: true, area: 800 },
-              },
-              color: { value: ["#7f5af0", "#3a3a7c", "#ffffff"] },
+              number: { value: 300, density: { enable: true, area: 800 } },
+              color: { value: ["#8a7ffa", "#4c6bff", "#ffffff", "#c89bff"] },
               shape: { type: "circle" },
-              opacity: {
-                value: 0.5,
-                animation: { enable: true, speed: 0.5, sync: false },
+              opacity: { 
+                value: 0.8,
+                animation: { enable: true, speed: 0.5, sync: false }
               },
-              size: {
-                value: { min: 1, max: 3 },
-                animation: { enable: true, speed: 2, sync: false },
+              size: { 
+                value: { min: 1, max: 6 },
+                animation: { enable: true, speed: 1, sync: false }
               },
               move: {
                 enable: true,
-                speed: 0.6,
+                speed: 0.8,
                 direction: "none",
                 random: true,
                 straight: false,
                 outModes: { default: "out" },
-                attract: { enable: false },
+                attract: { enable: true, rotate: 500 }
               },
               links: {
                 enable: true,
-                distance: 120,
-                color: "#7f5af0",
-                opacity: 0.15,
-                width: 1,
+                distance: 150,
+                color: "#8a7ffa",
+                opacity: 0.3,
+                width: 1
               },
+              twinkle: {
+                particles: {
+                  enable: true,
+                  frequency: 0.05,
+                  opacity: 1
+                }
+              }
             },
-            detectRetina: true,
+            detectRetina: true
           }}
-          className="absolute inset-0 w-full h-full -z-20 pointer-events-none"
+          className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         />
       )}
       {/* Animated cosmic gradient overlay */}

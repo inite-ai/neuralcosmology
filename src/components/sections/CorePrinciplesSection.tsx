@@ -1,5 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
+import { Particles, initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 const axioms = [
   "Five axioms. No debate.",
@@ -11,8 +14,73 @@ const axioms = [
 ];
 
 export default function CorePrinciplesSection() {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#10182a] via-[#181c2e] to-[#232946] overflow-hidden scroll-snap-align-start">
+      {/* Constellation network particle effect */}
+      {init && (
+        <Particles
+          id="core-particles"
+          options={{
+            fullScreen: false,
+            background: { color: "transparent" },
+            fpsLimit: 60,
+            particles: {
+              number: { value: 40, density: { enable: true, area: 800 } },
+              color: { value: ["#ffffff", "#a5b4fc", "#4f56ff"] },
+              shape: { type: "circle" },
+              opacity: { value: 0.7 },
+              size: { value: { min: 1, max: 3 } },
+              move: {
+                enable: true,
+                speed: 0.3,
+                direction: "none",
+                random: false,
+                straight: false,
+                outModes: { default: "bounce" },
+                attract: { enable: false }
+              },
+              links: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.2,
+                width: 1,
+                triangles: {
+                  enable: true,
+                  color: "#4f56ff",
+                  opacity: 0.02
+                }
+              }
+            },
+            interactivity: {
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: "grab"
+                }
+              },
+              modes: {
+                grab: {
+                  distance: 140,
+                  links: {
+                    opacity: 0.5
+                  }
+                }
+              }
+            },
+            detectRetina: true
+          }}
+          className="absolute inset-0 w-full h-full -z-20 pointer-events-none"
+        />
+      )}
       {/* Subtle cosmic timeline line */}
       <div className="absolute left-1/2 top-0 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400/30 to-purple-400/0 opacity-40 rounded-full -z-10" />
       <motion.div
