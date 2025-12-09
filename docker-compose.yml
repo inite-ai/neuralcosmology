@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  neurocosmology:
+    image: ${DOCKERHUB_USERNAME}/neurocosmology:latest
+    container_name: neurocosmology
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_SITE_URL=https://neuralcosmology.com
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.neurocosmology.rule=Host(`neuralcosmology.com`) || Host(`www.neuralcosmology.com`)"
+      - "traefik.http.routers.neurocosmology.entrypoints=websecure"
+      - "traefik.http.routers.neurocosmology.tls=true"
+      - "traefik.http.routers.neurocosmology.tls.certresolver=letsencrypt"
+      - "traefik.http.services.neurocosmology.loadbalancer.server.port=3000"
+      - "traefik.http.routers.neurocosmology-http.rule=Host(`neuralcosmology.com`) || Host(`www.neuralcosmology.com`)"
+      - "traefik.http.routers.neurocosmology-http.entrypoints=web"
+      - "traefik.http.routers.neurocosmology-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+    networks:
+      - traefik-global
+
+networks:
+  traefik-global:
+    external: true 

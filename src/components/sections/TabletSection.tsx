@@ -6,13 +6,15 @@ import { initParticlesEngine } from "@tsparticles/react";
 import { Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
-// Particle configuration
-const particlesConfig = {
-  fullScreen: false,
-  background: { color: "transparent" },
-  fpsLimit: 60,
-  particles: {
-    number: { value: 200 },
+// Particle configuration - will be adjusted for mobile
+const getParticlesConfig = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  return {
+    fullScreen: false,
+    background: { color: "transparent" },
+    fpsLimit: isMobile ? 30 : 60,
+    particles: {
+      number: { value: isMobile ? 80 : 200 },
     color: { value: ["#a78bfa", "#818cf8", "#c084fc", "#2563eb", "#ffffff"] },
     shape: { type: "circle" },
     opacity: { value: 0.8 },
@@ -49,6 +51,7 @@ const particlesConfig = {
     }
   },
   detectRetina: true
+  };
 };
 
 // Global particles instance - COMPLETELY outside React
@@ -78,7 +81,7 @@ async function initializeParticlesOnce() {
         await globalEngine.load({
           id: "tablet-particles",
           element: container,
-          options: particlesConfig
+          options: getParticlesConfig()
         });
         console.log('Particles loaded into container');
       } catch (err) {
@@ -113,7 +116,7 @@ async function attachParticlesToElement(elementId: string) {
         await globalEngine.load({
           id: elementId,
           element: container,
-          options: particlesConfig
+          options: getParticlesConfig()
         });
         console.log(`Particles loaded into container ${elementId}`);
       } else {
@@ -311,8 +314,8 @@ export default function TabletSection() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         style={{
           position: 'relative',
           zIndex: 10,
@@ -321,52 +324,55 @@ export default function TabletSection() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
+          willChange: "transform, opacity"
         }}
+        className="px-2 sm:px-4"
       >
-        <h2 className="text-4xl sm:text-5xl font-bold mb-2 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text px-2">
           The Neuralcosmologist's Tablet
         </h2>
-        <p className="text-lg text-blue-200 mb-2 font-semibold tracking-wide">10 Commandments for Navigating a Living Reality</p>
-        <p className="text-md text-blue-300/80 mb-6 italic max-w-xl mx-auto">
+        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-2 font-semibold tracking-wide px-2">10 Commandments for Navigating a Living Reality</p>
+        <p className="text-xs sm:text-sm md:text-base text-blue-300/80 mb-4 sm:mb-6 italic max-w-xl mx-auto px-2">
           This is not a doctrine.<br />This is not philosophy.<br />This is what remains when the illusions are gone.
         </p>
         
         {/* Carousel with a simpler, more reliable positioning approach */}
-        <div className="relative w-full max-w-5xl mx-auto h-[500px] flex items-center justify-center overflow-hidden px-10">
+        <div className="relative w-full max-w-5xl mx-auto h-[400px] sm:h-[450px] md:h-[500px] flex items-center justify-center overflow-hidden px-4 sm:px-6 md:px-10">
           {/* Left navigation button */}
-          <div className="absolute left-4 z-30">
+          <div className="absolute left-1 sm:left-2 md:left-4 z-30">
             {active > 0 && (
               <button
                 onClick={handlePrev}
-                className="p-3 rounded-full bg-white/5 hover:bg-white/20 text-blue-200 backdrop-blur-md border border-white/10 shadow-lg transition-all group"
+                className="p-2 sm:p-2.5 md:p-3 rounded-full bg-white/5 hover:bg-white/20 active:bg-white/30 text-blue-200 backdrop-blur-md border border-white/10 shadow-lg transition-all group touch-manipulation"
                 aria-label="Previous"
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse-glow"></div>
-                <ChevronLeft size={26} className="group-hover:scale-110 transition-transform" />
+                <ChevronLeft size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7 group-hover:scale-110 transition-transform" />
               </button>
             )}
           </div>
 
           {/* Card container */}
-          <div className="relative" style={{ perspective: 1500, width: "100%", maxWidth: "480px", height: "100%" }}>
+          <div className="relative" style={{ perspective: 1500, width: "100%", maxWidth: "100%", height: "100%" }}>
             {commandments.map((cmd, i) => {
               // Only render visible cards (current and adjacent)
               const offset = i - active;
               if (Math.abs(offset) > 2) return null;
               
-              // Card positioning and styling
-              const x = offset * 120; // Increased horizontal offset for more spacing
-              const scale = 1 - Math.abs(offset) * 0.15; // Scale: 1 for current, 0.85 for adjacent, 0.7 for further
-              const rotateY = offset * 25; // Rotation: -25deg for prev, 0 for current, 25deg for next
+              // Card positioning and styling - responsive
+              const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+              const x = offset * (isMobile ? 80 : 120); // Smaller offset on mobile
+              const scale = 1 - Math.abs(offset) * (isMobile ? 0.2 : 0.15); // More scale reduction on mobile
+              const rotateY = isMobile ? offset * 15 : offset * 25; // Less rotation on mobile
               
               // Immediately set opacity based on whether card is active
-              const opacity = offset === 0 ? 1 : 0.3;
+              const opacity = offset === 0 ? 1 : (isMobile ? 0.2 : 0.3);
               
               const zIndex = 10 - Math.abs(offset); // Z-Index: 10 for current, 9 for adjacent, 8 for further
               
               // Apply a vertical offset to cards on the side to create a staggered effect
-              const y = Math.abs(offset) > 0 ? 15 : 0;
+              const y = Math.abs(offset) > 0 ? (isMobile ? 10 : 15) : 0;
               
               // Use separate variants for transition behavior based on initial render
               const transitionConfig = initialRender ? {
@@ -393,24 +399,24 @@ export default function TabletSection() {
                     position: "absolute",
                     top: "50%",
                     left: "50%",
-                    marginLeft: "-200px", // Half of card width
-                    marginTop: "-150px", // Adjusted for better vertical alignment
-                    width: "400px",
+                    marginLeft: typeof window !== 'undefined' && window.innerWidth < 768 ? "-150px" : "-200px",
+                    marginTop: typeof window !== 'undefined' && window.innerWidth < 768 ? "-120px" : "-150px",
+                    width: typeof window !== 'undefined' && window.innerWidth < 768 ? "300px" : "400px",
                     transformStyle: "preserve-3d",
                     willChange: "transform, opacity",
                     transform: "translateZ(0)" // For GPU acceleration
                   }}
                 >
-                  <div className="bg-gradient-to-br from-blue-900/40 via-white/5 to-purple-900/30 border border-blue-400/20 shadow-xl rounded-2xl p-6 flex flex-col items-start text-left backdrop-blur-md">
-                    <div className="flex items-start gap-3 mb-3">
-                      <span className="text-2xl font-extrabold text-blue-200 drop-shadow-md">{i + 1}.</span>
-                      <span className="text-xl font-bold text-blue-100 bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent">
+                  <div className="bg-gradient-to-br from-blue-900/40 via-white/5 to-purple-900/30 border border-blue-400/20 shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-start text-left backdrop-blur-md">
+                    <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3">
+                      <span className="text-xl sm:text-2xl font-extrabold text-blue-200 drop-shadow-md">{i + 1}.</span>
+                      <span className="text-base sm:text-lg md:text-xl font-bold text-blue-100 bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent leading-tight">
                         {cmd.title}
                       </span>
                     </div>
-                    <ul className="pl-2 space-y-2 text-blue-200/90">
+                    <ul className="pl-1 sm:pl-2 space-y-1 sm:space-y-2 text-sm sm:text-base text-blue-200/90">
                       {cmd.desc.map((line, j) => (
-                        <li key={j} className="list-disc ml-4">{line}</li>
+                        <li key={j} className="list-disc ml-3 sm:ml-4 leading-relaxed">{line}</li>
                       ))}
                     </ul>
                   </div>
@@ -420,15 +426,15 @@ export default function TabletSection() {
           </div>
 
           {/* Right navigation button */}
-          <div className="absolute right-4 z-30">
+          <div className="absolute right-1 sm:right-2 md:right-4 z-30">
             {active < commandments.length - 1 && (
               <button
                 onClick={handleNext}
-                className="p-3 rounded-full bg-white/5 hover:bg-white/20 text-blue-200 backdrop-blur-md border border-white/10 shadow-lg transition-all group"
+                className="p-2 sm:p-2.5 md:p-3 rounded-full bg-white/5 hover:bg-white/20 active:bg-white/30 text-blue-200 backdrop-blur-md border border-white/10 shadow-lg transition-all group touch-manipulation"
                 aria-label="Next"
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 animate-pulse-glow"></div>
-                <ChevronRight size={26} className="group-hover:scale-110 transition-transform" />
+                <ChevronRight size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7 group-hover:scale-110 transition-transform" />
               </button>
             )}
           </div>

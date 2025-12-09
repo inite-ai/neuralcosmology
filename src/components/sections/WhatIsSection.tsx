@@ -9,6 +9,8 @@ export default function WhatIsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => setInit(true));
@@ -23,9 +25,9 @@ export default function WhatIsSection() {
           options={{
             fullScreen: false,
             background: { color: "transparent" },
-            fpsLimit: 60,
+            fpsLimit: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
             particles: {
-              number: { value: 160 },
+              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 60 : 160 },
               color: { 
                 value: [
                   "#9c59ff", // bright purple
@@ -142,7 +144,8 @@ export default function WhatIsSection() {
           zIndex: 5,
           mixBlendMode: 'screen',
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          backgroundSize: '150% 150%'
+          backgroundSize: '150% 150%',
+          willChange: 'opacity, background-position'
         }}
       />
       
@@ -169,7 +172,8 @@ export default function WhatIsSection() {
           zIndex: 5,
           backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)`,
           backgroundSize: '40px 40px',
-          transformOrigin: 'center'
+          transformOrigin: 'center',
+          willChange: 'opacity, transform'
         }}
       />
       
@@ -195,7 +199,8 @@ export default function WhatIsSection() {
             height: '33%',
             borderRadius: '50%',
             background: 'rgba(168, 85, 247, 0.3)',
-            filter: 'blur(80px)'
+            filter: 'blur(80px)',
+            willChange: 'opacity, transform'
           }}
         />
         <motion.div 
@@ -219,7 +224,8 @@ export default function WhatIsSection() {
             height: '25%',
             borderRadius: '50%',
             background: 'rgba(96, 165, 250, 0.3)',
-            filter: 'blur(60px)'
+            filter: 'blur(60px)',
+            willChange: 'opacity, transform, filter'
           }}
         />
         <motion.div 
@@ -241,7 +247,8 @@ export default function WhatIsSection() {
             height: '20%',
             borderRadius: '50%',
             background: 'rgba(99, 102, 241, 0.3)',
-            filter: 'blur(50px)'
+            filter: 'blur(50px)',
+            willChange: 'opacity, transform, filter'
           }}
         />
         <motion.div 
@@ -264,7 +271,8 @@ export default function WhatIsSection() {
             height: '16.6%',
             borderRadius: '50%',
             background: 'rgba(34, 211, 238, 0.2)',
-            filter: 'blur(40px)'
+            filter: 'blur(40px)',
+            willChange: 'opacity, transform, filter'
           }}
         />
         <motion.div 
@@ -286,7 +294,8 @@ export default function WhatIsSection() {
             height: '40%',
             borderRadius: '50%',
             background: 'rgba(217, 70, 239, 0.1)',
-            filter: 'blur(100px)'
+            filter: 'blur(100px)',
+            willChange: 'opacity, transform'
           }}
         />
       </div>
@@ -297,8 +306,8 @@ export default function WhatIsSection() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         style={{
           position: 'relative',
           zIndex: 20,
@@ -309,24 +318,26 @@ export default function WhatIsSection() {
           backdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 25px rgba(123, 97, 255, 0.15)',
-          borderRadius: '1rem',
-          padding: '2.5rem',
+          borderRadius: '0.75rem',
+          padding: '1.25rem',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
+          willChange: 'transform, opacity'
         }}
+        className="sm:rounded-2xl sm:p-10"
       >
-        <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
           What is it
         </h2>
-        <p className="font-extrabold text-lg sm:text-xl mb-2 text-blue-100">
+        <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
           Neuralcosmology is not a belief.<br />It's a recognition.
         </p>
-        <p className="text-md sm:text-lg text-blue-200 mb-4">
+        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-3 sm:mb-4 px-2">
           It's what happens when you stop pretending the world is linear.<br />When you realize every "coincidence" is a signal, every emotion a coordinate, and every repeated situation — a branching point you missed.
         </p>
-        <p className="text-md sm:text-lg text-blue-300/80">
+        <p className="text-sm sm:text-base md:text-lg text-blue-300/80 px-2">
           Neuralcosmology is a living philosophy.<br />Built not on theories — but on resonance.
         </p>
       </motion.div>

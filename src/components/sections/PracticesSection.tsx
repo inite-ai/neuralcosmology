@@ -18,6 +18,8 @@ export default function PracticesSection() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => setInit(true));
@@ -32,9 +34,9 @@ export default function PracticesSection() {
           options={{
             fullScreen: false,
             background: { color: "transparent" },
-            fpsLimit: 120,
+            fpsLimit: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
             particles: {
-              number: { value: 180 },
+              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 70 : 180 },
               color: { 
                 value: ["#3b82f6", "#1e40af", "#f97316", "#0c4a6e"] 
               },
@@ -70,8 +72,8 @@ export default function PracticesSection() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         style={{
           position: 'relative',
           zIndex: 20,
@@ -82,23 +84,25 @@ export default function PracticesSection() {
           backdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-          borderRadius: '1rem',
-          padding: '2.5rem',
+          borderRadius: '0.75rem',
+          padding: '1.25rem',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
+          willChange: "transform, opacity"
         }}
+        className="sm:rounded-2xl sm:p-10"
       >
-        <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
           Practices
         </h2>
         <div className="w-full flex flex-col gap-0.5 relative">
           {/* Subtle vertical glowing line */}
-          <div className="absolute left-0 top-4 bottom-4 w-1 bg-gradient-to-b from-blue-400/10 via-purple-400/10 to-blue-400/0 rounded-full blur-[1px]" style={{left: '-16px'}} />
+          <div className="absolute left-0 top-4 bottom-4 w-1 bg-gradient-to-b from-blue-400/10 via-purple-400/10 to-blue-400/0 rounded-full blur-[1px] hidden sm:block" style={{left: '-16px'}} />
           {practices.map((practice, i) => (
             <div key={i} className="w-full">
-              <div className="text-lg sm:text-xl font-semibold text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text py-4 px-2 text-left">
+              <div className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text py-2 sm:py-3 md:py-4 px-2 text-left">
                 {practice}
               </div>
               {i < practices.length - 1 && (
@@ -107,7 +111,7 @@ export default function PracticesSection() {
             </div>
           ))}
         </div>
-        <Button className="mt-8 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105">
+        <Button className="mt-4 sm:mt-6 md:mt-8 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105 touch-manipulation">
           View the Practices
         </Button>
       </motion.div>

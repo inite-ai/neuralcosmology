@@ -27,7 +27,8 @@ function DeepCosmicBackground() {
           width: "100vw",
           height: "100vh",
           backgroundImage: "radial-gradient(ellipse at top left, #3a3a7c 40%, transparent 80%), radial-gradient(ellipse at bottom right, #7f5af0 30%, transparent 80%)",
-          opacity: 0.4
+          opacity: 0.4,
+          willChange: "background-position"
         }}
       />
       {/* Stars overlay */}
@@ -41,23 +42,24 @@ function DeepCosmicBackground() {
 // Section wrapper with optional glass highlight
 function Section({ children, className = "", glass = false, ...props }: { children: ReactNode; className?: string; glass?: boolean }) {
   return (
-    <section className={`relative w-full flex justify-center py-16 px-4 ${className}`} {...props}>
+    <section className={`relative w-full flex justify-center py-8 sm:py-16 px-3 sm:px-4 ${className}`} {...props}>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         style={{ 
           position: "relative",
           zIndex: 10,
           maxWidth: "48rem",
           width: "100%",
-          borderRadius: "1rem",
-          padding: "2.5rem",
+          borderRadius: "0.75rem",
+          padding: "1.25rem",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
+          willChange: "transform, opacity",
           ...(glass ? {
             backgroundColor: "rgba(255, 255, 255, 0.05)",
             backdropFilter: "blur(8px)",
@@ -65,6 +67,7 @@ function Section({ children, className = "", glass = false, ...props }: { childr
             boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
           } : {})
         }}
+        className="sm:rounded-2xl sm:p-10"
       >
         {children}
       </motion.div>
@@ -257,39 +260,39 @@ export default function Page() {
       <DeepCosmicBackground />
       <SectionNav />
       
-      <section id="hero" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
+      <section id="hero" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start py-4 sm:py-0">
         <HeroSection />
       </section>
-      
-      <section id="what-is" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
+
+      <section id="what-is" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start py-4 sm:py-0">
         <WhatIsSection />
       </section>
       
-      <section id="core-principles" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
+      <section id="core-principles" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start py-4 sm:py-0">
         <CorePrinciplesSection />
       </section>
       
-      <section id="tablet" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
+      <section id="tablet" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start py-4 sm:py-0">
         <TabletSection />
       </section>
       
-      <section id="practices" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
+      <section id="practices" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start py-4 sm:py-0">
         <PracticesSection />
       </section>
       
-      <section id="lectures" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start">
+      <section id="lectures" className="w-full min-h-screen flex items-center justify-center scroll-snap-align-start py-4 sm:py-0">
         <LecturesSection />
       </section>
       
       {/* Call to Clarity section with footer embedded */}
-      <section id="call-to-clarity" className="w-full min-h-screen flex flex-col items-center justify-between scroll-snap-align-start pb-0">
+      <section id="call-to-clarity" className="w-full min-h-screen flex flex-col items-center justify-between scroll-snap-align-start pb-0 py-4 sm:py-0">
         <CallToClaritySection />
         
         {/* Footer embedded within Call to Clarity section */}
-        <div className="w-full text-center text-blue-200 py-6 text-sm opacity-90 border-t border-blue-400/10 bg-gradient-to-t from-[#10182a]/80 via-transparent to-transparent shadow-inner backdrop-blur-md z-20">
+        <div className="w-full text-center text-blue-200 py-4 sm:py-6 text-xs sm:text-sm opacity-90 border-t border-blue-400/10 bg-gradient-to-t from-[#10182a]/80 via-transparent to-transparent shadow-inner backdrop-blur-md z-20 px-4">
           <div className="flex flex-col items-center justify-center py-2">
-            <div className="font-bold tracking-widest text-blue-100/90 text-base mb-1">neuralcosmology.com</div>
-            <div className="text-blue-300/80">© 2025. Presence is enough.</div>
+            <div className="font-bold tracking-widest text-blue-100/90 text-sm sm:text-base mb-1">neuralcosmology.com</div>
+            <div className="text-blue-300/80 text-xs sm:text-sm">© 2025. Presence is enough.</div>
           </div>
         </div>
       </section>

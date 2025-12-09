@@ -17,6 +17,8 @@ export default function CorePrinciplesSection() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => setInit(true));
@@ -31,9 +33,9 @@ export default function CorePrinciplesSection() {
           options={{
             fullScreen: false,
             background: { color: "transparent" },
-            fpsLimit: 60,
+            fpsLimit: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
             particles: {
-              number: { value: 70, density: { enable: true, area: 800 } },
+              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 70, density: { enable: true, value: 800 } },
               color: { value: ["#ffffff", "#a5b4fc", "#4f56ff", "#c4b5fd"] },
               shape: { type: "circle" },
               opacity: { value: 0.9 },
@@ -93,17 +95,18 @@ export default function CorePrinciplesSection() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
-        className="relative z-10 max-w-3xl w-full bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl p-10 flex flex-col items-center text-center"
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+        className="relative z-10 max-w-3xl w-full bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-10 flex flex-col items-center text-center"
+        style={{ willChange: "transform, opacity" }}
       >
-        <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
           Core Principles
         </h2>
         <div className="w-full flex flex-col gap-0.5">
           {axioms.map((axiom, i) => (
             <div key={i} className="w-full">
-              <div className="text-lg sm:text-xl font-semibold text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text py-4 px-2">
+              <div className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text py-2 sm:py-3 md:py-4 px-2">
                 {axiom}
               </div>
               {i < axioms.length - 1 && (

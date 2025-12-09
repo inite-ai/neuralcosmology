@@ -9,6 +9,8 @@ export default function CallToClaritySection() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => setInit(true));
@@ -23,9 +25,9 @@ export default function CallToClaritySection() {
           options={{
             fullScreen: false,
             background: { color: "transparent" },
-            fpsLimit: 60,
+            fpsLimit: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
             particles: {
-              number: { value: 300 },
+              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 300 },
               color: { value: ["#60a5fa", "#ffffff", "#93c5fd", "#1e40af", "#38bdf8"] },
               shape: { type: "circle" },
               opacity: { value: { min: 0.3, max: 0.9 } },
@@ -96,8 +98,8 @@ export default function CallToClaritySection() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.25, 0.4, 0.25, 1] }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         style={{
           position: 'relative',
           zIndex: 20,
@@ -108,24 +110,26 @@ export default function CallToClaritySection() {
           backdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-          borderRadius: '1rem',
-          padding: '2.5rem',
+          borderRadius: '0.75rem',
+          padding: '1.25rem',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
+          willChange: "transform, opacity"
         }}
+        className="sm:rounded-2xl sm:p-10"
       >
-        <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
           Call to clarity
         </h2>
-        <p className="font-extrabold text-lg sm:text-xl mb-2 text-blue-100">
+        <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
           You are not alone.<br />But those who see — speak less.
         </p>
-        <p className="text-md sm:text-lg text-blue-200 mb-8">
+        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-4 sm:mb-6 md:mb-8 px-2">
           No community.<br />No "movement".<br />Only presence in the field.<br /><br />If this vibrates inside you —<br />you're already in the structure.<br />Act accordingly.
         </p>
-        <Button className="mt-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white px-8 py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105">
+        <Button className="mt-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105 touch-manipulation">
           Enter the Portal
         </Button>
       </motion.div>

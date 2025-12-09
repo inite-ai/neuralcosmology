@@ -5,9 +5,13 @@ export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
   try {
-    // Make sure the font exists in the public folder
+    // Get parameters if needed
+    const searchParams = request.nextUrl.searchParams;
+    const title = searchParams.get('title') || 'Neuralcosmology';
+    
+    // Instead of loading a local font, use a Google Font
     const fontData = await fetch(
-      new URL('../../../public/fonts/geist-sans-medium.woff', import.meta.url)
+      new URL('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2', import.meta.url)
     ).then((res) => res.arrayBuffer());
 
     return new ImageResponse(
@@ -84,7 +88,7 @@ export async function GET(request: NextRequest) {
                 color: 'white',
                 fontSize: '72px',
                 fontWeight: 'bold',
-                fontFamily: 'Geist',
+                fontFamily: 'Inter',
                 letterSpacing: '-0.05em',
                 marginBottom: '20px',
                 background: 'linear-gradient(to right, #a78bfa, #ffffff, #c084fc)',
@@ -93,7 +97,7 @@ export async function GET(request: NextRequest) {
                 textShadow: '0 8px 30px rgba(60, 60, 180, 0.3)',
               }}
             >
-              Neuralcosmology
+              {title}
             </div>
 
             {/* Subtitle */}
@@ -107,7 +111,7 @@ export async function GET(request: NextRequest) {
                 maxWidth: '700px',
               }}
             >
-              You're not in the world. You are the structure.
+              You&apos;re not in the world. You are the structure.
             </div>
 
             {/* Description */}
@@ -129,7 +133,7 @@ export async function GET(request: NextRequest) {
         height: 630,
         fonts: [
           {
-            name: 'Geist',
+            name: 'Inter',
             data: fontData,
             style: 'normal',
           },
