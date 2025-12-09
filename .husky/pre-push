@@ -1,0 +1,51 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Pre-push hook to prevent pushing code that fails Docker build
+
+set -e
+
+echo "🔍 Running pre-push checks..."
+
+# Check if Docker is available and running
+if ! command -v docker &> /dev/null; then
+    echo "⚠️  Docker is not installed. Skipping Docker build check."
+    exit 0
+fi
+
+# Check if Docker daemon is running
+if ! docker info > /dev/null 2>&1; then
+    echo "⚠️  Docker daemon is not running. Skipping Docker build check."
+    echo "💡 Make sure Docker is running before pushing to ensure build works."
+    exit 0
+fi
+
+# Check if we're pushing to main/master branch
+protected_branches='^(main|master)$'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+if [[ $current_branch =~ $protected_branches ]]; then
+    echo "🚨 Pushing to protected branch: $current_branch"
+    echo "🔨 Testing Docker build..."
+    
+    # Test Docker build
+    if docker build \
+        --build-arg NEXT_PUBLIC_SITE_URL=https://neuralcosmology.com \
+        --target builder \
+        -t neurocosmology-test:pre-push \
+        . > /tmp/docker-build.log 2>&1; then
+        echo "✅ Docker build test passed!"
+        # Clean up test image
+        docker rmi neurocosmology-test:pre-push 2>/dev/null || true
+    else
+        echo "❌ Docker build failed!"
+        echo ""
+        echo "Build log:"
+        tail -50 /tmp/docker-build.log
+        echo ""
+        echo "💡 Fix the Docker build errors before pushing."
+        exit 1
+    fi
+else
+    echo "ℹ️  Not a protected branch, skipping Docker build check."
+fi

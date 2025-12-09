@@ -29,13 +29,54 @@ This is a [Next.js](https://nextjs.org) project with modern UI/UX design pattern
    ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+### Build
+
+Build the production version:
+
+```bash
+npm run build
+```
+
+Start the production server:
+
+```bash
+npm start
+```
+
+## Deployment
+
+The project is configured for automated deployment via GitHub Actions with Docker and Traefik.
+
+### Quick Deploy
+
+1. Push to `main` branch triggers automatic deployment
+2. GitHub Actions builds Docker image and pushes to Docker Hub
+3. Self-hosted runner deploys to server via `docker-compose`
+4. Traefik automatically handles SSL certificates via Let's Encrypt
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Requirements
+
+- Docker and Docker Compose
+- Traefik running on server with `traefik-global` network
+- Self-hosted GitHub Actions runner
+- Docker Hub credentials configured as GitHub Secrets
+
+## Security
+
+- ✅ **CVE-2025-55182**: Fixed (Next.js 16.0.8 includes security patch)
+- ✅ **React Server Components**: Secure version in use
+- ✅ **Dependencies**: Regularly updated and audited
+
 ### Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Styling**: TailwindCSS 
+- **Framework**: Next.js 16.0.8 with App Router
+- **Styling**: TailwindCSS 4
 - **Animations**: Framer Motion
 - **Particle Effects**: tsParticles
-- **Deployment**: Vercel
+- **Deployment**: Docker + GitHub Actions + Traefik
+- **SSL**: Let's Encrypt (automatic)
 
 ## SEO Considerations
 
@@ -55,6 +96,20 @@ When sharing links to neuralcosmology.com on social media, they will display ric
 - Title: "Neuralcosmology - Navigate Reality Through States, Memory & Attention"
 - Description: "You're not in the world. You are the structure. A system of reality navigation through states, memory, and attention."
 - Visual: Custom OG image displaying cosmic theme
+
+## Project Structure
+
+```
+├── .github/workflows/    # GitHub Actions workflows
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # React components
+│   └── lib/              # Utility functions
+├── public/               # Static assets
+├── Dockerfile            # Docker image configuration
+├── docker-compose.yml    # Docker Compose configuration
+└── DEPLOYMENT.md         # Detailed deployment guide
+```
 
 ## License
 

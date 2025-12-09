@@ -1,0 +1,47 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Pre-commit hook to check basic issues before committing
+
+set -e
+
+echo "🔍 Running pre-commit checks..."
+
+# Check if package.json and package-lock.json are in sync
+if [ -f package.json ] && [ -f package-lock.json ]; then
+    echo "📦 Checking package.json and package-lock.json sync..."
+    if ! npm ci --dry-run > /dev/null 2>&1; then
+        echo "❌ package.json and package-lock.json are out of sync!"
+        echo "💡 Run 'npm install' to fix this."
+        exit 1
+    fi
+    echo "✅ Package files are in sync"
+fi
+
+# Check for Next.js version compatibility
+if [ -f package.json ]; then
+    next_version=$(grep -o '"next": "[^"]*"' package.json | cut -d'"' -f4)
+    if [[ "$next_version" =~ ^16\. ]]; then
+        # Check Dockerfile uses Node 20
+        if [ -f Dockerfile ]; then
+            if ! grep -q "node:20" Dockerfile; then
+                echo "❌ Dockerfile must use Node.js 20 for Next.js 16!"
+                echo "💡 Update Dockerfile: FROM node:20-alpine AS base"
+                exit 1
+            fi
+            echo "✅ Dockerfile uses correct Node.js version"
+        fi
+    fi
+fi
+
+# Run linter if available
+if [ -f package.json ] && grep -q '"lint"' package.json; then
+    echo "🔍 Running linter..."
+    if npm run lint -- --max-warnings=0 > /dev/null 2>&1; then
+        echo "✅ Linter passed"
+    else
+        echo "⚠️  Linter found issues (non-blocking)"
+    fi
+fi
+
+echo "✅ Pre-commit checks passed!"
