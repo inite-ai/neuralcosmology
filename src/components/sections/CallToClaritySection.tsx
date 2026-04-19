@@ -34,7 +34,7 @@ export default function CallToClaritySection({ locale }: { locale: SupportedLoca
   }, []);
 
   return (
-    <div className="relative w-full min-h-[90vh] flex items-center justify-center px-4 bg-gradient-to-br from-[#10182a] via-[#232946] to-[#181c2e] overflow-hidden">
+    <div className="relative w-full min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#10182a] via-[#232946] to-[#181c2e] overflow-hidden">
       {/* Cosmic portal/vortex effect */}
       {init && (
         <Particles

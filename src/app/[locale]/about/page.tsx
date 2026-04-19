@@ -58,7 +58,7 @@ export default async function AboutPage({
           <p className="text-white/80 leading-relaxed">{dict.about.agentsBody}</p>
           <div className="mt-4 flex flex-wrap gap-3">
             <a
-              href="mailto:mf@mikefluff.com?subject=Rights%20inquiry"
+              href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"
               className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.about.emailCta}
@@ -93,10 +93,10 @@ export default async function AboutPage({
             </li>
             <li>
               <a
-                href="mailto:mf@mikefluff.com"
+                href="mailto:info@neuralcosmology.com"
                 className="hover:text-white transition-colors"
               >
-                mf@mikefluff.com
+                info@neuralcosmology.com
               </a>
             </li>
           </ul>

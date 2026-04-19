@@ -139,7 +139,7 @@ export default async function BookDetailPage({
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="mailto:mf@mikefluff.com?subject=Rights%20inquiry"
+                href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"
                 className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
               >
                 {dict.books.rightsInquiry}

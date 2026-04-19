@@ -26,7 +26,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
       title: dict.footer.columns.contact,
       links: [
         { label: dict.footer.links.about, href: `/${locale}/about` },
-        { label: dict.footer.links.press, href: "mailto:mf@mikefluff.com" },
+        { label: dict.footer.links.press, href: "mailto:info@neuralcosmology.com" },
         { label: dict.footer.links.github, href: "https://github.com/neuralcosmology" },
       ],
     },
@@ -70,8 +70,8 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
           © {new Date().getFullYear()} Mikhail Savchenko. {dict.footer.copyright}
         </div>
         <div>
-          <a href="mailto:mf@mikefluff.com" className="hover:text-white transition-colors">
-            mf@mikefluff.com
+          <a href="mailto:info@neuralcosmology.com" className="hover:text-white transition-colors">
+            info@neuralcosmology.com
           </a>
         </div>
       </div>

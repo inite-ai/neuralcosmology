@@ -100,7 +100,7 @@ export default async function PointerArchitecturePage({
             </a>
           )}
           <a
-            href="mailto:mf@mikefluff.com?subject=Pointer%20Architecture%20—%20peer%20review"
+            href="mailto:info@neuralcosmology.com?subject=Pointer%20Architecture%20—%20peer%20review"
             className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
           >
             {dict.science.contactReview}

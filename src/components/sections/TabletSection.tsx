@@ -336,7 +336,11 @@ export default function TabletSection({ locale }: { locale: SupportedLocale }) {
                     transform: "translateZ(0)" // For GPU acceleration
                   }}
                 >
-                  <div className="bg-gradient-to-br from-blue-900/40 via-white/5 to-purple-900/30 border border-blue-400/20 shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-start text-left backdrop-blur-md">
+                  <div className={`${
+                    offset === 0
+                      ? "bg-gradient-to-br from-blue-950/95 via-indigo-950/95 to-purple-950/95 border-blue-400/40"
+                      : "bg-gradient-to-br from-blue-900/40 via-white/5 to-purple-900/30 border-blue-400/20"
+                  } border shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-start text-left backdrop-blur-md`}>
                     <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3">
                       <span className="text-xl sm:text-2xl font-extrabold text-blue-200 drop-shadow-md">{i + 1}.</span>
                       <span className="text-base sm:text-lg md:text-xl font-bold text-blue-100 bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent leading-tight">

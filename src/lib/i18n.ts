@@ -239,12 +239,12 @@ const en: Dict = {
     agentsHeader: "Press, agents, publishers",
     agentsBody:
       "I am seeking representation for EN and PT-BR rights on the fiction titles, and endorsements / reviewers for the preprint. Serious inquiries welcome.",
-    emailCta: "Email — mf@mikefluff.com",
+    emailCta: "Email — info@neuralcosmology.com",
     elsewhereHeader: "Elsewhere",
   },
   footer: {
     tagline:
-      "Public HQ for the Neural Cosmology programme — three books, one preprint, a growing body of essays. Scientist with questions, not prophet with answers.",
+      "Neural Cosmology — three books, one preprint, a growing body of essays.",
     columns: {
       read: "Read",
       research: "Research",
@@ -260,7 +260,7 @@ const en: Dict = {
       press: "Agents & press",
       github: "GitHub",
     },
-    copyright: "Presence is enough.",
+    copyright: "All rights reserved.",
   },
   home: {
     hero: {
@@ -268,8 +268,9 @@ const en: Dict = {
       title: "Neuralcosmology",
       headline: "Neural Cosmology",
       subhead:
-        "A frame that gathers five scientific anomalies — from galaxy rotation to cellular bioelectricity.",
-      subheadExtra: "A series of books, a preprint, a collection of essays.",
+        "The universe as a learning network. Consciousness as a property of certain graph configurations.",
+      subheadExtra:
+        "Preprints, code, essays and book materials — a programme bridging information-theoretic physics, cosmology and the foundations of mind.",
       cta: "Enter",
     },
     whatIs: {
@@ -299,87 +300,80 @@ const en: Dict = {
         "This is not a doctrine.\nThis is not philosophy.\nThis is what remains when the illusions are gone.",
       commandments: [
         {
-          title: "Do not create a Line",
+          title: "Don't flatten life into a line",
           desc: [
             "Linear life is fiction.",
             "Every moment is a fork.",
-            "Choose through awareness — not inertia.",
+            "Choose deliberately.",
           ],
         },
         {
-          title: "Honor the Portal within",
+          title: "Start from the inside",
           desc: [
-            "No outer sign matters if your inner state is off.",
-            "Your resonance is the gateway.",
-            "You are the threshold.",
+            "Outer signals mean little when your inner state is off.",
+            "Address your own state first.",
+            "Everything else reads from there.",
           ],
         },
         {
-          title: "Cleanse Memory of Noise",
+          title: "Clear memory of noise",
           desc: [
-            "You don't carry the past.",
-            "You loop it.",
-            "Until you extract the pattern and cut the echo.",
+            "The past doesn't weigh on you by itself.",
+            "The mind replays it.",
+            "Find the pattern and the loop breaks.",
           ],
         },
         {
-          title: "Discern the Guides",
+          title: "Tell who actually helps",
           desc: [
-            "Not all who shine, lead.",
-            "True guides activate your clarity.",
-            "False ones amplify your confusion.",
+            "Real help restores clarity.",
+            "Everything else compounds confusion.",
+            "Use that as your check.",
           ],
         },
         {
-          title: "Break the Shell",
+          title: "Break the old form",
           desc: [
-            "When it cracks — it's not failure.",
-            "It's the signal.",
-            "Step out before your identity becomes your tomb.",
+            "A crack is the signal to leave.",
+            "Step out before the form becomes a cell.",
           ],
         },
         {
-          title: "Hold through the Transition",
+          title: "Hold through the transition",
           desc: [
-            "Don't rush to reconstruct.",
-            "The silence after destruction is sacred.",
-            "Sit in it until you hear the next signal.",
+            "Don't rush to rebuild.",
+            "The pause after collapse does work.",
+            "Stay in it until the next step is clear.",
           ],
         },
         {
-          title: "Listen to the Repeats",
+          title: "Listen to repeats",
           desc: [
-            "The same situation again?",
-            "That's not punishment.",
-            "That's precision.",
-            "Resolve it — or relive it.",
+            "The same situation again? That's diagnostic.",
+            "Resolve it or it returns a third time.",
           ],
         },
         {
-          title: "Permit the Cut",
+          title: "Permit the cut",
           desc: [
-            "Not all endings come with closure.",
-            "Some come with clarity.",
-            "Let go.",
-            "Without fixing, apologizing, or performing.",
+            "Not every ending arrives closed.",
+            "Some arrive clear.",
+            "Let go without repairs, apologies, or scenes.",
           ],
         },
         {
-          title: "Call yourself forth",
+          title: "Call yourself forward",
           desc: [
-            "Your next version is waiting for your signal.",
-            "Don't wait for permission.",
-            "Name it.",
-            "Act from it.",
-            "Live into it.",
+            "Your next version is waiting.",
+            "No permission is coming.",
+            "Name it. Act from it. Live it.",
           ],
         },
         {
-          title: "Gather yourself — or be shattered by your own frequency",
+          title: "Gather yourself",
           desc: [
-            "A fractured self cannot hold a coherent field.",
-            "Unify.",
-            "Or disintegrate.",
+            "A fractured self won't hold decisions.",
+            "Gather, or scatter.",
             "There is no middle.",
           ],
         },
@@ -504,12 +498,12 @@ const ru: Dict = {
     agentsHeader: "Пресса, агенты, издатели",
     agentsBody:
       "Ищу представление для англоязычных и бразильских прав на художественные тексты, а также рецензентов и отзывы на препринт. Серьёзные запросы — добро пожаловать.",
-    emailCta: "Email — mf@mikefluff.com",
+    emailCta: "Email — info@neuralcosmology.com",
     elsewhereHeader: "По соседству",
   },
   footer: {
     tagline:
-      "Открытый дом программы «Нейронная космология»: три книги, препринт, собрание эссе. Учёный с вопросами, не пророк с ответами.",
+      "«Нейронная космология» — три книги, препринт, собрание эссе.",
     columns: {
       read: "Читать",
       research: "Исследования",
@@ -525,7 +519,7 @@ const ru: Dict = {
       press: "Агентам и прессе",
       github: "GitHub",
     },
-    copyright: "Присутствия достаточно.",
+    copyright: "Все права защищены.",
   },
   home: {
     hero: {
@@ -533,8 +527,9 @@ const ru: Dict = {
       title: "Neuralcosmology",
       headline: "Нейронная космология",
       subhead:
-        "Пять научных аномалий в одной картине — от вращения галактик до биоэлектричества клеток.",
-      subheadExtra: "Серия книг, препринт и собрание эссе.",
+        "Вселенная как обучающаяся сеть. Сознание как свойство определённых конфигураций графа.",
+      subheadExtra:
+        "Препринты, код, эссе и материалы книг — исследование на стыке физики, космологии и природы сознания.",
       cta: "Войти",
     },
     whatIs: {
@@ -564,85 +559,80 @@ const ru: Dict = {
         "Не доктрина.\nНе философия.\nТо, что остаётся, когда иллюзии уходят.",
       commandments: [
         {
-          title: "Не вытягивай свою жизнь в линию",
+          title: "Не вытягивай жизнь в линию",
           desc: [
-            "Линейная жизнь — выдумка.",
-            "Каждый миг — развилка.",
-            "Выбирай в сознании, а не по инерции.",
+            "Линейность — иллюзия.",
+            "Каждый момент — развилка.",
+            "Выбирай сознательно.",
           ],
         },
         {
-          title: "Чти порог внутри",
+          title: "Начинай изнутри",
           desc: [
-            "Внешние знаки ничего не стоят, если внутри разлад.",
-            "Врата — ты сам.",
-            "Порог — тоже ты.",
+            "Внешние сигналы мало значат, если внутри разлад.",
+            "Сначала разберись со своим состоянием.",
+            "Остальное считывается уже из него.",
           ],
         },
         {
           title: "Очисти память от шума",
           desc: [
-            "Ты не несёшь прошлое.",
-            "Ты его прокручиваешь.",
-            "Пока не увидишь узор и не оборвёшь эхо.",
+            "Прошлое не давит само по себе.",
+            "Его прокручивает голова.",
+            "Найди узор — цикл оборвётся.",
           ],
         },
         {
-          title: "Различай проводников",
+          title: "Различай, кто помогает",
           desc: [
-            "Не все, кто светит, ведут.",
-            "Настоящие — возвращают тебе ясность.",
-            "Ложные — сеют растерянность.",
+            "Настоящая помощь возвращает ясность.",
+            "Всё остальное только путает сильнее.",
+            "Сверяйся по этому.",
           ],
         },
         {
-          title: "Ломай скорлупу",
+          title: "Ломай старую форму",
           desc: [
-            "Она треснула — это знак, а не поражение.",
-            "Выйди сам, пока форма не стала гробницей.",
+            "Трещина — сигнал к выходу.",
+            "Выходи, пока форма не стала клеткой.",
           ],
         },
         {
           title: "Держись в переходе",
           desc: [
-            "Не торопись перестраивать.",
-            "Тишина после разрушения священна.",
-            "Сиди в ней, пока не услышишь следующий знак.",
+            "Не спеши перестраивать.",
+            "Пауза после разрушения делает работу.",
+            "Сиди в ней, пока не станет виден следующий шаг.",
           ],
         },
         {
           title: "Слушай повторы",
           desc: [
-            "Та же ситуация снова?",
-            "Не наказание — точность.",
-            "Разреши её — или проживи заново.",
+            "Та же ситуация снова — это диагностика.",
+            "Разреши её, или она придёт в третий раз.",
           ],
         },
         {
-          title: "Позволь разрез",
+          title: "Позволь разрыв",
           desc: [
-            "Не всякий конец приходит завершённым.",
-            "Иной приходит с ясностью.",
-            "Отпусти.",
-            "Без починок, извинений и сцен.",
+            "Не всякий конец приходит с финалом.",
+            "Иногда — только с ясностью.",
+            "Отпускай без починок, извинений и сцен.",
           ],
         },
         {
           title: "Вызови себя вперёд",
           desc: [
-            "Следующий ты ждёт знака.",
-            "Не жди разрешения.",
-            "Назови его.",
-            "Действуй из него.",
-            "Живи им.",
+            "Следующая версия тебя ждёт.",
+            "Разрешения не будет.",
+            "Назови. Действуй. Живи.",
           ],
         },
         {
-          title: "Собери себя — или разлетишься от собственной частоты",
+          title: "Собери себя",
           desc: [
-            "Расколотое «я» не удержит цельного поля.",
-            "Собери.",
-            "Или распадись.",
+            "Расколотое «я» не удержит решения.",
+            "Собирай или рассыпешься.",
             "Середины нет.",
           ],
         },
@@ -766,12 +756,12 @@ const pt: Dict = {
     agentsHeader: "Imprensa, agentes, editoras",
     agentsBody:
       "Busco representação para direitos em EN e PT-BR para os títulos de ficção, e revisores para o preprint. Consultas sérias são bem-vindas.",
-    emailCta: "Email — mf@mikefluff.com",
+    emailCta: "Email — info@neuralcosmology.com",
     elsewhereHeader: "Em outro lugar",
   },
   footer: {
     tagline:
-      "Casa aberta do programa Neural Cosmology: três livros, um preprint, um conjunto crescente de ensaios. Cientista com perguntas, não profeta com respostas.",
+      "Neural Cosmology — três livros, um preprint, um conjunto crescente de ensaios.",
     columns: {
       read: "Ler",
       research: "Pesquisa",
@@ -787,7 +777,7 @@ const pt: Dict = {
       press: "Agentes e imprensa",
       github: "GitHub",
     },
-    copyright: "A presença basta.",
+    copyright: "Todos os direitos reservados.",
   },
   home: {
     hero: {
@@ -795,8 +785,9 @@ const pt: Dict = {
       title: "Neuralcosmology",
       headline: "Neural Cosmology",
       subhead:
-        "Uma moldura que reúne cinco anomalias científicas — da rotação galáctica à bioeletricidade celular.",
-      subheadExtra: "Uma série de livros, um preprint, um conjunto de ensaios.",
+        "O universo como uma rede em aprendizado. A consciência como propriedade de certas configurações de grafo.",
+      subheadExtra:
+        "Preprints, código, ensaios e materiais de livros — um programa que liga física teórico-informacional, cosmologia e os fundamentos da mente.",
       cta: "Entrar",
     },
     whatIs: {
@@ -826,85 +817,80 @@ const pt: Dict = {
         "Não é doutrina.\nNão é filosofia.\nÉ o que resta quando as ilusões se vão.",
       commandments: [
         {
-          title: "Não estique a sua vida em linha",
+          title: "Não estique a vida em linha",
           desc: [
-            "A vida linear é ficção.",
+            "Vida linear é ficção.",
             "Cada momento é uma bifurcação.",
-            "Escolha com consciência, não por inércia.",
+            "Escolha deliberadamente.",
           ],
         },
         {
-          title: "Honre o Limiar dentro de você",
+          title: "Comece por dentro",
           desc: [
-            "Nenhum sinal lá fora importa, se dentro está desafinado.",
-            "Sua ressonância é o portal.",
-            "Você é o limiar.",
+            "Sinais lá fora valem pouco quando por dentro está desafinado.",
+            "Resolva primeiro o próprio estado.",
+            "O resto se lê a partir dele.",
           ],
         },
         {
           title: "Limpe a memória do ruído",
           desc: [
-            "Você não carrega o passado.",
-            "Você o repete em loop.",
-            "Até enxergar o desenho e cortar o eco.",
+            "O passado não pesa sozinho.",
+            "A cabeça o reproduz.",
+            "Veja o padrão — o laço se rompe.",
           ],
         },
         {
-          title: "Saiba distinguir os guias",
+          title: "Distinga quem realmente ajuda",
           desc: [
-            "Nem todo que brilha guia.",
-            "Os verdadeiros devolvem sua clareza.",
-            "Os falsos espalham confusão.",
+            "Ajuda verdadeira devolve clareza.",
+            "O resto só aumenta a confusão.",
+            "Use isso como critério.",
           ],
         },
         {
-          title: "Rompa a casca",
+          title: "Rompa a forma antiga",
           desc: [
-            "Ela rachou — é sinal, não é fracasso.",
-            "Saia antes que a forma vire seu túmulo.",
+            "A rachadura é o sinal para sair.",
+            "Saia antes que a forma vire uma cela.",
           ],
         },
         {
           title: "Segure-se na travessia",
           desc: [
             "Não corra para reconstruir.",
-            "O silêncio depois do desmoronamento é sagrado.",
-            "Fique nele até ouvir o próximo sinal.",
+            "A pausa depois do desmoronamento faz trabalho.",
+            "Fique nela até o próximo passo aparecer.",
           ],
         },
         {
           title: "Escute as repetições",
           desc: [
-            "A mesma cena de novo?",
-            "Não é castigo. É precisão.",
-            "Resolva — ou viva outra vez.",
+            "A mesma cena de novo? Isso é diagnóstico.",
+            "Resolva — ou ela volta pela terceira vez.",
           ],
         },
         {
           title: "Permita o corte",
           desc: [
-            "Nem todo fim vem fechado.",
-            "Alguns vêm claros.",
-            "Solte.",
-            "Sem remendos, desculpas nem cena.",
+            "Nem todo fim chega fechado.",
+            "Alguns chegam claros.",
+            "Solte, sem remendos, desculpas ou cena.",
           ],
         },
         {
-          title: "Chame a si mesmo para fora",
+          title: "Chame-se para fora",
           desc: [
-            "O seu próximo você aguarda um sinal.",
-            "Não espere permissão.",
-            "Dê-lhe um nome.",
-            "Aja a partir dele.",
-            "Viva-o.",
+            "Sua próxima versão está esperando.",
+            "Permissão não vai chegar.",
+            "Dê-lhe nome. Aja a partir dele. Viva-o.",
           ],
         },
         {
-          title: "Reúna-se — ou se despedaçará pela própria frequência",
+          title: "Reúna-se",
           desc: [
-            "Um eu partido não sustenta um campo inteiro.",
-            "Reúna.",
-            "Ou desfaça.",
+            "Um eu partido não sustenta decisões.",
+            "Reúna ou desfaça-se.",
             "Não há meio-termo.",
           ],
         },
@@ -1027,12 +1013,12 @@ const es: Dict = {
     agentsHeader: "Prensa, agentes, editoriales",
     agentsBody:
       "Busco representación para derechos en EN y PT-BR para los títulos de ficción, y revisores para el preprint. Consultas serias bienvenidas.",
-    emailCta: "Email — mf@mikefluff.com",
+    emailCta: "Email — info@neuralcosmology.com",
     elsewhereHeader: "En otros sitios",
   },
   footer: {
     tagline:
-      "Casa abierta del programa Neural Cosmology: tres libros, un preprint, un conjunto creciente de ensayos. Científico con preguntas, no profeta con respuestas.",
+      "Neural Cosmology — tres libros, un preprint, un conjunto creciente de ensayos.",
     columns: {
       read: "Leer",
       research: "Investigación",
@@ -1048,7 +1034,7 @@ const es: Dict = {
       press: "Agentes y prensa",
       github: "GitHub",
     },
-    copyright: "La presencia basta.",
+    copyright: "Todos los derechos reservados.",
   },
   home: {
     hero: {
@@ -1056,8 +1042,9 @@ const es: Dict = {
       title: "Neuralcosmology",
       headline: "Neural Cosmology",
       subhead:
-        "Un marco que reúne cinco anomalías científicas — de la rotación galáctica a la bioelectricidad celular.",
-      subheadExtra: "Una serie de libros, un preprint, un conjunto de ensayos.",
+        "El universo como una red que aprende. La consciencia como propiedad de ciertas configuraciones de grafo.",
+      subheadExtra:
+        "Preprints, código, ensayos y materiales de libros — un programa que une física teórico-informacional, cosmología y los fundamentos de la mente.",
       cta: "Entrar",
     },
     whatIs: {
@@ -1091,54 +1078,53 @@ const es: Dict = {
           desc: [
             "La vida lineal es ficción.",
             "Cada momento es una bifurcación.",
-            "Elige con consciencia, no por inercia.",
+            "Elige deliberadamente.",
           ],
         },
         {
-          title: "Honra el Umbral dentro de ti",
+          title: "Empieza por dentro",
           desc: [
-            "Ninguna señal de fuera importa si por dentro hay desafinación.",
-            "Tu resonancia es la puerta.",
-            "Tú mismo eres el umbral.",
+            "Las señales de fuera valen poco si por dentro hay desafinación.",
+            "Resuelve primero tu propio estado.",
+            "El resto se lee desde ahí.",
           ],
         },
         {
           title: "Limpia la memoria del ruido",
           desc: [
-            "No cargas el pasado.",
-            "Lo repites en bucle.",
-            "Hasta que ves el dibujo y cortas el eco.",
+            "El pasado no pesa solo.",
+            "La cabeza lo repite.",
+            "Ve el patrón — el bucle se rompe.",
           ],
         },
         {
-          title: "Distingue a los guías",
+          title: "Distingue a quien de verdad ayuda",
           desc: [
-            "No todo el que brilla guía.",
-            "Los verdaderos te devuelven la claridad.",
-            "Los falsos reparten confusión.",
+            "La ayuda real devuelve claridad.",
+            "Todo lo demás solo enreda más.",
+            "Úsalo como criterio.",
           ],
         },
         {
-          title: "Rompe la cáscara",
+          title: "Rompe la forma vieja",
           desc: [
-            "Se agrieta — es señal, no es derrota.",
-            "Sal antes de que la forma sea tu tumba.",
+            "La grieta es la señal para salir.",
+            "Sal antes de que la forma sea una celda.",
           ],
         },
         {
           title: "Sostente en la travesía",
           desc: [
             "No corras a reconstruir.",
-            "El silencio tras el derrumbe es sagrado.",
-            "Quédate en él hasta oír la próxima señal.",
+            "La pausa tras el derrumbe hace trabajo.",
+            "Quédate en ella hasta que aparezca el próximo paso.",
           ],
         },
         {
           title: "Escucha las repeticiones",
           desc: [
-            "¿La misma escena otra vez?",
-            "No es castigo. Es precisión.",
-            "Resuélvela — o vuelve a vivirla.",
+            "¿La misma escena otra vez? Es diagnóstico.",
+            "Resuélvela — o vuelve por tercera vez.",
           ],
         },
         {
@@ -1146,26 +1132,22 @@ const es: Dict = {
           desc: [
             "No todo final llega cerrado.",
             "Algunos llegan claros.",
-            "Suelta.",
-            "Sin remiendos, disculpas ni escena.",
+            "Suelta sin remiendos, disculpas ni escena.",
           ],
         },
         {
           title: "Llámate hacia afuera",
           desc: [
-            "Tu próximo tú espera una señal.",
-            "No esperes permiso.",
-            "Ponle nombre.",
-            "Actúa desde él.",
-            "Vívelo.",
+            "Tu próxima versión está esperando.",
+            "El permiso no va a llegar.",
+            "Ponle nombre. Actúa desde él. Vívelo.",
           ],
         },
         {
-          title: "Reúnete — o te romperás por tu propia frecuencia",
+          title: "Reúnete",
           desc: [
-            "Un yo partido no sostiene un campo entero.",
-            "Reúne.",
-            "O desintégrate.",
+            "Un yo partido no sostiene decisiones.",
+            "Reúnete o desintégrate.",
             "No hay punto medio.",
           ],
         },
