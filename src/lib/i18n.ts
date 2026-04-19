@@ -266,10 +266,10 @@ const en: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "The universe is a neural network. Not as metaphor.",
+      headline: "Neural Cosmology",
       subhead:
-        "Five anomalies — from galaxy rotation to cellular bioelectricity — line up into one picture. Neural Cosmology is the frame in which they can be gathered and tested.",
-      subheadExtra: "Every claim here comes with a falsifier.",
+        "A frame that gathers five scientific anomalies — from galaxy rotation to cellular bioelectricity.",
+      subheadExtra: "A series of books, a preprint, a collection of essays.",
       cta: "Enter",
     },
     whatIs: {
@@ -279,7 +279,7 @@ const en: Dict = {
       lead2:
         "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
       lead3:
-        "In the books — three voices: rigorous argument, science fiction, literary sequel. In the preprint — numbers and falsifiers. In the essays — individual sections.",
+        "The argument runs through the books, the preprint and the essays.",
     },
     corePrinciples: {
       title: "Five anomalies",
@@ -531,11 +531,10 @@ const ru: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Вселенная — нейросеть. Не как метафора.",
+      headline: "Нейронная космология",
       subhead:
-        "Пять аномалий — от вращения галактик до биоэлектричества клеток — складываются в одну картину. Нейронная космология — рамка, в которой их можно собрать и проверить.",
-      subheadExtra:
-        "У каждого тезиса здесь — критерий опровержения.",
+        "Рамка, в которую собраны пять научных аномалий — от вращения галактик до биоэлектричества клеток.",
+      subheadExtra: "Серия книг, препринт и собрание эссе.",
       cta: "Войти",
     },
     whatIs: {
@@ -545,7 +544,7 @@ const ru: Dict = {
       lead2:
         "Вращение галактик. Асимметрия материи. Проблема измерения. Сознание. Биоэлектричество клеток. По отдельности — пять загадок. Вместе — одна картина.",
       lead3:
-        "В книгах — три голоса: строгий аргумент, научная фантастика, литературное продолжение. В препринте — числа и критерии опровержения. В эссе — отдельные срезы.",
+        "Разбор идёт в книгах, препринте и эссе.",
     },
     corePrinciples: {
       title: "Пять аномалий",
@@ -794,10 +793,10 @@ const pt: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "O universo é uma rede neural. Não como metáfora.",
+      headline: "Neural Cosmology",
       subhead:
-        "Cinco anomalias — da rotação galáctica à bioeletricidade celular — se alinham numa única imagem. Neural Cosmology é a moldura em que elas se juntam e se põem à prova.",
-      subheadExtra: "Cada tese aqui vem com um falsificador.",
+        "Uma moldura que reúne cinco anomalias científicas — da rotação galáctica à bioeletricidade celular.",
+      subheadExtra: "Uma série de livros, um preprint, um conjunto de ensaios.",
       cta: "Entrar",
     },
     whatIs: {
@@ -807,7 +806,7 @@ const pt: Dict = {
       lead2:
         "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
       lead3:
-        "Nos livros — três vozes: argumento rigoroso, ficção científica, continuação literária. No preprint — números e falsificadores. Nos ensaios — recortes.",
+        "O argumento atravessa os livros, o preprint e os ensaios.",
     },
     corePrinciples: {
       title: "Cinco anomalias",
@@ -1055,10 +1054,10 @@ const es: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "El universo es una red neuronal. No como metáfora.",
+      headline: "Neural Cosmology",
       subhead:
-        "Cinco anomalías — de la rotación galáctica a la bioelectricidad celular — encajan en una sola imagen. Neural Cosmology es el marco en el que se reúnen y se ponen a prueba.",
-      subheadExtra: "Cada tesis aquí viene con un falsador.",
+        "Un marco que reúne cinco anomalías científicas — de la rotación galáctica a la bioelectricidad celular.",
+      subheadExtra: "Una serie de libros, un preprint, un conjunto de ensayos.",
       cta: "Entrar",
     },
     whatIs: {
@@ -1068,7 +1067,7 @@ const es: Dict = {
       lead2:
         "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
       lead3:
-        "En los libros — tres voces: argumento riguroso, ciencia ficción, continuación literaria. En el preprint — cifras y falsadores. En los ensayos — fragmentos.",
+        "El argumento recorre los libros, el preprint y los ensayos.",
     },
     corePrinciples: {
       title: "Cinco anomalías",
