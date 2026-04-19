@@ -167,3 +167,7 @@ jobs:
         echo "🔗 URL: https://${{ env.DOMAIN }}"
         echo "🏷️ Container: ${{ env.PROJECT_NAME }}"
         echo "📦 Image: ${{ secrets.DOCKERHUB_USERNAME }}/neurocosmology:latest"
+
+
+
+

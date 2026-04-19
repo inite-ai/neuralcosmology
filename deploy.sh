@@ -61,3 +61,7 @@ echo "🧹 Cleaning up..."
 docker system prune -f
 
 echo "🎉 Deployment completed successfully!"
+
+
+
+

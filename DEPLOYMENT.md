@@ -170,3 +170,7 @@ docker cp neurocosmology:/tmp/backup.tar.gz ./backup.tar.gz
 🌐 **Доступные адреса:**
 - https://neuralcosmology.com
 - https://www.neuralcosmology.com
+
+
+
+
