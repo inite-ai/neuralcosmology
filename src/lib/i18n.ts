@@ -279,7 +279,7 @@ const en: Dict = {
       lead2:
         "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
       lead3:
-        "In the books — the argument in full. In the preprint — numbers and falsifiers. In the essays — individual sections.",
+        "In the books — three voices: rigorous argument, science fiction, literary sequel. In the preprint — numbers and falsifiers. In the essays — individual sections.",
     },
     corePrinciples: {
       title: "Five anomalies",
@@ -545,7 +545,7 @@ const ru: Dict = {
       lead2:
         "Вращение галактик. Асимметрия материи. Проблема измерения. Сознание. Биоэлектричество клеток. По отдельности — пять загадок. Вместе — одна картина.",
       lead3:
-        "В книгах — аргумент целиком. В препринте — числа и критерии опровержения. В эссе — отдельные срезы.",
+        "В книгах — три голоса: строгий аргумент, научная фантастика, литературное продолжение. В препринте — числа и критерии опровержения. В эссе — отдельные срезы.",
     },
     corePrinciples: {
       title: "Пять аномалий",
@@ -807,7 +807,7 @@ const pt: Dict = {
       lead2:
         "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
       lead3:
-        "Nos livros — o argumento inteiro. No preprint — números e falsificadores. Nos ensaios — recortes.",
+        "Nos livros — três vozes: argumento rigoroso, ficção científica, continuação literária. No preprint — números e falsificadores. Nos ensaios — recortes.",
     },
     corePrinciples: {
       title: "Cinco anomalias",
@@ -1068,7 +1068,7 @@ const es: Dict = {
       lead2:
         "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
       lead3:
-        "En los libros — el argumento entero. En el preprint — cifras y falsadores. En los ensayos — fragmentos.",
+        "En los libros — tres voces: argumento riguroso, ciencia ficción, continuación literaria. En el preprint — cifras y falsadores. En los ensayos — fragmentos.",
     },
     corePrinciples: {
       title: "Cinco anomalías",
