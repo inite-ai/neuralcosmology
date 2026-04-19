@@ -27,7 +27,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
       links: [
         { label: dict.footer.links.about, href: `/${locale}/about` },
         { label: dict.footer.links.press, href: "mailto:mf@mikefluff.com" },
-        { label: dict.footer.links.github, href: "https://github.com/mikefluff" },
+        { label: dict.footer.links.github, href: "https://github.com/neuralcosmology" },
       ],
     },
   ];

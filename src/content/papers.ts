@@ -28,7 +28,7 @@ export const papers: Paper[] = [
       "Falsifier: if reproducibility pipeline yields materially different fits under reasonable re-parameterisation, results are over-fit.",
     ],
     pdfPath: "/pdfs/pointer-architecture-v2.pdf",
-    codeUrl: "https://github.com/mikefluff/pointer-architecture",
+    codeUrl: "https://github.com/neuralcosmology/pointer-architecture",
     companionBookSlug: "celestial-code",
   },
 ];

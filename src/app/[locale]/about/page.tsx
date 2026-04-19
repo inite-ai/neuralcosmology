@@ -85,10 +85,10 @@ export default async function AboutPage({
           <ul className="text-sm text-white/75 space-y-1.5">
             <li>
               <a
-                href="https://github.com/mikefluff"
+                href="https://github.com/neuralcosmology"
                 className="hover:text-white transition-colors"
               >
-                GitHub — mikefluff
+                GitHub — neuralcosmology
               </a>
             </li>
             <li>
