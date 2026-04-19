@@ -266,21 +266,20 @@ const en: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Neural Cosmology is a working name for a frame.",
+      headline: "The universe is a neural network. Not as metaphor.",
       subhead:
-        "Five scientific anomalies from different fields line up into one picture. I write about them in three books and test them on data in a preprint.",
-      subheadExtra:
-        "No mysticism. Numbers, code, and willingness to be refuted.",
+        "Five anomalies — from galaxy rotation to cellular bioelectricity — line up into one picture. Neural Cosmology is the frame in which they can be gathered and tested.",
+      subheadExtra: "Data. Code. Willingness to be refuted.",
       cta: "Enter",
     },
     whatIs: {
-      title: "What's here",
+      title: "What this is",
       lead1:
-        "Three books, a preprint and a set of essays — on how neuroscience, cosmology and information theory connect.",
+        "Neural Cosmology is an attempt to gather five cracks in the standard picture of the world into one frame.",
       lead2:
         "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
       lead3:
-        "In the books — at full length. In the preprint — with numbers and falsifiers. Both live on this site.",
+        "In the books — the argument in full. In the preprint — numbers and falsifiers. In the essays — individual sections.",
     },
     corePrinciples: {
       title: "Five cracks",
@@ -532,21 +531,21 @@ const ru: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Нейронная космология — это рабочее название рамки.",
+      headline: "Вселенная — нейросеть. Не как метафора.",
       subhead:
-        "Пять научных аномалий из разных областей складываются в одну картину. Я пишу об этом в трёх книгах и проверяю на данных в препринте.",
+        "Пять аномалий — от вращения галактик до биоэлектричества клеток — складываются в одну картину. Нейронная космология — рамка, в которой их можно собрать и проверить.",
       subheadExtra:
-        "Без мистики. С числами, кодом и готовностью быть опровергнутым.",
+        "Данные. Код. Готовность быть опровергнутой.",
       cta: "Войти",
     },
     whatIs: {
-      title: "Что здесь",
+      title: "Что это",
       lead1:
-        "Три книги, препринт и собрание эссе — о том, как связаны нейробиология, космология и теория информации.",
+        "Нейронная космология — попытка собрать пять трещин стандартной картины мира в одну рамку.",
       lead2:
         "Вращение галактик. Асимметрия материи. Проблема измерения. Сознание. Биоэлектричество клеток. По отдельности — пять загадок. Вместе — одна картина.",
       lead3:
-        "В книгах — в полный рост. В препринте — с числами и критериями опровержения. На этом сайте есть и то, и другое.",
+        "В книгах — аргумент целиком. В препринте — числа и критерии опровержения. В эссе — отдельные срезы.",
     },
     corePrinciples: {
       title: "Пять трещин",
@@ -795,21 +794,20 @@ const pt: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Neural Cosmology é um nome de trabalho para uma moldura.",
+      headline: "O universo é uma rede neural. Não como metáfora.",
       subhead:
-        "Cinco anomalias científicas de campos diferentes se alinham numa única imagem. Escrevo sobre isso em três livros e testo nos dados em um preprint.",
-      subheadExtra:
-        "Sem misticismo. Números, código e disposição de ser refutado.",
+        "Cinco anomalias — da rotação galáctica à bioeletricidade celular — se alinham numa única imagem. Neural Cosmology é a moldura em que elas se juntam e se põem à prova.",
+      subheadExtra: "Dados. Código. Disposição de ser refutada.",
       cta: "Entrar",
     },
     whatIs: {
-      title: "O que há aqui",
+      title: "O que é",
       lead1:
-        "Três livros, um preprint e um conjunto de ensaios — sobre como neurociência, cosmologia e teoria da informação se encontram.",
+        "Neural Cosmology é a tentativa de reunir cinco rachaduras na imagem padrão do mundo numa única moldura.",
       lead2:
         "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
       lead3:
-        "Nos livros — em toda a extensão. No preprint — com números e falsificadores. Ambos moram neste site.",
+        "Nos livros — o argumento inteiro. No preprint — números e falsificadores. Nos ensaios — recortes.",
     },
     corePrinciples: {
       title: "Cinco rachaduras",
@@ -1057,21 +1055,20 @@ const es: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Neural Cosmology es un nombre de trabajo para un marco.",
+      headline: "El universo es una red neuronal. No como metáfora.",
       subhead:
-        "Cinco anomalías científicas de campos distintos encajan en una única imagen. Lo escribo en tres libros y lo pongo a prueba con datos en un preprint.",
-      subheadExtra:
-        "Sin misticismo. Cifras, código y disposición a ser refutado.",
+        "Cinco anomalías — de la rotación galáctica a la bioelectricidad celular — encajan en una sola imagen. Neural Cosmology es el marco en el que se reúnen y se ponen a prueba.",
+      subheadExtra: "Datos. Código. Disposición a ser refutada.",
       cta: "Entrar",
     },
     whatIs: {
-      title: "Qué hay aquí",
+      title: "Qué es",
       lead1:
-        "Tres libros, un preprint y un conjunto de ensayos — sobre cómo se encuentran neurociencia, cosmología y teoría de la información.",
+        "Neural Cosmology es el intento de reunir cinco grietas de la imagen estándar del mundo en un solo marco.",
       lead2:
         "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
       lead3:
-        "En los libros — a fondo. En el preprint — con cifras y falsadores. Los dos viven en este sitio.",
+        "En los libros — el argumento entero. En el preprint — cifras y falsadores. En los ensayos — fragmentos.",
     },
     corePrinciples: {
       title: "Cinco grietas",
