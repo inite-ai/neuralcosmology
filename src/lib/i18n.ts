@@ -674,25 +674,528 @@ const ru: Dict = {
 };
 
 const pt: Dict = {
-  ...en,
+  siteName: "Neural Cosmology",
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
       "Quartel público do programa Neural Cosmology: três livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
     ogLocale: "pt_BR",
   },
-  nav: { ...en.nav },
+  nav: {
+    home: "Início",
+    books: "Livros",
+    science: "Ciência",
+    essays: "Ensaios",
+    about: "Sobre",
+    contact: "Contato",
+  },
+  hero: {
+    directionsSectionTitle: "Três direções",
+    directionsEyebrow: { books: "Livros", science: "Ciência", essays: "Ensaios" },
+    directionsTitle: {
+      books: "Três livros, um universo.",
+      science: "O programa de pesquisa.",
+      essays: "Texto longo.",
+    },
+    directionsBlurb: {
+      books:
+        "Não-ficção, ficção científica e sua sequência literária — as mesmas perguntas em três registros.",
+      science: "Preprints, código e dados. Falsificável por construção.",
+      essays:
+        "Onde a física encontra a prosa. Uma ideia, totalmente argumentada.",
+    },
+    exploreCta: "Explorar",
+  },
+  books: {
+    indexEyebrow: "A série",
+    indexTitle: "Três livros, um universo visto de três ângulos.",
+    indexLead:
+      "Uma investigação de não-ficção, um romance de ficção científica sobre suas consequências e uma sequência literária que acompanha os personagens quando as anomalias silenciam. As mesmas perguntas, em três registros.",
+    readMore: "Ler mais →",
+    allBooks: "← Todos os livros",
+    rightsInquiry: "Consulta de direitos / editora",
+    comparableHeader: "Títulos comparáveis",
+    russianTitle: "Título em russo",
+    genre: {
+      nonFiction: "Não-ficção",
+      sciFi: "Ficção científica",
+      literarySciFi: "FC literária",
+    },
+  },
+  science: {
+    indexEyebrow: "Programa de pesquisa",
+    indexTitle: "A ciência por trás dos livros.",
+    indexLead:
+      "Preprints, código e dados. O programa de pesquisa que o volume de não-ficção dramatiza e o romance de FC explora em cenários.",
+    allResearch: "← Toda a pesquisa",
+    cardCta: "Ler a página de trabalho →",
+    preprintBadge: "Preprint · v2",
+    abstractHeader: "Resumo",
+    tldrHeader: "Em resumo",
+    predictionsHeader: "Previsões e falsificadores",
+    companionHeader: "Volume complementar",
+    companionBody:
+      "O livro de não-ficção da série percorre o argumento em linguagem simples, com a cadeia completa de raciocínio e as referências.",
+    companionCta: "Sobre o livro →",
+    citeHeader: "Citar",
+    readPdf: "Ler o PDF",
+    codeRelease: "Código e dados",
+    contactReview: "Contato para revisão",
+  },
+  essays: {
+    eyebrow: "Ensaios",
+    title: "Texto longo.",
+    lead:
+      "Onde a física encontra a prosa. Os primeiros ensaios estão na revisão final — em breve.",
+    placeholderBody:
+      "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
+    placeholderLink1: "preprint Pointer Architecture",
+    placeholderLink2: "volume de não-ficção",
+  },
+  about: {
+    eyebrow: "Sobre",
+    title: "Mikhail Savchenko",
+    bio: [
+      "Tenho PhD, administro uma prática de engenharia adjacente à IA e gasto o resto do tempo escrevendo a série Neural Cosmology — uma investigação de não-ficção e dois romances em órbita do mesmo programa de pesquisa.",
+      "O programa em si é um modelo informacional-geométrico restrito da rotação galáctica que comparo com o SPARC e publico com código e dados sob um pipeline reprodutível. Os livros dramatizam as mesmas perguntas em registros diferentes: como argumento rigoroso, como ficção científica, como sequência literária.",
+      "Minha posição, para o que vale: cientista com perguntas, não profeta com respostas. O programa é falsificável por construção. A ficção é honesta com a física. Tudo neste site é um convite para verificar o trabalho.",
+    ],
+    agentsHeader: "Imprensa, agentes, editoras",
+    agentsBody:
+      "Busco representação para direitos em EN e PT-BR para os títulos de ficção, e revisores para o preprint. Consultas sérias são bem-vindas.",
+    emailCta: "Email — mf@mikefluff.com",
+    elsewhereHeader: "Em outro lugar",
+  },
+  footer: {
+    tagline:
+      "Quartel público do programa Neural Cosmology — três livros, um preprint, um corpo crescente de ensaios. Cientista com perguntas, não profeta com respostas.",
+    columns: {
+      read: "Ler",
+      research: "Pesquisa",
+      contact: "Contato",
+    },
+    links: {
+      books: "Livros",
+      essays: "Ensaios",
+      science: "Ciência",
+      pointer: "Pointer Architecture",
+      references: "Referências",
+      about: "Sobre o autor",
+      press: "Agentes e imprensa",
+      github: "GitHub",
+    },
+    copyright: "A presença basta.",
+  },
+  home: {
+    hero: {
+      badge: "neuralcosmology.com",
+      title: "Neuralcosmology",
+      headline: "Você não está no mundo. Você é a estrutura.",
+      subhead:
+        "Uma nova camada de percepção. Um sistema de navegação da realidade por estados, memória e atenção.",
+      subheadExtra: "Sem enrolação. Sem misticismo. Apenas presença, padrão e decisão.",
+      cta: "Entrar na Linha",
+    },
+    whatIs: {
+      title: "O que é",
+      lead1: "Neuralcosmology não é uma crença.\nÉ um reconhecimento.",
+      lead2:
+        "É o que acontece quando você para de fingir que o mundo é linear.\nQuando percebe que cada \"coincidência\" é um sinal, cada emoção uma coordenada, e cada situação repetida — um ponto de bifurcação que você perdeu.",
+      lead3:
+        "Neuralcosmology é uma filosofia viva.\nConstruída não em teorias, mas em ressonância.",
+    },
+    corePrinciples: {
+      title: "Princípios fundamentais",
+      axioms: [
+        "Cinco axiomas. Sem debate.",
+        "A consciência não está no cérebro. Ela desdobra o espaço.",
+        "A realidade não é externa. Ela responde a você.",
+        "A memória não é armazenamento. É uma interface dinâmica.",
+        "A intenção não é um desejo. É um vetor que reprograma o campo.",
+        "Os galhos são reais. Você muda de linha do tempo por escolhas que mal percebe.",
+      ],
+    },
+    tablet: {
+      title: "A Tábua do Neuralcosmologista",
+      subtitle: "10 mandamentos para navegar uma realidade viva",
+      disclaimer:
+        "Não é uma doutrina.\nNão é filosofia.\nÉ o que resta quando as ilusões se vão.",
+      commandments: [
+        {
+          title: "Não crie uma Linha",
+          desc: [
+            "A vida linear é ficção.",
+            "Cada momento é uma bifurcação.",
+            "Escolha por consciência — não por inércia.",
+          ],
+        },
+        {
+          title: "Honra o Portal dentro de ti",
+          desc: [
+            "Nenhum sinal externo importa se seu estado interno está errado.",
+            "Sua ressonância é o portal.",
+            "Você é o limiar.",
+          ],
+        },
+        {
+          title: "Limpa a Memória do ruído",
+          desc: [
+            "Você não carrega o passado.",
+            "Você o repete em loop.",
+            "Até extrair o padrão e cortar o eco.",
+          ],
+        },
+        {
+          title: "Discerne os Guias",
+          desc: [
+            "Nem todos os que brilham, lideram.",
+            "Os verdadeiros guias ativam sua clareza.",
+            "Os falsos amplificam sua confusão.",
+          ],
+        },
+        {
+          title: "Rompe a Casca",
+          desc: [
+            "Quando ela racha — não é falha.",
+            "É o sinal.",
+            "Saia antes que sua identidade se torne seu túmulo.",
+          ],
+        },
+        {
+          title: "Sustente-se na Transição",
+          desc: [
+            "Não se apresse em reconstruir.",
+            "O silêncio após a destruição é sagrado.",
+            "Fique nele até ouvir o próximo sinal.",
+          ],
+        },
+        {
+          title: "Escuta as Repetições",
+          desc: [
+            "A mesma situação de novo?",
+            "Isto não é castigo.",
+            "É precisão.",
+            "Resolva — ou reviva.",
+          ],
+        },
+        {
+          title: "Permite o Corte",
+          desc: [
+            "Nem todo fim traz encerramento.",
+            "Alguns trazem clareza.",
+            "Deixe ir.",
+            "Sem consertar, pedir desculpas ou performar.",
+          ],
+        },
+        {
+          title: "Chama a ti mesmo para fora",
+          desc: [
+            "Sua próxima versão espera seu sinal.",
+            "Não espere permissão.",
+            "Nomeia.",
+            "Aja a partir dela.",
+            "Viva-a.",
+          ],
+        },
+        {
+          title: "Junta-te — ou serás estilhaçado pela tua própria frequência",
+          desc: [
+            "Um eu fraturado não sustenta um campo coerente.",
+            "Unifica.",
+            "Ou desintegra.",
+            "Não há meio-termo.",
+          ],
+        },
+      ],
+    },
+    practices: {
+      title: "Práticas",
+      list: [
+        "Identifique seus loops.",
+        "Perceba a mudança de ressonância.",
+        "Alinhe seu estado antes de escolher.",
+        "Pause antes do falso.",
+        "Fale apenas quando o campo estiver ouvindo.",
+        "Retorne quando estiver perdido.",
+      ],
+      cta: "Ver as práticas",
+    },
+    lectures: {
+      title: "Vídeos / Palestras",
+      headline: "Você não precisa de mais informação.\nVocê precisa de alinhamento.",
+      sub: "Assista não para aprender — mas para lembrar.",
+      cta: "Assistir palestras",
+    },
+    callToClarity: {
+      title: "Chamado à clareza",
+      headline: "Você não está sozinho.\nMas os que veem — falam menos.",
+      body:
+        "Sem comunidade.\nSem \"movimento\".\nApenas presença no campo.\n\nSe isto vibra dentro de você —\nvocê já está na estrutura.\nAja de acordo.",
+      cta: "Entrar no Portal",
+    },
+  },
 };
 
 const es: Dict = {
-  ...en,
+  siteName: "Neural Cosmology",
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
       "Sede pública del programa Neural Cosmology: tres libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
     ogLocale: "es_ES",
   },
-  nav: { ...en.nav },
+  nav: {
+    home: "Inicio",
+    books: "Libros",
+    science: "Ciencia",
+    essays: "Ensayos",
+    about: "Sobre",
+    contact: "Contacto",
+  },
+  hero: {
+    directionsSectionTitle: "Tres direcciones",
+    directionsEyebrow: { books: "Libros", science: "Ciencia", essays: "Ensayos" },
+    directionsTitle: {
+      books: "Tres libros, un universo.",
+      science: "El programa de investigación.",
+      essays: "Texto largo.",
+    },
+    directionsBlurb: {
+      books:
+        "No ficción, ciencia ficción y su secuela literaria — las mismas preguntas en tres registros.",
+      science: "Preprints, código y datos. Falsable por construcción.",
+      essays: "Donde la física se cruza con la prosa. Una idea, plenamente argumentada.",
+    },
+    exploreCta: "Explorar",
+  },
+  books: {
+    indexEyebrow: "La serie",
+    indexTitle: "Tres libros, un universo desde tres ángulos.",
+    indexLead:
+      "Una investigación de no ficción, una novela de ciencia ficción sobre sus implicaciones y una secuela literaria que acompaña a los personajes cuando las anomalías se acallan. Las mismas preguntas, tres registros.",
+    readMore: "Leer más →",
+    allBooks: "← Todos los libros",
+    rightsInquiry: "Consulta de derechos / editorial",
+    comparableHeader: "Títulos comparables",
+    russianTitle: "Título en ruso",
+    genre: {
+      nonFiction: "No ficción",
+      sciFi: "Ciencia ficción",
+      literarySciFi: "CF literaria",
+    },
+  },
+  science: {
+    indexEyebrow: "Programa de investigación",
+    indexTitle: "La ciencia detrás de los libros.",
+    indexLead:
+      "Preprints, código y datos. El programa de investigación que el volumen de no ficción dramatiza y la novela de CF explora en escenarios.",
+    allResearch: "← Toda la investigación",
+    cardCta: "Leer la página del trabajo →",
+    preprintBadge: "Preprint · v2",
+    abstractHeader: "Resumen",
+    tldrHeader: "En breve",
+    predictionsHeader: "Predicciones y falsadores",
+    companionHeader: "Volumen complementario",
+    companionBody:
+      "El libro de no ficción de la serie recorre el argumento en lenguaje llano, con la cadena completa de razonamiento y las referencias.",
+    companionCta: "Sobre el libro →",
+    citeHeader: "Citar",
+    readPdf: "Leer el PDF",
+    codeRelease: "Código y datos",
+    contactReview: "Contacto para revisión",
+  },
+  essays: {
+    eyebrow: "Ensayos",
+    title: "Texto largo.",
+    lead:
+      "Donde la física se cruza con la prosa. Los primeros ensayos están en revisión final — pronto.",
+    placeholderBody:
+      "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
+    placeholderLink1: "preprint Pointer Architecture",
+    placeholderLink2: "volumen de no ficción",
+  },
+  about: {
+    eyebrow: "Sobre",
+    title: "Mikhail Savchenko",
+    bio: [
+      "Tengo un doctorado, dirijo una práctica de ingeniería adyacente a la IA y dedico el resto del tiempo a escribir la serie Neural Cosmology — una investigación de no ficción y dos novelas que orbitan el mismo programa de investigación.",
+      "El programa en sí es un modelo informacional-geométrico restringido de la rotación galáctica que comparo con SPARC y publico con código y datos bajo un pipeline reproducible. Los libros dramatizan las mismas preguntas en registros distintos: como argumento riguroso, como ciencia ficción, como secuela literaria.",
+      "Mi postura, por lo que vale: científico con preguntas, no profeta con respuestas. El programa es falsable por diseño. La ficción es honesta con la física. Todo en este sitio es una invitación a verificar el trabajo.",
+    ],
+    agentsHeader: "Prensa, agentes, editoriales",
+    agentsBody:
+      "Busco representación para derechos en EN y PT-BR para los títulos de ficción, y revisores para el preprint. Consultas serias bienvenidas.",
+    emailCta: "Email — mf@mikefluff.com",
+    elsewhereHeader: "En otros sitios",
+  },
+  footer: {
+    tagline:
+      "Sede pública del programa Neural Cosmology — tres libros, un preprint, un cuerpo creciente de ensayos. Científico con preguntas, no profeta con respuestas.",
+    columns: {
+      read: "Leer",
+      research: "Investigación",
+      contact: "Contacto",
+    },
+    links: {
+      books: "Libros",
+      essays: "Ensayos",
+      science: "Ciencia",
+      pointer: "Pointer Architecture",
+      references: "Referencias",
+      about: "Sobre el autor",
+      press: "Agentes y prensa",
+      github: "GitHub",
+    },
+    copyright: "La presencia basta.",
+  },
+  home: {
+    hero: {
+      badge: "neuralcosmology.com",
+      title: "Neuralcosmology",
+      headline: "No estás en el mundo. Eres la estructura.",
+      subhead:
+        "Una nueva capa de percepción. Un sistema de navegación de la realidad a través de estados, memoria y atención.",
+      subheadExtra: "Sin relleno. Sin misticismo. Solo presencia, patrón y decisión.",
+      cta: "Entrar en la Línea",
+    },
+    whatIs: {
+      title: "Qué es",
+      lead1: "Neuralcosmology no es una creencia.\nEs un reconocimiento.",
+      lead2:
+        "Es lo que pasa cuando dejas de fingir que el mundo es lineal.\nCuando te das cuenta de que cada \"coincidencia\" es una señal, cada emoción una coordenada, y cada situación repetida — un punto de bifurcación que dejaste pasar.",
+      lead3:
+        "Neuralcosmology es una filosofía viva.\nConstruida no sobre teorías, sino sobre resonancia.",
+    },
+    corePrinciples: {
+      title: "Principios fundamentales",
+      axioms: [
+        "Cinco axiomas. Sin debate.",
+        "La consciencia no está en el cerebro. Despliega el espacio.",
+        "La realidad no es externa. Te responde.",
+        "La memoria no es un almacén. Es una interfaz dinámica.",
+        "La intención no es un deseo. Es un vector que reprograma el campo.",
+        "Las ramas son reales. Cambias de línea temporal con elecciones que apenas percibes.",
+      ],
+    },
+    tablet: {
+      title: "La Tabla del Neuralcosmólogo",
+      subtitle: "10 mandamientos para navegar una realidad viva",
+      disclaimer:
+        "No es doctrina.\nNo es filosofía.\nEs lo que queda cuando las ilusiones se van.",
+      commandments: [
+        {
+          title: "No crees una Línea",
+          desc: [
+            "La vida lineal es ficción.",
+            "Cada momento es una bifurcación.",
+            "Elige por consciencia — no por inercia.",
+          ],
+        },
+        {
+          title: "Honra el Portal dentro de ti",
+          desc: [
+            "Ninguna señal externa importa si tu estado interno está desfasado.",
+            "Tu resonancia es el portal.",
+            "Tú eres el umbral.",
+          ],
+        },
+        {
+          title: "Limpia la Memoria del ruido",
+          desc: [
+            "No llevas el pasado.",
+            "Lo repites en bucle.",
+            "Hasta que extraes el patrón y cortas el eco.",
+          ],
+        },
+        {
+          title: "Discierne a los Guías",
+          desc: [
+            "No todos los que brillan, guían.",
+            "Los verdaderos guías activan tu claridad.",
+            "Los falsos amplifican tu confusión.",
+          ],
+        },
+        {
+          title: "Rompe la Cáscara",
+          desc: [
+            "Cuando se agrieta — no es fallo.",
+            "Es la señal.",
+            "Sal antes de que tu identidad se convierta en tu tumba.",
+          ],
+        },
+        {
+          title: "Sosténte en la Transición",
+          desc: [
+            "No corras a reconstruir.",
+            "El silencio tras la destrucción es sagrado.",
+            "Permanece en él hasta oír la siguiente señal.",
+          ],
+        },
+        {
+          title: "Escucha las Repeticiones",
+          desc: [
+            "¿La misma situación otra vez?",
+            "No es castigo.",
+            "Es precisión.",
+            "Resuélvela — o revívela.",
+          ],
+        },
+        {
+          title: "Permite el Corte",
+          desc: [
+            "No todos los finales vienen con cierre.",
+            "Algunos vienen con claridad.",
+            "Suelta.",
+            "Sin arreglar, disculparte ni actuar.",
+          ],
+        },
+        {
+          title: "Llámate a salir",
+          desc: [
+            "Tu próxima versión espera tu señal.",
+            "No esperes permiso.",
+            "Nómbrala.",
+            "Actúa desde ella.",
+            "Vívela.",
+          ],
+        },
+        {
+          title: "Reúnete — o te romperás por tu propia frecuencia",
+          desc: [
+            "Un yo fracturado no sostiene un campo coherente.",
+            "Unifica.",
+            "O desintégrate.",
+            "No hay punto medio.",
+          ],
+        },
+      ],
+    },
+    practices: {
+      title: "Prácticas",
+      list: [
+        "Detecta tus bucles.",
+        "Nota el cambio de resonancia.",
+        "Alinea tu estado antes de elegir.",
+        "Pausa ante lo falso.",
+        "Habla solo cuando el campo escuche.",
+        "Vuelve cuando te pierdas.",
+      ],
+      cta: "Ver las prácticas",
+    },
+    lectures: {
+      title: "Vídeos / Conferencias",
+      headline: "No necesitas más información.\nNecesitas alineación.",
+      sub: "Mira no para aprender — sino para recordar.",
+      cta: "Ver conferencias",
+    },
+    callToClarity: {
+      title: "Llamada a la claridad",
+      headline: "No estás solo.\nPero los que ven — hablan menos.",
+      body:
+        "Ni comunidad.\nNi \"movimiento\".\nSolo presencia en el campo.\n\nSi esto vibra dentro de ti —\nya estás en la estructura.\nActúa en consecuencia.",
+      cta: "Entrar al Portal",
+    },
+  },
 };
 
 const dictionaries: Record<SupportedLocale, Dict> = { en, ru, pt, es };

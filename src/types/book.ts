@@ -1,6 +1,6 @@
 export type BookStatus = "published" | "forthcoming" | "wip";
 export type BookGenre = "non-fiction" | "sci-fi" | "literary-sci-fi";
-export type Locale = "en" | "ru" | "pt";
+export type Locale = "en" | "ru" | "pt" | "es";
 
 export type Blurb = {
   author: string;
