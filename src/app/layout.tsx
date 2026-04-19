@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { StructuredData } from "./structured-data";
+import SiteBackground from "@/components/layout/SiteBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,61 +13,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Root metadata is a safe fallback. Per-locale metadata (title, description,
+// hreflang alternates, openGraph locale) lives in app/[locale]/layout.tsx so
+// each locale gets the right crawler signal.
 export const metadata: Metadata = {
-  title: "Neuralcosmology - Navigate Reality Through States, Memory & Attention",
-  description: "A system of reality navigation through states, memory, and attention. Explore the intersection of neural networks and cosmic structures, with no fluff or mysticism—just presence, pattern, and decision.",
-  keywords: [
-    "neuralcosmology", 
-    "neural cosmology", 
-    "consciousness", 
-    "reality navigation", 
-    "mental states", 
-    "cognitive patterns", 
-    "self awareness", 
-    "perception", 
-    "mindfulness", 
-    "cosmic structure", 
-    "neural networks", 
-    "inner space"
-  ],
-  authors: [
-    {
-      name: "Neuralcosmology",
-      url: "https://neuralcosmology.com",
-    },
-  ],
-  creator: "Neuralcosmology",
-  publisher: "Neuralcosmology",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://neuralcosmology.com",
-    title: "Neuralcosmology - A New Layer of Perception",
-    description: "You're not in the world. You are the structure. A system of reality navigation through states, memory, and attention.",
-    siteName: "Neuralcosmology",
-    images: [
-      {
-        url: "/og-image.jpg", // Add this image to your public folder
-        width: 1200,
-        height: 630,
-        alt: "Neuralcosmology - A new layer of perception",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Neuralcosmology - Navigate Reality Through States, Memory & Attention",
-    description: "A new layer of perception. Explore the intersection of neural networks and cosmic structures.",
-    images: ["/twitter-image.jpg"], // Add this image to your public folder
-    creator: "@neuralcosmology",
-  },
+  metadataBase: new URL("https://neuralcosmology.com"),
+  title: "Neural Cosmology — Mikhail Savchenko",
+  description:
+    "Public HQ for the Neural Cosmology programme: three books, one preprint, a growing body of essays.",
+  authors: [{ name: "Mikhail Savchenko", url: "https://neuralcosmology.com" }],
+  creator: "Mikhail Savchenko",
+  publisher: "Mikhail Savchenko",
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicons/favicon-16x16.png",
+    apple: "/favicons/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
-  metadataBase: new URL("https://neuralcosmology.com"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -78,9 +50,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-[#0a1026]`}
       >
-        <StructuredData />
+        <SiteBackground />
         {children}
       </body>
     </html>

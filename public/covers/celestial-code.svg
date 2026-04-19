@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="cc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1026"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0a1026"/>
+    </linearGradient>
+    <radialGradient id="cc-glow" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#4f46e5" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0a1026" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="cc-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#818cf8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="800" fill="url(#cc-bg)"/>
+  <rect width="600" height="800" fill="url(#cc-grid)"/>
+  <rect width="600" height="800" fill="url(#cc-glow)"/>
+
+  <!-- Orbital diagram -->
+  <g transform="translate(300 340)" fill="none" stroke="#a5b4fc" stroke-opacity="0.4">
+    <ellipse cx="0" cy="0" rx="180" ry="60" stroke-width="1"/>
+    <ellipse cx="0" cy="0" rx="140" ry="140" stroke-width="1" stroke-opacity="0.25"/>
+    <ellipse cx="0" cy="0" rx="90" ry="30" stroke-width="1.5" stroke-opacity="0.6" transform="rotate(30)"/>
+  </g>
+  <circle cx="300" cy="340" r="6" fill="#e0e7ff"/>
+  <circle cx="478" cy="340" r="3" fill="#a5b4fc"/>
+  <circle cx="180" cy="390" r="3" fill="#a5b4fc"/>
+  <circle cx="360" cy="270" r="2.5" fill="#c7d2fe"/>
+
+  <!-- Star field -->
+  <g fill="#e0e7ff" fill-opacity="0.75">
+    <circle cx="80" cy="110" r="1"/>
+    <circle cx="150" cy="80" r="1.2"/>
+    <circle cx="500" cy="90" r="1"/>
+    <circle cx="540" cy="160" r="0.8"/>
+    <circle cx="70" cy="220" r="0.8"/>
+    <circle cx="420" cy="200" r="1.1"/>
+    <circle cx="90" cy="540" r="1"/>
+    <circle cx="530" cy="520" r="0.9"/>
+    <circle cx="100" cy="690" r="0.8"/>
+    <circle cx="480" cy="670" r="1"/>
+  </g>
+
+  <!-- Text -->
+  <text x="60" y="100" font-family="Georgia, serif" font-size="13" letter-spacing="6" fill="#a5b4fc" fill-opacity="0.8">NEURAL COSMOLOGY · I</text>
+  <text x="60" y="600" font-family="Georgia, serif" font-size="50" font-weight="600" fill="#f1f5f9" letter-spacing="-1">The Celestial</text>
+  <text x="60" y="650" font-family="Georgia, serif" font-size="50" font-weight="600" fill="#f1f5f9" letter-spacing="-1">Code</text>
+  <line x1="60" y1="680" x2="140" y2="680" stroke="#818cf8" stroke-width="2"/>
+  <text x="60" y="720" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#c7d2fe" fill-opacity="0.85">MIKHAIL SAVCHENKO</text>
+  <text x="60" y="745" font-family="Inter, sans-serif" font-size="12" letter-spacing="2" fill="#818cf8" fill-opacity="0.7">NON-FICTION · WIP</text>
+</svg>
