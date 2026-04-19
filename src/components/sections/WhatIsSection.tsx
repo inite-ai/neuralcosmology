@@ -227,6 +227,9 @@ export default function WhatIsSection({ locale }: { locale: SupportedLocale }) {
         <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-3 sm:mb-4 px-2">
           <MultiLine text={t.lead2} />
         </p>
+        <p className="text-sm sm:text-base md:text-lg text-blue-100/85 mb-3 sm:mb-4 px-2 leading-relaxed text-left sm:text-center">
+          <MultiLine text={t.leadMechanism} />
+        </p>
         <p className="text-sm sm:text-base md:text-lg text-blue-300/80 px-2">
           <MultiLine text={t.lead3} />
         </p>

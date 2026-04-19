@@ -117,6 +117,7 @@ export type Dict = {
       title: string;
       lead1: string;
       lead2: string;
+      leadMechanism: string;
       lead3: string;
     };
     corePrinciples: {
@@ -279,6 +280,8 @@ const en: Dict = {
         "Neural Cosmology is an attempt to gather five anomalies of the standard picture of the world into one frame.",
       lead2:
         "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
+      leadMechanism:
+        "Central hypothesis: the universe as a learning network. In that frame the five anomalies read as expressions of one computational structure — from the cosmic web to cellular bioelectricity. Consciousness enters as a property of certain graph configurations, described quantitatively. The aim is a model that yields testable consequences.",
       lead3:
         "The argument runs through the books, the preprint and the essays.",
     },
@@ -538,6 +541,8 @@ const ru: Dict = {
         "Нейронная космология сводит пять аномалий стандартной картины мира в единую модель.",
       lead2:
         "Вращение галактик. Асимметрия материи. Проблема измерения. Сознание. Биоэлектричество клеток. По отдельности — пять загадок. Вместе — одна картина.",
+      leadMechanism:
+        "Центральная гипотеза: Вселенная как обучающаяся сеть. В такой рамке пять аномалий оказываются проявлениями одной вычислительной структуры — от космической паутины до биоэлектричества клеток. Сознание входит как свойство определённых конфигураций графа, описываемое количественно. Цель — модель с проверяемыми следствиями.",
       lead3:
         "Разбор идёт в книгах, препринте и эссе.",
     },
@@ -796,6 +801,8 @@ const pt: Dict = {
         "Neural Cosmology é a tentativa de reunir cinco anomalias da imagem padrão do mundo numa única moldura.",
       lead2:
         "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
+      leadMechanism:
+        "Hipótese central: o universo como uma rede em aprendizado. Nessa moldura, as cinco anomalias aparecem como manifestações de uma única estrutura computacional — da rede cósmica à bioeletricidade celular. A consciência entra como propriedade de certas configurações de grafo, descrita quantitativamente. O objetivo é um modelo que gere consequências testáveis.",
       lead3:
         "O argumento atravessa os livros, o preprint e os ensaios.",
     },
@@ -1053,6 +1060,8 @@ const es: Dict = {
         "Neural Cosmology es el intento de reunir cinco anomalías de la imagen estándar del mundo en un solo marco.",
       lead2:
         "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
+      leadMechanism:
+        "Hipótesis central: el universo como una red que aprende. En ese marco, las cinco anomalías aparecen como manifestaciones de una sola estructura computacional — desde la red cósmica hasta la bioelectricidad celular. La consciencia entra como propiedad de ciertas configuraciones de grafo, descrita cuantitativamente. El objetivo es un modelo que produzca consecuencias verificables.",
       lead3:
         "El argumento recorre los libros, el preprint y los ensayos.",
     },
