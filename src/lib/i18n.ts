@@ -407,7 +407,7 @@ const en: Dict = {
       title: "Get in touch",
       headline: "No community, no movement.\nOnly the work and its testing.",
       body:
-        "If this matters — read the preprint, write with questions and reviews.\nI reply myself.",
+        "The preprint is open. Write with questions, reviews or critique — everything gets read.",
       cta: "Write",
     },
   },
@@ -670,7 +670,7 @@ const ru: Dict = {
       title: "Связаться",
       headline: "Ни сообщества, ни движения.\nТолько работа и её проверка.",
       body:
-        "Если важно — читай препринт, пиши с вопросами и рецензиями.\nОтвечаю сам.",
+        "Препринт открыт. Пиши с вопросами, рецензиями или критикой — всё читается.",
       cta: "Написать",
     },
   },
@@ -932,7 +932,7 @@ const pt: Dict = {
       title: "Entrar em contato",
       headline: "Sem comunidade, sem movimento.\nSó o trabalho e sua verificação.",
       body:
-        "Se isto importa — leia o preprint, escreva com perguntas e resenhas.\nRespondo pessoalmente.",
+        "O preprint está aberto. Escreva com perguntas, resenhas ou críticas — tudo é lido.",
       cta: "Escrever",
     },
   },
@@ -1193,7 +1193,7 @@ const es: Dict = {
       title: "Escribir",
       headline: "Ni comunidad, ni movimiento.\nSolo el trabajo y su prueba.",
       body:
-        "Si esto importa — lee el preprint, escribe con preguntas y reseñas.\nRespondo personalmente.",
+        "El preprint está abierto. Escribe con preguntas, reseñas o críticas — todo se lee.",
       cta: "Escribir",
     },
   },
