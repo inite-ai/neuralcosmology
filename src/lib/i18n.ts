@@ -17,6 +17,7 @@ export type Dict = {
     contact: string;
   };
   hero: {
+    directionsSectionTitle: string;
     directionsEyebrow: {
       books: string;
       science: string;
@@ -103,6 +104,49 @@ export type Dict = {
     };
     copyright: string;
   };
+  home: {
+    hero: {
+      badge: string;
+      title: string;
+      headline: string;
+      subhead: string;
+      subheadExtra: string;
+      cta: string;
+    };
+    whatIs: {
+      title: string;
+      lead1: string;
+      lead2: string;
+      lead3: string;
+    };
+    corePrinciples: {
+      title: string;
+      axioms: string[];
+    };
+    tablet: {
+      title: string;
+      subtitle: string;
+      disclaimer: string;
+      commandments: { title: string; desc: string[] }[];
+    };
+    practices: {
+      title: string;
+      list: string[];
+      cta: string;
+    };
+    lectures: {
+      title: string;
+      headline: string;
+      sub: string;
+      cta: string;
+    };
+    callToClarity: {
+      title: string;
+      headline: string;
+      body: string;
+      cta: string;
+    };
+  };
 };
 
 const en: Dict = {
@@ -122,6 +166,7 @@ const en: Dict = {
     contact: "Contact",
   },
   hero: {
+    directionsSectionTitle: "Three directions",
     directionsEyebrow: { books: "Books", science: "Science", essays: "Essays" },
     directionsTitle: {
       books: "Three books, one universe.",
@@ -217,6 +262,153 @@ const en: Dict = {
     },
     copyright: "Presence is enough.",
   },
+  home: {
+    hero: {
+      badge: "neuralcosmology.com",
+      title: "Neuralcosmology",
+      headline: "You're not in the world. You are the structure.",
+      subhead:
+        "A new layer of perception. A system of reality navigation through states, memory, and attention.",
+      subheadExtra: "No fluff. No mysticism. Just presence, pattern, and decision.",
+      cta: "Enter the Line",
+    },
+    whatIs: {
+      title: "What is it",
+      lead1: "Neuralcosmology is not a belief.\nIt's a recognition.",
+      lead2:
+        "It's what happens when you stop pretending the world is linear.\nWhen you realize every \"coincidence\" is a signal, every emotion a coordinate, and every repeated situation — a branching point you missed.",
+      lead3: "Neuralcosmology is a living philosophy.\nBuilt not on theories — but on resonance.",
+    },
+    corePrinciples: {
+      title: "Core Principles",
+      axioms: [
+        "Five axioms. No debate.",
+        "Consciousness is not in the brain. It unfolds space.",
+        "Reality is not external. It responds to you.",
+        "Memory is not a storage. It's a dynamic interface.",
+        "Intent is not a wish. It's a vector that reprograms the field.",
+        "Branches are real. You switch timelines by choices you barely notice.",
+      ],
+    },
+    tablet: {
+      title: "The Neuralcosmologist's Tablet",
+      subtitle: "10 Commandments for Navigating a Living Reality",
+      disclaimer:
+        "This is not a doctrine.\nThis is not philosophy.\nThis is what remains when the illusions are gone.",
+      commandments: [
+        {
+          title: "Do not create a Line",
+          desc: [
+            "Linear life is fiction.",
+            "Every moment is a fork.",
+            "Choose through awareness — not inertia.",
+          ],
+        },
+        {
+          title: "Honor the Portal within",
+          desc: [
+            "No outer sign matters if your inner state is off.",
+            "Your resonance is the gateway.",
+            "You are the threshold.",
+          ],
+        },
+        {
+          title: "Cleanse Memory of Noise",
+          desc: [
+            "You don't carry the past.",
+            "You loop it.",
+            "Until you extract the pattern and cut the echo.",
+          ],
+        },
+        {
+          title: "Discern the Guides",
+          desc: [
+            "Not all who shine, lead.",
+            "True guides activate your clarity.",
+            "False ones amplify your confusion.",
+          ],
+        },
+        {
+          title: "Break the Shell",
+          desc: [
+            "When it cracks — it's not failure.",
+            "It's the signal.",
+            "Step out before your identity becomes your tomb.",
+          ],
+        },
+        {
+          title: "Hold through the Transition",
+          desc: [
+            "Don't rush to reconstruct.",
+            "The silence after destruction is sacred.",
+            "Sit in it until you hear the next signal.",
+          ],
+        },
+        {
+          title: "Listen to the Repeats",
+          desc: [
+            "The same situation again?",
+            "That's not punishment.",
+            "That's precision.",
+            "Resolve it — or relive it.",
+          ],
+        },
+        {
+          title: "Permit the Cut",
+          desc: [
+            "Not all endings come with closure.",
+            "Some come with clarity.",
+            "Let go.",
+            "Without fixing, apologizing, or performing.",
+          ],
+        },
+        {
+          title: "Call yourself forth",
+          desc: [
+            "Your next version is waiting for your signal.",
+            "Don't wait for permission.",
+            "Name it.",
+            "Act from it.",
+            "Live into it.",
+          ],
+        },
+        {
+          title: "Gather yourself — or be shattered by your own frequency",
+          desc: [
+            "A fractured self cannot hold a coherent field.",
+            "Unify.",
+            "Or disintegrate.",
+            "There is no middle.",
+          ],
+        },
+      ],
+    },
+    practices: {
+      title: "Practices",
+      list: [
+        "Spot your loops.",
+        "Notice the shift in resonance.",
+        "Align your state before choosing.",
+        "Pause before the false.",
+        "Speak only when the field is listening.",
+        "Return when you feel lost.",
+      ],
+      cta: "View the Practices",
+    },
+    lectures: {
+      title: "Videos / Lectures",
+      headline: "You don't need more information.\nYou need alignment.",
+      sub: "Watch not to learn — but to remember.",
+      cta: "Watch Lectures",
+    },
+    callToClarity: {
+      title: "Call to clarity",
+      headline: "You are not alone.\nBut those who see — speak less.",
+      body:
+        "No community.\nNo \"movement\".\nOnly presence in the field.\n\nIf this vibrates inside you —\nyou're already in the structure.\nAct accordingly.",
+      cta: "Enter the Portal",
+    },
+  },
 };
 
 const ru: Dict = {
@@ -236,6 +428,7 @@ const ru: Dict = {
     contact: "Контакты",
   },
   hero: {
+    directionsSectionTitle: "Три направления",
     directionsEyebrow: { books: "Книги", science: "Наука", essays: "Эссе" },
     directionsTitle: {
       books: "Три книги, одна вселенная.",
@@ -330,6 +523,153 @@ const ru: Dict = {
       github: "GitHub",
     },
     copyright: "Присутствия достаточно.",
+  },
+  home: {
+    hero: {
+      badge: "neuralcosmology.com",
+      title: "Neuralcosmology",
+      headline: "Ты не в мире. Ты — структура.",
+      subhead:
+        "Новый слой восприятия. Система навигации по реальности через состояния, память и внимание.",
+      subheadExtra: "Без воды. Без мистики. Только присутствие, паттерн и решение.",
+      cta: "Войти в линию",
+    },
+    whatIs: {
+      title: "Что это",
+      lead1: "Нейрокосмология — не вера.\nЭто узнавание.",
+      lead2:
+        "Это то, что случается, когда перестаёшь притворяться, будто мир линеен.\nКогда видишь, что каждое «совпадение» — сигнал, каждая эмоция — координата, а каждая повторяющаяся ситуация — пропущенная точка ветвления.",
+      lead3: "Нейрокосмология — живая философия.\nПостроена не на теориях, а на резонансе.",
+    },
+    corePrinciples: {
+      title: "Основные принципы",
+      axioms: [
+        "Пять аксиом. Без обсуждений.",
+        "Сознание не в мозге. Оно разворачивает пространство.",
+        "Реальность не внешняя. Она отвечает тебе.",
+        "Память — не хранилище. Это динамический интерфейс.",
+        "Намерение — не желание. Это вектор, перепрограммирующий поле.",
+        "Ветки реальны. Ты меняешь линии теми решениями, которые едва замечаешь.",
+      ],
+    },
+    tablet: {
+      title: "Скрижаль нейрокосмолога",
+      subtitle: "10 заповедей для навигации по живой реальности",
+      disclaimer:
+        "Это не доктрина.\nЭто не философия.\nЭто то, что остаётся, когда иллюзий больше нет.",
+      commandments: [
+        {
+          title: "Не создавай Линию",
+          desc: [
+            "Линейная жизнь — выдумка.",
+            "Каждый миг — развилка.",
+            "Выбирай через осознанность, а не инерцию.",
+          ],
+        },
+        {
+          title: "Чти Портал внутри",
+          desc: [
+            "Ни один внешний знак не имеет значения, если внутри сбой.",
+            "Твой резонанс — врата.",
+            "Ты — порог.",
+          ],
+        },
+        {
+          title: "Очисти Память от шума",
+          desc: [
+            "Ты не несёшь прошлое.",
+            "Ты его зацикливаешь.",
+            "Пока не извлечёшь паттерн и не обрубишь эхо.",
+          ],
+        },
+        {
+          title: "Различай Проводников",
+          desc: [
+            "Не все, кто светит, ведут.",
+            "Настоящие проводники включают твою ясность.",
+            "Ложные усиливают растерянность.",
+          ],
+        },
+        {
+          title: "Ломай Скорлупу",
+          desc: [
+            "Когда трескается — это не провал.",
+            "Это сигнал.",
+            "Выйди, пока идентичность не стала гробницей.",
+          ],
+        },
+        {
+          title: "Держись в Переходе",
+          desc: [
+            "Не торопись перестраивать.",
+            "Тишина после разрушения священна.",
+            "Сиди в ней, пока не услышишь следующий сигнал.",
+          ],
+        },
+        {
+          title: "Слушай Повторы",
+          desc: [
+            "Та же ситуация снова?",
+            "Это не наказание.",
+            "Это точность.",
+            "Разреши — или проживи заново.",
+          ],
+        },
+        {
+          title: "Разреши Разрез",
+          desc: [
+            "Не все окончания приходят с закрытием.",
+            "Некоторые — с ясностью.",
+            "Отпусти.",
+            "Без починки, извинений и представлений.",
+          ],
+        },
+        {
+          title: "Вызови себя наружу",
+          desc: [
+            "Твоя следующая версия ждёт сигнала.",
+            "Не жди разрешения.",
+            "Назови её.",
+            "Действуй из неё.",
+            "Живи в неё.",
+          ],
+        },
+        {
+          title: "Собери себя — или разлетишься от собственной частоты",
+          desc: [
+            "Расколотое «я» не удержит когерентное поле.",
+            "Объединись.",
+            "Или распадись.",
+            "Середины нет.",
+          ],
+        },
+      ],
+    },
+    practices: {
+      title: "Практики",
+      list: [
+        "Лови свои петли.",
+        "Замечай сдвиг резонанса.",
+        "Выравнивай состояние до выбора.",
+        "Пауза перед ложным.",
+        "Говори только тогда, когда поле слушает.",
+        "Возвращайся, когда теряешься.",
+      ],
+      cta: "Посмотреть практики",
+    },
+    lectures: {
+      title: "Видео / Лекции",
+      headline: "Тебе не нужно больше информации.\nТебе нужно выравнивание.",
+      sub: "Смотри не чтобы учиться, а чтобы вспомнить.",
+      cta: "Смотреть лекции",
+    },
+    callToClarity: {
+      title: "Призыв к ясности",
+      headline: "Ты не один.\nНо те, кто видит, говорят меньше.",
+      body:
+        "Ни сообщества.\nНи «движения».\nТолько присутствие в поле.\n\nЕсли внутри откликается —\nты уже в структуре.\nДействуй соответственно.",
+      cta: "Войти в портал",
+    },
   },
 };
 

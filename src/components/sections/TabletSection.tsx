@@ -1,10 +1,26 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, Fragment } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { initParticlesEngine } from "@tsparticles/react";
 import { Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import type { SupportedLocale } from "@/lib/get-locale";
+import { getDict } from "@/lib/i18n";
+
+function MultiLine({ text }: { text: string }) {
+  const parts = text.split("\n");
+  return (
+    <>
+      {parts.map((p, i) => (
+        <Fragment key={i}>
+          {p}
+          {i < parts.length - 1 && <br />}
+        </Fragment>
+      ))}
+    </>
+  );
+}
 
 // Particle configuration - will be adjusted for mobile
 const getParticlesConfig = () => {
@@ -152,97 +168,10 @@ if (typeof window !== 'undefined') {
   }, 100);
 }
 
-// Commandments data
-const commandments = [
-  {
-    title: "Do not create a Line",
-    desc: [
-      "Linear life is fiction.",
-      "Every moment is a fork.",
-      "Choose through awareness — not inertia."
-    ]
-  },
-  {
-    title: "Honor the Portal within",
-    desc: [
-      "No outer sign matters if your inner state is off.",
-      "Your resonance is the gateway.",
-      "You are the threshold."
-    ]
-  },
-  {
-    title: "Cleanse Memory of Noise",
-    desc: [
-      "You don't carry the past.",
-      "You loop it.",
-      "Until you extract the pattern and cut the echo."
-    ]
-  },
-  {
-    title: "Discern the Guides",
-    desc: [
-      "Not all who shine, lead.",
-      "True guides activate your clarity.",
-      "False ones amplify your confusion."
-    ]
-  },
-  {
-    title: "Break the Shell",
-    desc: [
-      "When it cracks — it's not failure.",
-      "It's the signal.",
-      "Step out before your identity becomes your tomb."
-    ]
-  },
-  {
-    title: "Hold through the Transition",
-    desc: [
-      "Don't rush to reconstruct.",
-      "The silence after destruction is sacred.",
-      "Sit in it until you hear the next signal."
-    ]
-  },
-  {
-    title: "Listen to the Repeats",
-    desc: [
-      "The same situation again?",
-      "That's not punishment.",
-      "That's precision.",
-      "Resolve it — or relive it."
-    ]
-  },
-  {
-    title: "Permit the Cut",
-    desc: [
-      "Not all endings come with closure.",
-      "Some come with clarity.",
-      "Let go.",
-      "Without fixing, apologizing, or performing."
-    ]
-  },
-  {
-    title: "Call yourself forth",
-    desc: [
-      "Your next version is waiting for your signal.",
-      "Don't wait for permission.",
-      "Name it.",
-      "Act from it.",
-      "Live into it."
-    ]
-  },
-  {
-    title: "Gather yourself — or be shattered by your own frequency",
-    desc: [
-      "A fractured self cannot hold a coherent field.",
-      "Unify.",
-      "Or disintegrate.",
-      "There is no middle."
-    ]
-  }
-];
-
 // Actual component
-export default function TabletSection() {
+export default function TabletSection({ locale }: { locale: SupportedLocale }) {
+  const t = getDict(locale).home.tablet;
+  const commandments = t.commandments;
   const [active, setActive] = useState(4);
   const [initialRender, setInitialRender] = useState(true);
   
@@ -330,11 +259,11 @@ export default function TabletSection() {
         className="px-2 sm:px-4"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text px-2">
-          The Neuralcosmologist's Tablet
+          {t.title}
         </h2>
-        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-2 font-semibold tracking-wide px-2">10 Commandments for Navigating a Living Reality</p>
+        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-2 font-semibold tracking-wide px-2">{t.subtitle}</p>
         <p className="text-xs sm:text-sm md:text-base text-blue-300/80 mb-4 sm:mb-6 italic max-w-xl mx-auto px-2">
-          This is not a doctrine.<br />This is not philosophy.<br />This is what remains when the illusions are gone.
+          <MultiLine text={t.disclaimer} />
         </p>
         
         {/* Carousel with a simpler, more reliable positioning approach */}

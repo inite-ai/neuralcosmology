@@ -2,9 +2,26 @@
 import { motion } from "framer-motion";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Fragment } from "react";
+import type { SupportedLocale } from "@/lib/get-locale";
+import { getDict } from "@/lib/i18n";
 
-export default function WhatIsSection() {
+function MultiLine({ text }: { text: string }) {
+  const parts = text.split("\n");
+  return (
+    <>
+      {parts.map((p, i) => (
+        <Fragment key={i}>
+          {p}
+          {i < parts.length - 1 && <br />}
+        </Fragment>
+      ))}
+    </>
+  );
+}
+
+export default function WhatIsSection({ locale }: { locale: SupportedLocale }) {
+  const t = getDict(locale).home.whatIs;
   const [init, setInit] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -329,16 +346,16 @@ export default function WhatIsSection() {
         className="sm:rounded-2xl sm:p-10"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
-          What is it
+          {t.title}
         </h2>
         <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
-          Neuralcosmology is not a belief.<br />It's a recognition.
+          <MultiLine text={t.lead1} />
         </p>
         <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-3 sm:mb-4 px-2">
-          It's what happens when you stop pretending the world is linear.<br />When you realize every "coincidence" is a signal, every emotion a coordinate, and every repeated situation — a branching point you missed.
+          <MultiLine text={t.lead2} />
         </p>
         <p className="text-sm sm:text-base md:text-lg text-blue-300/80 px-2">
-          Neuralcosmology is a living philosophy.<br />Built not on theories — but on resonance.
+          <MultiLine text={t.lead3} />
         </p>
       </motion.div>
     </section>

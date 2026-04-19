@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import HeroSection from "@/components/sections/HeroSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import CorePrinciplesSection from "@/components/sections/CorePrinciplesSection";
@@ -44,25 +45,71 @@ function DirectionsSection({ locale }: { locale: SupportedLocale }) {
     },
   ];
   return (
-    <div className="w-full max-w-6xl mx-auto grid gap-5 sm:grid-cols-3 px-4 sm:px-0">
-      {items.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          className="group rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.08] hover:border-white/20 transition-colors p-6 text-left"
-        >
-          <div className="text-xs uppercase tracking-[0.2em] text-indigo-300/80 mb-2">
-            {item.eyebrow}
-          </div>
-          <div className="text-lg font-semibold text-white mb-2 tracking-tight">
-            {item.title}
-          </div>
-          <p className="text-sm text-white/70 leading-relaxed">{item.blurb}</p>
-          <div className="mt-4 text-xs text-indigo-300/80 group-hover:text-indigo-200 transition-colors">
-            {dict.hero.exploreCta} →
-          </div>
-        </Link>
-      ))}
+    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+        className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text"
+      >
+        {dict.hero.directionsSectionTitle}
+      </motion.h2>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.12, delayChildren: 0.15 } },
+        }}
+        className="w-full grid gap-5 sm:grid-cols-3"
+      >
+        {items.map((item) => (
+          <motion.div
+            key={item.href}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] },
+              },
+            }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="group"
+            style={{ willChange: "transform, opacity" }}
+          >
+            <Link
+              href={item.href}
+              className="relative block h-full p-6 sm:p-8 text-left rounded-xl sm:rounded-2xl overflow-hidden"
+              style={{
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                boxShadow:
+                  "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 25px rgba(123, 97, 255, 0.08)",
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-transparent to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-500 pointer-events-none" />
+              <div className="relative">
+                <div className="text-xs uppercase tracking-[0.2em] text-blue-200/80 mb-3">
+                  {item.eyebrow}
+                </div>
+                <div className="text-xl sm:text-2xl font-semibold mb-3 tracking-tight text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text">
+                  {item.title}
+                </div>
+                <p className="text-sm sm:text-base text-blue-200/90 leading-relaxed">
+                  {item.blurb}
+                </p>
+                <div className="mt-5 text-xs uppercase tracking-widest text-blue-300/80 group-hover:text-purple-200 transition-colors">
+                  {dict.hero.exploreCta} →
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 }
@@ -154,35 +201,35 @@ export default function HomeShell({ locale }: { locale: SupportedLocale }) {
       <SectionNav />
 
       <section id="hero" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <HeroSection />
+        <HeroSection locale={locale} />
       </section>
 
-      <section id="directions" className="w-full py-16 sm:py-24 flex items-center justify-center">
+      <section id="directions" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
         <DirectionsSection locale={locale} />
       </section>
 
       <section id="what-is" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <WhatIsSection />
+        <WhatIsSection locale={locale} />
       </section>
 
       <section id="core-principles" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <CorePrinciplesSection />
+        <CorePrinciplesSection locale={locale} />
       </section>
 
       <section id="tablet" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <TabletSection />
+        <TabletSection locale={locale} />
       </section>
 
       <section id="practices" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <PracticesSection />
+        <PracticesSection locale={locale} />
       </section>
 
       <section id="lectures" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <LecturesSection />
+        <LecturesSection locale={locale} />
       </section>
 
       <section id="call-to-clarity" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <CallToClaritySection />
+        <CallToClaritySection locale={locale} />
       </section>
     </main>
   );

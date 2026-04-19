@@ -4,16 +4,12 @@ import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 
-const axioms = [
-  "Five axioms. No debate.",
-  "Consciousness is not in the brain. It unfolds space.",
-  "Reality is not external. It responds to you.",
-  "Memory is not a storage. It's a dynamic interface.",
-  "Intent is not a wish. It's a vector that reprograms the field.",
-  "Branches are real. You switch timelines by choices you barely notice."
-];
+import type { SupportedLocale } from "@/lib/get-locale";
+import { getDict } from "@/lib/i18n";
 
-export default function CorePrinciplesSection() {
+export default function CorePrinciplesSection({ locale }: { locale: SupportedLocale }) {
+  const t = getDict(locale).home.corePrinciples;
+  const axioms = t.axioms;
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -101,7 +97,7 @@ export default function CorePrinciplesSection() {
         style={{ willChange: "transform, opacity" }}
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
-          Core Principles
+          {t.title}
         </h2>
         <div className="w-full flex flex-col gap-0.5">
           {axioms.map((axiom, i) => (

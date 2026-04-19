@@ -5,16 +5,12 @@ import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 
-const practices = [
-  "Spot your loops.",
-  "Notice the shift in resonance.",
-  "Align your state before choosing.",
-  "Pause before the false.",
-  "Speak only when the field is listening.",
-  "Return when you feel lost."
-];
+import type { SupportedLocale } from "@/lib/get-locale";
+import { getDict } from "@/lib/i18n";
 
-export default function PracticesSection() {
+export default function PracticesSection({ locale }: { locale: SupportedLocale }) {
+  const t = getDict(locale).home.practices;
+  const practices = t.list;
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -95,7 +91,7 @@ export default function PracticesSection() {
         className="sm:rounded-2xl sm:p-10"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
-          Practices
+          {t.title}
         </h2>
         <div className="w-full flex flex-col gap-0.5 relative">
           {/* Subtle vertical glowing line */}
@@ -112,7 +108,7 @@ export default function PracticesSection() {
           ))}
         </div>
         <Button className="mt-4 sm:mt-6 md:mt-8 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105 touch-manipulation">
-          View the Practices
+          {t.cta}
         </Button>
       </motion.div>
     </section>

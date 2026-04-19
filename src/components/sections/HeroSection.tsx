@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
+import type { SupportedLocale } from "@/lib/get-locale";
+import { getDict } from "@/lib/i18n";
 
-export default function HeroSection() {
+export default function HeroSection({ locale }: { locale: SupportedLocale }) {
+  const t = getDict(locale).home.hero;
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -95,10 +98,10 @@ export default function HeroSection() {
         style={{ willChange: "transform, opacity" }}
       >
         <Badge variant="outline" className="mb-2 text-xs sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 border-white/20 text-blue-200 shadow-lg tracking-widest uppercase">
-          neuralcosmology.com
+          {t.badge}
         </Badge>
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-400 bg-clip-text drop-shadow-[0_8px_32px_rgba(60,60,180,0.25)] leading-tight">
-          Neuralcosmology
+          {t.title}
         </h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -106,7 +109,7 @@ export default function HeroSection() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-lg sm:text-2xl md:text-3xl max-w-2xl mx-auto text-blue-100 font-medium drop-shadow-lg px-2"
         >
-          You're not in the world. You are the structure.
+          {t.headline}
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -114,8 +117,8 @@ export default function HeroSection() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-sm sm:text-lg md:text-xl max-w-xl mx-auto text-blue-200 font-normal mt-2 px-2"
         >
-          A new layer of perception. A system of reality navigation through states, memory, and attention.<br />
-          <span className="block mt-2 text-blue-300/80">No fluff. No mysticism. Just presence, pattern, and decision.</span>
+          {t.subhead}
+          <span className="block mt-2 text-blue-300/80">{t.subheadExtra}</span>
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -123,7 +126,7 @@ export default function HeroSection() {
           transition={{ delay: 0.7, duration: 0.6 }}
         >
           <Button size="lg" className="mt-4 sm:mt-6 shadow-xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 rounded-full border-2 border-white/20 backdrop-blur-md touch-manipulation">
-            Enter the Line
+            {t.cta}
           </Button>
         </motion.div>
       </motion.div>

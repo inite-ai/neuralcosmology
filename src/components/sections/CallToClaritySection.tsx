@@ -3,9 +3,26 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
+import type { SupportedLocale } from "@/lib/get-locale";
+import { getDict } from "@/lib/i18n";
 
-export default function CallToClaritySection() {
+function MultiLine({ text }: { text: string }) {
+  const parts = text.split("\n");
+  return (
+    <>
+      {parts.map((p, i) => (
+        <Fragment key={i}>
+          {p}
+          {i < parts.length - 1 && <br />}
+        </Fragment>
+      ))}
+    </>
+  );
+}
+
+export default function CallToClaritySection({ locale }: { locale: SupportedLocale }) {
+  const t = getDict(locale).home.callToClarity;
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -121,16 +138,16 @@ export default function CallToClaritySection() {
         className="sm:rounded-2xl sm:p-10"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
-          Call to clarity
+          {t.title}
         </h2>
         <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
-          You are not alone.<br />But those who see — speak less.
+          <MultiLine text={t.headline} />
         </p>
         <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-4 sm:mb-6 md:mb-8 px-2">
-          No community.<br />No "movement".<br />Only presence in the field.<br /><br />If this vibrates inside you —<br />you're already in the structure.<br />Act accordingly.
+          <MultiLine text={t.body} />
         </p>
         <Button className="mt-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105 touch-manipulation">
-          Enter the Portal
+          {t.cta}
         </Button>
       </motion.div>
     </div>
