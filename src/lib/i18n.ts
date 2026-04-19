@@ -678,7 +678,7 @@ const pt: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Quartel público do programa Neural Cosmology: três livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
+      "Casa aberta do programa Neural Cosmology: três livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
     ogLocale: "pt_BR",
   },
   nav: {
@@ -690,31 +690,31 @@ const pt: Dict = {
     contact: "Contato",
   },
   hero: {
-    directionsSectionTitle: "Três direções",
+    directionsSectionTitle: "Três portas",
     directionsEyebrow: { books: "Livros", science: "Ciência", essays: "Ensaios" },
     directionsTitle: {
       books: "Três livros, um universo.",
       science: "O programa de pesquisa.",
-      essays: "Texto longo.",
+      essays: "Prosa longa.",
     },
     directionsBlurb: {
       books:
-        "Não-ficção, ficção científica e sua sequência literária — as mesmas perguntas em três registros.",
-      science: "Preprints, código e dados. Falsificável por construção.",
+        "Não-ficção, ficção científica e a continuação literária dela. As mesmas perguntas em três vozes.",
+      science: "Preprints, código e dados. Feita para ser posta à prova.",
       essays:
-        "Onde a física encontra a prosa. Uma ideia, totalmente argumentada.",
+        "Onde a física encontra a prosa. Uma ideia, levada até o fim.",
     },
-    exploreCta: "Explorar",
+    exploreCta: "Entrar",
   },
   books: {
     indexEyebrow: "A série",
-    indexTitle: "Três livros, um universo visto de três ângulos.",
+    indexTitle: "Três livros, um universo por três ângulos.",
     indexLead:
-      "Uma investigação de não-ficção, um romance de ficção científica sobre suas consequências e uma sequência literária que acompanha os personagens quando as anomalias silenciam. As mesmas perguntas, em três registros.",
+      "Uma investigação de não-ficção, um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em três vozes.",
     readMore: "Ler mais →",
     allBooks: "← Todos os livros",
     rightsInquiry: "Consulta de direitos / editora",
-    comparableHeader: "Títulos comparáveis",
+    comparableHeader: "Vizinhança na estante",
     russianTitle: "Título em russo",
     genre: {
       nonFiction: "Não-ficção",
@@ -724,9 +724,9 @@ const pt: Dict = {
   },
   science: {
     indexEyebrow: "Programa de pesquisa",
-    indexTitle: "A ciência por trás dos livros.",
+    indexTitle: "A ciência atrás dos livros.",
     indexLead:
-      "Preprints, código e dados. O programa de pesquisa que o volume de não-ficção dramatiza e o romance de FC explora em cenários.",
+      "Preprints, código e dados. O que o livro de não-ficção desdobra em argumento, o romance de FC joga em cenários.",
     allResearch: "← Toda a pesquisa",
     cardCta: "Ler a página de trabalho →",
     preprintBadge: "Preprint · v2",
@@ -744,9 +744,9 @@ const pt: Dict = {
   },
   essays: {
     eyebrow: "Ensaios",
-    title: "Texto longo.",
+    title: "Prosa longa.",
     lead:
-      "Onde a física encontra a prosa. Os primeiros ensaios estão na revisão final — em breve.",
+      "Onde a física encontra a prosa. Os primeiros ensaios estão na revisão final — em breve por aqui.",
     placeholderBody:
       "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
     placeholderLink1: "preprint Pointer Architecture",
@@ -756,9 +756,9 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Tenho PhD, administro uma prática de engenharia adjacente à IA e gasto o resto do tempo escrevendo a série Neural Cosmology — uma investigação de não-ficção e dois romances em órbita do mesmo programa de pesquisa.",
-      "O programa em si é um modelo informacional-geométrico restrito da rotação galáctica que comparo com o SPARC e publico com código e dados sob um pipeline reprodutível. Os livros dramatizam as mesmas perguntas em registros diferentes: como argumento rigoroso, como ficção científica, como sequência literária.",
-      "Minha posição, para o que vale: cientista com perguntas, não profeta com respostas. O programa é falsificável por construção. A ficção é honesta com a física. Tudo neste site é um convite para verificar o trabalho.",
+      "Tenho doutorado, toco uma prática de engenharia próxima da IA, e o que sobra do tempo vai para a série Neural Cosmology — uma investigação de não-ficção e dois romances em torno do mesmo programa de pesquisa.",
+      "O programa em si é um modelo informacional-geométrico restrito da rotação galáctica que confronto com o catálogo SPARC e publico com código e dados num pipeline reprodutível. Os livros levam as mesmas perguntas em três vozes: como argumento rigoroso, como ficção científica, como continuação literária.",
+      "Minha posição, para o que vale: cientista com perguntas, não profeta com respostas. O programa está feito para ser refutado. A ficção é honesta com a física. Este site é um convite a verificar o trabalho.",
     ],
     agentsHeader: "Imprensa, agentes, editoras",
     agentsBody:
@@ -768,7 +768,7 @@ const pt: Dict = {
   },
   footer: {
     tagline:
-      "Quartel público do programa Neural Cosmology — três livros, um preprint, um corpo crescente de ensaios. Cientista com perguntas, não profeta com respostas.",
+      "Casa aberta do programa Neural Cosmology: três livros, um preprint, um conjunto crescente de ensaios. Cientista com perguntas, não profeta com respostas.",
     columns: {
       read: "Ler",
       research: "Pesquisa",
@@ -790,119 +790,117 @@ const pt: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Você não está no mundo. Você é a estrutura.",
+      headline: "Você não está no mundo. Você é a sua trama.",
       subhead:
-        "Uma nova camada de percepção. Um sistema de navegação da realidade por estados, memória e atenção.",
-      subheadExtra: "Sem enrolação. Sem misticismo. Apenas presença, padrão e decisão.",
+        "Outra camada de visão. Um modo de percorrer a realidade por estados, memória e atenção.",
+      subheadExtra: "Sem embalagem, sem misticismo. Só presença, desenho e passo.",
       cta: "Entrar na Linha",
     },
     whatIs: {
       title: "O que é",
       lead1: "Neuralcosmology não é uma crença.\nÉ um reconhecimento.",
       lead2:
-        "É o que acontece quando você para de fingir que o mundo é linear.\nQuando percebe que cada \"coincidência\" é um sinal, cada emoção uma coordenada, e cada situação repetida — um ponto de bifurcação que você perdeu.",
+        "Começa quando você para de fingir que o mundo é reto.\nQuando vê: coincidência é sinal, emoção é coordenada, repetição é a bifurcação que passou batido.",
       lead3:
-        "Neuralcosmology é uma filosofia viva.\nConstruída não em teorias, mas em ressonância.",
+        "Neuralcosmology é uma filosofia viva.\nSustenta-se em ressonância, não em teoria.",
     },
     corePrinciples: {
       title: "Princípios fundamentais",
       axioms: [
         "Cinco axiomas. Sem debate.",
         "A consciência não está no cérebro. Ela desdobra o espaço.",
-        "A realidade não é externa. Ela responde a você.",
-        "A memória não é armazenamento. É uma interface dinâmica.",
-        "A intenção não é um desejo. É um vetor que reprograma o campo.",
-        "Os galhos são reais. Você muda de linha do tempo por escolhas que mal percebe.",
+        "A realidade não está do lado de fora. Ela responde.",
+        "A memória é viva. Ela responde, não guarda.",
+        "A intenção desloca o campo em volta.",
+        "Os galhos são reais. Você passa de um para outro por escolhas que mal nota.",
       ],
     },
     tablet: {
       title: "A Tábua do Neuralcosmologista",
-      subtitle: "10 mandamentos para navegar uma realidade viva",
+      subtitle: "Dez mandamentos para uma realidade viva",
       disclaimer:
-        "Não é uma doutrina.\nNão é filosofia.\nÉ o que resta quando as ilusões se vão.",
+        "Não é doutrina.\nNão é filosofia.\nÉ o que resta quando as ilusões se vão.",
       commandments: [
         {
-          title: "Não crie uma Linha",
+          title: "Não estique a sua vida em linha",
           desc: [
             "A vida linear é ficção.",
             "Cada momento é uma bifurcação.",
-            "Escolha por consciência — não por inércia.",
+            "Escolha com consciência, não por inércia.",
           ],
         },
         {
-          title: "Honra o Portal dentro de ti",
+          title: "Honre o Limiar dentro de você",
           desc: [
-            "Nenhum sinal externo importa se seu estado interno está errado.",
+            "Nenhum sinal lá fora importa, se dentro está desafinado.",
             "Sua ressonância é o portal.",
             "Você é o limiar.",
           ],
         },
         {
-          title: "Limpa a Memória do ruído",
+          title: "Limpe a memória do ruído",
           desc: [
             "Você não carrega o passado.",
             "Você o repete em loop.",
-            "Até extrair o padrão e cortar o eco.",
+            "Até enxergar o desenho e cortar o eco.",
           ],
         },
         {
-          title: "Discerne os Guias",
+          title: "Saiba distinguir os guias",
           desc: [
-            "Nem todos os que brilham, lideram.",
-            "Os verdadeiros guias ativam sua clareza.",
-            "Os falsos amplificam sua confusão.",
+            "Nem todo que brilha guia.",
+            "Os verdadeiros devolvem sua clareza.",
+            "Os falsos espalham confusão.",
           ],
         },
         {
-          title: "Rompe a Casca",
+          title: "Rompa a casca",
           desc: [
-            "Quando ela racha — não é falha.",
-            "É o sinal.",
-            "Saia antes que sua identidade se torne seu túmulo.",
+            "Ela rachou — é sinal, não é fracasso.",
+            "Saia antes que a forma vire seu túmulo.",
           ],
         },
         {
-          title: "Sustente-se na Transição",
+          title: "Segure-se na travessia",
           desc: [
-            "Não se apresse em reconstruir.",
-            "O silêncio após a destruição é sagrado.",
+            "Não corra para reconstruir.",
+            "O silêncio depois do desmoronamento é sagrado.",
             "Fique nele até ouvir o próximo sinal.",
           ],
         },
         {
-          title: "Escuta as Repetições",
+          title: "Escute as repetições",
           desc: [
-            "A mesma situação de novo?",
-            "Isto não é castigo.",
-            "É precisão.",
-            "Resolva — ou reviva.",
+            "A mesma cena de novo?",
+            "Não é castigo. É precisão.",
+            "Resolva — ou viva outra vez.",
           ],
         },
         {
-          title: "Permite o Corte",
+          title: "Permita o corte",
           desc: [
-            "Nem todo fim traz encerramento.",
-            "Alguns trazem clareza.",
-            "Deixe ir.",
-            "Sem consertar, pedir desculpas ou performar.",
+            "Nem todo fim vem fechado.",
+            "Alguns vêm claros.",
+            "Solte.",
+            "Sem remendos, desculpas nem cena.",
           ],
         },
         {
-          title: "Chama a ti mesmo para fora",
+          title: "Chame a si mesmo para fora",
           desc: [
-            "Sua próxima versão espera seu sinal.",
+            "O seu próximo você aguarda um sinal.",
             "Não espere permissão.",
-            "Nomeia.",
-            "Aja a partir dela.",
-            "Viva-a.",
+            "Dê-lhe um nome.",
+            "Aja a partir dele.",
+            "Viva-o.",
           ],
         },
         {
-          title: "Junta-te — ou serás estilhaçado pela tua própria frequência",
+          title: "Reúna-se — ou se despedaçará pela própria frequência",
           desc: [
-            "Um eu fraturado não sustenta um campo coerente.",
-            "Unifica.",
-            "Ou desintegra.",
+            "Um eu partido não sustenta um campo inteiro.",
+            "Reúna.",
+            "Ou desfaça.",
             "Não há meio-termo.",
           ],
         },
@@ -911,26 +909,26 @@ const pt: Dict = {
     practices: {
       title: "Práticas",
       list: [
-        "Identifique seus loops.",
-        "Perceba a mudança de ressonância.",
-        "Alinhe seu estado antes de escolher.",
-        "Pause antes do falso.",
-        "Fale apenas quando o campo estiver ouvindo.",
-        "Retorne quando estiver perdido.",
+        "Reconheça seus loops.",
+        "Repare quando deixa de soar.",
+        "Ajuste o estado antes de escolher.",
+        "Pausa — diante do falso.",
+        "Fale quando o campo escuta.",
+        "Volte, se tiver se perdido.",
       ],
-      cta: "Ver as práticas",
+      cta: "Às práticas",
     },
     lectures: {
-      title: "Vídeos / Palestras",
-      headline: "Você não precisa de mais informação.\nVocê precisa de alinhamento.",
-      sub: "Assista não para aprender — mas para lembrar.",
-      cta: "Assistir palestras",
+      title: "Vídeos e palestras",
+      headline: "Você já tem informação de sobra.\nFalta juntar-se consigo.",
+      sub: "Assista não para aprender — para lembrar.",
+      cta: "Assistir",
     },
     callToClarity: {
       title: "Chamado à clareza",
-      headline: "Você não está sozinho.\nMas os que veem — falam menos.",
+      headline: "Você não está sozinho.\nMas quem vê, fala mais baixo.",
       body:
-        "Sem comunidade.\nSem \"movimento\".\nApenas presença no campo.\n\nSe isto vibra dentro de você —\nvocê já está na estrutura.\nAja de acordo.",
+        "Sem comunidade.\nSem \"movimento\".\nSó presença no campo.\n\nSe aí dentro respondeu —\nvocê já está nessa trama.\nSiga como souber.",
       cta: "Entrar no Portal",
     },
   },
@@ -941,7 +939,7 @@ const es: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Sede pública del programa Neural Cosmology: tres libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
+      "Casa abierta del programa Neural Cosmology: tres libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
     ogLocale: "es_ES",
   },
   nav: {
@@ -953,30 +951,30 @@ const es: Dict = {
     contact: "Contacto",
   },
   hero: {
-    directionsSectionTitle: "Tres direcciones",
+    directionsSectionTitle: "Tres puertas",
     directionsEyebrow: { books: "Libros", science: "Ciencia", essays: "Ensayos" },
     directionsTitle: {
       books: "Tres libros, un universo.",
       science: "El programa de investigación.",
-      essays: "Texto largo.",
+      essays: "Prosa larga.",
     },
     directionsBlurb: {
       books:
-        "No ficción, ciencia ficción y su secuela literaria — las mismas preguntas en tres registros.",
-      science: "Preprints, código y datos. Falsable por construcción.",
-      essays: "Donde la física se cruza con la prosa. Una idea, plenamente argumentada.",
+        "No ficción, ciencia ficción y su continuación literaria. Las mismas preguntas en tres voces.",
+      science: "Preprints, código y datos. Hecho para ser refutado.",
+      essays: "Donde la física se cruza con la prosa. Una idea, llevada hasta el final.",
     },
-    exploreCta: "Explorar",
+    exploreCta: "Entrar",
   },
   books: {
     indexEyebrow: "La serie",
     indexTitle: "Tres libros, un universo desde tres ángulos.",
     indexLead:
-      "Una investigación de no ficción, una novela de ciencia ficción sobre sus implicaciones y una secuela literaria que acompaña a los personajes cuando las anomalías se acallan. Las mismas preguntas, tres registros.",
+      "Una investigación de no ficción, una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en tres voces.",
     readMore: "Leer más →",
     allBooks: "← Todos los libros",
     rightsInquiry: "Consulta de derechos / editorial",
-    comparableHeader: "Títulos comparables",
+    comparableHeader: "Vecinos de estantería",
     russianTitle: "Título en ruso",
     genre: {
       nonFiction: "No ficción",
@@ -988,7 +986,7 @@ const es: Dict = {
     indexEyebrow: "Programa de investigación",
     indexTitle: "La ciencia detrás de los libros.",
     indexLead:
-      "Preprints, código y datos. El programa de investigación que el volumen de no ficción dramatiza y la novela de CF explora en escenarios.",
+      "Preprints, código y datos. Lo que el libro de no ficción despliega como argumento, la novela lo lanza como escenario.",
     allResearch: "← Toda la investigación",
     cardCta: "Leer la página del trabajo →",
     preprintBadge: "Preprint · v2",
@@ -1006,9 +1004,9 @@ const es: Dict = {
   },
   essays: {
     eyebrow: "Ensayos",
-    title: "Texto largo.",
+    title: "Prosa larga.",
     lead:
-      "Donde la física se cruza con la prosa. Los primeros ensayos están en revisión final — pronto.",
+      "Donde la física se cruza con la prosa. Los primeros ensayos están en revisión final — pronto por aquí.",
     placeholderBody:
       "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
     placeholderLink1: "preprint Pointer Architecture",
@@ -1018,9 +1016,9 @@ const es: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Tengo un doctorado, dirijo una práctica de ingeniería adyacente a la IA y dedico el resto del tiempo a escribir la serie Neural Cosmology — una investigación de no ficción y dos novelas que orbitan el mismo programa de investigación.",
-      "El programa en sí es un modelo informacional-geométrico restringido de la rotación galáctica que comparo con SPARC y publico con código y datos bajo un pipeline reproducible. Los libros dramatizan las mismas preguntas en registros distintos: como argumento riguroso, como ciencia ficción, como secuela literaria.",
-      "Mi postura, por lo que vale: científico con preguntas, no profeta con respuestas. El programa es falsable por diseño. La ficción es honesta con la física. Todo en este sitio es una invitación a verificar el trabajo.",
+      "Tengo un doctorado, llevo una práctica de ingeniería cercana a la IA, y el resto del tiempo va a la serie Neural Cosmology — una investigación de no ficción y dos novelas que giran alrededor del mismo programa de investigación.",
+      "El programa mismo es un modelo informacional-geométrico restringido de la rotación galáctica que contrasto con SPARC y publico con código y datos en un pipeline reproducible. Los libros llevan las mismas preguntas en tres voces: como argumento riguroso, como ciencia ficción, como continuación literaria.",
+      "Mi postura, por lo que vale: científico con preguntas, no profeta con respuestas. El programa está hecho para ser refutado. La ficción es honesta con la física. Este sitio es una invitación a verificar el trabajo.",
     ],
     agentsHeader: "Prensa, agentes, editoriales",
     agentsBody:
@@ -1030,7 +1028,7 @@ const es: Dict = {
   },
   footer: {
     tagline:
-      "Sede pública del programa Neural Cosmology — tres libros, un preprint, un cuerpo creciente de ensayos. Científico con preguntas, no profeta con respuestas.",
+      "Casa abierta del programa Neural Cosmology: tres libros, un preprint, un conjunto creciente de ensayos. Científico con preguntas, no profeta con respuestas.",
     columns: {
       read: "Leer",
       research: "Investigación",
@@ -1052,118 +1050,116 @@ const es: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "No estás en el mundo. Eres la estructura.",
+      headline: "No estás en el mundo. Eres su trama.",
       subhead:
-        "Una nueva capa de percepción. Un sistema de navegación de la realidad a través de estados, memoria y atención.",
-      subheadExtra: "Sin relleno. Sin misticismo. Solo presencia, patrón y decisión.",
+        "Otra capa de mirada. Un modo de recorrer la realidad por estados, memoria y atención.",
+      subheadExtra: "Sin envoltorio, sin misticismo. Solo presencia, dibujo y paso.",
       cta: "Entrar en la Línea",
     },
     whatIs: {
       title: "Qué es",
       lead1: "Neuralcosmology no es una creencia.\nEs un reconocimiento.",
       lead2:
-        "Es lo que pasa cuando dejas de fingir que el mundo es lineal.\nCuando te das cuenta de que cada \"coincidencia\" es una señal, cada emoción una coordenada, y cada situación repetida — un punto de bifurcación que dejaste pasar.",
+        "Empieza cuando dejas de fingir que el mundo es recto.\nCuando ves: coincidencia es señal, emoción es coordenada, repetición es la bifurcación que dejaste pasar.",
       lead3:
-        "Neuralcosmology es una filosofía viva.\nConstruida no sobre teorías, sino sobre resonancia.",
+        "Neuralcosmology es una filosofía viva.\nSe sostiene en resonancia, no en teoría.",
     },
     corePrinciples: {
       title: "Principios fundamentales",
       axioms: [
         "Cinco axiomas. Sin debate.",
         "La consciencia no está en el cerebro. Despliega el espacio.",
-        "La realidad no es externa. Te responde.",
-        "La memoria no es un almacén. Es una interfaz dinámica.",
-        "La intención no es un deseo. Es un vector que reprograma el campo.",
-        "Las ramas son reales. Cambias de línea temporal con elecciones que apenas percibes.",
+        "La realidad no está afuera. Responde.",
+        "La memoria está viva. Responde, no guarda.",
+        "La intención desplaza el campo alrededor.",
+        "Las ramas son reales. Pasas de una a otra con decisiones que apenas notas.",
       ],
     },
     tablet: {
       title: "La Tabla del Neuralcosmólogo",
-      subtitle: "10 mandamientos para navegar una realidad viva",
+      subtitle: "Diez mandamientos para una realidad viva",
       disclaimer:
         "No es doctrina.\nNo es filosofía.\nEs lo que queda cuando las ilusiones se van.",
       commandments: [
         {
-          title: "No crees una Línea",
+          title: "No estires tu vida en línea",
           desc: [
             "La vida lineal es ficción.",
             "Cada momento es una bifurcación.",
-            "Elige por consciencia — no por inercia.",
+            "Elige con consciencia, no por inercia.",
           ],
         },
         {
-          title: "Honra el Portal dentro de ti",
+          title: "Honra el Umbral dentro de ti",
           desc: [
-            "Ninguna señal externa importa si tu estado interno está desfasado.",
-            "Tu resonancia es el portal.",
-            "Tú eres el umbral.",
+            "Ninguna señal de fuera importa si por dentro hay desafinación.",
+            "Tu resonancia es la puerta.",
+            "Tú mismo eres el umbral.",
           ],
         },
         {
-          title: "Limpia la Memoria del ruido",
+          title: "Limpia la memoria del ruido",
           desc: [
-            "No llevas el pasado.",
+            "No cargas el pasado.",
             "Lo repites en bucle.",
-            "Hasta que extraes el patrón y cortas el eco.",
+            "Hasta que ves el dibujo y cortas el eco.",
           ],
         },
         {
-          title: "Discierne a los Guías",
+          title: "Distingue a los guías",
           desc: [
-            "No todos los que brillan, guían.",
-            "Los verdaderos guías activan tu claridad.",
-            "Los falsos amplifican tu confusión.",
+            "No todo el que brilla guía.",
+            "Los verdaderos te devuelven la claridad.",
+            "Los falsos reparten confusión.",
           ],
         },
         {
-          title: "Rompe la Cáscara",
+          title: "Rompe la cáscara",
           desc: [
-            "Cuando se agrieta — no es fallo.",
-            "Es la señal.",
-            "Sal antes de que tu identidad se convierta en tu tumba.",
+            "Se agrieta — es señal, no es derrota.",
+            "Sal antes de que la forma sea tu tumba.",
           ],
         },
         {
-          title: "Sosténte en la Transición",
+          title: "Sostente en la travesía",
           desc: [
             "No corras a reconstruir.",
-            "El silencio tras la destrucción es sagrado.",
-            "Permanece en él hasta oír la siguiente señal.",
+            "El silencio tras el derrumbe es sagrado.",
+            "Quédate en él hasta oír la próxima señal.",
           ],
         },
         {
-          title: "Escucha las Repeticiones",
+          title: "Escucha las repeticiones",
           desc: [
-            "¿La misma situación otra vez?",
-            "No es castigo.",
-            "Es precisión.",
-            "Resuélvela — o revívela.",
+            "¿La misma escena otra vez?",
+            "No es castigo. Es precisión.",
+            "Resuélvela — o vuelve a vivirla.",
           ],
         },
         {
-          title: "Permite el Corte",
+          title: "Permite el corte",
           desc: [
-            "No todos los finales vienen con cierre.",
-            "Algunos vienen con claridad.",
+            "No todo final llega cerrado.",
+            "Algunos llegan claros.",
             "Suelta.",
-            "Sin arreglar, disculparte ni actuar.",
+            "Sin remiendos, disculpas ni escena.",
           ],
         },
         {
-          title: "Llámate a salir",
+          title: "Llámate hacia afuera",
           desc: [
-            "Tu próxima versión espera tu señal.",
+            "Tu próximo tú espera una señal.",
             "No esperes permiso.",
-            "Nómbrala.",
-            "Actúa desde ella.",
-            "Vívela.",
+            "Ponle nombre.",
+            "Actúa desde él.",
+            "Vívelo.",
           ],
         },
         {
           title: "Reúnete — o te romperás por tu propia frecuencia",
           desc: [
-            "Un yo fracturado no sostiene un campo coherente.",
-            "Unifica.",
+            "Un yo partido no sostiene un campo entero.",
+            "Reúne.",
             "O desintégrate.",
             "No hay punto medio.",
           ],
@@ -1173,26 +1169,26 @@ const es: Dict = {
     practices: {
       title: "Prácticas",
       list: [
-        "Detecta tus bucles.",
-        "Nota el cambio de resonancia.",
-        "Alinea tu estado antes de elegir.",
-        "Pausa ante lo falso.",
-        "Habla solo cuando el campo escuche.",
-        "Vuelve cuando te pierdas.",
+        "Atrapa tus bucles.",
+        "Fíjate cuándo deja de sonar.",
+        "Afina el estado antes de elegir.",
+        "Pausa — ante lo falso.",
+        "Habla cuando el campo escucha.",
+        "Vuelve si te has perdido.",
       ],
-      cta: "Ver las prácticas",
+      cta: "A las prácticas",
     },
     lectures: {
-      title: "Vídeos / Conferencias",
-      headline: "No necesitas más información.\nNecesitas alineación.",
-      sub: "Mira no para aprender — sino para recordar.",
-      cta: "Ver conferencias",
+      title: "Vídeos y charlas",
+      headline: "Información te sobra.\nFalta reunirte contigo.",
+      sub: "Mira no para aprender — para recordar.",
+      cta: "Ver",
     },
     callToClarity: {
-      title: "Llamada a la claridad",
-      headline: "No estás solo.\nPero los que ven — hablan menos.",
+      title: "Hacia la claridad",
+      headline: "No estás solo.\nPero quien ve, habla más bajo.",
       body:
-        "Ni comunidad.\nNi \"movimiento\".\nSolo presencia en el campo.\n\nSi esto vibra dentro de ti —\nya estás en la estructura.\nActúa en consecuencia.",
+        "Ni comunidad.\nNi \"movimiento\".\nSolo presencia en el campo.\n\nSi ahí dentro respondió —\nya estás en esta trama.\nSigue como sepas.",
       cta: "Entrar al Portal",
     },
   },
