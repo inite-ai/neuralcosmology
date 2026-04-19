@@ -172,7 +172,7 @@ if (typeof window !== 'undefined') {
 export default function TabletSection({ locale }: { locale: SupportedLocale }) {
   const t = getDict(locale).home.tablet;
   const commandments = t.commandments;
-  const [active, setActive] = useState(4);
+  const [active, setActive] = useState(0);
   const [initialRender, setInitialRender] = useState(true);
   
   // Create container ref
@@ -341,13 +341,15 @@ export default function TabletSection({ locale }: { locale: SupportedLocale }) {
                       ? "bg-gradient-to-br from-blue-950/95 via-indigo-950/95 to-purple-950/95 border-blue-400/40"
                       : "bg-gradient-to-br from-blue-900/40 via-white/5 to-purple-900/30 border-blue-400/20"
                   } border shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-start text-left backdrop-blur-md`}>
-                    <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3">
-                      <span className="text-xl sm:text-2xl font-extrabold text-blue-200 drop-shadow-md">{i + 1}.</span>
-                      <span className="text-base sm:text-lg md:text-xl font-bold text-blue-100 bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent leading-tight">
+                    <div className="mb-3 sm:mb-4">
+                      <div className="text-[10px] sm:text-xs font-mono text-blue-300/70 tracking-[0.2em] mb-1.5 sm:mb-2">
+                        № {String(i + 1).padStart(2, "0")} / {String(commandments.length).padStart(2, "0")}
+                      </div>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text">
                         {cmd.title}
-                      </span>
+                      </h3>
                     </div>
-                    <ul className="pl-1 sm:pl-2 space-y-1 sm:space-y-2 text-sm sm:text-base text-blue-200/90">
+                    <ul className="pl-1 sm:pl-2 space-y-1.5 sm:space-y-2 text-sm sm:text-base text-blue-100/85">
                       {cmd.desc.map((line, j) => (
                         <li key={j} className="list-disc ml-3 sm:ml-4 leading-relaxed">{line}</li>
                       ))}

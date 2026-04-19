@@ -44,42 +44,18 @@ export default function CallToClaritySection({ locale }: { locale: SupportedLoca
             background: { color: "transparent" },
             fpsLimit: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
             particles: {
-              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 300 },
-              color: { value: ["#60a5fa", "#ffffff", "#93c5fd", "#1e40af", "#38bdf8"] },
+              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 120 },
+              color: { value: ["#60a5fa", "#ffffff", "#93c5fd", "#38bdf8"] },
               shape: { type: "circle" },
-              opacity: { value: { min: 0.3, max: 0.9 } },
-              size: { value: { min: 1.5, max: 4 } },
+              opacity: { value: { min: 0.2, max: 0.7 } },
+              size: { value: { min: 1, max: 3 } },
               move: {
                 enable: true,
-                speed: 2,
+                speed: 0.6,
                 direction: "none",
-                random: false,
+                random: true,
                 straight: false,
-                outModes: { default: "out" },
-                path: {
-                  enable: true,
-                  delay: {
-                    value: 0.1
-                  },
-                  options: {
-                    size: 5,
-                    draw: false,
-                    increment: 0.001
-                  },
-                  generator: "curvesPathGenerator"
-                },
-                attract: {
-                  enable: true,
-                  distance: 100,
-                  rotate: { x: 600, y: 1200 }
-                }
-              },
-              zIndex: {
-                value: {
-                  min: 0,
-                  max: 50
-                },
-                opacityRate: 0.5
+                outModes: { default: "out" }
               }
             },
             interactivity: {

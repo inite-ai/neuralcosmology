@@ -44,47 +44,18 @@ export default function LecturesSection({ locale }: { locale: SupportedLocale })
             background: { color: "transparent" },
             fpsLimit: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60,
             particles: {
-              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 120 },
-              color: { value: ["#fcd34d", "#ffffff", "#f0c2a3", "#c4b5fd", "#ffe4c4"] },
+              number: { value: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 70 },
+              color: { value: ["#fcd34d", "#ffffff", "#c4b5fd"] },
               shape: { type: "circle" },
-              opacity: { 
-                value: 0.9,
-                animation: {
-                  enable: true,
-                  speed: 0.5,
-                  sync: false
-                }
-              },
-              size: { 
-                value: { min: 2, max: 12 },
-                animation: {
-                  enable: true,
-                  speed: 6,
-                  sync: false
-                }
-              },
+              opacity: { value: { min: 0.2, max: 0.6 } },
+              size: { value: { min: 1, max: 3 } },
               move: {
                 enable: true,
-                speed: 1.5,
+                speed: 0.5,
                 direction: "top",
                 random: true,
                 straight: false,
                 outModes: { default: "out" }
-              },
-              tilt: {
-                enable: true,
-                value: { min: 0, max: 360 },
-                animation: {
-                  enable: true,
-                  speed: 30
-                }
-              },
-              zIndex: {
-                value: {
-                  min: 0,
-                  max: 100
-                },
-                opacityRate: 0.5
               }
             },
             detectRetina: true

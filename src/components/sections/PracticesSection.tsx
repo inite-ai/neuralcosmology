@@ -90,23 +90,24 @@ export default function PracticesSection({ locale }: { locale: SupportedLocale }
         }}
         className="sm:rounded-2xl sm:p-10"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
           {t.title}
         </h2>
-        <div className="w-full flex flex-col gap-0.5 relative">
-          {/* Subtle vertical glowing line */}
-          <div className="absolute left-0 top-4 bottom-4 w-1 bg-gradient-to-b from-blue-400/10 via-purple-400/10 to-blue-400/0 rounded-full blur-[1px] hidden sm:block" style={{left: '-16px'}} />
+        <ol className="w-full space-y-3 sm:space-y-4">
           {practices.map((practice, i) => (
-            <div key={i} className="w-full">
-              <div className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text py-2 sm:py-3 md:py-4 px-2 text-left">
+            <li
+              key={i}
+              className="flex gap-3 sm:gap-4 items-start text-left rounded-lg border border-white/5 bg-white/[0.02] px-3 sm:px-4 py-3 sm:py-3.5 transition-colors hover:bg-white/[0.04] hover:border-white/10"
+            >
+              <span className="flex-shrink-0 mt-0.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-purple-300/30 bg-purple-500/10 text-purple-200/90 font-mono text-xs sm:text-sm flex items-center justify-center tracking-tight">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="flex-1 text-sm sm:text-base md:text-lg text-white/85 leading-relaxed pt-1">
                 {practice}
-              </div>
-              {i < practices.length - 1 && (
-                <div className="w-2/3 mx-auto h-px bg-gradient-to-r from-blue-400/10 via-white/10 to-purple-400/10 blur-[1px]" />
-              )}
-            </div>
+              </span>
+            </li>
           ))}
-        </div>
+        </ol>
         <Button className="mt-4 sm:mt-6 md:mt-8 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105 touch-manipulation">
           {t.cta}
         </Button>

@@ -141,185 +141,58 @@ export default function WhatIsSection({ locale }: { locale: SupportedLocale }) {
         />
       )}
       
-      {/* Animated cosmic dust overlay */}
-      <motion.div 
-        initial={{ opacity: 0.1 }}
-        animate={{ 
-          opacity: [0.1, 0.2, 0.1],
-          backgroundPosition: ["0% 0%", "100% 100%"]
-        }}
-        transition={{ 
-          duration: 25, 
-          repeat: Infinity, 
-          repeatType: "reverse" 
-        }}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 5,
-          mixBlendMode: 'screen',
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          backgroundSize: '150% 150%',
-          willChange: 'opacity, background-position'
-        }}
-      />
-      
-      {/* Animated Star field overlay */}
-      <motion.div 
-        initial={{ opacity: 0.2 }}
-        animate={{ 
-          opacity: [0.2, 0.4, 0.2],
-          scale: [1, 1.05, 1],
-          rotate: [0, 1, 0]
-        }}
-        transition={{ 
-          duration: 20, 
-          repeat: Infinity, 
-          repeatType: "reverse" 
-        }}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'black',
-          opacity: 0.3,
-          zIndex: 5,
-          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)`,
-          backgroundSize: '40px 40px',
-          transformOrigin: 'center',
-          willChange: 'opacity, transform'
-        }}
-      />
-      
-      {/* Animated Nebula glow effect */}
-      <div ref={containerRef} className="absolute inset-0 w-full h-full opacity-40 z-5">
-        <motion.div 
-          animate={{ 
+      {/* Animated Nebula glow effect (reduced) */}
+      <div ref={containerRef} className="absolute inset-0 w-full h-full opacity-50 z-[5] pointer-events-none">
+        <motion.div
+          animate={{
             opacity: [0.3, 0.5, 0.3],
             scale: [1, 1.1, 1],
             x: [0, 20, 0],
             y: [0, -10, 0]
           }}
-          transition={{ 
-            duration: 18, 
-            repeat: Infinity, 
-            repeatType: "reverse" 
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            repeatType: "reverse"
           }}
           style={{
             position: 'absolute',
-            top: '25%',
-            left: '33%',
-            width: '33%',
-            height: '33%',
-            borderRadius: '50%',
-            background: 'rgba(168, 85, 247, 0.3)',
-            filter: 'blur(80px)',
-            willChange: 'opacity, transform'
-          }}
-        />
-        <motion.div 
-          animate={{ 
-            opacity: [0.2, 0.4, 0.2],
-            scale: [1, 1.15, 1],
-            x: [0, -15, 0],
-            y: [0, 15, 0],
-            filter: ["hue-rotate(0deg)", "hue-rotate(15deg)", "hue-rotate(0deg)"]
-          }}
-          transition={{ 
-            duration: 15, 
-            repeat: Infinity, 
-            repeatType: "reverse" 
-          }}
-          style={{
-            position: 'absolute',
-            bottom: '33%',
-            right: '25%',
-            width: '25%',
-            height: '25%',
-            borderRadius: '50%',
-            background: 'rgba(96, 165, 250, 0.3)',
-            filter: 'blur(60px)',
-            willChange: 'opacity, transform, filter'
-          }}
-        />
-        <motion.div 
-          animate={{ 
-            opacity: [0.3, 0.5, 0.3],
-            y: [0, -15, 0],
-            filter: ["hue-rotate(0deg)", "hue-rotate(-15deg)", "hue-rotate(0deg)"]
-          }}
-          transition={{ 
-            duration: 12, 
-            repeat: Infinity, 
-            repeatType: "reverse" 
-          }}
-          style={{
-            position: 'absolute',
-            top: '50%',
-            right: '33%',
-            width: '20%',
-            height: '20%',
-            borderRadius: '50%',
-            background: 'rgba(99, 102, 241, 0.3)',
-            filter: 'blur(50px)',
-            willChange: 'opacity, transform, filter'
-          }}
-        />
-        <motion.div 
-          animate={{ 
-            opacity: [0.2, 0.4, 0.2],
-            scale: [1, 1.2, 1],
-            x: [0, 10, 0],
-            filter: ["hue-rotate(0deg)", "hue-rotate(30deg)", "hue-rotate(0deg)"]
-          }}
-          transition={{ 
-            duration: 20, 
-            repeat: Infinity, 
-            repeatType: "reverse" 
-          }}
-          style={{
-            position: 'absolute',
-            bottom: '50%',
+            top: '20%',
             left: '25%',
-            width: '16.6%',
-            height: '16.6%',
-            borderRadius: '50%',
-            background: 'rgba(34, 211, 238, 0.2)',
-            filter: 'blur(40px)',
-            willChange: 'opacity, transform, filter'
-          }}
-        />
-        <motion.div 
-          animate={{ 
-            opacity: [0.1, 0.2, 0.1],
-            rotate: [0, 360],
-            scale: [0.95, 1.05, 0.95]
-          }}
-          transition={{ 
-            duration: 60, 
-            repeat: Infinity, 
-            repeatType: "loop" 
-          }}
-          style={{
-            position: 'absolute',
-            top: '33%',
-            right: '25%',
             width: '40%',
             height: '40%',
             borderRadius: '50%',
-            background: 'rgba(217, 70, 239, 0.1)',
-            filter: 'blur(100px)',
+            background: 'rgba(168, 85, 247, 0.28)',
+            filter: 'blur(90px)',
+            willChange: 'opacity, transform'
+          }}
+        />
+        <motion.div
+          animate={{
+            opacity: [0.2, 0.4, 0.2],
+            scale: [1, 1.15, 1],
+            x: [0, -15, 0],
+            y: [0, 15, 0]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            repeatType: "reverse"
+          }}
+          style={{
+            position: 'absolute',
+            bottom: '20%',
+            right: '15%',
+            width: '32%',
+            height: '32%',
+            borderRadius: '50%',
+            background: 'rgba(96, 165, 250, 0.24)',
+            filter: 'blur(70px)',
             willChange: 'opacity, transform'
           }}
         />
       </div>
-      
-      {/* Dark gradient overlay at bottom for better transition */}
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#10182a] via-[#10182a]/80 to-transparent z-10"></div>
-      
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
