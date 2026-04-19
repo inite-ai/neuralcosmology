@@ -7,6 +7,7 @@ import rehypeHighlight from "rehype-highlight";
 import { getAllSlugs, getEssayBySlug } from "@/lib/essays";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import { makeBookLink, linkifyBookMentions } from "@/components/essays/BookLink";
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -75,6 +76,8 @@ export default async function EssayPage({
       rehypePlugins: [rehypeHighlight],
     },
   };
+  const BookLink = makeBookLink(locale);
+  const mdxSource = linkifyBookMentions(essay.content);
 
   return (
     <main className="relative min-h-screen text-white pt-24 sm:pt-28 pb-20 px-4 sm:px-6">
@@ -112,7 +115,7 @@ export default async function EssayPage({
         )}
 
         <article className="prose-essay text-white/85 leading-relaxed space-y-5">
-          <MDXRemote source={essay.content} options={mdxOptions} />
+          <MDXRemote source={mdxSource} options={mdxOptions} components={{ BookLink }} />
         </article>
 
         {essay.tags && essay.tags.length > 0 && (
