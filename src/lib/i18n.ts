@@ -269,20 +269,20 @@ const en: Dict = {
       headline: "The universe is a neural network. Not as metaphor.",
       subhead:
         "Five anomalies — from galaxy rotation to cellular bioelectricity — line up into one picture. Neural Cosmology is the frame in which they can be gathered and tested.",
-      subheadExtra: "Data. Code. Willingness to be refuted.",
+      subheadExtra: "Every claim here comes with a falsifier.",
       cta: "Enter",
     },
     whatIs: {
       title: "What this is",
       lead1:
-        "Neural Cosmology is an attempt to gather five cracks in the standard picture of the world into one frame.",
+        "Neural Cosmology is an attempt to gather five anomalies of the standard picture of the world into one frame.",
       lead2:
         "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
       lead3:
         "In the books — the argument in full. In the preprint — numbers and falsifiers. In the essays — individual sections.",
     },
     corePrinciples: {
-      title: "Five cracks",
+      title: "Five anomalies",
       axioms: [
         "Five facts from five different journals. Together they point the same way.",
         "The brain's structure and the cosmic web are statistically indistinguishable (Vazza, Feletti, 2020).",
@@ -535,20 +535,20 @@ const ru: Dict = {
       subhead:
         "Пять аномалий — от вращения галактик до биоэлектричества клеток — складываются в одну картину. Нейронная космология — рамка, в которой их можно собрать и проверить.",
       subheadExtra:
-        "Данные. Код. Готовность быть опровергнутой.",
+        "У каждого тезиса здесь — критерий опровержения.",
       cta: "Войти",
     },
     whatIs: {
       title: "Что это",
       lead1:
-        "Нейронная космология — попытка собрать пять трещин стандартной картины мира в одну рамку.",
+        "Нейронная космология — попытка собрать пять аномалий стандартной картины мира в одну рамку.",
       lead2:
         "Вращение галактик. Асимметрия материи. Проблема измерения. Сознание. Биоэлектричество клеток. По отдельности — пять загадок. Вместе — одна картина.",
       lead3:
         "В книгах — аргумент целиком. В препринте — числа и критерии опровержения. В эссе — отдельные срезы.",
     },
     corePrinciples: {
-      title: "Пять трещин",
+      title: "Пять аномалий",
       axioms: [
         "Пять фактов из разных журналов. Вместе они указывают в одну сторону.",
         "Структура мозга и структура космической паутины статистически неотличимы (Вацца, Фелетти, 2020).",
@@ -797,20 +797,20 @@ const pt: Dict = {
       headline: "O universo é uma rede neural. Não como metáfora.",
       subhead:
         "Cinco anomalias — da rotação galáctica à bioeletricidade celular — se alinham numa única imagem. Neural Cosmology é a moldura em que elas se juntam e se põem à prova.",
-      subheadExtra: "Dados. Código. Disposição de ser refutada.",
+      subheadExtra: "Cada tese aqui vem com um falsificador.",
       cta: "Entrar",
     },
     whatIs: {
       title: "O que é",
       lead1:
-        "Neural Cosmology é a tentativa de reunir cinco rachaduras na imagem padrão do mundo numa única moldura.",
+        "Neural Cosmology é a tentativa de reunir cinco anomalias da imagem padrão do mundo numa única moldura.",
       lead2:
         "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
       lead3:
         "Nos livros — o argumento inteiro. No preprint — números e falsificadores. Nos ensaios — recortes.",
     },
     corePrinciples: {
-      title: "Cinco rachaduras",
+      title: "Cinco anomalias",
       axioms: [
         "Cinco fatos de cinco revistas diferentes. Juntos apontam para o mesmo lado.",
         "A estrutura do cérebro e a teia cósmica são estatisticamente indistinguíveis (Vazza, Feletti, 2020).",
@@ -1058,20 +1058,20 @@ const es: Dict = {
       headline: "El universo es una red neuronal. No como metáfora.",
       subhead:
         "Cinco anomalías — de la rotación galáctica a la bioelectricidad celular — encajan en una sola imagen. Neural Cosmology es el marco en el que se reúnen y se ponen a prueba.",
-      subheadExtra: "Datos. Código. Disposición a ser refutada.",
+      subheadExtra: "Cada tesis aquí viene con un falsador.",
       cta: "Entrar",
     },
     whatIs: {
       title: "Qué es",
       lead1:
-        "Neural Cosmology es el intento de reunir cinco grietas de la imagen estándar del mundo en un solo marco.",
+        "Neural Cosmology es el intento de reunir cinco anomalías de la imagen estándar del mundo en un solo marco.",
       lead2:
         "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
       lead3:
         "En los libros — el argumento entero. En el preprint — cifras y falsadores. En los ensayos — fragmentos.",
     },
     corePrinciples: {
-      title: "Cinco grietas",
+      title: "Cinco anomalías",
       axioms: [
         "Cinco hechos de cinco revistas distintas. Juntos apuntan en la misma dirección.",
         "La estructura del cerebro y la red cósmica son estadísticamente indistinguibles (Vazza, Feletti, 2020).",
