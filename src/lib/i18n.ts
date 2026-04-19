@@ -281,7 +281,7 @@ const en: Dict = {
       lead2:
         "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
       leadMechanism:
-        "Central hypothesis: the universe as a learning network. In that frame the five anomalies read as expressions of one computational structure — from the cosmic web to cellular bioelectricity. Consciousness enters as a property of certain graph configurations, described quantitatively. The aim is a model that yields testable consequences.",
+        "Central hypothesis: the universe as a learning network. In this model the five anomalies turn out to be expressions of one computational structure — from the cosmic web to cellular bioelectricity. Consciousness becomes a measurable quantity, tied to how connections are arranged in the network. Predictions can be tested experimentally.",
       lead3:
         "The argument runs through the books, the preprint and the essays.",
     },
@@ -802,7 +802,7 @@ const pt: Dict = {
       lead2:
         "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
       leadMechanism:
-        "Hipótese central: o universo como uma rede em aprendizado. Nessa moldura, as cinco anomalias aparecem como manifestações de uma única estrutura computacional — da rede cósmica à bioeletricidade celular. A consciência entra como propriedade de certas configurações de grafo, descrita quantitativamente. O objetivo é um modelo que gere consequências testáveis.",
+        "Hipótese central: o universo como uma rede em aprendizado. Nesse modelo, as cinco anomalias aparecem como manifestações de uma única estrutura computacional — da rede cósmica à bioeletricidade celular. A consciência torna-se uma grandeza mensurável, ligada a como as conexões estão dispostas na rede. As previsões podem ser testadas experimentalmente.",
       lead3:
         "O argumento atravessa os livros, o preprint e os ensaios.",
     },
@@ -1061,7 +1061,7 @@ const es: Dict = {
       lead2:
         "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
       leadMechanism:
-        "Hipótesis central: el universo como una red que aprende. En ese marco, las cinco anomalías aparecen como manifestaciones de una sola estructura computacional — desde la red cósmica hasta la bioelectricidad celular. La consciencia entra como propiedad de ciertas configuraciones de grafo, descrita cuantitativamente. El objetivo es un modelo que produzca consecuencias verificables.",
+        "Hipótesis central: el universo como una red que aprende. En este modelo, las cinco anomalías resultan ser manifestaciones de una sola estructura computacional — desde la red cósmica hasta la bioelectricidad celular. La consciencia se vuelve una magnitud medible, ligada a cómo están dispuestas las conexiones en la red. Las predicciones pueden comprobarse experimentalmente.",
       lead3:
         "El argumento recorre los libros, el preprint y los ensayos.",
     },
