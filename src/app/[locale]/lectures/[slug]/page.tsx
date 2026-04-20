@@ -40,6 +40,22 @@ export async function generateMetadata({
       url: `${base}/${locale}/lectures/${slug}`,
       type: "video.other",
       publishedTime: lecture.date,
+      images: [
+        {
+          url: `${base}/api/og?title=${encodeURIComponent(lecture.title)}&subtitle=${encodeURIComponent(lecture.description)}&kind=lecture`,
+          width: 1200,
+          height: 630,
+          alt: lecture.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: lecture.title,
+      description: lecture.description,
+      images: [
+        `${base}/api/og?title=${encodeURIComponent(lecture.title)}&subtitle=${encodeURIComponent(lecture.description)}&kind=lecture`,
+      ],
     },
   };
 }

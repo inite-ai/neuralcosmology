@@ -48,7 +48,7 @@ export async function generateMetadata({
       ),
       images: [
         {
-          url: "/og-default.svg",
+          url: `${base}/api/og?title=${encodeURIComponent(dict.meta.title)}&subtitle=${encodeURIComponent(dict.meta.description)}&kind=home`,
           width: 1200,
           height: 630,
           alt: dict.meta.title,
@@ -59,7 +59,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: dict.meta.title,
       description: dict.meta.description,
-      images: ["/og-default.svg"],
+      images: [
+        `${base}/api/og?title=${encodeURIComponent(dict.meta.title)}&subtitle=${encodeURIComponent(dict.meta.description)}&kind=home`,
+      ],
     },
   };
 }

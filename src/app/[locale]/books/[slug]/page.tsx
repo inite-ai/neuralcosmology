@@ -47,7 +47,22 @@ export async function generateMetadata({
       description: hook,
       url: `${base}/${locale}/books/${slug}`,
       type: "book",
-      images: book.coverImage ? [{ url: book.coverImage }] : undefined,
+      images: [
+        {
+          url: `${base}/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(hook)}&kind=book`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: hook,
+      images: [
+        `${base}/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(hook)}&kind=book`,
+      ],
     },
   };
 }

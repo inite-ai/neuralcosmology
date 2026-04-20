@@ -42,6 +42,22 @@ export async function generateMetadata({
       type: "article",
       publishedTime: essay.date,
       authors: essay.author ? [essay.author] : undefined,
+      images: [
+        {
+          url: `${base}/api/og?title=${encodeURIComponent(essay.title)}&subtitle=${encodeURIComponent(essay.description)}&kind=essay`,
+          width: 1200,
+          height: 630,
+          alt: essay.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: essay.title,
+      description: essay.description,
+      images: [
+        `${base}/api/og?title=${encodeURIComponent(essay.title)}&subtitle=${encodeURIComponent(essay.description)}&kind=essay`,
+      ],
     },
   };
 }

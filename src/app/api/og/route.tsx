@@ -1,149 +1,167 @@
-import { ImageResponse } from 'next/og';
-import { NextRequest } from 'next/server';
+import { ImageResponse } from "next/og";
+import { NextRequest } from "next/server";
 
-export const runtime = 'edge';
+export const runtime = "edge";
+
+const KIND_LABELS: Record<string, string> = {
+  home: "neuralcosmology.com",
+  book: "book",
+  essay: "essay",
+  lecture: "lecture",
+  preprint: "preprint",
+  science: "research",
+  page: "neuralcosmology.com",
+};
 
 export async function GET(request: NextRequest) {
   try {
-    // Get parameters if needed
-    const searchParams = request.nextUrl.searchParams;
-    const title = searchParams.get('title') || 'Neuralcosmology';
-    
-    // Instead of loading a local font, use a Google Font
-    const fontData = await fetch(
-      new URL('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2', import.meta.url)
-    ).then((res) => res.arrayBuffer());
+    const params = request.nextUrl.searchParams;
+    const title = params.get("title") || "Neural Cosmology";
+    const subtitle = params.get("subtitle") || "";
+    const kind = (params.get("kind") || "home").toLowerCase();
+    const eyebrow = KIND_LABELS[kind] ?? KIND_LABELS.page;
+
+    const titleLength = title.length;
+    const titleFontSize =
+      titleLength > 80 ? 52 : titleLength > 50 ? 64 : titleLength > 30 ? 76 : 88;
 
     return new ImageResponse(
       (
         <div
           style={{
-            height: '100%',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#181c2e',
-            background: 'linear-gradient(to bottom right, #181c2e, #232946, #10182a)',
-            position: 'relative',
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            padding: "80px",
+            background:
+              "linear-gradient(135deg, #0a1026 0%, #181c2e 35%, #232946 70%, #10182a 100%)",
+            position: "relative",
+            fontFamily: "system-ui, sans-serif",
           }}
         >
-          {/* Cosmic particles/stars effect */}
+          {/* Star field */}
           <div
             style={{
-              position: 'absolute',
+              position: "absolute",
               inset: 0,
-              opacity: 0.7,
-              backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
-              backgroundSize: '35px 35px',
+              backgroundImage:
+                "radial-gradient(circle at 20% 30%, rgba(255,255,255,0.12) 1px, transparent 1px), radial-gradient(circle at 70% 60%, rgba(255,255,255,0.08) 1px, transparent 1px), radial-gradient(circle at 45% 85%, rgba(255,255,255,0.1) 1px, transparent 1px)",
+              backgroundSize: "60px 60px, 90px 90px, 110px 110px",
+              opacity: 0.9,
             }}
           />
 
-          {/* Glowing orb effect */}
+          {/* Cosmic glow */}
           <div
             style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: '400px',
-              height: '400px',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(120, 139, 255, 0.3) 0%, rgba(70, 87, 190, 0.1) 40%, transparent 70%)',
-              filter: 'blur(40px)',
-              zIndex: 0,
+              position: "absolute",
+              top: "-200px",
+              right: "-150px",
+              width: "700px",
+              height: "700px",
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle, rgba(129,140,248,0.28) 0%, rgba(99,102,241,0.12) 40%, transparent 70%)",
+              filter: "blur(60px)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-180px",
+              left: "-100px",
+              width: "600px",
+              height: "600px",
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle, rgba(192,132,252,0.22) 0%, rgba(167,139,250,0.08) 40%, transparent 70%)",
+              filter: "blur(70px)",
             }}
           />
 
-          {/* Content container */}
+          {/* Top row: wordmark + kind */}
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlign: 'center',
-              padding: '20px',
-              position: 'relative',
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              position: "relative",
               zIndex: 10,
             }}
           >
-            {/* Logo placeholder */}
             <div
               style={{
-                color: 'white',
-                fontSize: '28px',
-                marginBottom: '20px',
-                opacity: 0.9,
+                display: "flex",
+                alignItems: "baseline",
+                color: "rgba(255,255,255,0.95)",
+                fontSize: "34px",
+                fontWeight: 600,
+                letterSpacing: "-0.01em",
               }}
             >
-              neuralcosmology.com
+              <span>neural</span>
+              <span style={{ color: "#a5b4fc" }}>cosmology</span>
             </div>
-
-            {/* Title */}
             <div
               style={{
-                display: 'flex',
-                color: 'white',
-                fontSize: '72px',
-                fontWeight: 'bold',
-                fontFamily: 'Inter',
-                letterSpacing: '-0.05em',
-                marginBottom: '20px',
-                background: 'linear-gradient(to right, #a78bfa, #ffffff, #c084fc)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                textShadow: '0 8px 30px rgba(60, 60, 180, 0.3)',
+                fontSize: "18px",
+                textTransform: "uppercase",
+                letterSpacing: "0.3em",
+                color: "rgba(165,180,252,0.75)",
+                fontFamily: "monospace",
+              }}
+            >
+              {eyebrow}
+            </div>
+          </div>
+
+          {/* Bottom content */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "auto",
+              position: "relative",
+              zIndex: 10,
+            }}
+          >
+            <div
+              style={{
+                color: "white",
+                fontSize: `${titleFontSize}px`,
+                fontWeight: 700,
+                letterSpacing: "-0.03em",
+                lineHeight: 1.05,
+                marginBottom: subtitle ? "32px" : "0",
+                textShadow: "0 8px 40px rgba(60,60,180,0.35)",
               }}
             >
               {title}
             </div>
-
-            {/* Subtitle */}
-            <div
-              style={{
-                color: 'rgba(185, 212, 255, 0.9)',
-                fontSize: '32px',
-                fontWeight: 500,
-                lineHeight: 1.4,
-                marginBottom: '10px',
-                maxWidth: '700px',
-              }}
-            >
-              You&apos;re not in the world. You are the structure.
-            </div>
-
-            {/* Description */}
-            <div
-              style={{
-                color: 'rgba(173, 186, 244, 0.75)',
-                fontSize: '24px',
-                maxWidth: '650px',
-                lineHeight: 1.3,
-              }}
-            >
-              A system of reality navigation through states, memory, and attention.
-            </div>
+            {subtitle && (
+              <div
+                style={{
+                  color: "rgba(200,210,255,0.78)",
+                  fontSize: "30px",
+                  fontWeight: 400,
+                  lineHeight: 1.35,
+                  maxWidth: "900px",
+                }}
+              >
+                {subtitle}
+              </div>
+            )}
           </div>
         </div>
       ),
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Inter',
-            data: fontData,
-            style: 'normal',
-          },
-        ],
-      }
+      },
     );
   } catch (e) {
-    console.error(e);
-    return new Response(`Failed to generate image`, {
-      status: 500,
-    });
+    console.error("OG generation error:", e);
+    return new Response("Failed to generate image", { status: 500 });
   }
-} 
+}

@@ -20,9 +20,12 @@ export async function generateMetadata({
   const { locale: raw } = await params;
   const locale = isSupportedLocale(raw) ? raw : "en";
   const base = "https://neuralcosmology.com";
+  const title = paper?.title ?? "Pointer Architecture";
+  const description = paper?.abstract.slice(0, 180) ?? "";
+  const ogUrl = `${base}/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(description)}&kind=preprint`;
   return {
-    title: paper?.title ?? "Pointer Architecture",
-    description: paper?.abstract.slice(0, 180) ?? "",
+    title,
+    description,
     alternates: {
       canonical: `${base}/${locale}/science/pointer-architecture`,
       languages: Object.fromEntries(
@@ -31,6 +34,19 @@ export async function generateMetadata({
           `${base}/${l}/science/pointer-architecture`,
         ]),
       ),
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${base}/${locale}/science/pointer-architecture`,
+      type: "article",
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogUrl],
     },
   };
 }
