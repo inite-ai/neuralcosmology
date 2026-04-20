@@ -293,8 +293,7 @@ const en: Dict = {
     elsewhereHeader: "Elsewhere",
   },
   footer: {
-    tagline:
-      "Neural Cosmology — three books, one preprint, a growing body of essays.",
+    tagline: "Science and fiction around one hypothesis.",
     columns: {
       read: "Read",
       research: "Research",
@@ -586,8 +585,7 @@ const ru: Dict = {
     elsewhereHeader: "По соседству",
   },
   footer: {
-    tagline:
-      "«Нейронная космология» — три книги, препринт, собрание эссе.",
+    tagline: "Наука и проза вокруг одной гипотезы.",
     columns: {
       read: "Читать",
       research: "Исследования",
@@ -878,8 +876,7 @@ const pt: Dict = {
     elsewhereHeader: "Em outro lugar",
   },
   footer: {
-    tagline:
-      "Neural Cosmology — três livros, um preprint, um conjunto crescente de ensaios.",
+    tagline: "Ciência e ficção em torno de uma hipótese.",
     columns: {
       read: "Ler",
       research: "Pesquisa",
@@ -1169,8 +1166,7 @@ const es: Dict = {
     elsewhereHeader: "En otros sitios",
   },
   footer: {
-    tagline:
-      "Neural Cosmology — tres libros, un preprint, un conjunto creciente de ensayos.",
+    tagline: "Ciencia y ficción alrededor de una hipótesis.",
     columns: {
       read: "Leer",
       research: "Investigación",
