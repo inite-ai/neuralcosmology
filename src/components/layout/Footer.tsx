@@ -40,9 +40,6 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
           <div className="font-semibold tracking-tight text-white/90">
             neural<span className="text-indigo-300">cosmology</span>
           </div>
-          <p className="mt-2 text-sm text-white/60 max-w-xs leading-relaxed">
-            {dict.footer.tagline}
-          </p>
         </div>
 
         {cols.map((col) => (

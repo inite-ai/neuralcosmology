@@ -41,6 +41,7 @@ export type Dict = {
     indexTitle: string;
     indexLead: string;
     readMore: string;
+    readDemo: string;
     allBooks: string;
     rightsInquiry: string;
     comparableHeader: string;
@@ -50,6 +51,12 @@ export type Dict = {
       sciFi: string;
       literarySciFi: string;
     };
+  };
+  reader: {
+    back: string;
+    download: string;
+    openInNewTab: string;
+    shownIn: string;
   };
   science: {
     indexEyebrow: string;
@@ -214,6 +221,7 @@ const en: Dict = {
     indexLead:
       "A non-fiction investigation, a sci-fi novel about its implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, three registers.",
     readMore: "Read more →",
+    readDemo: "Read demo",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
     comparableHeader: "Comparable titles",
@@ -223,6 +231,12 @@ const en: Dict = {
       sciFi: "Sci-fi",
       literarySciFi: "Literary sci-fi",
     },
+  },
+  reader: {
+    back: "Back",
+    download: "Download PDF",
+    openInNewTab: "Open in new tab",
+    shownIn: "shown in",
   },
   science: {
     indexEyebrow: "Research programme",
@@ -500,6 +514,7 @@ const ru: Dict = {
     indexLead:
       "Нон-фикшн-расследование, научная фантастика о его следствиях и литературный продолжатель — о том, что остаётся, когда шум стихает. Одни и те же вопросы в трёх голосах.",
     readMore: "Подробнее →",
+    readDemo: "Читать демо",
     allBooks: "← Все книги",
     rightsInquiry: "Запрос прав / издателю",
     comparableHeader: "По соседству на полке",
@@ -509,6 +524,12 @@ const ru: Dict = {
       sciFi: "Научная фантастика",
       literarySciFi: "Литературная НФ",
     },
+  },
+  reader: {
+    back: "Назад",
+    download: "Скачать PDF",
+    openInNewTab: "Открыть в новой вкладке",
+    shownIn: "показано на",
   },
   science: {
     indexEyebrow: "Программа исследования",
@@ -785,6 +806,7 @@ const pt: Dict = {
     indexLead:
       "Uma investigação de não-ficção, um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em três vozes.",
     readMore: "Ler mais →",
+    readDemo: "Ler demo",
     allBooks: "← Todos os livros",
     rightsInquiry: "Consulta de direitos / editora",
     comparableHeader: "Vizinhança na estante",
@@ -794,6 +816,12 @@ const pt: Dict = {
       sciFi: "Ficção científica",
       literarySciFi: "FC literária",
     },
+  },
+  reader: {
+    back: "Voltar",
+    download: "Baixar PDF",
+    openInNewTab: "Abrir em nova aba",
+    shownIn: "exibido em",
   },
   science: {
     indexEyebrow: "Programa de pesquisa",
@@ -1069,6 +1097,7 @@ const es: Dict = {
     indexLead:
       "Una investigación de no ficción, una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en tres voces.",
     readMore: "Leer más →",
+    readDemo: "Leer demo",
     allBooks: "← Todos los libros",
     rightsInquiry: "Consulta de derechos / editorial",
     comparableHeader: "Vecinos de estantería",
@@ -1078,6 +1107,12 @@ const es: Dict = {
       sciFi: "Ciencia ficción",
       literarySciFi: "CF literaria",
     },
+  },
+  reader: {
+    back: "Atrás",
+    download: "Descargar PDF",
+    openInNewTab: "Abrir en nueva pestaña",
+    shownIn: "mostrado en",
   },
   science: {
     indexEyebrow: "Programa de investigación",

@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
+import { getReadable } from "@/lib/readables";
 
 const statusStyle = {
   published: "border-emerald-400/40 text-emerald-200",
@@ -138,9 +139,17 @@ export default async function BookDetailPage({
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
+              {getReadable(`${book.slug}-demo`) && (
+                <Link
+                  href={`/${locale}/read/${book.slug}-demo`}
+                  className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
+                >
+                  {dict.books.readDemo}
+                </Link>
+              )}
               <a
                 href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"
-                className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
+                className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
               >
                 {dict.books.rightsInquiry}
               </a>

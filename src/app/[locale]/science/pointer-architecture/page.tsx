@@ -76,12 +76,12 @@ export default async function PointerArchitecturePage({
 
         <div className="flex flex-wrap gap-3 mb-12">
           {paper.pdfPath && (
-            <a
-              href={paper.pdfPath}
+            <Link
+              href={`/${locale}/read/pointer-architecture`}
               className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.science.readPdf}
-            </a>
+            </Link>
           )}
           {paper.codeUrl && (
             <a
