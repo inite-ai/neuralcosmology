@@ -70,6 +70,7 @@ export const readables: ReadableEntry[] = [
     paths: {
       en: "/pdfs/era-of-architects-demo-en.pdf",
       ru: "/pdfs/era-of-architects-demo-ru.pdf",
+      pt: "/pdfs/era-of-architects-demo-pt.pdf",
     },
   },
 ];
