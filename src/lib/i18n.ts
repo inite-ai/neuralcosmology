@@ -374,16 +374,16 @@ const en: Dict = {
         {
           title: "Listen to repeats",
           desc: [
-            "If it returns, it hasn't been settled.",
-            "Settle it — and it falls away.",
+            "If it returns, it hasn't been worked out.",
+            "It keeps returning until you do.",
           ],
         },
         {
-          title: "Permit the cut",
+          title: "Let go unfinished",
           desc: [
             "Not every ending arrives finished.",
             "Sometimes it arrives only with clarity.",
-            "Let go — without repairs, without apologies, without scenes.",
+            "Without explanations, without apologies, without scenes.",
           ],
         },
         {
@@ -648,15 +648,15 @@ const ru: Dict = {
           title: "Замечай, что возвращается",
           desc: [
             "Повторяется — значит, ещё не доведено до конца.",
-            "Доверши — и отпадёт.",
+            "Возвращается, пока ты не разберёшься.",
           ],
         },
         {
-          title: "Позволь разрыв",
+          title: "Отпускай без финала",
           desc: [
             "Не всякий конец — завершён.",
             "Иногда он приходит только с ясностью.",
-            "Отпускай без объяснений, без извинений, без сцен.",
+            "Без объяснений, без извинений, без сцен.",
           ],
         },
         {
@@ -920,15 +920,15 @@ const pt: Dict = {
           title: "Escute as repetições",
           desc: [
             "Se volta, é porque não foi resolvido.",
-            "Resolva — e se desfaz.",
+            "Volta até você resolver.",
           ],
         },
         {
-          title: "Permita o corte",
+          title: "Solte inacabado",
           desc: [
             "Nem todo fim chega concluído.",
             "Às vezes chega apenas com clareza.",
-            "Solte — sem remendos, sem desculpas, sem cena.",
+            "Sem explicações, sem desculpas, sem cena.",
           ],
         },
         {
@@ -1191,15 +1191,15 @@ const es: Dict = {
           title: "Escucha las repeticiones",
           desc: [
             "Si vuelve, no ha sido resuelto.",
-            "Resuélvelo — y se disuelve.",
+            "Vuelve hasta que lo resuelvas.",
           ],
         },
         {
-          title: "Permite el corte",
+          title: "Suelta inconcluso",
           desc: [
             "No todo final llega concluido.",
             "A veces llega sólo con claridad.",
-            "Suelta — sin remiendos, sin disculpas, sin escena.",
+            "Sin explicaciones, sin disculpas, sin escena.",
           ],
         },
         {
