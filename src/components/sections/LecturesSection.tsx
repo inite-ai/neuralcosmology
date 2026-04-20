@@ -121,12 +121,12 @@ export default function LecturesSection({
               {t.seeAll}
             </Link>
           </div>
-          <ul className="grid gap-4 sm:gap-5 sm:grid-cols-2 md:grid-cols-3">
+          <ul className="grid gap-4 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 items-stretch">
             {recent.map((l) => (
-              <li key={l.slug}>
+              <li key={l.slug} className="flex">
                 <Link
                   href={`/${locale}/lectures/${l.slug}`}
-                  className="group block rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/20 transition-colors overflow-hidden"
+                  className="group flex flex-col h-full w-full rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/20 transition-colors overflow-hidden"
                 >
                   {l.thumbnail && (
                     <div className="relative aspect-video bg-black/40">

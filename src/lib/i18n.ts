@@ -327,33 +327,33 @@ const en: Dict = {
         {
           title: "Don't flatten life into a line",
           desc: [
-            "Linear life is fiction.",
-            "Every moment is a fork.",
+            "Linearity is an illusion.",
+            "Every instant is a fork.",
             "Choose deliberately.",
           ],
         },
         {
           title: "Start from the inside",
           desc: [
-            "Outer signals mean little when your inner state is off.",
-            "Address your own state first.",
+            "Outer signs are hollow when the inside doesn't agree.",
+            "Check your own state first.",
             "Everything else reads from there.",
           ],
         },
         {
-          title: "Clear memory of noise",
+          title: "Clear the memory of noise",
           desc: [
-            "The past doesn't weigh on you by itself.",
-            "The mind replays it.",
-            "Find the pattern and the loop breaks.",
+            "The past has no weight of its own.",
+            "The mind is what carries it.",
+            "Find the pattern — the loop comes undone.",
           ],
         },
         {
-          title: "Tell who actually helps",
+          title: "Tell the voices apart",
           desc: [
-            "Real help restores clarity.",
-            "Everything else compounds confusion.",
-            "Use that as your check.",
+            "The real one gives clarity back.",
+            "The others only thicken the confusion.",
+            "That is the measure.",
           ],
         },
         {
@@ -367,37 +367,37 @@ const en: Dict = {
           title: "Hold through the transition",
           desc: [
             "Don't rush to rebuild.",
-            "The pause after collapse does work.",
-            "Stay in it until the next step is clear.",
+            "The pause after collapse is itself the work.",
+            "Stay in it until the next step surfaces.",
           ],
         },
         {
           title: "Listen to repeats",
           desc: [
-            "The same situation again? That's diagnostic.",
-            "Resolve it or it returns a third time.",
+            "If it returns, it hasn't been settled.",
+            "Settle it — and it falls away.",
           ],
         },
         {
           title: "Permit the cut",
           desc: [
-            "Not every ending arrives closed.",
-            "Some arrive clear.",
-            "Let go without repairs, apologies, or scenes.",
+            "Not every ending arrives finished.",
+            "Sometimes it arrives only with clarity.",
+            "Let go — without repairs, without apologies, without scenes.",
           ],
         },
         {
           title: "Call yourself forward",
           desc: [
             "Your next version is waiting.",
-            "No permission is coming.",
+            "Permission is not coming.",
             "Name it. Act from it. Live it.",
           ],
         },
         {
           title: "Gather yourself",
           desc: [
-            "A fractured self won't hold decisions.",
+            "A fractured self will not hold a decision.",
             "Gather, or scatter.",
             "There is no middle.",
           ],
@@ -598,35 +598,35 @@ const ru: Dict = {
         "Не доктрина.\nНе философия.\nТо, что остаётся, когда иллюзии уходят.",
       commandments: [
         {
-          title: "Не вытягивай жизнь в линию",
+          title: "Не спрямляй жизнь",
           desc: [
             "Линейность — иллюзия.",
-            "Каждый момент — развилка.",
-            "Выбирай сознательно.",
+            "Каждый миг — развилка.",
+            "Выбирай осознанно.",
           ],
         },
         {
           title: "Начинай изнутри",
           desc: [
-            "Внешние сигналы мало значат, если внутри разлад.",
-            "Сначала разберись со своим состоянием.",
-            "Остальное считывается уже из него.",
+            "Внешние знаки пусты, если внутри разлад.",
+            "Проверь сначала своё состояние.",
+            "Остальное видно уже оттуда.",
           ],
         },
         {
           title: "Очисти память от шума",
           desc: [
-            "Прошлое не давит само по себе.",
-            "Его прокручивает голова.",
-            "Найди узор — цикл оборвётся.",
+            "Само по себе прошлое — мертво.",
+            "Его держит ум.",
+            "Увидь узор — и петля разомкнётся.",
           ],
         },
         {
-          title: "Различай, кто помогает",
+          title: "Различай голоса",
           desc: [
-            "Настоящая помощь возвращает ясность.",
-            "Всё остальное только путает сильнее.",
-            "Сверяйся по этому.",
+            "Настоящий возвращает ясность.",
+            "Остальные только путают сильнее.",
+            "Это и есть мера.",
           ],
         },
         {
@@ -640,29 +640,29 @@ const ru: Dict = {
           title: "Держись в переходе",
           desc: [
             "Не спеши перестраивать.",
-            "Пауза после разрушения делает работу.",
-            "Сиди в ней, пока не станет виден следующий шаг.",
+            "Пауза после разрушения — тоже работа.",
+            "Побудь в ней, пока не проступит следующий шаг.",
           ],
         },
         {
-          title: "Слушай повторы",
+          title: "Замечай, что возвращается",
           desc: [
-            "Та же ситуация снова — это диагностика.",
-            "Разреши её, или она придёт в третий раз.",
+            "Повторяется — значит, ещё не доведено до конца.",
+            "Доверши — и отпадёт.",
           ],
         },
         {
           title: "Позволь разрыв",
           desc: [
-            "Не всякий конец приходит с финалом.",
-            "Иногда — только с ясностью.",
-            "Отпускай без починок, извинений и сцен.",
+            "Не всякий конец — завершён.",
+            "Иногда он приходит только с ясностью.",
+            "Отпускай без объяснений, без извинений, без сцен.",
           ],
         },
         {
-          title: "Вызови себя вперёд",
+          title: "Опереди себя",
           desc: [
-            "Следующая версия тебя ждёт.",
+            "Тот, кем ты можешь стать, — уже зовёт.",
             "Разрешения не будет.",
             "Назови. Действуй. Живи.",
           ],
@@ -870,35 +870,35 @@ const pt: Dict = {
         "Não é doutrina.\nNão é filosofia.\nÉ o que resta quando as ilusões se vão.",
       commandments: [
         {
-          title: "Não estique a vida em linha",
+          title: "Não alise a vida",
           desc: [
-            "Vida linear é ficção.",
-            "Cada momento é uma bifurcação.",
-            "Escolha deliberadamente.",
+            "Linearidade é ilusão.",
+            "Cada instante é uma bifurcação.",
+            "Escolha com lucidez.",
           ],
         },
         {
           title: "Comece por dentro",
           desc: [
-            "Sinais lá fora valem pouco quando por dentro está desafinado.",
-            "Resolva primeiro o próprio estado.",
+            "Sinais externos são ocos quando por dentro não bate.",
+            "Confira primeiro o próprio estado.",
             "O resto se lê a partir dele.",
           ],
         },
         {
           title: "Limpe a memória do ruído",
           desc: [
-            "O passado não pesa sozinho.",
-            "A cabeça o reproduz.",
-            "Veja o padrão — o laço se rompe.",
+            "O passado não pesa por si.",
+            "É a mente que o carrega.",
+            "Veja o padrão — o laço se desmancha.",
           ],
         },
         {
-          title: "Distinga quem realmente ajuda",
+          title: "Distinga as vozes",
           desc: [
-            "Ajuda verdadeira devolve clareza.",
-            "O resto só aumenta a confusão.",
-            "Use isso como critério.",
+            "A verdadeira devolve clareza.",
+            "As outras só adensam a confusão.",
+            "Essa é a medida.",
           ],
         },
         {
@@ -912,23 +912,23 @@ const pt: Dict = {
           title: "Segure-se na travessia",
           desc: [
             "Não corra para reconstruir.",
-            "A pausa depois do desmoronamento faz trabalho.",
-            "Fique nela até o próximo passo aparecer.",
+            "A pausa depois do desmoronamento também é trabalho.",
+            "Permaneça nela até que o próximo passo apareça.",
           ],
         },
         {
           title: "Escute as repetições",
           desc: [
-            "A mesma cena de novo? Isso é diagnóstico.",
-            "Resolva — ou ela volta pela terceira vez.",
+            "Se volta, é porque não foi resolvido.",
+            "Resolva — e se desfaz.",
           ],
         },
         {
           title: "Permita o corte",
           desc: [
-            "Nem todo fim chega fechado.",
-            "Alguns chegam claros.",
-            "Solte, sem remendos, desculpas ou cena.",
+            "Nem todo fim chega concluído.",
+            "Às vezes chega apenas com clareza.",
+            "Solte — sem remendos, sem desculpas, sem cena.",
           ],
         },
         {
@@ -936,13 +936,13 @@ const pt: Dict = {
           desc: [
             "Sua próxima versão está esperando.",
             "Permissão não vai chegar.",
-            "Dê-lhe nome. Aja a partir dele. Viva-o.",
+            "Dê-lhe nome. Aja a partir dela. Viva-a.",
           ],
         },
         {
           title: "Reúna-se",
           desc: [
-            "Um eu partido não sustenta decisões.",
+            "Um eu partido não sustenta uma decisão.",
             "Reúna ou desfaça-se.",
             "Não há meio-termo.",
           ],
@@ -1141,35 +1141,35 @@ const es: Dict = {
         "No es doctrina.\nNo es filosofía.\nEs lo que queda cuando las ilusiones se van.",
       commandments: [
         {
-          title: "No estires tu vida en línea",
+          title: "No alises la vida",
           desc: [
-            "La vida lineal es ficción.",
-            "Cada momento es una bifurcación.",
-            "Elige deliberadamente.",
+            "La linealidad es ilusión.",
+            "Cada instante es una bifurcación.",
+            "Elige con lucidez.",
           ],
         },
         {
           title: "Empieza por dentro",
           desc: [
-            "Las señales de fuera valen poco si por dentro hay desafinación.",
-            "Resuelve primero tu propio estado.",
+            "Las señales de fuera son huecas cuando por dentro no cuadra.",
+            "Revisa primero tu propio estado.",
             "El resto se lee desde ahí.",
           ],
         },
         {
           title: "Limpia la memoria del ruido",
           desc: [
-            "El pasado no pesa solo.",
-            "La cabeza lo repite.",
-            "Ve el patrón — el bucle se rompe.",
+            "El pasado no pesa por sí mismo.",
+            "Es la mente la que lo carga.",
+            "Ve el patrón — el lazo se deshace.",
           ],
         },
         {
-          title: "Distingue a quien de verdad ayuda",
+          title: "Distingue las voces",
           desc: [
-            "La ayuda real devuelve claridad.",
-            "Todo lo demás solo enreda más.",
-            "Úsalo como criterio.",
+            "La verdadera devuelve claridad.",
+            "Las otras sólo espesan la confusión.",
+            "Esa es la medida.",
           ],
         },
         {
@@ -1183,23 +1183,23 @@ const es: Dict = {
           title: "Sostente en la travesía",
           desc: [
             "No corras a reconstruir.",
-            "La pausa tras el derrumbe hace trabajo.",
-            "Quédate en ella hasta que aparezca el próximo paso.",
+            "La pausa tras el derrumbe también es trabajo.",
+            "Quédate en ella hasta que aparezca el siguiente paso.",
           ],
         },
         {
           title: "Escucha las repeticiones",
           desc: [
-            "¿La misma escena otra vez? Es diagnóstico.",
-            "Resuélvela — o vuelve por tercera vez.",
+            "Si vuelve, no ha sido resuelto.",
+            "Resuélvelo — y se disuelve.",
           ],
         },
         {
           title: "Permite el corte",
           desc: [
-            "No todo final llega cerrado.",
-            "Algunos llegan claros.",
-            "Suelta sin remiendos, disculpas ni escena.",
+            "No todo final llega concluido.",
+            "A veces llega sólo con claridad.",
+            "Suelta — sin remiendos, sin disculpas, sin escena.",
           ],
         },
         {
@@ -1207,13 +1207,13 @@ const es: Dict = {
           desc: [
             "Tu próxima versión está esperando.",
             "El permiso no va a llegar.",
-            "Ponle nombre. Actúa desde él. Vívelo.",
+            "Ponle nombre. Actúa desde ella. Vívela.",
           ],
         },
         {
           title: "Reúnete",
           desc: [
-            "Un yo partido no sostiene decisiones.",
+            "Un yo partido no sostiene una decisión.",
             "Reúnete o desintégrate.",
             "No hay punto medio.",
           ],
