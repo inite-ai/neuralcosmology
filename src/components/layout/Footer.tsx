@@ -1,9 +1,13 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 
 export default function Footer({ locale }: { locale: SupportedLocale }) {
   const dict = getDict(locale);
+  const pathname = usePathname();
+  if (pathname && /^\/[a-z]{2}\/read(\/|$)/.test(pathname)) return null;
   const cols = [
     {
       title: dict.footer.columns.read,
@@ -68,7 +72,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-t border-white/5 text-xs text-white/50">
         <div>
-          © {new Date().getFullYear()} Mikhail Savchenko. {dict.footer.copyright}
+          © {new Date().getFullYear()} Neuralcosmology. {dict.footer.copyright}
         </div>
         <div>
           <a href="mailto:info@neuralcosmology.com" className="hover:text-white transition-colors">

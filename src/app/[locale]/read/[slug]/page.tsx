@@ -55,8 +55,11 @@ export default async function ReadPage({
         : `/${locale}`;
 
   return (
-    <main className="fixed inset-0 top-14 flex flex-col bg-black text-white">
-      <div className="flex items-center justify-between gap-3 px-4 sm:px-6 h-12 border-b border-white/10 bg-[#0a1026]/80 backdrop-blur-md">
+    <main
+      className="flex flex-col bg-black text-white pt-14"
+      style={{ height: "100vh" }}
+    >
+      <div className="flex items-center justify-between gap-3 px-4 sm:px-6 h-12 border-b border-white/10 bg-[#0a1026]/80 backdrop-blur-md shrink-0">
         <div className="flex items-center gap-3 min-w-0">
           <Link
             href={backHref}
