@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HomeShell from "@/components/home/HomeShell";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import { listLectures, getThumbnail } from "@/lib/lectures";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -34,5 +35,14 @@ export default async function HomePage({
 }) {
   const { locale: raw } = await params;
   const locale = isSupportedLocale(raw) ? raw : "en";
-  return <HomeShell locale={locale} />;
+  const recentLectures = listLectures(locale)
+    .slice(0, 3)
+    .map((l) => ({
+      slug: l.slug,
+      title: l.title,
+      date: l.date,
+      durationMinutes: l.durationMinutes,
+      thumbnail: getThumbnail(l.videoUrl, l.cover),
+    }));
+  return <HomeShell locale={locale} recentLectures={recentLectures} />;
 }

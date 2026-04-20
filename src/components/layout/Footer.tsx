@@ -10,6 +10,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
       links: [
         { label: dict.footer.links.books, href: `/${locale}/books` },
         { label: dict.footer.links.essays, href: `/${locale}/essays` },
+        { label: dict.nav.lectures, href: `/${locale}/lectures` },
         { label: dict.footer.links.science, href: `/${locale}/science` },
       ],
     },

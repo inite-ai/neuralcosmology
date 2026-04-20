@@ -87,7 +87,21 @@ function SectionNav() {
   );
 }
 
-export default function HomeShell({ locale }: { locale: SupportedLocale }) {
+export type RecentLecture = {
+  slug: string;
+  title: string;
+  date: string;
+  durationMinutes?: number;
+  thumbnail: string | null;
+};
+
+export default function HomeShell({
+  locale,
+  recentLectures = [],
+}: {
+  locale: SupportedLocale;
+  recentLectures?: RecentLecture[];
+}) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "End") {
@@ -132,7 +146,7 @@ export default function HomeShell({ locale }: { locale: SupportedLocale }) {
       </section>
 
       <section id="lectures" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
-        <LecturesSection locale={locale} />
+        <LecturesSection locale={locale} recent={recentLectures} />
       </section>
 
       <section id="call-to-clarity" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">

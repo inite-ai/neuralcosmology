@@ -24,6 +24,7 @@ export default function Header({ locale }: { locale: SupportedLocale }) {
     { href: `/${locale}/books`, exact: false, label: dict.nav.books },
     { href: `/${locale}/science`, exact: false, label: dict.nav.science },
     { href: `/${locale}/essays`, exact: false, label: dict.nav.essays },
+    { href: `/${locale}/lectures`, exact: false, label: dict.nav.lectures },
     { href: `/${locale}/about`, exact: false, label: dict.nav.about },
   ];
 

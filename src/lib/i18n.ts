@@ -13,6 +13,7 @@ export type Dict = {
     books: string;
     science: string;
     essays: string;
+    lectures: string;
     about: string;
     contact: string;
   };
@@ -75,6 +76,15 @@ export type Dict = {
     placeholderBody: string;
     placeholderLink1: string;
     placeholderLink2: string;
+  };
+  lecturesPage: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    placeholderBody: string;
+    watchCta: string;
+    durationSuffix: string;
+    backToIndex: string;
   };
   about: {
     eyebrow: string;
@@ -140,6 +150,7 @@ export type Dict = {
       headline: string;
       sub: string;
       cta: string;
+      seeAll: string;
     };
     callToClarity: {
       title: string;
@@ -163,6 +174,7 @@ const en: Dict = {
     books: "Books",
     science: "Science",
     essays: "Essays",
+    lectures: "Lectures",
     about: "About",
     contact: "Contact",
   },
@@ -228,6 +240,16 @@ const en: Dict = {
       "The first essay — A Loss Function for the Universe — is in final edit. It walks through the shape that shows up when five independent anomalies are lined up side by side.",
     placeholderLink1: "Pointer Architecture preprint",
     placeholderLink2: "non-fiction volume",
+  },
+  lecturesPage: {
+    eyebrow: "Lectures",
+    title: "Talks and recordings.",
+    lead: "Walkthroughs of the book, the preprint and essays — recorded slowly, linked here as they come out.",
+    placeholderBody:
+      "No recordings are online yet. Upcoming: a walk-through of the Pointer Architecture preprint and a reading session around the non-fiction volume. Check back or subscribe for updates.",
+    watchCta: "Watch",
+    durationSuffix: "min",
+    backToIndex: "All lectures",
   },
   about: {
     eyebrow: "About",
@@ -399,6 +421,7 @@ const en: Dict = {
       headline: "No recordings yet.",
       sub: "Breakdowns from the book and the preprint will be recorded. Subscribe for updates.",
       cta: "Subscribe",
+      seeAll: "All lectures →",
     },
     callToClarity: {
       title: "Get in touch",
@@ -423,6 +446,7 @@ const ru: Dict = {
     books: "Книги",
     science: "Наука",
     essays: "Эссе",
+    lectures: "Лекции",
     about: "Об авторе",
     contact: "Контакты",
   },
@@ -489,6 +513,16 @@ const ru: Dict = {
       "Первое эссе — «Функция потерь для вселенной» — на финальной правке. Оно проходит по форме, которая проступает, когда ставишь пять независимых аномалий рядом.",
     placeholderLink1: "препринт Pointer Architecture",
     placeholderLink2: "нон-фикшн из серии",
+  },
+  lecturesPage: {
+    eyebrow: "Лекции",
+    title: "Записи выступлений.",
+    lead: "Разборы книги, препринта и эссе — записываю неспешно, буду выкладывать здесь по мере готовности.",
+    placeholderBody:
+      "Пока записей нет. В планах — разбор препринта Pointer Architecture и чтение глав из нон-фикшна. Заходи позже или подпишись на обновления.",
+    watchCta: "Смотреть",
+    durationSuffix: "мин",
+    backToIndex: "Все лекции",
   },
   about: {
     eyebrow: "Об авторе",
@@ -660,6 +694,7 @@ const ru: Dict = {
       headline: "Пока записей нет.",
       sub: "Буду записывать разборы из книги и препринта. Подписывайся на обновления.",
       cta: "Подписаться",
+      seeAll: "Все лекции →",
     },
     callToClarity: {
       title: "Связаться",
@@ -684,6 +719,7 @@ const pt: Dict = {
     books: "Livros",
     science: "Ciência",
     essays: "Ensaios",
+    lectures: "Palestras",
     about: "Sobre",
     contact: "Contato",
   },
@@ -749,6 +785,16 @@ const pt: Dict = {
       "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
     placeholderLink1: "preprint Pointer Architecture",
     placeholderLink2: "volume de não-ficção",
+  },
+  lecturesPage: {
+    eyebrow: "Palestras",
+    title: "Gravações e falas.",
+    lead: "Análises do livro, do preprint e dos ensaios — gravadas sem pressa, publicadas aqui à medida que saem.",
+    placeholderBody:
+      "Ainda não há gravações online. Em preparação: uma análise do preprint Pointer Architecture e uma leitura do volume de não-ficção. Volte depois ou assine para receber atualizações.",
+    watchCta: "Assistir",
+    durationSuffix: "min",
+    backToIndex: "Todas as palestras",
   },
   about: {
     eyebrow: "Sobre",
@@ -920,6 +966,7 @@ const pt: Dict = {
       headline: "Ainda não há gravações.",
       sub: "Vou gravar análises do livro e do preprint. Assine para receber atualizações.",
       cta: "Assinar",
+      seeAll: "Todas as palestras →",
     },
     callToClarity: {
       title: "Entrar em contato",
@@ -944,6 +991,7 @@ const es: Dict = {
     books: "Libros",
     science: "Ciencia",
     essays: "Ensayos",
+    lectures: "Charlas",
     about: "Sobre",
     contact: "Contacto",
   },
@@ -1008,6 +1056,16 @@ const es: Dict = {
       "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
     placeholderLink1: "preprint Pointer Architecture",
     placeholderLink2: "volumen de no ficción",
+  },
+  lecturesPage: {
+    eyebrow: "Charlas",
+    title: "Grabaciones e intervenciones.",
+    lead: "Análisis del libro, del preprint y de los ensayos — grabados sin prisa, publicados aquí a medida que salen.",
+    placeholderBody:
+      "Aún no hay grabaciones en línea. En preparación: un análisis del preprint Pointer Architecture y una lectura del volumen de no ficción. Vuelve más tarde o suscríbete para novedades.",
+    watchCta: "Ver",
+    durationSuffix: "min",
+    backToIndex: "Todas las charlas",
   },
   about: {
     eyebrow: "Sobre",
@@ -1179,6 +1237,7 @@ const es: Dict = {
       headline: "Aún no hay grabaciones.",
       sub: "Grabaré análisis del libro y del preprint. Suscríbete para recibir novedades.",
       cta: "Suscribirse",
+      seeAll: "Todas las charlas →",
     },
     callToClarity: {
       title: "Escribir",
