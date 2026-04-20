@@ -85,9 +85,6 @@ export default function CallToClaritySection({ locale }: { locale: SupportedLoca
         />
       )}
       
-      {/* Dark gradient overlay at bottom for better transition */}
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#10182a] via-[#10182a]/80 to-transparent z-10"></div>
-      
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,35 +93,39 @@ export default function CallToClaritySection({ locale }: { locale: SupportedLoca
         style={{
           position: 'relative',
           zIndex: 20,
-          maxWidth: '48rem',
+          maxWidth: '42rem',
           width: '100%',
           margin: '0 auto',
-          background: 'rgba(255, 255, 255, 0.05)',
+          background: 'rgba(255, 255, 255, 0.04)',
           backdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
           borderRadius: '0.75rem',
-          padding: '1.25rem',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
+          padding: '1.75rem',
           willChange: "transform, opacity"
         }}
-        className="sm:rounded-2xl sm:p-10"
+        className="sm:rounded-2xl sm:p-10 md:p-12"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <div className="text-[10px] sm:text-xs font-mono tracking-[0.3em] uppercase text-blue-300/70 mb-4 sm:mb-6">
           {t.title}
-        </h2>
-        <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
+        </div>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-4 sm:mb-5 text-transparent bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text">
           <MultiLine text={t.headline} />
-        </p>
-        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-4 sm:mb-6 md:mb-8 px-2">
+        </h2>
+        <p className="text-sm sm:text-base md:text-lg text-blue-100/85 mb-6 sm:mb-8 leading-relaxed">
           <MultiLine text={t.body} />
         </p>
-        <Button className="mt-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105 touch-manipulation">
-          {t.cta}
-        </Button>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+          <Button asChild className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-[1.03] touch-manipulation">
+            <a href="mailto:info@neuralcosmology.com">{t.cta} →</a>
+          </Button>
+          <a
+            href="mailto:info@neuralcosmology.com"
+            className="text-xs sm:text-sm font-mono text-blue-300/70 hover:text-white transition-colors tracking-tight"
+          >
+            info@neuralcosmology.com
+          </a>
+        </div>
       </motion.div>
     </div>
   );

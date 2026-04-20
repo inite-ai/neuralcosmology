@@ -402,9 +402,9 @@ const en: Dict = {
     },
     callToClarity: {
       title: "Get in touch",
-      headline: "No community, no movement.\nOnly the work and its testing.",
+      headline: "The work is open for scrutiny.",
       body:
-        "The preprint is open. Write with questions, reviews or critique — everything gets read.",
+        "The preprint is available. Write with questions, reviews or critique — everything gets read.",
       cta: "Write",
     },
   },
@@ -663,9 +663,9 @@ const ru: Dict = {
     },
     callToClarity: {
       title: "Связаться",
-      headline: "Ни сообщества, ни движения.\nТолько работа и её проверка.",
+      headline: "Работа открыта для проверки.",
       body:
-        "Препринт открыт. Пиши с вопросами, рецензиями или критикой — всё читается.",
+        "Препринт в доступе. Пиши с вопросами, рецензиями или критикой — всё читается.",
       cta: "Написать",
     },
   },
@@ -923,9 +923,9 @@ const pt: Dict = {
     },
     callToClarity: {
       title: "Entrar em contato",
-      headline: "Sem comunidade, sem movimento.\nSó o trabalho e sua verificação.",
+      headline: "O trabalho está aberto para verificação.",
       body:
-        "O preprint está aberto. Escreva com perguntas, resenhas ou críticas — tudo é lido.",
+        "O preprint está disponível. Escreva com perguntas, resenhas ou críticas — tudo é lido.",
       cta: "Escrever",
     },
   },
@@ -1182,9 +1182,9 @@ const es: Dict = {
     },
     callToClarity: {
       title: "Escribir",
-      headline: "Ni comunidad, ni movimiento.\nSolo el trabajo y su prueba.",
+      headline: "El trabajo está abierto a la verificación.",
       body:
-        "El preprint está abierto. Escribe con preguntas, reseñas o críticas — todo se lee.",
+        "El preprint está disponible. Escribe con preguntas, reseñas o críticas — todo se lee.",
       cta: "Escribir",
     },
   },

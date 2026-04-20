@@ -65,46 +65,35 @@ export default function LecturesSection({ locale }: { locale: SupportedLocale })
         />
       )}
       
-      {/* Dark gradient overlay at bottom for better transition */}
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#10182a] via-[#10182a]/80 to-transparent z-10"></div>
-      
-      {/* Glassy cosmic card */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
         style={{
-          position: 'relative',
+          position: "relative",
           zIndex: 20,
-          maxWidth: '48rem',
-          width: '100%',
-          margin: '0 auto',
-          background: 'rgba(255, 255, 255, 0.05)',
-          backdropFilter: 'blur(16px)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-          borderRadius: '0.75rem',
-          padding: '1.25rem',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
-          willChange: "transform, opacity"
+          maxWidth: "38rem",
+          width: "100%",
+          margin: "0 auto",
+          willChange: "transform, opacity",
         }}
-        className="sm:rounded-2xl sm:p-10"
+        className="text-center px-4"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <div className="text-[10px] sm:text-xs font-mono tracking-[0.3em] uppercase text-blue-300/70 mb-6 sm:mb-8">
           {t.title}
-        </h2>
-        <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
+        </div>
+        <div className="mx-auto mb-6 sm:mb-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-dashed border-white/15 flex items-center justify-center text-white/40 text-xl sm:text-2xl">
+          ◷
+        </div>
+        <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-white/90 mb-3 sm:mb-4 leading-tight">
           <MultiLine text={t.headline} />
         </p>
-        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-4 sm:mb-6 md:mb-8 px-2">
+        <p className="text-sm sm:text-base text-blue-200/75 mb-6 sm:mb-8 leading-relaxed max-w-md mx-auto">
           {t.sub}
         </p>
-        <Button className="mt-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105 touch-manipulation">
-          {t.cta}
+        <Button className="bg-white/5 hover:bg-white/10 text-blue-100 text-xs sm:text-sm px-5 sm:px-6 py-2 sm:py-2.5 rounded-full border border-white/15 backdrop-blur-md transition-all duration-300 touch-manipulation">
+          {t.cta} →
         </Button>
       </motion.div>
     </section>
