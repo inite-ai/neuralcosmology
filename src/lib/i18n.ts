@@ -262,7 +262,7 @@ const en: Dict = {
     eyebrow: "Essays",
     title: "Long-form writing.",
     lead:
-      "Where the physics meets the prose. The first essays are in final edit — back soon.",
+      "Short breakdowns where physics meets plain language. One idea per essay, followed through.",
     placeholderBody:
       "The first essay — A Loss Function for the Universe — is in final edit. It walks through the shape that shows up when five independent anomalies are lined up side by side.",
     placeholderLink1: "Pointer Architecture preprint",
@@ -554,7 +554,7 @@ const ru: Dict = {
     eyebrow: "Эссе",
     title: "Длинная проза.",
     lead:
-      "Там, где физика пересекается с прозой. Первые эссе на финальной правке — скоро будут здесь.",
+      "Короткие разборы на стыке физики и повседневного языка. Одна мысль за один текст, доведённая до конца.",
     placeholderBody:
       "Первое эссе — «Функция потерь для вселенной» — на финальной правке. Оно проходит по форме, которая проступает, когда ставишь пять независимых аномалий рядом.",
     placeholderLink1: "препринт Pointer Architecture",
@@ -845,7 +845,7 @@ const pt: Dict = {
     eyebrow: "Ensaios",
     title: "Prosa longa.",
     lead:
-      "Onde a física encontra a prosa. Os primeiros ensaios estão na revisão final — em breve por aqui.",
+      "Análises breves onde a física encontra a linguagem comum. Uma ideia por ensaio, levada até o fim.",
     placeholderBody:
       "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
     placeholderLink1: "preprint Pointer Architecture",
@@ -1135,7 +1135,7 @@ const es: Dict = {
     eyebrow: "Ensayos",
     title: "Prosa larga.",
     lead:
-      "Donde la física se cruza con la prosa. Los primeros ensayos están en revisión final — pronto por aquí.",
+      "Análisis breves donde la física se cruza con el lenguaje común. Una idea por ensayo, llevada hasta el final.",
     placeholderBody:
       "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
     placeholderLink1: "preprint Pointer Architecture",
