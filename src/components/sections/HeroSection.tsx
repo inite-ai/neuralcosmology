@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -97,9 +96,6 @@ export default function HeroSection({ locale }: { locale: SupportedLocale }) {
         className="relative z-10 flex flex-col items-center gap-4 sm:gap-8 px-4"
         style={{ willChange: "transform, opacity" }}
       >
-        <Badge variant="outline" className="mb-2 text-xs sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 border-white/20 text-blue-200 shadow-lg tracking-widest uppercase">
-          {t.badge}
-        </Badge>
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-400 bg-clip-text drop-shadow-[0_8px_32px_rgba(60,60,180,0.25)] leading-tight">
           {t.title}
         </h1>
