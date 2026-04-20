@@ -204,35 +204,34 @@ export default function WhatIsSection({ locale }: { locale: SupportedLocale }) {
           maxWidth: '48rem',
           width: '100%',
           margin: '0 auto',
-          background: 'rgba(255, 255, 255, 0.05)',
+          background: 'rgba(255, 255, 255, 0.04)',
           backdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 25px rgba(123, 97, 255, 0.15)',
           borderRadius: '0.75rem',
-          padding: '1.25rem',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
+          padding: '1.5rem',
           willChange: 'transform, opacity'
         }}
-        className="sm:rounded-2xl sm:p-10"
+        className="sm:rounded-2xl sm:p-10 md:p-12"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center text-transparent bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text">
           {t.title}
         </h2>
-        <p className="font-extrabold text-base sm:text-lg md:text-xl mb-2 text-blue-100 px-2">
-          <MultiLine text={t.lead1} />
-        </p>
-        <p className="text-sm sm:text-base md:text-lg text-blue-200 mb-3 sm:mb-4 px-2">
-          <MultiLine text={t.lead2} />
-        </p>
-        <p className="text-sm sm:text-base md:text-lg text-blue-100/85 mb-3 sm:mb-4 px-2 leading-relaxed text-left sm:text-center">
-          <MultiLine text={t.leadMechanism} />
-        </p>
-        <p className="text-sm sm:text-base md:text-lg text-blue-300/80 px-2">
-          <MultiLine text={t.lead3} />
-        </p>
+        <div className="space-y-4 sm:space-y-5 text-left">
+          <p className="font-semibold text-lg sm:text-xl md:text-2xl text-blue-50 leading-snug">
+            <MultiLine text={t.lead1} />
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-blue-200/90 leading-relaxed">
+            <MultiLine text={t.lead2} />
+          </p>
+          <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent my-2 sm:my-3" />
+          <p className="text-sm sm:text-base md:text-lg text-blue-100/85 leading-relaxed">
+            <MultiLine text={t.leadMechanism} />
+          </p>
+          <p className="text-xs sm:text-sm md:text-base text-blue-300/70 italic pt-2 sm:pt-3">
+            <MultiLine text={t.lead3} />
+          </p>
+        </div>
       </motion.div>
     </section>
   );
