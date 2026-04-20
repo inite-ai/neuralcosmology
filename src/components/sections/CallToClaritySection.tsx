@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState, Fragment } from "react";
+import { CheckCircle2, AlertCircle, Send } from "lucide-react";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 
@@ -23,7 +23,41 @@ function MultiLine({ text }: { text: string }) {
 
 export default function CallToClaritySection({ locale }: { locale: SupportedLocale }) {
   const t = getDict(locale).home.callToClarity;
+  const f = t.form;
   const [init, setInit] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+    setStatus("idle");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Contact submit error:", err);
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
+      setTimeout(() => setStatus("idle"), 8000);
+    }
+  };
 
   useEffect(() => {
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
@@ -115,17 +149,106 @@ export default function CallToClaritySection({ locale }: { locale: SupportedLoca
         <p className="text-sm sm:text-base md:text-lg text-blue-100/85 mb-6 sm:mb-8 leading-relaxed">
           <MultiLine text={t.body} />
         </p>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-          <Button asChild className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-[1.03] touch-manipulation">
-            <a href="mailto:info@neuralcosmology.com">{t.cta} →</a>
-          </Button>
-          <a
-            href="mailto:info@neuralcosmology.com"
-            className="text-xs sm:text-sm font-mono text-blue-300/70 hover:text-white transition-colors tracking-tight"
-          >
-            info@neuralcosmology.com
-          </a>
-        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label className="block text-xs text-blue-200/70 mb-1.5 tracking-wide">
+                {f.name}
+              </label>
+              <input
+                name="name"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder={f.namePlaceholder}
+                required
+                disabled={submitting}
+                className="w-full rounded-lg bg-white/[0.04] border border-white/10 focus:border-indigo-400/50 focus:bg-white/[0.06] px-3 py-2.5 text-sm text-white placeholder-white/30 outline-none transition-colors disabled:opacity-50"
+              />
+            </div>
+            <div>
+              <label className="block text-xs text-blue-200/70 mb-1.5 tracking-wide">
+                {f.email}
+              </label>
+              <input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder={f.emailPlaceholder}
+                required
+                disabled={submitting}
+                className="w-full rounded-lg bg-white/[0.04] border border-white/10 focus:border-indigo-400/50 focus:bg-white/[0.06] px-3 py-2.5 text-sm text-white placeholder-white/30 outline-none transition-colors disabled:opacity-50"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="block text-xs text-blue-200/70 mb-1.5 tracking-wide">
+              {f.message}
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder={f.messagePlaceholder}
+              required
+              disabled={submitting}
+              rows={4}
+              className="w-full rounded-lg bg-white/[0.04] border border-white/10 focus:border-indigo-400/50 focus:bg-white/[0.06] px-3 py-2.5 text-sm text-white placeholder-white/30 outline-none transition-colors disabled:opacity-50 resize-y min-h-[7rem]"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-1">
+            <button
+              type="submit"
+              disabled={submitting}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-white text-sm sm:text-base px-6 sm:px-7 py-2.5 sm:py-3 rounded-full border-2 border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-[1.02] touch-manipulation"
+            >
+              {submitting ? (
+                <>
+                  <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <span>{f.sending}</span>
+                </>
+              ) : (
+                <>
+                  <span>{f.submit}</span>
+                  <Send className="w-4 h-4" />
+                </>
+              )}
+            </button>
+            <div className="text-xs text-blue-300/60 font-mono">
+              {f.directEmail}{" "}
+              <a
+                href="mailto:info@neuralcosmology.com"
+                className="text-blue-300/80 hover:text-white transition-colors"
+              >
+                info@neuralcosmology.com
+              </a>
+            </div>
+          </div>
+
+          {status === "success" && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-start gap-2 text-sm text-emerald-300 bg-emerald-400/10 border border-emerald-400/20 rounded-lg p-3"
+            >
+              <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" />
+              <span>{f.success}</span>
+            </motion.div>
+          )}
+          {status === "error" && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-start gap-2 text-sm text-rose-300 bg-rose-400/10 border border-rose-400/20 rounded-lg p-3"
+            >
+              <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+              <span>{f.error}</span>
+            </motion.div>
+          )}
+        </form>
       </motion.div>
     </div>
   );

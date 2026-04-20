@@ -157,6 +157,19 @@ export type Dict = {
       headline: string;
       body: string;
       cta: string;
+      form: {
+        name: string;
+        email: string;
+        message: string;
+        namePlaceholder: string;
+        emailPlaceholder: string;
+        messagePlaceholder: string;
+        submit: string;
+        sending: string;
+        success: string;
+        error: string;
+        directEmail: string;
+      };
     };
   };
 };
@@ -425,10 +438,23 @@ const en: Dict = {
     },
     callToClarity: {
       title: "Get in touch",
-      headline: "The work is open for scrutiny.",
+      headline: "Working on something close?",
       body:
-        "The preprint is available. Write with questions, reviews or critique — everything gets read.",
+        "Write — let's meet. Ideas, critique, reviews — everything gets read.",
       cta: "Write",
+      form: {
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        namePlaceholder: "How should I address you",
+        emailPlaceholder: "your@email.com",
+        messagePlaceholder: "What's on your mind…",
+        submit: "Send",
+        sending: "Sending…",
+        success: "Received. I'll reply once I read it.",
+        error: "Something went wrong. Write directly to info@neuralcosmology.com",
+        directEmail: "or directly",
+      },
     },
   },
 };
@@ -698,10 +724,23 @@ const ru: Dict = {
     },
     callToClarity: {
       title: "Связаться",
-      headline: "Работа открыта для проверки.",
+      headline: "Работаешь над близким?",
       body:
-        "Препринт в доступе. Пиши с вопросами, рецензиями или критикой — всё читается.",
+        "Пиши — познакомимся. Идеи, критика, рецензии — всё читается.",
       cta: "Написать",
+      form: {
+        name: "Имя",
+        email: "Email",
+        message: "Сообщение",
+        namePlaceholder: "Как к тебе обращаться",
+        emailPlaceholder: "your@email.com",
+        messagePlaceholder: "Что на уме…",
+        submit: "Отправить",
+        sending: "Отправляем…",
+        success: "Получено. Отвечу, как прочитаю.",
+        error: "Что-то пошло не так. Напиши напрямую на info@neuralcosmology.com",
+        directEmail: "или напрямую",
+      },
     },
   },
 };
@@ -970,10 +1009,23 @@ const pt: Dict = {
     },
     callToClarity: {
       title: "Entrar em contato",
-      headline: "O trabalho está aberto para verificação.",
+      headline: "Trabalha em algo próximo?",
       body:
-        "O preprint está disponível. Escreva com perguntas, resenhas ou críticas — tudo é lido.",
+        "Escreva — vamos nos conhecer. Ideias, críticas, resenhas — tudo é lido.",
       cta: "Escrever",
+      form: {
+        name: "Nome",
+        email: "Email",
+        message: "Mensagem",
+        namePlaceholder: "Como te chamar",
+        emailPlaceholder: "seu@email.com",
+        messagePlaceholder: "O que está pensando…",
+        submit: "Enviar",
+        sending: "Enviando…",
+        success: "Recebido. Respondo assim que ler.",
+        error: "Algo deu errado. Escreva direto para info@neuralcosmology.com",
+        directEmail: "ou direto",
+      },
     },
   },
 };
@@ -1241,10 +1293,23 @@ const es: Dict = {
     },
     callToClarity: {
       title: "Escribir",
-      headline: "El trabajo está abierto a la verificación.",
+      headline: "¿Trabajas en algo cercano?",
       body:
-        "El preprint está disponible. Escribe con preguntas, reseñas o críticas — todo se lee.",
+        "Escribe — nos conocemos. Ideas, críticas, reseñas — todo se lee.",
       cta: "Escribir",
+      form: {
+        name: "Nombre",
+        email: "Email",
+        message: "Mensaje",
+        namePlaceholder: "Cómo llamarte",
+        emailPlaceholder: "tu@email.com",
+        messagePlaceholder: "Qué tienes en mente…",
+        submit: "Enviar",
+        sending: "Enviando…",
+        success: "Recibido. Respondo cuando lo lea.",
+        error: "Algo salió mal. Escribe directamente a info@neuralcosmology.com",
+        directEmail: "o directamente",
+      },
     },
   },
 };
