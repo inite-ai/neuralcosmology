@@ -293,7 +293,7 @@ const en: Dict = {
     elsewhereHeader: "Elsewhere",
   },
   footer: {
-    tagline: "Science and fiction around one hypothesis.",
+    tagline: "The universe as a learning network — in science and in fiction.",
     columns: {
       read: "Read",
       research: "Research",
@@ -585,7 +585,7 @@ const ru: Dict = {
     elsewhereHeader: "По соседству",
   },
   footer: {
-    tagline: "Наука и проза вокруг одной гипотезы.",
+    tagline: "Вселенная как обучающаяся сеть — в науке и в прозе.",
     columns: {
       read: "Читать",
       research: "Исследования",
@@ -876,7 +876,7 @@ const pt: Dict = {
     elsewhereHeader: "Em outro lugar",
   },
   footer: {
-    tagline: "Ciência e ficção em torno de uma hipótese.",
+    tagline: "O universo como uma rede em aprendizado — na ciência e na ficção.",
     columns: {
       read: "Ler",
       research: "Pesquisa",
@@ -1166,7 +1166,7 @@ const es: Dict = {
     elsewhereHeader: "En otros sitios",
   },
   footer: {
-    tagline: "Ciencia y ficción alrededor de una hipótesis.",
+    tagline: "El universo como una red que aprende — en ciencia y en ficción.",
     columns: {
       read: "Leer",
       research: "Investigación",
