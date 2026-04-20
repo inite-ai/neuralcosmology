@@ -336,7 +336,7 @@ const en: Dict = {
           title: "Start from the inside",
           desc: [
             "Outer signs are hollow when the inside doesn't agree.",
-            "Check your own state first.",
+            "Turn to yourself first.",
             "Everything else reads from there.",
           ],
         },
@@ -609,7 +609,7 @@ const ru: Dict = {
           title: "Начинай изнутри",
           desc: [
             "Внешние знаки пусты, если внутри разлад.",
-            "Проверь сначала своё состояние.",
+            "Обратись сначала к себе.",
             "Остальное видно уже оттуда.",
           ],
         },
@@ -625,7 +625,7 @@ const ru: Dict = {
           title: "Различай голоса",
           desc: [
             "Настоящий возвращает ясность.",
-            "Остальные только путают сильнее.",
+            "Остальные только путают.",
             "Это и есть мера.",
           ],
         },
@@ -652,7 +652,7 @@ const ru: Dict = {
           ],
         },
         {
-          title: "Отпускай без финала",
+          title: "Отпускай без точки",
           desc: [
             "Не всякий конец — завершён.",
             "Иногда он приходит только с ясностью.",
@@ -881,7 +881,7 @@ const pt: Dict = {
           title: "Comece por dentro",
           desc: [
             "Sinais externos são ocos quando por dentro não bate.",
-            "Confira primeiro o próprio estado.",
+            "Volte-se primeiro a si mesmo.",
             "O resto se lê a partir dele.",
           ],
         },
@@ -1152,7 +1152,7 @@ const es: Dict = {
           title: "Empieza por dentro",
           desc: [
             "Las señales de fuera son huecas cuando por dentro no cuadra.",
-            "Revisa primero tu propio estado.",
+            "Vuélvete primero hacia ti.",
             "El resto se lee desde ahí.",
           ],
         },
