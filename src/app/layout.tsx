@@ -25,9 +25,16 @@ export const metadata: Metadata = {
   creator: "Mikhail Savchenko",
   publisher: "Mikhail Savchenko",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicons/favicon-16x16.png",
-    apple: "/favicons/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicons/icon.svg", type: "image/svg+xml" },
+      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   manifest: "/site.webmanifest",
   robots: {

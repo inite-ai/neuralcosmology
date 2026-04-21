@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.5" r="0.65">
+      <stop offset="0%" stop-color="#1a2356"/>
+      <stop offset="100%" stop-color="#0a1026"/>
+    </radialGradient>
+  </defs>
+  <rect width="32" height="32" rx="5" ry="5" fill="url(#bg)"/>
+
+  <!-- tilted orbit — strong stroke so 16px still shows it -->
+  <g transform="translate(16 16) rotate(-22)" fill="none" stroke="#a5b4fc" stroke-width="2.2" stroke-linecap="round">
+    <ellipse cx="0" cy="0" rx="11" ry="4"/>
+  </g>
+
+  <!-- core -->
+  <circle cx="16" cy="16" r="3.4" fill="#ffffff"/>
+  <circle cx="16" cy="16" r="5.5" fill="#e0e7ff" fill-opacity="0.35"/>
+</svg>
