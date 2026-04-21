@@ -85,6 +85,14 @@ export default async function AboutPage({
           <ul className="text-sm text-white/75 space-y-1.5">
             <li>
               <a
+                href="https://t.me/neuralcosmology"
+                className="hover:text-white transition-colors"
+              >
+                Telegram — @neuralcosmology
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://github.com/neuralcosmology"
                 className="hover:text-white transition-colors"
               >

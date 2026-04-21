@@ -32,6 +32,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
       links: [
         { label: dict.footer.links.about, href: `/${locale}/about` },
         { label: dict.footer.links.press, href: "mailto:info@neuralcosmology.com" },
+        { label: "Telegram", href: "https://t.me/neuralcosmology" },
         { label: dict.footer.links.github, href: "https://github.com/neuralcosmology" },
       ],
     },
