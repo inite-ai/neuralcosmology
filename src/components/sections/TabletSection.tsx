@@ -174,7 +174,15 @@ export default function TabletSection({ locale }: { locale: SupportedLocale }) {
   const commandments = t.commandments;
   const [active, setActive] = useState(0);
   const [initialRender, setInitialRender] = useState(true);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   // Create container ref
   const containerRef = useRef<HTMLDivElement>(null);
   
@@ -288,59 +296,44 @@ export default function TabletSection({ locale }: { locale: SupportedLocale }) {
               // Only render visible cards (current and adjacent)
               const offset = i - active;
               if (Math.abs(offset) > 2) return null;
-              
+
               // Card positioning and styling - responsive
-              const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-              const x = offset * (isMobile ? 80 : 120); // Smaller offset on mobile
-              const scale = 1 - Math.abs(offset) * (isMobile ? 0.2 : 0.15); // More scale reduction on mobile
-              const rotateY = isMobile ? offset * 15 : offset * 25; // Less rotation on mobile
-              
-              // Immediately set opacity based on whether card is active
+              const x = offset * (isMobile ? 80 : 120);
+              const scale = 1 - Math.abs(offset) * (isMobile ? 0.2 : 0.15);
+              const rotateY = isMobile ? 0 : offset * 25;
+
               const opacity = offset === 0 ? 1 : (isMobile ? 0.2 : 0.3);
-              
-              const zIndex = 10 - Math.abs(offset); // Z-Index: 10 for current, 9 for adjacent, 8 for further
-              
-              // Apply a vertical offset to cards on the side to create a staggered effect
+              const zIndex = 10 - Math.abs(offset);
               const y = Math.abs(offset) > 0 ? (isMobile ? 10 : 15) : 0;
-              
-              // Use separate variants for transition behavior based on initial render
-              const transitionConfig = initialRender ? {
-                duration: 0
-              } : {
-                duration: 0.5,
-                ease: "easeInOut"
-              };
-              
+
+              const transitionConfig = initialRender
+                ? { duration: 0 }
+                : { duration: 0.5, ease: "easeInOut" };
+
               return (
                 <motion.div
                   key={i}
                   initial={false}
-                  animate={{
-                    x,
-                    y,
-                    scale,
-                    rotateY,
-                    opacity,
-                    zIndex
-                  }}
+                  animate={{ x, y, scale, rotateY, opacity, zIndex }}
                   transition={transitionConfig}
                   style={{
                     position: "absolute",
                     top: "50%",
                     left: "50%",
-                    marginLeft: typeof window !== 'undefined' && window.innerWidth < 768 ? "-150px" : "-200px",
-                    marginTop: typeof window !== 'undefined' && window.innerWidth < 768 ? "-120px" : "-150px",
-                    width: typeof window !== 'undefined' && window.innerWidth < 768 ? "300px" : "400px",
-                    transformStyle: "preserve-3d",
+                    marginLeft: isMobile ? "-150px" : "-200px",
+                    marginTop: isMobile ? "-120px" : "-150px",
+                    width: isMobile ? "300px" : "400px",
+                    transformStyle: isMobile ? "flat" : "preserve-3d",
                     willChange: "transform, opacity",
-                    transform: "translateZ(0)" // For GPU acceleration
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
                   }}
                 >
                   <div className={`${
                     offset === 0
                       ? "bg-gradient-to-br from-blue-950/95 via-indigo-950/95 to-purple-950/95 border-blue-400/40"
                       : "bg-gradient-to-br from-blue-900/40 via-white/5 to-purple-900/30 border-blue-400/20"
-                  } border shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-start text-left backdrop-blur-md`}>
+                  } border shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col items-start text-left sm:backdrop-blur-md`}>
                     <div className="mb-3 sm:mb-4">
                       <div className="text-[10px] sm:text-xs font-mono text-blue-300/70 tracking-[0.2em] mb-1.5 sm:mb-2">
                         № {String(i + 1).padStart(2, "0")} / {String(commandments.length).padStart(2, "0")}
