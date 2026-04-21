@@ -121,35 +121,35 @@ export default function HomeShell({
     >
       <SectionNav />
 
-      <section id="hero" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="hero" className="w-full flex items-center justify-center">
         <HeroSection locale={locale} />
       </section>
 
-      <section id="directions" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="directions" className="w-full flex items-center justify-center">
         <DirectionsSection locale={locale} />
       </section>
 
-      <section id="what-is" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="what-is" className="w-full flex items-center justify-center">
         <WhatIsSection locale={locale} />
       </section>
 
-      <section id="core-principles" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="core-principles" className="w-full flex items-center justify-center">
         <CorePrinciplesSection locale={locale} />
       </section>
 
-      <section id="tablet" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="tablet" className="w-full flex items-center justify-center">
         <TabletSection locale={locale} />
       </section>
 
-      <section id="practices" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="practices" className="w-full flex items-center justify-center">
         <PracticesSection locale={locale} />
       </section>
 
-      <section id="lectures" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="lectures" className="w-full flex items-center justify-center">
         <LecturesSection locale={locale} recent={recentLectures} />
       </section>
 
-      <section id="call-to-clarity" className="w-full min-h-screen flex items-center justify-center py-4 sm:py-0">
+      <section id="call-to-clarity" className="w-full flex items-center justify-center">
         <CallToClaritySection locale={locale} />
       </section>
     </main>

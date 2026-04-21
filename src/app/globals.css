@@ -256,14 +256,7 @@ html {
   }
 }
 
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  width: 100vw;
-  max-width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh; /* Dynamic viewport height for mobile */
-}
+/* No global scroll-snap. HomeShell manages section heights individually. */
 
 /* Custom Section Navigation */
 .section-nav {
