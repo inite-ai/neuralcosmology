@@ -38,6 +38,13 @@ LECTURES = {
     "tononi-iit-4-2025": "Rdn5lN1dz8w",
     "vanchurin-jaimungal-2026": "73IdQGgfxas",
     "vanchurin-world-as-neural-network-2020": "tAKaqojK0d8",
+    "ailashkersky-fractals-feigenbaum-2026": "Cf5cgYzK4U0",
+}
+
+# Native-language source per lecture (used if the video has no English track).
+# If not listed here, English is assumed as primary source.
+NATIVE_LANG = {
+    "ailashkersky-fractals-feigenbaum-2026": "ru",
 }
 
 
@@ -96,19 +103,23 @@ def fetch_one(
         return True
     try:
         listing = api.list(vid)
-        src = next((t for t in listing if t.language_code == "en" and not t.is_generated), None)
+        native_lang = NATIVE_LANG.get(slug, "en")
+        src = next(
+            (t for t in listing if t.language_code == native_lang and not t.is_generated),
+            None,
+        )
         if not src:
-            src = next((t for t in listing if t.language_code == "en"), None)
+            src = next((t for t in listing if t.language_code == native_lang), None)
         if not src:
-            print(f"  {slug}.{locale}: no English source")
+            print(f"  {slug}.{locale}: no {native_lang} source")
             return False
-        if locale == "en":
+        if locale == native_lang:
             segs = list(src.fetch())
             origin = "Human-made" if not src.is_generated else "Auto-generated"
             origin += " (YouTube)"
         else:
             segs = list(src.translate(locale).fetch())
-            origin = "Auto-translated from English by YouTube (machine translation)"
+            origin = f"Auto-translated from {native_lang} by YouTube (machine translation)"
         save(slug, vid, locale, format_transcript(segs), origin)
         return True
     except IpBlocked:
