@@ -108,8 +108,10 @@ export default function PracticesSection({ locale }: { locale: SupportedLocale }
             </li>
           ))}
         </ol>
-        <Button className="mt-4 sm:mt-6 md:mt-8 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105 touch-manipulation">
-          {t.cta}
+        <Button asChild className="mt-4 sm:mt-6 md:mt-8 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-lg border-2 border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-105 touch-manipulation">
+          <a href="https://t.me/neuralcosmology" target="_blank" rel="noopener noreferrer">
+            {t.cta} →
+          </a>
         </Button>
       </motion.div>
     </section>

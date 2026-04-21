@@ -121,8 +121,10 @@ export default function HeroSection({ locale }: { locale: SupportedLocale }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          <Button size="lg" className="mt-4 sm:mt-6 shadow-xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 rounded-full border-2 border-white/20 backdrop-blur-md touch-manipulation">
-            {t.cta}
+          <Button asChild size="lg" className="mt-4 sm:mt-6 shadow-xl bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 hover:brightness-110 text-white text-sm sm:text-lg px-6 sm:px-10 py-3 sm:py-4 rounded-full border-2 border-white/20 backdrop-blur-md touch-manipulation">
+            <a href="https://t.me/neuralcosmology" target="_blank" rel="noopener noreferrer">
+              {t.cta} →
+            </a>
           </Button>
         </motion.div>
       </motion.div>

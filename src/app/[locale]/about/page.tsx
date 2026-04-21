@@ -36,7 +36,7 @@ export default async function AboutPage({
   const locale = isSupportedLocale(raw) ? raw : "en";
   const dict = getDict(locale);
   return (
-    <main className="relative min-h-screen text-white pt-24 sm:pt-28 pb-20 px-4 sm:px-6">
+    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-xs uppercase tracking-[0.2em] text-indigo-300/80 mb-3">
           {dict.about.eyebrow}

@@ -13,7 +13,7 @@ export default function PageShell({
 }) {
   return (
     <main className="relative min-h-screen text-white">
-      <div className="pt-24 sm:pt-28 pb-20 px-4 sm:px-6">
+      <div className="pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <header className="mb-10 sm:mb-14 max-w-3xl">
             {eyebrow && (

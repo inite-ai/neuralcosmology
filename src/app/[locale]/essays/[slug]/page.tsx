@@ -96,7 +96,7 @@ export default async function EssayPage({
   const mdxSource = linkifyBookMentions(essay.content);
 
   return (
-    <main className="relative min-h-screen text-white pt-24 sm:pt-28 pb-20 px-4 sm:px-6">
+    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/essays`}
