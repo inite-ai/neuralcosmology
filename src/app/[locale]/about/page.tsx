@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd";
+import { profilePageSchema, breadcrumb, faqSchema } from "@/lib/schema";
+import { faqByLocale } from "@/content/faq";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -37,6 +40,18 @@ export default async function AboutPage({
   const dict = getDict(locale);
   return (
     <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+      <JsonLd
+        id="about-profile"
+        data={profilePageSchema(locale, dict.about.title, dict.about.bio[0])}
+      />
+      <JsonLd
+        id="about-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.about, path: "/about" },
+        ])}
+      />
+      <JsonLd id="about-faq" data={faqSchema(locale, "/about", faqByLocale[locale].about)} />
       <div className="max-w-3xl mx-auto">
         <div className="text-xs uppercase tracking-[0.2em] text-indigo-300/80 mb-3">
           {dict.about.eyebrow}
@@ -76,6 +91,18 @@ export default async function AboutPage({
               {dict.nav.books}
             </Link>
           </div>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-4">FAQ</h2>
+          <dl className="space-y-6">
+            {faqByLocale[locale].about.map((f) => (
+              <div key={f.question}>
+                <dt className="text-white/90 font-medium mb-1.5">{f.question}</dt>
+                <dd className="text-white/75 leading-relaxed text-sm">{f.answer}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
 
         <section className="mt-10">

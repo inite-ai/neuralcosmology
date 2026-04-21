@@ -8,6 +8,8 @@ import { getAllSlugs, getEssayBySlug } from "@/lib/essays";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { makeBookLink, linkifyBookMentions } from "@/components/essays/BookLink";
+import JsonLd from "@/components/seo/JsonLd";
+import { articleSchema, breadcrumb } from "@/lib/schema";
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -97,6 +99,30 @@ export default async function EssayPage({
 
   return (
     <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+      <JsonLd
+        id="essay-schema"
+        data={articleSchema({
+          locale,
+          slug,
+          title: essay.title,
+          description: essay.description,
+          datePublished: essay.date,
+          author: essay.author,
+          tags: essay.tags,
+          availableLocales: essay.availableLocales,
+          readingTime: essay.readingTime,
+          license: "CC-BY-4.0",
+          licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+        })}
+      />
+      <JsonLd
+        id="essay-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.essays, path: "/essays" },
+          { name: essay.title, path: `/essays/${slug}` },
+        ])}
+      />
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/essays`}

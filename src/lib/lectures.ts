@@ -5,6 +5,39 @@ import type { SupportedLocale } from "@/lib/get-locale";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
 
 const LECTURES_DIR = path.join(process.cwd(), "content", "lectures");
+const TRANSCRIPTS_DIR = path.join(LECTURES_DIR, "transcripts");
+
+function transcriptPath(slug: string, locale: SupportedLocale): string {
+  return locale === "en"
+    ? path.join(TRANSCRIPTS_DIR, `${slug}.md`)
+    : path.join(TRANSCRIPTS_DIR, `${slug}.${locale}.md`);
+}
+
+export function getTranscript(
+  slug: string,
+  locale: SupportedLocale = "en",
+): { content: string; locale: SupportedLocale } | null {
+  const primary = transcriptPath(slug, locale);
+  if (fs.existsSync(primary)) {
+    return { content: fs.readFileSync(primary, "utf8"), locale };
+  }
+  const en = transcriptPath(slug, "en");
+  if (fs.existsSync(en)) {
+    return { content: fs.readFileSync(en, "utf8"), locale: "en" };
+  }
+  return null;
+}
+
+export function hasTranscript(slug: string, locale: SupportedLocale = "en"): boolean {
+  return (
+    fs.existsSync(transcriptPath(slug, locale)) ||
+    fs.existsSync(transcriptPath(slug, "en"))
+  );
+}
+
+export function getTranscriptLocales(slug: string): SupportedLocale[] {
+  return SUPPORTED_LOCALES.filter((l) => fs.existsSync(transcriptPath(slug, l)));
+}
 
 export interface LectureMeta {
   slug: string;

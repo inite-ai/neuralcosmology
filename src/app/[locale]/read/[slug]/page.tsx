@@ -9,6 +9,8 @@ import {
 } from "@/lib/readables";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumb } from "@/lib/schema";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.flatMap((locale) =>
@@ -54,11 +56,28 @@ export default async function ReadPage({
         ? `/${locale}/science/${entry.relatedSlug}`
         : `/${locale}`;
 
+  const bcItems = [{ name: dict.nav.home, path: "" }];
+  if (entry.kind === "book-demo" && entry.relatedSlug) {
+    bcItems.push({ name: dict.nav.books, path: "/books" });
+    bcItems.push({
+      name: title.replace(/ — demo$/i, ""),
+      path: `/books/${entry.relatedSlug}`,
+    });
+  } else if (entry.kind === "preprint" && entry.relatedSlug) {
+    bcItems.push({ name: dict.nav.science, path: "/science" });
+    bcItems.push({
+      name: title,
+      path: `/science/${entry.relatedSlug}`,
+    });
+  }
+  bcItems.push({ name: dict.reader.download, path: `/read/${slug}` });
+
   return (
     <main
       className="flex flex-col bg-black text-white pt-14"
       style={{ height: "100vh" }}
     >
+      <JsonLd id="read-breadcrumb" data={breadcrumb(locale, bcItems)} />
       <div className="flex items-center justify-between gap-3 px-4 sm:px-6 h-12 border-b border-white/10 bg-[#0a1026]/80 backdrop-blur-md shrink-0">
         <div className="flex items-center gap-3 min-w-0">
           <Link

@@ -5,6 +5,8 @@ import PageShell from "@/components/layout/PageShell";
 import { listLectures, getThumbnail } from "@/lib/lectures";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd";
+import { itemList, breadcrumb } from "@/lib/schema";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -53,12 +55,30 @@ export default async function LecturesIndexPage({
   const dict = getDict(locale);
   const lectures = listLectures(locale);
 
+  const items = lectures.map((l) => ({ name: l.title, path: `/lectures/${l.slug}` }));
   return (
     <PageShell
       eyebrow={dict.lecturesPage.eyebrow}
       title={dict.lecturesPage.title}
       lead={dict.lecturesPage.lead}
     >
+      <JsonLd
+        id="lectures-collection"
+        data={itemList(
+          locale,
+          dict.lecturesPage.title,
+          dict.lecturesPage.lead,
+          "/lectures",
+          items,
+        )}
+      />
+      <JsonLd
+        id="lectures-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.lectures, path: "/lectures" },
+        ])}
+      />
       {lectures.length === 0 ? (
         <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-white/70 leading-relaxed">
           <p>{dict.lecturesPage.placeholderBody}</p>

@@ -4,6 +4,8 @@ import PageShell from "@/components/layout/PageShell";
 import { listEssays } from "@/lib/essays";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd";
+import { itemList, breadcrumb } from "@/lib/schema";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -25,6 +27,9 @@ export async function generateMetadata({
       languages: Object.fromEntries(
         SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}/essays`]),
       ),
+      types: {
+        "application/rss+xml": `https://neuralcosmology.com/${locale}/essays/rss.xml`,
+      },
     },
   };
 }
@@ -52,12 +57,24 @@ export default async function EssaysIndexPage({
   const dict = getDict(locale);
   const essays = listEssays(locale);
 
+  const items = essays.map((e) => ({ name: e.title, path: `/essays/${e.slug}` }));
   return (
     <PageShell
       eyebrow={dict.essays.eyebrow}
       title={dict.essays.title}
       lead={dict.essays.lead}
     >
+      <JsonLd
+        id="essays-collection"
+        data={itemList(locale, dict.essays.title, dict.essays.lead, "/essays", items)}
+      />
+      <JsonLd
+        id="essays-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.essays, path: "/essays" },
+        ])}
+      />
       {essays.length === 0 ? (
         <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-white/70 leading-relaxed">
           <p>{dict.essays.placeholderBody}</p>

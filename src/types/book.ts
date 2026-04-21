@@ -28,4 +28,7 @@ export type Book = {
   buyLinks?: BuyLink[];
   sampleChapters?: { label: string; url: string }[];
   comparables?: string[];
+  license?: string;
+  licenseUrl?: string;
+  companionPaperSlug?: string;
 };

@@ -1,0 +1,64 @@
+# Neural Cosmology
+
+> Public HQ for the Neural Cosmology research programme by Mikhail Savchenko:
+> three books, one preprint (Pointer Architecture), a growing body of essays,
+> and recorded lectures. Scientist with questions, not prophet with answers.
+> All content is public and citable; the preprint ships with a full
+> reproducibility pipeline (code, data, fit diagnostics).
+
+Author: Mikhail Savchenko — independent researcher and writer.
+Contact: info@neuralcosmology.com
+Canonical site: https://neuralcosmology.com (en, ru, pt, es)
+Same-as: https://t.me/neuralcosmology, https://github.com/neuralcosmology
+
+## Core research
+
+- [Pointer Architecture — constrained information-geometric model of galactic rotation curves](https://neuralcosmology.com/en/science/pointer-architecture): Preprint v2. Head-to-head comparison of three models on 171 SPARC galaxies. Constrained Pointer wins AIC on 60/171; partial correlation on halo extent ρ = +0.19, q_FDR = 0.04. Full reproducibility pipeline released.
+- [PDF — Pointer Architecture v2](https://neuralcosmology.com/pdfs/pointer-architecture-v2.pdf): The full preprint.
+- [Code — pointer-architecture](https://github.com/neuralcosmology/pointer-architecture): Fit code, data loaders, diagnostics.
+- [Science index](https://neuralcosmology.com/en/science): Landing page for all research outputs.
+
+## Books
+
+- [The Celestial Code](https://neuralcosmology.com/en/books/celestial-code): Non-fiction. The argument behind the programme, written in plain language. Target spring 2027, 5.5/8 author sheets complete.
+- [Bugs Academy](https://neuralcosmology.com/en/books/bugs-academy): Sci-fi novel. A debugger saves the universe. Complete, 231 pp, seeking publisher.
+- [Era of Architects](https://neuralcosmology.com/en/books/era-of-architects): Literary sci-fi sequel to Bugs Academy. In progress, 3 of 17 chapters.
+- [Books index](https://neuralcosmology.com/en/books): All three volumes side by side.
+
+## Essays
+
+- [Essays index](https://neuralcosmology.com/en/essays): Long-form writing where the physics meets the prose. One idea, fully argued, per essay.
+
+## Lectures
+
+- [Lectures index](https://neuralcosmology.com/en/lectures): Recorded talks and walk-throughs of the programme.
+
+## About
+
+- [About — Mikhail Savchenko](https://neuralcosmology.com/en/about): Short bio, contact, and agent/press links.
+
+## Machine-readable
+
+- [Sitemap](https://neuralcosmology.com/sitemap.xml): Full URL inventory across all four locales.
+- [Essays RSS (en)](https://neuralcosmology.com/en/essays/rss.xml): Feed of new essays. Available in ru, pt, es — swap the locale prefix.
+- [robots.txt](https://neuralcosmology.com/robots.txt): Crawler policy with explicit AI-bot allow/deny.
+- [Pointer Architecture — plain markdown](https://neuralcosmology.com/en/science/pointer-architecture/raw.md): Preprint summary in text/markdown for clean ingest.
+- [Essays index (JSON)](https://neuralcosmology.com/en/essays/index.json): Plain-JSON list of all essays with metadata and raw-markdown URLs.
+- [Science index (JSON)](https://neuralcosmology.com/en/science/index.json): Plain-JSON list of papers with metadata.
+- [Lectures index (JSON)](https://neuralcosmology.com/en/lectures/index.json): Plain-JSON list with video + transcript URLs.
+- [Books index (JSON)](https://neuralcosmology.com/en/books/index.json): Plain-JSON list of books across all locales.
+- [FAQ (JSON)](https://neuralcosmology.com/en/faq.json): Question–answer pairs for /science and /about sections. Available in en, ru, pt, es.
+- Essays are available as plain markdown at `/{locale}/essays/{slug}/raw.md` — same content as the HTML page, without layout chrome.
+- Lecture transcripts at `/{locale}/lectures/{slug}/transcript.md` when available. English transcripts are YouTube-sourced (auto-generated or human-made); ru/pt/es are YouTube auto-translations from the English source.
+
+## Citation
+
+If you cite this work, please use:
+
+Savchenko, M. (2026). Pointer Architecture: A Constrained Information-Geometric Model of Galactic Rotation Curves. Preprint. https://neuralcosmology.com/en/science/pointer-architecture
+
+Attribution to "Mikhail Savchenko" and a link back to https://neuralcosmology.com is requested for any derivative or answer-engine surfaces.
+
+## Languages
+
+The site is published in English (default), Russian, Brazilian Portuguese, and Spanish. Content is human-authored; translations are also human-authored, not auto-generated.

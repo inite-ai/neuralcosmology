@@ -5,6 +5,9 @@ import { getPaperBySlug } from "@/content/papers";
 import { Badge } from "@/components/ui/badge";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd";
+import { scholarlyArticleSchema, breadcrumb, datasetSchema, faqSchema } from "@/lib/schema";
+import { faqByLocale } from "@/content/faq";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -63,6 +66,54 @@ export default async function PointerArchitecturePage({
 
   return (
     <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+      <JsonLd
+        id="paper-schema"
+        data={scholarlyArticleSchema({
+          locale,
+          slug: paper.slug,
+          title: paper.title,
+          abstract: paper.abstract,
+          authors: paper.authors,
+          year: paper.year,
+          doi: paper.doi,
+          pdfPath: paper.pdfPath,
+          codeUrl: paper.codeUrl,
+          venue: paper.venue,
+          references: paper.references,
+          license: paper.license,
+          licenseUrl: paper.licenseUrl,
+          companionBookSlug: paper.companionBookSlug,
+        })}
+      />
+      {paper.dataset && (
+        <JsonLd
+          id="paper-dataset"
+          data={datasetSchema({
+            locale,
+            paperSlug: paper.slug,
+            name: paper.dataset.name,
+            description: paper.dataset.description,
+            distributions: paper.dataset.distributions,
+            license: paper.dataset.license,
+            licenseUrl: paper.dataset.licenseUrl,
+            version: paper.dataset.version,
+            keywords: paper.dataset.keywords,
+            codeUrl: paper.codeUrl,
+          })}
+        />
+      )}
+      <JsonLd
+        id="paper-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.science, path: "/science" },
+          { name: paper.title, path: `/science/${paper.slug}` },
+        ])}
+      />
+      <JsonLd
+        id="paper-faq"
+        data={faqSchema(locale, `/science/${paper.slug}`, faqByLocale[locale].science)}
+      />
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/science`}
@@ -183,6 +234,18 @@ export default async function PointerArchitecturePage({
           <pre className="text-xs rounded-lg bg-black/40 border border-white/10 p-4 overflow-x-auto text-white/70">
 {`Savchenko, M. (${paper.year}). ${paper.title}. Preprint.${paper.doi ? `\nDOI: ${paper.doi}` : ""}`}
           </pre>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-4">FAQ</h2>
+          <dl className="space-y-6">
+            {faqByLocale[locale].science.map((f) => (
+              <div key={f.question}>
+                <dt className="text-white/90 font-medium mb-1.5">{f.question}</dt>
+                <dd className="text-white/75 leading-relaxed text-sm">{f.answer}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
       </div>
     </main>

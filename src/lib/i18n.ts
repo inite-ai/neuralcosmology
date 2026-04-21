@@ -92,6 +92,7 @@ export type Dict = {
     watchCta: string;
     durationSuffix: string;
     backToIndex: string;
+    transcript: string;
   };
   about: {
     eyebrow: string;
@@ -277,6 +278,7 @@ const en: Dict = {
     watchCta: "Watch",
     durationSuffix: "min",
     backToIndex: "All lectures",
+    transcript: "Transcript",
   },
   about: {
     eyebrow: "About",
@@ -569,6 +571,7 @@ const ru: Dict = {
     watchCta: "Смотреть",
     durationSuffix: "мин",
     backToIndex: "Все лекции",
+    transcript: "Транскрипт",
   },
   about: {
     eyebrow: "Об авторе",
@@ -860,6 +863,7 @@ const pt: Dict = {
     watchCta: "Assistir",
     durationSuffix: "min",
     backToIndex: "Todas as palestras",
+    transcript: "Transcrição",
   },
   about: {
     eyebrow: "Sobre",
@@ -1150,6 +1154,7 @@ const es: Dict = {
     watchCta: "Ver",
     durationSuffix: "min",
     backToIndex: "Todas las charlas",
+    transcript: "Transcripción",
   },
   about: {
     eyebrow: "Sobre",

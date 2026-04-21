@@ -1,6 +1,115 @@
-# Allow all crawlers
+# Neural Cosmology — crawler policy
+# Last reviewed: 2026-04-21
+#
+# Human-readable summary:
+#   All content on neuralcosmology.com is public research, essays, and book
+#   material by Mikhail Savchenko. We want classical search engines AND AI
+#   assistants to be able to read, index, and cite it — with attribution.
+#
+# Structured data:
+#   sitemap:   https://neuralcosmology.com/sitemap.xml
+#   llms.txt:  https://neuralcosmology.com/llms.txt
+#   author:    https://neuralcosmology.com/en/about
+#
+# Machine-readable policy follows.
+
+# -----------------------------------------------------------------------------
+# Classic search engines
+# -----------------------------------------------------------------------------
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://neuralcosmology.com/sitemap.xml 
+# -----------------------------------------------------------------------------
+# Training / retrieval / answer crawlers — explicitly allowed
+# -----------------------------------------------------------------------------
+
+# OpenAI — training and on-demand retrieval
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google extended — opt-in for Gemini / Vertex / AI Overviews training signal
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Common Crawl — upstream corpus many models train on
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# DuckDuckGo assist
+User-agent: DuckAssistBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Yandex — AI-assisted search
+User-agent: YandexAdditional
+Allow: /
+
+# -----------------------------------------------------------------------------
+# Disallowed: low-signal scrapers with no cite-back model
+# -----------------------------------------------------------------------------
+
+# ByteDance — opaque, no attribution surface
+User-agent: Bytespider
+Disallow: /
+
+# Huawei / PetalBot — opaque, no attribution surface
+User-agent: PetalBot
+Disallow: /
+
+# Diffbot — commercial scraper, not a user-facing assistant
+User-agent: Diffbot
+Disallow: /
+
+# -----------------------------------------------------------------------------
+# Sitemap
+# -----------------------------------------------------------------------------
+Sitemap: https://neuralcosmology.com/sitemap.xml

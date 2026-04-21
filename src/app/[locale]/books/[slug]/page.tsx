@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getReadable } from "@/lib/readables";
+import JsonLd from "@/components/seo/JsonLd";
+import { bookSchema, breadcrumb } from "@/lib/schema";
 
 const statusStyle = {
   published: "border-emerald-400/40 text-emerald-200",
@@ -94,8 +96,42 @@ export default async function BookDetailPage({
     { loc: "pt" as const, value: book.titles.pt },
   ].filter((t) => t.value && t.loc !== locale) as { loc: string; value: string }[];
 
+  const availableTranslations = SUPPORTED_LOCALES.filter((l) => l !== locale && book.titles[l])
+    .map((l) => ({
+      locale: l,
+      title: book.titles[l] as string,
+      url: `https://neuralcosmology.com/${l}/books/${book.slug}`,
+    }));
+
   return (
     <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+      <JsonLd
+        id="book-schema"
+        data={bookSchema({
+          locale,
+          slug: book.slug,
+          title,
+          description: hook,
+          synopsis,
+          genre: genreLabel[book.genre],
+          status: book.status,
+          coverImage: book.coverImage,
+          availableTranslations,
+          publicationDate: book.publicationDate,
+          pages: book.pages,
+          license: book.license,
+          licenseUrl: book.licenseUrl,
+          companionPaperSlug: book.companionPaperSlug,
+        })}
+      />
+      <JsonLd
+        id="book-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.books, path: "/books" },
+          { name: title, path: `/books/${book.slug}` },
+        ])}
+      />
       <div className="max-w-5xl mx-auto">
         <Link
           href={`/${locale}/books`}

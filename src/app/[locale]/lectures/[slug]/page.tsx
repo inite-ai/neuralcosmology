@@ -4,9 +4,11 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
-import { getAllSlugs, getLectureBySlug, getEmbedUrl } from "@/lib/lectures";
+import { getAllSlugs, getLectureBySlug, getEmbedUrl, getThumbnail, hasTranscript } from "@/lib/lectures";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import JsonLd from "@/components/seo/JsonLd";
+import { videoObjectSchema, breadcrumb } from "@/lib/schema";
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -91,9 +93,37 @@ export default async function LecturePage({
     },
   };
   const embed = lecture.videoUrl ? getEmbedUrl(lecture.videoUrl) : null;
+  const thumb = getThumbnail(lecture.videoUrl, lecture.cover);
+  const transcriptExists = hasTranscript(slug, locale);
+  const transcriptUrl = transcriptExists
+    ? `https://neuralcosmology.com/${locale}/lectures/${slug}/transcript.md`
+    : undefined;
 
   return (
     <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+      <JsonLd
+        id="lecture-schema"
+        data={videoObjectSchema({
+          locale,
+          slug,
+          title: lecture.title,
+          description: lecture.description,
+          uploadDate: lecture.date,
+          durationMinutes: lecture.durationMinutes,
+          thumbnailUrl: thumb,
+          embedUrl: embed,
+          contentUrl: lecture.videoUrl,
+          transcriptUrl,
+        })}
+      />
+      <JsonLd
+        id="lecture-breadcrumb"
+        data={breadcrumb(locale, [
+          { name: dict.nav.home, path: "" },
+          { name: dict.nav.lectures, path: "/lectures" },
+          { name: lecture.title, path: `/lectures/${slug}` },
+        ])}
+      />
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/lectures`}
@@ -145,6 +175,17 @@ export default async function LecturePage({
           <article className="prose-essay text-white/85 leading-relaxed space-y-5">
             <MDXRemote source={lecture.content} options={mdxOptions} />
           </article>
+        )}
+
+        {transcriptExists && (
+          <div className="mt-8">
+            <a
+              href={`/${locale}/lectures/${slug}/transcript.md`}
+              className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+            >
+              {dict.lecturesPage.transcript} (markdown)
+            </a>
+          </div>
         )}
 
         {lecture.tags && lecture.tags.length > 0 && (

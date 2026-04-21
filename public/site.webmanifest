@@ -1,7 +1,8 @@
 {
-  "name": "Neuralcosmology",
-  "short_name": "Neuralcosmology",
-  "description": "A system of reality navigation through states, memory, and attention",
+  "id": "/en/",
+  "name": "Neural Cosmology — Mikhail Savchenko",
+  "short_name": "Neural Cosmology",
+  "description": "Public HQ for the Neural Cosmology programme: books, preprints, essays, lectures.",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
@@ -17,5 +18,7 @@
   "theme_color": "#232946",
   "background_color": "#181c2e",
   "display": "standalone",
-  "start_url": "/"
-} 
+  "start_url": "/en/",
+  "scope": "/",
+  "lang": "en"
+}

@@ -39,6 +39,7 @@ export const books: Book[] = [
       "I Am a Strange Loop — Douglas Hofstadter",
       "The Emperor's New Mind — Roger Penrose",
     ],
+    companionPaperSlug: "pointer-architecture",
   },
   {
     slug: "bugs-academy",

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import JsonLd from "@/components/seo/JsonLd";
+import { siteGraph } from "@/lib/schema";
 import {
   SUPPORTED_LOCALES,
   isSupportedLocale,
@@ -76,8 +78,10 @@ export default async function LocaleLayout({
   const { locale: raw } = await params;
   if (!isSupportedLocale(raw)) notFound();
   const locale: SupportedLocale = raw;
+  const dict = getDict(locale);
   return (
     <>
+      <JsonLd id="site-graph" data={siteGraph(locale, dict.meta.title, dict.meta.description)} />
       <Header locale={locale} />
       {children}
       <Footer locale={locale} />
