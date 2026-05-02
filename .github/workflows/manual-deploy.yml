@@ -70,7 +70,7 @@ jobs:
 
   deploy:
     needs: build-and-push
-    runs-on: self-hosted
+    runs-on: [self-hosted, sfo]
     environment: ${{ github.event.inputs.environment }}
     
     steps:
