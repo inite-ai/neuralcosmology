@@ -55,12 +55,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Who is Mikhail Savchenko?",
         answer:
-          "Independent researcher and writer. Runs the Neural Cosmology programme: three books in progress, one preprint released, an essay stream, and recorded lectures. Background: systems engineering. Current focus: galactic rotation curves, information-geometric models, and the architectural read of consciousness.",
+          "Independent researcher and writer. Runs the Neural Cosmology programme: three books in progress, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The first observable consequence of the programme has been tested on galactic rotation curves.",
       },
       {
         question: "Is this peer-reviewed?",
         answer:
-          "The preprint is a v2 draft with a full reproducibility pipeline; it has not yet been submitted to arXiv or a refereed venue. The honest post-hoc caveat about correlation tests is baked into the manuscript itself. Peer review is welcomed — the contact address for reviewers is info@neuralcosmology.com.",
+          "The preprint is a v2 draft with a full reproducibility pipeline; it has not yet been submitted to arXiv or a refereed journal. The honest post-hoc caveat about correlation tests is built into the manuscript itself. Peer review is welcome — the contact address for reviewers is info@neuralcosmology.com.",
       },
       {
         question: "How can I cite this work?",
@@ -111,12 +111,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Кто такой Михаил Савченко?",
         answer:
-          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: три книги в работе, один препринт выпущен, поток эссе и записанные лекции. Бэкграунд — системная инженерия. Текущий фокус: кривые вращения галактик, информационно-геометрические модели и архитектурное прочтение сознания.",
+          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: три книги в работе, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; первое наблюдательное следствие программы проверено на кривых вращения галактик.",
       },
       {
         question: "Это прошло peer review?",
         answer:
-          "Препринт — это v2-драфт с полным reproducibility-пайплайном; пока не отправлен на arXiv или в рецензируемый журнал. Честная post-hoc оговорка про корреляционные тесты встроена прямо в текст. Peer review приветствуется — адрес для рецензентов: info@neuralcosmology.com.",
+          "Препринт — это вторая редакция с полным процессом воспроизведения; на arXiv или в рецензируемый журнал ещё не отправлен. Честная оговорка о post-hoc-характере корреляционных тестов встроена прямо в текст. Peer review приветствуется — адрес для рецензентов: info@neuralcosmology.com.",
       },
       {
         question: "Как цитировать эту работу?",
@@ -167,12 +167,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Quem é Mikhail Savchenko?",
         answer:
-          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: três livros em andamento, um preprint publicado, um fluxo de ensaios e palestras gravadas. Formação em engenharia de sistemas. Foco atual: curvas de rotação galácticas, modelos informacional-geométricos e a leitura arquitetural da consciência.",
+          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: três livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. A primeira consequência observável do programa foi testada nas curvas de rotação galáctica.",
       },
       {
         question: "Isto é peer-reviewed?",
         answer:
-          "O preprint é um rascunho v2 com pipeline completo de reprodutibilidade; ainda não foi submetido ao arXiv ou a um periódico com revisão por pares. A ressalva honesta sobre testes post-hoc de correlação está embutida no próprio manuscrito. Peer review é bem-vindo — o endereço para revisores é info@neuralcosmology.com.",
+          "O preprint é uma segunda redação com pipeline completo de reprodutibilidade; ainda não foi submetido ao arXiv nem a um periódico com revisão por pares. A ressalva honesta sobre o caráter post-hoc dos testes de correlação está integrada ao próprio manuscrito. Peer review é bem-vindo — o endereço para revisores é info@neuralcosmology.com.",
       },
       {
         question: "Como citar este trabalho?",
@@ -223,17 +223,17 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Quién es Mikhail Savchenko?",
         answer:
-          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: tres libros en curso, un preprint publicado, un flujo de ensayos y charlas grabadas. Formación: ingeniería de sistemas. Foco actual: curvas de rotación galácticas, modelos informacional-geométricos y la lectura arquitectónica de la consciencia.",
+          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: tres libros en curso, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. La primera consecuencia observable del programa se ha puesto a prueba en las curvas de rotación galáctica.",
       },
       {
         question: "¿Está revisado por pares?",
         answer:
-          "El preprint es un borrador v2 con una tubería completa de reproducibilidad; aún no se ha enviado a arXiv ni a una revista con revisión por pares. La advertencia honesta sobre los tests post-hoc de correlación está integrada en el manuscrito. La revisión por pares es bienvenida — la dirección para revisores es info@neuralcosmology.com.",
+          "El preprint es una segunda redacción con tubería completa de reproducibilidad; todavía no se ha enviado a arXiv ni a una revista con revisión por pares. La advertencia honesta sobre el carácter post-hoc de las pruebas de correlación está integrada en el propio manuscrito. La revisión por pares es bienvenida — la dirección para revisores es info@neuralcosmology.com.",
       },
       {
-        question: "¿Cómo citar este trabajo?",
+        question: "¿Cómo cito este trabajo?",
         answer:
-          "Para el preprint: Savchenko, M. (2026). Pointer Architecture: A Constrained Information-Geometric Model of Galactic Rotation Curves. Preprint. https://neuralcosmology.com/en/science/pointer-architecture. Para los ensayos, usa la URL canónica en neuralcosmology.com y la fecha de publicación mostrada en la página. Toda la producción científica es CC-BY 4.0.",
+          "Para el preprint: Savchenko, M. (2026). Pointer Architecture: A Constrained Information-Geometric Model of Galactic Rotation Curves. Preprint. https://neuralcosmology.com/en/science/pointer-architecture. Para los ensayos, use la URL canónica en neuralcosmology.com y la fecha de publicación que aparece en la página. Toda la producción científica está bajo CC-BY 4.0.",
       },
     ],
   },
