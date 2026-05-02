@@ -77,6 +77,13 @@ function readRawBySlug(locale: SupportedLocale, slug: string): string | null {
   return fs.readFileSync(file, "utf8");
 }
 
+function normalizeDate(raw: unknown): string {
+  if (raw instanceof Date) return raw.toISOString().slice(0, 10);
+  if (typeof raw === "string") return raw.slice(0, 10);
+  if (raw == null) return "";
+  return String(raw).slice(0, 10);
+}
+
 function parse(
   slug: string,
   locale: SupportedLocale,
@@ -89,7 +96,7 @@ function parse(
     locale,
     title: String(data.title ?? slug),
     description: String(data.description ?? ""),
-    date: String(data.date ?? ""),
+    date: normalizeDate(data.date),
     videoUrl: data.videoUrl ? String(data.videoUrl) : undefined,
     cover: data.cover ? String(data.cover) : undefined,
     durationMinutes:

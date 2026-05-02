@@ -49,6 +49,13 @@ function estimateReadingTime(content: string): number {
   return Math.max(1, Math.round(words / 220));
 }
 
+function normalizeDate(raw: unknown): string {
+  if (raw instanceof Date) return raw.toISOString().slice(0, 10);
+  if (typeof raw === "string") return raw.slice(0, 10);
+  if (raw == null) return "";
+  return String(raw).slice(0, 10);
+}
+
 function parse(
   slug: string,
   locale: SupportedLocale,
@@ -61,7 +68,7 @@ function parse(
     locale,
     title: String(data.title ?? slug),
     description: String(data.description ?? ""),
-    date: String(data.date ?? ""),
+    date: normalizeDate(data.date),
     author: data.author ? String(data.author) : undefined,
     cover: data.cover ? String(data.cover) : undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
