@@ -1,0 +1,44 @@
+---
+title: "La atención como carga: lo que dirían los experimentos de observación masiva si se sostienen"
+description: "PEAR y el Global Consciousness Project produjeron anomalías pequeñas, controvertidas y obstinadamente no nulas. Lo que deberían significar si la arquitectura del puntero es correcta."
+date: 2026-05-02
+author: Mikhail Savchenko
+tags: [pointer-architecture, atención, medición, experimento]
+cover: "/essays/covers/attention-as-load.png"
+---
+
+Una observación pequeña de una literatura vieja e incómoda. Si se coloca un generador de números aleatorios físico junto a una persona que se concentra en un resultado concreto, la estadística de salida se desplaza hacia ese resultado en algo del orden de una parte en diez mil. Incompatible con el ruido *sólo* en el límite de muchísimos ensayos.
+
+El laboratorio de Robert Jahn, Princeton Engineering Anomalies Research, recogió este tipo de datos entre 1979 y 2007 — varios millones de sesiones. Desplazamiento medio por sesión en torno a 0.2σ, lo que compone aproximadamente cinco sigmas sobre todo el corpus. El laboratorio cerró con una declaración honesta: el efecto es robusto, el mecanismo se desconoce, la comunidad académica no aceptó la metodología. Nunca afirmaron un mecanismo.
+
+El paradigma continuó en el Global Consciousness Project (Roger Nelson, 1998–presente). Una red de unos setenta RNG de hardware repartidos por el mundo registra de forma continua. Cuando ocurre algo que atrae atención masiva — el 11 de septiembre, una ceremonia de apertura olímpica, la muerte de una figura pública — Nelson pregunta si el estadístico agregado se desvía de lo esperado. Se han publicado más de quinientos eventos, con un z compuesto en torno a 6.4σ.
+
+Esto resulta incómodo por dos razones. Primera: el efecto parece una violación de la independencia entre procesos físicos en una red geográficamente distribuida. Segunda: las críticas estándar — sesgo de cajón, selección post-hoc, definición flexible de "evento" — son *justas*. No cierran la cuestión, pero reducen la confianza en los meta-análisis de PEAR/GCP hasta un nivel en el que ningún físico conservador los citará.
+
+No pido aceptar los datos. Pido que se note la *forma* de la predicción que se sigue de ellos.
+
+## Lo que predice la arquitectura del puntero
+
+Si la realidad está organizada como un sistema computacional distribuido con nodos locales y estado compartido, entonces, como todo sistema así, tiene un ancho de banda de coordinación acotado. Cuando muchos observadores consultan la misma parte del estado a la vez — por ejemplo, viendo una misma transmisión — la carga de sincronización en esa región crece.
+
+¿Qué debería aparecer bajo carga? Lo mismo que aparece en cualquier arquitectura distribuida: aumento de latencia, pequeñas desincronizaciones, desviaciones locales de la estadística estacionaria. No "la conciencia colectiva mueve las partículas". Sólo un mantenimiento *ligeramente menos eficiente* del proceso estacionario local durante la carga máxima.
+
+El tamaño del efecto en este cuadro tiene que ser muy pequeño y muy persistente. Es exactamente lo que encuentran PEAR y GCP. También es exactamente lo que cuesta distinguir de los artefactos de selección sin un protocolo preregistrado.
+
+## Lo que haría falta para confirmarlo o matarlo con honestidad
+
+Un experimento. Preregistrado en OSF. Una lista pre-especificada de treinta eventos próximos de escala global con una métrica de atención incorporada (por ejemplo, audiencia prevista de la transmisión). Una ventana temporal pre-especificada: ±90 minutos alrededor del pico. Un estadístico pre-especificado: z compuesto sobre una red de al menos cincuenta RNG de hardware con geografía variada. Un umbral pre-especificado: el estadístico agregado supera 4σ con el tamaño del efecto reclamado por GCP para n=30.
+
+Si se cruza el umbral, hay un argumento serio de que la sincronización en sistemas físicos depende de algo que correlaciona con la atención masiva. Si no, veinte años de literatura PEAR/GCP reciben un limpio "probablemente sesgo de cajón".
+
+En cualquier caso, sabemos más de lo que sabemos ahora.
+
+## Por qué este ensayo
+
+Dentro del programa de la arquitectura del puntero, la mitad galáctica ya está en terreno comprobable: el preprint informa la primera prueba comparativa por AIC en SPARC, con código liberado. La mitad biológica necesita cooperación con laboratorios del nivel de Michael Levin — eso no ocurrirá en un cronograma en solitario.
+
+Entre las dos hay una prueba observacional que debería ser más barata: equipamiento que ya existe en una red distribuida, y un protocolo que cabe dentro de una sola subvención de tamaño medio.
+
+No afirmo que el efecto esté ahí. Afirmo que *debería estarlo* si la arquitectura del puntero es correcta, que tenemos la instrumentación para comprobarlo, y que la ausencia de una comprobación seria es un paso metodológicamente disponible que nadie ha dado todavía.
+
+El libro acompañante, *Código Celeste*, recorre el conjunto completo de predicciones. El preprint da los números sobre galaxias. Este ensayo trata sobre la más barata de las pruebas — la que nadie ha llevado todavía a cabo como es debido.

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
@@ -28,6 +29,9 @@ export async function generateMetadata({
   const essay = getEssayBySlug(slug, locale);
   if (!essay) return {};
   const base = "https://neuralcosmology.com";
+  const ogImage = essay.cover
+    ? `${base}${essay.cover}`
+    : `${base}/api/og?title=${encodeURIComponent(essay.title)}&subtitle=${encodeURIComponent(essay.description)}&kind=essay`;
   return {
     title: essay.title,
     description: essay.description,
@@ -46,9 +50,9 @@ export async function generateMetadata({
       authors: essay.author ? [essay.author] : undefined,
       images: [
         {
-          url: `${base}/api/og?title=${encodeURIComponent(essay.title)}&subtitle=${encodeURIComponent(essay.description)}&kind=essay`,
-          width: 1200,
-          height: 630,
+          url: ogImage,
+          width: 1536,
+          height: 1024,
           alt: essay.title,
         },
       ],
@@ -57,9 +61,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: essay.title,
       description: essay.description,
-      images: [
-        `${base}/api/og?title=${encodeURIComponent(essay.title)}&subtitle=${encodeURIComponent(essay.description)}&kind=essay`,
-      ],
+      images: [ogImage],
     },
   };
 }
@@ -113,6 +115,7 @@ export default async function EssayPage({
           readingTime: essay.readingTime,
           license: "CC-BY-4.0",
           licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+          cover: essay.cover,
         })}
       />
       <JsonLd
@@ -130,6 +133,20 @@ export default async function EssayPage({
         >
           ← {dict.nav.essays}
         </Link>
+
+        {essay.cover && (
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-slate-950 mb-10">
+            <Image
+              src={essay.cover}
+              alt=""
+              fill
+              sizes="(min-width: 768px) 768px, 100vw"
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/70 to-transparent pointer-events-none" />
+          </div>
+        )}
 
         <div className="flex items-center gap-3 text-xs text-white/50 mb-4">
           <span>{formatDate(essay.date, locale)}</span>

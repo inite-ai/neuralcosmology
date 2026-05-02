@@ -330,6 +330,7 @@ export function articleSchema(args: {
   readingTime?: number;
   license?: string;
   licenseUrl?: string;
+  cover?: string;
 }) {
   const url = localeUrl(args.locale, `/essays/${args.slug}`);
   return {
@@ -353,7 +354,9 @@ export function articleSchema(args: {
         : { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     isPartOf: { "@id": `${SITE_URL}/#website` },
-    image: `${SITE_URL}/api/og?title=${encodeURIComponent(args.title)}&subtitle=${encodeURIComponent(args.description)}&kind=essay`,
+    image: args.cover
+      ? `${SITE_URL}${args.cover}`
+      : `${SITE_URL}/api/og?title=${encodeURIComponent(args.title)}&subtitle=${encodeURIComponent(args.description)}&kind=essay`,
     workTranslation: args.availableLocales
       .filter((l) => l !== args.locale)
       .map((l) => ({
