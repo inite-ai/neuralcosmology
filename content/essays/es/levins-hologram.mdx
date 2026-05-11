@@ -1,0 +1,48 @@
+---
+title: "El holograma de Levin: lo que la bioelectricidad le dice a los sistemas distribuidos"
+description: "El laboratorio de Levin en Tufts muestra que la memoria del plan corporal vive fuera del ADN. Qué se sigue de ello si la arquitectura del puntero es correcta, y el experimento que lo zanjaría."
+date: 2026-06-01
+author: Mikhail Savchenko
+tags: [pointer-architecture, biología, Levin, regeneración, bioelectricidad]
+cover: "/essays/covers/levins-hologram.png"
+---
+
+Un montaje experimental sencillo e incómodo del laboratorio de Michael Levin en Tufts. La planaria — un gusano plano de agua dulce de aproximadamente un centímetro. Cortarle la cabeza. Siete días después la cabeza vuelve a crecer. Esto se hace desde el siglo XIX; nada sorprendente hasta aquí.
+
+La sorpresa aparece un paso más adelante. Si durante la regeneración se impone un patrón específico de potenciales de membrana sobre las células en la zona de la herida (el laboratorio de Levin lo hace con herramientas eléctricas y farmacológicas), la planaria regenera *dos* cabezas en lugar de una. El gradiente de voltaje cumple un papel instructivo; esa parte ya se espera.
+
+Lo que no se espera: corte por la mitad a ese gusano de dos cabezas *sin manipulación adicional* y ambas mitades vuelven a regenerar dos cabezas. Una generación más de cortes da el mismo resultado. La morfología "bicéfala" se reproduce a sí misma a través de múltiples ciclos de regeneración, sin cambio genético y sin estimulación externa continua. Durant, Morokuma, Fields, Williams, Adams y Levin fijaron el efecto en 2017 (*Biophysical Journal* 112, 10).
+
+Esto significa que una parte del "plan corporal" se almacena en algún lugar distinto del ADN — el ADN de ambos fragmentos es idéntico — y en algún lugar distinto de los ensamblajes proteicos locales, porque tras la regeneración completa todos los tejidos son nuevos. En algún lugar entre las células existe un patrón informacional persistente que reconstruye la misma morfología a partir de cualquier material que entre en su "campo".
+
+Levin lo llama memoria bioeléctrica. Técnicamente: patrones estacionarios de potencial de membrana en redes de comunicación intercelular. Fenomenológicamente: un holograma del plan corporal, distribuido por el tejido vivo.
+
+## Qué predice la arquitectura del puntero
+
+Si un organismo está organizado como un proceso distribuido con terminales locales (células) y una memoria de patrón compartida (el campo bioeléctrico), entonces una célula es un nodo que lee valores de una estructura direccionable, no una computadora autónoma.
+
+Se siguen dos predicciones comprobables.
+
+Primera, la memoria morfológica no debe reducirse a la señalización local célula-célula. Si la memoria es direccionable, raspar el tejido de una región no la destruye — las células recién formadas la releen. Esto ya se observa: la planaria bicéfala sobrevive a la amputación.
+
+Segunda, y nueva: si el patrón es direccionable, debería ser *transferible* entre organismos sin transferir material genético. Copie el paisaje eléctrico de una planaria bicéfala, impóngalo sobre una corriente, y la corriente debería empezar a construir morfología bicéfala en su próximo ciclo de regeneración. Técnicamente difícil, pero en principio posible: matrices de voltage-clamp y control optogenético de canales iónicos proporcionan el instrumental correcto. En 2012, Pai y colaboradores mostraron el primer paso en *Development* (139, 313): al imponer un patrón "ocular" sobre la cola de un embrión de Xenopus, obtuvieron un ojo ectópico que expresaba células retinianas y de cristalino completas.
+
+## Xenobots: construir un cuerpo sin plano
+
+Kriegman, Blackiston, Levin y Bongard publicaron en 2020 en *PNAS* (117, 4) los Xenobots — objetos biológicos autoorganizados ensamblados por un algoritmo evolutivo a partir de células de piel y músculo cardíaco de la rana *Xenopus*, con el genoma de las células sin tocar y sin ningún plan impuesto desde fuera. Cúmulos de unos pocos miles de células exhiben comportamiento coordinado: movimiento dirigido, agregación, autorreparación simple.
+
+La biología clásica no tiene explicación para esto. El genoma de estas células nunca ha "visto" el régimen Xenobot — las células provienen de un embrión donde su linaje de desarrollo termina en epitelio cutáneo. Aun así coordinan comportamiento a la escala de cientos de micras.
+
+Si la arquitectura del puntero es correcta, las células tienen la capacidad de consultar forma a una estructura distribuida incluso cuando el genoma no codifica tales formas. La configuración local — posición, vecinos, gradientes iónicos — se convierte en una dirección; la respuesta se lee desde allí.
+
+La predicción aquí es tajante: con entradas genómicas y tisulares idénticas, variar las condiciones bioeléctricas iniciales debe producir morfologías finales predeciblemente distintas. Verificable sobre el mismo protocolo Xenobot, con variación sistemática de potenciales de membrana y registro del resultado.
+
+## Qué cambia esto para el programa
+
+El programa de la arquitectura del puntero se apoya en tres predicciones, una por escala. La prueba galáctica ya está en el aire: el preprint SPARC-AIC compara MOND con la predicción de la arquitectura del puntero para las curvas de rotación de 171 galaxias, con el código liberado. La prueba observacional del ensayo sobre la atención espera un protocolo RNG preregistrado.
+
+La prueba biológica es la más cara y la más fuerte. La memoria bioeléctrica de la forma sigue siendo un fenómeno para el que la biología moderna no tiene una teoría mecanística consensuada. La arquitectura del puntero emite aquí una predicción limpia: la memoria es direccionable, por lo tanto transferible con independencia del sustrato. Si transfiere, la biología adquiere un vocabulario nuevo en el que la célula es un cliente, no un servidor, del plan morfológico. Si no transfiere, la arquitectura del puntero pierde una de sus tres patas.
+
+Este experimento no se hace en solitario. Requiere un laboratorio del nivel de Levin, o de alcance técnico equivalente. El ensayo existe para que la predicción quede en el registro público *antes* de que el experimento ocurra. Es preregistro al nivel de la teoría, y importa por la misma razón por la que importa el preregistro experimental ordinario: para que nadie, autor incluido, ajuste a posteriori un resultado encontrado con "esto es exactamente lo que predije".
+
+El libro acompañante, *Código Celeste*, recorre las tres patas del programa en un solo texto. Este ensayo trata sobre la más incómoda de ellas.
