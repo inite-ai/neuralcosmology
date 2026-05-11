@@ -29,11 +29,11 @@ Scully e Drühl propuseram o esquema em 1982. Uma checagem cruzada sobre pares d
 
 Kim et al. (2000, *Phys. Rev. Lett.* 84, 1) realizaram a versão básica. Um grupo coreano em 2023 (*Optica* 10:1, 12) reproduziu o esquema sobre pares coerentes de fótons, com atrasos claramente fora da janela temporal da medição principal. Em 2024 vieram implementações em qubits supercondutores programáveis: a mesma lógica de Scully–Drühl é construída diretamente em um circuito quântico, e a decisão de apagar a etiqueta é tomada algoritmicamente após a "medição" do qubit principal (Wang et al., *Phys. Rev. A* 109, 2024).
 
-O experimento não envia informação para trás no tempo. Vale frisar, porque os relatos populares erram em laço justamente aqui. Apagar a etiqueta *reagrupa* dados já registrados — muda a distribuição conjunta entre tela principal e canal "qual caminho", e a interferência aparece no subconjunto selecionado pela nova condição.
+O experimento não envia informação para trás no tempo, e os relatos populares erram em laço justamente aqui. Apagar a etiqueta *reagrupa* dados já registrados — muda a distribuição conjunta entre tela principal e canal "qual caminho", e a interferência aparece no subconjunto selecionado pela nova condição.
 
 Em termos de aprendizado de máquina: a medição é a perda. Apagar a etiqueta é um backward pass: não "vem do futuro", recalcula estatísticas conjuntas sobre um grafo de dependências diferente. O forward pass já aconteceu; suas saídas brutas não mudam. O que muda é *como as agrupamos*.
 
-Esse é o conteúdo de engenharia do colapso. Um sistema quântico não é "a realidade esperando por um observador". É uma estrutura estatística distribuída em que a escolha da medição determina quais distribuições conjuntas nos são acessíveis e quais não são.
+Esse é o conteúdo de engenharia do colapso. Um sistema quântico comporta-se como uma estrutura estatística distribuída em que a escolha da medição determina quais distribuições conjuntas nos são acessíveis e quais não, e não como "a realidade esperando por um observador".
 
 ## "It from bit" como planta, não como slogan
 
