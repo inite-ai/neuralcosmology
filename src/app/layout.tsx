@@ -56,6 +56,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/*
+          IndieWeb rel="me" chain: bidirectional identity claim across the
+          author's domains and social profiles. Combined with reciprocal
+          rel="me" on the linked properties (notably mikefluff.com), this is a
+          publicly verifiable "this is also me" signal for IndieAuth,
+          Mastodon-style verification, and LLM crawlers that build
+          author-identity graphs.
+        */}
+        <link rel="me" href="https://www.mikefluff.com/" />
+        <link rel="me" href="https://t.me/neuralcosmology" />
+        <link rel="me" href="https://t.me/mikefluff" />
+        <link rel="me" href="https://github.com/neuralcosmology" />
+        <link rel="me" href="https://github.com/mikefluff" />
+        <link rel="me" href="https://twitter.com/mikefluff" />
+        <link rel="me" href="https://www.linkedin.com/in/mikefluff/" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-[#0a1026]`}
       >

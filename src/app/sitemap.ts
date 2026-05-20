@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const all: Entry[] = [...staticPaths, ...bookPaths, ...paperPaths, ...essayPaths];
 
-  return all.flatMap(({ path, priority }) =>
+  const localised: MetadataRoute.Sitemap = all.flatMap(({ path, priority }) =>
     SUPPORTED_LOCALES.map((locale) => ({
       url: `${BASE}/${locale}${path}`,
       lastModified: now,
@@ -50,4 +50,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })),
   );
+
+  // AI-visibility surfaces (locale-agnostic, no hreflang alternates).
+  // Discoverable identity files that LLM crawlers index alongside content.
+  const aiSurfaces: { path: string; priority: number }[] = [
+    { path: "/llms.txt", priority: 0.8 },
+    { path: "/ai.json", priority: 0.8 },
+    { path: "/identity.json", priority: 0.8 },
+    { path: "/brand.txt", priority: 0.6 },
+    { path: "/faq-ai.txt", priority: 0.6 },
+    { path: "/.well-known/person.jsonld", priority: 0.7 },
+  ];
+  const aiEntries: MetadataRoute.Sitemap = aiSurfaces.map((s) => ({
+    url: `${BASE}${s.path}`,
+    lastModified: now,
+    priority: s.priority,
+  }));
+
+  return [...localised, ...aiEntries];
 }

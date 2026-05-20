@@ -11,6 +11,11 @@
 #   llms.txt:  https://neuralcosmology.com/llms.txt
 #   author:    https://neuralcosmology.com/en/about
 #
+# Related properties (same author, different brand):
+#   business:  https://www.mikefluff.com — Mike Fluff / Business Doctor.
+#              Symmetric llms.txt and reciprocal rel="me" markers tie the two
+#              domains into a single Knowledge-Graph entity for LLM crawlers.
+#
 # Machine-readable policy follows.
 
 # -----------------------------------------------------------------------------

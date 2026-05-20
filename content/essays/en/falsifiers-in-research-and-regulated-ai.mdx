@@ -1,0 +1,31 @@
+---
+title: "From SPARC to PII — falsifiers in research and in regulated AI"
+description: "What a constrained galactic-rotation fit and a vendor security review have in common, and why the same epistemic discipline that built Pointer Architecture's reproducibility pipeline keeps showing up in the regulatory-immunity work I do at mikefluff.com."
+date: 2026-05-19
+author: Mikhail Savchenko
+tags: [methodology, epistemics, privacy, regulation, practice]
+---
+
+I write a preprint on the side. I also clean up AI systems for a living. People sometimes ask whether those two things touch each other — whether sitting with 171 galactic rotation curves and configuring an audit trail for a multi-tenant LLM stack belong to the same person, or only to the same calendar. They belong to the same person. There is a discipline that runs through both, and once you see it the two activities stop looking like two careers and start looking like two surfaces of one habit.
+
+The habit is: name in advance the condition under which you would have to throw your work away.
+
+In the [Pointer Architecture preprint](/en/science/pointer-architecture) this looks like a list. Three independent falsifiers, written into the manuscript itself, not buried in an appendix. If the partial correlation flips sign on an age-controlled resample from LITTLE THINGS or THINGS, the result is noise. If the AIC-preferred galaxies correlate with survey artefacts rather than galactic age, the result is observational rather than physical. If the reproducibility pipeline yields materially different fits under reasonable re-parameterisation, the result is over-fit. Each is a tripwire. Trip it, and the work I just spent two years on becomes a curio.
+
+In a vendor security review for a startup that ships an LLM-backed product, the same habit looks different but is built from the same material. Before I write a single line of architecture I ask the team to name the condition that would prove the privacy claim wrong. What event, observable, logged, recoverable from the audit trail, would prove that the system is not doing what we say it is doing on the marketing page. If the team cannot name that event — cannot say "if `X` ever happens, our PII handling story is a lie" — the system does not have a privacy claim. It has a privacy mood.
+
+Most AI products in regulated industries have a privacy mood.
+
+They have an architecture diagram that points data flow at the right boxes. They have a vendor questionnaire that says yes in the right places. They have a copy of someone else's DPIA. What they do not have is a sentence that ends with "if `X` ever happens, we are non-compliant." And so when `X` happens — and `X` always eventually happens, because `X` is exactly the kind of event the org has implicitly committed to never noticing — the team finds out at the same time as the regulator. Or the user. Or the journalist.
+
+The reproducibility pipeline that ships with the Pointer Architecture preprint is, structurally, an audit trail. Four Python scripts, per-galaxy fit outputs, correlation tables, PCA, residual diagnostics. Anyone who wants to refute the paper can re-run my work bit-for-bit, change the parameters I claim are not load-bearing, and watch the conclusions either survive or crack. Compliance work is the same shape: events go into an immutable log, the system commits to what counts as a violation before any violation occurs, and the auditor's job is to re-run the claim. A privacy architecture without that loop is not auditable; it is decorative.
+
+Working on both sides clarifies what each side is for. The preprint side teaches that *the cheapest moment to specify a falsifier is before you have the result you want*. By the time you have the result, the result starts to lobby for itself. You begin to feel that an exception is appropriate, that this dataset is unusually noisy, that the rejection criterion was always provisional. So you write the criterion down first, in plain language, and you publish it. Public commitment changes the cost function. The same trick is what makes regulatory immunity hold under pressure. By the time PII is leaving the building, no one in the room wants to define the leak as a leak. So you define it months earlier, with the regulator's language, in a document the engineers cannot edit silently.
+
+It also runs the other way. The applied work teaches what science forgets when it stays in its journal habitat. A falsifier that nobody can act on is decorative. A reproducibility pipeline whose data lineage is opaque does not survive a hostile audit. Audit trails are useful exactly to the extent that they survive being read in bad faith by someone whose job is to find a gap. That is also the standard for a published model: it survives being read in bad faith by a reviewer whose job is to find a gap. The two crafts are calibrating to the same thing — adversarial replication — and pretending they are not.
+
+So when I publish a preprint about galactic rotation and then leave the desk to write up a PII flow for a fintech LLM stack, the trade has not changed — only the surface on which the same epistemic instrument is being run. The preprint is the version where the adversary is the field. The audit trail is the version where the adversary is the regulator and the version of yourself who will lie to you, in eighteen months, when convenient. Both versions need the falsifier written down in ink before the work starts.
+
+It is also why I keep both shops open. The research arm exists at [neuralcosmology.com](https://neuralcosmology.com), which is where you are now. The practice arm — where the same discipline lands inside other people's AI systems — exists at [mikefluff.com](https://www.mikefluff.com). For consulting on AI privacy and compliance architecture, [Regulatory Immunity](https://www.mikefluff.com/#services) is the relevant doorway; for the books and the preprint, [the science index](/en/science) and [the essays](/en/essays) here.
+
+The thing the two share is older than either site. It is the rule that the most important sentence in any technical document is the one that says "and here is how this would be wrong."

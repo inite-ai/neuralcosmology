@@ -1,10 +1,39 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
+import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import JsonLd from "@/components/seo/JsonLd";
 import { profilePageSchema, breadcrumb, faqSchema } from "@/lib/schema";
 import { faqByLocale } from "@/content/faq";
+
+// Sister-site bridge copy. Kept inline so we do not need to widen the typed
+// Dict for a single recurring block on /about.
+const SISTER_ABOUT: Record<SupportedLocale, { eyebrow: string; body: string; cta: string; rel: string }> = {
+  en: {
+    eyebrow: "Practitioner mode",
+    body: "Outside the research desk I run a business and consulting practice as Mike Fluff — AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery, and three courses. Same person, different brand. For consulting work, courses, or applied AI engineering, that is the right door.",
+    cta: "Open mikefluff.com",
+    rel: "business and consulting practice (same author)",
+  },
+  ru: {
+    eyebrow: "Практикующая ипостась",
+    body: "За пределами исследовательского стола я веду бизнес-практику как Майк Флафф — ИИ-автоматизация, регуляторный иммунитет (PII, GDPR/LGPD/DPA, secure-by-design AI), технологическая хирургия, три курса. Тот же человек, другой бренд. Для консалтинга, курсов и applied AI-инженерии — это та дверь.",
+    cta: "Открыть mikefluff.com",
+    rel: "бизнес и консалтинг (тот же автор)",
+  },
+  pt: {
+    eyebrow: "Modo praticante",
+    body: "Fora da mesa de pesquisa, conduzo uma prática de negócios e consultoria como Mike Fluff — automação com IA, imunidade regulatória (PII, GDPR/LGPD/DPA, fluxos IA seguros por design), cirurgia tecnológica e três cursos. Mesma pessoa, marca diferente. Para consultoria, cursos ou engenharia de IA aplicada, é a porta certa.",
+    cta: "Abrir mikefluff.com",
+    rel: "negócios e consultoria (mesmo autor)",
+  },
+  es: {
+    eyebrow: "Modo practicante",
+    body: "Fuera de la mesa de investigación, llevo una práctica de negocios y consultoría como Mike Fluff — automatización con IA, inmunidad regulatoria (PII, GDPR/LGPD/DPA, flujos IA seguros por diseño), cirugía tecnológica y tres cursos. Misma persona, marca distinta. Para consultoría, cursos o ingeniería de IA aplicada, esa es la puerta.",
+    cta: "Abrir mikefluff.com",
+    rel: "negocios y consultoría (mismo autor)",
+  },
+};
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -105,11 +134,44 @@ export default async function AboutPage({
           </dl>
         </section>
 
+        {/*
+          Business-identity bridge. Explicit pointer to the author's other
+          public-facing brand. Indexed body content with a descriptive anchor
+          is the strongest cross-domain signal Google and LLM citation graphs
+          recognise — well above JSON-LD sameAs.
+        */}
+        <section className="mt-10 rounded-2xl border border-emerald-300/20 bg-emerald-400/5 p-6">
+          <h2 className="text-xs uppercase tracking-widest text-emerald-200/80 mb-3">
+            {SISTER_ABOUT[locale].eyebrow}
+          </h2>
+          <p className="text-white/85 leading-relaxed">
+            {SISTER_ABOUT[locale].body}
+          </p>
+          <div className="mt-4">
+            <a
+              href="https://www.mikefluff.com"
+              rel="me noopener"
+              className="inline-flex items-center rounded-md border border-emerald-300/30 hover:border-emerald-300/60 text-white/90 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+            >
+              {SISTER_ABOUT[locale].cta} →
+            </a>
+          </div>
+        </section>
+
         <section className="mt-10">
           <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
             {dict.about.elsewhereHeader}
           </h2>
           <ul className="text-sm text-white/75 space-y-1.5">
+            <li>
+              <a
+                href="https://www.mikefluff.com"
+                rel="me noopener"
+                className="hover:text-white transition-colors"
+              >
+                mikefluff.com — {SISTER_ABOUT[locale].rel}
+              </a>
+            </li>
             <li>
               <a
                 href="https://t.me/neuralcosmology"
@@ -124,6 +186,15 @@ export default async function AboutPage({
                 className="hover:text-white transition-colors"
               >
                 GitHub — neuralcosmology
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mikefluff/"
+                rel="me noopener"
+                className="hover:text-white transition-colors"
+              >
+                LinkedIn — Mikhail Savchenko
               </a>
             </li>
             <li>

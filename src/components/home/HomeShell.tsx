@@ -8,6 +8,7 @@ import PracticesSection from "@/components/sections/PracticesSection";
 import LecturesSection from "@/components/sections/LecturesSection";
 import CallToClaritySection from "@/components/sections/CallToClaritySection";
 import DirectionsSection from "@/components/sections/DirectionsSection";
+import PractitionerArmSection from "@/components/sections/PractitionerArmSection";
 import type { SupportedLocale } from "@/lib/get-locale";
 
 const sections = [
@@ -147,6 +148,10 @@ export default function HomeShell({
 
       <section id="lectures" className="w-full flex items-center justify-center">
         <LecturesSection locale={locale} recent={recentLectures} />
+      </section>
+
+      <section id="practitioner-arm" className="w-full flex items-center justify-center">
+        <PractitionerArmSection locale={locale} />
       </section>
 
       <section id="call-to-clarity" className="w-full flex items-center justify-center">

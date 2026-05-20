@@ -9,6 +9,7 @@ import { getAllSlugs, getEssayBySlug } from "@/lib/essays";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { makeBookLink, linkifyBookMentions } from "@/components/essays/BookLink";
+import AuthorBio from "@/components/essays/AuthorBio";
 import JsonLd from "@/components/seo/JsonLd";
 import { articleSchema, breadcrumb } from "@/lib/schema";
 
@@ -189,6 +190,8 @@ export default async function EssayPage({
             ))}
           </div>
         )}
+
+        <AuthorBio locale={locale} />
       </div>
     </main>
   );

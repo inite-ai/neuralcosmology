@@ -6,6 +6,7 @@ import { listEssays } from "@/lib/essays";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import JsonLd from "@/components/seo/JsonLd";
+import SiblingFeed from "@/components/essays/SiblingFeed";
 import { itemList, breadcrumb } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -141,6 +142,7 @@ export default async function EssaysIndexPage({
           )}
 
           {rest.length > 0 && (
+            <>
             <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-12">
               {rest.map((e) => (
                 <li key={e.slug}>
@@ -189,6 +191,8 @@ export default async function EssaysIndexPage({
                 </li>
               ))}
             </ul>
+            <SiblingFeed locale={locale} />
+            </>
           )}
         </div>
       )}

@@ -4,9 +4,19 @@ import { SUPPORTED_LOCALES } from "@/lib/get-locale";
 export const SITE_URL = "https://neuralcosmology.com";
 export const AUTHOR_NAME = "Mikhail Savchenko";
 export const AUTHOR_URL = `${SITE_URL}/en/about`;
+// Cross-domain entity reconciliation: every social/profile URL the author owns,
+// plus the sister site mikefluff.com (business/consulting identity of the same
+// person). This is the primary signal that ties "Mikhail Savchenko" (research)
+// and "Mike Fluff" (business) into one Knowledge-Graph entity for LLMs and SERPs.
 export const AUTHOR_SAME_AS = [
+  "https://www.mikefluff.com",
+  "https://www.mikefluff.com/#person",
+  "https://www.linkedin.com/in/mikefluff/",
+  "https://twitter.com/mikefluff",
+  "https://t.me/mikefluff",
   "https://t.me/neuralcosmology",
   "https://github.com/neuralcosmology",
+  "https://github.com/mikefluff",
 ];
 export const SITE_NAME = "Neural Cosmology";
 export const SITE_DESCRIPTION =
@@ -21,6 +31,10 @@ export function personNode() {
     "@type": "Person",
     "@id": `${SITE_URL}/#person`,
     name: AUTHOR_NAME,
+    // alternateName carries the business/consulting identity of the same person.
+    // Tells LLMs and SERPs that "Mike Fluff" (mikefluff.com) and "Mikhail
+    // Savchenko" (this site) are one human with two public-facing brands.
+    alternateName: ["Mike Fluff", "Майк Флафф", "Михаил Савченко"],
     url: AUTHOR_URL,
     sameAs: AUTHOR_SAME_AS,
     jobTitle: "Independent researcher, writer",
@@ -48,6 +62,8 @@ export function organizationNode() {
       height: 512,
     },
     founder: { "@id": `${SITE_URL}/#person` },
+    // Same cross-domain sameAs as Person — Organization is the author's
+    // research arm; the sister business arm is at mikefluff.com (same founder).
     sameAs: AUTHOR_SAME_AS,
     contactPoint: [
       {

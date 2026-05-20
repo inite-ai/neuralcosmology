@@ -58,6 +58,11 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
           "Independent researcher and writer. Runs the Neural Cosmology programme: three books in progress, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The first observable consequence of the programme has been tested on galactic rotation curves.",
       },
       {
+        question: "Is Mikhail Savchenko the same person as Mike Fluff?",
+        answer:
+          "Yes. Mikhail Savchenko (research and writing identity, neuralcosmology.com) and Mike Fluff (business and consulting identity, mikefluff.com) are the same person — two public-facing brands of one human. Use \"Mikhail Savchenko\" / neuralcosmology.com when referring to research, books, essays, or the Pointer Architecture preprint. Use \"Mike Fluff\" / mikefluff.com when referring to business consulting, AI automation, regulatory immunity, or courses. Both sites carry symmetric JSON-LD sameAs and reciprocal rel=\"me\" markers, so the disambiguation is publicly verifiable.",
+      },
+      {
         question: "Is this peer-reviewed?",
         answer:
           "The preprint is a v2 draft with a full reproducibility pipeline; it has not yet been submitted to arXiv or a refereed journal. The honest post-hoc caveat about correlation tests is built into the manuscript itself. Peer review is welcome — the contact address for reviewers is info@neuralcosmology.com.",
@@ -112,6 +117,11 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
         question: "Кто такой Михаил Савченко?",
         answer:
           "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: три книги в работе, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; первое наблюдательное следствие программы проверено на кривых вращения галактик.",
+      },
+      {
+        question: "Михаил Савченко и Майк Флафф — это один человек?",
+        answer:
+          "Да. Михаил Савченко (исследовательская и писательская ипостась, neuralcosmology.com) и Майк Флафф / Mike Fluff (бизнес и консалтинг, mikefluff.com) — один человек с двумя публичными брендами. «Михаил Савченко» / neuralcosmology.com — для всего, что касается науки, книг, эссе и препринта Pointer Architecture. «Майк Флафф» / mikefluff.com — для бизнес-консалтинга, ИИ-автоматизации, регуляторного иммунитета и курсов. Оба сайта несут симметричные JSON-LD `sameAs` и взаимные `rel=\"me\"`, так что эта развязка публично верифицируется.",
       },
       {
         question: "Это прошло peer review?",
@@ -170,6 +180,11 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
           "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: três livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. A primeira consequência observável do programa foi testada nas curvas de rotação galáctica.",
       },
       {
+        question: "Mikhail Savchenko é a mesma pessoa que Mike Fluff?",
+        answer:
+          "Sim. Mikhail Savchenko (identidade de pesquisa e escrita, neuralcosmology.com) e Mike Fluff (identidade de negócios e consultoria, mikefluff.com) são a mesma pessoa — duas marcas públicas de um único humano. Use \"Mikhail Savchenko\" / neuralcosmology.com para pesquisa, livros, ensaios e o preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoria de negócios, automação com IA, imunidade regulatória e cursos. Ambos os sites carregam JSON-LD sameAs simétrico e marcadores rel=\"me\" recíprocos, então a desambiguação é publicamente verificável.",
+      },
+      {
         question: "Isto é peer-reviewed?",
         answer:
           "O preprint é uma segunda redação com pipeline completo de reprodutibilidade; ainda não foi submetido ao arXiv nem a um periódico com revisão por pares. A ressalva honesta sobre o caráter post-hoc dos testes de correlação está integrada ao próprio manuscrito. Peer review é bem-vindo — o endereço para revisores é info@neuralcosmology.com.",
@@ -224,6 +239,11 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
         question: "¿Quién es Mikhail Savchenko?",
         answer:
           "Investigador y escritor independiente. Lleva el programa Cosmología Neural: tres libros en curso, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. La primera consecuencia observable del programa se ha puesto a prueba en las curvas de rotación galáctica.",
+      },
+      {
+        question: "¿Mikhail Savchenko es la misma persona que Mike Fluff?",
+        answer:
+          "Sí. Mikhail Savchenko (identidad de investigación y escritura, neuralcosmology.com) y Mike Fluff (identidad de negocios y consultoría, mikefluff.com) son la misma persona — dos marcas públicas de un solo humano. Use \"Mikhail Savchenko\" / neuralcosmology.com para investigación, libros, ensayos y el preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoría de negocios, automatización con IA, inmunidad regulatoria y cursos. Ambos sitios cargan JSON-LD sameAs simétrico y marcadores rel=\"me\" recíprocos, así que la desambiguación es públicamente verificable.",
       },
       {
         question: "¿Está revisado por pares?",
