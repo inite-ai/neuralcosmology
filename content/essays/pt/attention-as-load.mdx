@@ -1,44 +1,44 @@
 ---
-title: "A atenção como carga: o que diriam os experimentos de observação em massa se se sustentam"
-description: "PEAR e o Global Consciousness Project produziram anomalias pequenas, contestadas e teimosamente não nulas. O que deveriam significar se a arquitetura de ponteiros estiver certa."
+title: "A atenção como carga: o que significariam os experimentos de observação em massa, caso se sustentem"
+description: "PEAR e o Global Consciousness Project produziram anomalias pequenas, contestadas e teimosamente não nulas. O que significariam se a Pointer Architecture estiver certa."
 date: 2026-05-02
 author: Mikhail Savchenko
 tags: [pointer-architecture, atenção, medição, experimento]
 cover: "/essays/covers/attention-as-load.png"
 ---
 
-Uma observação pequena vinda de uma literatura velha e desconfortável. Coloque um gerador físico de números aleatórios ao lado de uma pessoa que se concentra em um resultado específico, e a estatística de saída desliza em direção a esse resultado em algo da ordem de uma parte em dez mil. Incompatível com ruído *somente* no limite de muitíssimas tentativas.
+Uma pequena observação, vinda de uma literatura antiga e incômoda. Coloque um gerador físico de números aleatórios ao lado de uma pessoa concentrada num resultado específico, e a estatística de saída se desloca para esse resultado em algo da ordem de uma parte em dez mil. É um efeito que só se separa do ruído *com um número enorme* de tentativas.
 
-O laboratório de Robert Jahn, Princeton Engineering Anomalies Research, recolheu esse tipo de dado de 1979 a 2007 — vários milhões de sessões. Deslocamento médio por sessão em torno de 0,2σ, o que se compõe em cerca de cinco sigmas em todo o corpus. O laboratório fechou com uma declaração honesta: o efeito é robusto, o mecanismo é desconhecido, a comunidade acadêmica não aceitou a metodologia. Eles nunca afirmaram um mecanismo.
+O laboratório de Robert Jahn, Princeton Engineering Anomalies Research, recolheu esse tipo de dado de 1979 a 2007: vários milhões de sessões. O deslocamento médio por sessão ficou em torno de 0,2σ, o que soma cerca de cinco sigmas no conjunto. O laboratório fechou com uma declaração franca: o efeito é robusto, o mecanismo é desconhecido, a comunidade acadêmica não aceitou a metodologia. Nunca propuseram um mecanismo.
 
-O paradigma continuou no Global Consciousness Project (Roger Nelson, 1998–presente). Uma rede de cerca de setenta RNGs de hardware espalhados pelo mundo registra continuamente. Quando algo acontece que atrai atenção em massa — 11 de setembro, uma cerimônia de abertura olímpica, a morte de uma figura pública — Nelson pergunta se a estatística agregada se desvia do esperado. Mais de quinhentos eventos foram publicados, com um z composto em torno de 6,4σ.
+O paradigma continuou no Global Consciousness Project (Roger Nelson, 1998–presente). Uma rede de cerca de setenta geradores físicos de números aleatórios, espalhados pelo mundo, registra dados sem parar. Quando acontece algo que prende a atenção de multidões — o 11 de Setembro, uma abertura de Olimpíada, a morte de uma celebridade —, Nelson verifica se a estatística agregada se desvia do esperado. Mais de quinhentos eventos foram publicados, com um z composto em torno de 6,4σ.
 
-Isso é desconfortável por duas razões. Primeira: o efeito parece uma violação da independência entre processos físicos numa rede geograficamente distribuída. Segunda: as críticas padrão — viés de gaveta, seleção a posteriori, definição flexível de "evento" — são *justas*. Não fecham a questão, mas reduzem a confiança nas meta-análises de PEAR/GCP a um ponto em que nenhum físico conservador as citará.
+Isso é desconfortável por duas razões. Primeira: o efeito parece uma violação da independência entre processos físicos numa rede geograficamente distribuída. Segunda: as críticas padrão — viés de gaveta, seleção a posteriori, definição flexível de "evento" — são *justas*. Não encerram a questão, mas reduzem a confiança nas metanálises do PEAR e do GCP a tal ponto que nenhum físico prudente as citaria.
 
-Não estou pedindo que aceite os dados. Peço que repare na *forma* da previsão que se segue deles.
+Não é preciso aceitar os dados de olhos fechados. Basta reparar na *forma* da previsão que decorre deles.
 
-## O que a arquitetura de ponteiros prevê
+## O que a Pointer Architecture prevê
 
-Se a realidade está organizada como um sistema computacional distribuído, com nós locais e estado compartilhado, então, como todo sistema desse tipo, ela tem uma largura de banda de coordenação limitada. Quando muitos observadores consultam a mesma parte do estado ao mesmo tempo — por exemplo, assistindo a uma única transmissão — a carga de sincronização nessa região cresce.
+Se a realidade está organizada como um sistema computacional distribuído, com nós locais e estado compartilhado, então, como todo sistema desse tipo, tem capacidade de coordenação limitada. Quando muitos observadores consultam a mesma parte do estado ao mesmo tempo — por exemplo, assistindo a uma única transmissão — a carga de sincronização nessa região cresce.
 
-O que deveria aparecer sob carga? O mesmo que aparece em qualquer arquitetura distribuída: aumento de latência, pequenas dessincronizações, desvios locais da estatística estacionária. Não "a consciência coletiva move as partículas". Apenas uma manutenção *ligeiramente menos eficiente* do processo estacionário local durante o pico de carga.
+Sob carga deveria aparecer o mesmo que em qualquer arquitetura distribuída: aumento de latência, pequenas dessincronizações, desvios locais da estatística estacionária. A consciência coletiva não move partículas nesse quadro. No pico de carga, o sistema apenas mantém o processo estacionário local *um pouco pior*.
 
-O tamanho do efeito nesse quadro tem de ser muito pequeno e muito persistente. É exatamente o que PEAR e GCP encontram. Também é exatamente o que custa distinguir de artefatos de seleção sem um protocolo pré-registrado.
+O tamanho do efeito nesse quadro tem de ser muito pequeno e muito persistente. É o que PEAR e GCP encontram, e é também o mais difícil de separar de artefatos de seleção sem um protocolo pré-registrado.
 
-## O que seria preciso para confirmar isso ou matá-lo com honestidade
+## O que seria preciso para confirmar a hipótese ou enterrá-la com honestidade
 
-Um experimento. Pré-registrado no OSF. Uma lista pré-especificada de trinta eventos futuros de escala global com uma métrica de atenção embutida (por exemplo, audiência prevista da transmissão). Uma janela temporal pré-especificada: ±90 minutos em torno do pico. Uma estatística pré-especificada: z composto sobre uma rede de pelo menos cinquenta RNGs de hardware de geografia variada. Um limiar pré-especificado: a estatística agregada excede 4σ com o tamanho de efeito reivindicado pelo GCP para n=30.
+Basta um experimento, pré-registrado no OSF. Ele fixa de antemão uma lista de trinta eventos futuros de escala global, cada um com uma medida de atenção, como a audiência prevista da transmissão. Fixa a janela: noventa minutos antes e depois do pico. Fixa a estatística: o z composto de pelo menos cinquenta geradores espalhados pelo mundo. E fixa o limiar: com o tamanho de efeito que o GCP alega, a estatística agregada dos trinta eventos precisa passar de 4σ.
 
-Se o limiar for atingido, há um argumento sério de que a sincronização em sistemas físicos depende de algo que se correlaciona com a atenção em massa. Se não for, vinte anos de literatura PEAR/GCP recebem um limpo "provavelmente viés de gaveta".
+Se o limiar for atingido, há um argumento sério de que a sincronização em sistemas físicos depende de algo que se correlaciona com a atenção em massa. Se não for, vinte anos de publicações do PEAR e do GCP recebem um veredito sóbrio: provavelmente, viés de gaveta.
 
-De qualquer modo, sabemos mais do que sabemos hoje.
+Nos dois casos, saberemos mais do que hoje.
 
 ## Por que este ensaio
 
-Dentro do programa da arquitetura de ponteiros, a metade formal já está em terreno testável: o preprint implementa o substrato como código funcional, com falsificadores declarados de antemão. A metade biológica precisa de cooperação com laboratórios do nível de Michael Levin — isso não vai acontecer num cronograma solo.
+Dentro do programa da Pointer Architecture, a metade formal já está em terreno testável: o preprint implementa o substrato como código funcional, com falsificadores declarados de antemão. A metade biológica exige parceria com laboratórios do nível do de Michael Levin, algo que uma pessoa sozinha não move.
 
 Entre os dois há um teste observacional que deveria ser mais barato: equipamentos que já existem numa rede distribuída e um protocolo que cabe dentro de uma única subvenção de porte médio.
 
-Não afirmo que o efeito esteja lá. Afirmo que *deveria estar*, se a arquitetura de ponteiros estiver certa, que temos a instrumentação para verificar, e que a ausência de uma verificação séria é um passo metodologicamente disponível que ninguém deu ainda.
+Se o efeito existe, não sei. Sei que ele *deveria existir* se a Pointer Architecture estiver certa, que temos os instrumentos para verificar e que ninguém fez essa verificação até agora. É uma lacuna fácil de fechar.
 
-O livro acompanhante, *Código Celestial*, percorre o conjunto completo de previsões. O preprint dá o modelo formal. Este ensaio trata do mais barato dos testes — aquele que ninguém ainda conduziu como deveria.
+O livro acompanhante, *O Código Celestial*, percorre o conjunto completo de previsões. O preprint dá o modelo formal. Este ensaio trata do mais barato dos testes, aquele que ninguém ainda fez como se deve.
