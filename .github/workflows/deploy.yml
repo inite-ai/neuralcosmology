@@ -91,6 +91,12 @@ jobs:
               - DATABASE_URL=${{ secrets.DATABASE_URL }}
               - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
               - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mikefluff@mikefluff.com' }}
+              - NOTIFY_SECRET=${{ secrets.NOTIFY_SECRET }}
+              - MAILGUN_SMTP_HOST=${{ vars.MAILGUN_SMTP_HOST }}
+              - MAILGUN_SMTP_PORT=${{ vars.MAILGUN_SMTP_PORT }}
+              - MAILGUN_SMTP_USERNAME=${{ secrets.MAILGUN_SMTP_USERNAME }}
+              - MAILGUN_SMTP_PASSWORD=${{ secrets.MAILGUN_SMTP_PASSWORD }}
+              - MAILGUN_FROM_EMAIL=${{ vars.MAILGUN_FROM_EMAIL || 'info@neuralcosmology.com' }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:

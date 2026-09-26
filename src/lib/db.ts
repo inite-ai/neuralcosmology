@@ -54,6 +54,15 @@ CREATE TABLE IF NOT EXISTS ai_usage (
 CREATE TABLE IF NOT EXISTS watermarks (
   mark text PRIMARY KEY, user_id text NOT NULL, email text, created_at timestamptz NOT NULL DEFAULT now()
 );
+CREATE TABLE IF NOT EXISTS reader_prefs (
+  user_id text PRIMARY KEY, email text, display_name text, currency text,
+  notify boolean NOT NULL DEFAULT false, notify_books text[] NOT NULL DEFAULT '{}', lang text,
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE TABLE IF NOT EXISTS notify_log (
+  book text NOT NULL, lang text NOT NULL, chapter text NOT NULL, sent_at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (book, lang, chapter)
+);
 CREATE TABLE IF NOT EXISTS ai_cache (
   key text PRIMARY KEY, value text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
 );

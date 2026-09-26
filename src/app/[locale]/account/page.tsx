@@ -11,11 +11,27 @@ import { isAuthor } from "@/lib/reader/context";
 import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { pickLocalized } from "@/lib/i18n";
 import { LIBRARY_ITEM } from "@/content/pricing";
-import { Sheet, Label, Headline } from "@/components/system";
+import { Sheet, Label } from "@/components/system";
 import ModerationActions from "@/components/account/ModerationActions";
+import AccountSettings from "@/components/account/AccountSettings";
+import DataControls from "@/components/account/DataControls";
+import { getPrefs, purchases } from "@/lib/account";
+import { ACTIVE_CURRENCIES } from "@/content/pricing";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { robots: { index: false, follow: false } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale: SupportedLocale = isSupportedLocale(raw) ? raw : "en";
+  return { title: T[locale].title, robots: { index: false, follow: false } };
+}
+
+// Новые разделы кабинета: покупки, настройки, данные.
+const A: Record<SupportedLocale, Record<string, string>> = {
+  ru: { buys: "Мои покупки", noBuys: "Покупок пока нет: первые главы каждой книги открыты бесплатно.", libraryAll: "Вся библиотека", settings: "Настройки", name: "Имя в обсуждениях", namePh: "как вас подписывать", currency: "Валюта", notify: "Письмо, когда выходят новые главы", notifyAll: "ничего не отмечено — все книги", save: "Сохранить", saved: "Сохранено", data: "Мои данные", export: "Скачать мои данные (JSON)", del: "Удалить мои данные", confirm: "Да, удалить всё", cancel: "Отмена", done: "Удалено. Выходим…", note: "Удаляются прогресс, пометки, настройки и лимиты ИИ; ваши комментарии обезличиваются. Покупки сохраняются: доступ к книгам останется при следующем входе." },
+  en: { buys: "My purchases", noBuys: "No purchases yet: the first chapters of every book are free.", libraryAll: "Whole library", settings: "Settings", name: "Name in discussions", namePh: "how to sign you", currency: "Currency", notify: "Email me when new chapters come out", notifyAll: "none ticked — all books", save: "Save", saved: "Saved", data: "My data", export: "Download my data (JSON)", del: "Delete my data", confirm: "Yes, delete everything", cancel: "Cancel", done: "Deleted. Signing out…", note: "Removes progress, notes, settings and AI limits; your comments are anonymised. Purchases are kept: book access returns on your next sign-in." },
+  pt: { buys: "Minhas compras", noBuys: "Nenhuma compra ainda: os primeiros capítulos de cada livro são grátis.", libraryAll: "Biblioteca inteira", settings: "Configurações", name: "Nome nas discussões", namePh: "como assinar você", currency: "Moeda", notify: "Avise-me por e-mail quando saírem novos capítulos", notifyAll: "nada marcado — todos os livros", save: "Salvar", saved: "Salvo", data: "Meus dados", export: "Baixar meus dados (JSON)", del: "Excluir meus dados", confirm: "Sim, excluir tudo", cancel: "Cancelar", done: "Excluído. Saindo…", note: "Remove progresso, notas, configurações e limites de IA; seus comentários ficam anônimos. As compras são mantidas: o acesso volta no próximo login." },
+  es: { buys: "Mis compras", noBuys: "Aún no hay compras: los primeros capítulos de cada libro son gratis.", libraryAll: "Biblioteca completa", settings: "Ajustes", name: "Nombre en las conversaciones", namePh: "cómo firmarte", currency: "Moneda", notify: "Avísame por correo cuando salgan capítulos nuevos", notifyAll: "nada marcado — todos los libros", save: "Guardar", saved: "Guardado", data: "Mis datos", export: "Descargar mis datos (JSON)", del: "Eliminar mis datos", confirm: "Sí, eliminar todo", cancel: "Cancelar", done: "Eliminado. Cerrando sesión…", note: "Se eliminan el progreso, las notas, los ajustes y los límites de IA; tus comentarios quedan anónimos. Las compras se conservan: el acceso vuelve al iniciar sesión." },
+};
 
 const T: Record<SupportedLocale, Record<string, string>> = {
   ru: { hide: "Скрыть", show: "Показать", del: "Удалить", title: "Кабинет", library: "Моя библиотека", progress: "прочитано", cont: "Продолжить", start: "Начать", owned: "куплено", free: "доступ по входу", buy: "Купить", buyAll: "Вся библиотека", notes: "Пометки", noNotes: "Пока пусто: выделите текст в читалке.", talk: "Мои обсуждения", noTalk: "Вы ещё ничего не писали.", ai: "ИИ сегодня", aiLeft: "осталось вопросов", mod: "Модерация", noMod: "Новых сообщений нет.", out: "Выйти", hidden: "скрыто", rejected: "отклонено ИИ" },
@@ -33,6 +49,8 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
     redirect(`/api/auth/login?returnTo=${encodeURIComponent(`/${locale}/account`)}`);
   }
   const t = T[locale];
+  const a = A[locale];
+  const [prefs, bought] = await Promise.all([dbConfigured() ? getPrefs(session.sub) : null, purchases(session.sub)]);
   const author = isAuthor(session);
   const sql = dbConfigured() ? await db() : null;
 
@@ -65,7 +83,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
         <header className="flex flex-col gap-6 pt-14 pb-10 md:flex-row md:items-end md:justify-between md:px-10 md:pt-20">
           <div>
             <Label className="mb-4">{session.email}</Label>
-            <Headline as="h1" size="display">{session.name || t.title}</Headline>
+            <h1 className="display-fluid text-balance">{prefs?.displayName || session.name || t.title}</h1>
           </div>
           <div className="flex items-center gap-6">
             <div className="text-right">
@@ -116,6 +134,24 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
           )}
         </section>
 
+        {paywallEnabled() && (
+          <section className="rule-t py-12 md:px-10">
+            <Label className="mb-6">{a.buys} · {bought.length}</Label>
+            {bought.length === 0 ? (
+              <p className="text-fg-secondary">{a.noBuys}</p>
+            ) : (
+              <ul className="rule-t">
+                {bought.map((p) => (
+                  <li key={p.item + p.at} className="flex items-baseline justify-between gap-4 rule-b py-4">
+                    <span className="font-display text-xl">{p.item === "library" ? a.libraryAll : pickLocalized(getBookBySlug(p.item)?.titles ?? { en: p.item }, locale)}</span>
+                    <span className="label text-muted">{p.at ? new Date(p.at).toLocaleDateString(locale) : ""} · {t.owned}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
+
         <section className="rule-t py-12 md:px-10">
           <Label className="mb-6">{t.notes} · {notes.length}</Label>
           {notes.length === 0 ? (
@@ -157,6 +193,26 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
             </ul>
           )}
         </section>
+
+        {prefs && (
+          <section className="rule-t py-12 md:px-10">
+            <Label className="mb-6">{a.settings}</Label>
+            <AccountSettings
+              initial={prefs}
+              books={books.map((b) => ({ slug: b.slug, title: pickLocalized(b.titles, locale) }))}
+              currencies={ACTIVE_CURRENCIES}
+              locale={locale}
+              labels={{ name: a.name, namePh: a.namePh, currency: a.currency, notify: a.notify, notifyAll: a.notifyAll, save: a.save, saved: a.saved }}
+            />
+          </section>
+        )}
+
+        {prefs && (
+          <section className="rule-t py-12 md:px-10">
+            <Label className="mb-6">{a.data}</Label>
+            <DataControls locale={locale} labels={{ export: a.export, del: a.del, confirm: a.confirm, cancel: a.cancel, done: a.done, note: a.note }} />
+          </section>
+        )}
 
         {author && (
           <section className="rule-t py-12 md:px-10">
