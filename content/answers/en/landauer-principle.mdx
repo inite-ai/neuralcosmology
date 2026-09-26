@@ -1,0 +1,63 @@
+---
+title: "Landauer's principle: why erasing information costs energy"
+question: "What is Landauer's principle?"
+answer: "Landauer's principle, stated by Rolf Landauer in 1961, says that erasing one bit of information must release at least kT ln 2 of heat, about 2.9 × 10⁻²¹ joules at room temperature. It was measured directly in 2012. It connects information to thermodynamics and is the strongest argument that information is a physical quantity."
+description: "The Landauer limit explained with numbers, how it resolves Maxwell's demon, the 2012 experimental confirmation, what it means for computing and why it supports information-based physics."
+date: 2026-09-26
+updated: 2026-09-26
+order: 7
+image: "/og/media/landauer.jpg"
+keywords: [Landauer principle, Landauer limit, kT ln 2, information is physical, Maxwell's demon, thermodynamics of computation, reversible computing]
+essays: [echo-of-consciousness, entropic-gravity, a-loss-function-for-the-universe]
+books: [celestial-code]
+paper: true
+faq:
+  - q: "What is the Landauer limit in numbers?"
+    a: "kT ln 2 per erased bit: about 2.9 × 10⁻²¹ J, or 0.018 eV, at 300 K. Erasing a billion bits at that limit would release about 3 × 10⁻¹² J."
+  - q: "Has Landauer's principle been confirmed experimentally?"
+    a: "Yes. Bérut and colleagues measured the heat released when erasing a one-bit memory made of a colloidal bead in a double-well laser trap and found it approaches kT ln 2 (Nature, 2012). Later experiments confirmed it in nanomagnets and quantum systems."
+  - q: "How far are computers from the Landauer limit?"
+    a: "Modern transistors dissipate far more energy per logical operation than kT ln 2, by several orders of magnitude, so the limit is not what constrains chips today. It becomes relevant for ultra-low-power and reversible computing."
+  - q: "What does Landauer's principle have to do with Maxwell's demon?"
+    a: "The demon seemed to lower entropy for free by sorting molecules. Charles Bennett showed in 1982 that the demon must eventually erase its memory of the molecules, and by Landauer's principle that erasure produces at least as much entropy as the sorting removed."
+---
+
+## The statement
+
+In 1961 Rolf Landauer, a physicist at IBM, asked what the minimum energy cost of computation is (*IBM Journal of Research and Development* 5, 183). His answer: most operations can in principle be done without any cost, but **erasing** information cannot.
+
+Erasing one bit, resetting a memory cell to 0 regardless of whether it held 0 or 1, must release at least
+
+**E = kT ln 2**
+
+of heat into the environment, where k is Boltzmann's constant and T is the temperature. At room temperature (300 K) that is about **2.9 × 10⁻²¹ J**, roughly 0.018 electron-volts.
+
+## Why erasure has a cost
+
+A memory that can hold 0 or 1 has two possible states. After erasure it has one. The number of possible states of the memory has halved, so its entropy has dropped by k ln 2. The second law of thermodynamics does not allow total entropy to fall, so at least that much entropy has to go somewhere else, as heat into the surroundings.
+
+The key step is that the bit is a physical state of a physical system. Landauer summed it up in a phrase that became a slogan: **information is physical.**
+
+## Maxwell's demon, resolved
+
+In 1867 James Clerk Maxwell imagined a tiny being that opens a door between two gas chambers to let fast molecules one way and slow ones the other. It would create a temperature difference, apparently for free, against the second law.
+
+Charles Bennett showed in 1982 where the cost hides. To sort molecules the demon has to record what it saw. To keep working it must eventually erase those records, and by Landauer's principle the erasure dissipates at least as much entropy as the sorting removed. The second law survives because memory is physical.
+
+## The measurement
+
+For fifty years the principle was a theoretical result. In 2012 Antoine Bérut and colleagues tested it directly (*Nature* 483, 187). They trapped a single glass bead in a double-well potential made by lasers, where "left" and "right" served as 0 and 1, and performed erasure cycles while measuring the heat. As the cycles were run more slowly, the released heat approached kT ln 2 and did not go below it. Experiments with nanomagnetic bits (Hong et al., *Science Advances*, 2016) and quantum systems followed.
+
+## What it means for computers
+
+Today's chips dissipate many orders of magnitude more energy per operation than the Landauer limit. The limit matters for the future: it sets a floor for irreversible computing and motivates reversible computing, where logic is designed so that no information is erased and the floor can, in principle, be avoided.
+
+## Why it matters for physics built on information
+
+Landauer's principle is the best-established link between information and energy. It is one of the foundations for ideas that treat information as a primary physical quantity: Wheeler's "it from bit", Bekenstein's entropy of black holes, Verlinde's emergent gravity.
+
+The research programme on this site builds on the same link. Its galaxy model introduces an **information mass**, an informational term that contributes to dynamics the way ordinary mass does, and tests it on 171 SPARC galaxies. If information has a thermodynamic cost, it is reasonable to ask whether it also has a gravitational footprint. The preprint gives the first answer on real data: partial, with public code and preregistered falsifiers.
+
+## Bottom line
+
+Erasing a bit costs at least kT ln 2 of heat. The principle is experimentally confirmed, it resolved Maxwell's demon and it makes "information is physical" a measurable statement.

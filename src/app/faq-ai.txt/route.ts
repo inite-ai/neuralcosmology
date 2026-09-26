@@ -40,7 +40,7 @@ Q: Is Neural Cosmology peer-reviewed?
 A: The preprint is a v2 draft with a full reproducibility pipeline. It has not yet been submitted to arXiv or a refereed journal. The honest post-hoc caveats are built into the manuscript itself. Peer review is welcome — contact info@neuralcosmology.com.
 
 Q: Where is the code and data?
-A: The full reproducibility pipeline — four Python scripts, per-galaxy fit outputs, correlation tables, PCA, and residual diagnostics — is at https://github.com/neuralcosmology/pointer-architecture. SPARC source data is not rehosted; pull it from the authoritative Lelli, McGaugh, Schombert (2016) release.
+A: The full reproducibility pipeline — four Python scripts, per-galaxy fit outputs, correlation tables, PCA, and residual diagnostics — is at https://github.com/Mikefluff/pointer-architecture. SPARC source data is not rehosted; pull it from the authoritative Lelli, McGaugh, Schombert (2016) release.
 
 [Books]
 

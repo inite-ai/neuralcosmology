@@ -453,3 +453,44 @@ export function profilePageSchema(locale: SupportedLocale, title: string, bio: s
     isPartOf: { "@id": `${SITE_URL}/#website` },
   } as const;
 }
+
+// Страница-ответ (/answers/<slug>): Article с прямым ответом + about/mentions для графа знаний.
+export function answerArticleSchema(args: {
+  locale: SupportedLocale;
+  slug: string;
+  title: string;
+  question: string;
+  answer: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  keywords: string[];
+  image: string;
+  availableLocales: string[];
+}) {
+  const url = localeUrl(args.locale, `/answers/${args.slug}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}#article`,
+    url,
+    mainEntityOfPage: url,
+    headline: args.title,
+    alternativeHeadline: args.question,
+    description: args.description,
+    abstract: args.answer,
+    inLanguage: args.locale,
+    datePublished: args.datePublished,
+    dateModified: args.dateModified,
+    keywords: args.keywords.join(", "),
+    image: args.image,
+    author: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["#short-answer"] },
+    workTranslation: args.availableLocales
+      .filter((l) => l !== args.locale)
+      .map((l) => ({ "@type": "Article", inLanguage: l, url: `${SITE_URL}/${l}/answers/${args.slug}` })),
+    license: "https://creativecommons.org/licenses/by/4.0/",
+  } as const;
+}

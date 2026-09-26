@@ -1,0 +1,71 @@
+---
+title: "Is the universe a neural network? What the evidence says"
+question: "Is the universe a neural network?"
+answer: "Nobody has shown that it is. Two lines of work make the idea serious: Vitaly Vanchurin's 2020 model, in which the learning dynamics of a network reproduce equations resembling quantum mechanics and gravity, and the 2020 Vazza–Feletti measurement showing that the brain's neuronal network and the cosmic web share statistical structure across 27 orders of magnitude. Both are hypotheses under test."
+description: "Vanchurin's world-as-a-neural-network model, the Vazza–Feletti comparison of the brain and the cosmic web, what the similarity does and does not prove, and how the idea can be tested on real galaxy data."
+date: 2026-09-26
+updated: 2026-09-26
+order: 1
+image: "/og/media/hero-web.jpg"
+keywords: [is the universe a neural network, universe as a neural network, cosmic web and brain, cosmic web, Vanchurin, Vazza Feletti, neural cosmology]
+essays: [entropic-gravity, mirrors-of-infinity, a-loss-function-for-the-universe, i-am-the-universe]
+books: [celestial-code]
+paper: true
+faq:
+  - q: "Who proposed that the universe is a neural network?"
+    a: "The best-known formal proposal is Vitaly Vanchurin's paper “The World as a Neural Network” (Entropy, 2020). He treats the universe as a network of trainable and hidden variables and shows that, in different limits, its learning dynamics look like quantum mechanics and like general relativity."
+  - q: "Does the cosmic web really look like the brain?"
+    a: "Statistically, in some respects, yes. Franco Vazza and Alberto Feletti (Frontiers in Physics, 2020) compared brain tissue with simulations of the cosmic web and found similar fluctuation spectra and similar numbers of connections per node, despite a difference in scale of about 27 orders of magnitude. Similar statistics do not mean the two systems do the same thing."
+  - q: "Is this the same as the simulation hypothesis?"
+    a: "No. The simulation hypothesis needs a simulator outside the universe. A network universe needs no programmer: the claim is that physical law itself behaves like a learning process."
+  - q: "How could the idea be tested?"
+    a: "By deriving predictions that the standard picture does not make and checking them against data. The Pointer Architecture preprint does this for galaxy rotation curves on 171 SPARC galaxies, with code and falsifiers published in advance."
+---
+
+## Two different claims hide inside one question
+
+"The universe is a neural network" can mean two things, and they need different evidence.
+
+The **weak claim** is structural: the large-scale universe and the brain are organised in similar ways, so the same mathematics describes both. This one can be checked with a microscope, a telescope and statistics.
+
+The **strong claim** is dynamical: the universe *learns*. Its laws are the stable result of something like training, the way the weights of a network settle after gradient descent. This one needs a formal model and predictions that differ from standard physics.
+
+Both claims have serious work behind them. Neither is established.
+
+## The structural evidence: brain versus cosmic web
+
+In 2020 the astrophysicist Franco Vazza and the neurosurgeon Alberto Feletti published a quantitative comparison of two images: thin sections of human brain tissue and cosmological simulations of the cosmic web, the network of galaxy filaments and voids that fills the observable universe (*Frontiers in Physics*, 2020).
+
+They measured the same quantities on both: how density fluctuations are distributed across scales, how many connections each node has, how clustered the network is. Several of those numbers came out close, even though the two systems differ in size by about 27 orders of magnitude. Both networks also hold most of their mass in a passive component: water in the brain, dark energy in the universe.
+
+What this shows is that two very different physical processes arrive at comparable network statistics. Whether the cosmic web does anything like thinking is a separate question these data leave untouched. Bronchi and tree crowns share fractal statistics too, because both solve the same problem: maximise surface while keeping volume low. The interesting question the measurement leaves open is **which optimisation problem the cosmic web is solving**, if it lands on the same statistics as an evolved brain.
+
+## The dynamical proposal: Vanchurin's model
+
+Vitaly Vanchurin, a physicist at the University of Minnesota Duluth, made the strong claim formal in "The World as a Neural Network" (*Entropy* 22, 1210, 2020). He describes the universe as a network with two kinds of variables, trainable ones (like weights) and hidden ones (like neuron states), and studies how the system behaves while it learns.
+
+In one limit, the learning dynamics can be written in a form resembling the Schrödinger equation. In another, the dynamics resemble Einstein's equations of general relativity. Vanchurin's argument is that quantum mechanics and gravity may be two regimes of one learning process. He later developed the idea with Yuri Wolf, Mikhail Katsnelson and Eugene Koonin into a theory of evolution as multilevel learning (*PNAS*, 2022).
+
+The model is a proposal. It has not produced a measurement that only it can explain.
+
+## A third thread: gravity from information
+
+In 2010 Erik Verlinde argued that gravity may be emergent, a consequence of how information is distributed on surfaces, and in 2017 he extended the argument to galaxy dynamics. If gravity comes from information, and a network is a machine for moving information around, then the two ideas meet: the pattern of gravity would be the connection pattern of the network. That is the step this programme takes.
+
+## What Neural Cosmology adds: a test on galaxies
+
+The programme on this site asks what a network universe would predict **for a specific, measurable system**, and picks galaxy rotation curves because the data are public and the standard model has a known weak spot there.
+
+The preprint *Pointer Architecture* compares three models on the 171-galaxy SPARC sample: an information-geometric model without constraints, the same model with a physical prior on halo extent, and a standard dark-matter halo (NFW). The constrained model is preferred by AIC on 60 of 171 galaxies, and halo extent correlates with the inferred information mass (ρ = +0.19, q_FDR = 0.04). Four of six residual-structure features correlate with galactic age.
+
+That is a modest result. The model loses on most galaxies, and the correlations are small. It is also a real one: code, data and falsifiers are published, so anyone can rerun it and break it.
+
+## What would count against the idea
+
+- Independent samples (LITTLE THINGS, THINGS) failing to reproduce the direction of the halo-extent correlation.
+- The age dependence of residuals turning out to track survey artefacts.
+- Brain–cosmic web similarity disappearing under better statistics or appearing equally in random networks with the same density.
+
+## Bottom line
+
+The universe being a neural network is a live scientific hypothesis with formal models, one striking structural comparison and a first quantitative test. It is not a finding. The honest way to hold it is the way you hold any model: by the predictions it makes and by how it fails. The book <BookLink slug="celestial-code">The Celestial Code</BookLink> walks through the full argument in plain language.

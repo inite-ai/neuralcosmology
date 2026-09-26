@@ -5,6 +5,7 @@
  * Usage:
  *   npx tsx scripts/indexnow-ping.ts /en/essays/new-essay /ru/essays/new-essay
  *   npx tsx scripts/indexnow-ping.ts --all-essays      # pings all essay URLs
+ *   npx tsx scripts/indexnow-ping.ts --sitemap         # pings every URL in the live sitemap
  */
 
 const KEY = "37027cd598c84365b750d23778b62330";
@@ -45,6 +46,11 @@ async function ping(urls: string[]): Promise<void> {
 
 async function main() {
   const args = process.argv.slice(2);
+  if (args.includes("--sitemap")) {
+    const xml = await fetch(`${BASE}/sitemap.xml`).then((r) => r.text());
+    await ping([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
+    return;
+  }
   if (args.includes("--all-essays")) {
     const { getAllSlugs } = await import("../src/lib/essays");
     const slugs = getAllSlugs();

@@ -37,11 +37,23 @@ reciprocal `rel="me"` markers — disambiguation is intentional, not pseudonymit
   automation, content pipelines). Neural Cosmology essays are the long-form
   theoretical counterpart.
 
+## Questions (direct answers with evidence)
+
+- [Is the universe a neural network?](https://neuralcosmology.com/en/answers/is-the-universe-a-neural-network): Nobody has shown that it is. Two lines of work make the idea serious: Vitaly Vanchurin's 2020 model, in which the learning dynamics of a network reproduce equations resembling quantum mechanics and gravity, and the 2020 Vazza–Feletti measurement showing that the brain's neuronal network and the cosmic web share statistical structure across 27 orders of magnitude. Both are hypotheses under test.
+- [Can galaxy rotation curves be explained without dark matter?](https://neuralcosmology.com/en/answers/galaxy-rotation-curves-without-dark-matter): Partly. MOND fits many individual rotation curves with a single acceleration scale, and emergent-gravity models reproduce the radial acceleration relation, but neither explains galaxy clusters and the cosmic microwave background as well as dark matter does. An information-geometric model tested on 171 SPARC galaxies beats a standard dark-matter halo on 60 of them, a partial result with public code.
+- [What did Michael Levin discover about bioelectricity?](https://neuralcosmology.com/en/answers/michael-levin-bioelectricity): Michael Levin's lab at Tufts showed that patterns of voltage across cell membranes carry instructions for body shape. Changing those patterns made flatworms grow two heads, and the two-headed form persisted through later regeneration with unchanged DNA. Frog embryos grew eyes on their tails. Part of anatomical memory is stored in bioelectric networks, outside the genome.
+- [What is the hard problem of consciousness, and which theories try to solve it?](https://neuralcosmology.com/en/answers/hard-problem-of-consciousness): The hard problem, named by David Chalmers in 1995, asks why physical processes in the brain are accompanied by subjective experience at all. The leading theories (global workspace, integrated information, higher-order and predictive processing) mostly explain which processes are conscious. None explains why they feel like anything. The useful test is what each theory predicts that the others do not.
+- [What is panpsychism, and is the universe conscious?](https://neuralcosmology.com/en/answers/panpsychism): Panpsychism is the view that experience is a fundamental feature of matter, present in a tiny form in basic physical entities, with brains combining it into rich minds. Philosophers such as Chalmers, Goff and Strawson take it seriously because it sidesteps the hard problem. Its main difficulties are the combination problem and the lack of testable predictions. No evidence shows that the universe as a whole is conscious.
+- [Are we living in a simulation?](https://neuralcosmology.com/en/answers/is-the-universe-a-simulation): There is no evidence that we are. Nick Bostrom's 2003 argument shows only that one of three possibilities must hold, and most versions of the simulation hypothesis make no testable predictions. A more productive idea is that the universe computes without an outside programmer: physical law behaves like information processing. That version can be tested against data.
+- [What is Landauer's principle?](https://neuralcosmology.com/en/answers/landauer-principle): Landauer's principle, stated by Rolf Landauer in 1961, says that erasing one bit of information must release at least kT ln 2 of heat, about 2.9 × 10⁻²¹ joules at room temperature. It was measured directly in 2012. It connects information to thermodynamics and is the strongest argument that information is a physical quantity.
+
+Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
+
 ## Core research
 
 - [Pointer Architecture — constrained information-geometric model of galactic rotation curves](https://neuralcosmology.com/en/science/pointer-architecture): Preprint v2. Head-to-head comparison of three models on 171 SPARC galaxies. Constrained Pointer wins AIC on 60/171; partial correlation on halo extent ρ = +0.19, q_FDR = 0.04. Full reproducibility pipeline released.
 - [PDF — Pointer Architecture v2](https://neuralcosmology.com/pdfs/pointer-architecture-v2.pdf): The full preprint.
-- [Code — pointer-architecture](https://github.com/neuralcosmology/pointer-architecture): Fit code, data loaders, diagnostics.
+- [Code — pointer-architecture](https://github.com/Mikefluff/pointer-architecture): Fit code, data loaders, diagnostics.
 - [Science index](https://neuralcosmology.com/en/science): Landing page for all research outputs.
 
 ## Books

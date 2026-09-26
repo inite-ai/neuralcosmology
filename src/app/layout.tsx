@@ -33,7 +33,18 @@ const forum = Forum({
 // Root metadata is a safe fallback. Per-locale metadata (title, description,
 // hreflang alternates, openGraph locale) lives in app/[locale]/layout.tsx so
 // each locale gets the right crawler signal.
-export const metadata: Metadata = {
+// Коды подтверждения вебмастеров приходят из окружения (GitHub vars → контейнер).
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    ...metadata,
+    verification: {
+      yandex: process.env.YANDEX_VERIFICATION || undefined,
+      other: process.env.BING_VERIFICATION ? { "msvalidate.01": process.env.BING_VERIFICATION } : undefined,
+    },
+  };
+}
+
+const metadata: Metadata = {
   metadataBase: new URL("https://neuralcosmology.com"),
   title: "Neural Cosmology — Mikhail Savchenko",
   description:

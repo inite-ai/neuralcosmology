@@ -1,0 +1,63 @@
+---
+title: "Princípio de Landauer: por que apagar informação custa energia"
+question: "O que é o princípio de Landauer?"
+answer: "O princípio de Landauer, formulado por Rolf Landauer em 1961, diz que apagar um bit de informação libera pelo menos kT ln 2 de calor, cerca de 2,9 × 10⁻²¹ joules à temperatura ambiente. Foi medido diretamente em 2012. Ele liga a informação à termodinâmica e é o argumento mais forte de que a informação é uma grandeza física."
+description: "O limite de Landauer explicado com números, como ele resolve o demônio de Maxwell, a confirmação experimental de 2012, o que significa para a computação e por que sustenta uma física baseada em informação."
+date: 2026-09-26
+updated: 2026-09-26
+order: 7
+image: "/og/media/landauer.jpg"
+keywords: [princípio de Landauer, limite de Landauer, kT ln 2, informação é física, demônio de Maxwell, termodinâmica da computação, computação reversível]
+essays: [echo-of-consciousness, entropic-gravity, a-loss-function-for-the-universe]
+books: [celestial-code]
+paper: true
+faq:
+  - q: "Quanto vale o limite de Landauer em números?"
+    a: "kT ln 2 por bit apagado: cerca de 2,9 × 10⁻²¹ J, ou 0,018 eV, a 300 K. Apagar um bilhão de bits nesse limite liberaria cerca de 3 × 10⁻¹² J."
+  - q: "O princípio de Landauer foi confirmado experimentalmente?"
+    a: "Sim. Bérut e colegas mediram o calor liberado ao apagar uma memória de um bit feita de uma esfera coloidal numa armadilha laser de poço duplo e verificaram que ele se aproxima de kT ln 2 (Nature, 2012). Experimentos posteriores o confirmaram em nanoímãs e sistemas quânticos."
+  - q: "Quão longe os computadores estão do limite de Landauer?"
+    a: "Os transistores modernos dissipam por operação lógica várias ordens de grandeza a mais que kT ln 2, então não é esse limite que restringe os chips hoje. Ele se torna relevante para computação de ultrabaixo consumo e computação reversível."
+  - q: "O que o princípio de Landauer tem a ver com o demônio de Maxwell?"
+    a: "O demônio parecia reduzir a entropia de graça ao separar moléculas. Charles Bennett mostrou em 1982 que o demônio acaba precisando apagar sua memória das moléculas, e pelo princípio de Landauer esse apagamento produz pelo menos tanta entropia quanto a separação removeu."
+---
+
+## O enunciado
+
+Em 1961, Rolf Landauer, físico da IBM, perguntou qual é o custo energético mínimo da computação (*IBM Journal of Research and Development* 5, 183). Sua resposta: a maioria das operações pode, em princípio, ser feita sem custo algum, mas **apagar** informação não.
+
+Apagar um bit, isto é, redefinir uma célula de memória para 0 independentemente de ela conter 0 ou 1, precisa liberar pelo menos
+
+**E = kT ln 2**
+
+de calor para o ambiente, onde k é a constante de Boltzmann e T é a temperatura. À temperatura ambiente (300 K), isso dá cerca de **2,9 × 10⁻²¹ J**, aproximadamente 0,018 elétron-volt.
+
+## Por que apagar tem custo
+
+Uma memória que pode guardar 0 ou 1 tem dois estados possíveis. Depois do apagamento, tem um. O número de estados possíveis caiu pela metade, então sua entropia diminuiu em k ln 2. A segunda lei da termodinâmica não permite que a entropia total diminua, logo pelo menos essa quantidade de entropia precisa ir para outro lugar, como calor no ambiente.
+
+O passo-chave é que o bit é um estado físico de um sistema físico. Landauer resumiu isso numa frase que virou lema: **a informação é física.**
+
+## O demônio de Maxwell, resolvido
+
+Em 1867, James Clerk Maxwell imaginou um pequeno ser que abre uma porta entre duas câmaras de gás, deixando as moléculas rápidas passarem num sentido e as lentas no outro. Ele criaria uma diferença de temperatura aparentemente de graça, contra a segunda lei.
+
+Charles Bennett mostrou em 1982 onde o custo se esconde. Para separar moléculas, o demônio precisa registrar o que viu. Para continuar trabalhando, precisa um dia apagar esses registros, e pelo princípio de Landauer o apagamento dissipa pelo menos tanta entropia quanto a separação removeu. A segunda lei sobrevive porque a memória é física.
+
+## A medição
+
+Durante cinquenta anos o princípio foi um resultado teórico. Em 2012, Antoine Bérut e colegas o testaram diretamente (*Nature* 483, 187). Eles prenderam uma única esfera de vidro num potencial de poço duplo criado por lasers, onde "esquerda" e "direita" serviam de 0 e 1, e realizaram ciclos de apagamento medindo o calor. Quanto mais lentos os ciclos, mais o calor liberado se aproximava de kT ln 2, sem ficar abaixo dele. Seguiram-se experimentos com bits nanomagnéticos (Hong et al., *Science Advances*, 2016) e sistemas quânticos.
+
+## O que significa para os computadores
+
+Os chips atuais dissipam muitas ordens de grandeza a mais por operação do que o limite de Landauer. O limite importa para o futuro: define um piso para a computação irreversível e motiva a computação reversível, em que a lógica é projetada para não apagar informação e o piso pode, em princípio, ser evitado.
+
+## Por que importa para uma física baseada em informação
+
+O princípio de Landauer é o elo mais bem estabelecido entre informação e energia. É um dos alicerces de ideias que tratam a informação como grandeza física primária: o "it from bit" de Wheeler, a entropia dos buracos negros de Bekenstein, a gravidade emergente de Verlinde.
+
+O programa de pesquisa deste site se apoia no mesmo elo. Seu modelo de galáxias introduz uma **massa informacional**, um termo informacional que contribui para a dinâmica como a massa comum, e o testa em 171 galáxias SPARC. Se a informação tem um custo termodinâmico, é razoável perguntar se também tem uma pegada gravitacional. O preprint dá a primeira resposta com dados reais: parcial, com código aberto e critérios de refutação pré-registrados.
+
+## Conclusão
+
+Apagar um bit custa pelo menos kT ln 2 de calor. O princípio está confirmado experimentalmente, resolveu o demônio de Maxwell e transforma "a informação é física" numa afirmação mensurável.

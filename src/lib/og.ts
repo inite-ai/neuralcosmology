@@ -7,7 +7,7 @@ import type { SupportedLocale } from "@/lib/get-locale";
 const BASE = "https://neuralcosmology.com";
 const OG_LOCALE: Record<string, string> = { en: "en_US", ru: "ru_RU", pt: "pt_BR", es: "es_ES" };
 
-export type OgKind = "home" | "books" | "book" | "chapter" | "essays" | "essay" | "lectures" | "lecture" | "science" | "preprint" | "about" | "page";
+export type OgKind = "answers" | "answer" | "home" | "books" | "book" | "chapter" | "essays" | "essay" | "lectures" | "lecture" | "science" | "preprint" | "about" | "page";
 
 type Card = {
   title: string;

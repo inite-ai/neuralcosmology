@@ -41,9 +41,10 @@ export async function generateMetadata({
     description: hook,
     alternates: {
       canonical: `${base}/${locale}/books/${slug}`,
-      languages: Object.fromEntries(
-        SUPPORTED_LOCALES.map((l) => [l, `${base}/${l}/books/${slug}`]),
-      ),
+      languages: {
+        ...Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `${base}/${l}/books/${slug}`])),
+        "x-default": `${base}/en/books/${slug}`,
+      },
     },
     ...social({ title, description: hook, url: `${base}/${locale}/books/${slug}`, kind: "book", locale, type: "book", image: `/og/covers/${slug}.png` }),
   };

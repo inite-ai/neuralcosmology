@@ -22,6 +22,8 @@ services:
       - DATABASE_URL=${DATABASE_URL}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - AUTHOR_EMAILS=${AUTHOR_EMAILS:-mikefluff@mikefluff.com}
+      - YANDEX_VERIFICATION=${YANDEX_VERIFICATION:-}
+      - BING_VERIFICATION=${BING_VERIFICATION:-}
     volumes:
       - ./library:/app/library:ro
     labels:

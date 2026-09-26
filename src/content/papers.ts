@@ -28,7 +28,7 @@ export const papers: Paper[] = [
       "Falsifier: if reproducibility pipeline yields materially different fits under reasonable re-parameterisation, results are over-fit.",
     ],
     pdfPath: "/pdfs/pointer-architecture-v2.pdf",
-    codeUrl: "https://github.com/neuralcosmology/pointer-architecture",
+    codeUrl: "https://github.com/Mikefluff/pointer-architecture",
     companionBookSlug: "celestial-code",
     license: "CC-BY-4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
@@ -290,32 +290,32 @@ export const papers: Paper[] = [
       distributions: [
         {
           name: "final_fits.csv",
-          url: "https://github.com/neuralcosmology/pointer-architecture/blob/main/code/final_fits.csv",
+          url: "https://github.com/Mikefluff/pointer-architecture/blob/main/final_fits.csv",
           format: "text/csv",
         },
         {
           name: "final_corr.csv",
-          url: "https://github.com/neuralcosmology/pointer-architecture/blob/main/code/final_corr.csv",
+          url: "https://github.com/Mikefluff/pointer-architecture/blob/main/final_corr.csv",
           format: "text/csv",
         },
         {
           name: "final_pca.csv",
-          url: "https://github.com/neuralcosmology/pointer-architecture/blob/main/code/final_pca.csv",
+          url: "https://github.com/Mikefluff/pointer-architecture/blob/main/final_pca.csv",
           format: "text/csv",
         },
         {
           name: "phase2_derived.csv",
-          url: "https://github.com/neuralcosmology/pointer-architecture/blob/main/code/phase2_derived.csv",
+          url: "https://github.com/Mikefluff/pointer-architecture/blob/main/phase2_derived.csv",
           format: "text/csv",
         },
         {
           name: "phase3_constrained.csv",
-          url: "https://github.com/neuralcosmology/pointer-architecture/blob/main/code/phase3_constrained.csv",
+          url: "https://github.com/Mikefluff/pointer-architecture/blob/main/phase3_constrained.csv",
           format: "text/csv",
         },
         {
           name: "phase4_residuals.csv",
-          url: "https://github.com/neuralcosmology/pointer-architecture/blob/main/code/phase4_residuals.csv",
+          url: "https://github.com/Mikefluff/pointer-architecture/blob/main/phase4_residuals.csv",
           format: "text/csv",
         },
       ],

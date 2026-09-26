@@ -91,6 +91,8 @@ jobs:
               - DATABASE_URL=${{ secrets.DATABASE_URL }}
               - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
               - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mikefluff@mikefluff.com' }}
+              - YANDEX_VERIFICATION=${{ vars.YANDEX_VERIFICATION }}
+              - BING_VERIFICATION=${{ vars.BING_VERIFICATION }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:
@@ -133,6 +135,18 @@ jobs:
           docker-compose logs
           exit 1
         fi
+
+    - name: IndexNow (Bing, Yandex, Seznam)
+      if: success()
+      continue-on-error: true
+      run: |
+        sleep 20
+        KEY=37027cd598c84365b750d23778b62330
+        URLS=$(curl -fsS https://${{ env.DOMAIN }}/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' | python3 -c 'import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')
+        BODY="{\"host\":\"${{ env.DOMAIN }}\",\"key\":\"$KEY\",\"keyLocation\":\"https://${{ env.DOMAIN }}/$KEY.txt\",\"urlList\":$URLS}"
+        for EP in https://api.indexnow.org/indexnow https://yandex.com/indexnow; do
+          echo "$EP: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: application/json' --data "$BODY" $EP)"
+        done
 
     - name: Cleanup
       if: always()

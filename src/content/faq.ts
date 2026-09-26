@@ -38,7 +38,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Is the data and code available?",
         answer:
-          "Yes. The full reproducibility pipeline — four Python scripts, per-galaxy fit outputs, correlation tables, PCA, and residual diagnostics — is released alongside the preprint at github.com/neuralcosmology/pointer-architecture. SPARC source data is not rehosted but comes from the authoritative Lelli, McGaugh, Schombert (2016) release.",
+          "Yes. The full reproducibility pipeline — four Python scripts, per-galaxy fit outputs, correlation tables, PCA, and residual diagnostics — is released alongside the preprint at github.com/Mikefluff/pointer-architecture. SPARC source data is not rehosted but comes from the authoritative Lelli, McGaugh, Schombert (2016) release.",
       },
       {
         question: "How does this relate to the books?",
@@ -99,7 +99,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Доступны ли данные и код?",
         answer:
-          "Да. Полный reproducibility-пайплайн — четыре Python-скрипта, фиты по каждой галактике, корреляционные таблицы, PCA и диагностика остатков — опубликован вместе с препринтом на github.com/neuralcosmology/pointer-architecture. Исходные данные SPARC не перепубликованы, их надо взять из первоисточника — Lelli, McGaugh, Schombert (2016).",
+          "Да. Полный reproducibility-пайплайн — четыре Python-скрипта, фиты по каждой галактике, корреляционные таблицы, PCA и диагностика остатков — опубликован вместе с препринтом на github.com/Mikefluff/pointer-architecture. Исходные данные SPARC не перепубликованы, их надо взять из первоисточника — Lelli, McGaugh, Schombert (2016).",
       },
       {
         question: "Как это связано с книгами?",
@@ -160,7 +160,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Os dados e o código estão disponíveis?",
         answer:
-          "Sim. O pipeline completo de reprodutibilidade — quatro scripts Python, ajustes por galáxia, tabelas de correlação, PCA e diagnósticos de resíduos — está publicado junto com o preprint em github.com/neuralcosmology/pointer-architecture. Os dados-fonte SPARC não são rehosteados; vêm do lançamento autoritativo de Lelli, McGaugh, Schombert (2016).",
+          "Sim. O pipeline completo de reprodutibilidade — quatro scripts Python, ajustes por galáxia, tabelas de correlação, PCA e diagnósticos de resíduos — está publicado junto com o preprint em github.com/Mikefluff/pointer-architecture. Os dados-fonte SPARC não são rehosteados; vêm do lançamento autoritativo de Lelli, McGaugh, Schombert (2016).",
       },
       {
         question: "Como isto se relaciona com os livros?",
@@ -221,7 +221,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Están disponibles los datos y el código?",
         answer:
-          "Sí. La tubería completa de reproducibilidad — cuatro scripts en Python, ajustes por galaxia, tablas de correlación, PCA y diagnósticos de residuos — se publica junto al preprint en github.com/neuralcosmology/pointer-architecture. Los datos fuente de SPARC no se rehospedan; vienen del lanzamiento autoritativo de Lelli, McGaugh, Schombert (2016).",
+          "Sí. La tubería completa de reproducibilidad — cuatro scripts en Python, ajustes por galaxia, tablas de correlación, PCA y diagnósticos de residuos — se publica junto al preprint en github.com/Mikefluff/pointer-architecture. Los datos fuente de SPARC no se rehospedan; vienen del lanzamiento autoritativo de Lelli, McGaugh, Schombert (2016).",
       },
       {
         question: "¿Cómo se relaciona con los libros?",

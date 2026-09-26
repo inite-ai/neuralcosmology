@@ -11,6 +11,8 @@ import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { makeBookLink, linkifyBookMentions } from "@/components/essays/BookLink";
 import AuthorBio from "@/components/essays/AuthorBio";
+import { answersForEssay } from "@/lib/answers";
+import { answersUi } from "@/content/answers-ui";
 import JsonLd from "@/components/seo/JsonLd";
 import { articleSchema, breadcrumb } from "@/lib/schema";
 
@@ -36,9 +38,10 @@ export async function generateMetadata({
     description: essay.description,
     alternates: {
       canonical: `${base}/${essay.locale}/essays/${slug}`,
-      languages: Object.fromEntries(
-        essay.availableLocales.map((l) => [l, `${base}/${l}/essays/${slug}`]),
-      ),
+      languages: {
+        ...Object.fromEntries(essay.availableLocales.map((l) => [l, `${base}/${l}/essays/${slug}`])),
+        "x-default": `${base}/${essay.availableLocales.includes("en") ? "en" : essay.availableLocales[0]}/essays/${slug}`,
+      },
     },
     ...social({ title: essay.title, description: essay.description, url: `${base}/${essay.locale}/essays/${slug}`, kind: "essay", locale: essay.locale, type: "article", publishedTime: essay.date, image: essay.cover ? essay.cover.replace(/^\/essays\/covers\/(.+)\.\w+$/, "/og/essays/$1.jpg") : null }),
   };
@@ -166,6 +169,17 @@ export default async function EssayPage({
               </span>
             ))}
           </div>
+        )}
+
+        {answersForEssay(slug, locale).length > 0 && (
+          <nav className="mt-14 rule-t pt-6" aria-label={answersUi[locale].nav}>
+            <p className="label text-primary mb-2">{answersUi[locale].nav}</p>
+            {answersForEssay(slug, locale).map((a) => (
+              <Link key={a.slug} href={`/${locale}/answers/${a.slug}`} className="block rule-b py-4 font-display text-xl leading-snug hover:text-primary transition-colors">
+                {a.question} →
+              </Link>
+            ))}
+          </nav>
         )}
 
         <AuthorBio locale={locale} />

@@ -3,6 +3,7 @@ import { books } from "@/content/books";
 import { papers } from "@/content/papers";
 import { getAllSlugs as essaySlugs, getEssayBySlug } from "@/lib/essays";
 import { getAllSlugs as lectureSlugs, getLectureBySlug } from "@/lib/lectures";
+import { getAllAnswerSlugs, getAnswer } from "@/lib/answers";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
 import { getManifest, libraryLangs } from "@/lib/library";
 
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/books", priority: 0.9 },
     { path: "/science", priority: 0.9 },
     { path: "/essays", priority: 0.8 },
+    { path: "/answers", priority: 0.9 },
     { path: "/lectures", priority: 0.7 },
     { path: "/about", priority: 0.8 },
   ];
@@ -48,7 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return l ? [{ path: `/lectures/${slug}`, priority: 0.6, locales: l.availableLocales, modified: l.date }] : [];
   });
 
-  const all: Entry[] = [...staticPaths, ...bookPaths, ...paperPaths, ...essayPaths, ...lecturePaths];
+  const answerPaths: Entry[] = getAllAnswerSlugs().flatMap((slug) => {
+    const a = getAnswer(slug, DEFAULT_LOCALE);
+    return a ? [{ path: `/answers/${slug}`, priority: 0.9, locales: a.availableLocales, modified: a.updated }] : [];
+  });
+
+  const all: Entry[] = [...staticPaths, ...answerPaths, ...bookPaths, ...paperPaths, ...essayPaths, ...lecturePaths];
 
   // Только существующие переводы: страница без перевода отдаёт текст на другом языке
   // с каноническим адресом оригинала, в sitemap ей не место.

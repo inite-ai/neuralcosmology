@@ -31,14 +31,23 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: `${base}/${locale}/science/pointer-architecture`,
-      languages: Object.fromEntries(
-        SUPPORTED_LOCALES.map((l) => [
-          l,
-          `${base}/${l}/science/pointer-architecture`,
-        ]),
-      ),
+      languages: {
+        ...Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `${base}/${l}/science/pointer-architecture`])),
+        "x-default": `${base}/en/science/pointer-architecture`,
+      },
     },
     ...social({ title, description, url: `${base}/${locale}/science/pointer-architecture`, kind: "preprint", locale, type: "article" }),
+    // Highwire-теги: по ним Google Scholar распознаёт научную работу.
+    other: {
+      citation_title: title,
+      citation_author: "Savchenko, Mikhail",
+      citation_publication_date: String(paper?.year ?? 2026),
+      citation_online_date: String(paper?.year ?? 2026),
+      ...(paper?.pdfPath ? { citation_pdf_url: `${base}${paper.pdfPath}` } : {}),
+      citation_abstract_html_url: `${base}/${locale}/science/pointer-architecture`,
+      citation_language: "en",
+      citation_keywords: "galaxy rotation curves; SPARC; dark matter; information geometry",
+    },
   };
 }
 

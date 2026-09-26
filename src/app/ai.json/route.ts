@@ -62,7 +62,7 @@ export function GET() {
         canonicalPreprint: `${BASE}/en/science/pointer-architecture`,
         rawMarkdown: `${BASE}/en/science/pointer-architecture/raw.md`,
         pdf: `${BASE}/pdfs/pointer-architecture-v2.pdf`,
-        code: "https://github.com/neuralcosmology/pointer-architecture",
+        code: "https://github.com/Mikefluff/pointer-architecture",
       },
       books: { index: `${BASE}/en/books`, json: `${BASE}/en/books/index.json` },
       lectures: {

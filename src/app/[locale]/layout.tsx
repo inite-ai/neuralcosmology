@@ -12,6 +12,7 @@ import {
 } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { social } from "@/lib/og";
+import { seoTitle } from "@/content/seo";
 
 const THEME_LABEL: Record<SupportedLocale, string> = {
   en: "Switch light / dark",
@@ -35,7 +36,7 @@ export async function generateMetadata({
   const base = "https://neuralcosmology.com";
   const url = `${base}/${locale}`;
   return {
-    title: { default: dict.meta.title, template: `%s | ${dict.meta.title}` },
+    title: { default: seoTitle[locale].home, template: `%s | ${seoTitle[locale].suffix}` },
     description: dict.meta.description,
     alternates: {
       canonical: url,
@@ -47,7 +48,7 @@ export async function generateMetadata({
         "x-default": `${base}/en`,
       },
     },
-    ...social({ title: dict.meta.title, description: dict.meta.description, url, kind: "home", locale }),
+    ...social({ title: seoTitle[locale].home, description: dict.meta.description, url, kind: "home", locale }),
   };
 }
 

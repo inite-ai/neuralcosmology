@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { social } from "@/lib/og";
+import { seoTitle } from "@/content/seo";
 import HomeShell from "@/components/home/HomeShell";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
@@ -21,15 +22,16 @@ export async function generateMetadata({
   const locale = isSupportedLocale(raw) ? raw : "en";
   const dict = getDict(locale);
   return {
-    title: dict.meta.title,
+    title: { absolute: `${seoTitle[locale].home}` },
     description: dict.meta.description,
     alternates: {
       canonical: `https://neuralcosmology.com/${locale}`,
-      languages: Object.fromEntries(
-        SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}`]),
-      ),
+      languages: {
+        ...Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}`])),
+        "x-default": `https://neuralcosmology.com/en`,
+      },
     },
-    ...social({ title: dict.meta.title, description: dict.meta.description, url: `https://neuralcosmology.com/${locale}${""}`, kind: "home", locale }),
+    ...social({ title: seoTitle[locale].home, description: dict.meta.description, url: `https://neuralcosmology.com/${locale}${""}`, kind: "home", locale }),
   };
 }
 

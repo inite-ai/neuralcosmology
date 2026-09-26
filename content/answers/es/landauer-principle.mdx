@@ -1,0 +1,63 @@
+---
+title: "El principio de Landauer: por qué borrar información cuesta energía"
+question: "¿Qué es el principio de Landauer?"
+answer: "El principio de Landauer, formulado por Rolf Landauer en 1961, dice que borrar un bit de información debe liberar al menos kT ln 2 de calor, unos 2,9 × 10⁻²¹ julios a temperatura ambiente. Se midió directamente en 2012. Vincula la información con la termodinámica y es el argumento más sólido de que la información es una magnitud física."
+description: "El límite de Landauer explicado con números, cómo resuelve el demonio de Maxwell, la confirmación experimental de 2012, qué significa para la computación y por qué respalda una física basada en la información."
+date: 2026-09-26
+updated: 2026-09-26
+order: 7
+image: "/og/media/landauer.jpg"
+keywords: [principio de Landauer, límite de Landauer, kT ln 2, la información es física, demonio de Maxwell, termodinámica de la computación, computación reversible]
+essays: [echo-of-consciousness, entropic-gravity, a-loss-function-for-the-universe]
+books: [celestial-code]
+paper: true
+faq:
+  - q: "¿Cuánto vale el límite de Landauer en números?"
+    a: "kT ln 2 por bit borrado: unos 2,9 × 10⁻²¹ J, o 0,018 eV, a 300 K. Borrar mil millones de bits en ese límite liberaría unos 3 × 10⁻¹² J."
+  - q: "¿Se ha confirmado experimentalmente el principio de Landauer?"
+    a: "Sí. Bérut y sus colegas midieron el calor liberado al borrar una memoria de un bit hecha con una esfera coloidal en una trampa láser de doble pozo y comprobaron que se acerca a kT ln 2 (Nature, 2012). Experimentos posteriores lo confirmaron en nanoimanes y sistemas cuánticos."
+  - q: "¿A qué distancia están los ordenadores del límite de Landauer?"
+    a: "Los transistores modernos disipan por operación lógica varios órdenes de magnitud más que kT ln 2, así que hoy no es ese límite lo que restringe a los chips. Se vuelve relevante para la computación de ultrabajo consumo y la computación reversible."
+  - q: "¿Qué tiene que ver el principio de Landauer con el demonio de Maxwell?"
+    a: "El demonio parecía reducir la entropía gratis al separar moléculas. Charles Bennett mostró en 1982 que el demonio acaba teniendo que borrar su memoria de las moléculas, y por el principio de Landauer ese borrado produce al menos tanta entropía como la que eliminó la separación."
+---
+
+## El enunciado
+
+En 1961, Rolf Landauer, físico de IBM, se preguntó cuál es el coste energético mínimo de la computación (*IBM Journal of Research and Development* 5, 183). Su respuesta: la mayoría de las operaciones pueden, en principio, hacerse sin coste alguno, pero **borrar** información no.
+
+Borrar un bit, es decir, poner una celda de memoria a 0 tanto si contenía 0 como si contenía 1, debe liberar al menos
+
+**E = kT ln 2**
+
+de calor al entorno, donde k es la constante de Boltzmann y T la temperatura. A temperatura ambiente (300 K) son unos **2,9 × 10⁻²¹ J**, aproximadamente 0,018 electronvoltios.
+
+## Por qué borrar tiene coste
+
+Una memoria que puede guardar 0 o 1 tiene dos estados posibles. Tras el borrado, tiene uno. El número de estados posibles se ha reducido a la mitad, así que su entropía ha bajado en k ln 2. La segunda ley de la termodinámica no permite que la entropía total disminuya, de modo que al menos esa cantidad de entropía tiene que ir a otra parte, como calor al entorno.
+
+El paso clave es que el bit es un estado físico de un sistema físico. Landauer lo resumió en una frase que se volvió lema: **la información es física.**
+
+## El demonio de Maxwell, resuelto
+
+En 1867, James Clerk Maxwell imaginó un pequeño ser que abre una puerta entre dos cámaras de gas, dejando pasar las moléculas rápidas en un sentido y las lentas en el otro. Crearía una diferencia de temperatura aparentemente gratis, en contra de la segunda ley.
+
+Charles Bennett mostró en 1982 dónde se esconde el coste. Para separar moléculas, el demonio tiene que registrar lo que vio. Para seguir trabajando, tarde o temprano debe borrar esos registros, y por el principio de Landauer el borrado disipa al menos tanta entropía como la que eliminó la separación. La segunda ley sobrevive porque la memoria es física.
+
+## La medición
+
+Durante cincuenta años el principio fue un resultado teórico. En 2012, Antoine Bérut y sus colegas lo pusieron a prueba directamente (*Nature* 483, 187). Atraparon una sola esfera de vidrio en un potencial de doble pozo creado con láseres, donde "izquierda" y "derecha" hacían de 0 y 1, y realizaron ciclos de borrado midiendo el calor. Cuanto más lentos eran los ciclos, más se acercaba el calor liberado a kT ln 2, sin bajar de ese valor. Siguieron experimentos con bits nanomagnéticos (Hong et al., *Science Advances*, 2016) y con sistemas cuánticos.
+
+## Qué significa para los ordenadores
+
+Los chips actuales disipan por operación muchos órdenes de magnitud más que el límite de Landauer. El límite importa para el futuro: fija un suelo para la computación irreversible y motiva la computación reversible, en la que la lógica se diseña para no borrar información y ese suelo puede, en principio, evitarse.
+
+## Por qué importa para una física basada en la información
+
+El principio de Landauer es el vínculo mejor establecido entre información y energía. Es uno de los cimientos de las ideas que tratan la información como una magnitud física primaria: el "it from bit" de Wheeler, la entropía de los agujeros negros de Bekenstein, la gravedad emergente de Verlinde.
+
+El programa de investigación de este sitio se apoya en el mismo vínculo. Su modelo de galaxias introduce una **masa informacional**, un término informacional que contribuye a la dinámica como la masa ordinaria, y lo pone a prueba en 171 galaxias SPARC. Si la información tiene un coste termodinámico, es razonable preguntarse si también deja una huella gravitatoria. El preprint da la primera respuesta con datos reales: parcial, con código abierto y criterios de refutación prerregistrados.
+
+## Conclusión
+
+Borrar un bit cuesta al menos kT ln 2 de calor. El principio está confirmado experimentalmente, resolvió el demonio de Maxwell y convierte "la información es física" en una afirmación medible.

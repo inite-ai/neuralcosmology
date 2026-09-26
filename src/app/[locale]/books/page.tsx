@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { social } from "@/lib/og";
+import { seoTitle } from "@/content/seo";
 import PageShell from "@/components/layout/PageShell";
 import BookCard from "@/components/ui/BookCard";
 import { books } from "@/content/books";
@@ -21,15 +22,16 @@ export async function generateMetadata({
   const locale = isSupportedLocale(raw) ? raw : "en";
   const dict = getDict(locale);
   return {
-    title: dict.books.indexTitle,
+    title: seoTitle[locale].books,
     description: dict.books.indexLead,
     alternates: {
       canonical: `https://neuralcosmology.com/${locale}/books`,
-      languages: Object.fromEntries(
-        SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}/books`]),
-      ),
+      languages: {
+        ...Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}/books`])),
+        "x-default": `https://neuralcosmology.com/en/books`,
+      },
     },
-    ...social({ title: dict.books.indexTitle, description: dict.books.indexLead, url: `https://neuralcosmology.com/${locale}${"/books"}`, kind: "books", locale }),
+    ...social({ title: seoTitle[locale].books, description: dict.books.indexLead, url: `https://neuralcosmology.com/${locale}${"/books"}`, kind: "books", locale }),
   };
 }
 

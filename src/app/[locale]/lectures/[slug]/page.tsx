@@ -33,9 +33,10 @@ export async function generateMetadata({
     description: lecture.description,
     alternates: {
       canonical: `${base}/${lecture.locale}/lectures/${slug}`,
-      languages: Object.fromEntries(
-        lecture.availableLocales.map((l) => [l, `${base}/${l}/lectures/${slug}`]),
-      ),
+      languages: {
+        ...Object.fromEntries(lecture.availableLocales.map((l) => [l, `${base}/${l}/lectures/${slug}`])),
+        "x-default": `${base}/${lecture.availableLocales.includes("en") ? "en" : lecture.availableLocales[0]}/lectures/${slug}`,
+      },
     },
     ...social({ title: lecture.title, description: lecture.description, url: `${base}/${lecture.locale}/lectures/${slug}`, kind: "lecture", locale: lecture.locale, type: "article", publishedTime: lecture.date }),
   };
