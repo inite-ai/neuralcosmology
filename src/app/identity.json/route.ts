@@ -21,6 +21,9 @@ export function GET() {
       "Home of the Neural Cosmology research programme by Mikhail Savchenko: four books, one preprint (Pointer Architecture v9.0, a formal computational substrate with a working implementation in the Sixth language and falsifiers stated in advance), essays, answer pages and recorded lectures. Operated by Mikhail Savchenko, who also runs the business/consulting practice Mike Fluff at https://www.mikefluff.com.",
     alternateNames: [
       "Neural Cosmology",
+      "Нейронная космология",
+      "Cosmologia Neural",
+      "Cosmología Neural",
       "Neuralcosmology",
       "Pointer Architecture programme",
     ],

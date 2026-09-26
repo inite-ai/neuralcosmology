@@ -55,7 +55,7 @@ const baseMetadata: Metadata = {
   metadataBase: new URL("https://neuralcosmology.com"),
   title: "Neural Cosmology — Mikhail Savchenko",
   description:
-    "Public HQ for the Neural Cosmology programme: four books, one preprint, a growing body of essays.",
+    "Mikhail Savchenko's Neural Cosmology programme: books, a preprint, essays and lectures on consciousness and the universe as a learning network.",
   authors: [{ name: "Mikhail Savchenko", url: "https://neuralcosmology.com" }],
   creator: "Mikhail Savchenko",
   publisher: "Mikhail Savchenko",

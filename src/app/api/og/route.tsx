@@ -11,8 +11,8 @@ export const runtime = "nodejs";
 const LABELS: Record<string, Record<string, string>> = {
   en: { answers: "Questions", answer: "Answer", home: "Research programme", books: "Library", book: "Book", chapter: "Read online", essays: "Essays", essay: "Essay", lectures: "Lectures", lecture: "Lecture", science: "Science", preprint: "Preprint", about: "Author", page: "Neural Cosmology" },
   ru: { answers: "Вопросы", answer: "Ответ", home: "Исследовательская программа", books: "Библиотека", book: "Книга", chapter: "Читать онлайн", essays: "Эссе", essay: "Эссе", lectures: "Лекции", lecture: "Лекция", science: "Наука", preprint: "Препринт", about: "Автор", page: "Нейронная космология" },
-  pt: { answers: "Perguntas", answer: "Resposta", home: "Programa de pesquisa", books: "Biblioteca", book: "Livro", chapter: "Ler online", essays: "Ensaios", essay: "Ensaio", lectures: "Palestras", lecture: "Palestra", science: "Ciência", preprint: "Preprint", about: "Autor", page: "Neural Cosmology" },
-  es: { answers: "Preguntas", answer: "Respuesta", home: "Programa de investigación", books: "Biblioteca", book: "Libro", chapter: "Leer en línea", essays: "Ensayos", essay: "Ensayo", lectures: "Charlas", lecture: "Charla", science: "Ciencia", preprint: "Preprint", about: "Autor", page: "Neural Cosmology" },
+  pt: { answers: "Perguntas", answer: "Resposta", home: "Programa de pesquisa", books: "Biblioteca", book: "Livro", chapter: "Ler online", essays: "Ensaios", essay: "Ensaio", lectures: "Palestras", lecture: "Palestra", science: "Ciência", preprint: "Preprint", about: "Autor", page: "Cosmologia Neural" },
+  es: { answers: "Preguntas", answer: "Respuesta", home: "Programa de investigación", books: "Biblioteca", book: "Libro", chapter: "Leer en línea", essays: "Ensayos", essay: "Ensayo", lectures: "Charlas", lecture: "Charla", science: "Ciencia", preprint: "Preprint", about: "Autor", page: "Cosmología Neural" },
 };
 const AUTHOR: Record<string, string> = { en: "Mikhail Savchenko", ru: "Михаил Савченко", pt: "Mikhail Savchenko", es: "Mikhail Savchenko" };
 

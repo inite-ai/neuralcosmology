@@ -20,8 +20,10 @@ export const AUTHOR_SAME_AS = [
   "https://orcid.org/0009-0006-2873-9925",
 ];
 export const SITE_NAME = "Neural Cosmology";
+// Локализованные названия программы: под ними её ищут и цитируют на других языках.
+export const SITE_NAME_VARIANTS = ["Neural Cosmology", "Нейронная космология", "Cosmologia Neural", "Cosmología Neural", "neuralcosmology"];
 export const SITE_DESCRIPTION =
-  "Public HQ for the Neural Cosmology programme: books, preprints, essays, lectures — a falsifiable research programme by Mikhail Savchenko.";
+  "Neural Cosmology, a falsifiable research programme by Mikhail Savchenko: books, a preprint, essays and lectures on consciousness and the universe as a learning network.";
 
 function localeUrl(locale: SupportedLocale, path = ""): string {
   return `${SITE_URL}/${locale}${path}`;
@@ -55,6 +57,7 @@ export function organizationNode() {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    alternateName: SITE_NAME_VARIANTS.filter((n) => n !== SITE_NAME),
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -83,6 +86,7 @@ export function websiteNode(locale: SupportedLocale, name: string, description: 
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name,
+    alternateName: SITE_NAME_VARIANTS.filter((n) => n !== name),
     description,
     inLanguage: SUPPORTED_LOCALES.map((l) => l),
     publisher: { "@id": `${SITE_URL}/#organization` },

@@ -36,7 +36,7 @@ export function social(
       title: card.title,
       description: card.description,
       url: card.url,
-      siteName: card.locale === "ru" ? "Нейронная космология" : "Neural Cosmology",
+      siteName: ({ ru: "Нейронная космология", pt: "Cosmologia Neural", es: "Cosmología Neural" } as Record<string, string>)[card.locale] ?? "Neural Cosmology",
       type: card.type ?? "website",
       locale: OG_LOCALE[card.locale] ?? "en_US",
       alternateLocale: Object.values(OG_LOCALE).filter((l) => l !== (OG_LOCALE[card.locale] ?? "en_US")),

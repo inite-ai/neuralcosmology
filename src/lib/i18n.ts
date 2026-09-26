@@ -873,11 +873,11 @@ const ru: Dict = {
 };
 
 const pt: Dict = {
-  siteName: "Neural Cosmology",
+  siteName: "Cosmologia Neural",
   meta: {
-    title: "Neural Cosmology — Mikhail Savchenko",
+    title: "Cosmologia Neural — Mikhail Savchenko",
     description:
-      "O programa Neural Cosmology, de Mikhail Savchenko: livros, um preprint, ensaios e palestras sobre a consciência e o universo como rede em aprendizado.",
+      "O programa Cosmologia Neural, de Mikhail Savchenko: livros, um preprint, ensaios e palestras sobre a consciência e o universo como rede em aprendizado.",
     ogLocale: "pt_BR",
   },
   nav: {
@@ -1009,7 +1009,7 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology, um programa de pesquisa sobre a natureza da consciência, e para uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
+      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Cosmologia Neural, um programa de pesquisa sobre a natureza da consciência, e para uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
       "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais e dispensa qualquer ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falsificadores escritos de antemão. É a primeira parte de um programa maior.",
       "Em poucas palavras, sou um cientista com perguntas; profetas com respostas já existem de sobra. O programa foi construído para poder ser refutado, e a ficção não contradiz a física. O site inteiro é um convite a verificar os argumentos por conta própria.",
     ],
@@ -1042,7 +1042,7 @@ const pt: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Neural Cosmology",
+      headline: "Cosmologia Neural",
       subhead:
         "O universo como uma rede em aprendizado. A consciência como propriedade de certas configurações de grafo.",
       subheadExtra:
@@ -1052,7 +1052,7 @@ const pt: Dict = {
     whatIs: {
       title: "O que é",
       lead1:
-        "A Neural Cosmology é uma tentativa de reunir cinco anomalias da imagem padrão do mundo num único modelo.",
+        "A Cosmologia Neural é uma tentativa de reunir cinco anomalias da imagem padrão do mundo num único modelo.",
       lead2:
         "Rotação das galáxias, assimetria entre matéria e antimatéria, problema da medição, consciência, bioeletricidade celular: separados, são cinco enigmas; juntos, uma só imagem.",
       leadMechanism:
@@ -1200,11 +1200,11 @@ const pt: Dict = {
 };
 
 const es: Dict = {
-  siteName: "Neural Cosmology",
+  siteName: "Cosmología Neural",
   meta: {
-    title: "Neural Cosmology — Mikhail Savchenko",
+    title: "Cosmología Neural — Mikhail Savchenko",
     description:
-      "El programa Neural Cosmology de Mikhail Savchenko: libros, un preprint, ensayos y charlas sobre la consciencia y el universo como red que aprende.",
+      "El programa Cosmología Neural de Mikhail Savchenko: libros, un preprint, ensayos y charlas sobre la consciencia y el universo como red que aprende.",
     ogLocale: "es_ES",
   },
   nav: {
@@ -1335,7 +1335,7 @@ const es: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Veinte años de ingeniería de IA, con un doctorado en curso. El resto del tiempo se lo dedico a Neural Cosmology, un programa de investigación sobre la naturaleza de la consciencia, y a una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
+      "Veinte años de ingeniería de IA, con un doctorado en curso. El resto del tiempo se lo dedico a la Cosmología Neural, un programa de investigación sobre la naturaleza de la consciencia, y a una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
       "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales y no necesita ningún ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es la primera parte de un programa más amplio.",
       "En pocas palabras, soy un científico con preguntas; profetas con respuestas ya hay de sobra. El programa está construido para poder refutarse, y la ficción no contradice la física. Todo el sitio es una invitación a comprobar los argumentos por uno mismo.",
     ],
@@ -1368,7 +1368,7 @@ const es: Dict = {
     hero: {
       badge: "neuralcosmology.com",
       title: "Neuralcosmology",
-      headline: "Neural Cosmology",
+      headline: "Cosmología Neural",
       subhead:
         "El universo como una red que aprende. La consciencia como propiedad de ciertas configuraciones de grafo.",
       subheadExtra:
@@ -1378,7 +1378,7 @@ const es: Dict = {
     whatIs: {
       title: "Qué es",
       lead1:
-        "Neural Cosmology es un intento de reunir cinco anomalías de la imagen estándar del mundo en un solo modelo.",
+        "La Cosmología Neural es un intento de reunir cinco anomalías de la imagen estándar del mundo en un solo modelo.",
       lead2:
         "La rotación de las galaxias, la asimetría entre materia y antimateria, el problema de la medición, la consciencia, la bioelectricidad celular: por separado son cinco enigmas; juntos, una sola imagen.",
       leadMechanism:
