@@ -14,7 +14,7 @@ const SISTER: Record<SupportedLocale, { eyebrow: string; body: string; cta: stri
     cta: "Visit mikefluff.com",
   },
   ru: {
-    eyebrow: "Сайт-побратим",
+    eyebrow: "Родственный сайт",
     body: "Тот же автор ведёт бизнес-практику как Майк Флафф — ИИ-автоматизация, регуляторный иммунитет, технологическая хирургия, курсы.",
     cta: "Открыть mikefluff.com",
   },

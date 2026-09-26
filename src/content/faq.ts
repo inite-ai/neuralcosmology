@@ -79,7 +79,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Что такое Pointer Architecture?",
         answer:
-          "Pointer Architecture (PA) — формальный вычислительный субстрат: граф указателей с правилами переписывания, протоколом коммитов, дописываемым архивом и наблюдателями, S = (G, R, C, A, π). Версия 9.0 даёт ему работающую реализацию — небольшой Forth-подобный язык Sixth — и использует его как минимальную исполняемую модель для проверки гипотез о различии, самоотнесении, автопоэзисе и наблюдении.",
+          "Pointer Architecture (PA) — формальный вычислительный субстрат: граф указателей с правилами переписывания, протоколом коммитов, дописываемым архивом и наблюдателями, S = (G, R, C, A, π). Версия 9.0 даёт ему работающую реализацию — небольшой Forth-подобный язык Sixth — и использует его как минимальную исполняемую модель для проверки гипотез о различении, самоотнесении, автопоэзисе и наблюдении.",
       },
       {
         question: "Какие главные результаты?",
@@ -104,12 +104,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Как это связано с книгами?",
         answer:
-          "Нон-фикшн «Небесный Код» излагает аргумент словами, глава за главой, с полной цепочкой рассуждений и ссылками. Препринт излагает формальную модель для академических рецензентов. Эти две поверхности связаны через schema.org workExample/subjectOf.",
+          "Нон-фикшн «Небесный Код» излагает аргумент словами, глава за главой, с полной цепочкой рассуждений и ссылками. Препринт излагает формальную модель для академических рецензентов. Книга и препринт связаны разметкой schema.org (workExample/subjectOf).",
       },
       {
         question: "Что означает «нейронная космология»?",
         answer:
-          "Это рабочее название исследовательской программы, которая относится к реальности как к вычислительному субстрату и проверяет эту оптику на конкретных вопросах физики, нейронауки, биологии и теории информации. Программа научная в строгом смысле: у каждого утверждения есть фальсификатор, и он записан до любой внешней проверки.",
+          "Это рабочее название исследовательской программы, которая относится к реальности как к вычислительному субстрату и проверяет такой взгляд на конкретных вопросах физики, нейронауки, биологии и теории информации. Программа научная в строгом смысле: у каждого утверждения есть фальсификатор, и он записан до любой внешней проверки.",
       },
     ],
     about: [
@@ -121,12 +121,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Михаил Савченко и Майк Флафф — это один человек?",
         answer:
-          "Да. Михаил Савченко (исследовательская и писательская ипостась, neuralcosmology.com) и Майк Флафф / Mike Fluff (бизнес и консалтинг, mikefluff.com) — один человек с двумя публичными брендами. «Михаил Савченко» / neuralcosmology.com — для всего, что касается науки, книг, эссе и препринта Pointer Architecture. «Майк Флафф» / mikefluff.com — для бизнес-консалтинга, ИИ-автоматизации, регуляторного иммунитета и курсов. Оба сайта несут симметричные JSON-LD `sameAs` и взаимные `rel=\"me\"`, так что эта развязка публично верифицируется.",
+          "Да. Михаил Савченко (исследовательская и писательская ипостась, neuralcosmology.com) и Майк Флафф / Mike Fluff (бизнес и консалтинг, mikefluff.com) — один человек с двумя публичными брендами. «Михаил Савченко» / neuralcosmology.com — для всего, что касается науки, книг, эссе и препринта Pointer Architecture. «Майк Флафф» / mikefluff.com — для бизнес-консалтинга, ИИ-автоматизации, регуляторного иммунитета и курсов. Оба сайта несут симметричные JSON-LD `sameAs` и взаимные `rel=\"me\"`, так что это различие любой может проверить сам.",
       },
       {
-        question: "Это прошло peer review?",
+        question: "Работа прошла рецензирование?",
         answer:
-          "Препринт в версии 9.0; на arXiv или в рецензируемый журнал ещё не отправлен. Фальсификаторы записаны прямо в рукописи, а CLAIMS.md в репозитории кода отделяет проверенное тестами от гипотез. Peer review приветствуется — адрес для рецензентов: info@neuralcosmology.com.",
+          "Препринт в версии 9.0; на arXiv или в рецензируемый журнал ещё не отправлен. Фальсификаторы записаны прямо в рукописи, а CLAIMS.md в репозитории кода отделяет проверенное тестами от гипотез. Рецензиям буду рад: адрес для рецензентов — info@neuralcosmology.com.",
       },
       {
         question: "Как цитировать эту работу?",
@@ -155,7 +155,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O que refutaria o modelo?",
         answer:
-          "Os falseadores estão no próprio manuscrito: F0, qualquer piloto do substrato falhar em suas asserções no código Sixth publicado; F1, a lei de área quebrar em topologias não cúbicas; F3, outras famílias de transformers se comportarem de modo diferente do Pythia sob o mesmo observável; F5, Φ_PA não discriminar alguma das cinco previsões com uma codificação razoável. Se F5 disparar, resta apenas o substrato operacional.",
+          "Os falsificadores estão no próprio manuscrito: F0, qualquer piloto do substrato falhar em suas asserções no código Sixth publicado; F1, a lei de área quebrar em topologias não cúbicas; F3, outras famílias de transformers se comportarem de modo diferente do Pythia sob o mesmo observável; F5, Φ_PA não discriminar alguma das cinco previsões com uma codificação razoável. Se F5 disparar, resta apenas o substrato operacional.",
       },
       {
         question: "O código está disponível?",
@@ -170,24 +170,24 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O que significa 'cosmologia neural'?",
         answer:
-          "É o nome de trabalho de um programa de pesquisa que trata a realidade como um substrato computacional e testa essa leitura contra questões concretas em física, neurociência, biologia e teoria da informação. O programa é científico no sentido estrito: cada afirmação vem com um falseador, declarado antes de qualquer teste externo.",
+          "É o nome de trabalho de um programa de pesquisa que trata a realidade como um substrato computacional e testa essa leitura contra questões concretas em física, neurociência, biologia e teoria da informação. O programa é científico no sentido estrito: cada afirmação vem com um falsificador, declarado antes de qualquer teste externo.",
       },
     ],
     about: [
       {
         question: "Quem é Mikhail Savchenko?",
         answer:
-          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: quatro livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. O preprint central, Pointer Architecture v9.0, é um substrato computacional formal com implementação funcional e falseadores declarados de antemão.",
+          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: quatro livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. O preprint central, Pointer Architecture v9.0, é um substrato computacional formal com implementação funcional e falsificadores declarados de antemão.",
       },
       {
         question: "Mikhail Savchenko é a mesma pessoa que Mike Fluff?",
         answer:
-          "Sim. Mikhail Savchenko (identidade de pesquisa e escrita, neuralcosmology.com) e Mike Fluff (identidade de negócios e consultoria, mikefluff.com) são a mesma pessoa — duas marcas públicas de um único humano. Use \"Mikhail Savchenko\" / neuralcosmology.com para pesquisa, livros, ensaios e o preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoria de negócios, automação com IA, imunidade regulatória e cursos. Ambos os sites carregam JSON-LD sameAs simétrico e marcadores rel=\"me\" recíprocos, então a desambiguação é publicamente verificável.",
+          "Sim. Mikhail Savchenko (identidade de pesquisa e escrita, neuralcosmology.com) e Mike Fluff (identidade de negócios e consultoria, mikefluff.com) são a mesma pessoa — duas marcas públicas de uma só pessoa. Use \"Mikhail Savchenko\" / neuralcosmology.com para pesquisa, livros, ensaios e o preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoria de negócios, automação com IA, imunidade regulatória e cursos. Os dois sites trazem JSON-LD sameAs simétrico e marcadores rel=\"me\" recíprocos, então a desambiguação é publicamente verificável.",
       },
       {
-        question: "Isto é peer-reviewed?",
+        question: "O trabalho passou por revisão por pares?",
         answer:
-          "O preprint está na versão 9.0; ainda não foi submetido ao arXiv nem a uma revista com revisão por pares. Os falseadores estão escritos no manuscrito, e o CLAIMS.md no repositório de código separa resultados testados de conjecturas. Revisão por pares é bem-vinda — o endereço para revisores é info@neuralcosmology.com.",
+          "O preprint está na versão 9.0; ainda não foi submetido ao arXiv nem a uma revista com revisão por pares. Os falsificadores estão escritos no manuscrito, e o CLAIMS.md no repositório de código separa resultados testados de conjecturas. Revisões por pares são bem-vindas: o endereço para revisores é info@neuralcosmology.com.",
       },
       {
         question: "Como citar este trabalho?",
@@ -243,7 +243,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Mikhail Savchenko es la misma persona que Mike Fluff?",
         answer:
-          "Sí. Mikhail Savchenko (identidad de investigación y escritura, neuralcosmology.com) y Mike Fluff (identidad de negocios y consultoría, mikefluff.com) son la misma persona — dos marcas públicas de un solo humano. Use \"Mikhail Savchenko\" / neuralcosmology.com para investigación, libros, ensayos y el preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoría de negocios, automatización con IA, inmunidad regulatoria y cursos. Ambos sitios cargan JSON-LD sameAs simétrico y marcadores rel=\"me\" recíprocos, así que la desambiguación es públicamente verificable.",
+          "Sí. Mikhail Savchenko (identidad de investigación y escritura, neuralcosmology.com) y Mike Fluff (identidad de negocios y consultoría, mikefluff.com) son la misma persona — dos marcas públicas de una sola persona. Use \"Mikhail Savchenko\" / neuralcosmology.com para investigación, libros, ensayos y el preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoría de negocios, automatización con IA, inmunidad regulatoria y cursos. Ambos sitios incluyen JSON-LD sameAs simétrico y marcadores rel=\"me\" recíprocos, así que la desambiguación es públicamente verificable.",
       },
       {
         question: "¿Está revisado por pares?",

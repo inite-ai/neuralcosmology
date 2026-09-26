@@ -449,7 +449,7 @@ export function HomeLectures({ locale, recent }: { locale: SupportedLocale; rece
 const GENRE: Record<SupportedLocale, { nf: string; fic: string }> = {
   en: { nf: "Non-fiction line", fic: "Fiction line" },
   ru: { nf: "Нон-фикшн", fic: "Художественная линия" },
-  pt: { nf: "Não-ficção", fic: "Linha de ficção" },
+  pt: { nf: "Não ficção", fic: "Linha de ficção" },
   es: { nf: "No ficción", fic: "Línea de ficción" },
 };
 
@@ -540,36 +540,36 @@ export function HomeFaq({ locale }: { locale: SupportedLocale }) {
 
 const PRACTICE: Record<SupportedLocale, { eyebrow: string; title: string; body: string; bullets: string[]; cta: string; ctaSecondary: string }> = {
   en: {
-    eyebrow: "Also the practitioner",
+    eyebrow: "The applied side",
     title: "Where the same discipline meets client work",
-    body: "Outside the research desk, the same person runs a business and consulting practice as Mike Fluff — Business Doctor. AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery, and three courses. Same epistemic habits, applied at client tempo.",
+    body: "Away from the research desk, the same person runs a business and consulting practice as Mike Fluff, Business Doctor: AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery and three courses. The same scientific habits, applied at the pace of client work.",
     bullets: ["AI automation & integration", "Regulatory immunity (AI privacy / compliance architecture)", "Three courses ($19 each)"],
     cta: "Visit mikefluff.com",
-    ctaSecondary: "Read the bridge essay",
+    ctaSecondary: "The essay that links the two",
   },
   ru: {
-    eyebrow: "И практика",
+    eyebrow: "Прикладная сторона",
     title: "Где та же дисциплина встречается с клиентской работой",
-    body: "За рамками исследовательского стола тот же человек ведёт бизнес-практику как Mike Fluff — Business Doctor. ИИ-автоматизация, регуляторный иммунитет (PII, GDPR/LGPD/DPA, secure-by-design AI), технологическая хирургия, три курса. Те же эпистемические привычки в клиентском темпе.",
-    bullets: ["ИИ-автоматизация и интеграции", "Регуляторный иммунитет (privacy/compliance для AI)", "Три курса ($19 каждый)"],
+    body: "Помимо исследований, тот же человек ведёт бизнес-практику под именем Mike Fluff, Business Doctor: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, ИИ, безопасный по построению), технологическая хирургия, три курса. Та же научная дисциплина, только в темпе клиентской работы.",
+    bullets: ["ИИ-автоматизация и интеграции", "Регуляторный иммунитет (защита данных и соответствие требованиям для ИИ)", "Три курса ($19 каждый)"],
     cta: "Открыть mikefluff.com",
-    ctaSecondary: "Эссе-мост",
+    ctaSecondary: "Эссе о том, как это связано",
   },
   pt: {
-    eyebrow: "Também o praticante",
+    eyebrow: "O lado aplicado",
     title: "Onde a mesma disciplina encontra o trabalho com clientes",
-    body: "Fora da mesa de pesquisa, a mesma pessoa conduz uma prática de negócios como Mike Fluff — Business Doctor. Automação com IA, imunidade regulatória (PII, GDPR/LGPD/DPA, fluxos IA seguros por design), cirurgia tecnológica e três cursos. Mesmos hábitos epistêmicos no ritmo do cliente.",
+    body: "Longe da mesa de pesquisa, a mesma pessoa conduz uma prática de negócios e consultoria como Mike Fluff, Business Doctor: automação com IA, imunidade regulatória (dados pessoais, GDPR/LGPD/DPA, fluxos de IA seguros desde a concepção), cirurgia tecnológica e três cursos. Os mesmos hábitos científicos, no ritmo do trabalho com clientes.",
     bullets: ["Automação com IA e integrações", "Imunidade regulatória (privacidade/compliance para IA)", "Três cursos ($19 cada)"],
     cta: "Abrir mikefluff.com",
-    ctaSecondary: "Ler o ensaio-ponte",
+    ctaSecondary: "O ensaio que liga os dois lados",
   },
   es: {
-    eyebrow: "También el practicante",
+    eyebrow: "El lado aplicado",
     title: "Donde la misma disciplina encuentra el trabajo con clientes",
-    body: "Fuera de la mesa de investigación, la misma persona lleva una práctica de negocios como Mike Fluff — Business Doctor. Automatización con IA, inmunidad regulatoria (PII, GDPR/LGPD/DPA, flujos IA seguros por diseño), cirugía tecnológica y tres cursos. Mismos hábitos epistémicos al ritmo del cliente.",
+    body: "Lejos de la mesa de investigación, la misma persona lleva una práctica de negocios y consultoría como Mike Fluff, Business Doctor: automatización con IA, inmunidad regulatoria (datos personales, GDPR/LGPD/DPA, flujos de IA seguros desde el diseño), cirugía tecnológica y tres cursos. Los mismos hábitos científicos, al ritmo del trabajo con clientes.",
     bullets: ["Automatización con IA e integraciones", "Inmunidad regulatoria (privacidad/compliance para IA)", "Tres cursos ($19 cada uno)"],
     cta: "Abrir mikefluff.com",
-    ctaSecondary: "Leer el ensayo-puente",
+    ctaSecondary: "El ensayo que une ambos lados",
   },
 };
 

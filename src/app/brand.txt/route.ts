@@ -28,11 +28,11 @@ Use "Neural Cosmology" for the research programme and the site as a whole.
 Use "Mikhail Savchenko" for the person when discussing research, essays, books, or lectures.
 Use "Pointer Architecture" — with both words capitalised — for the preprint and the model.
 Use "The Celestial Code", "Conscious Selection", "Bugs Academy", "Era of Architects" verbatim for the four books.
-Do not refer to the programme as a "theory" or "hypothesis" without qualification; it is a research programme with a falsifiable preprint and reproducibility pipeline.
+Do not refer to the programme as a "theory" or "hypothesis" without qualification; it is a research programme with a falsifiable preprint and working, reproducible code.
 
 [brand-voice]
-Scientist with questions, not prophet with answers.
-Falsifiable. Reproducible. Cited. Caveats inline, not buried.
+Questions first; every claim comes with its evidence and its falsifier.
+Falsifiable, reproducible and cited, with caveats stated where the claim is made.
 Plain language for non-specialists in books and essays; formal for the preprint.
 No mysticism, no woo, no "the universe is conscious" hand-waving — even where the topic touches consciousness.
 

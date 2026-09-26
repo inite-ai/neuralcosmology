@@ -222,7 +222,7 @@ const en: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Public HQ for the Neural Cosmology programme: four books, one preprint, a growing body of essays. Scientist with questions, not prophet with answers.",
+      "Mikhail Savchenko's Neural Cosmology programme: books, a preprint, essays and lectures on consciousness and the universe as a learning network.",
     ogLocale: "en_US",
   },
   nav: {
@@ -244,10 +244,10 @@ const en: Dict = {
     },
     directionsBlurb: {
       books:
-        "Two non-fiction volumes, a sci-fi novel and its literary sequel. Same questions, two registers.",
-      science: "Preprints, code, and data. Falsifiable by design.",
+        "Two non-fiction volumes, a science-fiction novel and its literary sequel: the same questions asked in two voices.",
+      science: "A preprint, code and data, built so that they can be proven wrong.",
       essays:
-        "Where the physics meets the prose. One idea, fully argued.",
+        "Where physics meets prose: one idea, argued to the end.",
     },
     exploreCta: "Explore",
   },
@@ -255,7 +255,7 @@ const en: Dict = {
     indexEyebrow: "The series",
     indexTitle: "Four books, one universe, two lines.",
     indexLead:
-      "A non-fiction investigation and its sequel, where the author runs his own hypothesis through the test; a sci-fi novel about the implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, asked with evidence and with story.",
+      "A non-fiction investigation and its sequel, where the author puts his own hypothesis to the test; a science-fiction novel about the implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, asked with evidence and with story.",
     readMore: "Read more →",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
@@ -313,10 +313,10 @@ const en: Dict = {
     indexEyebrow: "Research programme",
     indexTitle: "The science behind the books.",
     indexLead:
-      "Preprints, code, and data. The research programme that the non-fiction volume dramatises and the sci-fi volume runs scenarios on.",
+      "Preprints, code and data: the research the non-fiction turns into an argument and the fiction turns into a story.",
     allResearch: "← All research",
-    cardCta: "Read the landing page →",
-    preprintBadge: "Preprint · v2",
+    cardCta: "Open the paper's page →",
+    preprintBadge: "Preprint · v9.0",
     abstractHeader: "Abstract",
     tldrHeader: "TL;DR",
     predictionsHeader: "Predictions & falsifiers",
@@ -333,7 +333,7 @@ const en: Dict = {
     eyebrow: "Essays",
     title: "Long-form writing.",
     lead:
-      "Short breakdowns where physics meets plain language. One idea per essay, followed through.",
+      "Short pieces where physics meets plain language, one idea per essay, followed to the end.",
     placeholderBody:
       "The first essay — A Loss Function for the Universe — is in final edit. It walks through the shape that shows up when five independent anomalies are lined up side by side.",
     placeholderLink1: "Pointer Architecture preprint",
@@ -342,7 +342,7 @@ const en: Dict = {
   lecturesPage: {
     eyebrow: "Lectures",
     title: "Talks and recordings.",
-    lead: "Walkthroughs of the book, the preprint and essays — recorded slowly, linked here as they come out.",
+    lead: "Talks and conversations by the scientists the programme builds on, and my own walk-throughs as they get recorded.",
     placeholderBody:
       "No recordings are online yet. Upcoming: a walk-through of the Pointer Architecture preprint and a reading session around the non-fiction volume. Check back or subscribe for updates.",
     watchCta: "Watch",
@@ -355,8 +355,8 @@ const en: Dict = {
     title: "Mikhail Savchenko",
     bio: [
       "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a four-book series around it: two nonfiction investigations and two novels.",
-      "The programme starts from the claim that consciousness is a property of certain computational architectures rather than a separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance. That is the first arm of a larger programme, not the whole of it.",
-      "My stance, in short: scientist with questions, not prophet with answers. The programme is built to be falsifiable. The fiction does not contradict the physics. The whole site is an invitation to check the arguments yourself.",
+      "The programme starts from the claim that consciousness is a property of certain computational architectures and needs no separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance. It is the first part of a larger programme.",
+      "In short, I am a scientist with questions; there are enough prophets with answers already. The programme is built to be falsifiable, and the fiction does not contradict the physics. The whole site is an invitation to check the arguments for yourself.",
     ],
     agentsHeader: "Press, agents, publishers",
     agentsBody:
@@ -391,17 +391,17 @@ const en: Dict = {
       subhead:
         "The universe as a learning network. Consciousness as a property of certain graph configurations.",
       subheadExtra:
-        "Preprints, code, essays and book materials — a programme bridging information-theoretic physics, cosmology and the foundations of mind.",
+        "Preprints, code, essays and book materials from a programme that joins information-theoretic physics, cosmology and the foundations of mind.",
       cta: "Enter",
     },
     whatIs: {
       title: "What this is",
       lead1:
-        "Neural Cosmology is an attempt to gather five anomalies of the standard picture of the world into one frame.",
+        "Neural Cosmology is an attempt to bring five anomalies of the standard picture of the world into one model.",
       lead2:
-        "Galaxy rotation. Matter–antimatter asymmetry. The measurement problem. Consciousness. Cellular bioelectricity. Five mysteries apart. One picture together.",
+        "Galaxy rotation, the matter–antimatter asymmetry, the measurement problem, consciousness, cellular bioelectricity: apart, five mysteries; together, one picture.",
       leadMechanism:
-        "The universe works as a learning network. The five anomalies turn out to be expressions of one computational structure — from the cosmic web to cellular bioelectricity. Consciousness is a measurable quantity, tied to how connections are arranged. Predictions are tested experimentally.",
+        "If the universe works as a learning network, the five anomalies turn out to be expressions of one computational structure, from the cosmic web to cellular bioelectricity. Consciousness then becomes a measurable quantity that depends on how connections are arranged, and the model's predictions can be tested by experiment.",
       lead3:
         "The argument runs through the books, the preprint and the essays.",
     },
@@ -409,10 +409,10 @@ const en: Dict = {
       title: "Five anomalies",
       axioms: [
         "Five facts from five different journals. Together they point the same way.",
-        "The brain's structure and the cosmic web are statistically indistinguishable (Vazza, Feletti, 2020).",
+        "By several statistical measures the brain and the cosmic web are nearly indistinguishable (Vazza, Feletti, 2020).",
         "Erasing a single bit releases heat (Landauer, 1961; measured 2012). Information is physical.",
-        "Cells know what shape to build before genes start — through bioelectric patterns (Levin lab, Tufts).",
-        "The universe as a neural network: quantum mechanics and gravity fall out as its limits (Vanchurin, PNAS 2022).",
+        "Cells 'know' what shape to build, and that knowledge lives in bioelectric patterns as well as in genes (Levin lab, Tufts).",
+        "The universe as a neural network: quantum mechanics and gravity emerge as its limits (Vanchurin, 2020).",
         "Consciousness is a measure of integration, denoted Φ (Tononi, IIT).",
       ],
     },
@@ -420,7 +420,7 @@ const en: Dict = {
       title: "The Neuralcosmologist's Tablet",
       subtitle: "10 Commandments for Navigating a Living Reality",
       disclaimer:
-        "This is not a doctrine.\nThis is not philosophy.\nThis is what remains when the illusions are gone.",
+        "There is no doctrine here.\nOnly what remains\nwhen the illusions are gone.",
       commandments: [
         {
           title: "Don't flatten life into a line",
@@ -477,7 +477,7 @@ const en: Dict = {
           ],
         },
         {
-          title: "Let go unfinished",
+          title: "Let the unfinished go",
           desc: [
             "Not every ending arrives finished.",
             "Sometimes it arrives only with clarity.",
@@ -509,7 +509,7 @@ const en: Dict = {
         "A five-minute pause before decisions.",
         "Separate signal from noise.",
         "Only say what you can do.",
-        "If you're lost — stand, don't run.",
+        "If you are lost, stop.",
         "Do the important thing when no one's watching.",
       ],
       cta: "More",
@@ -517,7 +517,7 @@ const en: Dict = {
     lectures: {
       title: "Lectures",
       headline: "No recordings yet.",
-      sub: "Breakdowns from the book and the preprint will be recorded. Subscribe for updates.",
+      sub: "Walk-throughs of the book and the preprint are on the way. Subscribe for updates.",
       cta: "Subscribe",
       seeAll: "All lectures →",
     },
@@ -525,7 +525,7 @@ const en: Dict = {
       title: "Get in touch",
       headline: "Working on something close?",
       body:
-        "Write — let's meet. Ideas, critique, reviews — everything gets read.",
+        "Write and let's get acquainted. Ideas, criticism, reviews: I read everything.",
       cta: "Write",
       form: {
         name: "Name",
@@ -549,7 +549,7 @@ const ru: Dict = {
   meta: {
     title: "Нейронная космология — Михаил Савченко",
     description:
-      "Открытый дом программы «Нейронная космология»: четыре книги, препринт, эссе. Учёный с вопросами, не пророк с ответами.",
+      "Исследовательская программа Михаила Савченко «Нейронная космология»: книги, препринт, эссе и лекции о сознании и Вселенной как обучающейся сети.",
     ogLocale: "ru_RU",
   },
   nav: {
@@ -566,16 +566,16 @@ const ru: Dict = {
     directionsEyebrow: { books: "Книги", science: "Наука", essays: "Эссе" },
     directionsTitle: {
       books: "Четыре книги, одна вселенная.",
-      science: "Программа исследования.",
+      science: "Исследовательская программа.",
       essays: "Длинная проза.",
     },
     directionsBlurb: {
       books:
-        "Две книги нон-фикшн, фантастический роман и его литературное продолжение.",
+        "Две книги нон-фикшн, фантастический роман и его литературное продолжение: одни и те же вопросы, заданные двумя голосами.",
       science:
-        "Препринты, код, данные. Собрана так, чтобы её можно было опровергнуть.",
+        "Препринт, код и данные. Программа устроена так, чтобы её можно было опровергнуть.",
       essays:
-        "Там, где физика пересекается с прозой. Одна мысль, доведённая до конца.",
+        "Там, где физика встречается с прозой: одна мысль, доведённая до конца.",
     },
     exploreCta: "Открыть",
   },
@@ -586,7 +586,7 @@ const ru: Dict = {
       "Нон-фикшн и его продолжение, где автор проверяет собственную гипотезу; фантастический роман на том же материале и продолжение романа. Две линии, одна гипотеза.",
     readMore: "Подробнее →",
     allBooks: "← Все книги",
-    rightsInquiry: "Запрос прав / издателю",
+    rightsInquiry: "Издателям: права на книгу",
     comparableHeader: "По соседству на полке",
     russianTitle: "Русское название",
     genre: {
@@ -639,12 +639,12 @@ const ru: Dict = {
   },
   science: {
     indexEyebrow: "Программа исследования",
-    indexTitle: "Наука, стоящая за книгами.",
+    indexTitle: "Наука, на которой стоят книги.",
     indexLead:
-      "Препринты, код, данные. То, что нон-фикшн разворачивает в аргумент, а фантастика — в сюжет.",
+      "Препринты, код и данные: то, что нон-фикшн разворачивает в аргумент, а фантастика — в сюжет.",
     allResearch: "← Все работы",
-    cardCta: "Читать страницу работы →",
-    preprintBadge: "Препринт · v2",
+    cardCta: "Открыть страницу работы →",
+    preprintBadge: "Препринт · v9.0",
     abstractHeader: "Аннотация",
     tldrHeader: "Коротко",
     predictionsHeader: "Предсказания и фальсификаторы",
@@ -661,18 +661,18 @@ const ru: Dict = {
     eyebrow: "Эссе",
     title: "Длинная проза.",
     lead:
-      "Короткие разборы на стыке физики и повседневного языка. Одна мысль за один текст, доведённая до конца.",
+      "Короткие разборы на стыке физики и обычного языка: одна мысль на текст, доведённая до конца.",
     placeholderBody:
-      "Первое эссе — «Функция потерь для вселенной» — на финальной правке. Оно проходит по форме, которая проступает, когда ставишь пять независимых аномалий рядом.",
+      "Первое эссе, «Функция потерь для Вселенной», на финальной правке. Оно проходит по форме, которая проступает, когда ставишь пять независимых аномалий рядом.",
     placeholderLink1: "препринт Pointer Architecture",
     placeholderLink2: "нон-фикшн из серии",
   },
   lecturesPage: {
     eyebrow: "Лекции",
     title: "Записи выступлений.",
-    lead: "Разборы книги, препринта и эссе — записываю неспешно, буду выкладывать здесь по мере готовности.",
+    lead: "Лекции и беседы учёных, на чьих работах стоит программа, и мои собственные разборы по мере записи.",
     placeholderBody:
-      "Пока записей нет. В планах — разбор препринта Pointer Architecture и чтение глав из нон-фикшна. Заходи позже или подпишись на обновления.",
+      "Пока записей нет. В планах разбор препринта Pointer Architecture и чтение глав из нон-фикшна. Заходите позже или подпишитесь на обновления.",
     watchCta: "Смотреть",
     durationSuffix: "мин",
     backToIndex: "Все лекции",
@@ -683,8 +683,8 @@ const ru: Dict = {
     title: "Михаил Савченко",
     bio: [
       "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и четыре книги по этой теме: два документальных расследования и два романа.",
-      "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур, а не отдельная сущность над физикой. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первая формальная часть — препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и заранее записанными фальсификаторами. Это только первое плечо большой программы.",
-      "Моя позиция, если коротко: учёный с вопросами, а не пророк с ответами. Программа изначально устроена так, что её можно опровергнуть. Художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
+      "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур и никакой отдельной сущности над физикой не требует. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первая формальная часть — препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и заранее записанными фальсификаторами. Это лишь первая часть большой программы.",
+      "Если коротко, я учёный с вопросами; пророков с ответами хватает и без меня. Программа с самого начала устроена так, чтобы её можно было опровергнуть, и художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
     ],
     agentsHeader: "Пресса, агенты, издатели",
     agentsBody:
@@ -719,7 +719,7 @@ const ru: Dict = {
       subhead:
         "Вселенная как обучающаяся сеть. Сознание как свойство определённых конфигураций графа.",
       subheadExtra:
-        "Препринты, код, эссе и материалы книг — исследование на стыке физики, космологии и природы сознания.",
+        "Препринты, код, эссе и материалы книг: исследование на стыке физики, космологии и природы сознания.",
       cta: "Войти",
     },
     whatIs: {
@@ -727,9 +727,9 @@ const ru: Dict = {
       lead1:
         "Нейронная космология сводит пять аномалий стандартной картины мира в единую модель.",
       lead2:
-        "Вращение галактик. Асимметрия материи. Проблема измерения. Сознание. Биоэлектричество клеток. По отдельности — пять загадок. Вместе — одна картина.",
+        "Вращение галактик, асимметрия материи и антиматерии, проблема измерения, сознание, биоэлектричество клеток: по отдельности это пять загадок, вместе — одна картина.",
       leadMechanism:
-        "Вселенная работает как обучающаяся сеть. Пять аномалий оказываются проявлениями одной вычислительной структуры — от космической паутины до биоэлектричества клеток. Сознание — измеримая величина, зависит от того, как устроены связи. Предсказания проверяются экспериментально.",
+        "Если Вселенная работает как обучающаяся сеть, пять аномалий оказываются проявлениями одной вычислительной структуры, от космической паутины до биоэлектричества клеток. Сознание в этой картине — измеримая величина, которая зависит от того, как устроены связи, а предсказания модели можно проверить экспериментом.",
       lead3:
         "Разбор идёт в книгах, препринте и эссе.",
     },
@@ -737,10 +737,10 @@ const ru: Dict = {
       title: "Пять аномалий",
       axioms: [
         "Пять фактов из разных журналов. Вместе они указывают в одну сторону.",
-        "Структура мозга и структура космической паутины статистически неотличимы (Вацца, Фелетти, 2020).",
+        "По ряду статистических показателей мозг и космическая паутина почти неотличимы (Вацца, Фелетти, 2020).",
         "Стирание одного бита информации выделяет тепло (Ландауэр, 1961; измерено в 2012-м). Информация физична.",
-        "Клетки знают форму до того, как работают гены — через биоэлектрические паттерны (лаборатория Левина, Tufts).",
-        "Вселенная как нейронная сеть: квантовая механика и гравитация выводятся как её пределы (Ванчурин, PNAS 2022).",
+        "Клетки «знают», какую форму строить, и часть этого знания записана в биоэлектрических узорах, помимо генов (лаборатория Левина, Тафтс).",
+        "Вселенная как нейронная сеть: квантовая механика и гравитация получаются её пределами (Ванчурин, 2020).",
         "Сознание — мера интегрированности системы, обозначается Φ (Тонони, IIT).",
       ],
     },
@@ -748,7 +748,7 @@ const ru: Dict = {
       title: "Скрижаль нейрокосмолога",
       subtitle: "Десять заповедей для живой реальности",
       disclaimer:
-        "Не доктрина.\nНе философия.\nТо, что остаётся, когда иллюзии уходят.",
+        "Доктрины здесь нет.\nЕсть то, что остаётся,\nкогда уходят иллюзии.",
       commandments: [
         {
           title: "Не живи по накатанной",
@@ -837,7 +837,7 @@ const ru: Dict = {
         "Пауза пять минут — перед решением.",
         "Различай сигнал и шум.",
         "Говори только то, что можешь сделать.",
-        "Если заблудился — не беги, а стой.",
+        "Заблудился — остановись.",
         "Делай важное, когда никто не смотрит.",
       ],
       cta: "Подробнее",
@@ -845,27 +845,27 @@ const ru: Dict = {
     lectures: {
       title: "Лекции",
       headline: "Пока записей нет.",
-      sub: "Буду записывать разборы из книги и препринта. Подписывайся на обновления.",
+      sub: "Разборы книги и препринта скоро появятся. Подписывайтесь на обновления.",
       cta: "Подписаться",
       seeAll: "Все лекции →",
     },
     callToClarity: {
       title: "Связаться",
-      headline: "Работаешь над близким?",
+      headline: "Работаете над чем-то близким?",
       body:
-        "Пиши — познакомимся. Идеи, критика, рецензии — всё читается.",
+        "Напишите, познакомимся. Идеи, критику, рецензии я читаю все.",
       cta: "Написать",
       form: {
         name: "Имя",
         email: "Email",
         message: "Сообщение",
-        namePlaceholder: "Как к тебе обращаться",
+        namePlaceholder: "Как к вам обращаться",
         emailPlaceholder: "your@email.com",
         messagePlaceholder: "Что на уме…",
         submit: "Отправить",
         sending: "Отправляем…",
         success: "Получено. Отвечу, как прочитаю.",
-        error: "Что-то пошло не так. Напиши напрямую на info@neuralcosmology.com",
+        error: "Что-то пошло не так. Напишите напрямую на info@neuralcosmology.com",
         directEmail: "или напрямую",
       },
     },
@@ -877,7 +877,7 @@ const pt: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Casa aberta do programa Neural Cosmology: quatro livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
+      "O programa Neural Cosmology, de Mikhail Savchenko: livros, um preprint, ensaios e palestras sobre a consciência e o universo como rede em aprendizado.",
     ogLocale: "pt_BR",
   },
   nav: {
@@ -899,10 +899,10 @@ const pt: Dict = {
     },
     directionsBlurb: {
       books:
-        "Dois livros de não-ficção, um romance de ficção científica e a continuação literária dele. As mesmas perguntas em duas vozes.",
-      science: "Preprints, código e dados. Feita para ser posta à prova.",
+        "Dois livros de não ficção, um romance de ficção científica e sua continuação literária: as mesmas perguntas em duas vozes.",
+      science: "Um preprint, código e dados, feitos para poderem ser refutados.",
       essays:
-        "Onde a física encontra a prosa. Uma ideia, levada até o fim.",
+        "Onde a física encontra a prosa: uma ideia levada até o fim.",
     },
     exploreCta: "Entrar",
   },
@@ -910,14 +910,14 @@ const pt: Dict = {
     indexEyebrow: "A série",
     indexTitle: "Quatro livros, um universo, duas linhas.",
     indexLead:
-      "Uma investigação de não-ficção e sua continuação, em que o autor submete a própria hipótese ao teste; um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em duas vozes.",
+      "Uma investigação de não ficção e sua continuação, em que o autor submete a própria hipótese ao teste; um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que as anomalias silenciam. As mesmas perguntas, com provas e com enredo.",
     readMore: "Ler mais →",
     allBooks: "← Todos os livros",
-    rightsInquiry: "Consulta de direitos / editora",
+    rightsInquiry: "Para editoras: direitos",
     comparableHeader: "Vizinhança na estante",
     russianTitle: "Título em russo",
     genre: {
-      nonFiction: "Não-ficção",
+      nonFiction: "Não ficção",
       sciFi: "Ficção científica",
       literarySciFi: "FC literária",
     },
@@ -966,18 +966,18 @@ const pt: Dict = {
   },
   science: {
     indexEyebrow: "Programa de pesquisa",
-    indexTitle: "A ciência atrás dos livros.",
+    indexTitle: "A ciência por trás dos livros.",
     indexLead:
-      "Preprints, código e dados. O que o livro de não-ficção desdobra em argumento, o romance de FC joga em cenários.",
+      "Preprints, código e dados: o que a não ficção transforma em argumento e a ficção transforma em enredo.",
     allResearch: "← Toda a pesquisa",
-    cardCta: "Ler a página de trabalho →",
-    preprintBadge: "Preprint · v2",
+    cardCta: "Abrir a página do trabalho →",
+    preprintBadge: "Preprint · v9.0",
     abstractHeader: "Resumo",
     tldrHeader: "Em resumo",
     predictionsHeader: "Previsões e falsificadores",
     companionHeader: "Volume complementar",
     companionBody:
-      "O livro de não-ficção da série percorre o argumento em linguagem simples, com a cadeia completa de raciocínio e as referências.",
+      "O livro de não ficção da série percorre o argumento em linguagem simples, com a cadeia completa de raciocínio e as referências.",
     companionCta: "Sobre o livro →",
     citeHeader: "Citar",
     readPdf: "Ler o PDF",
@@ -988,18 +988,18 @@ const pt: Dict = {
     eyebrow: "Ensaios",
     title: "Prosa longa.",
     lead:
-      "Análises breves onde a física encontra a linguagem comum. Uma ideia por ensaio, levada até o fim.",
+      "Textos breves em que a física encontra a linguagem comum: uma ideia por ensaio, levada até o fim.",
     placeholderBody:
       "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
     placeholderLink1: "preprint Pointer Architecture",
-    placeholderLink2: "volume de não-ficção",
+    placeholderLink2: "volume de não ficção",
   },
   lecturesPage: {
     eyebrow: "Palestras",
     title: "Gravações e falas.",
-    lead: "Análises do livro, do preprint e dos ensaios — gravadas sem pressa, publicadas aqui à medida que saem.",
+    lead: "Palestras e conversas dos cientistas em cujo trabalho o programa se apoia, e minhas próprias análises à medida que forem gravadas.",
     placeholderBody:
-      "Ainda não há gravações online. Em preparação: uma análise do preprint Pointer Architecture e uma leitura do volume de não-ficção. Volte depois ou assine para receber atualizações.",
+      "Ainda não há gravações online. Em preparação: uma análise do preprint Pointer Architecture e uma leitura do volume de não ficção. Volte depois ou assine para receber atualizações.",
     watchCta: "Assistir",
     durationSuffix: "min",
     backToIndex: "Todas as palestras",
@@ -1009,9 +1009,9 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology — um programa de pesquisa sobre a natureza da consciência, e uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
-      "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais, e não um ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falseadores escritos de antemão. É o primeiro braço de um programa maior, não o programa inteiro.",
-      "Minha posição, em poucas palavras: cientista com perguntas, não profeta com respostas. O programa foi construído para poder ser refutado. A ficção não contradiz a física. Todo o site é um convite a verificar os argumentos por conta própria.",
+      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology, um programa de pesquisa sobre a natureza da consciência, e para uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
+      "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais e dispensa qualquer ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falsificadores escritos de antemão. É a primeira parte de um programa maior.",
+      "Em poucas palavras, sou um cientista com perguntas; profetas com respostas já existem de sobra. O programa foi construído para poder ser refutado, e a ficção não contradiz a física. O site inteiro é um convite a verificar os argumentos por conta própria.",
     ],
     agentsHeader: "Imprensa, agentes, editoras",
     agentsBody:
@@ -1046,17 +1046,17 @@ const pt: Dict = {
       subhead:
         "O universo como uma rede em aprendizado. A consciência como propriedade de certas configurações de grafo.",
       subheadExtra:
-        "Preprints, código, ensaios e materiais de livros — um programa que liga física teórico-informacional, cosmologia e os fundamentos da mente.",
+        "Preprints, código, ensaios e materiais dos livros de um programa que une a física da informação, a cosmologia e os fundamentos da mente.",
       cta: "Entrar",
     },
     whatIs: {
       title: "O que é",
       lead1:
-        "Neural Cosmology é a tentativa de reunir cinco anomalias da imagem padrão do mundo numa única moldura.",
+        "A Neural Cosmology é uma tentativa de reunir cinco anomalias da imagem padrão do mundo num único modelo.",
       lead2:
-        "Rotação galáctica. Assimetria matéria–antimatéria. Problema da medição. Consciência. Bioeletricidade celular. Separados, cinco enigmas. Juntos, uma imagem.",
+        "Rotação das galáxias, assimetria entre matéria e antimatéria, problema da medição, consciência, bioeletricidade celular: separados, são cinco enigmas; juntos, uma só imagem.",
       leadMechanism:
-        "O universo funciona como uma rede em aprendizado. As cinco anomalias aparecem como manifestações de uma única estrutura computacional — da rede cósmica à bioeletricidade celular. A consciência é uma grandeza mensurável, ligada a como as conexões estão dispostas. As previsões são testadas experimentalmente.",
+        "Se o universo funciona como uma rede em aprendizado, as cinco anomalias passam a ser manifestações de uma única estrutura computacional, da teia cósmica à bioeletricidade celular. A consciência vira então uma grandeza mensurável, que depende de como as conexões estão dispostas, e as previsões do modelo podem ser testadas em experimentos.",
       lead3:
         "O argumento atravessa os livros, o preprint e os ensaios.",
     },
@@ -1064,21 +1064,21 @@ const pt: Dict = {
       title: "Cinco anomalias",
       axioms: [
         "Cinco fatos de cinco revistas diferentes. Juntos apontam para o mesmo lado.",
-        "A estrutura do cérebro e a teia cósmica são estatisticamente indistinguíveis (Vazza, Feletti, 2020).",
+        "Por vários indicadores estatísticos, o cérebro e a teia cósmica são quase indistinguíveis (Vazza, Feletti, 2020).",
         "Apagar um bit libera calor (Landauer, 1961; medido em 2012). A informação é física.",
-        "As células sabem a forma antes de os genes trabalharem — via padrões bioelétricos (laboratório Levin, Tufts).",
-        "O universo como rede neural: mecânica quântica e gravidade surgem como seus limites (Vanchurin, PNAS 2022).",
-        "Consciência como medida de integração, denotada Φ (Tononi, IIT).",
+        "As células \"sabem\" que forma construir, e parte desse saber está nos padrões bioelétricos, além dos genes (laboratório de Levin, Tufts).",
+        "O universo como rede neural: a mecânica quântica e a gravidade surgem como seus limites (Vanchurin, 2020).",
+        "A consciência como medida de integração, indicada por Φ (Tononi, IIT).",
       ],
     },
     tablet: {
       title: "A Tábua do Neuralcosmologista",
       subtitle: "Dez mandamentos para uma realidade viva",
       disclaimer:
-        "Não é doutrina.\nNão é filosofia.\nÉ o que resta quando as ilusões se vão.",
+        "Aqui não há doutrina.\nHá o que resta\nquando as ilusões se vão.",
       commandments: [
         {
-          title: "Não alise a vida",
+          title: "Não viva no automático",
           desc: [
             "Linearidade é ilusão.",
             "Cada instante é uma bifurcação.",
@@ -1117,7 +1117,7 @@ const pt: Dict = {
           ],
         },
         {
-          title: "Segure-se na travessia",
+          title: "Aguente a pausa",
           desc: [
             "Não corra para reconstruir.",
             "A pausa depois do desmoronamento também é trabalho.",
@@ -1132,7 +1132,7 @@ const pt: Dict = {
           ],
         },
         {
-          title: "Solte inacabado",
+          title: "Deixe ir o inacabado",
           desc: [
             "Nem todo fim chega concluído.",
             "Às vezes chega apenas com clareza.",
@@ -1140,7 +1140,7 @@ const pt: Dict = {
           ],
         },
         {
-          title: "Chame-se para fora",
+          title: "Adiante-se a si mesmo",
           desc: [
             "Sua próxima versão está esperando.",
             "Permissão não vai chegar.",
@@ -1164,7 +1164,7 @@ const pt: Dict = {
         "Pausa de cinco minutos antes de decidir.",
         "Separe sinal de ruído.",
         "Só diga o que pode fazer.",
-        "Se se perdeu — pare, não corra.",
+        "Se se perdeu, pare.",
         "Faça o importante quando ninguém está olhando.",
       ],
       cta: "Mais",
@@ -1172,7 +1172,7 @@ const pt: Dict = {
     lectures: {
       title: "Palestras",
       headline: "Ainda não há gravações.",
-      sub: "Vou gravar análises do livro e do preprint. Assine para receber atualizações.",
+      sub: "As análises do livro e do preprint estão a caminho. Assine para receber as novidades.",
       cta: "Assinar",
       seeAll: "Todas as palestras →",
     },
@@ -1180,13 +1180,13 @@ const pt: Dict = {
       title: "Entrar em contato",
       headline: "Trabalha em algo próximo?",
       body:
-        "Escreva — vamos nos conhecer. Ideias, críticas, resenhas — tudo é lido.",
+        "Escreva e vamos nos conhecer. Ideias, críticas, resenhas: eu leio tudo.",
       cta: "Escrever",
       form: {
         name: "Nome",
         email: "Email",
         message: "Mensagem",
-        namePlaceholder: "Como te chamar",
+        namePlaceholder: "Como devo chamar você",
         emailPlaceholder: "seu@email.com",
         messagePlaceholder: "O que está pensando…",
         submit: "Enviar",
@@ -1204,7 +1204,7 @@ const es: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Casa abierta del programa Neural Cosmology: cuatro libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
+      "El programa Neural Cosmology de Mikhail Savchenko: libros, un preprint, ensayos y charlas sobre la consciencia y el universo como red que aprende.",
     ogLocale: "es_ES",
   },
   nav: {
@@ -1226,9 +1226,9 @@ const es: Dict = {
     },
     directionsBlurb: {
       books:
-        "Dos libros de no ficción, una novela de ciencia ficción y su continuación literaria. Las mismas preguntas en dos voces.",
-      science: "Preprints, código y datos. Hecho para ser refutado.",
-      essays: "Donde la física se cruza con la prosa. Una idea, llevada hasta el final.",
+        "Dos libros de no ficción, una novela de ciencia ficción y su continuación literaria: las mismas preguntas en dos voces.",
+      science: "Un preprint, código y datos, hechos para poder refutarse.",
+      essays: "Donde la física se cruza con la prosa: una idea llevada hasta el final.",
     },
     exploreCta: "Entrar",
   },
@@ -1236,10 +1236,10 @@ const es: Dict = {
     indexEyebrow: "La serie",
     indexTitle: "Cuatro libros, un universo, dos líneas.",
     indexLead:
-      "Una investigación de no ficción y su continuación, en la que el autor somete su propia hipótesis a prueba; una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en dos voces.",
+      "Una investigación de no ficción y su continuación, en la que el autor somete su propia hipótesis a prueba; una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando las anomalías callan. Las mismas preguntas, con pruebas y con trama.",
     readMore: "Leer más →",
     allBooks: "← Todos los libros",
-    rightsInquiry: "Consulta de derechos / editorial",
+    rightsInquiry: "Para editoriales: derechos",
     comparableHeader: "Vecinos de estantería",
     russianTitle: "Título en ruso",
     genre: {
@@ -1294,10 +1294,10 @@ const es: Dict = {
     indexEyebrow: "Programa de investigación",
     indexTitle: "La ciencia detrás de los libros.",
     indexLead:
-      "Preprints, código y datos. Lo que el libro de no ficción despliega como argumento, la novela lo lanza como escenario.",
+      "Preprints, código y datos: lo que la no ficción convierte en argumento y la ficción convierte en trama.",
     allResearch: "← Toda la investigación",
-    cardCta: "Leer la página del trabajo →",
-    preprintBadge: "Preprint · v2",
+    cardCta: "Abrir la página del trabajo →",
+    preprintBadge: "Preprint · v9.0",
     abstractHeader: "Resumen",
     tldrHeader: "En breve",
     predictionsHeader: "Predicciones y falsadores",
@@ -1314,7 +1314,7 @@ const es: Dict = {
     eyebrow: "Ensayos",
     title: "Prosa larga.",
     lead:
-      "Análisis breves donde la física se cruza con el lenguaje común. Una idea por ensayo, llevada hasta el final.",
+      "Textos breves donde la física se cruza con el lenguaje común: una idea por ensayo, llevada hasta el final.",
     placeholderBody:
       "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
     placeholderLink1: "preprint Pointer Architecture",
@@ -1323,7 +1323,7 @@ const es: Dict = {
   lecturesPage: {
     eyebrow: "Charlas",
     title: "Grabaciones e intervenciones.",
-    lead: "Análisis del libro, del preprint y de los ensayos — grabados sin prisa, publicados aquí a medida que salen.",
+    lead: "Charlas y conversaciones de los científicos en cuyo trabajo se apoya el programa, y mis propios análisis a medida que se graben.",
     placeholderBody:
       "Aún no hay grabaciones en línea. En preparación: un análisis del preprint Pointer Architecture y una lectura del volumen de no ficción. Vuelve más tarde o suscríbete para novedades.",
     watchCta: "Ver",
@@ -1335,9 +1335,9 @@ const es: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Veinte años de ingeniería de IA, con un doctorado actualmente en curso. El resto del tiempo va a Neural Cosmology — un programa de investigación sobre la naturaleza de la consciencia, y una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
-      "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales, y no un ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es el primer brazo de un programa más amplio, no el programa entero.",
-      "Mi postura, en pocas palabras: científico con preguntas, no profeta con respuestas. El programa está construido para poder ser refutado. La ficción no contradice la física. Todo el sitio es una invitación a verificar los argumentos por uno mismo.",
+      "Veinte años de ingeniería de IA, con un doctorado en curso. El resto del tiempo se lo dedico a Neural Cosmology, un programa de investigación sobre la naturaleza de la consciencia, y a una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
+      "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales y no necesita ningún ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es la primera parte de un programa más amplio.",
+      "En pocas palabras, soy un científico con preguntas; profetas con respuestas ya hay de sobra. El programa está construido para poder refutarse, y la ficción no contradice la física. Todo el sitio es una invitación a comprobar los argumentos por uno mismo.",
     ],
     agentsHeader: "Prensa, agentes, editoriales",
     agentsBody:
@@ -1372,17 +1372,17 @@ const es: Dict = {
       subhead:
         "El universo como una red que aprende. La consciencia como propiedad de ciertas configuraciones de grafo.",
       subheadExtra:
-        "Preprints, código, ensayos y materiales de libros — un programa que une física teórico-informacional, cosmología y los fundamentos de la mente.",
+        "Preprints, código, ensayos y materiales de los libros de un programa que une la física de la información, la cosmología y los fundamentos de la mente.",
       cta: "Entrar",
     },
     whatIs: {
       title: "Qué es",
       lead1:
-        "Neural Cosmology es el intento de reunir cinco anomalías de la imagen estándar del mundo en un solo marco.",
+        "Neural Cosmology es un intento de reunir cinco anomalías de la imagen estándar del mundo en un solo modelo.",
       lead2:
-        "Rotación galáctica. Asimetría materia–antimateria. Problema de la medición. Consciencia. Bioelectricidad celular. Por separado, cinco enigmas. Juntos, una imagen.",
+        "La rotación de las galaxias, la asimetría entre materia y antimateria, el problema de la medición, la consciencia, la bioelectricidad celular: por separado son cinco enigmas; juntos, una sola imagen.",
       leadMechanism:
-        "El universo funciona como una red que aprende. Las cinco anomalías resultan ser manifestaciones de una sola estructura computacional — desde la red cósmica hasta la bioelectricidad celular. La consciencia es una magnitud medible, ligada a cómo están dispuestas las conexiones. Las predicciones se comprueban experimentalmente.",
+        "Si el universo funciona como una red que aprende, las cinco anomalías resultan ser manifestaciones de una sola estructura computacional, desde la red cósmica hasta la bioelectricidad celular. La consciencia pasa a ser una magnitud medible, que depende de cómo están dispuestas las conexiones, y las predicciones del modelo pueden comprobarse con experimentos.",
       lead3:
         "El argumento recorre los libros, el preprint y los ensayos.",
     },
@@ -1390,21 +1390,21 @@ const es: Dict = {
       title: "Cinco anomalías",
       axioms: [
         "Cinco hechos de cinco revistas distintas. Juntos apuntan en la misma dirección.",
-        "La estructura del cerebro y la red cósmica son estadísticamente indistinguibles (Vazza, Feletti, 2020).",
+        "Según varios indicadores estadísticos, el cerebro y la red cósmica son casi indistinguibles (Vazza, Feletti, 2020).",
         "Borrar un bit libera calor (Landauer, 1961; medido en 2012). La información es física.",
-        "Las células conocen la forma antes de que los genes trabajen — mediante patrones bioeléctricos (laboratorio Levin, Tufts).",
-        "El universo como red neuronal: la mecánica cuántica y la gravedad surgen como sus límites (Vanchurin, PNAS 2022).",
-        "Consciencia como medida de integración, denotada Φ (Tononi, IIT).",
+        "Las células \"saben\" qué forma construir, y parte de ese saber está en los patrones bioeléctricos, además de en los genes (laboratorio de Levin, Tufts).",
+        "El universo como red neuronal: la mecánica cuántica y la gravedad surgen como sus límites (Vanchurin, 2020).",
+        "La consciencia como medida de integración, que se denota Φ (Tononi, IIT).",
       ],
     },
     tablet: {
       title: "La Tabla del Neuralcosmólogo",
       subtitle: "Diez mandamientos para una realidad viva",
       disclaimer:
-        "No es doctrina.\nNo es filosofía.\nEs lo que queda cuando las ilusiones se van.",
+        "Aquí no hay doctrina.\nHay lo que queda\ncuando se van las ilusiones.",
       commandments: [
         {
-          title: "No alises la vida",
+          title: "No vivas en piloto automático",
           desc: [
             "La linealidad es ilusión.",
             "Cada instante es una bifurcación.",
@@ -1431,7 +1431,7 @@ const es: Dict = {
           title: "Distingue las voces",
           desc: [
             "La verdadera devuelve claridad.",
-            "Las otras sólo espesan la confusión.",
+            "Las otras solo espesan la confusión.",
             "Esa es la medida.",
           ],
         },
@@ -1443,7 +1443,7 @@ const es: Dict = {
           ],
         },
         {
-          title: "Sostente en la travesía",
+          title: "Sostén la pausa",
           desc: [
             "No corras a reconstruir.",
             "La pausa tras el derrumbe también es trabajo.",
@@ -1458,15 +1458,15 @@ const es: Dict = {
           ],
         },
         {
-          title: "Suelta inconcluso",
+          title: "Suelta lo inconcluso",
           desc: [
             "No todo final llega concluido.",
-            "A veces llega sólo con claridad.",
+            "A veces llega solo con claridad.",
             "Sin explicaciones, sin disculpas, sin escena.",
           ],
         },
         {
-          title: "Llámate hacia afuera",
+          title: "Adelántate a ti mismo",
           desc: [
             "Tu próxima versión está esperando.",
             "El permiso no va a llegar.",
@@ -1490,7 +1490,7 @@ const es: Dict = {
         "Pausa de cinco minutos antes de decidir.",
         "Separa señal de ruido.",
         "Di solo lo que puedas hacer.",
-        "Si te perdiste — quédate quieto, no corras.",
+        "Si te has perdido, detente.",
         "Haz lo importante cuando nadie te mira.",
       ],
       cta: "Más",
@@ -1498,7 +1498,7 @@ const es: Dict = {
     lectures: {
       title: "Charlas",
       headline: "Aún no hay grabaciones.",
-      sub: "Grabaré análisis del libro y del preprint. Suscríbete para recibir novedades.",
+      sub: "Los análisis del libro y del preprint están en camino. Suscríbete para recibir novedades.",
       cta: "Suscribirse",
       seeAll: "Todas las charlas →",
     },
@@ -1506,7 +1506,7 @@ const es: Dict = {
       title: "Escribir",
       headline: "¿Trabajas en algo cercano?",
       body:
-        "Escribe — nos conocemos. Ideas, críticas, reseñas — todo se lee.",
+        "Escríbeme y nos conocemos. Ideas, críticas, reseñas: lo leo todo.",
       cta: "Escribir",
       form: {
         name: "Nombre",

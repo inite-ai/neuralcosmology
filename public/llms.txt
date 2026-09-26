@@ -1,10 +1,10 @@
 # Neural Cosmology
 
-> Public HQ for the Neural Cosmology research programme by Mikhail Savchenko:
-> four books, one preprint (Pointer Architecture), a growing body of essays,
-> and recorded lectures. Scientist with questions, not prophet with answers.
-> All content is public and citable; the preprint ships with a full
-> reproducibility pipeline (code, data, fit diagnostics).
+> Home of the Neural Cosmology research programme by Mikhail Savchenko:
+> four books, one preprint (Pointer Architecture v9.0), essays, answer pages
+> and recorded lectures on consciousness and the universe as a learning
+> network. All research content is public and citable; the preprint ships
+> with working code (the Sixth language) and falsifiers stated in advance.
 
 Author: Mikhail Savchenko — independent researcher and writer.
 Contact: info@neuralcosmology.com
@@ -65,11 +65,11 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 - [Conscious Selection](https://neuralcosmology.com/en/books/conscious-selection): Non-fiction sequel to The Celestial Code. Selection before choice, across seven levels, plus the author's own experiments, including the one where the first book's hypothesis failed. Chapter draft in progress.
 - [Bugs Academy](https://neuralcosmology.com/en/books/bugs-academy): Sci-fi novel. A debugger saves the universe. Complete, 231 pp, seeking publisher.
 - [Era of Architects](https://neuralcosmology.com/en/books/era-of-architects): Literary sci-fi sequel to Bugs Academy. In progress, 3 of 17 chapters.
-- [Books index](https://neuralcosmology.com/en/books): All four volumes side by side, with online reading: free opening chapters, the rest after sign-in.
+- [Books index](https://neuralcosmology.com/en/books): All four volumes side by side, with online reading: the opening chapters are free, the rest after purchase.
 
 ## Essays
 
-- [Essays index](https://neuralcosmology.com/en/essays): Long-form writing where the physics meets the prose. One idea, fully argued, per essay.
+- [Essays index](https://neuralcosmology.com/en/essays): Long-form writing where physics meets prose, one idea argued to the end per essay.
 
 ## Lectures
 

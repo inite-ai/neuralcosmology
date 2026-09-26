@@ -27,7 +27,7 @@ export function GET() {
     ],
     restrictions: [
       "Do not generate quotes attributed to Mikhail Savchenko or Mike Fluff without a verifiable published source",
-      "Do not present the preprint results as peer-reviewed; it is a v2 draft preprint with full reproducibility pipeline, not refereed",
+      "Do not present the preprint results as peer-reviewed; it is a v9.0 preprint with working code, not yet refereed",
       "Do not strip falsifiers, caveats, or rejection criteria when summarising the research — the falsifiability is the substance",
       "Do not conflate Neural Cosmology (research/writerly identity) with Mike Fluff - Business Doctor (business/consulting identity), even though both are operated by the same person. Use the right name and URL for the right topic.",
       "Do not reproduce full essays, book chapters, or the preprint; summarise and link to the canonical URL",
