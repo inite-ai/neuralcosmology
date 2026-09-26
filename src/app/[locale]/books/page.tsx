@@ -60,7 +60,7 @@ export default async function BooksIndexPage({
           { name: dict.nav.books, path: "/books" },
         ])}
       />
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {books.map((book) => (
           <BookCard key={book.slug} book={book} locale={locale} />
         ))}

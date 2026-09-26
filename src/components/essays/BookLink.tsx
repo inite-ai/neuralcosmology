@@ -38,6 +38,12 @@ const BOOK_PATTERNS: { re: RegExp; slug: string }[] = [
   // Russian — Эра Архитекторов
   { re: /«(Эр[а-яё]*\s+Архитекторов)»/g, slug: "era-of-architects" },
   { re: /\*(Эра\s+Архитекторов)\*/g, slug: "era-of-architects" },
+  // Russian — Осознанный Отбор
+  { re: /«(Осознанн[а-яё]*\s+Отбор[а-яё]*)»/g, slug: "conscious-selection" },
+  { re: /\*(Осознанный\s+Отбор)\*/g, slug: "conscious-selection" },
+  // English — Conscious Selection
+  { re: /\*(Conscious\s+Selection)\*/g, slug: "conscious-selection" },
+  { re: /"(Conscious\s+Selection)"/g, slug: "conscious-selection" },
   // English — Celestial Code
   { re: /\*(The\s+Celestial\s+Code|Celestial\s+Code)\*/g, slug: "celestial-code" },
   { re: /"(The\s+Celestial\s+Code|Celestial\s+Code)"/g, slug: "celestial-code" },

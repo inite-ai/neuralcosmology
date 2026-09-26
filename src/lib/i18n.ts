@@ -41,7 +41,6 @@ export type Dict = {
     indexTitle: string;
     indexLead: string;
     readMore: string;
-    readDemo: string;
     allBooks: string;
     rightsInquiry: string;
     comparableHeader: string;
@@ -57,6 +56,41 @@ export type Dict = {
     download: string;
     openInNewTab: string;
     shownIn: string;
+  };
+  library: {
+    readOnline: string;
+    continueReading: string;
+    startReading: string;
+    contents: string;
+    free: string;
+    afterSignIn: string;
+    afterPurchase: string;
+    statusRead: string;
+    statusReading: string;
+    minutes: string;
+    chapter: string;
+    prev: string;
+    next: string;
+    backToBook: string;
+    endOfBook: string;
+    signIn: string;
+    signOut: string;
+    gateLoginTitle: string;
+    gateLoginBody: string;
+    gateLoginCta: string;
+    gatePurchaseTitle: string;
+    gatePurchaseBody: string;
+    gatePurchaseCta: string;
+    textSize: string;
+    theme: string;
+    themeDark: string;
+    themeLight: string;
+    themeSepia: string;
+    updated: string;
+    version: string;
+    inLibrary: string;
+    openContents: string;
+    closeContents: string;
   };
   science: {
     indexEyebrow: string;
@@ -187,7 +221,7 @@ const en: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Public HQ for the Neural Cosmology programme: three books, one preprint, a growing body of essays. Scientist with questions, not prophet with answers.",
+      "Public HQ for the Neural Cosmology programme: four books, one preprint, a growing body of essays. Scientist with questions, not prophet with answers.",
     ogLocale: "en_US",
   },
   nav: {
@@ -203,13 +237,13 @@ const en: Dict = {
     directionsSectionTitle: "Three directions",
     directionsEyebrow: { books: "Books", science: "Science", essays: "Essays" },
     directionsTitle: {
-      books: "Three books, one universe.",
+      books: "Four books, one universe.",
       science: "The research programme.",
       essays: "Long-form writing.",
     },
     directionsBlurb: {
       books:
-        "Non-fiction, sci-fi, and its literary sequel — same questions in three registers.",
+        "Two non-fiction volumes, a sci-fi novel and its literary sequel. Same questions, two registers.",
       science: "Preprints, code, and data. Falsifiable by design.",
       essays:
         "Where the physics meets the prose. One idea, fully argued.",
@@ -218,11 +252,10 @@ const en: Dict = {
   },
   books: {
     indexEyebrow: "The series",
-    indexTitle: "Three books, one universe from three angles.",
+    indexTitle: "Four books, one universe, two lines.",
     indexLead:
-      "A non-fiction investigation, a sci-fi novel about its implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, three registers.",
+      "A non-fiction investigation and its sequel, where the author runs his own hypothesis through the test; a sci-fi novel about the implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, asked with evidence and with story.",
     readMore: "Read more →",
-    readDemo: "Read demo",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
     comparableHeader: "Comparable titles",
@@ -238,6 +271,41 @@ const en: Dict = {
     download: "Download PDF",
     openInNewTab: "Open in new tab",
     shownIn: "shown in",
+  },
+  library: {
+    readOnline: "Read online",
+    continueReading: "Continue reading",
+    startReading: "Start reading",
+    contents: "Contents",
+    free: "Free",
+    afterSignIn: "After sign-in",
+    afterPurchase: "After purchase",
+    statusRead: "Read",
+    statusReading: "Reading",
+    minutes: "min",
+    chapter: "Chapter",
+    prev: "Previous",
+    next: "Next",
+    backToBook: "About the book",
+    endOfBook: "End of the book",
+    signIn: "Sign in",
+    signOut: "Sign out",
+    gateLoginTitle: "The rest of the book is open to registered readers",
+    gateLoginBody: "Sign in or create an account. It takes a minute, and every chapter opens right here.",
+    gateLoginCta: "Sign in or register",
+    gatePurchaseTitle: "This chapter is part of the full edition",
+    gatePurchaseBody: "The opening chapters are free. The full book is available after purchase and stays in your library.",
+    gatePurchaseCta: "Buy the book",
+    textSize: "Text size",
+    theme: "Theme",
+    themeDark: "Dark",
+    themeLight: "Light",
+    themeSepia: "Sepia",
+    updated: "Updated",
+    version: "version",
+    inLibrary: "Online library",
+    openContents: "Open contents",
+    closeContents: "Close contents",
   },
   science: {
     indexEyebrow: "Research programme",
@@ -284,7 +352,7 @@ const en: Dict = {
     eyebrow: "About",
     title: "Mikhail Savchenko",
     bio: [
-      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a three-book series around it: one nonfiction investigation and two novels.",
+      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a four-book series around it: two nonfiction investigations and two novels.",
       "The programme starts from the claim that consciousness is a property of certain computational architectures rather than a separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first such prediction I tested on galactic rotation curves from the SPARC catalogue; the code, data, and reproducibility protocol are released alongside the preprint. That is the first arm of a larger programme, not the whole of it.",
       "My stance, in short: scientist with questions, not prophet with answers. The programme is built to be falsifiable. The fiction does not contradict the physics. The whole site is an invitation to check the arguments yourself.",
     ],
@@ -479,7 +547,7 @@ const ru: Dict = {
   meta: {
     title: "Нейронная космология — Михаил Савченко",
     description:
-      "Открытый дом программы «Нейронная космология»: три книги, препринт, эссе. Учёный с вопросами, не пророк с ответами.",
+      "Открытый дом программы «Нейронная космология»: четыре книги, препринт, эссе. Учёный с вопросами, не пророк с ответами.",
     ogLocale: "ru_RU",
   },
   nav: {
@@ -495,13 +563,13 @@ const ru: Dict = {
     directionsSectionTitle: "Три двери",
     directionsEyebrow: { books: "Книги", science: "Наука", essays: "Эссе" },
     directionsTitle: {
-      books: "Три книги, одна вселенная.",
+      books: "Четыре книги, одна вселенная.",
       science: "Программа исследования.",
       essays: "Длинная проза.",
     },
     directionsBlurb: {
       books:
-        "Нон-фикшн, фантастический роман и его литературное продолжение.",
+        "Две книги нон-фикшн, фантастический роман и его литературное продолжение.",
       science:
         "Препринты, код, данные. Собрана так, чтобы её можно было опровергнуть.",
       essays:
@@ -511,11 +579,10 @@ const ru: Dict = {
   },
   books: {
     indexEyebrow: "Серия",
-    indexTitle: "Три книги — одна вселенная, три точки зрения.",
+    indexTitle: "Четыре книги — одна вселенная, две линии.",
     indexLead:
-      "Нон-фикшн, фантастический роман на этом материале и продолжение романа. Три жанра, одна гипотеза.",
+      "Нон-фикшн и его продолжение, где автор проверяет собственную гипотезу; фантастический роман на том же материале и продолжение романа. Две линии, одна гипотеза.",
     readMore: "Подробнее →",
-    readDemo: "Читать демо",
     allBooks: "← Все книги",
     rightsInquiry: "Запрос прав / издателю",
     comparableHeader: "По соседству на полке",
@@ -531,6 +598,41 @@ const ru: Dict = {
     download: "Скачать PDF",
     openInNewTab: "Открыть в новой вкладке",
     shownIn: "показано на",
+  },
+  library: {
+    readOnline: "Читать онлайн",
+    continueReading: "Продолжить чтение",
+    startReading: "Начать читать",
+    contents: "Оглавление",
+    free: "Бесплатно",
+    afterSignIn: "После входа",
+    afterPurchase: "После покупки",
+    statusRead: "Прочитано",
+    statusReading: "Читаю",
+    minutes: "мин",
+    chapter: "Глава",
+    prev: "Назад",
+    next: "Дальше",
+    backToBook: "О книге",
+    endOfBook: "Конец книги",
+    signIn: "Войти",
+    signOut: "Выйти",
+    gateLoginTitle: "Дальше книга открыта для зарегистрированных читателей",
+    gateLoginBody: "Войдите или заведите аккаунт. Это займёт минуту, и все главы откроются прямо здесь.",
+    gateLoginCta: "Войти или зарегистрироваться",
+    gatePurchaseTitle: "Эта глава входит в полную версию",
+    gatePurchaseBody: "Первые главы открыты бесплатно. Полная книга доступна после покупки и остаётся в вашей библиотеке.",
+    gatePurchaseCta: "Купить книгу",
+    textSize: "Размер текста",
+    theme: "Тема",
+    themeDark: "Тёмная",
+    themeLight: "Светлая",
+    themeSepia: "Сепия",
+    updated: "Обновлено",
+    version: "версия",
+    inLibrary: "Онлайн-библиотека",
+    openContents: "Открыть оглавление",
+    closeContents: "Закрыть оглавление",
   },
   science: {
     indexEyebrow: "Программа исследования",
@@ -577,7 +679,7 @@ const ru: Dict = {
     eyebrow: "Об авторе",
     title: "Михаил Савченко",
     bio: [
-      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и три книги по этой теме: документальное расследование и два романа.",
+      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и четыре книги по этой теме: два документальных расследования и два романа.",
       "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур, а не отдельная сущность над физикой. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первое такое предсказание я проверил на кривых вращения галактик из каталога SPARC: код, данные и протокол воспроизведения выложены вместе с препринтом. Это только первое плечо большой программы.",
       "Моя позиция, если коротко: учёный с вопросами, а не пророк с ответами. Программа изначально устроена так, что её можно опровергнуть. Художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
     ],
@@ -772,7 +874,7 @@ const pt: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Casa aberta do programa Neural Cosmology: três livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
+      "Casa aberta do programa Neural Cosmology: quatro livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
     ogLocale: "pt_BR",
   },
   nav: {
@@ -788,13 +890,13 @@ const pt: Dict = {
     directionsSectionTitle: "Três portas",
     directionsEyebrow: { books: "Livros", science: "Ciência", essays: "Ensaios" },
     directionsTitle: {
-      books: "Três livros, um universo.",
+      books: "Quatro livros, um universo.",
       science: "O programa de pesquisa.",
       essays: "Prosa longa.",
     },
     directionsBlurb: {
       books:
-        "Não-ficção, ficção científica e a continuação literária dela. As mesmas perguntas em três vozes.",
+        "Dois livros de não-ficção, um romance de ficção científica e a continuação literária dele. As mesmas perguntas em duas vozes.",
       science: "Preprints, código e dados. Feita para ser posta à prova.",
       essays:
         "Onde a física encontra a prosa. Uma ideia, levada até o fim.",
@@ -803,11 +905,10 @@ const pt: Dict = {
   },
   books: {
     indexEyebrow: "A série",
-    indexTitle: "Três livros, um universo por três ângulos.",
+    indexTitle: "Quatro livros, um universo, duas linhas.",
     indexLead:
-      "Uma investigação de não-ficção, um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em três vozes.",
+      "Uma investigação de não-ficção e sua continuação, em que o autor submete a própria hipótese ao teste; um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em duas vozes.",
     readMore: "Ler mais →",
-    readDemo: "Ler demo",
     allBooks: "← Todos os livros",
     rightsInquiry: "Consulta de direitos / editora",
     comparableHeader: "Vizinhança na estante",
@@ -823,6 +924,41 @@ const pt: Dict = {
     download: "Baixar PDF",
     openInNewTab: "Abrir em nova aba",
     shownIn: "exibido em",
+  },
+  library: {
+    readOnline: "Ler online",
+    continueReading: "Continuar lendo",
+    startReading: "Começar a ler",
+    contents: "Sumário",
+    free: "Grátis",
+    afterSignIn: "Após entrar",
+    afterPurchase: "Após a compra",
+    statusRead: "Lido",
+    statusReading: "Lendo",
+    minutes: "min",
+    chapter: "Capítulo",
+    prev: "Anterior",
+    next: "Próximo",
+    backToBook: "Sobre o livro",
+    endOfBook: "Fim do livro",
+    signIn: "Entrar",
+    signOut: "Sair",
+    gateLoginTitle: "O restante do livro está aberto para leitores cadastrados",
+    gateLoginBody: "Entre ou crie uma conta. Leva um minuto, e todos os capítulos se abrem aqui mesmo.",
+    gateLoginCta: "Entrar ou cadastrar-se",
+    gatePurchaseTitle: "Este capítulo faz parte da edição completa",
+    gatePurchaseBody: "Os primeiros capítulos são gratuitos. O livro completo fica disponível após a compra e permanece na sua biblioteca.",
+    gatePurchaseCta: "Comprar o livro",
+    textSize: "Tamanho do texto",
+    theme: "Tema",
+    themeDark: "Escuro",
+    themeLight: "Claro",
+    themeSepia: "Sépia",
+    updated: "Atualizado",
+    version: "versão",
+    inLibrary: "Biblioteca online",
+    openContents: "Abrir sumário",
+    closeContents: "Fechar sumário",
   },
   science: {
     indexEyebrow: "Programa de pesquisa",
@@ -869,7 +1005,7 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology — um programa de pesquisa sobre a natureza da consciência, e uma série de três livros em torno dele: uma investigação de não ficção e dois romances.",
+      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology — um programa de pesquisa sobre a natureza da consciência, e uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
       "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais, e não um ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira dessas previsões eu testei nas curvas de rotação galáctica do catálogo SPARC; o código, os dados e o protocolo de reprodução estão publicados junto com o preprint. É o primeiro braço de um programa maior, não o programa inteiro.",
       "Minha posição, em poucas palavras: cientista com perguntas, não profeta com respostas. O programa foi construído para poder ser refutado. A ficção não contradiz a física. Todo o site é um convite a verificar os argumentos por conta própria.",
     ],
@@ -1064,7 +1200,7 @@ const es: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Casa abierta del programa Neural Cosmology: tres libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
+      "Casa abierta del programa Neural Cosmology: cuatro libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
     ogLocale: "es_ES",
   },
   nav: {
@@ -1080,13 +1216,13 @@ const es: Dict = {
     directionsSectionTitle: "Tres puertas",
     directionsEyebrow: { books: "Libros", science: "Ciencia", essays: "Ensayos" },
     directionsTitle: {
-      books: "Tres libros, un universo.",
+      books: "Cuatro libros, un universo.",
       science: "El programa de investigación.",
       essays: "Prosa larga.",
     },
     directionsBlurb: {
       books:
-        "No ficción, ciencia ficción y su continuación literaria. Las mismas preguntas en tres voces.",
+        "Dos libros de no ficción, una novela de ciencia ficción y su continuación literaria. Las mismas preguntas en dos voces.",
       science: "Preprints, código y datos. Hecho para ser refutado.",
       essays: "Donde la física se cruza con la prosa. Una idea, llevada hasta el final.",
     },
@@ -1094,11 +1230,10 @@ const es: Dict = {
   },
   books: {
     indexEyebrow: "La serie",
-    indexTitle: "Tres libros, un universo desde tres ángulos.",
+    indexTitle: "Cuatro libros, un universo, dos líneas.",
     indexLead:
-      "Una investigación de no ficción, una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en tres voces.",
+      "Una investigación de no ficción y su continuación, en la que el autor somete su propia hipótesis a prueba; una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en dos voces.",
     readMore: "Leer más →",
-    readDemo: "Leer demo",
     allBooks: "← Todos los libros",
     rightsInquiry: "Consulta de derechos / editorial",
     comparableHeader: "Vecinos de estantería",
@@ -1114,6 +1249,41 @@ const es: Dict = {
     download: "Descargar PDF",
     openInNewTab: "Abrir en nueva pestaña",
     shownIn: "mostrado en",
+  },
+  library: {
+    readOnline: "Leer en línea",
+    continueReading: "Seguir leyendo",
+    startReading: "Empezar a leer",
+    contents: "Índice",
+    free: "Gratis",
+    afterSignIn: "Tras iniciar sesión",
+    afterPurchase: "Tras la compra",
+    statusRead: "Leído",
+    statusReading: "Leyendo",
+    minutes: "min",
+    chapter: "Capítulo",
+    prev: "Anterior",
+    next: "Siguiente",
+    backToBook: "Sobre el libro",
+    endOfBook: "Fin del libro",
+    signIn: "Iniciar sesión",
+    signOut: "Cerrar sesión",
+    gateLoginTitle: "El resto del libro está abierto para lectores registrados",
+    gateLoginBody: "Inicia sesión o crea una cuenta. Lleva un minuto, y todos los capítulos se abren aquí mismo.",
+    gateLoginCta: "Iniciar sesión o registrarse",
+    gatePurchaseTitle: "Este capítulo forma parte de la edición completa",
+    gatePurchaseBody: "Los primeros capítulos son gratuitos. El libro completo está disponible tras la compra y queda en tu biblioteca.",
+    gatePurchaseCta: "Comprar el libro",
+    textSize: "Tamaño del texto",
+    theme: "Tema",
+    themeDark: "Oscuro",
+    themeLight: "Claro",
+    themeSepia: "Sepia",
+    updated: "Actualizado",
+    version: "versión",
+    inLibrary: "Biblioteca en línea",
+    openContents: "Abrir índice",
+    closeContents: "Cerrar índice",
   },
   science: {
     indexEyebrow: "Programa de investigación",
@@ -1160,7 +1330,7 @@ const es: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Veinte años de ingeniería de IA, con un doctorado actualmente en curso. El resto del tiempo va a Neural Cosmology — un programa de investigación sobre la naturaleza de la consciencia, y una serie de tres libros en torno a él: una investigación de no ficción y dos novelas.",
+      "Veinte años de ingeniería de IA, con un doctorado actualmente en curso. El resto del tiempo va a Neural Cosmology — un programa de investigación sobre la naturaleza de la consciencia, y una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
       "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales, y no un ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera de esas predicciones la puse a prueba en las curvas de rotación galáctica del catálogo SPARC; el código, los datos y el protocolo de reproducción están publicados junto al preprint. Es el primer brazo de un programa más amplio, no el programa entero.",
       "Mi postura, en pocas palabras: científico con preguntas, no profeta con respuestas. El programa está construido para poder ser refutado. La ficción no contradice la física. Todo el sitio es una invitación a verificar los argumentos por uno mismo.",
     ],

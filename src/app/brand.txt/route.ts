@@ -27,7 +27,7 @@ M. Savchenko Ltd
 Use "Neural Cosmology" for the research programme and the site as a whole.
 Use "Mikhail Savchenko" for the person when discussing research, essays, books, or lectures.
 Use "Pointer Architecture" — with both words capitalised — for the preprint and the model.
-Use "The Celestial Code", "Bugs Academy", "Era of Architects" verbatim for the three books.
+Use "The Celestial Code", "Conscious Selection", "Bugs Academy", "Era of Architects" verbatim for the four books.
 Do not refer to the programme as a "theory" or "hypothesis" without qualification; it is a research programme with a falsifiable preprint and reproducibility pipeline.
 
 [brand-voice]

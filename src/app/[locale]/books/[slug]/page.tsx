@@ -7,7 +7,10 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
-import { getReadable } from "@/lib/readables";
+import { getManifest, resolveBookLang } from "@/lib/library";
+import { paywallEnabled } from "@/lib/access";
+import TocList from "@/components/reader/TocList";
+import ContinueReading from "@/components/reader/ContinueReading";
 import JsonLd from "@/components/seo/JsonLd";
 import { bookSchema, breadcrumb } from "@/lib/schema";
 
@@ -16,6 +19,9 @@ const statusStyle = {
   forthcoming: "border-amber-400/40 text-amber-200",
   wip: "border-indigo-400/40 text-indigo-200",
 } as const;
+
+// Оглавление приходит из экспорта LaTeX на диске сервера — перечитываем раз в 5 минут.
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.flatMap((locale) =>
@@ -83,6 +89,10 @@ export default async function BookDetailPage({
   const hook = pickLocalized(book.hook, locale);
   const synopsis = pickLocalized(book.synopsis, locale);
   const statusLabel = pickLocalized(book.statusLabel, locale);
+  const L = dict.library;
+  const readLang = resolveBookLang(book.slug, locale);
+  const manifest = readLang ? getManifest(book.slug, readLang) : null;
+  const lockedGate = paywallEnabled() ? ("purchase" as const) : ("login" as const);
 
   const genreLabel = {
     "non-fiction": dict.books.genre.nonFiction,
@@ -190,13 +200,16 @@ export default async function BookDetailPage({
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {getReadable(`${book.slug}-demo`) && (
-                <Link
-                  href={`/${locale}/read/${book.slug}-demo`}
+              {manifest && manifest.chapters.length > 0 && (
+                <ContinueReading
+                  slug={book.slug}
+                  lang={readLang!}
+                  hrefBase={`/${locale}/read/${book.slug}`}
+                  firstId={manifest.chapters[0].id}
+                  chapterIds={manifest.chapters.map((c) => c.id)}
+                  labels={{ start: L.readOnline, continue: L.continueReading }}
                   className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
-                >
-                  {dict.books.readDemo}
-                </Link>
+                />
               )}
               <a
                 href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"
@@ -252,6 +265,42 @@ export default async function BookDetailPage({
             )}
           </div>
         </div>
+
+        {manifest && manifest.chapters.length > 0 && (
+          <section id="contents" className="mt-16 max-w-3xl">
+            <div className="flex items-baseline justify-between gap-4 mb-4">
+              <h2 className="text-xs uppercase tracking-[0.2em] text-indigo-300/80">
+                {L.contents}
+              </h2>
+              <span className="text-xs text-white/40">
+                {readLang !== locale && (
+                  <span className="uppercase tracking-wider mr-2">
+                    {dict.reader.shownIn} {readLang}
+                  </span>
+                )}
+                {manifest.version && `${L.version} ${manifest.version}`}
+              </span>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-2">
+              <TocList
+                variant="page"
+                items={manifest.chapters.map((c) => ({
+                  id: c.id,
+                  title: c.title,
+                  number: c.number,
+                  part: c.part,
+                  minutes: c.minutes,
+                  free: c.free,
+                  gate: c.free ? "open" : lockedGate,
+                }))}
+                slug={book.slug}
+                lang={readLang!}
+                hrefBase={`/${locale}/read/${book.slug}`}
+                labels={L}
+              />
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );

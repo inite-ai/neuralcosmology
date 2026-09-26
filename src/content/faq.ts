@@ -55,7 +55,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Who is Mikhail Savchenko?",
         answer:
-          "Independent researcher and writer. Runs the Neural Cosmology programme: three books in progress, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The first observable consequence of the programme has been tested on galactic rotation curves.",
+          "Independent researcher and writer. Runs the Neural Cosmology programme: four books in progress, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The first observable consequence of the programme has been tested on galactic rotation curves.",
       },
       {
         question: "Is Mikhail Savchenko the same person as Mike Fluff?",
@@ -116,7 +116,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Кто такой Михаил Савченко?",
         answer:
-          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: три книги в работе, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; первое наблюдательное следствие программы проверено на кривых вращения галактик.",
+          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: четыре книги в работе, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; первое наблюдательное следствие программы проверено на кривых вращения галактик.",
       },
       {
         question: "Михаил Савченко и Майк Флафф — это один человек?",
@@ -177,7 +177,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Quem é Mikhail Savchenko?",
         answer:
-          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: três livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. A primeira consequência observável do programa foi testada nas curvas de rotação galáctica.",
+          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: quatro livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. A primeira consequência observável do programa foi testada nas curvas de rotação galáctica.",
       },
       {
         question: "Mikhail Savchenko é a mesma pessoa que Mike Fluff?",
@@ -238,7 +238,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Quién es Mikhail Savchenko?",
         answer:
-          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: tres libros en curso, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. La primera consecuencia observable del programa se ha puesto a prueba en las curvas de rotación galáctica.",
+          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: cuatro libros en curso, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. La primera consecuencia observable del programa se ha puesto a prueba en las curvas de rotación galáctica.",
       },
       {
         question: "¿Mikhail Savchenko es la misma persona que Mike Fluff?",

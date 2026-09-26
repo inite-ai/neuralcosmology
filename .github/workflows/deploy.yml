@@ -60,7 +60,7 @@ jobs:
     - name: Deploy to server
       run: |
         # Create deployment directory
-        mkdir -p /opt/projects/${{ env.PROJECT_NAME }}
+        mkdir -p /opt/projects/${{ env.PROJECT_NAME }}/library
         cd /opt/projects/${{ env.PROJECT_NAME }}
         
         # Create docker-compose.yml
@@ -78,6 +78,18 @@ jobs:
               - NODE_ENV=production
               - NEXT_TELEMETRY_DISABLED=1
               - NEXT_PUBLIC_SITE_URL=https://neuralcosmology.com
+              # Онлайн-библиотека: экспорт LaTeX из inite-ai/godacademy (reader-sync.yml)
+              - LIBRARY_DIR=/app/library/current
+              - INITE_AUTH_ISSUER=https://auth-api.inite.ai
+              - INITE_AUTH_CLIENT_ID=${{ secrets.INITE_AUTH_CLIENT_ID }}
+              - INITE_AUTH_CLIENT_SECRET=${{ secrets.INITE_AUTH_CLIENT_SECRET }}
+              - SESSION_SECRET=${{ secrets.SESSION_SECRET }}
+              - PAYWALL_ENABLED=${{ vars.PAYWALL_ENABLED || 'false' }}
+              - BILLING_API_URL=${{ vars.BILLING_API_URL }}
+              - BILLING_API_KEY=${{ secrets.BILLING_API_KEY }}
+              - BOOK_CHECKOUT_URL=${{ vars.BOOK_CHECKOUT_URL }}
+            volumes:
+              - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:
               - "traefik.enable=true"
               - "traefik.http.routers.${{ env.PROJECT_NAME }}.rule=Host(\`${{ env.DOMAIN }}\`) || Host(\`www.${{ env.DOMAIN }}\`)"

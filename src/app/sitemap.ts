@@ -3,6 +3,10 @@ import { books } from "@/content/books";
 import { papers } from "@/content/papers";
 import { getAllSlugs } from "@/lib/essays";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
+import { getManifest, libraryLangs } from "@/lib/library";
+
+// Бесплатные главы читалки берутся с диска сервера — пересобираем раз в час.
+export const revalidate = 3600;
 
 const BASE = "https://neuralcosmology.com";
 
@@ -67,5 +71,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: s.priority,
   }));
 
-  return [...localised, ...aiEntries];
+  // Открытые главы онлайн-читалки: каждая на своём языке текста, без hreflang —
+  // переводы глав не совпадают один к одному.
+  const chapterEntries: MetadataRoute.Sitemap = books.flatMap((b) =>
+    libraryLangs(b.slug).flatMap((lang) =>
+      (getManifest(b.slug, lang)?.chapters ?? [])
+        .filter((c) => c.free)
+        .map((c) => ({
+          url: `${BASE}/${lang}/read/${b.slug}/${c.id}`,
+          lastModified: now,
+          priority: 0.6,
+        })),
+    ),
+  );
+
+  return [...localised, ...chapterEntries, ...aiEntries];
 }

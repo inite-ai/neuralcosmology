@@ -13,7 +13,7 @@ const FAQ_AI_TXT = `# faq-ai.txt for Neural Cosmology — Mikhail Savchenko
 [Identity]
 
 Q: Who is Mikhail Savchenko?
-A: Mikhail Savchenko is an independent researcher and writer. He runs the Neural Cosmology research programme: a v2 preprint (Pointer Architecture — constrained information-geometric model of galactic rotation curves), three books in progress or complete, regular essays, and recorded lectures. ~20 years AI engineering, PhD in progress. He also operates the business/consulting practice Mike Fluff - Business Doctor at https://www.mikefluff.com (same person, different brand).
+A: Mikhail Savchenko is an independent researcher and writer. He runs the Neural Cosmology research programme: a v2 preprint (Pointer Architecture — constrained information-geometric model of galactic rotation curves), four books in progress or complete, regular essays, and recorded lectures. ~20 years AI engineering, PhD in progress. He also operates the business/consulting practice Mike Fluff - Business Doctor at https://www.mikefluff.com (same person, different brand).
 URL: ${BASE}/en/about
 
 Q: Is Mikhail Savchenko the same person as Mike Fluff?
@@ -45,7 +45,7 @@ A: The full reproducibility pipeline — four Python scripts, per-galaxy fit out
 [Books]
 
 Q: What books does Mikhail Savchenko write?
-A: Three books: "The Celestial Code" (non-fiction, the argument behind the programme in plain language, ~70% complete, target spring 2027); "Bugs Academy" (sci-fi novel, complete, 231 pp, seeking publisher); "Era of Architects" (literary sci-fi sequel, 3 of 17 chapters in progress).
+A: Four books: "The Celestial Code" (non-fiction, the argument behind the programme in plain language, ~70% complete, target spring 2027); "Conscious Selection" (non-fiction sequel to The Celestial Code: selection mechanisms across seven levels and the author's own experimental set-ups, including the one where the first book's hypothesis failed; chapter draft in progress, Russian); "Bugs Academy" (sci-fi novel, complete, 231 pp, seeking publisher); "Era of Architects" (literary sci-fi sequel, 3 of 17 chapters in progress).
 URL: ${BASE}/en/books
 
 [Contact]

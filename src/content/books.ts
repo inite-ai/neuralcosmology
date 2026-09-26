@@ -42,6 +42,41 @@ export const books: Book[] = [
     companionPaperSlug: "pointer-architecture",
   },
   {
+    slug: "conscious-selection",
+    titles: {
+      en: "Conscious Selection",
+      ru: "Осознанный Отбор",
+      pt: "Seleção Consciente",
+      es: "Selección Consciente",
+    },
+    hook: {
+      en: "The first book ended with one word: check. The second one does the checking.",
+      ru: "Первая книга закончилась словом «проверьте». Вторая проверяет.",
+      pt: "O primeiro livro terminou com uma palavra: confiram. O segundo faz a conferência.",
+      es: "El primer libro terminó con una palabra: comprueben. El segundo hace la comprobación.",
+    },
+    synopsis: {
+      en:
+        "The second non-fiction volume of the Neural Cosmology series. Almost everything the world could show an observer is filtered out before the observer gets to choose anything: sharp vision is squeezed into two degrees of arc, a memory is rewritten each time it is recalled, the environment keeps only the stable states of a quantum system, and open-ended evolution has refused to start in any laboratory for forty years. The author runs his own hypothesis from The Celestial Code through the same selection, publishes what survived, and builds three machines to see whether selection can be started by hand.",
+      ru:
+        "Вторая книга нон-фикшн-линии «Нейронной космологии». Почти всё, что мир мог бы предъявить наблюдателю, отсеивается раньше, чем тот успевает что-либо выбрать: резкое зрение ужато до двух градусов, воспоминание переписывается при каждом обращении, среда оставляет от квантовой системы только устойчивые состояния, а открытая эволюция за сорок лет так и не завелась ни в одной лаборатории. Автор прогоняет через тот же отбор собственную гипотезу из «Небесного Кода», публикует, что от неё уцелело, и строит три установки, чтобы проверить, можно ли запустить отбор руками.",
+      pt:
+        "O segundo volume de não ficção da série Cosmologia Neural. Quase tudo o que o mundo poderia mostrar a um observador é filtrado antes que ele consiga escolher qualquer coisa: a visão nítida cabe em dois graus de arco, uma lembrança é reescrita a cada vez que é acessada, o ambiente guarda apenas os estados estáveis de um sistema quântico, e a evolução aberta se recusa há quarenta anos a arrancar em qualquer laboratório. O autor submete a própria hipótese de O Código Celestial à mesma seleção, publica o que sobreviveu e constrói três máquinas para ver se a seleção pode ser posta em marcha à mão.",
+      es:
+        "El segundo volumen de no ficción de la serie Cosmología Neural. Casi todo lo que el mundo podría mostrarle a un observador queda filtrado antes de que este llegue a elegir nada: la visión nítida cabe en dos grados de arco, un recuerdo se reescribe cada vez que se evoca, el entorno conserva solo los estados estables de un sistema cuántico, y la evolución abierta lleva cuarenta años negándose a arrancar en ningún laboratorio. El autor somete su propia hipótesis de El Código Celestial a la misma selección, publica lo que sobrevivió y construye tres máquinas para ver si la selección puede ponerse en marcha a mano.",
+    },
+    status: "wip",
+    statusLabel: {
+      en: "In progress · chapter draft, interludes to come",
+      ru: "В работе · черновик глав, интерлюдии впереди",
+      pt: "Em andamento · rascunho dos capítulos, interlúdios a caminho",
+      es: "En proceso · borrador de capítulos, interludios por llegar",
+    },
+    genre: "non-fiction",
+    coverImage: "/covers/conscious-selection.svg",
+    companionPaperSlug: "pointer-architecture",
+  },
+  {
     slug: "bugs-academy",
     titles: {
       en: "Bugs Academy",

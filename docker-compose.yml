@@ -11,6 +11,17 @@ services:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
       - NEXT_PUBLIC_SITE_URL=https://neuralcosmology.com
+      - LIBRARY_DIR=/app/library/current
+      - INITE_AUTH_ISSUER=https://auth-api.inite.ai
+      - INITE_AUTH_CLIENT_ID=${INITE_AUTH_CLIENT_ID}
+      - INITE_AUTH_CLIENT_SECRET=${INITE_AUTH_CLIENT_SECRET}
+      - SESSION_SECRET=${SESSION_SECRET}
+      - PAYWALL_ENABLED=${PAYWALL_ENABLED:-false}
+      - BILLING_API_URL=${BILLING_API_URL}
+      - BILLING_API_KEY=${BILLING_API_KEY}
+      - BOOK_CHECKOUT_URL=${BOOK_CHECKOUT_URL}
+    volumes:
+      - ./library:/app/library:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.neurocosmology.rule=Host(`neuralcosmology.com`) || Host(`www.neuralcosmology.com`)"

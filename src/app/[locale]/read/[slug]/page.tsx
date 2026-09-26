@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
 import {
   readables,
   getReadable,
@@ -11,6 +11,8 @@ import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumb } from "@/lib/schema";
+import { getBookBySlug } from "@/content/books";
+import { getManifest, resolveBookLang } from "@/lib/library";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.flatMap((locale) =>
@@ -43,27 +45,31 @@ export default async function ReadPage({
 }) {
   const { locale: raw, slug } = await params;
   const locale = isSupportedLocale(raw) ? raw : "en";
+
+  // Книги читаются онлайн по главам; старые адреса демо-PDF ведут туда же.
+  const legacyDemo = slug.match(/^(.+)-demo$/)?.[1];
+  if (legacyDemo && getBookBySlug(legacyDemo)) {
+    permanentRedirect(`/${locale}/read/${legacyDemo}`);
+  }
+  if (getBookBySlug(slug)) {
+    const lang = resolveBookLang(slug, locale);
+    const first = lang ? getManifest(slug, lang)?.chapters[0] : undefined;
+    if (!first) redirect(`/${locale}/books/${slug}`);
+    redirect(`/${locale}/read/${slug}/${first.id}`);
+  }
+
   const entry = getReadable(slug);
   if (!entry) notFound();
   const dict = getDict(locale);
   const { path, locale: pdfLocale } = resolveReadablePath(entry, locale);
   if (!path) notFound();
   const title = resolveReadableTitle(entry, locale);
-  const backHref =
-    entry.kind === "book-demo" && entry.relatedSlug
-      ? `/${locale}/books/${entry.relatedSlug}`
-      : entry.kind === "preprint" && entry.relatedSlug
-        ? `/${locale}/science/${entry.relatedSlug}`
-        : `/${locale}`;
+  const backHref = entry.relatedSlug
+    ? `/${locale}/science/${entry.relatedSlug}`
+    : `/${locale}`;
 
   const bcItems = [{ name: dict.nav.home, path: "" }];
-  if (entry.kind === "book-demo" && entry.relatedSlug) {
-    bcItems.push({ name: dict.nav.books, path: "/books" });
-    bcItems.push({
-      name: title.replace(/ — demo$/i, ""),
-      path: `/books/${entry.relatedSlug}`,
-    });
-  } else if (entry.kind === "preprint" && entry.relatedSlug) {
+  if (entry.relatedSlug) {
     bcItems.push({ name: dict.nav.science, path: "/science" });
     bcItems.push({
       name: title,

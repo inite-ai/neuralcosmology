@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="cs-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06141a"/>
+      <stop offset="50%" stop-color="#0c2a33"/>
+      <stop offset="100%" stop-color="#06141a"/>
+    </linearGradient>
+    <radialGradient id="cs-glow" cx="0.5" cy="0.47" r="0.55">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#0d9488" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#06141a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="cs-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#5eead4" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="800" fill="url(#cs-bg)"/>
+  <rect width="600" height="800" fill="url(#cs-grid)"/>
+  <rect width="600" height="800" fill="url(#cs-glow)"/>
+
+  <!-- Field of candidates above the aperture -->
+  <g fill="#99f6e4" fill-opacity="0.35">
+    <circle cx="96" cy="150" r="2"/><circle cx="140" cy="182" r="1.6"/><circle cx="188" cy="140" r="2.2"/>
+    <circle cx="232" cy="196" r="1.5"/><circle cx="270" cy="156" r="2"/><circle cx="318" cy="188" r="1.7"/>
+    <circle cx="352" cy="142" r="2.1"/><circle cx="398" cy="178" r="1.6"/><circle cx="446" cy="148" r="2"/>
+    <circle cx="500" cy="186" r="1.8"/><circle cx="118" cy="226" r="1.7"/><circle cx="170" cy="250" r="2"/>
+    <circle cx="214" cy="232" r="1.5"/><circle cx="262" cy="262" r="1.9"/><circle cx="340" cy="244" r="1.6"/>
+    <circle cx="384" cy="266" r="2"/><circle cx="430" cy="230" r="1.7"/><circle cx="478" cy="258" r="1.5"/>
+    <circle cx="150" cy="300" r="1.4"/><circle cx="222" cy="296" r="1.6"/><circle cx="378" cy="302" r="1.5"/>
+    <circle cx="452" cy="296" r="1.4"/>
+  </g>
+
+  <!-- Aperture -->
+  <g stroke="#5eead4" stroke-width="1.5" stroke-opacity="0.55" fill="none">
+    <path d="M 70 360 L 282 360"/>
+    <path d="M 318 360 L 530 360"/>
+  </g>
+  <g stroke="#5eead4" stroke-opacity="0.18" fill="none">
+    <path d="M 120 318 L 290 360"/>
+    <path d="M 480 318 L 310 360"/>
+  </g>
+
+  <!-- Survivors -->
+  <g fill="#ccfbf1">
+    <circle cx="300" cy="352" r="3"/>
+    <circle cx="300" cy="398" r="4"/>
+    <circle cx="300" cy="436" r="2.5" fill-opacity="0.7"/>
+  </g>
+  <line x1="300" y1="360" x2="300" y2="470" stroke="#5eead4" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Star field -->
+  <g fill="#e0f2f1" fill-opacity="0.7">
+    <circle cx="80" cy="90" r="1"/><circle cx="520" cy="96" r="0.9"/><circle cx="90" cy="520" r="1"/>
+    <circle cx="530" cy="500" r="0.8"/><circle cx="110" cy="690" r="0.8"/><circle cx="480" cy="672" r="1"/>
+  </g>
+
+  <!-- Text -->
+  <text x="60" y="100" font-family="Georgia, serif" font-size="13" letter-spacing="6" fill="#5eead4" fill-opacity="0.8">NEURAL COSMOLOGY · II</text>
+  <text x="60" y="600" font-family="Georgia, serif" font-size="50" font-weight="600" fill="#f1f5f9" letter-spacing="-1">Conscious</text>
+  <text x="60" y="650" font-family="Georgia, serif" font-size="50" font-weight="600" fill="#f1f5f9" letter-spacing="-1">Selection</text>
+  <line x1="60" y1="680" x2="140" y2="680" stroke="#5eead4" stroke-width="2"/>
+  <text x="60" y="720" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#ccfbf1" fill-opacity="0.85">MIKHAIL SAVCHENKO</text>
+  <text x="60" y="745" font-family="Inter, sans-serif" font-size="12" letter-spacing="2" fill="#5eead4" fill-opacity="0.7">NON-FICTION · WIP</text>
+</svg>

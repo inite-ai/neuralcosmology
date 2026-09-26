@@ -2,7 +2,7 @@ import type { SupportedLocale } from "@/lib/get-locale";
 
 export interface ReadableEntry {
   slug: string;
-  kind: "preprint" | "book-demo";
+  kind: "preprint";
   relatedSlug?: string;
   titles: Partial<Record<SupportedLocale, string>> & { en: string };
   paths: Partial<Record<SupportedLocale, string>> & { en: string };
@@ -23,54 +23,6 @@ export const readables: ReadableEntry[] = [
       ru: "/pdfs/pointer-architecture-v2.pdf",
       pt: "/pdfs/pointer-architecture-v2.pdf",
       es: "/pdfs/pointer-architecture-v2.pdf",
-    },
-  },
-  {
-    slug: "celestial-code-demo",
-    kind: "book-demo",
-    relatedSlug: "celestial-code",
-    titles: {
-      en: "The Celestial Code — demo",
-      ru: "Небесный Код — демо",
-      pt: "O Código Celestial — demo",
-      es: "El Código Celestial — demo",
-    },
-    paths: {
-      en: "/pdfs/celestial-code-demo-en.pdf",
-      ru: "/pdfs/celestial-code-demo-ru.pdf",
-      pt: "/pdfs/celestial-code-demo-pt.pdf",
-    },
-  },
-  {
-    slug: "bugs-academy-demo",
-    kind: "book-demo",
-    relatedSlug: "bugs-academy",
-    titles: {
-      en: "Bugs Academy — demo",
-      ru: "Академия Багов — демо",
-      pt: "Academia dos Bugs — demo",
-      es: "Academia de los Bugs — demo",
-    },
-    paths: {
-      en: "/pdfs/bugs-academy-demo-en.pdf",
-      ru: "/pdfs/bugs-academy-demo-ru.pdf",
-      pt: "/pdfs/bugs-academy-demo-pt.pdf",
-    },
-  },
-  {
-    slug: "era-of-architects-demo",
-    kind: "book-demo",
-    relatedSlug: "era-of-architects",
-    titles: {
-      en: "Era of Architects — demo",
-      ru: "Эра Архитекторов — демо",
-      pt: "Era dos Arquitetos — demo",
-      es: "Era de los Arquitectos — demo",
-    },
-    paths: {
-      en: "/pdfs/era-of-architects-demo-en.pdf",
-      ru: "/pdfs/era-of-architects-demo-ru.pdf",
-      pt: "/pdfs/era-of-architects-demo-pt.pdf",
     },
   },
 ];

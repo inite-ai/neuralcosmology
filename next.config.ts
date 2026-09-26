@@ -12,6 +12,14 @@ const nextConfig: NextConfig = {
     // your project has TypeScript errors.
     ignoreBuildErrors: true,
   },
+  async redirects() {
+    // Демо-PDF книг заменены онлайн-читалкой.
+    return ["celestial-code", "bugs-academy", "era-of-architects"].map((book) => ({
+      source: `/pdfs/${book}-demo-:lang(en|ru|pt).pdf`,
+      destination: `/:lang/read/${book}`,
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

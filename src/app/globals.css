@@ -544,3 +544,132 @@ section {
   margin: 2rem 0;
 }
 
+
+/* ============================================================
+   Online reader (/[locale]/read/<book>/<chapter>)
+   Темы и размер шрифта — data-атрибуты на .reader, их ставит
+   inline-скрипт до отрисовки (ReaderPrefsScript).
+   ============================================================ */
+.reader {
+  --r-bg: #0b0f1c;
+  --r-panel: #10162a;
+  --r-fg: #e7e7ec;
+  --r-muted: rgba(231, 231, 236, 0.58);
+  --r-faint: rgba(231, 231, 236, 0.12);
+  --r-accent: #a5b4fc;
+  --r-accent-strong: #818cf8;
+  --r-size: 1.125rem;
+  background: var(--r-bg);
+  color: var(--r-fg);
+  color-scheme: dark;
+}
+.reader[data-theme="light"] {
+  --r-bg: #fbfaf7;
+  --r-panel: #f2f0ea;
+  --r-fg: #1d1d24;
+  --r-muted: rgba(29, 29, 36, 0.6);
+  --r-faint: rgba(29, 29, 36, 0.12);
+  --r-accent: #4f46e5;
+  --r-accent-strong: #4338ca;
+  color-scheme: light;
+}
+.reader[data-theme="sepia"] {
+  --r-bg: #f4ecd8;
+  --r-panel: #ebe1c8;
+  --r-fg: #3b2f1e;
+  --r-muted: rgba(59, 47, 30, 0.62);
+  --r-faint: rgba(59, 47, 30, 0.14);
+  --r-accent: #8a5a1f;
+  --r-accent-strong: #6f4716;
+  color-scheme: light;
+}
+.reader[data-size="s"] { --r-size: 1rem; }
+.reader[data-size="l"] { --r-size: 1.25rem; }
+.reader[data-size="xl"] { --r-size: 1.4rem; }
+
+.reader-prose {
+  font-family: var(--font-reader), Georgia, "Times New Roman", serif;
+  font-size: var(--r-size);
+  line-height: 1.7;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "onum";
+}
+.reader-prose p { margin: 0 0 0.9em; text-align: left; }
+.reader-prose p + p { text-indent: 0; }
+.reader-prose em { font-style: italic; }
+.reader-prose strong { font-weight: 600; }
+.reader-prose a { color: var(--r-accent); text-decoration: underline; text-underline-offset: 3px; }
+.reader-prose hr.scene {
+  border: 0;
+  margin: 2.2em auto;
+  text-align: center;
+  height: 1em;
+}
+.reader-prose hr.scene::before {
+  content: "*   *   *";
+  white-space: pre;
+  color: var(--r-muted);
+  letter-spacing: 0.2em;
+}
+.reader-prose hr:not(.scene) { border: 0; border-top: 1px solid var(--r-faint); margin: 1.5em 0; }
+.reader-prose blockquote,
+.reader-prose .quote {
+  margin: 1.4em 0;
+  padding-left: 1.1em;
+  border-left: 2px solid var(--r-faint);
+  color: var(--r-muted);
+}
+.reader-prose ul, .reader-prose ol { padding-left: 1.4em; margin: 0 0 1em; }
+.reader-prose ul li { list-style: disc; }
+.reader-prose ol li { list-style: decimal; }
+.reader-prose li { margin-bottom: 0.3em; }
+.reader-prose dt { font-weight: 600; margin-top: 0.6em; }
+.reader-prose dd { margin: 0 0 0.6em 1.2em; }
+.reader-prose .tex-center { text-align: center; margin: 1.4em 0; }
+.reader-prose .tex-center p { text-align: center; }
+.reader-prose .tex-right { text-align: right; margin: 1.2em 0; }
+.reader-prose .tex-right p { text-align: right; }
+.reader-prose .tex-box {
+  display: inline-block;
+  max-width: 100%;
+  text-align: left;
+  font-size: 0.92em;
+  padding: 1em 1.2em;
+  border: 1px solid var(--r-faint);
+  border-radius: 6px;
+  background: var(--r-panel);
+}
+.reader-prose .tex-box p { text-align: inherit; }
+.reader-prose table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font-size: 0.9em;
+  max-width: 100%;
+}
+.reader-prose td, .reader-prose th {
+  padding: 0.35em 0.8em 0.35em 0;
+  border-bottom: 1px solid var(--r-faint);
+  vertical-align: top;
+}
+.reader-prose math { font-size: 1.02em; }
+.reader-prose math[display="block"] { margin: 1em 0; overflow-x: auto; overflow-y: hidden; }
+.reader-prose h2, .reader-prose h3, .reader-prose h4 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.8em 0 0.6em;
+}
+.reader-prose h2 { font-size: 1.3em; }
+.reader-prose h3 { font-size: 1.12em; }
+
+/* Тизер закрытой главы гаснет к низу */
+.reader-teaser {
+  position: relative;
+  max-height: 18em;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent);
+  mask-image: linear-gradient(to bottom, #000 40%, transparent);
+}

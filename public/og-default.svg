@@ -29,7 +29,7 @@
   <circle cx="900" cy="315" r="8" fill="#e0e7ff"/>
 
   <text x="80" y="180" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#a5b4fc" fill-opacity="0.8">NEURAL COSMOLOGY</text>
-  <text x="80" y="310" font-family="Georgia, serif" font-size="72" font-weight="600" fill="#f1f5f9" letter-spacing="-2">Three books, one universe</text>
+  <text x="80" y="310" font-family="Georgia, serif" font-size="72" font-weight="600" fill="#f1f5f9" letter-spacing="-2">Four books, one universe</text>
   <text x="80" y="390" font-family="Georgia, serif" font-size="72" font-weight="600" fill="#818cf8" letter-spacing="-2">from three angles.</text>
 
   <line x1="80" y1="450" x2="160" y2="450" stroke="#818cf8" stroke-width="3"/>
