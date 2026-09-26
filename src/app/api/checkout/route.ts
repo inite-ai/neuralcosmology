@@ -42,6 +42,7 @@ export async function GET(req: NextRequest) {
 
   const success = new URL(back);
   success.searchParams.set("purchased", "1");
+  success.searchParams.set("item", item);
 
   try {
     const res = await fetch(`${base}/v1/checkout/sessions`, {

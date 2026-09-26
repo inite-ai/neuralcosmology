@@ -91,8 +91,6 @@ jobs:
               - DATABASE_URL=${{ secrets.DATABASE_URL }}
               - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
               - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mikefluff@mikefluff.com' }}
-              - YANDEX_VERIFICATION=${{ vars.YANDEX_VERIFICATION }}
-              - BING_VERIFICATION=${{ vars.BING_VERIFICATION }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:

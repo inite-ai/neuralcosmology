@@ -162,6 +162,8 @@ export function bookSchema(args: {
   license?: string;
   licenseUrl?: string;
   companionPaperSlug?: string;
+  offer?: { price: number; currency: string };
+  readUrl?: string;
 }) {
   const url = localeUrl(args.locale, `/books/${args.slug}`);
   const cover = args.coverImage.startsWith("http")
@@ -202,6 +204,21 @@ export function bookSchema(args: {
     creditText: args.license,
     subjectOf: args.companionPaperSlug
       ? { "@id": `${SITE_URL}/${args.locale}/science/${args.companionPaperSlug}#article` }
+      : undefined,
+    // Онлайн-доступ к полному тексту: цена и где читать.
+    offers: args.offer
+      ? {
+          "@type": "Offer",
+          price: args.offer.price.toFixed(2),
+          priceCurrency: args.offer.currency,
+          availability: "https://schema.org/InStock",
+          url,
+          category: "Online access",
+          seller: { "@id": `${SITE_URL}/#organization` },
+        }
+      : undefined,
+    potentialAction: args.readUrl
+      ? { "@type": "ReadAction", target: { "@type": "EntryPoint", urlTemplate: args.readUrl } }
       : undefined,
   } as const;
 }

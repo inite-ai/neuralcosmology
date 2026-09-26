@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { books, getBookBySlug } from "@/content/books";
 import { Sheet, Label, Headline } from "@/components/system";
-import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
+import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getManifest, resolveBookLang } from "@/lib/library";
 import { paywallEnabled } from "@/lib/access";
@@ -23,6 +23,14 @@ export function generateStaticParams() {
     books.map((b) => ({ locale, slug: b.slug })),
   );
 }
+
+// Что получает читатель: объём, бесплатные главы, цена книги и всей библиотеки.
+const OFFER: Record<SupportedLocale, { free: (n: number, t: number) => string; hours: (h: number) => string; forever: string; library: string }> = {
+  en: { free: (n, t) => `${n} of ${t} chapters free`, hours: (h) => `≈ ${h} h of reading`, forever: "one payment, access forever, online and on any device", library: "All four books" },
+  ru: { free: (n, t) => `${n} из ${t} глав бесплатно`, hours: (h) => `≈ ${h} ч чтения`, forever: "разовая оплата, доступ навсегда, онлайн на любом устройстве", library: "Все четыре книги" },
+  pt: { free: (n, t) => `${n} de ${t} capítulos grátis`, hours: (h) => `≈ ${h} h de leitura`, forever: "pagamento único, acesso para sempre, online em qualquer dispositivo", library: "Os quatro livros" },
+  es: { free: (n, t) => `${n} de ${t} capítulos gratis`, hours: (h) => `≈ ${h} h de lectura`, forever: "pago único, acceso para siempre, en línea en cualquier dispositivo", library: "Los cuatro libros" },
+};
 
 export async function generateMetadata({
   params,
@@ -68,6 +76,11 @@ export default async function BookDetailPage({
   const readLang = resolveBookLang(book.slug, locale);
   const manifest = readLang ? getManifest(book.slug, readLang) : null;
   const lockedGate = paywallEnabled() ? ("purchase" as const) : ("login" as const);
+  const chapters = manifest?.chapters ?? [];
+  const freeCount = chapters.filter((c) => c.free).length;
+  const hours = manifest ? Math.max(1, Math.round((manifest.words ?? 0) / 200 / 60)) : 0;
+  const forSale = lockedGate === "purchase" && chapters.some((c) => !c.free);
+  const O = OFFER[locale];
 
   const genreLabel = {
     "non-fiction": dict.books.genre.nonFiction,
@@ -107,6 +120,8 @@ export default async function BookDetailPage({
           license: book.license,
           licenseUrl: book.licenseUrl,
           companionPaperSlug: book.companionPaperSlug,
+          offer: forSale ? { price: pricing.book.amount, currency: pricing.book.currency } : undefined,
+          readUrl: chapters[0] ? `https://neuralcosmology.com/${readLang}/read/${book.slug}/${chapters[0].id}` : undefined,
         })}
       />
       <JsonLd
@@ -150,7 +165,14 @@ export default async function BookDetailPage({
             <p className="mt-8 font-display text-[1.625rem] italic leading-snug text-fg md:text-[1.875rem]">{hook}</p>
             <p className="mt-6 max-w-[62ch] text-fg-secondary md:text-lg">{synopsis}</p>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {chapters.length > 0 && (
+              <p className="mt-8 label text-muted">
+                {O.free(freeCount, chapters.length)} · {O.hours(hours)}
+                {forSale && <> · {O.forever}</>}
+              </p>
+            )}
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {manifest && manifest.chapters.length > 0 && (
                 <ContinueReading
                   slug={book.slug}
@@ -171,6 +193,14 @@ export default async function BookDetailPage({
                   className="inline-flex min-h-11 items-center justify-center rounded-sm hairline border-fg/70 px-6 label text-fg transition-colors hover:bg-fg hover:text-bg"
                 >
                   {L.gatePurchaseCta} · {pricing.book.label}
+                </a>
+              )}
+              {forSale && (
+                <a
+                  href={`/api/checkout?${new URLSearchParams({ item: "library", returnTo: `/${locale}/books` })}`}
+                  className="inline-flex min-h-11 items-center justify-center rounded-sm px-4 label text-primary transition-colors hover:text-fg"
+                >
+                  {O.library} · {pricing.library.label}
                 </a>
               )}
               {[
