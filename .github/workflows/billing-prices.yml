@@ -11,6 +11,10 @@ on:
         description: Only show what would change
         type: boolean
         default: false
+      probe:
+        description: Create a test checkout per currency and list offered payment providers
+        type: boolean
+        default: false
 
 jobs:
   sync:
@@ -24,4 +28,4 @@ jobs:
         env:
           BILLING_API_URL: ${{ vars.BILLING_API_URL }}
           BILLING_API_KEY: ${{ secrets.BILLING_API_KEY }}
-        run: node scripts/billing-prices.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: node scripts/billing-prices.mjs ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.probe && '--probe' || '' }}

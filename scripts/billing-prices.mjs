@@ -10,6 +10,7 @@ import { readFile } from "node:fs/promises";
 const base = process.env.BILLING_API_URL;
 const key = process.env.BILLING_API_KEY;
 const dry = process.argv.includes("--dry-run");
+const probe = process.argv.includes("--probe");
 if (!base || !key) {
   console.error("BILLING_API_URL / BILLING_API_KEY not set");
   process.exit(1);
@@ -55,4 +56,22 @@ for (const { item, usdCode } of items) {
     } else same++;
   }
 }
+// --probe: создаёт по тестовой сессии на валюту и печатает, каких провайдеров предложит оплата.
+// Ничего не списывает; незавершённые сессии истекают сами.
+if (probe) {
+  for (const cur of ["USD", "RUB", "BRL", "ARS"]) {
+    const r = await fetch(`${base}/v1/checkout/sessions`, {
+      method: "POST",
+      headers: { "x-api-key": key, "Content-Type": "application/json" },
+      body: JSON.stringify({ priceCode: `neuralcosmology-book-bugs-academy-${cur.toLowerCase()}`, mode: "PAYMENT", userId: "probe-neuralcosmology", successUrl: "https://neuralcosmology.com/", errorUrl: "https://neuralcosmology.com/", metadata: { probe: true } }),
+    });
+    const created = await r.json().catch(() => ({}));
+    const id = created.sessionId ?? created.id ?? created.session?.id;
+    if (!r.ok || !id) { console.log(`${cur}: session failed ${r.status} ${JSON.stringify(created).slice(0, 200)}`); continue; }
+    const sess = await fetch(`${base}/v1/checkout/sessions/${id}`, { headers: { "x-api-key": key } }).then((x) => x.json());
+    const methods = sess.paymentMethods ?? sess.providers ?? sess.availableProviders ?? [];
+    console.log(`${cur}: ${methods.map((m) => m.code ?? m.name).join(", ") || "NO PROVIDERS"}`);
+  }
+}
+
 console.log(`\n${items.length} products · created ${created} · updated ${updated} · unchanged ${same}${dry ? " (dry run)" : ""}`);
