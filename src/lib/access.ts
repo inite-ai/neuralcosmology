@@ -36,6 +36,9 @@ async function entitlementKeys(userId: string, fresh = false): Promise<Set<strin
   // Пустой набор держим недолго: только что купивший не должен ждать минуту.
   const ttl = hit && hit.keys.size > 0 ? ENT_TTL_MS : ENT_EMPTY_TTL_MS;
   if (!fresh && hit && Date.now() - hit.at < ttl) return hit.keys;
+  // ?purchased=1 перечитывает права мимо кэша — но не чаще раза в 5 секунд,
+  // чтобы ссылкой с этим параметром нельзя было долбить биллинг.
+  if (fresh && hit && Date.now() - hit.at < 5_000) return hit.keys;
 
   const base = process.env.BILLING_API_URL;
   const apiKey = process.env.BILLING_API_KEY;

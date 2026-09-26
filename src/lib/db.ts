@@ -51,6 +51,9 @@ CREATE TABLE IF NOT EXISTS ai_usage (
   user_id text NOT NULL, day date NOT NULL DEFAULT current_date, count int NOT NULL DEFAULT 0,
   PRIMARY KEY (user_id, day)
 );
+CREATE TABLE IF NOT EXISTS watermarks (
+  mark text PRIMARY KEY, user_id text NOT NULL, email text, created_at timestamptz NOT NULL DEFAULT now()
+);
 CREATE TABLE IF NOT EXISTS ai_cache (
   key text PRIMARY KEY, value text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
 );

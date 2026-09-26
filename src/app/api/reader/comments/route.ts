@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { db } from "@/lib/db";
+import { stripMarks } from "@/lib/protect";
 import { chapterContext, isAuthor, displayName } from "@/lib/reader/context";
 import { moderate } from "@/lib/reader/ai";
 import { json, fail, noDb, clip } from "@/lib/reader/http";
@@ -48,7 +49,7 @@ export async function POST(req: NextRequest) {
   const parentId = typeof b.parentId === "string" && b.parentId ? b.parentId : null;
   const [row] = await sql`INSERT INTO comments (book, lang, chapter, anchor, parent_id, user_id, author_name, is_author, quote, body, status)
     VALUES (${ctx.book}, ${ctx.lang}, ${ctx.chapter.id}, ${clip(b.anchor, 40) || null}, ${parentId}, ${ctx.session.sub},
-      ${displayName(ctx.session)}, ${isAuthor(ctx.session)}, ${clip(b.quote, 600) || null}, ${body}, ${ok ? "published" : "rejected"})
+      ${displayName(ctx.session)}, ${isAuthor(ctx.session)}, ${stripMarks(clip(b.quote, 600)) || null}, ${body}, ${ok ? "published" : "rejected"})
     RETURNING id, anchor, parent_id, author_name, is_author, quote, body, status, pinned, created_at`;
   if (!ok) return fail("rejected", 422);
   return json({ ...row, mine: true, likes: 0, liked: false }, 201);

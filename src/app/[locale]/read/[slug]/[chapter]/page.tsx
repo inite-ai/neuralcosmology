@@ -9,6 +9,7 @@ import { getDict, pickLocalized } from "@/lib/i18n";
 import { getChapterHtml, getManifest, resolveBookLang, type LibraryChapter } from "@/lib/library";
 import { getSession, authConfigured } from "@/lib/auth";
 import { chapterGate, lockedGate, type Gate } from "@/lib/access";
+import { allowPaidView, registerMark, watermark } from "@/lib/protect";
 import { LIBRARY_ITEM } from "@/content/pricing";
 import ReaderChrome from "@/components/reader/ReaderChrome";
 import ReaderInteractive from "@/components/reader/ReaderInteractive";
@@ -39,6 +40,13 @@ function load(rawLocale: string, slug: string, chapterId: string) {
 function chapterLabel(c: LibraryChapter, word: string) {
   return c.number ? `${word} ${c.number}. ${c.title}` : c.title;
 }
+
+const THROTTLE: Record<string, { label: string; body: string }> = {
+  en: { label: "Pause", body: "Too many chapters opened in a few minutes. Reading continues in about ten minutes." },
+  ru: { label: "Пауза", body: "Слишком много глав открыто за несколько минут. Чтение продолжится примерно через десять минут." },
+  pt: { label: "Pausa", body: "Muitos capítulos abertos em poucos minutos. A leitura continua em cerca de dez minutos." },
+  es: { label: "Pausa", body: "Demasiados capítulos abiertos en pocos minutos. La lectura continúa en unos diez minutos." },
+};
 
 export async function generateMetadata({ params, searchParams }: { params: Params; searchParams: Promise<{ q?: string }> }): Promise<Metadata> {
   const { locale: raw, slug, chapter: id } = await params;
@@ -84,8 +92,13 @@ export default async function ChapterPage({
   const session = await getSession();
   const gate = await chapterGate(chapter, slug, session, fresh);
   const locked = await lockedGate(slug, session);
-  const html = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
-  if (gate === "open" && html === null) notFound();
+  const source = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
+  if (gate === "open" && source === null) notFound();
+  // Платная глава: персональный водяной знак и лимит на выкачивание.
+  const paid = gate === "open" && !chapter.free && session !== null;
+  const throttled = paid && !allowPaidView(session.sub);
+  if (paid && !throttled) await registerMark(session.sub, session.email);
+  const html = source && paid ? (throttled ? null : watermark(source, session.sub)) : source;
 
   const bookTitle = pickLocalized(book.titles, lang);
   const hrefBase = `/${locale}/read/${slug}`;
@@ -189,6 +202,11 @@ export default async function ChapterPage({
                 chapterIndex={index}
               />
             </>
+          ) : throttled ? (
+            <div className="reader-locked mt-4 r-hair bg-[var(--r-panel)] p-7 sm:p-10">
+              <p className="label text-[var(--r-accent)]">{THROTTLE[locale].label}</p>
+              <p className="mt-4 max-w-[46ch] text-[var(--r-soft)]">{THROTTLE[locale].body}</p>
+            </div>
           ) : (
             <>
               <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: chapter.teaser }} />
