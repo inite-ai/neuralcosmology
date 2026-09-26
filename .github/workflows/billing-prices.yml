@@ -1,0 +1,27 @@
+name: Billing prices
+
+# Цены онлайн-доступа в USD / RUB / BRL / ARS из src/content/prices.json → INITE Billing.
+on:
+  push:
+    branches: [main]
+    paths: [src/content/prices.json, scripts/billing-prices.mjs]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Only show what would change
+        type: boolean
+        default: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sync prices
+        env:
+          BILLING_API_URL: ${{ vars.BILLING_API_URL }}
+          BILLING_API_KEY: ${{ secrets.BILLING_API_KEY }}
+        run: node scripts/billing-prices.mjs ${{ inputs.dry_run && '--dry-run' || '' }}

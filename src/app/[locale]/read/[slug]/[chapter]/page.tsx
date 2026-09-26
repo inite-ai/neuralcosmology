@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Price, CurrencyPicker } from "@/components/pricing/Price";
 import { social } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -8,7 +9,7 @@ import { getDict, pickLocalized } from "@/lib/i18n";
 import { getChapterHtml, getManifest, resolveBookLang, type LibraryChapter } from "@/lib/library";
 import { getSession, authConfigured } from "@/lib/auth";
 import { chapterGate, lockedGate, type Gate } from "@/lib/access";
-import { LIBRARY_ITEM, pricing } from "@/content/pricing";
+import { LIBRARY_ITEM } from "@/content/pricing";
 import ReaderChrome from "@/components/reader/ReaderChrome";
 import ReaderInteractive from "@/components/reader/ReaderInteractive";
 import { aiConfigured } from "@/lib/reader/ai";
@@ -207,14 +208,15 @@ export default async function ChapterPage({
                   ) : (
                     <>
                       <a href={checkoutHref(slug, here)} className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--r-fg)] px-6 label text-[var(--r-bg)] transition-opacity hover:opacity-85">
-                        {L.gatePurchaseCta} · {pricing.book.label}
+                        {L.gatePurchaseCta} · <Price item="book" />
                       </a>
                       <a href={checkoutHref(LIBRARY_ITEM, here)} className="inline-flex min-h-12 items-center justify-center rounded-sm border-[0.5px] border-[var(--r-fg)] px-6 label text-[var(--r-fg)] transition-colors hover:bg-[var(--r-fg)] hover:text-[var(--r-bg)]">
-                        {L.gateBuyLibrary} · {pricing.library.label}
+                        {L.gateBuyLibrary} · <Price item="library" />
                       </a>
                     </>
                   )}
                 </div>
+                {gate !== "login" && <CurrencyPicker className="mt-4 block label text-[var(--r-soft)]" />}
               </div>
             </>
           )}

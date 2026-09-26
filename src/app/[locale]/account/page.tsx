@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Price } from "@/components/pricing/Price";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession, authConfigured } from "@/lib/auth";
@@ -9,7 +10,7 @@ import { ownsBook, paywallEnabled } from "@/lib/access";
 import { isAuthor } from "@/lib/reader/context";
 import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { pickLocalized } from "@/lib/i18n";
-import { pricing, LIBRARY_ITEM } from "@/content/pricing";
+import { LIBRARY_ITEM } from "@/content/pricing";
 import { Sheet, Label, Headline } from "@/components/system";
 import ModerationActions from "@/components/account/ModerationActions";
 
@@ -100,7 +101,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
                     )}
                     {paywallEnabled() && !owned && (
                       <a href={`/api/checkout?${new URLSearchParams({ item: b.slug, returnTo: `/${locale}/account` })}`} className="inline-flex min-h-11 items-center rounded-sm hairline border-fg/60 px-5 label hover:bg-fg hover:text-bg">
-                        {t.buy} · {pricing.book.label}
+                        {t.buy} · <Price item="book" />
                       </a>
                     )}
                   </div>
@@ -110,7 +111,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
           </div>
           {paywallEnabled() && !ownsAll && (
             <a href={`/api/checkout?${new URLSearchParams({ item: LIBRARY_ITEM, returnTo: `/${locale}/account` })}`} className="mt-6 inline-flex min-h-11 items-center rounded-sm bg-fg px-6 label text-bg hover:bg-primary">
-              {t.buyAll} · {pricing.library.label}
+              {t.buyAll} · <Price item="library" />
             </a>
           )}
         </section>

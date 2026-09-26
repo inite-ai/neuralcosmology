@@ -2,7 +2,8 @@
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { pricing } from "@/content/pricing";
+import { PRICES, kindOf } from "@/content/pricing";
+import { readCurrency } from "@/components/pricing/Price";
 import { verification } from "@/content/verification";
 
 // GA4 + воронка продаж книг. Без баннера: в ЕЭЗ/UK/CH cookies аналитики по умолчанию
@@ -59,8 +60,9 @@ export default function Analytics() {
         if (!sessionStorage.getItem(key)) {
           sessionStorage.setItem(key, "1");
           const item = url.searchParams.get("item") ?? m?.[2] ?? "book";
-          const value = item === "library" ? pricing.library.amount : pricing.book.amount;
-          track("purchase", { currency: "USD", value, transaction_id: `${item}-${Date.now()}`, items: [{ item_id: item, price: value }] });
+          const cur = readCurrency();
+          const value = PRICES[kindOf(item)][cur];
+          track("purchase", { currency: cur, value, transaction_id: `${item}-${Date.now()}`, items: [{ item_id: item, price: value }] });
         }
       } catch {}
     }
@@ -74,8 +76,9 @@ export default function Analytics() {
       const href = a.getAttribute("href") ?? "";
       if (href.startsWith("/api/checkout")) {
         const item = new URLSearchParams(href.split("?")[1] ?? "").get("item") ?? "book";
-        const value = item === "library" ? pricing.library.amount : pricing.book.amount;
-        track("begin_checkout", { currency: "USD", value, items: [{ item_id: item, price: value }] });
+        const cur = readCurrency();
+        const value = PRICES[kindOf(item)][cur];
+        track("begin_checkout", { currency: cur, value, items: [{ item_id: item, price: value }] });
       } else if (href.startsWith("/api/auth/login")) {
         track("login_start", {});
       } else {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Price, CurrencyPicker } from "@/components/pricing/Price";
 import { social } from "@/lib/og";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -192,7 +193,7 @@ export default async function BookDetailPage({
                   })}`}
                   className="inline-flex min-h-11 items-center justify-center rounded-sm hairline border-fg/70 px-6 label text-fg transition-colors hover:bg-fg hover:text-bg"
                 >
-                  {L.gatePurchaseCta} · {pricing.book.label}
+                  {L.gatePurchaseCta} · <Price item="book" />
                 </a>
               )}
               {forSale && (
@@ -200,7 +201,7 @@ export default async function BookDetailPage({
                   href={`/api/checkout?${new URLSearchParams({ item: "library", returnTo: `/${locale}/books` })}`}
                   className="inline-flex min-h-11 items-center justify-center rounded-sm px-4 label text-primary transition-colors hover:text-fg"
                 >
-                  {O.library} · {pricing.library.label}
+                  {O.library} · <Price item="library" />
                 </a>
               )}
               {[
@@ -213,6 +214,8 @@ export default async function BookDetailPage({
                 </a>
               ))}
             </div>
+
+            {forSale && <CurrencyPicker className="mt-3 block label" />}
 
             {book.blurbs && book.blurbs.length > 0 && (
               <div className="mt-12 space-y-6">

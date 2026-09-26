@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getSession, safeReturnTo, siteUrl } from "@/lib/auth";
 import { getBookBySlug } from "@/content/books";
-import { LIBRARY_ITEM, priceCodeFor } from "@/content/pricing";
+import { CURRENCY_COOKIE, LIBRARY_ITEM, currencyFromAcceptLanguage, isCurrency, priceCodeFor, type Currency } from "@/content/pricing";
 import { ownsBook, paywallEnabled } from "@/lib/access";
 
 export const dynamic = "force-dynamic";
@@ -40,24 +40,36 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(back);
   }
 
+  // Валюта: выбор читателя (cookie) или язык браузера — как в компоненте цены.
+  const picked = req.cookies.get(CURRENCY_COOKIE)?.value;
+  const currency: Currency = isCurrency(picked) ? picked : currencyFromAcceptLanguage(req.headers.get("accept-language"));
+
   const success = new URL(back);
   success.searchParams.set("purchased", "1");
   success.searchParams.set("item", item);
 
-  try {
-    const res = await fetch(`${base}/v1/checkout/sessions`, {
+  const create = (cur: Currency) =>
+    fetch(`${base}/v1/checkout/sessions`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-api-key": apiKey },
       body: JSON.stringify({
-        priceCode: priceCodeFor(item),
+        priceCode: priceCodeFor(item, cur),
         mode: "PAYMENT",
         userId: session.sub,
         successUrl: success.toString(),
         errorUrl: back.toString(),
-        metadata: { source: "neuralcosmology.com", item, email: session.email },
+        metadata: { source: "neuralcosmology.com", item, currency: cur, email: session.email },
       }),
       signal: AbortSignal.timeout(10_000),
     });
+
+  try {
+    let res = await create(currency);
+    // Цены в этой валюте ещё нет в биллинге — продаём в долларах, а не теряем покупку.
+    if (!res.ok && currency !== "USD") {
+      console.error(`[checkout] ${currency} failed (${res.status}), falling back to USD`);
+      res = await create("USD");
+    }
     if (!res.ok) throw new Error(`billing ${res.status}: ${await res.text()}`);
     const { checkoutUrl } = (await res.json()) as { checkoutUrl?: string };
     if (!checkoutUrl) throw new Error("no checkoutUrl in billing response");
