@@ -389,7 +389,7 @@ const en: Dict = {
       title: "Neuralcosmology",
       headline: "Neural Cosmology",
       subhead:
-        "The universe as a learning network. Consciousness as a property of certain graph configurations.",
+        "The universe works as a learning network. Consciousness arises where its connections form particular configurations.",
       subheadExtra:
         "Preprints, code, essays and book materials from a programme that joins information-theoretic physics, cosmology and the foundations of mind.",
       cta: "Enter",
@@ -406,7 +406,7 @@ const en: Dict = {
         "The argument runs through the books, the preprint and the essays.",
     },
     corePrinciples: {
-      title: "Five anomalies",
+      title: "Five facts",
       axioms: [
         "Five facts from five different journals. Together they point the same way.",
         "By several statistical measures the brain and the cosmic web are nearly indistinguishable (Vazza, Feletti, 2020).",
@@ -417,87 +417,79 @@ const en: Dict = {
       ],
     },
     tablet: {
-      title: "The Neuralcosmologist's Tablet",
-      subtitle: "10 Commandments for Navigating a Living Reality",
+      title: "The Observer's Tablet",
+      subtitle: "Ten rules for living inside a learning network",
       disclaimer:
-        "There is no doctrine here.\nOnly what remains\nwhen the illusions are gone.",
+        "These are short rules I draw for myself from the same model:\nif the world learns,\nwe have to learn too.",
       commandments: [
         {
-          title: "Don't flatten life into a line",
+          title: "Step off the beaten track",
           desc: [
-            "Linearity is an illusion.",
-            "Every instant is a fork.",
-            "Choose deliberately.",
+            "Life only looks like a straight line: almost every day throws up a fork that is easy to rush past on autopilot.",
+            "Noticing those places and choosing at them on purpose is most of the work."
           ],
         },
         {
           title: "Start from the inside",
           desc: [
-            "Outer signs are hollow when the inside doesn't agree.",
-            "Turn to yourself first.",
-            "Everything else reads from there.",
+            "Outward signs are worth nothing while there is discord inside.",
+            "Sort yourself out first, and the rest becomes visible from there."
           ],
         },
         {
-          title: "Clear the memory of noise",
+          title: "Don't dig in the past",
           desc: [
-            "The past has no weight of its own.",
-            "The mind is what carries it.",
-            "Find the pattern — the loop comes undone.",
+            "The past weighs nothing by itself; what makes it heavy is a memory that replays it again and again.",
+            "Once you see the pattern the loop follows, it comes undone."
           ],
         },
         {
           title: "Tell the voices apart",
           desc: [
-            "The real one gives clarity back.",
-            "The others only thicken the confusion.",
-            "That is the measure.",
+            "The voice worth listening to is the one that leaves your head clearer.",
+            "The others, however many there are and however loud, only add to the confusion."
           ],
         },
         {
-          title: "Break the old form",
+          title: "Break the shell",
           desc: [
-            "A crack is the signal to leave.",
-            "Step out before the form becomes a cell.",
+            "A crack in a familiar way of living usually means it is time to step out of it.",
+            "Better to leave before the shell turns into a cage."
           ],
         },
         {
-          title: "Hold through the transition",
+          title: "Sit through the pause",
           desc: [
-            "Don't rush to rebuild.",
-            "The pause after collapse is itself the work.",
-            "Stay in it until the next step surfaces.",
+            "When something has fallen apart, don't rush to rebuild at once.",
+            "The pause is work too: stay in it until you can see what the next step should be."
           ],
         },
         {
-          title: "Listen to repeats",
+          title: "Notice what comes back",
           desc: [
-            "If it returns, it hasn't been worked out.",
-            "It keeps returning until you do.",
+            "If a situation keeps repeating, you haven't worked it through yet.",
+            "It will keep coming back until you understand what it is teaching you."
           ],
         },
         {
           title: "Let the unfinished go",
           desc: [
-            "Not every ending arrives finished.",
-            "Sometimes it arrives only with clarity.",
-            "Without explanations, without apologies, without scenes.",
+            "Not every story ends with a full stop; sometimes it breaks off because you simply see there is no point going on.",
+            "Such an ending can be accepted calmly, without long explanations or farewell scenes."
           ],
         },
         {
-          title: "Call yourself forward",
+          title: "Get ahead of yourself",
           desc: [
-            "Your next version is waiting.",
-            "Permission is not coming.",
-            "Name it. Act from it. Live it.",
+            "The person you could become is already in view, and waiting for someone's permission to become them is pointless: nobody will hand it out.",
+            "Name who you want to be and start acting the way that person would."
           ],
         },
         {
-          title: "Gather yourself",
+          title: "Pull yourself together",
           desc: [
-            "A fractured self will not hold a decision.",
-            "Gather, or scatter.",
-            "There is no middle.",
+            "When the self is split, a decision doesn't last until evening, because each half pulls its own way.",
+            "You have to gather yourself into one piece or fall apart, and there is rarely a third option."
           ],
         },
       ],
@@ -505,12 +497,12 @@ const en: Dict = {
     practices: {
       title: "Practices of attention",
       list: [
-        "Watch which situations repeat — those are the forks.",
-        "A five-minute pause before decisions.",
-        "Separate signal from noise.",
-        "Only say what you can do.",
-        "If you are lost, stop.",
-        "Do the important thing when no one's watching.",
+        "Watch which situations repeat: that is where forks usually hide.",
+        "Before an important decision, pause for at least five minutes.",
+        "Separate what really matters from what is merely loud.",
+        "Promise only what you can actually do.",
+        "If you are lost, stop and look around before running on.",
+        "Do the important thing even when nobody is watching.",
       ],
       cta: "More",
     },
@@ -717,7 +709,7 @@ const ru: Dict = {
       title: "Neuralcosmology",
       headline: "Нейронная космология",
       subhead:
-        "Вселенная как обучающаяся сеть. Сознание как свойство определённых конфигураций графа.",
+        "Вселенная работает как обучающаяся сеть. Сознание возникает там, где её связи складываются в определённые конфигурации.",
       subheadExtra:
         "Препринты, код, эссе и материалы книг: исследование на стыке физики, космологии и природы сознания.",
       cta: "Войти",
@@ -734,7 +726,7 @@ const ru: Dict = {
         "Разбор идёт в книгах, препринте и эссе.",
     },
     corePrinciples: {
-      title: "Пять аномалий",
+      title: "Пять фактов",
       axioms: [
         "Пять фактов из разных журналов. Вместе они указывают в одну сторону.",
         "По ряду статистических показателей мозг и космическая паутина почти неотличимы (Вацца, Фелетти, 2020).",
@@ -745,87 +737,79 @@ const ru: Dict = {
       ],
     },
     tablet: {
-      title: "Скрижаль нейрокосмолога",
-      subtitle: "Десять заповедей для живой реальности",
+      title: "Скрижаль наблюдателя",
+      subtitle: "Десять правил для того, кто живёт внутри обучающейся сети",
       disclaimer:
-        "Доктрины здесь нет.\nЕсть то, что остаётся,\nкогда уходят иллюзии.",
+        "Это короткие правила, которые я вывожу для себя из той же модели:\nесли мир учится,\nучиться приходится и нам.",
       commandments: [
         {
-          title: "Не живи по накатанной",
+          title: "Сходи с накатанной",
           desc: [
-            "Линейность — иллюзия.",
-            "Каждый миг — развилка.",
-            "Выбирай осознанно.",
+            "Жизнь только кажется прямой линией: почти каждый день подбрасывает развилку, которую легко проскочить на автомате.",
+            "Замечать такие места и выбирать на них сознательно — большая часть работы."
           ],
         },
         {
           title: "Начинай изнутри",
           desc: [
-            "Внешние знаки пусты, если внутри разлад.",
-            "Обратись сначала к себе.",
-            "Остальное видно уже оттуда.",
+            "Внешние знаки ничего не дают, пока внутри не утихнет разлад.",
+            "Сначала разберись с собой, и остальное станет видно уже оттуда."
           ],
         },
         {
           title: "Не копайся в прошлом",
           desc: [
-            "Само по себе прошлое — мертво.",
-            "Его держит ум.",
-            "Увидь узор — и петля разомкнётся.",
+            "Прошлое само по себе ничего не весит: тяжёлым его делает память, которая снова и снова его прокручивает.",
+            "Когда видишь, по какому узору идёт этот круг, он размыкается."
           ],
         },
         {
           title: "Различай голоса",
           desc: [
-            "Настоящий возвращает ясность.",
-            "Остальные только путают.",
-            "Это и есть мера.",
+            "Слушать стоит тот голос, после которого в голове становится яснее.",
+            "Остальные, сколько бы их ни было и как бы громко они ни звучали, только запутывают."
           ],
         },
         {
           title: "Ломай скорлупу",
           desc: [
-            "Трещина — сигнал к выходу.",
-            "Выходи, пока скорлупа не стала клеткой.",
+            "Трещина в привычной форме жизни обычно означает, что из неё пора выходить.",
+            "Лучше выйти, пока скорлупа не превратилась в клетку."
           ],
         },
         {
           title: "Выдержи паузу",
           desc: [
-            "Не спеши перестраивать.",
-            "Пауза после разрушения — тоже работа.",
-            "Побудь в ней, пока не проступит следующий шаг.",
+            "Когда что-то рухнуло, не спеши сразу строить заново.",
+            "Пауза тоже работа: побудь в ней, пока не станет понятно, каким будет следующий шаг."
           ],
         },
         {
           title: "Замечай, что возвращается",
           desc: [
-            "Повторяется — значит, ещё не доведено до конца.",
-            "Возвращается, пока ты не разберёшься.",
+            "Если ситуация повторяется, значит, ты её ещё не разобрал до конца.",
+            "Она будет возвращаться, пока ты не поймёшь, чему она учит."
           ],
         },
         {
           title: "Отпускай незавершённое",
           desc: [
-            "Не всякий конец — завершён.",
-            "Иногда он приходит только с ясностью.",
-            "Без объяснений, без извинений, без сцен.",
+            "Не каждая история заканчивается точкой: иногда её обрывает простое понимание, что продолжать незачем.",
+            "Такой конец можно принять спокойно, обходясь без долгих объяснений и прощальных сцен."
           ],
         },
         {
           title: "Опереди себя",
           desc: [
-            "Тот, кем ты можешь стать, — уже зовёт.",
-            "Разрешения не будет.",
-            "Назови. Действуй. Живи.",
+            "Человек, которым ты можешь стать, уже виден, и ждать чьего-то разрешения, чтобы им стать, бесполезно: его никто не выдаст.",
+            "Назови, кем хочешь быть, и начни поступать так, как поступал бы он."
           ],
         },
         {
           title: "Собери себя",
           desc: [
-            "Расколотое «я» не удержит решения.",
-            "Собирай или рассыпешься.",
-            "Середины нет.",
+            "Когда «я» расколото, решение не доживает до вечера, потому что каждая половина тянет в свою сторону.",
+            "Приходится собирать себя в одно целое, иначе рассыпаешься, и третьего обычно не дано."
           ],
         },
       ],
@@ -833,12 +817,12 @@ const ru: Dict = {
     practices: {
       title: "Практики внимания",
       list: [
-        "Смотри, какие ситуации повторяются — это развилки.",
-        "Пауза пять минут — перед решением.",
-        "Различай сигнал и шум.",
-        "Говори только то, что можешь сделать.",
-        "Заблудился — остановись.",
-        "Делай важное, когда никто не смотрит.",
+        "Смотри, какие ситуации повторяются: чаще всего развилки прячутся именно в них.",
+        "Перед важным решением сделай паузу хотя бы на пять минут.",
+        "Отделяй то, что действительно важно, от того, что просто громко звучит.",
+        "Обещай только то, что можешь сделать.",
+        "Если заблудился, остановись и оглядись, прежде чем бежать дальше.",
+        "Делай важное и тогда, когда никто не смотрит.",
       ],
       cta: "Подробнее",
     },
@@ -1044,7 +1028,7 @@ const pt: Dict = {
       title: "Neuralcosmology",
       headline: "Cosmologia Neural",
       subhead:
-        "O universo como uma rede em aprendizado. A consciência como propriedade de certas configurações de grafo.",
+        "O universo funciona como uma rede em aprendizado. A consciência surge onde suas conexões formam certas configurações.",
       subheadExtra:
         "Preprints, código, ensaios e materiais dos livros de um programa que une a física da informação, a cosmologia e os fundamentos da mente.",
       cta: "Entrar",
@@ -1061,7 +1045,7 @@ const pt: Dict = {
         "O argumento atravessa os livros, o preprint e os ensaios.",
     },
     corePrinciples: {
-      title: "Cinco anomalias",
+      title: "Cinco fatos",
       axioms: [
         "Cinco fatos de cinco revistas diferentes. Juntos apontam para o mesmo lado.",
         "Por vários indicadores estatísticos, o cérebro e a teia cósmica são quase indistinguíveis (Vazza, Feletti, 2020).",
@@ -1072,87 +1056,79 @@ const pt: Dict = {
       ],
     },
     tablet: {
-      title: "A Tábua do Neuralcosmologista",
-      subtitle: "Dez mandamentos para uma realidade viva",
+      title: "A Tábua do Observador",
+      subtitle: "Dez regras para quem vive dentro de uma rede que aprende",
       disclaimer:
-        "Aqui não há doutrina.\nHá o que resta\nquando as ilusões se vão.",
+        "São regras curtas que tiro para mim do mesmo modelo:\nse o mundo aprende,\nnós também precisamos aprender.",
       commandments: [
         {
-          title: "Não viva no automático",
+          title: "Saia do automático",
           desc: [
-            "Linearidade é ilusão.",
-            "Cada instante é uma bifurcação.",
-            "Escolha com lucidez.",
+            "A vida só parece uma linha reta: quase todo dia aparece uma bifurcação fácil de atravessar sem perceber.",
+            "Notar esses pontos e escolher neles de propósito é a maior parte do trabalho."
           ],
         },
         {
           title: "Comece por dentro",
           desc: [
-            "Sinais externos são ocos quando por dentro não bate.",
-            "Volte-se primeiro a si mesmo.",
-            "O resto se lê a partir dele.",
+            "Sinais externos não valem nada enquanto por dentro há desarmonia.",
+            "Resolva-se primeiro consigo mesmo, e o resto fica visível a partir daí."
           ],
         },
         {
-          title: "Limpe a memória do ruído",
+          title: "Não remexa o passado",
           desc: [
-            "O passado não pesa por si.",
-            "É a mente que o carrega.",
-            "Veja o padrão — o laço se desmancha.",
+            "O passado não pesa nada por si; quem o torna pesado é a memória que o repete sem parar.",
+            "Quando você enxerga o desenho que esse círculo segue, ele se desfaz."
           ],
         },
         {
           title: "Distinga as vozes",
           desc: [
-            "A verdadeira devolve clareza.",
-            "As outras só adensam a confusão.",
-            "Essa é a medida.",
+            "Vale ouvir a voz depois da qual a cabeça fica mais clara.",
+            "As outras, por mais numerosas e altas que sejam, só aumentam a confusão."
           ],
         },
         {
-          title: "Rompa a forma antiga",
+          title: "Quebre a casca",
           desc: [
-            "A rachadura é o sinal para sair.",
-            "Saia antes que a forma vire uma cela.",
+            "Uma rachadura na forma habitual de viver costuma avisar que é hora de sair dela.",
+            "Melhor sair antes que a casca vire uma jaula."
           ],
         },
         {
           title: "Aguente a pausa",
           desc: [
-            "Não corra para reconstruir.",
-            "A pausa depois do desmoronamento também é trabalho.",
-            "Permaneça nela até que o próximo passo apareça.",
+            "Quando algo desmorona, não corra para reconstruir na mesma hora.",
+            "A pausa também é trabalho: fique nela até ver qual deve ser o próximo passo."
           ],
         },
         {
-          title: "Escute as repetições",
+          title: "Repare no que volta",
           desc: [
-            "Se volta, é porque não foi resolvido.",
-            "Volta até você resolver.",
+            "Se uma situação se repete, é porque você ainda não a resolveu até o fim.",
+            "Ela vai continuar voltando até você entender o que ela ensina."
           ],
         },
         {
           title: "Deixe ir o inacabado",
           desc: [
-            "Nem todo fim chega concluído.",
-            "Às vezes chega apenas com clareza.",
-            "Sem explicações, sem desculpas, sem cena.",
+            "Nem toda história termina com ponto final; às vezes ela se interrompe porque você simplesmente percebe que não há por que continuar.",
+            "Um fim assim pode ser aceito com calma, sem longas explicações nem cenas de despedida."
           ],
         },
         {
           title: "Adiante-se a si mesmo",
           desc: [
-            "Sua próxima versão está esperando.",
-            "Permissão não vai chegar.",
-            "Dê-lhe nome. Aja a partir dela. Viva-a.",
+            "A pessoa que você pode vir a ser já está à vista, e esperar a permissão de alguém para virar essa pessoa é inútil: ninguém vai concedê-la.",
+            "Diga quem você quer ser e comece a agir como essa pessoa agiria."
           ],
         },
         {
           title: "Reúna-se",
           desc: [
-            "Um eu partido não sustenta uma decisão.",
-            "Reúna ou desfaça-se.",
-            "Não há meio-termo.",
+            "Quando o eu está partido, uma decisão não dura até a noite, porque cada metade puxa para um lado.",
+            "É preciso se reunir numa peça só, ou você se desfaz, e raramente existe uma terceira saída."
           ],
         },
       ],
@@ -1160,12 +1136,12 @@ const pt: Dict = {
     practices: {
       title: "Práticas de atenção",
       list: [
-        "Observe quais situações se repetem — são as bifurcações.",
-        "Pausa de cinco minutos antes de decidir.",
-        "Separe sinal de ruído.",
-        "Só diga o que pode fazer.",
-        "Se se perdeu, pare.",
-        "Faça o importante quando ninguém está olhando.",
+        "Repare nas situações que se repetem: é nelas que as bifurcações costumam se esconder.",
+        "Antes de uma decisão importante, faça uma pausa de pelo menos cinco minutos.",
+        "Separe o que de fato importa do que só faz barulho.",
+        "Prometa apenas o que você consegue fazer.",
+        "Se você se perdeu, pare e olhe em volta antes de continuar correndo.",
+        "Faça o que é importante mesmo quando ninguém está olhando.",
       ],
       cta: "Mais",
     },
@@ -1370,7 +1346,7 @@ const es: Dict = {
       title: "Neuralcosmology",
       headline: "Cosmología Neural",
       subhead:
-        "El universo como una red que aprende. La consciencia como propiedad de ciertas configuraciones de grafo.",
+        "El universo funciona como una red que aprende. La consciencia surge donde sus conexiones forman ciertas configuraciones.",
       subheadExtra:
         "Preprints, código, ensayos y materiales de los libros de un programa que une la física de la información, la cosmología y los fundamentos de la mente.",
       cta: "Entrar",
@@ -1387,7 +1363,7 @@ const es: Dict = {
         "El argumento recorre los libros, el preprint y los ensayos.",
     },
     corePrinciples: {
-      title: "Cinco anomalías",
+      title: "Cinco hechos",
       axioms: [
         "Cinco hechos de cinco revistas distintas. Juntos apuntan en la misma dirección.",
         "Según varios indicadores estadísticos, el cerebro y la red cósmica son casi indistinguibles (Vazza, Feletti, 2020).",
@@ -1398,87 +1374,79 @@ const es: Dict = {
       ],
     },
     tablet: {
-      title: "La Tabla del Neuralcosmólogo",
-      subtitle: "Diez mandamientos para una realidad viva",
+      title: "La Tabla del Observador",
+      subtitle: "Diez reglas para quien vive dentro de una red que aprende",
       disclaimer:
-        "Aquí no hay doctrina.\nHay lo que queda\ncuando se van las ilusiones.",
+        "Son reglas breves que saco para mí del mismo modelo:\nsi el mundo aprende,\nnos toca aprender también.",
       commandments: [
         {
-          title: "No vivas en piloto automático",
+          title: "Sal del piloto automático",
           desc: [
-            "La linealidad es ilusión.",
-            "Cada instante es una bifurcación.",
-            "Elige con lucidez.",
+            "La vida solo parece una línea recta: casi cada día aparece una bifurcación que es fácil cruzar sin darse cuenta.",
+            "Fijarse en esos puntos y elegir en ellos a conciencia es la mayor parte del trabajo."
           ],
         },
         {
           title: "Empieza por dentro",
           desc: [
-            "Las señales de fuera son huecas cuando por dentro no cuadra.",
-            "Vuélvete primero hacia ti.",
-            "El resto se lee desde ahí.",
+            "Las señales de fuera no sirven de nada mientras por dentro haya discordia.",
+            "Arréglate primero contigo, y el resto se ve ya desde ahí."
           ],
         },
         {
-          title: "Limpia la memoria del ruido",
+          title: "No escarbes en el pasado",
           desc: [
-            "El pasado no pesa por sí mismo.",
-            "Es la mente la que lo carga.",
-            "Ve el patrón — el lazo se deshace.",
+            "El pasado no pesa nada por sí mismo; lo que lo vuelve pesado es una memoria que lo repite una y otra vez.",
+            "Cuando ves el dibujo que sigue ese círculo, el círculo se abre."
           ],
         },
         {
           title: "Distingue las voces",
           desc: [
-            "La verdadera devuelve claridad.",
-            "Las otras solo espesan la confusión.",
-            "Esa es la medida.",
+            "Vale la pena escuchar la voz que te deja la cabeza más clara.",
+            "Las demás, por muchas que sean y por alto que suenen, solo aumentan la confusión."
           ],
         },
         {
-          title: "Rompe la forma vieja",
+          title: "Rompe la cáscara",
           desc: [
-            "La grieta es la señal para salir.",
-            "Sal antes de que la forma sea una celda.",
+            "Una grieta en la forma habitual de vivir suele indicar que ha llegado la hora de salir de ella.",
+            "Mejor salir antes de que la cáscara se convierta en jaula."
           ],
         },
         {
           title: "Sostén la pausa",
           desc: [
-            "No corras a reconstruir.",
-            "La pausa tras el derrumbe también es trabajo.",
-            "Quédate en ella hasta que aparezca el siguiente paso.",
+            "Cuando algo se ha derrumbado, no corras a reconstruirlo enseguida.",
+            "La pausa también es trabajo: quédate en ella hasta ver cuál debe ser el siguiente paso."
           ],
         },
         {
-          title: "Escucha las repeticiones",
+          title: "Fíjate en lo que vuelve",
           desc: [
-            "Si vuelve, no ha sido resuelto.",
-            "Vuelve hasta que lo resuelvas.",
+            "Si una situación se repite, es que todavía no la has resuelto del todo.",
+            "Seguirá volviendo hasta que entiendas qué te está enseñando."
           ],
         },
         {
           title: "Suelta lo inconcluso",
           desc: [
-            "No todo final llega concluido.",
-            "A veces llega solo con claridad.",
-            "Sin explicaciones, sin disculpas, sin escena.",
+            "No toda historia termina con punto final; a veces se interrumpe porque simplemente ves que no tiene sentido seguir.",
+            "Un final así puede aceptarse con calma, sin largas explicaciones ni escenas de despedida."
           ],
         },
         {
           title: "Adelántate a ti mismo",
           desc: [
-            "Tu próxima versión está esperando.",
-            "El permiso no va a llegar.",
-            "Ponle nombre. Actúa desde ella. Vívela.",
+            "La persona que puedes llegar a ser ya se ve, y esperar el permiso de alguien para convertirte en ella es inútil: nadie te lo va a dar.",
+            "Di quién quieres ser y empieza a actuar como actuaría esa persona."
           ],
         },
         {
-          title: "Reúnete",
+          title: "Recógete entero",
           desc: [
-            "Un yo partido no sostiene una decisión.",
-            "Reúnete o desintégrate.",
-            "No hay punto medio.",
+            "Cuando el yo está partido, una decisión no llega viva a la noche, porque cada mitad tira hacia su lado.",
+            "Hay que juntarse en una sola pieza o uno se deshace, y casi nunca hay una tercera opción."
           ],
         },
       ],
@@ -1486,12 +1454,12 @@ const es: Dict = {
     practices: {
       title: "Prácticas de atención",
       list: [
-        "Observa qué situaciones se repiten — son las bifurcaciones.",
-        "Pausa de cinco minutos antes de decidir.",
-        "Separa señal de ruido.",
-        "Di solo lo que puedas hacer.",
-        "Si te has perdido, detente.",
-        "Haz lo importante cuando nadie te mira.",
+        "Fíjate en qué situaciones se repiten: suele ser ahí donde se esconden las bifurcaciones.",
+        "Antes de una decisión importante, haz una pausa de al menos cinco minutos.",
+        "Separa lo que de verdad importa de lo que solo hace ruido.",
+        "Promete solo lo que puedas cumplir.",
+        "Si te has perdido, detente y mira alrededor antes de seguir corriendo.",
+        "Haz lo importante también cuando nadie te mira.",
       ],
       cta: "Más",
     },

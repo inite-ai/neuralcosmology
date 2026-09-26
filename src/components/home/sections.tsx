@@ -25,6 +25,14 @@ function splitClause(text: string): [string, string | undefined] {
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
+// Подписи к «пластинам» главной.
+const PLATE_CAPTION: Record<SupportedLocale, { web: string; cortex: string }> = {
+  en: { web: "PL. 01 · cosmic web", cortex: "PL. 02 · cortex" },
+  ru: { web: "Табл. 01 · космическая паутина", cortex: "Табл. 02 · кора мозга" },
+  pt: { web: "Est. 01 · teia cósmica", cortex: "Est. 02 · córtex" },
+  es: { web: "Lám. 01 · red cósmica", cortex: "Lám. 02 · corteza" },
+};
+
 const AUTHOR: Record<SupportedLocale, string> = {
   en: "Mikhail Savchenko",
   ru: "Михаил Савченко",
@@ -86,7 +94,7 @@ export function HomeHero({ locale }: { locale: SupportedLocale }) {
     </div>
   );
 
-  return <ScrollHero card={card} pills={pills} />;
+  return <ScrollHero card={card} pills={pills} caption={PLATE_CAPTION[locale].web} />;
 }
 
 // ---------- Marquee: источники ----------
@@ -204,7 +212,7 @@ export function HomeWhatIs({ locale }: { locale: SupportedLocale }) {
   const t = getDict(locale).home.whatIs;
   const [claim, clause] = splitClause(t.lead1);
   return (
-    <GridImage plate="neurons" cols={[52]} rows={[14, 90]} card={{ left: 52, right: 98, top: 14, bottom: 90 }} imgPosition="object-[30%_50%]" caption="PL. 02 · cortex">
+    <GridImage plate="neurons" cols={[52]} rows={[14, 90]} card={{ left: 52, right: 98, top: 14, bottom: 90 }} imgPosition="object-[30%_50%]" caption={PLATE_CAPTION[locale].cortex}>
       <Label className="mb-4">{t.title}</Label>
       <Headline em={clause} className="max-w-[22ch] !text-[clamp(1.875rem,3.2vw,2.5rem)]">
         {claim}
@@ -293,7 +301,7 @@ export function HomeAnomalies({ locale }: { locale: SupportedLocale }) {
   };
   return (
     <Band id="core-principles">
-      <Heading label={`${EVIDENCE[locale]} · ${pad(axioms.length)}`} title={`${t.title}.`} em={getDict(locale).home.whatIs.lead2.split(". ").slice(-1)[0]} />
+      <Heading label={`${EVIDENCE[locale]} · ${pad(axioms.length)}`} title={`${t.title}.`} em={t.axioms[0].split(". ").slice(1).join(". ")} />
       <div className="mt-14 hairline bg-line">
         <div className="grid gap-[0.5px] md:grid-cols-3">{axioms.slice(0, 3).map((a, i) => cell(a, i))}</div>
         <div className="mt-[0.5px] grid gap-[0.5px] md:grid-cols-2">{axioms.slice(3).map((a, i) => cell(a, i + 3))}</div>
@@ -550,7 +558,7 @@ const PRACTICE: Record<SupportedLocale, { eyebrow: string; title: string; body: 
   ru: {
     eyebrow: "Прикладная сторона",
     title: "Где та же дисциплина встречается с клиентской работой",
-    body: "Помимо исследований, тот же человек ведёт бизнес-практику под именем Mike Fluff, Business Doctor: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, ИИ, безопасный по построению), технологическая хирургия, три курса. Та же научная дисциплина, только в темпе клиентской работы.",
+    body: "Помимо исследований, тот же человек ведёт бизнес-практику под именем Mike Fluff, Business Doctor: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, безопасность ИИ, заложенная ещё при проектировании), технологическая хирургия, три курса. Та же научная дисциплина, только в темпе клиентской работы.",
     bullets: ["ИИ-автоматизация и интеграции", "Регуляторный иммунитет (защита данных и соответствие требованиям для ИИ)", "Три курса ($19 каждый)"],
     cta: "Открыть mikefluff.com",
     ctaSecondary: "Эссе о том, как это связано",

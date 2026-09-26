@@ -133,7 +133,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
 
           <div className="flex flex-col gap-2 rule-t py-6 label text-muted sm:flex-row sm:items-center sm:justify-between md:px-10">
             <span>
-              © {new Date().getFullYear()} Neural Cosmology. {dict.footer.copyright}
+              © {new Date().getFullYear()} {dict.siteName}. {dict.footer.copyright}
             </span>
             <a href="mailto:info@neuralcosmology.com" className="hover:text-fg transition-colors normal-case tracking-normal">
               info@neuralcosmology.com

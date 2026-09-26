@@ -12,7 +12,7 @@ const smooth = (a: number, b: number, x: number) => {
   return t * t * (3 - 2 * t);
 };
 
-export default function ScrollHero({ card, pills }: { card: ReactNode; pills?: ReactNode }) {
+export default function ScrollHero({ card, pills, caption = "PL. 01 · cosmic web" }: { card: ReactNode; pills?: ReactNode; caption?: string }) {
   const wrap = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function ScrollHero({ card, pills }: { card: ReactNode; pills?: R
             className="absolute right-4 bottom-3 label text-fg/60"
             style={{ opacity: "calc(1 - var(--p, 0) * 2)" }}
           >
-            PL. 01 · cosmic web
+            {caption}
           </span>
         </div>
 

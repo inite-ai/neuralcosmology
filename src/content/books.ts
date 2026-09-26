@@ -10,10 +10,10 @@ export const books: Book[] = [
       es: "El Código Celestial",
     },
     hook: {
-      en: "Five independent discoveries, five different fields, one shape — tested against data.",
-      ru: "Пять независимых открытий в пяти разных областях складываются в одну картину — и эта картина проверяется на данных.",
-      pt: "Cinco descobertas independentes, cinco campos diferentes, uma forma — testada contra dados.",
-      es: "Cinco descubrimientos independientes, cinco campos distintos, una misma forma — puesta a prueba contra los datos.",
+      en: "Five independent discoveries from five different fields form a single picture, and that picture can be tested against data.",
+      ru: "Пять независимых открытий из пяти разных областей складываются в одну картину, и её можно проверить на данных.",
+      pt: "Cinco descobertas independentes, de cinco campos diferentes, formam uma só imagem, e ela pode ser testada com dados.",
+      es: "Cinco descubrimientos independientes, de cinco campos distintos, forman una sola imagen, y esa imagen puede ponerse a prueba con datos.",
     },
     synopsis: {
       en:
@@ -125,10 +125,10 @@ export const books: Book[] = [
       es: "Era de los Arquitectos",
     },
     hook: {
-      en: "The sequel. The bugs were debugged. The architects are next.",
-      ru: "Сиквел. Баги починены. На очереди — архитекторы.",
-      pt: "A sequência. Os bugs foram depurados. Os arquitetos são os próximos.",
-      es: "La secuela. Los bugs fueron depurados. Los arquitectos son los siguientes.",
+      en: "The sequel: the bugs are fixed, and the architects are next.",
+      ru: "Продолжение: баги починены, на очереди архитекторы.",
+      pt: "A continuação: os bugs foram corrigidos, e agora é a vez dos arquitetos.",
+      es: "La continuación: los bugs están arreglados y ahora les toca a los arquitectos.",
     },
     synopsis: {
       en:
