@@ -13,12 +13,6 @@ export const PRICES: Record<"book" | "library", Record<Currency, number>> = {
   library: prices.library,
 };
 
-// Базовая (долларовая) цена — для JSON-LD и значений по умолчанию.
-export const pricing = {
-  book: { amount: PRICES.book.USD, currency: "USD", label: formatPrice(PRICES.book.USD, "USD") },
-  library: { amount: PRICES.library.USD, currency: "USD", label: formatPrice(PRICES.library.USD, "USD") },
-} as const;
-
 export const isCurrency = (v: unknown): v is Currency => CURRENCIES.includes(v as Currency);
 
 export function priceCodeFor(item: string, currency: Currency = "USD"): string {
@@ -56,3 +50,9 @@ export function formatPrice(amount: number, currency: Currency): string {
   const f = FORMAT[currency];
   return new Intl.NumberFormat(f.locale, { style: "currency", currency, currencyDisplay: f.display, maximumFractionDigits: 0 }).format(amount);
 }
+
+// Базовая (долларовая) цена — для JSON-LD и значений по умолчанию.
+export const pricing = {
+  book: { amount: PRICES.book.USD, currency: "USD", label: formatPrice(PRICES.book.USD, "USD") },
+  library: { amount: PRICES.library.USD, currency: "USD", label: formatPrice(PRICES.library.USD, "USD") },
+} as const;
