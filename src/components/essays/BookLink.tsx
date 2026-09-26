@@ -41,6 +41,12 @@ const BOOK_PATTERNS: { re: RegExp; slug: string }[] = [
   // Russian — Осознанный Отбор
   { re: /«(Осознанн[а-яё]*\s+Отбор[а-яё]*)»/g, slug: "conscious-selection" },
   { re: /\*(Осознанный\s+Отбор)\*/g, slug: "conscious-selection" },
+  // Russian — Код больше не пишут (не склоняется)
+  { re: /«(Код\s+больше\s+не\s+пишут)»/g, slug: "nobody-writes-code" },
+  { re: /\*(Код\s+больше\s+не\s+пишут)\*/g, slug: "nobody-writes-code" },
+  // English — Nobody Writes Code Anymore
+  { re: /\*(Nobody\s+Writes\s+Code\s+Anymore)\*/g, slug: "nobody-writes-code" },
+  { re: /"(Nobody\s+Writes\s+Code\s+Anymore)"/g, slug: "nobody-writes-code" },
   // English — Conscious Selection
   { re: /\*(Conscious\s+Selection)\*/g, slug: "conscious-selection" },
   { re: /"(Conscious\s+Selection)"/g, slug: "conscious-selection" },

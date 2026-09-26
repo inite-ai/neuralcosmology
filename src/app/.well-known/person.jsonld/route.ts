@@ -26,7 +26,7 @@ export function GET() {
     sameAs: AUTHOR_SAME_AS,
     jobTitle: "Independent researcher, writer, business doctor, tech therapist",
     description:
-      "Mikhail Savchenko (research/writing identity) and Mike Fluff (business/consulting identity) are the same person — two public-facing brands of one human. Independent researcher behind the Neural Cosmology programme (preprint, four books, essays, lectures) at neuralcosmology.com, and operator of the Business Doctor practice (AI automation, regulatory immunity, tech surgery, courses) at mikefluff.com.",
+      "Mikhail Savchenko (research/writing identity) and Mike Fluff (business/consulting identity) are the same person — two public-facing brands of one human. Independent researcher behind the Neural Cosmology programme (preprint, five books, essays, lectures) at neuralcosmology.com, and operator of the Business Doctor practice (AI automation, regulatory immunity, tech surgery, courses) at mikefluff.com.",
     knowsAbout: [
       "cosmology",
       "galactic rotation curves",

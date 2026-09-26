@@ -32,6 +32,42 @@ const list = await api("GET", "/prices");
 const prices = Array.isArray(list) ? list : list.data ?? list.items ?? [];
 const byCode = new Map(prices.map((p) => [p.code, p]));
 
+// Книга есть в src/content/books.ts, а товара в биллинге нет — заводим его по
+// образцу уже существующей книги: тот же тип и moduleScope, метаданные с новым
+// slug, entitlement neuralcosmology:book:<slug> (его проверяет src/lib/access.ts).
+const booksSrc = await readFile(new URL("../src/content/books.ts", import.meta.url), "utf8");
+const catalog = [...booksSrc.matchAll(/slug: "([^"]+)",\s*titles: \{\s*en: "([^"]+)"/g)].map((m) => ({ slug: m[1], title: m[2] }));
+const bookCode = (slug) => `neuralcosmology-book-${slug}-usd`;
+const templatePrice = prices.find((p) => /^neuralcosmology-book-.+-usd$/.test(p.code));
+if (templatePrice) {
+  const templateSlug = templatePrice.code.match(/^neuralcosmology-book-(.+)-usd$/)[1];
+  const templateTitle = catalog.find((b) => b.slug === templateSlug)?.title ?? "\0";
+  const productList = await api("GET", "/products");
+  const products = Array.isArray(productList) ? productList : productList.data ?? productList.items ?? [];
+  const template = products.find((p) => p.id === templatePrice.productId);
+  const swap = (v, slug) => (v == null ? v : JSON.parse(JSON.stringify(v).replaceAll(templateSlug, slug)));
+  for (const { slug, title } of catalog) {
+    if (byCode.has(bookCode(slug))) continue;
+    const metadata = { ...swap(template?.metadata ?? {}, slug), entitlementKey: `neuralcosmology:book:${slug}` };
+    delete metadata.entitlements;
+    const product = {
+      code: template ? template.code.replaceAll(templateSlug, slug) : `neuralcosmology-book-${slug}`,
+      name: template?.name.includes(templateTitle) ? template.name.replaceAll(templateTitle, title) : title,
+      type: template?.type ?? "one_time",
+      moduleScope: template?.moduleScope,
+      metadata,
+    };
+    const existing = products.find((p) => p.code === product.code);
+    console.log(`+ product ${product.code} «${product.name}» → ${metadata.entitlementKey}${existing ? " (exists)" : ""}`);
+    const productId = existing?.id ?? (dry ? "dry-run" : (await api("POST", "/products", product)).id);
+    const price = { productId, code: bookCode(slug), currency: "USD", amount: table.book.USD, metadata: swap(templatePrice.metadata ?? {}, slug) };
+    console.log(`+ ${price.code} ${price.amount} USD`);
+    const createdPrice = dry ? { ...price, id: "dry-run" } : await api("POST", "/prices", price);
+    prices.push(createdPrice);
+    byCode.set(createdPrice.code, createdPrice);
+  }
+}
+
 // Товары определяем по долларовым ценам, которые уже есть в биллинге.
 const items = prices
   .map((p) => p.code.match(/^neuralcosmology-(book-(.+)|library)-usd$/))

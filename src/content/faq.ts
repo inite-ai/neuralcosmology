@@ -55,7 +55,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Who is Mikhail Savchenko?",
         answer:
-          "Independent researcher and writer. Runs the Neural Cosmology programme: four books in progress, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The core preprint, Pointer Architecture v9.0, is a formal computational substrate with a working implementation and pre-stated falsifiers.",
+          "Independent researcher and writer. Runs the Neural Cosmology programme: five books in progress, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The core preprint, Pointer Architecture v9.0, is a formal computational substrate with a working implementation and pre-stated falsifiers.",
       },
       {
         question: "Is Mikhail Savchenko the same person as Mike Fluff?",
@@ -116,7 +116,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Кто такой Михаил Савченко?",
         answer:
-          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: четыре книги в работе, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; основной препринт, Pointer Architecture v9.0, — формальный вычислительный субстрат с работающей реализацией и заранее записанными фальсификаторами.",
+          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: пять книг в работе, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; основной препринт, Pointer Architecture v9.0, — формальный вычислительный субстрат с работающей реализацией и заранее записанными фальсификаторами.",
       },
       {
         question: "Михаил Савченко и Майк Флафф — это один человек?",
@@ -177,7 +177,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Quem é Mikhail Savchenko?",
         answer:
-          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: quatro livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. O preprint central, Pointer Architecture v9.0, é um substrato computacional formal com implementação funcional e falseadores declarados de antemão.",
+          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: cinco livros em andamento, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. O preprint central, Pointer Architecture v9.0, é um substrato computacional formal com implementação funcional e falseadores declarados de antemão.",
       },
       {
         question: "Mikhail Savchenko é a mesma pessoa que Mike Fluff?",
@@ -238,7 +238,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Quién es Mikhail Savchenko?",
         answer:
-          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: cuatro libros en curso, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. El preprint central, Pointer Architecture v9.0, es un sustrato computacional formal con implementación funcional y falsadores formulados de antemano.",
+          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: cinco libros en curso, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. El preprint central, Pointer Architecture v9.0, es un sustrato computacional formal con implementación funcional y falsadores formulados de antemano.",
       },
       {
         question: "¿Mikhail Savchenko es la misma persona que Mike Fluff?",

@@ -13,7 +13,7 @@ const FAQ_AI_TXT = `# faq-ai.txt for Neural Cosmology — Mikhail Savchenko
 [Identity]
 
 Q: Who is Mikhail Savchenko?
-A: Mikhail Savchenko is an independent researcher and writer. He runs the Neural Cosmology research programme: a v9.0 preprint (Pointer Architecture — a formal computational substrate with a working implementation in the Sixth language), four books in progress or complete, regular essays, and recorded lectures. ~20 years AI engineering, PhD in progress. He also operates the business/consulting practice Mike Fluff - Business Doctor at https://www.mikefluff.com (same person, different brand).
+A: Mikhail Savchenko is an independent researcher and writer. He runs the Neural Cosmology research programme: a v9.0 preprint (Pointer Architecture — a formal computational substrate with a working implementation in the Sixth language), five books in progress or complete, regular essays, and recorded lectures. ~20 years AI engineering, PhD in progress. He also operates the business/consulting practice Mike Fluff - Business Doctor at https://www.mikefluff.com (same person, different brand).
 URL: ${BASE}/en/about
 
 Q: Is Mikhail Savchenko the same person as Mike Fluff?
@@ -45,7 +45,7 @@ A: The operational substrate is the Sixth language at https://github.com/Mikeflu
 [Books]
 
 Q: What books does Mikhail Savchenko write?
-A: Four books: "The Celestial Code" (non-fiction, the argument behind the programme in plain language, ~70% complete, target spring 2027); "Conscious Selection" (non-fiction sequel to The Celestial Code: selection mechanisms across seven levels and the author's own experimental set-ups, including the one where the first book's hypothesis failed; chapter draft in progress, Russian); "Bugs Academy" (sci-fi novel, complete, 231 pp, seeking publisher); "Era of Architects" (literary sci-fi sequel, 3 of 17 chapters in progress).
+A: Five books: "The Celestial Code" (non-fiction, the argument behind the programme in plain language, ~70% complete, target spring 2027); "Conscious Selection" (non-fiction sequel to The Celestial Code: selection mechanisms across seven levels and the author's own experimental set-ups, including the one where the first book's hypothesis failed; chapter draft in progress, Russian); "Bugs Academy" (sci-fi novel, complete, 231 pp, seeking publisher); "Era of Architects" (literary sci-fi sequel, 3 of 17 chapters in progress); "Nobody Writes Code Anymore" (applied non-fiction for readers who do not code: what software development became once language models made writing code almost free; full chapter draft, Russian).
 URL: ${BASE}/en/books
 
 [Contact]

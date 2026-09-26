@@ -65,10 +65,12 @@ export default async function BooksIndexPage({
         ])}
       />
       <section className="rule-t py-10 md:px-10 md:py-14">
-        <div className="grid gap-[0.5px] hairline bg-line sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-[0.5px] hairline bg-line sm:grid-cols-2 xl:grid-cols-5">
           {books.map((book, i) => (
             <BookCard key={book.slug} book={book} locale={locale} index={i} />
           ))}
+          {/* Нечётное число книг: закрываем пустую ячейку в две колонки */}
+          {books.length % 2 === 1 && <div aria-hidden className="hidden bg-bg sm:block xl:hidden" />}
         </div>
       </section>
     </PageShell>

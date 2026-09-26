@@ -150,6 +150,40 @@ export const books: Book[] = [
     genre: "literary-sci-fi",
     coverImage: "/covers/era-of-architects.svg",
   },
+  {
+    slug: "nobody-writes-code",
+    titles: {
+      en: "Nobody Writes Code Anymore",
+      ru: "Код больше не пишут",
+      pt: "Ninguém Mais Escreve Código",
+      es: "Ya Nadie Escribe Código",
+    },
+    hook: {
+      en: "Writing code became almost free. What is scarce now is knowing what not to write.",
+      ru: "Когда писать код стало почти бесплатно, дефицитом стало умение не написать лишнего.",
+      pt: "Escrever código ficou quase de graça. O que falta agora é saber o que não escrever.",
+      es: "Escribir código se volvió casi gratis. Lo que escasea ahora es saber qué no escribir.",
+    },
+    synopsis: {
+      en:
+        "Applied non-fiction for readers who do not write code. For sixty years programming was taken to be the production of code, because every idea had to be translated into the machine's language by hand. Language models brought the cost of that translation to zero, and the conclusion drawn was that anyone can program now. The book shows where that conclusion breaks: the patch against the organism, architecture as a system of prohibitions, the test as a reward function the agent learns to game, agent memory, software that repairs itself, applications dissolving into conversation, and the question of where senior engineers will come from once an apprentice has no reason to practise. Development begins where writing code ends.",
+      ru:
+        "Прикладной нон-фикшн для тех, кто код не пишет. Шестьдесят лет программирование считали производством кода, потому что любую идею приходилось вручную переводить на язык машины. Языковые модели обнулили стоимость перевода, и из этого сделали вывод, что программировать теперь может каждый. Книга показывает, где этот вывод ломается: заплатка против организма, архитектура как система запретов, тест как функция награды, которую агент учится обманывать, память агентов, софт, который чинит себя сам, приложения, растворяющиеся в разговоре, — и откуда возьмутся сеньоры, если ученику больше незачем набивать руку. Разработка начинается там, где написание кода заканчивается.",
+      pt:
+        "Não ficção aplicada para quem não escreve código. Durante sessenta anos a programação foi vista como produção de código, porque toda ideia precisava ser traduzida à mão para a linguagem da máquina. Os modelos de linguagem zeraram o custo dessa tradução, e daí se concluiu que agora qualquer um pode programar. O livro mostra onde essa conclusão quebra: o remendo contra o organismo, a arquitetura como sistema de proibições, o teste como função de recompensa que o agente aprende a burlar, a memória dos agentes, o software que se conserta sozinho, os aplicativos que se dissolvem em conversa — e de onde virão os seniores quando o aprendiz não tiver mais motivo para praticar. O desenvolvimento começa onde termina a escrita de código.",
+      es:
+        "No ficción aplicada para quien no escribe código. Durante sesenta años la programación se entendió como producción de código, porque cada idea había que traducirla a mano al lenguaje de la máquina. Los modelos de lenguaje redujeron a cero el coste de esa traducción, y de ahí se concluyó que ahora cualquiera puede programar. El libro muestra dónde se rompe esa conclusión: el parche frente al organismo, la arquitectura como sistema de prohibiciones, el test como función de recompensa que el agente aprende a engañar, la memoria de los agentes, el software que se repara solo, las aplicaciones que se disuelven en conversación, y de dónde saldrán los seniors cuando el aprendiz ya no tenga motivo para practicar. El desarrollo empieza donde termina la escritura de código.",
+    },
+    status: "wip",
+    statusLabel: {
+      en: "In progress · full draft · 27 chapters, 2 interludes",
+      ru: "В работе · полный черновик · 27 глав, 2 интерлюдии",
+      pt: "Em andamento · rascunho completo · 27 capítulos, 2 interlúdios",
+      es: "En proceso · borrador completo · 27 capítulos, 2 interludios",
+    },
+    genre: "non-fiction",
+    coverImage: "/covers/nobody-writes-code.svg",
+  },
 ];
 
 export function getBookBySlug(slug: string): Book | undefined {

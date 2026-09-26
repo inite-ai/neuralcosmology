@@ -222,7 +222,7 @@ const en: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Public HQ for the Neural Cosmology programme: four books, one preprint, a growing body of essays. Scientist with questions, not prophet with answers.",
+      "Public HQ for the Neural Cosmology programme: five books, one preprint, a growing body of essays. Scientist with questions, not prophet with answers.",
     ogLocale: "en_US",
   },
   nav: {
@@ -238,7 +238,7 @@ const en: Dict = {
     directionsSectionTitle: "Three directions",
     directionsEyebrow: { books: "Books", science: "Science", essays: "Essays" },
     directionsTitle: {
-      books: "Four books, one universe.",
+      books: "Five books, one universe.",
       science: "The research programme.",
       essays: "Long-form writing.",
     },
@@ -253,9 +253,9 @@ const en: Dict = {
   },
   books: {
     indexEyebrow: "The series",
-    indexTitle: "Four books, one universe, two lines.",
+    indexTitle: "Five books, one universe, two lines.",
     indexLead:
-      "A non-fiction investigation and its sequel, where the author runs his own hypothesis through the test; a sci-fi novel about the implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, asked with evidence and with story.",
+      "A non-fiction investigation and its sequel, where the author runs his own hypothesis through the test; a field report on building software once writing code became almost free; a sci-fi novel about the implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, asked with evidence and with story.",
     readMore: "Read more →",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
@@ -297,7 +297,7 @@ const en: Dict = {
     gatePurchaseTitle: "This chapter is part of the full edition",
     gatePurchaseBody: "The opening chapters are free. The full book is available after purchase and stays in your library.",
     gatePurchaseCta: "Buy the book",
-    gateBuyLibrary: "All four books",
+    gateBuyLibrary: "All five books",
     textSize: "Text size",
     theme: "Theme",
     themeDark: "Dark",
@@ -354,7 +354,7 @@ const en: Dict = {
     eyebrow: "About",
     title: "Mikhail Savchenko",
     bio: [
-      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a four-book series around it: two nonfiction investigations and two novels.",
+      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a four-book series around it: two nonfiction investigations and two novels. A fifth book is about how software gets made now.",
       "The programme starts from the claim that consciousness is a property of certain computational architectures rather than a separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance. That is the first arm of a larger programme, not the whole of it.",
       "My stance, in short: scientist with questions, not prophet with answers. The programme is built to be falsifiable. The fiction does not contradict the physics. The whole site is an invitation to check the arguments yourself.",
     ],
@@ -549,7 +549,7 @@ const ru: Dict = {
   meta: {
     title: "Нейронная космология — Михаил Савченко",
     description:
-      "Открытый дом программы «Нейронная космология»: четыре книги, препринт, эссе. Учёный с вопросами, не пророк с ответами.",
+      "Открытый дом программы «Нейронная космология»: пять книг, препринт, эссе. Учёный с вопросами, не пророк с ответами.",
     ogLocale: "ru_RU",
   },
   nav: {
@@ -565,7 +565,7 @@ const ru: Dict = {
     directionsSectionTitle: "Три двери",
     directionsEyebrow: { books: "Книги", science: "Наука", essays: "Эссе" },
     directionsTitle: {
-      books: "Четыре книги, одна вселенная.",
+      books: "Пять книг, одна вселенная.",
       science: "Программа исследования.",
       essays: "Длинная проза.",
     },
@@ -581,9 +581,9 @@ const ru: Dict = {
   },
   books: {
     indexEyebrow: "Серия",
-    indexTitle: "Четыре книги — одна вселенная, две линии.",
+    indexTitle: "Пять книг — одна вселенная, две линии.",
     indexLead:
-      "Нон-фикшн и его продолжение, где автор проверяет собственную гипотезу; фантастический роман на том же материале и продолжение романа. Две линии, одна гипотеза.",
+      "Нон-фикшн и его продолжение, где автор проверяет собственную гипотезу; книга о том, как делают программы, когда писать код стало почти бесплатно; фантастический роман на том же материале и продолжение романа. Две линии, одна гипотеза.",
     readMore: "Подробнее →",
     allBooks: "← Все книги",
     rightsInquiry: "Запрос прав / издателю",
@@ -625,7 +625,7 @@ const ru: Dict = {
     gatePurchaseTitle: "Эта глава входит в полную версию",
     gatePurchaseBody: "Первые главы открыты бесплатно. Полная книга доступна после покупки и остаётся в вашей библиотеке.",
     gatePurchaseCta: "Купить книгу",
-    gateBuyLibrary: "Все четыре книги",
+    gateBuyLibrary: "Все пять книг",
     textSize: "Размер текста",
     theme: "Тема",
     themeDark: "Тёмная",
@@ -682,7 +682,7 @@ const ru: Dict = {
     eyebrow: "Об авторе",
     title: "Михаил Савченко",
     bio: [
-      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и четыре книги по этой теме: два документальных расследования и два романа.",
+      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и четыре книги по этой теме: два документальных расследования и два романа. Пятая — о том, как теперь делают программы.",
       "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур, а не отдельная сущность над физикой. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первая формальная часть — препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и заранее записанными фальсификаторами. Это только первое плечо большой программы.",
       "Моя позиция, если коротко: учёный с вопросами, а не пророк с ответами. Программа изначально устроена так, что её можно опровергнуть. Художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
     ],
@@ -877,7 +877,7 @@ const pt: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Casa aberta do programa Neural Cosmology: quatro livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
+      "Casa aberta do programa Neural Cosmology: cinco livros, um preprint, ensaios. Cientista com perguntas, não profeta com respostas.",
     ogLocale: "pt_BR",
   },
   nav: {
@@ -893,7 +893,7 @@ const pt: Dict = {
     directionsSectionTitle: "Três portas",
     directionsEyebrow: { books: "Livros", science: "Ciência", essays: "Ensaios" },
     directionsTitle: {
-      books: "Quatro livros, um universo.",
+      books: "Cinco livros, um universo.",
       science: "O programa de pesquisa.",
       essays: "Prosa longa.",
     },
@@ -908,9 +908,9 @@ const pt: Dict = {
   },
   books: {
     indexEyebrow: "A série",
-    indexTitle: "Quatro livros, um universo, duas linhas.",
+    indexTitle: "Cinco livros, um universo, duas linhas.",
     indexLead:
-      "Uma investigação de não-ficção e sua continuação, em que o autor submete a própria hipótese ao teste; um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em duas vozes.",
+      "Uma investigação de não-ficção e sua continuação, em que o autor submete a própria hipótese ao teste; um relato sobre como se faz software quando escrever código ficou quase de graça; um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que o ruído cessa. As mesmas perguntas em duas vozes.",
     readMore: "Ler mais →",
     allBooks: "← Todos os livros",
     rightsInquiry: "Consulta de direitos / editora",
@@ -952,7 +952,7 @@ const pt: Dict = {
     gatePurchaseTitle: "Este capítulo faz parte da edição completa",
     gatePurchaseBody: "Os primeiros capítulos são gratuitos. O livro completo fica disponível após a compra e permanece na sua biblioteca.",
     gatePurchaseCta: "Comprar o livro",
-    gateBuyLibrary: "Os quatro livros",
+    gateBuyLibrary: "Os cinco livros",
     textSize: "Tamanho do texto",
     theme: "Tema",
     themeDark: "Escuro",
@@ -1009,7 +1009,7 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology — um programa de pesquisa sobre a natureza da consciência, e uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
+      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology — um programa de pesquisa sobre a natureza da consciência, e uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances. O quinto trata de como se faz software hoje.",
       "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais, e não um ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falseadores escritos de antemão. É o primeiro braço de um programa maior, não o programa inteiro.",
       "Minha posição, em poucas palavras: cientista com perguntas, não profeta com respostas. O programa foi construído para poder ser refutado. A ficção não contradiz a física. Todo o site é um convite a verificar os argumentos por conta própria.",
     ],
@@ -1204,7 +1204,7 @@ const es: Dict = {
   meta: {
     title: "Neural Cosmology — Mikhail Savchenko",
     description:
-      "Casa abierta del programa Neural Cosmology: cuatro libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
+      "Casa abierta del programa Neural Cosmology: cinco libros, un preprint, ensayos. Científico con preguntas, no profeta con respuestas.",
     ogLocale: "es_ES",
   },
   nav: {
@@ -1220,7 +1220,7 @@ const es: Dict = {
     directionsSectionTitle: "Tres puertas",
     directionsEyebrow: { books: "Libros", science: "Ciencia", essays: "Ensayos" },
     directionsTitle: {
-      books: "Cuatro libros, un universo.",
+      books: "Cinco libros, un universo.",
       science: "El programa de investigación.",
       essays: "Prosa larga.",
     },
@@ -1234,9 +1234,9 @@ const es: Dict = {
   },
   books: {
     indexEyebrow: "La serie",
-    indexTitle: "Cuatro libros, un universo, dos líneas.",
+    indexTitle: "Cinco libros, un universo, dos líneas.",
     indexLead:
-      "Una investigación de no ficción y su continuación, en la que el autor somete su propia hipótesis a prueba; una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en dos voces.",
+      "Una investigación de no ficción y su continuación, en la que el autor somete su propia hipótesis a prueba; un informe sobre cómo se hace software cuando escribir código se volvió casi gratis; una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando el ruido se apaga. Las mismas preguntas en dos voces.",
     readMore: "Leer más →",
     allBooks: "← Todos los libros",
     rightsInquiry: "Consulta de derechos / editorial",
@@ -1278,7 +1278,7 @@ const es: Dict = {
     gatePurchaseTitle: "Este capítulo forma parte de la edición completa",
     gatePurchaseBody: "Los primeros capítulos son gratuitos. El libro completo está disponible tras la compra y queda en tu biblioteca.",
     gatePurchaseCta: "Comprar el libro",
-    gateBuyLibrary: "Los cuatro libros",
+    gateBuyLibrary: "Los cinco libros",
     textSize: "Tamaño del texto",
     theme: "Tema",
     themeDark: "Oscuro",
@@ -1335,7 +1335,7 @@ const es: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Veinte años de ingeniería de IA, con un doctorado actualmente en curso. El resto del tiempo va a Neural Cosmology — un programa de investigación sobre la naturaleza de la consciencia, y una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
+      "Veinte años de ingeniería de IA, con un doctorado actualmente en curso. El resto del tiempo va a Neural Cosmology — un programa de investigación sobre la naturaleza de la consciencia, y una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas. El quinto trata de cómo se hace software hoy.",
       "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales, y no un ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es el primer brazo de un programa más amplio, no el programa entero.",
       "Mi postura, en pocas palabras: científico con preguntas, no profeta con respuestas. El programa está construido para poder ser refutado. La ficción no contradice la física. Todo el sitio es una invitación a verificar los argumentos por uno mismo.",
     ],

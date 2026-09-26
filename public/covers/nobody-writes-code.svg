@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="nw-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#140f06"/>
+      <stop offset="50%" stop-color="#241a0b"/>
+      <stop offset="100%" stop-color="#140f06"/>
+    </linearGradient>
+    <radialGradient id="nw-glow" cx="0.5" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#b45309" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#140f06" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nw-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd34d" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fcd34d" stop-opacity="0.04"/>
+    </linearGradient>
+    <pattern id="nw-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#fbbf24" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="800" fill="url(#nw-bg)"/>
+  <rect width="600" height="800" fill="url(#nw-grid)"/>
+  <rect width="600" height="800" fill="url(#nw-glow)"/>
+
+  <!-- Lines of code nobody typed: they thin out as they go down -->
+  <g fill="url(#nw-fade)">
+    <rect x="96" y="150" width="210" height="7"/><rect x="316" y="150" width="96" height="7"/>
+    <rect x="124" y="172" width="140" height="7"/><rect x="274" y="172" width="180" height="7"/>
+    <rect x="124" y="194" width="260" height="7"/>
+    <rect x="152" y="216" width="120" height="7"/><rect x="282" y="216" width="150" height="7"/>
+    <rect x="152" y="238" width="200" height="7"/>
+    <rect x="124" y="260" width="90" height="7"/>
+    <rect x="96" y="282" width="60" height="7"/>
+    <rect x="96" y="318" width="230" height="7"/><rect x="336" y="318" width="110" height="7"/>
+    <rect x="124" y="340" width="170" height="7"/>
+    <rect x="124" y="362" width="120" height="7"/><rect x="254" y="362" width="70" height="7"/>
+    <rect x="96" y="384" width="50" height="7"/>
+  </g>
+
+  <!-- A single cursor where a human would have typed -->
+  <rect x="96" y="420" width="14" height="26" fill="#fde68a"/>
+
+  <!-- Star field -->
+  <g fill="#fef3c7" fill-opacity="0.6">
+    <circle cx="80" cy="90" r="1"/><circle cx="520" cy="96" r="0.9"/><circle cx="90" cy="520" r="1"/>
+    <circle cx="530" cy="500" r="0.8"/><circle cx="110" cy="690" r="0.8"/><circle cx="480" cy="672" r="1"/>
+  </g>
+
+  <!-- Text -->
+  <text x="60" y="100" font-family="Georgia, serif" font-size="13" letter-spacing="6" fill="#fbbf24" fill-opacity="0.8">NEURAL COSMOLOGY · APPLIED</text>
+  <text x="60" y="560" font-family="Georgia, serif" font-size="46" font-weight="600" fill="#f8f5ef" letter-spacing="-1">Nobody Writes</text>
+  <text x="60" y="610" font-family="Georgia, serif" font-size="46" font-weight="600" fill="#f8f5ef" letter-spacing="-1">Code Anymore</text>
+  <line x1="60" y1="680" x2="140" y2="680" stroke="#fbbf24" stroke-width="2"/>
+  <text x="60" y="720" font-family="Georgia, serif" font-size="15" letter-spacing="3" fill="#fef3c7" fill-opacity="0.85">MIKHAIL SAVCHENKO</text>
+  <text x="60" y="745" font-family="Inter, sans-serif" font-size="12" letter-spacing="2" fill="#fbbf24" fill-opacity="0.7">NON-FICTION · WIP</text>
+</svg>

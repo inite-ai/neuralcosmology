@@ -1,7 +1,7 @@
 # Neural Cosmology
 
 > Public HQ for the Neural Cosmology research programme by Mikhail Savchenko:
-> four books, one preprint (Pointer Architecture), a growing body of essays,
+> five books, one preprint (Pointer Architecture), a growing body of essays,
 > and recorded lectures. Scientist with questions, not prophet with answers.
 > All content is public and citable; the preprint ships with a full
 > reproducibility pipeline (code, data, fit diagnostics).
@@ -65,7 +65,8 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 - [Conscious Selection](https://neuralcosmology.com/en/books/conscious-selection): Non-fiction sequel to The Celestial Code. Selection before choice, across seven levels, plus the author's own experiments, including the one where the first book's hypothesis failed. Chapter draft in progress.
 - [Bugs Academy](https://neuralcosmology.com/en/books/bugs-academy): Sci-fi novel. A debugger saves the universe. Complete, 231 pp, seeking publisher.
 - [Era of Architects](https://neuralcosmology.com/en/books/era-of-architects): Literary sci-fi sequel to Bugs Academy. In progress, 3 of 17 chapters.
-- [Books index](https://neuralcosmology.com/en/books): All four volumes side by side, with online reading: free opening chapters, the rest after sign-in.
+- [Nobody Writes Code Anymore](https://neuralcosmology.com/en/books/nobody-writes-code): Applied non-fiction for readers who do not code. Once language models made writing code almost free, the scarce skill became knowing what not to write: constraints, tests the agent learns to game, agent memory, self-repairing software, and where senior engineers will come from now. Full chapter draft, Russian.
+- [Books index](https://neuralcosmology.com/en/books): All five volumes side by side, with online reading: free opening chapters, the rest after sign-in.
 
 ## Essays
 

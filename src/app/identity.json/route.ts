@@ -18,7 +18,7 @@ export function GET() {
     type: "Organization",
     url: BASE,
     description:
-      "Public HQ for the Neural Cosmology research programme by Mikhail Savchenko: four books, one preprint (Pointer Architecture v9.0 — a formal computational substrate with a working implementation in the Sixth language and pre-stated falsifiers), a growing body of essays, and recorded lectures. Scientist with questions, not prophet with answers. Operated by Mikhail Savchenko, who also runs the business/consulting practice Mike Fluff at https://www.mikefluff.com.",
+      "Public HQ for the Neural Cosmology research programme by Mikhail Savchenko: five books, one preprint (Pointer Architecture v9.0 — a formal computational substrate with a working implementation in the Sixth language and pre-stated falsifiers), a growing body of essays, and recorded lectures. Scientist with questions, not prophet with answers. Operated by Mikhail Savchenko, who also runs the business/consulting practice Mike Fluff at https://www.mikefluff.com.",
     alternateNames: [
       "Neural Cosmology",
       "Neuralcosmology",

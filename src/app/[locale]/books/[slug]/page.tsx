@@ -27,10 +27,10 @@ export function generateStaticParams() {
 
 // Что получает читатель: объём, бесплатные главы, цена книги и всей библиотеки.
 const OFFER: Record<SupportedLocale, { free: (n: number, t: number) => string; hours: (h: number) => string; forever: string; library: string }> = {
-  en: { free: (n, t) => `${n} of ${t} chapters free`, hours: (h) => `≈ ${h} h of reading`, forever: "one payment, access forever, online and on any device", library: "All four books" },
-  ru: { free: (n, t) => `${n} из ${t} глав бесплатно`, hours: (h) => `≈ ${h} ч чтения`, forever: "разовая оплата, доступ навсегда, онлайн на любом устройстве", library: "Все четыре книги" },
-  pt: { free: (n, t) => `${n} de ${t} capítulos grátis`, hours: (h) => `≈ ${h} h de leitura`, forever: "pagamento único, acesso para sempre, online em qualquer dispositivo", library: "Os quatro livros" },
-  es: { free: (n, t) => `${n} de ${t} capítulos gratis`, hours: (h) => `≈ ${h} h de lectura`, forever: "pago único, acceso para siempre, en línea en cualquier dispositivo", library: "Los cuatro libros" },
+  en: { free: (n, t) => `${n} of ${t} chapters free`, hours: (h) => `≈ ${h} h of reading`, forever: "one payment, access forever, online and on any device", library: "All five books" },
+  ru: { free: (n, t) => `${n} из ${t} глав бесплатно`, hours: (h) => `≈ ${h} ч чтения`, forever: "разовая оплата, доступ навсегда, онлайн на любом устройстве", library: "Все пять книг" },
+  pt: { free: (n, t) => `${n} de ${t} capítulos grátis`, hours: (h) => `≈ ${h} h de leitura`, forever: "pagamento único, acesso para sempre, online em qualquer dispositivo", library: "Os cinco livros" },
+  es: { free: (n, t) => `${n} de ${t} capítulos gratis`, hours: (h) => `≈ ${h} h de lectura`, forever: "pago único, acceso para siempre, en línea en cualquier dispositivo", library: "Los cinco libros" },
 };
 
 export async function generateMetadata({
