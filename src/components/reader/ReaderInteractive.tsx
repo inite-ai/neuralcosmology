@@ -355,7 +355,7 @@ export default function ReaderInteractive({
         </button>
       )}
 
-      {chapterIndex > 0 && aiEnabled && <Recap book={book} lang={lang} chapter={chapter} ui={locale} t={t} />}
+      {mounted && chapterIndex > 0 && aiEnabled && <Recap book={book} lang={lang} chapter={chapter} ui={locale} t={t} />}
 
       {/* Док действий: обсуждение, пометки, ИИ, фокус */}
       <div className="fixed right-3 bottom-4 z-40 flex flex-col r-hair bg-[var(--r-panel)] md:right-5 md:bottom-6 [&>button]:flex [&>button]:h-12 [&>button]:w-12 [&>button]:flex-col [&>button]:items-center [&>button]:justify-center [&>button]:text-[10px] [&>button]:leading-tight [&>button]:text-[var(--r-soft)] [&>button:hover]:text-[var(--r-fg)] [&>button+button]:r-rule-t">
