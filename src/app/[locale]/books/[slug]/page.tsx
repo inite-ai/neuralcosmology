@@ -4,7 +4,7 @@ import { social } from "@/lib/og";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { books, getBookBySlug } from "@/content/books";
+import { getBookBySlug } from "@/content/books";
 import { Sheet, Label, Headline } from "@/components/system";
 import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
@@ -19,10 +19,10 @@ import { bookSchema, breadcrumb } from "@/lib/schema";
 // Оглавление приходит из экспорта LaTeX на диске сервера — перечитываем раз в 5 минут.
 export const revalidate = 300;
 
+// Страница читает оглавление из тома библиотеки, который монтируется только в
+// рантайме. Поэтому при сборке её не рендерим: первая выдача — по запросу, дальше ISR.
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.flatMap((locale) =>
-    books.map((b) => ({ locale, slug: b.slug })),
-  );
+  return [];
 }
 
 // Что получает читатель: объём, бесплатные главы, цена книги и всей библиотеки.

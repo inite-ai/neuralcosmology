@@ -7,8 +7,9 @@ import { getAllAnswerSlugs, getAnswer } from "@/lib/answers";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
 import { getManifest, libraryLangs } from "@/lib/library";
 
-// Бесплатные главы читалки берутся с диска сервера — пересобираем раз в час.
-export const revalidate = 3600;
+// Бесплатные главы читалки берутся с тома библиотеки, которого нет при сборке —
+// sitemap строится на каждый запрос (дёшево, файл небольшой).
+export const dynamic = "force-dynamic";
 
 const BASE = "https://neuralcosmology.com";
 
