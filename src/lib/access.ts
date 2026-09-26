@@ -28,11 +28,14 @@ interface Entitlement {
 }
 
 const ENT_TTL_MS = 60_000;
+const ENT_EMPTY_TTL_MS = 10_000;
 const entCache = new Map<string, { at: number; keys: Set<string> }>();
 
-async function entitlementKeys(userId: string): Promise<Set<string>> {
+async function entitlementKeys(userId: string, fresh = false): Promise<Set<string>> {
   const hit = entCache.get(userId);
-  if (hit && Date.now() - hit.at < ENT_TTL_MS) return hit.keys;
+  // Пустой набор держим недолго: только что купивший не должен ждать минуту.
+  const ttl = hit && hit.keys.size > 0 ? ENT_TTL_MS : ENT_EMPTY_TTL_MS;
+  if (!fresh && hit && Date.now() - hit.at < ttl) return hit.keys;
 
   const base = process.env.BILLING_API_URL;
   const apiKey = process.env.BILLING_API_KEY;
@@ -62,10 +65,14 @@ async function entitlementKeys(userId: string): Promise<Set<string>> {
   }
 }
 
-export async function ownsBook(session: Session | null, slug: string): Promise<boolean> {
+export async function ownsBook(
+  session: Session | null,
+  slug: string,
+  fresh = false,
+): Promise<boolean> {
   if (!session) return false;
   if (!paywallEnabled()) return true;
-  const keys = await entitlementKeys(session.sub);
+  const keys = await entitlementKeys(session.sub, fresh);
   return keys.has(ENTITLEMENT_LIBRARY) || keys.has(entitlementForBook(slug));
 }
 
@@ -73,10 +80,11 @@ export async function chapterGate(
   chapter: Pick<LibraryChapter, "free">,
   slug: string,
   session: Session | null,
+  fresh = false,
 ): Promise<Gate> {
   if (chapter.free) return "open";
   if (!session) return "login";
-  return (await ownsBook(session, slug)) ? "open" : "purchase";
+  return (await ownsBook(session, slug, fresh)) ? "open" : "purchase";
 }
 
 /** Какой замок показывать закрытым главам в оглавлении. */

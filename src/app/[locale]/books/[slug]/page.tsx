@@ -9,6 +9,7 @@ import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getManifest, resolveBookLang } from "@/lib/library";
 import { paywallEnabled } from "@/lib/access";
+import { pricing } from "@/content/pricing";
 import TocList from "@/components/reader/TocList";
 import ContinueReading from "@/components/reader/ContinueReading";
 import JsonLd from "@/components/seo/JsonLd";
@@ -210,6 +211,17 @@ export default async function BookDetailPage({
                   labels={{ start: L.readOnline, continue: L.continueReading }}
                   className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
                 />
+              )}
+              {manifest && lockedGate === "purchase" && manifest.chapters.some((c) => !c.free) && (
+                <a
+                  href={`/api/checkout?${new URLSearchParams({
+                    item: book.slug,
+                    returnTo: `/${locale}/read/${book.slug}/${(manifest.chapters.find((c) => !c.free) ?? manifest.chapters[0]).id}`,
+                  })}`}
+                  className="inline-flex items-center rounded-md border border-indigo-300/40 hover:border-indigo-300/70 text-indigo-100 px-5 py-2.5 text-sm font-medium transition-colors"
+                >
+                  {L.gatePurchaseCta} · {pricing.book.label}
+                </a>
               )}
               <a
                 href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"

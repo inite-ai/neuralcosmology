@@ -81,6 +81,7 @@ export type Dict = {
     gatePurchaseTitle: string;
     gatePurchaseBody: string;
     gatePurchaseCta: string;
+    gateBuyLibrary: string;
     textSize: string;
     theme: string;
     themeDark: string;
@@ -296,6 +297,7 @@ const en: Dict = {
     gatePurchaseTitle: "This chapter is part of the full edition",
     gatePurchaseBody: "The opening chapters are free. The full book is available after purchase and stays in your library.",
     gatePurchaseCta: "Buy the book",
+    gateBuyLibrary: "All four books",
     textSize: "Text size",
     theme: "Theme",
     themeDark: "Dark",
@@ -623,6 +625,7 @@ const ru: Dict = {
     gatePurchaseTitle: "Эта глава входит в полную версию",
     gatePurchaseBody: "Первые главы открыты бесплатно. Полная книга доступна после покупки и остаётся в вашей библиотеке.",
     gatePurchaseCta: "Купить книгу",
+    gateBuyLibrary: "Все четыре книги",
     textSize: "Размер текста",
     theme: "Тема",
     themeDark: "Тёмная",
@@ -949,6 +952,7 @@ const pt: Dict = {
     gatePurchaseTitle: "Este capítulo faz parte da edição completa",
     gatePurchaseBody: "Os primeiros capítulos são gratuitos. O livro completo fica disponível após a compra e permanece na sua biblioteca.",
     gatePurchaseCta: "Comprar o livro",
+    gateBuyLibrary: "Os quatro livros",
     textSize: "Tamanho do texto",
     theme: "Tema",
     themeDark: "Escuro",
@@ -1274,6 +1278,7 @@ const es: Dict = {
     gatePurchaseTitle: "Este capítulo forma parte de la edición completa",
     gatePurchaseBody: "Los primeros capítulos son gratuitos. El libro completo está disponible tras la compra y queda en tu biblioteca.",
     gatePurchaseCta: "Comprar el libro",
+    gateBuyLibrary: "Los cuatro libros",
     textSize: "Tamaño del texto",
     theme: "Tema",
     themeDark: "Oscuro",

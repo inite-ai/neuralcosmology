@@ -19,7 +19,6 @@ services:
       - PAYWALL_ENABLED=${PAYWALL_ENABLED:-false}
       - BILLING_API_URL=${BILLING_API_URL}
       - BILLING_API_KEY=${BILLING_API_KEY}
-      - BOOK_CHECKOUT_URL=${BOOK_CHECKOUT_URL}
     volumes:
       - ./library:/app/library:ro
     labels:

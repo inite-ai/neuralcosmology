@@ -6,7 +6,8 @@ import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getChapterHtml, getManifest, resolveBookLang, type LibraryChapter } from "@/lib/library";
 import { getSession, authConfigured } from "@/lib/auth";
-import { chapterGate, lockedGate, paywallEnabled, type Gate } from "@/lib/access";
+import { chapterGate, lockedGate, type Gate } from "@/lib/access";
+import { LIBRARY_ITEM, pricing } from "@/content/pricing";
 import ReaderChrome from "@/components/reader/ReaderChrome";
 import ReaderPrefsScript from "@/components/reader/ReaderPrefsScript";
 import { readerFont } from "@/components/reader/font";
@@ -60,8 +61,16 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
-export default async function ChapterPage({ params }: { params: Params }) {
+export default async function ChapterPage({
+  params,
+  searchParams,
+}: {
+  params: Params;
+  searchParams: Promise<{ purchased?: string }>;
+}) {
   const { locale: raw, slug, chapter: id } = await params;
+  // Вернулись со страницы оплаты — права перечитываем из биллинга без кэша.
+  const fresh = (await searchParams).purchased === "1";
   const d = load(raw, slug, id);
   if (!d) notFound();
   const { locale, book, lang, manifest, index, chapter } = d;
@@ -69,7 +78,7 @@ export default async function ChapterPage({ params }: { params: Params }) {
   const L = dict.library;
 
   const session = await getSession();
-  const gate = await chapterGate(chapter, slug, session);
+  const gate = await chapterGate(chapter, slug, session, fresh);
   const locked = await lockedGate(slug, session);
   const html = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
   if (gate === "open" && html === null) notFound();
@@ -181,12 +190,29 @@ export default async function ChapterPage({ params }: { params: Params }) {
                 <p className="text-sm text-[var(--r-muted)] mb-6 max-w-md mx-auto leading-relaxed">
                   {gate === "login" ? L.gateLoginBody : L.gatePurchaseBody}
                 </p>
-                <a
-                  href={gate === "login" ? loginHref : checkoutHref(slug, bookTitle)}
-                  className="inline-flex items-center rounded-md bg-[var(--r-accent-strong)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
-                >
-                  {gate === "login" ? L.gateLoginCta : L.gatePurchaseCta}
-                </a>
+                {gate === "login" ? (
+                  <a
+                    href={loginHref}
+                    className="inline-flex items-center rounded-md bg-[var(--r-accent-strong)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
+                  >
+                    {L.gateLoginCta}
+                  </a>
+                ) : (
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <a
+                      href={checkoutHref(slug, here)}
+                      className="inline-flex items-center rounded-md bg-[var(--r-accent-strong)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
+                    >
+                      {L.gatePurchaseCta} · {pricing.book.label}
+                    </a>
+                    <a
+                      href={checkoutHref(LIBRARY_ITEM, here)}
+                      className="inline-flex items-center rounded-md border border-[var(--r-faint)] px-5 py-2.5 text-sm font-medium hover:bg-[var(--r-faint)]"
+                    >
+                      {L.gateBuyLibrary} · {pricing.library.label}
+                    </a>
+                  </div>
+                )}
               </div>
             </>
           )}
@@ -227,10 +253,6 @@ export default async function ChapterPage({ params }: { params: Params }) {
   );
 }
 
-// Пока биллинг не подключён, «Купить» ведёт на почту. Когда появится
-// checkout-страница, BOOK_CHECKOUT_URL задаёт её шаблон: {book} → slug.
-function checkoutHref(slug: string, title: string): string {
-  const tpl = process.env.BOOK_CHECKOUT_URL;
-  if (tpl && paywallEnabled()) return tpl.replace("{book}", encodeURIComponent(slug));
-  return `mailto:info@neuralcosmology.com?subject=${encodeURIComponent(title)}`;
+function checkoutHref(item: string, returnTo: string): string {
+  return `/api/checkout?${new URLSearchParams({ item, returnTo })}`;
 }
