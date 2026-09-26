@@ -21,4 +21,6 @@ export function mainNav(locale: SupportedLocale) {
   ];
 }
 
+export const accountLabel: Record<SupportedLocale, string> = { en: "Account", ru: "Кабинет", pt: "Conta", es: "Cuenta" };
+
 export const readLabel = (locale: SupportedLocale) => menuLabel[locale].read;

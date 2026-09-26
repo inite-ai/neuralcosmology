@@ -469,6 +469,36 @@
   mask-image: linear-gradient(to bottom, #000 35%, transparent);
 }
 
+/* Интерактив читалки: выделения, закладки, маркеры на полях, фокус */
+.reader {
+  --nc-hl-accent: color-mix(in srgb, var(--r-accent) 28%, transparent);
+  --nc-hl-yellow: rgb(250 204 21 / 0.35);
+  --nc-hl-green: rgb(74 222 128 / 0.3);
+  --nc-hl-rose: rgb(251 113 133 / 0.3);
+}
+.reader-prose p[data-a] { position: relative; scroll-margin-top: 5rem; }
+.reader-prose p.nc-bm { box-shadow: -1.1rem 0 0 -1.02rem var(--r-accent); }
+.reader-prose p.nc-flash { background: color-mix(in srgb, var(--r-accent) 12%, transparent); transition: background 1.2s ease; }
+.reader-prose .nc-margin {
+  position: absolute;
+  top: 0.15em;
+  right: -3.25rem;
+  min-width: 2rem;
+  height: 1.6rem;
+  padding: 0 0.4rem;
+  font: 500 0.75rem/1 var(--font-sans);
+  text-indent: 0;
+  color: var(--r-accent);
+  border: 0.5px solid var(--r-line);
+  background: var(--r-bg);
+  cursor: pointer;
+}
+@media (width < 64rem) {
+  .reader-prose .nc-margin { position: static; display: inline-flex; align-items: center; margin-left: 0.4em; vertical-align: 0.1em; }
+}
+.reader.nc-focus > header, .reader.nc-focus aside { display: none; }
+.reader.nc-focus { --r-size: calc(var(--r-size) * 1.05); }
+
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }

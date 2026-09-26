@@ -9,6 +9,8 @@ import { getSession, authConfigured } from "@/lib/auth";
 import { chapterGate, lockedGate, type Gate } from "@/lib/access";
 import { LIBRARY_ITEM, pricing } from "@/content/pricing";
 import ReaderChrome from "@/components/reader/ReaderChrome";
+import ReaderInteractive from "@/components/reader/ReaderInteractive";
+import { aiConfigured } from "@/lib/reader/ai";
 import ReaderPrefsScript from "@/components/reader/ReaderPrefsScript";
 import { readerFont } from "@/components/reader/font";
 import JsonLd from "@/components/seo/JsonLd";
@@ -170,7 +172,21 @@ export default async function ChapterPage({
           </header>
 
           {html !== null ? (
-            <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
+            <>
+              <div id="nc-recap-slot" />
+              <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
+              <ReaderInteractive
+                book={slug}
+                lang={lang}
+                chapter={chapter.id}
+                locale={locale}
+                bookTitle={bookTitle}
+                signedIn={!!session}
+                loginHref={loginHref}
+                aiEnabled={aiConfigured()}
+                chapterIndex={index}
+              />
+            </>
           ) : (
             <>
               <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: chapter.teaser }} />

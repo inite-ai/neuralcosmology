@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
-import { mainNav, menuLabel } from "@/components/layout/nav";
+import { mainNav, menuLabel, accountLabel } from "@/components/layout/nav";
 
 const localeLabel: Record<SupportedLocale, string> = { en: "EN", ru: "RU", pt: "PT", es: "ES" };
 
@@ -90,7 +90,7 @@ export default function Header({ locale }: { locale: SupportedLocale }) {
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={cn(
-                  "flex items-center rule-l px-5 label transition-colors hover:bg-bg-raised",
+                  "flex items-center rule-l px-4 label transition-colors hover:bg-bg-raised",
                   isActive(item.href) ? "text-primary" : "text-fg-secondary hover:text-fg",
                 )}
               >
@@ -112,6 +112,12 @@ export default function Header({ locale }: { locale: SupportedLocale }) {
                 </Link>
               ))}
             </div>
+            <Link
+              href={`/${locale}/account`}
+              className={cn("flex items-center rule-l px-4 label transition-colors hover:bg-bg-raised", isActive(`/${locale}/account`) ? "text-primary" : "text-fg-secondary hover:text-fg")}
+            >
+              {accountLabel[locale]}
+            </Link>
             <div className="flex items-center rule-l pl-4 pr-4">
               <Link
                 href={`/${locale}/books`}
@@ -152,7 +158,7 @@ export default function Header({ locale }: { locale: SupportedLocale }) {
               </button>
             </div>
             <nav className="flex-1 overflow-y-auto px-5" aria-label="Main">
-              {[{ href: `/${locale}`, label: dict.nav.home }, ...nav].map((item, i) => (
+              {[{ href: `/${locale}`, label: dict.nav.home }, ...nav, { href: `/${locale}/account`, label: accountLabel[locale] }].map((item, i) => (
                 <Link
                   key={item.href}
                   href={item.href}

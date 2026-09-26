@@ -87,6 +87,10 @@ jobs:
               - PAYWALL_ENABLED=${{ vars.PAYWALL_ENABLED || 'false' }}
               - BILLING_API_URL=${{ vars.BILLING_API_URL }}
               - BILLING_API_KEY=${{ secrets.BILLING_API_KEY }}
+              # Интерактив читалки: пометки, обсуждения, ИИ
+              - DATABASE_URL=${{ secrets.DATABASE_URL }}
+              - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+              - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mikefluff@mikefluff.com' }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:
