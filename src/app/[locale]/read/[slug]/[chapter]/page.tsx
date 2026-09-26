@@ -38,8 +38,9 @@ function chapterLabel(c: LibraryChapter, word: string) {
   return c.number ? `${word} ${c.number}. ${c.title}` : c.title;
 }
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: { params: Params; searchParams: Promise<{ q?: string }> }): Promise<Metadata> {
   const { locale: raw, slug, chapter: id } = await params;
+  const shared = ((await searchParams).q || "").slice(0, 280);
   const d = load(raw, slug, id);
   if (!d) return {};
   const bookTitle = pickLocalized(d.book.titles, d.lang);
@@ -57,9 +58,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       url: canonical,
       type: "article",
       images: [
-        `${BASE}/api/og?title=${encodeURIComponent(d.chapter.title)}&subtitle=${encodeURIComponent(bookTitle)}&kind=book`,
+        shared
+          ? `${BASE}/api/quote-card?${new URLSearchParams({ q: shared, b: bookTitle })}`
+          : `${BASE}/api/og?title=${encodeURIComponent(d.chapter.title)}&subtitle=${encodeURIComponent(bookTitle)}&kind=book`,
       ],
     },
+    // Ссылка «Поделиться» с цитатой — превью-карточка с этой цитатой.
+    ...(shared ? { twitter: { card: "summary_large_image", title, description: `«${shared}»`, images: [`${BASE}/api/quote-card?${new URLSearchParams({ q: shared, b: bookTitle })}`] } } : {}),
   };
 }
 

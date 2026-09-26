@@ -471,10 +471,10 @@
 
 /* Интерактив читалки: выделения, закладки, маркеры на полях, фокус */
 .reader {
-  --nc-hl-accent: color-mix(in srgb, var(--r-accent) 28%, transparent);
-  --nc-hl-yellow: rgb(250 204 21 / 0.35);
-  --nc-hl-green: rgb(74 222 128 / 0.3);
-  --nc-hl-rose: rgb(251 113 133 / 0.3);
+  --nc-hl-accent: rgb(109 116 240 / 0.3);
+  --nc-hl-yellow: rgb(242 194 48 / 0.38);
+  --nc-hl-green: rgb(63 191 127 / 0.32);
+  --nc-hl-rose: rgb(240 96 122 / 0.3);
 }
 .reader-prose p[data-a] { position: relative; scroll-margin-top: 5rem; }
 .reader-prose p.nc-bm { box-shadow: -1.1rem 0 0 -1.02rem var(--r-accent); }

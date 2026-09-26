@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
-import { MessageCircle, Bookmark, Sparkles, Focus } from "lucide-react";
+import { MessageCircle, Bookmark, Sparkles, Focus, PenLine, Share2, Link2, Download, ArrowLeft } from "lucide-react";
 import { loadProgress } from "./progress";
 
 // Интерактивный слой читалки: пометки (закладки, выделения, заметки), обсуждения
@@ -302,18 +302,14 @@ export default function ReaderInteractive({
     }
   };
 
-  const share = async () => {
-    if (!sel) return;
-    const url = `${location.origin}${location.pathname}#a-${sel.anchor}`;
-    const text = `«${sel.quote}» — ${bookTitle}`;
-    try {
-      if (navigator.share) await navigator.share({ title: bookTitle, text, url });
-      else {
-        await navigator.clipboard.writeText(`${text}\n${url}`);
-        flash(t.copied);
-      }
-    } catch {}
-    setSel(null);
+  const [shareMode, setShareMode] = useState(false);
+  useEffect(() => setShareMode(false), [sel?.anchor, sel?.start]);
+
+  const shareLink = (quote: string, anchor: string) => {
+    const u = new URL(location.href);
+    u.hash = `a-${anchor}`;
+    u.search = new URLSearchParams({ q: quote.slice(0, 280) }).toString();
+    return u.toString();
   };
 
   const [aiSeed, setAiSeed] = useState<{ mode: "explain"; selection: string } | null>(null);
@@ -322,30 +318,21 @@ export default function ReaderInteractive({
   const toolbar =
     sel &&
     createPortal(
-      <div
-        role="toolbar"
-        className="fixed z-[80] flex max-w-[calc(100vw-1rem)] -translate-x-1/2 items-stretch overflow-x-auto bg-[var(--r-fg)] text-[var(--r-bg)] shadow-[0_12px_40px_-12px_rgb(0_0_0/.5)] [&>button]:flex [&>button]:min-h-11 [&>button]:items-center [&>button]:gap-1.5 [&>button]:whitespace-nowrap [&>button]:px-3 [&>button]:text-sm [&>button:hover]:opacity-75"
-        style={{
-          left: Math.min(Math.max(sel.rect.left + sel.rect.width / 2, 170), innerWidth - 170),
-          top: sel.rect.top > 70 ? sel.rect.top - 54 : sel.rect.bottom + 10,
-        }}
-        onMouseDown={(e) => e.preventDefault()}
-      >
-        <span className="flex items-center gap-1 px-2">
-          {COLORS.map((c) => (
-            <button key={c} type="button" aria-label={`${t.highlight} ${c}`} onClick={() => annotate("highlight", { color: c })} className="h-6 w-6 rounded-full border border-[var(--r-bg)]/40" style={{ background: `var(--nc-hl-${c})` }} />
-          ))}
-        </span>
-        <button type="button" onClick={() => annotate("note")}>{t.note}</button>
-        <button type="button" onClick={() => annotate("bookmark")}>{t.bookmark}</button>
-        <button type="button" onClick={() => { setPanel({ tab: "discuss", anchor: sel.anchor, quote: sel.quote }); setSel(null); }}>{t.discuss}</button>
-        {aiEnabled && (
-          <button type="button" onClick={() => { setAiSeed({ mode: "explain", selection: sel.quote }); setPanel({ tab: "ai" }); setSel(null); }}>
-            ✦ {t.explain}
-          </button>
-        )}
-        <button type="button" onClick={share}>{t.share}</button>
-      </div>,
+      <SelectionToolbar
+        sel={sel}
+        t={t}
+        aiEnabled={aiEnabled}
+        shareMode={shareMode}
+        onShareMode={setShareMode}
+        bookTitle={bookTitle}
+        link={shareLink(sel.quote, sel.anchor)}
+        onColor={(c) => annotate("highlight", { color: c })}
+        onNote={() => annotate("note")}
+        onBookmark={() => annotate("bookmark")}
+        onDiscuss={() => { setPanel({ tab: "discuss", anchor: sel.anchor, quote: sel.quote }); setSel(null); }}
+        onExplain={() => { setAiSeed({ mode: "explain", selection: sel.quote }); setPanel({ tab: "ai" }); setSel(null); }}
+        onCopied={() => { flash(t.copied); setSel(null); }}
+      />,
       document.getElementById("reader") ?? document.body,
     );
 
@@ -758,5 +745,124 @@ function Recap({ book, lang, chapter, ui, t }: { book: string; lang: string; cha
       </button>
     ),
     target,
+  );
+}
+
+// ---------- Selection toolbar ----------
+
+const SOCIAL: { id: string; name: string; href: (text: string, url: string, title: string) => string }[] = [
+  { id: "tg", name: "Telegram", href: (t, u) => `https://t.me/share/url?${new URLSearchParams({ url: u, text: t })}` },
+  { id: "vk", name: "VK", href: (t, u, title) => `https://vk.com/share.php?${new URLSearchParams({ url: u, title, comment: t })}` },
+  { id: "x", name: "X", href: (t, u) => `https://twitter.com/intent/tweet?${new URLSearchParams({ text: t, url: u })}` },
+  { id: "wa", name: "WhatsApp", href: (t, u) => `https://wa.me/?${new URLSearchParams({ text: `${t}\n${u}` })}` },
+  { id: "fb", name: "Facebook", href: (_t, u) => `https://www.facebook.com/sharer/sharer.php?${new URLSearchParams({ u })}` },
+  { id: "in", name: "LinkedIn", href: (_t, u) => `https://www.linkedin.com/sharing/share-offsite/?${new URLSearchParams({ url: u })}` },
+  { id: "th", name: "Threads", href: (t, u) => `https://www.threads.net/intent/post?${new URLSearchParams({ text: `${t}\n${u}` })}` },
+];
+
+const SWATCH: Record<(typeof COLORS)[number], string> = { accent: "#6d74f0", yellow: "#f2c230", green: "#3fbf7f", rose: "#f0607a" };
+
+function SelectionToolbar({
+  sel, t, aiEnabled, shareMode, onShareMode, bookTitle, link, onColor, onNote, onBookmark, onDiscuss, onExplain, onCopied,
+}: {
+  sel: Sel; t: Record<string, string>; aiEnabled: boolean; shareMode: boolean; onShareMode: (v: boolean) => void;
+  bookTitle: string; link: string; onColor: (c: (typeof COLORS)[number]) => void; onNote: () => void; onBookmark: () => void;
+  onDiscuss: () => void; onExplain: () => void; onCopied: () => void;
+}) {
+  const mobile = typeof window !== "undefined" && innerWidth < 768;
+  const above = sel.rect.top > 90;
+  const text = `«${sel.quote.length > 240 ? `${sel.quote.slice(0, 237)}…` : sel.quote}» — ${bookTitle}`;
+  const card = `/api/quote-card?${new URLSearchParams({ q: sel.quote.slice(0, 280), b: bookTitle })}`;
+  const cell =
+    "flex min-h-12 shrink-0 items-center gap-2 px-3.5 text-[0.8125rem] text-[var(--r-fg)] transition-colors hover:bg-[var(--r-faint)] [&+&]:border-l-[0.5px] [&+&]:border-[var(--r-line)]";
+
+  return (
+    <div
+      role="toolbar"
+      onMouseDown={(e) => e.preventDefault()}
+      className={cn(
+        "fixed z-[80] border-[0.5px] border-[var(--r-line)] bg-[var(--r-panel)] shadow-[0_18px_50px_-18px_rgb(0_0_0/.45)]",
+        mobile ? "inset-x-2 bottom-[calc(env(safe-area-inset-bottom)+0.5rem)] rounded-md" : "-translate-x-1/2 rounded-md",
+      )}
+      style={
+        mobile
+          ? undefined
+          : {
+              left: Math.min(Math.max(sel.rect.left + sel.rect.width / 2, 260), innerWidth - 260),
+              top: above ? sel.rect.top - 60 : sel.rect.bottom + 12,
+            }
+      }
+    >
+      <div className="flex items-stretch overflow-x-auto" style={{ fontFamily: "var(--font-sans)", scrollbarWidth: "none" }}>
+        {shareMode ? (
+          <>
+            <button type="button" className={cell} onClick={() => onShareMode(false)} aria-label="←">
+              <ArrowLeft className="h-4 w-4" strokeWidth={1.25} />
+            </button>
+            {SOCIAL.map((s) => (
+              <a key={s.id} className={cell} href={s.href(text, link, bookTitle)} target="_blank" rel="noopener noreferrer">
+                {s.name}
+              </a>
+            ))}
+            <button
+              type="button"
+              className={cell}
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(`${text}\n${link}`);
+                } catch {}
+                onCopied();
+              }}
+            >
+              <Link2 className="h-4 w-4" strokeWidth={1.25} />
+            </button>
+            <a className={cell} href={card} download="quote.png" aria-label="PNG">
+              <Download className="h-4 w-4" strokeWidth={1.25} />
+            </a>
+          </>
+        ) : (
+          <>
+            <span className={cn(cell, "gap-1.5 hover:bg-transparent")}>
+              {COLORS.map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  aria-label={`${t.highlight}: ${c}`}
+                  onClick={() => onColor(c)}
+                  className="h-5 w-5 rounded-full ring-offset-2 ring-offset-[var(--r-panel)] transition hover:ring-1 hover:ring-[var(--r-fg)]"
+                  style={{ background: SWATCH[c] }}
+                />
+              ))}
+            </span>
+            <button type="button" className={cell} onClick={onNote}>
+              <PenLine className="h-4 w-4" strokeWidth={1.25} /> {t.note}
+            </button>
+            <button type="button" className={cell} onClick={onBookmark}>
+              <Bookmark className="h-4 w-4" strokeWidth={1.25} /> {t.bookmark}
+            </button>
+            <button type="button" className={cell} onClick={onDiscuss}>
+              <MessageCircle className="h-4 w-4" strokeWidth={1.25} /> {t.discuss}
+            </button>
+            {aiEnabled && (
+              <button type="button" className={cn(cell, "text-[var(--r-accent)]")} onClick={onExplain}>
+                <Sparkles className="h-4 w-4" strokeWidth={1.25} /> {t.explain}
+              </button>
+            )}
+            <button type="button" className={cell} onClick={() => onShareMode(true)}>
+              <Share2 className="h-4 w-4" strokeWidth={1.25} /> {t.share}
+            </button>
+          </>
+        )}
+      </div>
+      {!mobile && (
+        <span
+          aria-hidden
+          className={cn(
+            "absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-[var(--r-line)] bg-[var(--r-panel)]",
+            above ? "-bottom-[5.5px] border-r-[0.5px] border-b-[0.5px]" : "-top-[5.5px] border-l-[0.5px] border-t-[0.5px]",
+          )}
+        />
+      )}
+    </div>
   );
 }
