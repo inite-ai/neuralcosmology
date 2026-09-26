@@ -13,25 +13,25 @@ type Copy = { who: string; bridge: string; mikefluff: string; about: string };
 
 const COPY: Record<SupportedLocale, Copy> = {
   en: {
-    who: "Mikhail Savchenko — independent researcher and writer. ~20 years AI engineering, PhD in progress. Runs the Neural Cosmology research programme: one preprint (Pointer Architecture), five books in progress, and a growing body of essays and recorded lectures.",
+    who: "Mikhail Savchenko — independent researcher and writer. ~20 years AI engineering, PhD in progress. Runs the Neural Cosmology research programme: one preprint (Pointer Architecture), four books in progress, and a growing body of essays and recorded lectures.",
     bridge: "Same person also runs the business and consulting practice",
     mikefluff: "Mike Fluff",
     about: "About the author",
   },
   ru: {
-    who: "Михаил Савченко — независимый исследователь и писатель. ~20 лет инженерной работы с ИИ, PhD в работе. Ведёт исследовательскую программу «Нейронная космология»: препринт (Pointer Architecture), пять книг в работе, эссе и записанные лекции.",
+    who: "Михаил Савченко — независимый исследователь и писатель. ~20 лет инженерной работы с ИИ, PhD в работе. Ведёт исследовательскую программу «Нейронная космология»: препринт (Pointer Architecture), четыре книги в работе, эссе и записанные лекции.",
     bridge: "Тот же человек ведёт бизнес-практику",
     mikefluff: "Mike Fluff",
     about: "Об авторе",
   },
   pt: {
-    who: "Mikhail Savchenko — pesquisador e escritor independente. ~20 anos de engenharia de IA, doutorado em andamento. Conduz o programa de pesquisa Cosmologia Neural: um preprint (Pointer Architecture), cinco livros em andamento, ensaios e palestras gravadas.",
+    who: "Mikhail Savchenko — pesquisador e escritor independente. ~20 anos de engenharia de IA, doutorado em andamento. Conduz o programa de pesquisa Cosmologia Neural: um preprint (Pointer Architecture), quatro livros em andamento, ensaios e palestras gravadas.",
     bridge: "A mesma pessoa também conduz a prática de negócios e consultoria",
     mikefluff: "Mike Fluff",
     about: "Sobre o autor",
   },
   es: {
-    who: "Mikhail Savchenko — investigador y escritor independiente. ~20 años de ingeniería de IA, doctorado en curso. Lleva el programa de investigación Cosmología Neural: un preprint (Pointer Architecture), cinco libros en curso, ensayos y conferencias grabadas.",
+    who: "Mikhail Savchenko — investigador y escritor independiente. ~20 años de ingeniería de IA, doctorado en curso. Lleva el programa de investigación Cosmología Neural: un preprint (Pointer Architecture), cuatro libros en curso, ensayos y conferencias grabadas.",
     bridge: "La misma persona también lleva la práctica de negocios y consultoría",
     mikefluff: "Mike Fluff",
     about: "Sobre el autor",

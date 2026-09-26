@@ -497,7 +497,6 @@ export function HomeBooks({ locale }: { locale: SupportedLocale }) {
             </article>
           );
         })}
-        {books.length % 2 === 1 && <div aria-hidden className="hidden bg-bg md:block" />}
       </div>
     </Band>
   );
