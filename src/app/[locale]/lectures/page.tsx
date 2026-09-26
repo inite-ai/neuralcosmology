@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import Link from "next/link";
 import Image from "next/image";
 import PageShell from "@/components/layout/PageShell";
@@ -29,6 +30,7 @@ export async function generateMetadata({
         SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}/lectures`]),
       ),
     },
+    ...social({ title: dict.lecturesPage.title, description: dict.lecturesPage.lead, url: `https://neuralcosmology.com/${locale}${"/lectures"}`, kind: "lectures", locale }),
   };
 }
 

@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { books } from "@/content/books";
 import { papers } from "@/content/papers";
-import { getAllSlugs } from "@/lib/essays";
+import { getAllSlugs as essaySlugs, getEssayBySlug } from "@/lib/essays";
+import { getAllSlugs as lectureSlugs, getLectureBySlug } from "@/lib/lectures";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
 import { getManifest, libraryLangs } from "@/lib/library";
 
@@ -13,7 +14,12 @@ const BASE = "https://neuralcosmology.com";
 type Entry = {
   path: string;
   priority: number;
+  // Языки, на которых страница реально есть (по умолчанию — все).
+  locales?: readonly string[];
+  modified?: string;
 };
+
+const date = (iso?: string) => (iso && !Number.isNaN(Date.parse(iso)) ? new Date(iso) : undefined);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -22,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/books", priority: 0.9 },
     { path: "/science", priority: 0.9 },
     { path: "/essays", priority: 0.8 },
+    { path: "/lectures", priority: 0.7 },
     { path: "/about", priority: 0.8 },
   ];
   const bookPaths: Entry[] = books.map((b) => ({
@@ -32,24 +39,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     path: `/science/${p.slug}`,
     priority: 0.8,
   }));
-  const essayPaths: Entry[] = getAllSlugs().map((slug) => ({
-    path: `/essays/${slug}`,
-    priority: 0.7,
-  }));
+  const essayPaths: Entry[] = essaySlugs().flatMap((slug) => {
+    const e = getEssayBySlug(slug, DEFAULT_LOCALE);
+    return e ? [{ path: `/essays/${slug}`, priority: 0.7, locales: e.availableLocales, modified: e.date }] : [];
+  });
+  const lecturePaths: Entry[] = lectureSlugs().flatMap((slug) => {
+    const l = getLectureBySlug(slug, DEFAULT_LOCALE);
+    return l ? [{ path: `/lectures/${slug}`, priority: 0.6, locales: l.availableLocales, modified: l.date }] : [];
+  });
 
-  const all: Entry[] = [...staticPaths, ...bookPaths, ...paperPaths, ...essayPaths];
+  const all: Entry[] = [...staticPaths, ...bookPaths, ...paperPaths, ...essayPaths, ...lecturePaths];
 
-  const localised: MetadataRoute.Sitemap = all.flatMap(({ path, priority }) =>
-    SUPPORTED_LOCALES.map((locale) => ({
+  // Только существующие переводы: страница без перевода отдаёт текст на другом языке
+  // с каноническим адресом оригинала, в sitemap ей не место.
+  const localised: MetadataRoute.Sitemap = all.flatMap(({ path, priority, locales = SUPPORTED_LOCALES, modified }) =>
+    locales.map((locale) => ({
       url: `${BASE}/${locale}${path}`,
-      lastModified: now,
+      lastModified: date(modified) ?? now,
       priority,
       alternates: {
         languages: {
-          ...Object.fromEntries(
-            SUPPORTED_LOCALES.map((l) => [l, `${BASE}/${l}${path}`]),
-          ),
-          "x-default": `${BASE}/${DEFAULT_LOCALE}${path}`,
+          ...Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
+          "x-default": `${BASE}/${locales.includes(DEFAULT_LOCALE) ? DEFAULT_LOCALE : locales[0]}${path}`,
         },
       },
     })),

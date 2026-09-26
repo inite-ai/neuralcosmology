@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import HomeShell from "@/components/home/HomeShell";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
@@ -28,6 +29,7 @@ export async function generateMetadata({
         SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}`]),
       ),
     },
+    ...social({ title: dict.meta.title, description: dict.meta.description, url: `https://neuralcosmology.com/${locale}${""}`, kind: "home", locale }),
   };
 }
 

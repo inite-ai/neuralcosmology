@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBookBySlug } from "@/content/books";
@@ -47,24 +48,19 @@ export async function generateMetadata({ params, searchParams }: { params: Param
   const title = `${d.chapter.title} — ${bookTitle}`;
   // Если книги нет на языке интерфейса, канонической считаем версию на языке текста.
   const canonical = `${BASE}/${d.lang}/read/${slug}/${id}`;
+  const quote = `${BASE}/api/quote-card?${new URLSearchParams({ q: shared, b: bookTitle })}`;
   return {
     title,
     description: d.chapter.excerpt,
     alternates: { canonical },
     robots: d.chapter.free ? { index: true, follow: true } : { index: false, follow: true },
-    openGraph: {
-      title,
-      description: d.chapter.excerpt,
-      url: canonical,
-      type: "article",
-      images: [
-        shared
-          ? `${BASE}/api/quote-card?${new URLSearchParams({ q: shared, b: bookTitle })}`
-          : `${BASE}/api/og?title=${encodeURIComponent(d.chapter.title)}&subtitle=${encodeURIComponent(bookTitle)}&kind=book`,
-      ],
-    },
-    // Ссылка «Поделиться» с цитатой — превью-карточка с этой цитатой.
-    ...(shared ? { twitter: { card: "summary_large_image", title, description: `«${shared}»`, images: [`${BASE}/api/quote-card?${new URLSearchParams({ q: shared, b: bookTitle })}`] } } : {}),
+    ...(shared
+      ? {
+          // Ссылка «Поделиться» с цитатой — превью-карточка с этой цитатой.
+          openGraph: { title, description: `«${shared}»`, url: canonical, type: "article", images: [quote] },
+          twitter: { card: "summary_large_image", title, description: `«${shared}»`, images: [quote] },
+        }
+      : social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image: `/og/covers/${slug}.png` })),
   };
 }
 

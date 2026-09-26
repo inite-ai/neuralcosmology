@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import Link from "next/link";
 import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
@@ -56,6 +57,7 @@ export async function generateMetadata({
         SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}/about`]),
       ),
     },
+    ...social({ title: dict.about.title, description: dict.about.bio[0], url: `https://neuralcosmology.com/${locale}${"/about"}`, kind: "about", locale, type: "profile" }),
   };
 }
 

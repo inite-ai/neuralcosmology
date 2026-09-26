@@ -39,6 +39,13 @@ function pathnameHasLocale(pathname: string): boolean {
   return !!seg && (supportedLocales as readonly string[]).includes(seg);
 }
 
+// Локаль уходит в заголовок запроса — корневой layout ставит по ней <html lang>.
+function nextWithLocale(request: NextRequest, locale: Locale) {
+  const headers = new Headers(request.headers);
+  headers.set("x-locale", locale);
+  return NextResponse.next({ request: { headers } });
+}
+
 function withSeoHeaders(
   request: NextRequest,
   response: NextResponse,
@@ -63,19 +70,6 @@ function withSeoHeaders(
   response.headers.set("referrer-policy", "strict-origin-when-cross-origin");
   response.headers.set("Vary", "Accept-Language, Accept-Encoding");
 
-  const base = "https://neuralcosmology.com";
-  const strippedPath = pathnameHasLocale(pathname)
-    ? "/" + pathname.split("/").filter(Boolean).slice(1).join("/")
-    : pathname;
-  const normalizedPath = strippedPath === "/" ? "" : strippedPath;
-
-  const alternates = [
-    ...supportedLocales.map(
-      (l) => `<${base}/${l}${normalizedPath}>; rel="alternate"; hreflang="${l}"`,
-    ),
-    `<${base}/${defaultLocale}${normalizedPath}>; rel="alternate"; hreflang="x-default"`,
-  ].join(", ");
-  response.headers.set("Link", alternates);
 
   return response;
 }
@@ -85,6 +79,15 @@ export function middleware(request: NextRequest) {
 
   if (pathname.startsWith("/_next/") || pathname.startsWith("/api/")) {
     return NextResponse.next();
+  }
+
+  // Один хост: www → основной домен.
+  const host = request.headers.get("host") ?? "";
+  if (host.startsWith("www.")) {
+    const url = request.nextUrl.clone();
+    url.host = host.slice(4);
+    url.port = "";
+    return NextResponse.redirect(url, 308);
   }
 
   if (ROOT_SURFACES.has(pathname)) {
@@ -99,7 +102,7 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale(pathname)) {
     const urlLocale = pathname.split("/").filter(Boolean)[0] as Locale;
-    return withSeoHeaders(request, NextResponse.next(), urlLocale, pathname);
+    return withSeoHeaders(request, nextWithLocale(request, urlLocale), urlLocale, pathname);
   }
 
   const target = request.nextUrl.clone();
@@ -118,6 +121,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|favicons|covers|pdfs|fonts|media|stars.svg|og-default.svg|file.svg|globe.svg|next.svg|vercel.svg|window.svg).*)",
+    "/((?!_next/static|_next/image|favicon.ico|favicons|covers|pdfs|fonts|media|og/|stars.svg|og-default.svg|file.svg|globe.svg|next.svg|vercel.svg|window.svg).*)",
   ],
 };

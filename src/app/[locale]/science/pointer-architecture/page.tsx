@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPaperBySlug } from "@/content/papers";
@@ -25,7 +26,6 @@ export async function generateMetadata({
   const base = "https://neuralcosmology.com";
   const title = paper?.title ?? "Pointer Architecture";
   const description = paper?.abstract.slice(0, 180) ?? "";
-  const ogUrl = `${base}/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(description)}&kind=preprint`;
   return {
     title,
     description,
@@ -38,19 +38,7 @@ export async function generateMetadata({
         ]),
       ),
     },
-    openGraph: {
-      title,
-      description,
-      url: `${base}/${locale}/science/pointer-architecture`,
-      type: "article",
-      images: [{ url: ogUrl, width: 1200, height: 630, alt: title }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [ogUrl],
-    },
+    ...social({ title, description, url: `${base}/${locale}/science/pointer-architecture`, kind: "preprint", locale, type: "article" }),
   };
 }
 

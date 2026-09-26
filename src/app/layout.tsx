@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Marcellus, Forum, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import RevealObserver from "@/components/system/RevealObserver";
@@ -65,13 +66,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = (await headers()).get("x-locale") ?? "en";
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${forum.variable}`}>
+    <html lang={lang === "pt" ? "pt-BR" : lang} suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${forum.variable}`}>
       <head>
         {/* Анимации проявления включаются только при живом JS */}
         <script

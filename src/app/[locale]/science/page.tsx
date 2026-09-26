@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import PageShell from "@/components/layout/PageShell";
 import Plate from "@/components/system/Plate";
 import PaperCard from "@/components/ui/PaperCard";
@@ -29,6 +30,7 @@ export async function generateMetadata({
         SUPPORTED_LOCALES.map((l) => [l, `https://neuralcosmology.com/${l}/science`]),
       ),
     },
+    ...social({ title: dict.science.indexTitle, description: dict.science.indexLead, url: `https://neuralcosmology.com/${locale}${"/science"}`, kind: "science", locale }),
   };
 }
 

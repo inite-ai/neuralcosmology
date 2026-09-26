@@ -11,6 +11,7 @@ import {
   type SupportedLocale,
 } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+import { social } from "@/lib/og";
 
 const THEME_LABEL: Record<SupportedLocale, string> = {
   en: "Switch light / dark",
@@ -46,33 +47,7 @@ export async function generateMetadata({
         "x-default": `${base}/en`,
       },
     },
-    openGraph: {
-      title: dict.meta.title,
-      description: dict.meta.description,
-      url,
-      siteName: dict.siteName,
-      type: "website",
-      locale: dict.meta.ogLocale,
-      alternateLocale: ["en_US", "ru_RU", "pt_BR", "es_ES"].filter(
-        (l) => l !== dict.meta.ogLocale,
-      ),
-      images: [
-        {
-          url: `${base}/api/og?title=${encodeURIComponent(dict.meta.title)}&subtitle=${encodeURIComponent(dict.meta.description)}&kind=home`,
-          width: 1200,
-          height: 630,
-          alt: dict.meta.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: dict.meta.title,
-      description: dict.meta.description,
-      images: [
-        `${base}/api/og?title=${encodeURIComponent(dict.meta.title)}&subtitle=${encodeURIComponent(dict.meta.description)}&kind=home`,
-      ],
-    },
+    ...social({ title: dict.meta.title, description: dict.meta.description, url, kind: "home", locale }),
   };
 }
 

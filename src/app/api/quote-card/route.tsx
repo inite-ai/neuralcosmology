@@ -1,23 +1,10 @@
 import { ImageResponse } from "next/og";
 import type { NextRequest } from "next/server";
+import { googleFont } from "@/lib/og-fonts";
 
 // Карточка цитаты для соцсетей (og:image ссылок «Поделиться»): 1200×630,
 // бумага, цитата набрана Forum, внизу книга и знак сайта.
 export const runtime = "nodejs";
-
-async function forum(text: string): Promise<ArrayBuffer | null> {
-  try {
-    const css = await fetch(
-      `https://fonts.googleapis.com/css2?family=Forum&text=${encodeURIComponent(text)}`,
-      // Старый UA → Google отдаёт TTF (next/og не читает woff2).
-      { headers: { "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30" } },
-    ).then((r) => r.text());
-    const url = css.match(/src: url\(([^)]+)\)/)?.[1];
-    return url ? await fetch(url).then((r) => r.arrayBuffer()) : null;
-  } catch {
-    return null;
-  }
-}
 
 export async function GET(req: NextRequest) {
   const p = req.nextUrl.searchParams;
@@ -25,7 +12,7 @@ export async function GET(req: NextRequest) {
   const book = (p.get("b") || "").slice(0, 80);
   const author = (p.get("a") || "Mikhail Savchenko").slice(0, 60);
   const size = quote.length > 200 ? 46 : quote.length > 120 ? 56 : 68;
-  const font = await forum(`«»—·${quote}${book}${author}Neural Cosmology`);
+  const font = await googleFont("Forum", `«»—·${quote}${book}${author}Neural Cosmology`);
 
   return new ImageResponse(
     (

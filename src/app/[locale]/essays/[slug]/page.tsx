@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -30,40 +31,16 @@ export async function generateMetadata({
   const essay = getEssayBySlug(slug, locale);
   if (!essay) return {};
   const base = "https://neuralcosmology.com";
-  const ogImage = essay.cover
-    ? `${base}${essay.cover}`
-    : `${base}/api/og?title=${encodeURIComponent(essay.title)}&subtitle=${encodeURIComponent(essay.description)}&kind=essay`;
   return {
     title: essay.title,
     description: essay.description,
     alternates: {
-      canonical: `${base}/${locale}/essays/${slug}`,
+      canonical: `${base}/${essay.locale}/essays/${slug}`,
       languages: Object.fromEntries(
         essay.availableLocales.map((l) => [l, `${base}/${l}/essays/${slug}`]),
       ),
     },
-    openGraph: {
-      title: essay.title,
-      description: essay.description,
-      url: `${base}/${locale}/essays/${slug}`,
-      type: "article",
-      publishedTime: essay.date,
-      authors: essay.author ? [essay.author] : undefined,
-      images: [
-        {
-          url: ogImage,
-          width: 1536,
-          height: 1024,
-          alt: essay.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: essay.title,
-      description: essay.description,
-      images: [ogImage],
-    },
+    ...social({ title: essay.title, description: essay.description, url: `${base}/${essay.locale}/essays/${slug}`, kind: "essay", locale: essay.locale, type: "article", publishedTime: essay.date, image: essay.cover ? essay.cover.replace(/^\/essays\/covers\/(.+)\.\w+$/, "/og/essays/$1.jpg") : null }),
   };
 }
 

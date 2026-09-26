@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { social } from "@/lib/og";
 import Link from "next/link";
 import Image from "next/image";
 import PageShell from "@/components/layout/PageShell";
@@ -33,6 +34,7 @@ export async function generateMetadata({
         "application/rss+xml": `https://neuralcosmology.com/${locale}/essays/rss.xml`,
       },
     },
+    ...social({ title: dict.essays.title, description: dict.essays.lead, url: `https://neuralcosmology.com/${locale}${"/essays"}`, kind: "essays", locale }),
   };
 }
 
