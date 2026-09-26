@@ -1,14 +1,7 @@
 import Link from "next/link";
 import type { Paper } from "@/types/paper";
-import { Badge } from "@/components/ui/badge";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
-
-const statusStyle: Record<Paper["status"], string> = {
-  preprint: "border-indigo-400/40 text-indigo-200",
-  submitted: "border-amber-400/40 text-amber-200",
-  published: "border-emerald-400/40 text-emerald-200",
-};
 
 const statusLabelByLocale: Record<SupportedLocale, Record<Paper["status"], string>> = {
   en: { preprint: "Preprint", submitted: "Submitted", published: "Published" },
@@ -28,27 +21,21 @@ export default function PaperCard({
   return (
     <Link
       href={`/${locale}/science/${paper.slug}`}
-      className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.07] hover:border-white/20 transition-colors p-6"
+      className="group grid gap-6 bg-bg p-7 transition-colors hover:bg-bg-raised md:grid-cols-[10rem_1fr_auto] md:gap-10 md:p-10"
     >
-      <div className="flex items-center gap-2 flex-wrap mb-3">
-        <Badge variant="outline" className={`bg-transparent ${statusStyle[paper.status]}`}>
-          {statusLabelByLocale[locale][paper.status]}
-        </Badge>
-        {paper.venue && (
-          <Badge variant="outline" className="border-white/20 text-white/70 bg-transparent">
-            {paper.venue}
-          </Badge>
-        )}
-        <span className="text-xs text-white/50 ml-auto">{paper.year}</span>
+      <div className="flex flex-row flex-wrap gap-x-4 gap-y-1 md:flex-col">
+        <span className="label text-primary">{statusLabelByLocale[locale][paper.status]}</span>
+        <span className="label text-muted">{paper.year}</span>
+        {paper.venue && <span className="label text-muted">{paper.venue}</span>}
       </div>
-      <h3 className="text-xl font-semibold text-white tracking-tight leading-snug mb-2">
-        {paper.title}
-      </h3>
-      <div className="text-xs text-white/60 mb-3">{paper.authors.join(", ")}</div>
-      <p className="text-sm text-white/70 leading-relaxed line-clamp-4">{paper.abstract}</p>
-      <div className="mt-4 text-xs text-indigo-300/80 group-hover:text-indigo-200 transition-colors">
-        {dict.science.cardCta}
+      <div>
+        <h3 className="font-display text-[1.75rem] leading-[1.1] md:text-[2.125rem] group-hover:text-primary transition-colors">
+          {paper.title}
+        </h3>
+        <p className="mt-2 text-sm text-muted">{paper.authors.join(", ")}</p>
+        <p className="mt-4 max-w-[70ch] text-fg-secondary line-clamp-4">{paper.abstract}</p>
       </div>
+      <span className="label text-fg self-end group-hover:text-primary transition-colors">{dict.science.cardCta}</span>
     </Link>
   );
 }

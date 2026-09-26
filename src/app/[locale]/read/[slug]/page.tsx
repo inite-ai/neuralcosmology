@@ -80,24 +80,24 @@ export default async function ReadPage({
 
   return (
     <main
-      className="flex flex-col bg-black text-white pt-14"
+      className="flex flex-col bg-bg-sunk text-fg pt-14"
       style={{ height: "100vh" }}
     >
       <JsonLd id="read-breadcrumb" data={breadcrumb(locale, bcItems)} />
-      <div className="flex items-center justify-between gap-3 px-4 sm:px-6 h-12 border-b border-white/10 bg-[#0a1026]/80 backdrop-blur-md shrink-0">
+      <div className="flex items-center justify-between gap-3 px-4 sm:px-6 h-12 border-b border-line bg-bg shrink-0">
         <div className="flex items-center gap-3 min-w-0">
           <Link
             href={backHref}
-            className="text-xs sm:text-sm text-white/70 hover:text-white transition-colors whitespace-nowrap"
+            className="text-xs sm:text-sm text-fg-secondary hover:text-fg transition-colors whitespace-nowrap"
           >
             ← {dict.reader.back}
           </Link>
-          <span className="hidden sm:inline text-white/20">·</span>
-          <span className="text-xs sm:text-sm text-white/85 truncate">
+          <span className="hidden sm:inline text-muted/60">·</span>
+          <span className="text-xs sm:text-sm text-fg truncate">
             {title}
           </span>
           {pdfLocale !== locale && (
-            <span className="text-[10px] uppercase tracking-wider text-amber-300/70 whitespace-nowrap">
+            <span className="text-[10px] uppercase tracking-wider text-muted whitespace-nowrap">
               {dict.reader.shownIn} {pdfLocale}
             </span>
           )}
@@ -107,21 +107,21 @@ export default async function ReadPage({
             href={path}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center rounded-md border border-white/15 hover:border-white/30 text-white/75 hover:text-white px-3 py-1.5 text-xs transition-colors"
+            className="hidden sm:inline-flex items-center rounded-sm border border-line hover:border-fg/40 text-fg-secondary hover:text-fg px-3 py-1.5 text-xs transition-colors"
           >
             {dict.reader.openInNewTab}
           </a>
           <a
             href={path}
             download
-            className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-1.5 text-xs font-medium transition-colors"
+            className="inline-flex items-center rounded-sm bg-fg text-bg hover:bg-primary px-3 py-1.5 text-xs font-medium transition-colors"
           >
             {dict.reader.download}
           </a>
         </div>
       </div>
 
-      <div className="flex-1 min-h-0 bg-black">
+      <div className="flex-1 min-h-0 bg-bg-sunk">
         <iframe
           src={`${path}#view=FitH`}
           title={title}

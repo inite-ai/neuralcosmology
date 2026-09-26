@@ -13,7 +13,7 @@ export function makeBookLink(locale: SupportedLocale) {
     return (
       <Link
         href={`/${locale}/books/${slug}`}
-        className="text-indigo-300 hover:text-indigo-200 underline underline-offset-4 decoration-1 transition-colors"
+        className="text-primary hover:text-primary underline underline-offset-4 decoration-1 transition-colors"
       >
         {children}
       </Link>

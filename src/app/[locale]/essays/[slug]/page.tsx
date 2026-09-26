@@ -101,7 +101,7 @@ export default async function EssayPage({
   const mdxSource = linkifyBookMentions(essay.content);
 
   return (
-    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+    <main className="relative min-h-screen text-fg pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
       <JsonLd
         id="essay-schema"
         data={articleSchema({
@@ -130,13 +130,13 @@ export default async function EssayPage({
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/essays`}
-          className="inline-block text-sm text-white/60 hover:text-white mb-8 transition-colors"
+          className="inline-block text-sm text-muted hover:text-fg mb-8 transition-colors"
         >
           ← {dict.nav.essays}
         </Link>
 
         {essay.cover && (
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-slate-950 mb-10">
+          <div className="relative aspect-[16/9] overflow-hidden border border-line bg-bg-sunk mb-10">
             <Image
               src={essay.cover}
               alt=""
@@ -145,11 +145,11 @@ export default async function EssayPage({
               priority
               className="object-cover"
             />
-            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/70 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-24 pointer-events-none" />
           </div>
         )}
 
-        <div className="flex items-center gap-3 text-xs text-white/50 mb-4">
+        <div className="flex items-center gap-3 text-xs text-muted mb-4">
           <span>{formatDate(essay.date, locale)}</span>
           {essay.readingTime && (
             <>
@@ -158,23 +158,23 @@ export default async function EssayPage({
             </>
           )}
           {essay.locale !== locale && (
-            <span className="uppercase tracking-wider text-amber-300/70">
+            <span className="uppercase tracking-wider text-muted">
               shown in {essay.locale}
             </span>
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight mb-4">
+        <h1 className="text-3xl sm:text-5xl font-display font-normal tracking-tight leading-tight mb-4">
           {essay.title}
         </h1>
 
         {essay.description && (
-          <p className="text-lg text-white/75 leading-relaxed mb-10 italic">
+          <p className="text-lg text-fg-secondary leading-relaxed mb-10 italic">
             {essay.description}
           </p>
         )}
 
-        <article className="prose-essay text-white/85 leading-relaxed space-y-5">
+        <article className="prose-essay text-fg leading-relaxed space-y-5">
           <MDXRemote source={mdxSource} options={mdxOptions} components={{ BookLink }} />
         </article>
 
@@ -183,7 +183,7 @@ export default async function EssayPage({
             {essay.tags.map((t) => (
               <span
                 key={t}
-                className="px-2.5 py-1 rounded-full text-[11px] uppercase tracking-wider border border-white/10 bg-white/5 text-white/60"
+                className="px-2.5 py-1 rounded-full text-[11px] uppercase tracking-wider border border-line bg-bg-raised text-muted"
               >
                 {t}
               </span>

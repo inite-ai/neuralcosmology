@@ -80,7 +80,7 @@ export default async function LecturesIndexPage({
         ])}
       />
       {lectures.length === 0 ? (
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-white/70 leading-relaxed">
+        <div className="border border-line bg-bg-raised p-8 text-fg-secondary leading-relaxed">
           <p>{dict.lecturesPage.placeholderBody}</p>
         </div>
       ) : (
@@ -91,10 +91,10 @@ export default async function LecturesIndexPage({
               <li key={l.slug} className="flex">
                 <Link
                   href={`/${locale}/lectures/${l.slug}`}
-                  className="group flex flex-col h-full w-full rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.07] hover:border-white/20 transition-colors overflow-hidden"
+                  className="group flex flex-col h-full w-full border border-line bg-bg-raised hover:bg-bg-raised hover:border-fg/40 transition-colors overflow-hidden"
                 >
                   {thumb && (
-                    <div className="relative aspect-video bg-black/40">
+                    <div className="relative aspect-video bg-bg-sunk">
                       <Image
                         src={thumb}
                         alt={l.title}
@@ -103,11 +103,11 @@ export default async function LecturesIndexPage({
                         sizes="(min-width: 640px) 50vw, 100vw"
                         unoptimized
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <div className="absolute inset-0" />
                     </div>
                   )}
                   <div className="p-5 sm:p-6">
-                    <div className="flex items-center gap-3 text-xs text-white/50 mb-2">
+                    <div className="flex items-center gap-3 text-xs text-muted mb-2">
                       <span>{formatDate(l.date, locale)}</span>
                       {l.durationMinutes && (
                         <>
@@ -118,20 +118,20 @@ export default async function LecturesIndexPage({
                         </>
                       )}
                       {l.locale !== locale && (
-                        <span className="ml-auto text-amber-300/70 uppercase tracking-wider">
+                        <span className="ml-auto text-muted uppercase tracking-wider">
                           {l.locale}
                         </span>
                       )}
                     </div>
-                    <h2 className="text-lg sm:text-xl font-semibold text-white tracking-tight leading-snug mb-2">
+                    <h2 className="text-lg sm:text-xl font-semibold text-fg tracking-tight leading-snug mb-2">
                       {l.title}
                     </h2>
                     {l.description && (
-                      <p className="text-sm text-white/70 leading-relaxed">
+                      <p className="text-sm text-fg-secondary leading-relaxed">
                         {l.description}
                       </p>
                     )}
-                    <div className="mt-3 text-xs text-indigo-300/80 group-hover:text-indigo-200 transition-colors">
+                    <div className="mt-3 text-xs text-primary group-hover:text-primary transition-colors">
                       {dict.lecturesPage.watchCta} →
                     </div>
                   </div>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hero-web",
+    "provider": "gpt-image-2",
+    "out": "raw/hero-web",
+    "prompt": "Scientific deep-field astrophotograph of the cosmic web: luminous silver filaments of galaxies branching and connecting across deep black space, the filaments and nodes clearly resembling a stained neural tissue micrograph with dendrites and synapse-like junctions. Monochrome silver-white with a single faint cool indigo-violet tint in the densest nodes, deep true blacks, fine photographic film grain like a vintage observatory glass plate. The upper-right two-thirds hold the dense network; the lower-left third is darker and emptier, calm negative space for a headline. Quiet, precise, museum-grade. No text, no labels, no watermark, no stars with lens flares.",
+    "size": "1536x1024",
+    "quality": "high"
+  },
+  {
+    "id": "neurons",
+    "provider": "gpt-image-2",
+    "out": "raw/neurons",
+    "prompt": "Confocal fluorescence micrograph of cortical pyramidal neurons: fine silver-white dendrites and axons branching across a deep black field, a few cell bodies glowing faintly cool indigo-violet, the branching pattern echoing cosmic filaments. Very high detail, shallow depth, delicate, scientific, monochrome silver with a single indigo accent, fine grain. Dense structure on the left half, darker emptier right third. No text, no scale bar, no labels, no watermark.",
+    "size": "1536x1024",
+    "quality": "high"
+  },
+  {
+    "id": "plate-galaxy",
+    "provider": "gpt-image-2",
+    "out": "raw/plate-galaxy",
+    "prompt": "Vintage black-and-white astronomical glass plate photograph of a face-on spiral galaxy, silver emulsion on black, visible fine grain and slight plate vignetting, subtle scratches, the galaxy placed in the upper half, the lower half fading into deep black. Archival, scientific, beautiful restraint. Portrait orientation. No text, no handwriting, no labels, no plate numbers, no watermark.",
+    "size": "1024x1536",
+    "quality": "high"
+  },
+  {
+    "id": "bioelectric",
+    "provider": "gpt-image-2",
+    "out": "raw/bioelectric",
+    "prompt": "Scientific fluorescence microscopy image, lateral side view of an elongated early tadpole embryo (Xenopus) lying horizontally, a voltage-reporter dye revealing a subtle mottled bioelectric pattern along its body: faint brighter patches near the head region and along the spine, rendered in cool silver and a single restrained indigo-violet tone on a deep black background, soft focus edges, fine microscope noise, realistic research image, not a face, no cartoon features, no symmetry emphasis. The embryo occupies the right two-thirds, dark empty space on the left. No text, no labels, no scale bar, no watermark.",
+    "size": "1536x1024",
+    "quality": "high"
+  },
+  {
+    "id": "landauer",
+    "provider": "gpt-image-2",
+    "out": "raw/landauer",
+    "prompt": "Macro photograph inside a dilution refrigerator: stacked gold-plated copper stages, fine silver coaxial wires and a tiny superconducting chip at the bottom, lit by a single cool indigo-violet light with silver highlights and deep black shadows, very shallow depth of field. Precise, silent, expensive laboratory hardware. Darker lower-left third for text. No text, no logos, no labels, no people.",
+    "size": "1536x1024",
+    "quality": "high"
+  },
+  {
+    "id": "observatory",
+    "provider": "gpt-image-2",
+    "out": "raw/observatory",
+    "prompt": "Cinematic night photograph inside an old astronomical observatory dome: the dome slit open to a clear starry sky with the faint band of the Milky Way, a large brass refractor telescope silhouetted and pointing up, cool blue-indigo moonlight on curved riveted steel, deep shadows, fine film grain. Calm and solitary. The telescope in the right half, dark empty area in the lower-left third. No people, no text, no watermark.",
+    "size": "1536x1024",
+    "quality": "high"
+  }
+]

@@ -118,6 +118,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|favicons|covers|pdfs|fonts|stars.svg|og-default.svg|file.svg|globe.svg|next.svg|vercel.svg|window.svg).*)",
+    "/((?!_next/static|_next/image|favicon.ico|favicons|covers|pdfs|fonts|media|stars.svg|og-default.svg|file.svg|globe.svg|next.svg|vercel.svg|window.svg).*)",
   ],
 };

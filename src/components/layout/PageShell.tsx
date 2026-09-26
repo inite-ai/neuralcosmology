@@ -1,38 +1,46 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import { Sheet, Label, Headline } from "@/components/system";
 
+/** «Первая часть — вторая часть» или «Фраза. Фраза.» → курсивная вторая часть. */
+export function splitTitle(title: string): [string, string | undefined] {
+  const dash = title.match(/^(.+?)\s+[—–]\s+(.+)$/);
+  if (dash) return [dash[1], dash[2]];
+  const dot = title.match(/^(.+?[.!?])\s+(.+)$/);
+  if (dot) return [dot[1], dot[2]];
+  return [title, undefined];
+}
+
+// Внутренние страницы: лист с линейками, шапка-полоса с меткой и заголовком,
+// дальше — полосы секций (children оборачивают себя в Band).
 export default function PageShell({
   eyebrow,
   title,
   lead,
+  aside,
   children,
 }: {
   eyebrow?: string;
   title: string;
   lead?: string;
+  aside?: ReactNode;
   children: ReactNode;
 }) {
+  const [main, em] = splitTitle(title);
   return (
-    <main className="relative min-h-screen text-white">
-      <div className="pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <header className="mb-10 sm:mb-14 max-w-3xl">
-            {eyebrow && (
-              <div className="text-xs uppercase tracking-[0.2em] text-indigo-300/80 mb-3">
-                {eyebrow}
-              </div>
-            )}
-            <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white leading-tight">
-              {title}
-            </h1>
-            {lead && (
-              <p className="mt-4 text-base sm:text-lg text-white/70 leading-relaxed">
-                {lead}
-              </p>
-            )}
-          </header>
-          {children}
-        </div>
-      </div>
+    <main className="pt-14">
+      <Sheet>
+        <header className="grid gap-8 pt-14 pb-12 md:px-10 md:pt-24 md:pb-16 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="max-w-4xl">
+            {eyebrow && <Label className="mb-5">{eyebrow}</Label>}
+            <Headline as="h1" size="display" em={em}>
+              {main}
+            </Headline>
+            {lead && <p className="mt-6 max-w-[60ch] text-fg-secondary md:text-lg">{lead}</p>}
+          </div>
+          {aside}
+        </header>
+        {children}
+      </Sheet>
     </main>
   );
 }

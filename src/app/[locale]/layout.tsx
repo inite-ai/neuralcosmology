@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { AnnouncementBar, Cursor, ThemeToggle } from "@/components/layout/chrome";
 import JsonLd from "@/components/seo/JsonLd";
 import { siteGraph } from "@/lib/schema";
 import {
@@ -10,6 +11,13 @@ import {
   type SupportedLocale,
 } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
+
+const THEME_LABEL: Record<SupportedLocale, string> = {
+  en: "Switch light / dark",
+  ru: "Светлая / тёмная тема",
+  pt: "Tema claro / escuro",
+  es: "Tema claro / oscuro",
+};
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -82,9 +90,12 @@ export default async function LocaleLayout({
   return (
     <>
       <JsonLd id="site-graph" data={siteGraph(locale, dict.meta.title, dict.meta.description)} />
+      <AnnouncementBar locale={locale} />
       <Header locale={locale} />
       {children}
       <Footer locale={locale} />
+      <ThemeToggle label={THEME_LABEL[locale]} />
+      <Cursor />
     </>
   );
 }

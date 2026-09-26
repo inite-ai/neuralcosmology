@@ -38,20 +38,20 @@ export default async function SiblingFeed({ locale }: { locale: SupportedLocale 
   if (posts.length === 0) return null;
   const c = COPY[locale];
   return (
-    <section className="mt-20 border-t border-white/10 pt-10">
+    <section className="mt-20 border-t border-line pt-10">
       <div className="flex items-baseline justify-between gap-4 mb-6">
         <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-indigo-300/70 mb-1">
+          <div className="text-xs uppercase tracking-[0.2em] text-primary mb-1">
             {c.eyebrow}
           </div>
-          <h2 className="text-xl sm:text-2xl font-semibold text-white/90 tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-display font-normal text-fg tracking-tight">
             {c.title}
           </h2>
         </div>
         <a
           href={`https://www.mikefluff.com/${locale}/blog`}
           rel="me noopener"
-          className="text-sm text-white/70 hover:text-white whitespace-nowrap transition-colors"
+          className="text-sm text-fg-secondary hover:text-fg whitespace-nowrap transition-colors"
         >
           {c.cta}
         </a>
@@ -62,9 +62,9 @@ export default async function SiblingFeed({ locale }: { locale: SupportedLocale 
             <a
               href={p.link}
               rel="noopener"
-              className="block h-full rounded-xl border border-white/10 hover:border-white/25 bg-white/[0.03] hover:bg-white/[0.06] p-4 transition-colors"
+              className="block h-full border border-line hover:border-fg/40 bg-bg-raised hover:bg-bg-raised p-4 transition-colors"
             >
-              <div className="text-sm text-white/85 font-medium leading-snug line-clamp-3">
+              <div className="text-sm text-fg font-medium leading-snug line-clamp-3">
                 {p.title}
               </div>
             </a>

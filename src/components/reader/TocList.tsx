@@ -67,74 +67,56 @@ export default function TocList({
   };
 
   let lastPart: string | null = null;
+  const reader = variant === "reader";
+  // Цвета: в читалке — переменные темы читалки, на сайте — токены сайта.
+  const c = reader
+    ? { muted: "text-[var(--r-muted)]", accent: "text-[var(--r-accent)]", rule: "border-[var(--r-line)]", hover: "hover:bg-[var(--r-faint)]", current: "bg-[var(--r-faint)]" }
+    : { muted: "text-muted", accent: "text-primary", rule: "border-line", hover: "hover:bg-bg-raised", current: "bg-bg-raised" };
 
   return (
-    <ol className={cn("space-y-0.5", variant === "page" && "space-y-1")}>
+    <ol>
       {items.map((it) => {
-        const s = status(it);
+        const st = status(it);
         const showPart = it.part && it.part !== lastPart;
         lastPart = it.part;
         const current = it.id === currentId;
         return (
           <li key={it.id}>
             {showPart && (
-              <div
-                className={cn(
-                  "text-[11px] uppercase tracking-[0.16em] pt-4 pb-1.5 px-3",
-                  variant === "reader" ? "text-[var(--r-muted)]" : "text-white/45",
-                )}
-              >
-                {it.part}
-              </div>
+              <div className={cn("label pt-7 pb-3 px-4", c.accent)}>{it.part}</div>
             )}
             <Link
               href={`${hrefBase}/${it.id}`}
               onClick={onNavigate}
               aria-current={current ? "page" : undefined}
               className={cn(
-                "group flex items-baseline gap-3 rounded-md px-3 py-2 text-sm transition-colors",
-                variant === "reader"
-                  ? current
-                    ? "bg-[var(--r-faint)] text-[var(--r-fg)]"
-                    : "text-[var(--r-fg)]/80 hover:bg-[var(--r-faint)]"
-                  : "text-white/80 hover:text-white hover:bg-white/5",
+                "group grid min-h-14 grid-cols-[2.25rem_1fr_auto] items-baseline gap-x-3 border-b-[0.5px] px-4 py-3.5 transition-colors",
+                c.rule,
+                c.hover,
+                current && c.current,
               )}
             >
+              <span className={cn("label", current ? c.accent : c.muted)}>
+                {it.number ? String(it.number).padStart(2, "0") : "·"}
+              </span>
               <span
                 className={cn(
-                  "w-6 shrink-0 text-right tabular-nums text-xs",
-                  variant === "reader" ? "text-[var(--r-muted)]" : "text-white/40",
+                  "font-display text-[1.1875rem] leading-snug",
+                  it.gate !== "open" && "opacity-55",
+                  current && c.accent,
                 )}
               >
-                {it.number ?? "·"}
-              </span>
-              <span className={cn("flex-1 min-w-0", it.gate !== "open" && "opacity-60")}>
                 {it.title}
               </span>
-              {s && (
-                <span
-                  className={cn(
-                    "shrink-0 text-[11px] whitespace-nowrap",
-                    s.tone === "locked" && (variant === "reader" ? "text-[var(--r-muted)]" : "text-white/40"),
-                    s.tone === "free" && (variant === "reader" ? "text-[var(--r-accent)]" : "text-emerald-300/80"),
-                    s.tone === "active" && (variant === "reader" ? "text-[var(--r-accent)]" : "text-indigo-300"),
-                    s.tone === "done" && (variant === "reader" ? "text-[var(--r-muted)]" : "text-white/45"),
-                  )}
-                >
-                  {s.tone === "locked" && <Lock className="inline h-3 w-3 mr-1 -mt-0.5" aria-hidden />}
-                  {s.text}
-                </span>
-              )}
-              {!s && (
-                <span
-                  className={cn(
-                    "shrink-0 text-[11px] tabular-nums",
-                    variant === "reader" ? "text-[var(--r-muted)]" : "text-white/35",
-                  )}
-                >
-                  {it.minutes} {labels.minutes}
-                </span>
-              )}
+              <span
+                className={cn(
+                  "label whitespace-nowrap",
+                  st?.tone === "free" || st?.tone === "active" ? c.accent : c.muted,
+                )}
+              >
+                {st?.tone === "locked" && <Lock className="mr-1.5 -mt-0.5 inline h-3 w-3" strokeWidth={1.5} aria-hidden />}
+                {st ? st.text : `${it.minutes} ${labels.minutes}`}
+              </span>
             </Link>
           </li>
         );

@@ -1,67 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Book } from "@/types/book";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 
-const statusStyle: Record<Book["status"], string> = {
-  published: "border-emerald-400/40 text-emerald-200",
-  forthcoming: "border-amber-400/40 text-amber-200",
-  wip: "border-indigo-400/40 text-indigo-200",
-};
-
-export default function BookCard({
-  book,
-  locale,
-}: {
-  book: Book;
-  locale: SupportedLocale;
-}) {
+// Ячейка книги: обложка → жанр/статус → название → хук. Без скруглений и теней.
+export default function BookCard({ book, locale, index }: { book: Book; locale: SupportedLocale; index?: number }) {
   const dict = getDict(locale);
   const genreLabel = {
     "non-fiction": dict.books.genre.nonFiction,
     "sci-fi": dict.books.genre.sciFi,
     "literary-sci-fi": dict.books.genre.literarySciFi,
   } as const;
-
   const title = pickLocalized(book.titles, locale);
-  const hook = pickLocalized(book.hook, locale);
-  const statusLabel = pickLocalized(book.statusLabel, locale);
 
   return (
-    <Link
-      href={`/${locale}/books/${book.slug}`}
-      className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.07] hover:border-white/20 transition-colors overflow-hidden"
-    >
-      <div className="relative aspect-[3/4] bg-gradient-to-br from-indigo-900/60 via-purple-900/40 to-slate-900">
+    <Link href={`/${locale}/books/${book.slug}`} className="group flex flex-col bg-bg p-5 md:p-7 transition-colors hover:bg-bg-raised">
+      <div className="relative aspect-[3/4] overflow-hidden bg-bg-sunk hairline">
         <Image
           src={book.coverImage}
           alt={title}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+          sizes="(min-width: 1280px) 280px, (min-width: 640px) 45vw, 100vw"
+          className="object-cover transition-transform duration-700 ease-(--ease-soft) group-hover:scale-[1.03]"
         />
       </div>
-      <div className="flex flex-col gap-3 p-5">
-        <div className="flex items-center gap-2 flex-wrap">
-          <Badge variant="outline" className="border-white/20 text-white/70 bg-transparent">
-            {genreLabel[book.genre]}
-          </Badge>
-          <Badge
-            variant="outline"
-            className={cn("bg-transparent", statusStyle[book.status])}
-          >
-            {statusLabel}
-          </Badge>
-        </div>
-        <h3 className="text-xl font-semibold text-white tracking-tight">{title}</h3>
-        <p className="text-sm text-white/70 leading-relaxed">{hook}</p>
-        <div className="mt-2 text-xs text-indigo-300/80 group-hover:text-indigo-200 transition-colors">
-          {dict.books.readMore}
-        </div>
+      <div className="mt-6 flex items-baseline justify-between gap-3">
+        <span className="label text-primary">{genreLabel[book.genre]}</span>
+        {index !== undefined && <span className="label text-muted">{String(index + 1).padStart(2, "0")}</span>}
       </div>
+      <h3 className="mt-3 font-display text-[1.75rem] leading-[1.08] group-hover:text-primary transition-colors">{title}</h3>
+      <p className="mt-3 text-base text-fg-secondary">{pickLocalized(book.hook, locale)}</p>
+      <p className="mt-auto pt-5 text-sm text-muted">{pickLocalized(book.statusLabel, locale)}</p>
     </Link>
   );
 }

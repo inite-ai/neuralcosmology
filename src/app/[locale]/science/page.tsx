@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageShell from "@/components/layout/PageShell";
+import Plate from "@/components/system/Plate";
 import PaperCard from "@/components/ui/PaperCard";
 import { papers } from "@/content/papers";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
@@ -57,11 +58,18 @@ export default async function ScienceIndexPage({
           { name: dict.nav.science, path: "/science" },
         ])}
       />
-      <div className="grid gap-6">
-        {papers.map((paper) => (
-          <PaperCard key={paper.slug} paper={paper} locale={locale} />
-        ))}
-      </div>
+      <section className="rule-t py-10 md:px-10 md:py-14">
+        <div className="grid gap-[0.5px] hairline bg-line">
+          {papers.map((paper) => (
+            <PaperCard key={paper.slug} paper={paper} locale={locale} />
+          ))}
+        </div>
+      </section>
+      <section className="rule-t">
+        <div className="relative aspect-[16/9] md:aspect-[21/9]">
+          <Plate id="landauer" fill className="absolute inset-0" caption="PL. 03 · 1 bit = kT ln 2" sizes="(min-width: 1280px) 1200px, 100vw" />
+        </div>
+      </section>
     </PageShell>
   );
 }

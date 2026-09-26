@@ -150,100 +150,76 @@ export default async function ChapterPage({
         }
         trackProgress={gate === "open"}
       >
-        <article className="mx-auto max-w-[40rem] pt-10 sm:pt-16" lang={lang}>
-          <header className="mb-10 sm:mb-14 text-center">
-            {chapter.part && (
-              <div className="text-[11px] uppercase tracking-[0.2em] text-[var(--r-muted)] mb-4">
-                {chapter.part}
-              </div>
-            )}
+        <article className="mx-auto max-w-[38rem] pt-12 sm:pt-20" lang={lang}>
+          <header className="mb-12 sm:mb-16">
+            <div className="flex items-baseline justify-between gap-4 r-rule-b pb-4">
+              <span className="label text-[var(--r-accent)]">{chapter.part ?? bookTitle}</span>
+              <span className="label text-[var(--r-muted)]">
+                {chapter.minutes} {L.minutes}
+                {lang !== locale && ` · ${dict.reader.shownIn} ${lang}`}
+              </span>
+            </div>
             {chapter.number && (
-              <div className="text-sm text-[var(--r-accent)] mb-2">
-                {L.chapter} {chapter.number}
-              </div>
+              <p className="mt-10 font-display text-[clamp(3.5rem,12vw,5.5rem)] leading-none text-[var(--r-accent)]">
+                {String(chapter.number).padStart(2, "0")}
+              </p>
             )}
-            <h1 className="font-[family-name:var(--font-reader)] text-3xl sm:text-4xl font-semibold leading-tight">
+            <h1 className={`font-display text-[clamp(2.25rem,7vw,3.25rem)] leading-[1.05] tracking-[-0.02em] text-balance ${chapter.number ? "mt-4" : "mt-10"}`}>
               {chapter.title}
             </h1>
-            <div className="mt-4 text-xs text-[var(--r-muted)]">
-              {chapter.minutes} {L.minutes}
-              {lang !== locale && (
-                <span className="ml-2 uppercase tracking-wider">
-                  · {dict.reader.shownIn} {lang}
-                </span>
-              )}
-            </div>
           </header>
 
           {html !== null ? (
             <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
           ) : (
             <>
-              <div
-                className="reader-prose reader-teaser"
-                dangerouslySetInnerHTML={{ __html: chapter.teaser }}
-              />
-              <div className="reader-locked mt-2 rounded-xl border border-[var(--r-faint)] bg-[var(--r-panel)] p-6 sm:p-8 text-center">
-                <h2 className="text-lg font-semibold mb-2">
+              <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: chapter.teaser }} />
+              <div className="reader-locked mt-4 r-hair bg-[var(--r-panel)] p-7 sm:p-10">
+                <p className="label text-[var(--r-accent)]">{gate === "login" ? L.afterSignIn : L.afterPurchase}</p>
+                <h2 className="mt-4 font-display text-[1.875rem] leading-[1.1] sm:text-[2.25rem]">
                   {gate === "login" ? L.gateLoginTitle : L.gatePurchaseTitle}
                 </h2>
-                <p className="text-sm text-[var(--r-muted)] mb-6 max-w-md mx-auto leading-relaxed">
+                <p className="mt-4 max-w-[46ch] text-[var(--r-soft)]">
                   {gate === "login" ? L.gateLoginBody : L.gatePurchaseBody}
                 </p>
-                {gate === "login" ? (
-                  <a
-                    href={loginHref}
-                    className="inline-flex items-center rounded-md bg-[var(--r-accent-strong)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
-                  >
-                    {L.gateLoginCta}
-                  </a>
-                ) : (
-                  <div className="flex flex-wrap justify-center gap-3">
-                    <a
-                      href={checkoutHref(slug, here)}
-                      className="inline-flex items-center rounded-md bg-[var(--r-accent-strong)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
-                    >
-                      {L.gatePurchaseCta} · {pricing.book.label}
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  {gate === "login" ? (
+                    <a href={loginHref} className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--r-fg)] px-6 label text-[var(--r-bg)] transition-opacity hover:opacity-85">
+                      {L.gateLoginCta}
                     </a>
-                    <a
-                      href={checkoutHref(LIBRARY_ITEM, here)}
-                      className="inline-flex items-center rounded-md border border-[var(--r-faint)] px-5 py-2.5 text-sm font-medium hover:bg-[var(--r-faint)]"
-                    >
-                      {L.gateBuyLibrary} · {pricing.library.label}
-                    </a>
-                  </div>
-                )}
+                  ) : (
+                    <>
+                      <a href={checkoutHref(slug, here)} className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--r-fg)] px-6 label text-[var(--r-bg)] transition-opacity hover:opacity-85">
+                        {L.gatePurchaseCta} · {pricing.book.label}
+                      </a>
+                      <a href={checkoutHref(LIBRARY_ITEM, here)} className="inline-flex min-h-12 items-center justify-center rounded-sm border-[0.5px] border-[var(--r-fg)] px-6 label text-[var(--r-fg)] transition-colors hover:bg-[var(--r-fg)] hover:text-[var(--r-bg)]">
+                        {L.gateBuyLibrary} · {pricing.library.label}
+                      </a>
+                    </>
+                  )}
+                </div>
               </div>
             </>
           )}
 
-          <nav className="mt-16 flex items-stretch gap-3 border-t border-[var(--r-faint)] pt-8 text-sm">
+          <nav className="mt-20 grid gap-[0.5px] r-hair bg-[var(--r-line)] sm:grid-cols-2">
             {prev ? (
-              <Link
-                href={`${hrefBase}/${prev.id}`}
-                className="flex-1 rounded-lg p-3 hover:bg-[var(--r-faint)]"
-              >
-                <div className="text-xs text-[var(--r-muted)]">← {L.prev}</div>
-                <div className="mt-1 line-clamp-2">{prev.title}</div>
+              <Link href={`${hrefBase}/${prev.id}`} className="group bg-[var(--r-bg)] p-6 transition-colors hover:bg-[var(--r-panel)]">
+                <span className="label text-[var(--r-muted)]">← {L.prev}</span>
+                <span className="mt-3 block font-display text-xl leading-snug group-hover:text-[var(--r-accent)]">{prev.title}</span>
               </Link>
             ) : (
-              <span className="flex-1" />
+              <span className="hidden bg-[var(--r-bg)] sm:block" />
             )}
             {next ? (
-              <Link
-                href={`${hrefBase}/${next.id}`}
-                className="flex-1 rounded-lg p-3 text-right hover:bg-[var(--r-faint)]"
-              >
-                <div className="text-xs text-[var(--r-muted)]">{L.next} →</div>
-                <div className="mt-1 line-clamp-2">{next.title}</div>
+              <Link href={`${hrefBase}/${next.id}`} className="group bg-[var(--r-bg)] p-6 text-right transition-colors hover:bg-[var(--r-panel)]">
+                <span className="label text-[var(--r-muted)]">{L.next} →</span>
+                <span className="mt-3 block font-display text-xl leading-snug group-hover:text-[var(--r-accent)]">{next.title}</span>
               </Link>
             ) : (
-              <Link
-                href={`/${locale}/books/${slug}`}
-                className="flex-1 rounded-lg p-3 text-right hover:bg-[var(--r-faint)]"
-              >
-                <div className="text-xs text-[var(--r-muted)]">{L.endOfBook}</div>
-                <div className="mt-1">{L.backToBook} →</div>
+              <Link href={`/${locale}/books/${slug}`} className="group bg-[var(--r-bg)] p-6 text-right transition-colors hover:bg-[var(--r-panel)]">
+                <span className="label text-[var(--r-muted)]">{L.endOfBook}</span>
+                <span className="mt-3 block font-display text-xl leading-snug group-hover:text-[var(--r-accent)]">{L.backToBook} →</span>
               </Link>
             )}
           </nav>

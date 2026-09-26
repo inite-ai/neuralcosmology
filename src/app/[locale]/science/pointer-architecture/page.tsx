@@ -65,7 +65,7 @@ export default async function PointerArchitecturePage({
   const dict = getDict(locale);
 
   return (
-    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+    <main className="relative min-h-screen text-fg pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
       <JsonLd
         id="paper-schema"
         data={scholarlyArticleSchema({
@@ -117,27 +117,27 @@ export default async function PointerArchitecturePage({
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/science`}
-          className="inline-block text-sm text-white/60 hover:text-white mb-8 transition-colors"
+          className="inline-block text-sm text-muted hover:text-fg mb-8 transition-colors"
         >
           {dict.science.allResearch}
         </Link>
 
         <div className="flex items-center gap-2 flex-wrap mb-4">
-          <Badge variant="outline" className="border-indigo-400/40 text-indigo-200 bg-transparent">
+          <Badge variant="outline" className="border-primary/50 text-primary bg-transparent">
             {dict.science.preprintBadge}
           </Badge>
           {paper.venue && (
-            <Badge variant="outline" className="border-white/20 text-white/70 bg-transparent">
+            <Badge variant="outline" className="border-fg/40 text-fg-secondary bg-transparent">
               {paper.venue}
             </Badge>
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight mb-5">
+        <h1 className="text-3xl sm:text-5xl font-display font-normal tracking-tight leading-tight mb-5">
           {paper.title}
         </h1>
 
-        <div className="text-white/60 text-sm mb-8">
+        <div className="text-muted text-sm mb-8">
           {paper.authors.join(", ")} · {paper.year}
         </div>
 
@@ -145,7 +145,7 @@ export default async function PointerArchitecturePage({
           {paper.pdfPath && (
             <Link
               href={`/${locale}/read/pointer-architecture`}
-              className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm bg-fg text-bg hover:bg-primary px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.science.readPdf}
             </Link>
@@ -153,7 +153,7 @@ export default async function PointerArchitecturePage({
           {paper.codeUrl && (
             <a
               href={paper.codeUrl}
-              className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.science.codeRelease}
             </a>
@@ -161,35 +161,35 @@ export default async function PointerArchitecturePage({
           {paper.doi && (
             <a
               href={`https://doi.org/${paper.doi}`}
-              className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
             >
               DOI
             </a>
           )}
           <a
             href="mailto:info@neuralcosmology.com?subject=Pointer%20Architecture%20—%20peer%20review"
-            className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+            className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
           >
             {dict.science.contactReview}
           </a>
         </div>
 
         <section className="mb-12">
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
+          <h2 className="text-xs uppercase tracking-widest text-muted mb-3">
             {dict.science.abstractHeader}
           </h2>
-          <p className="text-white/80 leading-relaxed">{paper.abstract}</p>
+          <p className="text-fg leading-relaxed">{paper.abstract}</p>
         </section>
 
         {paper.tldr && (
           <section className="mb-12">
-            <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
+            <h2 className="text-xs uppercase tracking-widest text-muted mb-3">
               {dict.science.tldrHeader}
             </h2>
             <ul className="space-y-2">
               {paper.tldr.map((t) => (
-                <li key={t} className="flex gap-3 text-white/80 leading-relaxed">
-                  <span className="text-indigo-300 shrink-0">·</span>
+                <li key={t} className="flex gap-3 text-fg leading-relaxed">
+                  <span className="text-primary shrink-0">·</span>
                   <span>{t}</span>
                 </li>
               ))}
@@ -199,10 +199,10 @@ export default async function PointerArchitecturePage({
 
         {paper.predictions && (
           <section className="mb-12">
-            <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
+            <h2 className="text-xs uppercase tracking-widest text-muted mb-3">
               {dict.science.predictionsHeader}
             </h2>
-            <ol className="space-y-2 list-decimal list-inside text-white/80 leading-relaxed marker:text-indigo-300/60">
+            <ol className="space-y-2 list-decimal list-inside text-fg leading-relaxed marker:text-primary">
               {paper.predictions.map((p) => (
                 <li key={p}>{p}</li>
               ))}
@@ -211,16 +211,16 @@ export default async function PointerArchitecturePage({
         )}
 
         {paper.companionBookSlug && (
-          <section className="mb-12 rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-xs uppercase tracking-widest text-white/50 mb-2">
+          <section className="mb-12 border border-line bg-bg-raised p-6">
+            <div className="text-xs uppercase tracking-widest text-muted mb-2">
               {dict.science.companionHeader}
             </div>
-            <p className="text-white/80 leading-relaxed mb-3">
+            <p className="text-fg leading-relaxed mb-3">
               {dict.science.companionBody}
             </p>
             <Link
               href={`/${locale}/books/${paper.companionBookSlug}`}
-              className="text-indigo-300 hover:text-indigo-200 text-sm transition-colors"
+              className="text-primary hover:text-primary text-sm transition-colors"
             >
               {dict.science.companionCta}
             </Link>
@@ -228,21 +228,21 @@ export default async function PointerArchitecturePage({
         )}
 
         <section className="mb-12">
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
+          <h2 className="text-xs uppercase tracking-widest text-muted mb-3">
             {dict.science.citeHeader}
           </h2>
-          <pre className="text-xs rounded-lg bg-black/40 border border-white/10 p-4 overflow-x-auto text-white/70">
+          <pre className="text-xs bg-bg-sunk border border-line p-4 overflow-x-auto text-fg-secondary">
 {`Savchenko, M. (${paper.year}). ${paper.title}. Preprint.${paper.doi ? `\nDOI: ${paper.doi}` : ""}`}
           </pre>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-4">FAQ</h2>
+          <h2 className="text-xs uppercase tracking-widest text-muted mb-4">FAQ</h2>
           <dl className="space-y-6">
             {faqByLocale[locale].science.map((f) => (
               <div key={f.question}>
-                <dt className="text-white/90 font-medium mb-1.5">{f.question}</dt>
-                <dd className="text-white/75 leading-relaxed text-sm">{f.answer}</dd>
+                <dt className="text-fg font-medium mb-1.5">{f.question}</dt>
+                <dd className="text-fg-secondary leading-relaxed text-sm">{f.answer}</dd>
               </div>
             ))}
           </dl>

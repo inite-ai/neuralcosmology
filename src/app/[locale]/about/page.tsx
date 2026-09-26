@@ -68,7 +68,7 @@ export default async function AboutPage({
   const locale = isSupportedLocale(raw) ? raw : "en";
   const dict = getDict(locale);
   return (
-    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+    <main className="relative min-h-screen text-fg pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
       <JsonLd
         id="about-profile"
         data={profilePageSchema(locale, dict.about.title, dict.about.bio[0])}
@@ -82,40 +82,40 @@ export default async function AboutPage({
       />
       <JsonLd id="about-faq" data={faqSchema(locale, "/about", faqByLocale[locale].about)} />
       <div className="max-w-3xl mx-auto">
-        <div className="text-xs uppercase tracking-[0.2em] text-indigo-300/80 mb-3">
+        <div className="text-xs uppercase tracking-[0.2em] text-primary mb-3">
           {dict.about.eyebrow}
         </div>
-        <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight mb-6">
+        <h1 className="text-3xl sm:text-5xl font-display font-normal tracking-tight leading-tight mb-6">
           {dict.about.title}
         </h1>
 
-        <div className="max-w-none text-white/80 leading-relaxed space-y-5">
+        <div className="max-w-none text-fg leading-relaxed space-y-5">
           {dict.about.bio.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
 
-        <section className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
+        <section className="mt-10 border border-line bg-bg-raised p-6">
+          <h2 className="text-xs uppercase tracking-widest text-muted mb-3">
             {dict.about.agentsHeader}
           </h2>
-          <p className="text-white/80 leading-relaxed">{dict.about.agentsBody}</p>
+          <p className="text-fg leading-relaxed">{dict.about.agentsBody}</p>
           <div className="mt-4 flex flex-wrap gap-3">
             <a
               href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"
-              className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm bg-fg text-bg hover:bg-primary px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.about.emailCta}
             </a>
             <Link
               href={`/${locale}/science/pointer-architecture`}
-              className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.footer.links.pointer}
             </Link>
             <Link
               href={`/${locale}/books`}
-              className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.nav.books}
             </Link>
@@ -123,12 +123,12 @@ export default async function AboutPage({
         </section>
 
         <section className="mt-10">
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-4">FAQ</h2>
+          <h2 className="text-xs uppercase tracking-widest text-muted mb-4">FAQ</h2>
           <dl className="space-y-6">
             {faqByLocale[locale].about.map((f) => (
               <div key={f.question}>
-                <dt className="text-white/90 font-medium mb-1.5">{f.question}</dt>
-                <dd className="text-white/75 leading-relaxed text-sm">{f.answer}</dd>
+                <dt className="text-fg font-medium mb-1.5">{f.question}</dt>
+                <dd className="text-fg-secondary leading-relaxed text-sm">{f.answer}</dd>
               </div>
             ))}
           </dl>
@@ -140,18 +140,18 @@ export default async function AboutPage({
           is the strongest cross-domain signal Google and LLM citation graphs
           recognise — well above JSON-LD sameAs.
         */}
-        <section className="mt-10 rounded-2xl border border-emerald-300/20 bg-emerald-400/5 p-6">
-          <h2 className="text-xs uppercase tracking-widest text-emerald-200/80 mb-3">
+        <section className="mt-10 border border-line bg-bg-raised p-6">
+          <h2 className="text-xs uppercase tracking-widest text-primary mb-3">
             {SISTER_ABOUT[locale].eyebrow}
           </h2>
-          <p className="text-white/85 leading-relaxed">
+          <p className="text-fg leading-relaxed">
             {SISTER_ABOUT[locale].body}
           </p>
           <div className="mt-4">
             <a
               href="https://www.mikefluff.com"
               rel="me noopener"
-              className="inline-flex items-center rounded-md border border-emerald-300/30 hover:border-emerald-300/60 text-white/90 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm border border-line hover:border-line text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {SISTER_ABOUT[locale].cta} →
             </a>
@@ -159,15 +159,15 @@ export default async function AboutPage({
         </section>
 
         <section className="mt-10">
-          <h2 className="text-xs uppercase tracking-widest text-white/50 mb-3">
+          <h2 className="text-xs uppercase tracking-widest text-muted mb-3">
             {dict.about.elsewhereHeader}
           </h2>
-          <ul className="text-sm text-white/75 space-y-1.5">
+          <ul className="text-sm text-fg-secondary space-y-1.5">
             <li>
               <a
                 href="https://www.mikefluff.com"
                 rel="me noopener"
-                className="hover:text-white transition-colors"
+                className="hover:text-fg transition-colors"
               >
                 mikefluff.com — {SISTER_ABOUT[locale].rel}
               </a>
@@ -175,7 +175,7 @@ export default async function AboutPage({
             <li>
               <a
                 href="https://t.me/neuralcosmology"
-                className="hover:text-white transition-colors"
+                className="hover:text-fg transition-colors"
               >
                 Telegram — @neuralcosmology
               </a>
@@ -183,7 +183,7 @@ export default async function AboutPage({
             <li>
               <a
                 href="https://github.com/neuralcosmology"
-                className="hover:text-white transition-colors"
+                className="hover:text-fg transition-colors"
               >
                 GitHub — neuralcosmology
               </a>
@@ -192,7 +192,7 @@ export default async function AboutPage({
               <a
                 href="https://www.linkedin.com/in/mikefluff/"
                 rel="me noopener"
-                className="hover:text-white transition-colors"
+                className="hover:text-fg transition-colors"
               >
                 LinkedIn — Mikhail Savchenko
               </a>
@@ -200,7 +200,7 @@ export default async function AboutPage({
             <li>
               <a
                 href="mailto:info@neuralcosmology.com"
-                className="hover:text-white transition-colors"
+                className="hover:text-fg transition-colors"
               >
                 info@neuralcosmology.com
               </a>

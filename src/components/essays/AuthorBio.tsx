@@ -41,17 +41,17 @@ const COPY: Record<SupportedLocale, Copy> = {
 export default function AuthorBio({ locale }: { locale: SupportedLocale }) {
   const c = COPY[locale];
   return (
-    <aside className="mt-16 rounded-2xl border border-white/10 bg-white/5 p-6">
-      <div className="text-xs uppercase tracking-widest text-white/50 mb-3">
+    <aside className="mt-16 border border-line bg-bg-raised p-6">
+      <div className="text-xs uppercase tracking-widest text-muted mb-3">
         {c.about}
       </div>
-      <p className="text-white/85 leading-relaxed">{c.who}</p>
-      <p className="text-white/70 leading-relaxed mt-3">
+      <p className="text-fg leading-relaxed">{c.who}</p>
+      <p className="text-fg-secondary leading-relaxed mt-3">
         {c.bridge}{" "}
         <a
           href="https://www.mikefluff.com"
           rel="me noopener"
-          className="text-indigo-300 hover:text-indigo-200 underline underline-offset-2 decoration-indigo-400/40 hover:decoration-indigo-200/80 transition-colors"
+          className="text-primary hover:text-primary underline underline-offset-2 decoration-indigo-400/40 hover:decoration-indigo-200/80 transition-colors"
         >
           {c.mikefluff}
         </a>
@@ -60,14 +60,14 @@ export default function AuthorBio({ locale }: { locale: SupportedLocale }) {
       <div className="mt-4 flex flex-wrap gap-3">
         <Link
           href={`/${locale}/about`}
-          className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/85 hover:text-white px-4 py-2 text-sm transition-colors"
+          className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-4 py-2 text-sm transition-colors"
         >
           {c.about} →
         </Link>
         <a
           href="https://www.mikefluff.com"
           rel="me noopener"
-          className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/85 hover:text-white px-4 py-2 text-sm transition-colors"
+          className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-4 py-2 text-sm transition-colors"
         >
           mikefluff.com →
         </a>

@@ -1,16 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Marcellus, Forum, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SiteBackground from "@/components/layout/SiteBackground";
+import RevealObserver from "@/components/system/RevealObserver";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
+});
+
+// Заголовки как в образце: Marcellus (латиница) + Forum (кириллица) —
+// одна и та же классическая «расклёшенная» антиква, 400, без жирного.
+const marcellus = Marcellus({
+  variable: "--font-marcellus",
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  display: "swap",
+});
+
+const forum = Forum({
+  variable: "--font-forum",
+  subsets: ["cyrillic", "cyrillic-ext", "latin"],
+  weight: "400",
+  display: "swap",
 });
 
 // Root metadata is a safe fallback. Per-locale metadata (title, description,
@@ -55,8 +71,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${forum.variable}`}>
       <head>
+        {/* Анимации проявления включаются только при живом JS */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nc-theme');if(t==='dark'||t==='light')d.classList.add(t);if(localStorage.getItem('nc-banner')==='library-2026-09')d.classList.add('banner-off')}catch(e){}if(/^\\/[a-z]{2}\\/read\\/[^/]+\\/[^/]+/.test(location.pathname))d.classList.add('banner-off')})()",
+          }}
+        />
         {/*
           IndieWeb rel="me" chain: bidirectional identity claim across the
           author's domains and social profiles. Combined with reciprocal
@@ -74,10 +97,10 @@ export default function RootLayout({
         <link rel="me" href="https://www.linkedin.com/in/mikefluff/" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-[#0a1026]`}
+        className="bg-bg text-fg antialiased"
       >
-        <SiteBackground />
         {children}
+        <RevealObserver />
       </body>
     </html>
   );

@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { books, getBookBySlug } from "@/content/books";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { Sheet, Label, Headline } from "@/components/system";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getManifest, resolveBookLang } from "@/lib/library";
@@ -14,12 +13,6 @@ import TocList from "@/components/reader/TocList";
 import ContinueReading from "@/components/reader/ContinueReading";
 import JsonLd from "@/components/seo/JsonLd";
 import { bookSchema, breadcrumb } from "@/lib/schema";
-
-const statusStyle = {
-  published: "border-emerald-400/40 text-emerald-200",
-  forthcoming: "border-amber-400/40 text-amber-200",
-  wip: "border-indigo-400/40 text-indigo-200",
-} as const;
 
 // Оглавление приходит из экспорта LaTeX на диске сервера — перечитываем раз в 5 минут.
 export const revalidate = 300;
@@ -115,7 +108,7 @@ export default async function BookDetailPage({
     }));
 
   return (
-    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+    <main className="pt-14">
       <JsonLd
         id="book-schema"
         data={bookSchema({
@@ -143,64 +136,40 @@ export default async function BookDetailPage({
           { name: title, path: `/books/${book.slug}` },
         ])}
       />
-      <div className="max-w-5xl mx-auto">
-        <Link
-          href={`/${locale}/books`}
-          className="inline-block text-sm text-white/60 hover:text-white mb-8 transition-colors"
-        >
-          {dict.books.allBooks}
-        </Link>
+      <Sheet>
+        <div className="flex items-center justify-between rule-b py-4 md:px-10">
+          <Link href={`/${locale}/books`} className="inline-flex min-h-10 items-center label text-muted hover:text-fg transition-colors">
+            {dict.books.allBooks}
+          </Link>
+          <span className="label text-muted">{genreLabel[book.genre]}</span>
+        </div>
 
-        <div className="grid gap-10 md:grid-cols-[1fr_1.3fr] md:items-start">
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-indigo-900/60 via-purple-900/40 to-slate-900 shadow-2xl shadow-black/40">
-            <Image
-              src={book.coverImage}
-              alt={title}
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover"
-              priority
-            />
+        <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+          <div className="py-10 md:px-10 lg:rule-r lg:py-16">
+            <div className="relative mx-auto aspect-[3/4] max-w-sm overflow-hidden hairline lg:max-w-none">
+              <Image src={book.coverImage} alt={title} fill sizes="(min-width: 1024px) 460px, 90vw" className="object-cover" priority />
+            </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 flex-wrap mb-4">
-              <Badge variant="outline" className="border-white/20 text-white/70 bg-transparent">
-                {genreLabel[book.genre]}
-              </Badge>
-              <Badge
-                variant="outline"
-                className={cn("bg-transparent", statusStyle[book.status])}
-              >
-                {statusLabel}
-              </Badge>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight mb-4">
-              {title}
-            </h1>
+          <div className="pb-14 md:px-10 lg:py-16">
+            <Label className="mb-5">{statusLabel}</Label>
+            <Headline as="h1" size="display">{title}</Headline>
 
             {secondaryTitles.length > 0 && (
-              <div className="text-white/50 text-sm mb-4">
+              <p className="mt-4 text-sm text-muted">
                 {secondaryTitles.map((t, i) => (
                   <span key={t.loc}>
                     {i > 0 && " · "}
-                    <span className="uppercase tracking-wider text-white/40">{t.loc}</span>:{" "}
-                    <span className="text-white/70">{t.value}</span>
+                    <span className="label">{t.loc}</span> <span className="text-fg-secondary">{t.value}</span>
                   </span>
                 ))}
-              </div>
+              </p>
             )}
 
-            <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-6 italic">
-              {hook}
-            </p>
+            <p className="mt-8 font-display text-[1.625rem] italic leading-snug text-fg md:text-[1.875rem]">{hook}</p>
+            <p className="mt-6 max-w-[62ch] text-fg-secondary md:text-lg">{synopsis}</p>
 
-            <div className="text-white/75 leading-relaxed">
-              <p>{synopsis}</p>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {manifest && manifest.chapters.length > 0 && (
                 <ContinueReading
                   slug={book.slug}
@@ -209,7 +178,7 @@ export default async function BookDetailPage({
                   firstId={manifest.chapters[0].id}
                   chapterIds={manifest.chapters.map((c) => c.id)}
                   labels={{ start: L.readOnline, continue: L.continueReading }}
-                  className="inline-flex items-center rounded-md bg-indigo-500 hover:bg-indigo-400 text-white px-5 py-2.5 text-sm font-medium transition-colors"
+                  className="inline-flex min-h-11 items-center justify-center rounded-sm bg-fg px-6 label text-bg transition-colors hover:bg-primary"
                 />
               )}
               {manifest && lockedGate === "purchase" && manifest.chapters.some((c) => !c.free) && (
@@ -218,45 +187,30 @@ export default async function BookDetailPage({
                     item: book.slug,
                     returnTo: `/${locale}/read/${book.slug}/${(manifest.chapters.find((c) => !c.free) ?? manifest.chapters[0]).id}`,
                   })}`}
-                  className="inline-flex items-center rounded-md border border-indigo-300/40 hover:border-indigo-300/70 text-indigo-100 px-5 py-2.5 text-sm font-medium transition-colors"
+                  className="inline-flex min-h-11 items-center justify-center rounded-sm hairline border-fg/70 px-6 label text-fg transition-colors hover:bg-fg hover:text-bg"
                 >
                   {L.gatePurchaseCta} · {pricing.book.label}
                 </a>
               )}
-              <a
-                href="mailto:info@neuralcosmology.com?subject=Rights%20inquiry"
-                className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
-              >
-                {dict.books.rightsInquiry}
-              </a>
-              {book.sampleChapters?.map((s) => (
-                <a
-                  key={s.url}
-                  href={s.url}
-                  className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
-                >
-                  {s.label}
-                </a>
-              ))}
-              {book.buyLinks?.map((l) => (
-                <a
-                  key={l.url}
-                  href={l.url}
-                  className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
-                >
-                  {l.label}
+              {[
+                { url: "mailto:info@neuralcosmology.com?subject=Rights%20inquiry", label: dict.books.rightsInquiry },
+                ...(book.sampleChapters ?? []),
+                ...(book.buyLinks ?? []),
+              ].map((l) => (
+                <a key={l.url} href={l.url} className="inline-flex min-h-11 items-center justify-center px-2 label text-muted transition-colors hover:text-fg">
+                  {l.label} →
                 </a>
               ))}
             </div>
 
             {book.blurbs && book.blurbs.length > 0 && (
-              <div className="mt-10 space-y-4">
+              <div className="mt-12 space-y-6">
                 {book.blurbs.map((b, i) => (
-                  <figure key={i} className="border-l-2 border-indigo-400/40 pl-4">
-                    <blockquote className="text-white/80 italic">“{b.quote}”</blockquote>
-                    <figcaption className="text-sm text-white/50 mt-1">
-                      — {b.author}
-                      {b.affiliation && <span className="text-white/40">, {b.affiliation}</span>}
+                  <figure key={i} className="rule-l border-primary pl-5">
+                    <blockquote className="font-display text-xl italic text-fg">“{b.quote}”</blockquote>
+                    <figcaption className="mt-2 label text-muted">
+                      {b.author}
+                      {b.affiliation && `, ${b.affiliation}`}
                     </figcaption>
                   </figure>
                 ))}
@@ -264,11 +218,9 @@ export default async function BookDetailPage({
             )}
 
             {book.comparables && (
-              <div className="mt-10">
-                <div className="text-xs uppercase tracking-widest text-white/50 mb-2">
-                  {dict.books.comparableHeader}
-                </div>
-                <ul className="text-sm text-white/70 space-y-1">
+              <div className="mt-12 rule-t pt-6">
+                <p className="label text-muted mb-3">{dict.books.comparableHeader}</p>
+                <ul className="space-y-1.5 text-fg-secondary">
                   {book.comparables.map((c) => (
                     <li key={c}>{c}</li>
                   ))}
@@ -279,41 +231,38 @@ export default async function BookDetailPage({
         </div>
 
         {manifest && manifest.chapters.length > 0 && (
-          <section id="contents" className="mt-16 max-w-3xl">
-            <div className="flex items-baseline justify-between gap-4 mb-4">
-              <h2 className="text-xs uppercase tracking-[0.2em] text-indigo-300/80">
-                {L.contents}
-              </h2>
-              <span className="text-xs text-white/40">
-                {readLang !== locale && (
-                  <span className="uppercase tracking-wider mr-2">
-                    {dict.reader.shownIn} {readLang}
-                  </span>
-                )}
-                {manifest.version && `${L.version} ${manifest.version}`}
-              </span>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-2">
-              <TocList
-                variant="page"
-                items={manifest.chapters.map((c) => ({
-                  id: c.id,
-                  title: c.title,
-                  number: c.number,
-                  part: c.part,
-                  minutes: c.minutes,
-                  free: c.free,
-                  gate: c.free ? "open" : lockedGate,
-                }))}
-                slug={book.slug}
-                lang={readLang!}
-                hrefBase={`/${locale}/read/${book.slug}`}
-                labels={L}
-              />
+          <section id="contents" className="rule-t py-14 md:px-10 lg:py-20">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
+              <div>
+                <Label className="mb-4">{L.contents}</Label>
+                <Headline>{L.inLibrary}</Headline>
+                <p className="mt-5 label text-muted">
+                  {manifest.chapters.length} · {manifest.version && `${L.version} ${manifest.version}`}
+                  {readLang !== locale && ` · ${dict.reader.shownIn} ${readLang}`}
+                </p>
+              </div>
+              <div className="rule-t">
+                <TocList
+                  variant="page"
+                  items={manifest.chapters.map((c) => ({
+                    id: c.id,
+                    title: c.title,
+                    number: c.number,
+                    part: c.part,
+                    minutes: c.minutes,
+                    free: c.free,
+                    gate: c.free ? "open" : lockedGate,
+                  }))}
+                  slug={book.slug}
+                  lang={readLang!}
+                  hrefBase={`/${locale}/read/${book.slug}`}
+                  labels={L}
+                />
+              </div>
             </div>
           </section>
         )}
-      </div>
+      </Sheet>
     </main>
   );
 }

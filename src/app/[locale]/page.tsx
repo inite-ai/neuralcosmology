@@ -3,6 +3,9 @@ import HomeShell from "@/components/home/HomeShell";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { listLectures, getThumbnail } from "@/lib/lectures";
+import { listEssays } from "@/lib/essays";
+import { books } from "@/content/books";
+import { papers } from "@/content/papers";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -44,5 +47,11 @@ export default async function HomePage({
       durationMinutes: l.durationMinutes,
       thumbnail: getThumbnail(l.videoUrl, l.cover),
     }));
-  return <HomeShell locale={locale} recentLectures={recentLectures} />;
+  const counts: [number, number, number, number] = [
+    books.length,
+    papers.length,
+    listEssays(locale).length,
+    listLectures(locale).length,
+  ];
+  return <HomeShell locale={locale} recentLectures={recentLectures} counts={counts} />;
 }

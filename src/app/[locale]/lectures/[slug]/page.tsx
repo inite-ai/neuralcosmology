@@ -100,7 +100,7 @@ export default async function LecturePage({
     : undefined;
 
   return (
-    <main className="relative min-h-screen text-white pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
+    <main className="relative min-h-screen text-fg pt-28 sm:pt-32 pb-20 px-4 sm:px-6">
       <JsonLd
         id="lecture-schema"
         data={videoObjectSchema({
@@ -127,12 +127,12 @@ export default async function LecturePage({
       <div className="max-w-3xl mx-auto">
         <Link
           href={`/${locale}/lectures`}
-          className="inline-block text-sm text-white/60 hover:text-white mb-8 transition-colors"
+          className="inline-block text-sm text-muted hover:text-fg mb-8 transition-colors"
         >
           ← {dict.lecturesPage.backToIndex}
         </Link>
 
-        <div className="flex items-center gap-3 text-xs text-white/50 mb-4">
+        <div className="flex items-center gap-3 text-xs text-muted mb-4">
           <span>{formatDate(lecture.date, locale)}</span>
           {lecture.durationMinutes && (
             <>
@@ -143,24 +143,24 @@ export default async function LecturePage({
             </>
           )}
           {lecture.locale !== locale && (
-            <span className="uppercase tracking-wider text-amber-300/70">
+            <span className="uppercase tracking-wider text-muted">
               shown in {lecture.locale}
             </span>
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight mb-4">
+        <h1 className="text-3xl sm:text-5xl font-display font-normal tracking-tight leading-tight mb-4">
           {lecture.title}
         </h1>
 
         {lecture.description && (
-          <p className="text-lg text-white/75 leading-relaxed mb-8">
+          <p className="text-lg text-fg-secondary leading-relaxed mb-8">
             {lecture.description}
           </p>
         )}
 
         {embed && (
-          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 bg-black mb-10">
+          <div className="relative aspect-video w-full overflow-hidden border border-line bg-bg-sunk mb-10">
             <iframe
               src={embed}
               title={lecture.title}
@@ -172,7 +172,7 @@ export default async function LecturePage({
         )}
 
         {lecture.content.trim() && (
-          <article className="prose-essay text-white/85 leading-relaxed space-y-5">
+          <article className="prose-essay text-fg leading-relaxed space-y-5">
             <MDXRemote source={lecture.content} options={mdxOptions} />
           </article>
         )}
@@ -181,7 +181,7 @@ export default async function LecturePage({
           <div className="mt-8">
             <a
               href={`/${locale}/lectures/${slug}/transcript.md`}
-              className="inline-flex items-center rounded-md border border-white/20 hover:border-white/40 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors"
+              className="inline-flex items-center rounded-sm border border-fg/40 hover:border-fg/40 text-fg hover:text-fg px-5 py-2.5 text-sm font-medium transition-colors"
             >
               {dict.lecturesPage.transcript} (markdown)
             </a>
@@ -193,7 +193,7 @@ export default async function LecturePage({
             {lecture.tags.map((t) => (
               <span
                 key={t}
-                className="px-2.5 py-1 rounded-full text-[11px] uppercase tracking-wider border border-white/10 bg-white/5 text-white/60"
+                className="px-2.5 py-1 rounded-full text-[11px] uppercase tracking-wider border border-line bg-bg-raised text-muted"
               >
                 {t}
               </span>

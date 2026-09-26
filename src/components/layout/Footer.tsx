@@ -32,7 +32,7 @@ const SISTER: Record<SupportedLocale, { eyebrow: string; body: string; cta: stri
 export default function Footer({ locale }: { locale: SupportedLocale }) {
   const dict = getDict(locale);
   const pathname = usePathname();
-  if (pathname && /^\/[a-z]{2}\/read(\/|$)/.test(pathname)) return null;
+  if (pathname && /^\/[a-z]{2}\/read\/[^/]+\/[^/]+/.test(pathname)) return null;
   const sister = SISTER[locale];
   const cols = [
     {
@@ -65,72 +65,78 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
   ];
 
   return (
-    <footer id="footer" className="w-full border-t border-white/10 bg-[#0a1026]/80 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-[1.5fr_repeat(3,1fr)]">
-        <div>
-          <div className="font-semibold tracking-tight text-white/90">
-            neural<span className="text-indigo-300">cosmology</span>
-          </div>
-          <p className="mt-2 text-sm text-white/60 max-w-xs leading-relaxed">
-            {dict.footer.tagline}
-          </p>
-        </div>
-
-        {cols.map((col) => (
-          <div key={col.title}>
-            <div className="text-xs uppercase tracking-widest text-white/50 mb-3">
-              {col.title}
+    <footer id="footer" className="bg-bg-sunk rule-t">
+      <div className="px-5 md:px-10">
+        <div className="rails mx-auto max-w-sheet">
+          <div className="grid md:grid-cols-[1.3fr_2fr]">
+            <div className="py-14 md:px-10 md:py-20">
+              <Link
+                href={`/${locale}`}
+                className="block font-display text-[clamp(3.25rem,9vw,6.5rem)] leading-[0.92] tracking-[-0.02em] text-fg hover:text-primary transition-colors"
+              >
+                Neural
+                <br />
+                <em className="italic text-fg-secondary">Cosmology</em>
+              </Link>
+              <p className="mt-6 max-w-xs text-fg-secondary">{dict.footer.tagline}</p>
             </div>
-            <ul className="space-y-2">
-              {col.links.map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="text-sm text-white/75 hover:text-white transition-colors"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
+            <div className="grid grid-cols-2 rule-t sm:grid-cols-3 md:border-t-0">
+              {cols.map((col, i) => (
+                <div
+                  key={col.title}
+                  className={`py-8 md:rule-l md:px-8 md:py-20 ${i === 2 ? "col-span-2 rule-t sm:col-span-1 sm:border-t-0" : ""}`}
+                >
+                  <p className="label text-muted mb-4">{col.title}</p>
+                  <ul>
+                    {col.links.map((l) => {
+                      const external = /^(https?:|mailto:)/.test(l.href);
+                      const cls = "inline-flex min-h-10 items-center text-fg-secondary hover:text-fg transition-colors";
+                      return (
+                        <li key={l.href}>
+                          {external ? (
+                            <a href={l.href} className={cls} rel="noopener noreferrer" target={l.href.startsWith("http") ? "_blank" : undefined}>
+                              {l.label}
+                            </a>
+                          ) : (
+                            <Link href={l.href} className={cls}>
+                              {l.label}
+                            </Link>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      {/*
-        Sister-site cross-promo. Site-wide one-line link to the author's
-        business brand (mikefluff.com) — the highest-leverage cross-domain
-        signal short of editorial body links. Real <a> tag with descriptive
-        anchor text so it indexes as a topical link.
-      */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 border-t border-white/5">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div className="min-w-0">
-            <div className="text-[10px] uppercase tracking-[0.2em] text-indigo-300/70 mb-1">
-              {sister.eyebrow}
             </div>
-            <p className="text-sm text-white/70 leading-relaxed max-w-2xl">
-              {sister.body}
-            </p>
           </div>
-          <a
-            href="https://www.mikefluff.com"
-            rel="me noopener"
-            className="inline-flex shrink-0 items-center rounded-md border border-white/20 hover:border-white/40 text-white/85 hover:text-white px-4 py-2 text-sm font-medium transition-colors"
-          >
-            {sister.cta} →
-          </a>
-        </div>
-      </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-t border-white/5 text-xs text-white/50">
-        <div>
-          © {new Date().getFullYear()} Neuralcosmology. {dict.footer.copyright}
-        </div>
-        <div>
-          <a href="mailto:info@neuralcosmology.com" className="hover:text-white transition-colors">
-            info@neuralcosmology.com
-          </a>
+          {/*
+            Sister-site cross-promo: сквозная тематическая ссылка на бизнес-бренд
+            автора (mikefluff.com) с rel="me" — сигнал сущности для поисковиков.
+          */}
+          <div className="flex flex-col gap-4 rule-t py-8 md:flex-row md:items-center md:justify-between md:px-10">
+            <div className="min-w-0">
+              <p className="label text-primary mb-2">{sister.eyebrow}</p>
+              <p className="max-w-2xl text-sm leading-relaxed text-fg-secondary">{sister.body}</p>
+            </div>
+            <a
+              href="https://www.mikefluff.com"
+              rel="me noopener"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-sm hairline border-fg/70 px-5 label text-fg hover:bg-fg hover:text-bg transition-colors"
+            >
+              {sister.cta} →
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-2 rule-t py-6 label text-muted sm:flex-row sm:items-center sm:justify-between md:px-10">
+            <span>
+              © {new Date().getFullYear()} Neural Cosmology. {dict.footer.copyright}
+            </span>
+            <a href="mailto:info@neuralcosmology.com" className="hover:text-fg transition-colors normal-case tracking-normal">
+              info@neuralcosmology.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>
