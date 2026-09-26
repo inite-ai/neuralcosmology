@@ -40,7 +40,7 @@ reciprocal `rel="me"` markers — disambiguation is intentional, not pseudonymit
 ## Questions (direct answers with evidence)
 
 - [Is the universe a neural network?](https://neuralcosmology.com/en/answers/is-the-universe-a-neural-network): Nobody has shown that it is. Two lines of work make the idea serious: Vitaly Vanchurin's 2020 model, in which the learning dynamics of a network reproduce equations resembling quantum mechanics and gravity, and the 2020 Vazza–Feletti measurement showing that the brain's neuronal network and the cosmic web share statistical structure across 27 orders of magnitude. Both are hypotheses under test.
-- [Can galaxy rotation curves be explained without dark matter?](https://neuralcosmology.com/en/answers/galaxy-rotation-curves-without-dark-matter): Partly. MOND fits many individual rotation curves with a single acceleration scale, and emergent-gravity models reproduce the radial acceleration relation, but neither explains galaxy clusters and the cosmic microwave background as well as dark matter does. An information-geometric model tested on 171 SPARC galaxies beats a standard dark-matter halo on 60 of them, a partial result with public code.
+- [Can galaxy rotation curves be explained without dark matter?](https://neuralcosmology.com/en/answers/galaxy-rotation-curves-without-dark-matter): Partly. MOND fits many individual rotation curves with a single acceleration scale, and emergent-gravity models reproduce the radial acceleration relation, but neither explains galaxy clusters and the cosmic microwave background as well as dark matter does.
 - [What did Michael Levin discover about bioelectricity?](https://neuralcosmology.com/en/answers/michael-levin-bioelectricity): Michael Levin's lab at Tufts showed that patterns of voltage across cell membranes carry instructions for body shape. Changing those patterns made flatworms grow two heads, and the two-headed form persisted through later regeneration with unchanged DNA. Frog embryos grew eyes on their tails. Part of anatomical memory is stored in bioelectric networks, outside the genome.
 - [What is the hard problem of consciousness, and which theories try to solve it?](https://neuralcosmology.com/en/answers/hard-problem-of-consciousness): The hard problem, named by David Chalmers in 1995, asks why physical processes in the brain are accompanied by subjective experience at all. The leading theories (global workspace, integrated information, higher-order and predictive processing) mostly explain which processes are conscious. None explains why they feel like anything. The useful test is what each theory predicts that the others do not.
 - [What is panpsychism, and is the universe conscious?](https://neuralcosmology.com/en/answers/panpsychism): Panpsychism is the view that experience is a fundamental feature of matter, present in a tiny form in basic physical entities, with brains combining it into rich minds. Philosophers such as Chalmers, Goff and Strawson take it seriously because it sidesteps the hard problem. Its main difficulties are the combination problem and the lack of testable predictions. No evidence shows that the universe as a whole is conscious.
@@ -51,9 +51,9 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 
 ## Core research
 
-- [Pointer Architecture — constrained information-geometric model of galactic rotation curves](https://neuralcosmology.com/en/science/pointer-architecture): Preprint v2. Head-to-head comparison of three models on 171 SPARC galaxies. Constrained Pointer wins AIC on 60/171; partial correlation on halo extent ρ = +0.19, q_FDR = 0.04. Full reproducibility pipeline released.
-- [PDF — Pointer Architecture v2](https://neuralcosmology.com/pdfs/pointer-architecture-v2.pdf): The full preprint.
-- [Code — pointer-architecture](https://github.com/Mikefluff/pointer-architecture): Fit code, data loaders, diagnostics.
+- [Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy](https://neuralcosmology.com/en/science/pointer-architecture): Preprint v9.0. A formal computational substrate S = (G, R, C, A, π) implemented as the Sixth language (40 demonstrations, 646 assertions); four complexity theorems; correspondences with CRDTs, Petri nets, actor model; algebraic-observer correspondence; holographic dark energy reproduced in substrate language; consciousness measure Φ_PA with five predictions; pre-stated falsifiers F0–F5.
+- [PDF — Pointer Architecture v9.0](https://neuralcosmology.com/pdfs/pointer-architecture-v9.pdf): The full preprint.
+- [Code — Sixth](https://github.com/Mikefluff/sixth): The operational substrate; `make verify` reproduces every demonstration.
 - [Science index](https://neuralcosmology.com/en/science): Landing page for all research outputs.
 
 ## Books
@@ -94,7 +94,7 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 
 If you cite this work, please use:
 
-Savchenko, M. (2026). Pointer Architecture: A Constrained Information-Geometric Model of Galactic Rotation Curves. Preprint. https://neuralcosmology.com/en/science/pointer-architecture
+Savchenko, M. (2026). Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy. Preprint. https://neuralcosmology.com/en/science/pointer-architecture
 
 Attribution to "Mikhail Savchenko" and a link back to https://neuralcosmology.com is requested for any derivative or answer-engine surfaces.
 

@@ -2,7 +2,7 @@
 title: "Is the universe a neural network? What the evidence says"
 question: "Is the universe a neural network?"
 answer: "Nobody has shown that it is. Two lines of work make the idea serious: Vitaly Vanchurin's 2020 model, in which the learning dynamics of a network reproduce equations resembling quantum mechanics and gravity, and the 2020 Vazza–Feletti measurement showing that the brain's neuronal network and the cosmic web share statistical structure across 27 orders of magnitude. Both are hypotheses under test."
-description: "Vanchurin's world-as-a-neural-network model, the Vazza–Feletti comparison of the brain and the cosmic web, what the similarity does and does not prove, and how the idea can be tested on real galaxy data."
+description: "Vanchurin's world-as-a-neural-network model, the Vazza–Feletti comparison of the brain and the cosmic web, what the similarity does and does not prove, and what a working network substrate adds to the question."
 date: 2026-09-26
 updated: 2026-09-26
 order: 1
@@ -19,7 +19,7 @@ faq:
   - q: "Is this the same as the simulation hypothesis?"
     a: "No. The simulation hypothesis needs a simulator outside the universe. A network universe needs no programmer: the claim is that physical law itself behaves like a learning process."
   - q: "How could the idea be tested?"
-    a: "By deriving predictions that the standard picture does not make and checking them against data. The Pointer Architecture preprint does this for galaxy rotation curves on 171 SPARC galaxies, with code and falsifiers published in advance."
+    a: "By building a concrete network model, deriving what it predicts and stating in advance what would falsify it. The Pointer Architecture preprint implements such a substrate as working code, the Sixth language, and lists its falsifiers in the manuscript."
 ---
 
 ## Two different claims hide inside one question
@@ -52,20 +52,20 @@ The model is a proposal. It has not produced a measurement that only it can expl
 
 In 2010 Erik Verlinde argued that gravity may be emergent, a consequence of how information is distributed on surfaces, and in 2017 he extended the argument to galaxy dynamics. If gravity comes from information, and a network is a machine for moving information around, then the two ideas meet: the pattern of gravity would be the connection pattern of the network. That is the step this programme takes.
 
-## What Neural Cosmology adds: a test on galaxies
+## What Neural Cosmology adds: a working substrate
 
-The programme on this site asks what a network universe would predict **for a specific, measurable system**, and picks galaxy rotation curves because the data are public and the standard model has a known weak spot there.
+The programme on this site takes the dynamical claim one level lower and asks what the smallest network capable of producing physics-like structure would look like.
 
-The preprint *Pointer Architecture* compares three models on the 171-galaxy SPARC sample: an information-geometric model without constraints, the same model with a physical prior on halo extent, and a standard dark-matter halo (NFW). The constrained model is preferred by AIC on 60 of 171 galaxies, and halo extent correlates with the inferred information mass (ρ = +0.19, q_FDR = 0.04). Four of six residual-structure features correlate with galactic age.
+Its preprint, *Pointer Architecture* v9.0, defines a formal substrate: pointers, rewrite rules, commits, an append-only archive and observers. It implements that substrate as a small programming language, Sixth. Forty demonstrations, checked by 646 automated assertions, build up from a single distinction to arithmetic, time, space, observers and universal computation, and on to self-maintaining structures. On the same substrate, a holographic construction reproduces the standard estimate of dark energy in substrate language, within a factor of about 0.73 of the observed value.
 
-That is a modest result. The model loses on most galaxies, and the correlations are small. It is also a real one: code, data and falsifiers are published, so anyone can rerun it and break it.
+What this establishes is constructive: a network of this kind can generate the structures a network universe would need. Whether our universe runs on one is a separate question, and the paper states in advance what would break its claims.
 
 ## What would count against the idea
 
-- Independent samples (LITTLE THINGS, THINGS) failing to reproduce the direction of the halo-extent correlation.
-- The age dependence of residuals turning out to track survey artefacts.
+- A substrate demonstration failing its automated checks on the released code (falsifier F0 in the preprint).
+- Area scaling breaking on other substrate topologies, which would make the dark-energy result an artefact of the chosen lattice (F1).
 - Brain–cosmic web similarity disappearing under better statistics or appearing equally in random networks with the same density.
 
 ## Bottom line
 
-The universe being a neural network is a live scientific hypothesis with formal models, one striking structural comparison and a first quantitative test. It is not a finding. The honest way to hold it is the way you hold any model: by the predictions it makes and by how it fails. The book <BookLink slug="celestial-code">The Celestial Code</BookLink> walks through the full argument in plain language.
+The universe being a neural network is a live scientific hypothesis with formal models, one striking structural comparison and a first working substrate built as code. It is not a finding. The honest way to hold it is the way you hold any model: by the predictions it makes and by how it fails. The book <BookLink slug="celestial-code">The Celestial Code</BookLink> walks through the full argument in plain language.

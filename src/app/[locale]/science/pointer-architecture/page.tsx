@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import JsonLd from "@/components/seo/JsonLd";
-import { scholarlyArticleSchema, breadcrumb, datasetSchema, faqSchema } from "@/lib/schema";
+import { scholarlyArticleSchema, breadcrumb, faqSchema } from "@/lib/schema";
 import { faqByLocale } from "@/content/faq";
 
 export function generateStaticParams() {
@@ -46,7 +46,7 @@ export async function generateMetadata({
       ...(paper?.pdfPath ? { citation_pdf_url: `${base}${paper.pdfPath}` } : {}),
       citation_abstract_html_url: `${base}/${locale}/science/pointer-architecture`,
       citation_language: "en",
-      citation_keywords: "galaxy rotation curves; SPARC; dark matter; information geometry",
+      citation_keywords: "discrete substrate; pointer architecture; holographic entropy cone; algebraic observers; consciousness",
     },
   };
 }
@@ -82,23 +82,6 @@ export default async function PointerArchitecturePage({
           companionBookSlug: paper.companionBookSlug,
         })}
       />
-      {paper.dataset && (
-        <JsonLd
-          id="paper-dataset"
-          data={datasetSchema({
-            locale,
-            paperSlug: paper.slug,
-            name: paper.dataset.name,
-            description: paper.dataset.description,
-            distributions: paper.dataset.distributions,
-            license: paper.dataset.license,
-            licenseUrl: paper.dataset.licenseUrl,
-            version: paper.dataset.version,
-            keywords: paper.dataset.keywords,
-            codeUrl: paper.codeUrl,
-          })}
-        />
-      )}
       <JsonLd
         id="paper-breadcrumb"
         data={breadcrumb(locale, [

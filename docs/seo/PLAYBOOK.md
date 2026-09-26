@@ -8,7 +8,7 @@
 - Раздел `/answers`: 7 страниц-ответов × 4 языка (прямой ответ, разбор, FAQ, ссылки на препринт, эссе, книги), Article + FAQPage + speakable, markdown-версии `/raw.md`, llms.txt.
 - Поисковые `<title>` разделов под спрос (`src/content/seo.ts`), H1 не тронуты.
 - IndexNow пингуется после каждого деплоя (Bing, Yandex, Seznam).
-- Ссылки на код препринта ведут в рабочий `github.com/Mikefluff/pointer-architecture`, туда добавлены CITATION.cff, homepage и topics.
+- Препринт на сайте переведён на PA v9.0 (SPARC убран отовсюду: страница препринта, FAQ, эссе, ответы, llms.txt). Код — `github.com/Mikefluff/sixth`, туда добавлены CITATION.cff (с ORCID), homepage и topics.
 
 ## Что нужно сделать тебе (аккаунты)
 
@@ -19,13 +19,13 @@
 4. Bing Webmaster Tools → «Import from Google Search Console» (одна кнопка), либо `BING_VERIFICATION` так же, как Яндекс.
 
 ### 2. Zenodo DOI для препринта (15 минут, самый важный научный сигнал)
-1. zenodo.org → войти через GitHub → Settings → GitHub → включить `Mikefluff/pointer-architecture`.
-2. На GitHub создать релиз `v2.0` в репозитории — Zenodo сам выпустит DOI (CITATION.cff уже там).
+1. zenodo.org → войти через GitHub → Settings → GitHub → включить `Mikefluff/sixth`.
+2. На GitHub создать релиз `v9.0` в `sixth` — Zenodo сам выпустит DOI (CITATION.cff уже там). PDF препринта v9.0 можно загрузить на Zenodo отдельной записью типа Preprint.
 3. Прислать DOI — я пропишу его в `papers.ts`, JSON-LD, llms.txt и на странице препринта.
-4. Опционально: перенести репозиторий в организацию `neuralcosmology` (Settings → Transfer). Старые ссылки GitHub редиректит сам. Организация сейчас пустая, а сайт и rel="me" ссылаются на неё.
+4. Опционально: перенести `sixth` в организацию `neuralcosmology` (Settings → Transfer). Старые ссылки GitHub редиректит сам. Организация сейчас пустая, а rel="me" на сайте ссылается на неё.
 
 ### 3. ORCID + Google Scholar (20 минут)
-- orcid.org → профиль, в Works добавить препринт (после DOI — импорт по DOI), в Websites — neuralcosmology.com и mikefluff.com.
+- ORCID уже есть (0009-0006-2873-9925, добавлен в sameAs сайта): в Works добавить препринт (после DOI — импорт по DOI), в Websites — neuralcosmology.com и mikefluff.com.
 - scholar.google.com → «Мой профиль» → добавить статью вручную. Google Scholar индексирует и страницу `/science/pointer-architecture` (на ней есть метатеги `citation_*` и разметка ScholarlyArticle).
 
 ### 4. Wikidata (главный рычаг узнаваемости в LLM)
@@ -44,9 +44,10 @@ LAST	P856	"https://neuralcosmology.com/en/about"
 LAST	P2037	"Mikefluff"
 LAST	P2002	"mikefluff"
 LAST	P6634	"mikefluff"
+LAST	P496	"0009-0006-2873-9925"
 ```
 
-После — книги (`P31 Q7725634` literary work, `P50` → элемент автора, `P407` язык: Q7737 русский / Q1860 английский, `P136` Q24925 science fiction для романов, `P856` страница книги) и препринт (`P31 Q580922` preprint, `P50`, `P1476` заголовок, `P577` 2026, `P356` DOI после Zenodo). Факты должны совпадать с сайтом слово в слово.
+После — книги (`P31 Q7725634` literary work, `P50` → элемент автора, `P407` язык: Q7737 русский / Q1860 английский, `P136` Q24925 science fiction для романов, `P856` страница книги) и препринт (`P31 Q580922` preprint, `P50`, `P1476` заголовок, `P577` 2026, `P356` DOI после Zenodo). Заголовок препринта: «Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy». Факты должны совпадать с сайтом слово в слово.
 
 ### 5. Книжные витрины
 - **Goodreads**: Author Program → профиль автора, добавить 4 книги со ссылкой «Read online» на `/books/<slug>`.
@@ -59,8 +60,8 @@ LAST	P6634	"mikefluff"
 
 | Площадка | Что | Куда ссылаться |
 |---|---|---|
-| Хабр | «Проверил гипотезу “Вселенная — нейросеть” на 171 галактике: код и провал на 111 из них» | `/ru/answers/galaxy-rotation-curves-without-dark-matter`, GitHub |
-| Hacker News (Show HN) | «Show HN: I fit an information-geometric model to 171 SPARC galaxies (code + falsifiers)» | GitHub + `/en/science/pointer-architecture` |
+| Хабр | «Sixth: язык, на котором 40 демонстраций строят физику из одного различия (646 проверок)» | `/ru/answers/is-the-universe-a-neural-network`, GitHub sixth |
+| Hacker News (Show HN) | «Show HN: Sixth – a Forth-like language where 40 demos build observers and time from one distinction» | GitHub sixth + `/en/science/pointer-architecture` |
 | Essentia Foundation | гостевое эссе про brain–cosmic web (они уже в выдаче по теме) | `/en/answers/is-the-universe-a-neural-network` |
 | IAI / Aeon / Nautilus (питч) | эссе о фальсифицируемости теорий сознания | `/en/answers/hard-problem-of-consciousness` |
 | Medium (публикации Predict, The Startup) | кросспост эссе с canonical на сайт | эссе |

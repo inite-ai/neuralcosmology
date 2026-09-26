@@ -19,10 +19,10 @@ export const readables: ReadableEntry[] = [
       es: "Pointer Architecture — preprint",
     },
     paths: {
-      en: "/pdfs/pointer-architecture-v2.pdf",
-      ru: "/pdfs/pointer-architecture-v2.pdf",
-      pt: "/pdfs/pointer-architecture-v2.pdf",
-      es: "/pdfs/pointer-architecture-v2.pdf",
+      en: "/pdfs/pointer-architecture-v9.pdf",
+      ru: "/pdfs/pointer-architecture-v9.pdf",
+      pt: "/pdfs/pointer-architecture-v9.pdf",
+      es: "/pdfs/pointer-architecture-v9.pdf",
     },
   },
 ];

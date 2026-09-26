@@ -1,8 +1,8 @@
 ---
-title: "Galaxy rotation curves without dark matter: MOND, emergent gravity and an information model on 171 SPARC galaxies"
+title: "Galaxy rotation curves without dark matter: MOND, emergent gravity and what the data say"
 question: "Can galaxy rotation curves be explained without dark matter?"
-answer: "Partly. MOND fits many individual rotation curves with a single acceleration scale, and emergent-gravity models reproduce the radial acceleration relation, but neither explains galaxy clusters and the cosmic microwave background as well as dark matter does. An information-geometric model tested on 171 SPARC galaxies beats a standard dark-matter halo on 60 of them, a partial result with public code."
-description: "Why stars at the edges of galaxies move too fast, how dark matter halos, MOND and emergent gravity explain it, where each fails, and the results of an information-geometric model on the SPARC sample."
+answer: "Partly. MOND fits many individual rotation curves with a single acceleration scale, and emergent-gravity models reproduce the radial acceleration relation, but neither explains galaxy clusters and the cosmic microwave background as well as dark matter does."
+description: "Why stars at the edges of galaxies move too fast, how dark matter halos, MOND and emergent gravity explain it, and where each one fails."
 date: 2026-09-26
 updated: 2026-09-26
 order: 2
@@ -10,7 +10,7 @@ image: "/og/media/plate-galaxy.jpg"
 keywords: [galaxy rotation curves, dark matter alternative, MOND, modified gravity, emergent gravity, SPARC, radial acceleration relation, NFW halo]
 essays: [entropic-gravity, falsifiers-in-research-and-regulated-ai, a-loss-function-for-the-universe]
 books: [celestial-code]
-paper: true
+paper: false
 faq:
   - q: "What is a galaxy rotation curve?"
     a: "A plot of how fast stars and gas orbit a galaxy's centre as a function of distance. If visible matter were all there is, speeds far from the centre should fall off like planets around the Sun. Observed curves stay roughly flat instead."
@@ -50,35 +50,9 @@ MOND's weak points are the reverse of dark matter's: galaxy clusters still need 
 
 Erik Verlinde argued in 2010 that gravity is not fundamental and emerges from how information is stored on surfaces. In 2017 he derived from this an extra gravitational effect on galactic scales that mimics dark matter and reproduces a MOND-like acceleration scale. The model is young, and its tests on real galaxies are mixed.
 
-## A fourth option: information geometry, tested on SPARC
+## Where this programme stands
 
-The preprint *Pointer Architecture* on this site asks what galaxy dynamics would look like if the extra effect came from the information structure of the galaxy, treated as a network, instead of from extra particles.
-
-The test is a head-to-head comparison on 171 SPARC galaxies:
-
-| Model | What it assumes |
-|---|---|
-| NFW halo | Standard dark matter halo from simulations |
-| Unconstrained pointer | Information-geometric term with free extent |
-| Constrained pointer | Same term with a physical prior on halo extent |
-
-The results:
-
-- The constrained pointer model is preferred by AIC on **60 of 171** galaxies. The halo or the unconstrained variant wins on the rest.
-- Halo extent correlates with the inferred information mass: partial **ρ = +0.19, q_FDR = 0.04**.
-- **4 of 6** residual-structure features correlate with galactic age at FDR-controlled significance.
-- The full pipeline (code, data and per-galaxy fit diagnostics) is public.
-
-Dark matter remains the better description for most of the sample. An information-based term still captures real structure in a third of it, and it makes predictions that can fail.
-
-## What would falsify the information model
-
-The predictions were published before any follow-up data:
-
-1. Fit quality should improve systematically with galactic age.
-2. Residual features at large radii should track halo concentration, not stellar mass.
-3. Low-surface-brightness galaxies should show larger gaps between the pointer and NFW models.
-4. Independent samples (LITTLE THINGS, THINGS) should reproduce the sign of the halo-extent correlation. If the sign flips on an age-controlled resample, the model fails.
+The research programme behind this site does not offer its own rotation-curve model. Its preprint, *Pointer Architecture* v9.0, works at the level of a formal computational substrate. Its one cosmological statement is a substrate-language reproduction of the standard holographic estimate of dark energy, which concerns the expansion of the universe and says nothing specific about the dynamics of individual galaxies.
 
 ## Bottom line
 

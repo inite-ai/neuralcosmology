@@ -98,8 +98,8 @@ const SOURCES = [
   "Levin Lab · Tufts",
   "Vanchurin · 2020",
   "Tononi · IIT",
-  "Pointer Architecture · v2",
-  "SPARC · 175 galaxies",
+  "Pointer Architecture · v9.0",
+  "Witten · crossed product",
 ];
 
 export function HomeMarquee({ locale }: { locale: SupportedLocale }) {

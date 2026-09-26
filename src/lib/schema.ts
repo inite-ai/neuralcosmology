@@ -17,6 +17,7 @@ export const AUTHOR_SAME_AS = [
   "https://t.me/neuralcosmology",
   "https://github.com/neuralcosmology",
   "https://github.com/mikefluff",
+  "https://orcid.org/0009-0006-2873-9925",
 ];
 export const SITE_NAME = "Neural Cosmology";
 export const SITE_DESCRIPTION =
@@ -40,8 +41,8 @@ export function personNode() {
     jobTitle: "Independent researcher, writer",
     knowsAbout: [
       "cosmology",
-      "galactic rotation curves",
-      "information geometry",
+      "theory of computation",
+      "quantum gravity",
       "consciousness",
       "neuroscience",
       "theoretical physics",
@@ -283,54 +284,6 @@ export function scholarlyArticleSchema(args: {
     workExample: args.companionBookSlug
       ? { "@id": `${SITE_URL}/${args.locale}/books/${args.companionBookSlug}#book` }
       : undefined,
-  } as const;
-}
-
-export function datasetSchema(args: {
-  locale: SupportedLocale;
-  paperSlug: string;
-  name: string;
-  description: string;
-  distributions: { name: string; url: string; format: string }[];
-  license: string;
-  licenseUrl: string;
-  version: string;
-  keywords: string[];
-  codeUrl?: string;
-}) {
-  const url = localeUrl(args.locale, `/science/${args.paperSlug}`);
-  return {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    "@id": `${url}#dataset`,
-    url,
-    name: args.name,
-    description: args.description,
-    inLanguage: "en",
-    creator: { "@id": `${SITE_URL}/#person` },
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    isAccessibleForFree: true,
-    license: args.licenseUrl,
-    creditText: args.license,
-    version: args.version,
-    keywords: args.keywords,
-    variableMeasured: ["chi-squared", "AIC", "BIC", "halo extent", "composite galactic age", "partial correlation"],
-    isBasedOn: {
-      "@type": "Dataset",
-      name: "SPARC — Spitzer Photometry and Accurate Rotation Curves",
-      url: "http://astroweb.cwru.edu/SPARC/",
-      creator: "Lelli, McGaugh & Schombert (2016)",
-    },
-    codeRepository: args.codeUrl,
-    distribution: args.distributions.map((d) => ({
-      "@type": "DataDownload",
-      name: d.name,
-      contentUrl: d.url,
-      encodingFormat: d.format,
-    })),
-    citation: {
-      "@id": `${url}#article`,
-    },
   } as const;
 }
 

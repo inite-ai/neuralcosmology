@@ -14,11 +14,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     // Демо-PDF книг заменены онлайн-читалкой.
-    return ["celestial-code", "bugs-academy", "era-of-architects"].map((book) => ({
-      source: `/pdfs/${book}-demo-:lang(en|ru|pt).pdf`,
-      destination: `/:lang/read/${book}`,
-      permanent: true,
-    }));
+    return [
+      ...["celestial-code", "bugs-academy", "era-of-architects"].map((book) => ({
+        source: `/pdfs/${book}-demo-:lang(en|ru|pt).pdf`,
+        destination: `/:lang/read/${book}`,
+        permanent: true,
+      })),
+      // Препринт v2 (SPARC) снят, актуальная версия — v9.0.
+      { source: "/pdfs/pointer-architecture-v2.pdf", destination: "/pdfs/pointer-architecture-v9.pdf", permanent: true },
+    ];
   },
   async headers() {
     return [

@@ -2,7 +2,7 @@
 title: "O universo é uma rede neural? O que dizem as evidências"
 question: "O universo é uma rede neural?"
 answer: "Ninguém demonstrou que seja. Dois trabalhos de 2020 tornam a ideia séria: o modelo de Vitaly Vanchurin, em que a dinâmica de aprendizado de uma rede reproduz equações parecidas com a mecânica quântica e a gravidade, e a medição de Vazza e Feletti, que mostrou que a rede neuronal do cérebro e a teia cósmica compartilham estrutura estatística ao longo de 27 ordens de grandeza. Ambos são hipóteses em teste."
-description: "O modelo de Vanchurin do mundo como rede neural, a comparação de Vazza–Feletti entre o cérebro e a teia cósmica, o que a semelhança prova e o que não prova, e como testar a ideia com dados reais de galáxias."
+description: "O modelo de Vanchurin do mundo como rede neural, a comparação de Vazza–Feletti entre o cérebro e a teia cósmica, o que a semelhança prova e o que não prova, e o que um substrato de rede funcional acrescenta à questão."
 date: 2026-09-26
 updated: 2026-09-26
 order: 1
@@ -19,7 +19,7 @@ faq:
   - q: "Isso é o mesmo que a hipótese da simulação?"
     a: "Não. A hipótese da simulação precisa de um simulador fora do universo. Um universo-rede dispensa programador: a afirmação é que a própria lei física se comporta como um processo de aprendizado."
   - q: "Como a ideia pode ser testada?"
-    a: "Derivando previsões que o quadro padrão não faz e confrontando-as com dados. O preprint Pointer Architecture faz isso com as curvas de rotação de 171 galáxias do SPARC, com código e critérios de refutação publicados antecipadamente."
+    a: "Construindo um modelo concreto de rede, derivando o que ele prevê e declarando de antemão o que o refutaria. O preprint Pointer Architecture implementa um substrato desse tipo como código funcional, a linguagem Sixth, e lista seus falseadores no próprio manuscrito."
 ---
 
 ## Duas afirmações escondidas numa pergunta
@@ -52,20 +52,20 @@ O modelo é uma proposta. Ainda não produziu uma medição que só ele consiga 
 
 Em 2010, Erik Verlinde argumentou que a gravidade pode ser emergente, consequência de como a informação se distribui em superfícies, e em 2017 estendeu o argumento à dinâmica de galáxias. Se a gravidade vem da informação, e uma rede é uma máquina de mover informação, as duas ideias se encontram: o padrão da gravidade seria o padrão de conexões da rede. É esse o passo que este programa dá.
 
-## O que a Cosmologia Neural acrescenta: um teste em galáxias
+## O que a Cosmologia Neural acrescenta: um substrato funcional
 
-O programa deste site pergunta o que um universo-rede preveria **para um sistema específico e mensurável**, e escolhe as curvas de rotação de galáxias porque os dados são públicos e o modelo padrão tem ali um ponto fraco conhecido.
+O programa deste site leva a afirmação dinâmica um nível abaixo e pergunta como seria a menor rede capaz de produzir estruturas parecidas com a física.
 
-O preprint *Pointer Architecture* compara três modelos na amostra de 171 galáxias do SPARC: um modelo informacional-geométrico sem restrições, o mesmo modelo com um prior físico sobre a extensão do halo e um halo padrão de matéria escura (NFW). O modelo com restrição é preferido pelo AIC em 60 de 171 galáxias, e a extensão do halo se correlaciona com a massa informacional inferida (ρ = +0,19, q_FDR = 0,04). Quatro de seis características da estrutura dos resíduos se correlacionam com a idade galáctica.
+Seu preprint, *Pointer Architecture* v9.0, define um substrato formal: ponteiros, regras de reescrita, commits, um arquivo só de acréscimo e observadores. Ele implementa esse substrato como uma pequena linguagem de programação, Sixth. Quarenta demonstrações, verificadas por 646 asserções automáticas, sobem de uma única distinção até aritmética, tempo, espaço, observadores e computação universal, e daí a estruturas que se mantêm sozinhas. No mesmo substrato, uma construção holográfica reproduz a estimativa padrão da energia escura na linguagem do substrato, dentro de um fator de cerca de 0,73 do valor observado.
 
-É um resultado modesto. O modelo perde na maioria das galáxias e as correlações são pequenas. Mesmo assim é um resultado real: código, dados e critérios de refutação estão publicados, e qualquer pessoa pode refazer o cálculo e tentar derrubá-lo.
+O que isso estabelece é construtivo: uma rede desse tipo consegue gerar as estruturas de que um universo-rede precisaria. Se o nosso universo roda numa delas é outra questão, e o artigo declara de antemão o que derrubaria suas afirmações.
 
 ## O que contaria contra a ideia
 
-- Amostras independentes (LITTLE THINGS, THINGS) não reproduzirem o sinal da correlação com a extensão do halo.
-- A dependência dos resíduos com a idade se revelar um artefato do levantamento.
+- Uma demonstração do substrato falhar em suas verificações automáticas no código publicado (falseador F0 do preprint).
+- A lei de área quebrar em outras topologias do substrato, o que tornaria o resultado da energia escura um artefato da rede escolhida (F1).
 - A semelhança entre cérebro e teia cósmica desaparecer com estatísticas melhores ou aparecer igualmente em redes aleatórias de mesma densidade.
 
 ## Conclusão
 
-O universo como rede neural é uma hipótese científica viva, com modelos formais, uma comparação estrutural marcante e um primeiro teste quantitativo. Ainda não é uma descoberta. A forma honesta de sustentá-la é a mesma de qualquer modelo: pelas previsões que faz e pela maneira como falha. O livro <BookLink slug="celestial-code">O Código Celestial</BookLink> apresenta o argumento completo em linguagem simples.
+O universo como rede neural é uma hipótese científica viva, com modelos formais, uma comparação estrutural marcante e um primeiro substrato funcional construído em código. Ainda não é uma descoberta. A forma honesta de sustentá-la é a mesma de qualquer modelo: pelas previsões que faz e pela maneira como falha. O livro <BookLink slug="celestial-code">O Código Celestial</BookLink> apresenta o argumento completo em linguagem simples.

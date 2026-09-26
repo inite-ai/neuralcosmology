@@ -355,7 +355,7 @@ const en: Dict = {
     title: "Mikhail Savchenko",
     bio: [
       "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a four-book series around it: two nonfiction investigations and two novels.",
-      "The programme starts from the claim that consciousness is a property of certain computational architectures rather than a separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first such prediction I tested on galactic rotation curves from the SPARC catalogue; the code, data, and reproducibility protocol are released alongside the preprint. That is the first arm of a larger programme, not the whole of it.",
+      "The programme starts from the claim that consciousness is a property of certain computational architectures rather than a separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance. That is the first arm of a larger programme, not the whole of it.",
       "My stance, in short: scientist with questions, not prophet with answers. The programme is built to be falsifiable. The fiction does not contradict the physics. The whole site is an invitation to check the arguments yourself.",
     ],
     agentsHeader: "Press, agents, publishers",
@@ -683,7 +683,7 @@ const ru: Dict = {
     title: "Михаил Савченко",
     bio: [
       "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и четыре книги по этой теме: два документальных расследования и два романа.",
-      "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур, а не отдельная сущность над физикой. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первое такое предсказание я проверил на кривых вращения галактик из каталога SPARC: код, данные и протокол воспроизведения выложены вместе с препринтом. Это только первое плечо большой программы.",
+      "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур, а не отдельная сущность над физикой. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первая формальная часть — препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и заранее записанными фальсификаторами. Это только первое плечо большой программы.",
       "Моя позиция, если коротко: учёный с вопросами, а не пророк с ответами. Программа изначально устроена так, что её можно опровергнуть. Художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
     ],
     agentsHeader: "Пресса, агенты, издатели",
@@ -1010,7 +1010,7 @@ const pt: Dict = {
     title: "Mikhail Savchenko",
     bio: [
       "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Neural Cosmology — um programa de pesquisa sobre a natureza da consciência, e uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
-      "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais, e não um ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira dessas previsões eu testei nas curvas de rotação galáctica do catálogo SPARC; o código, os dados e o protocolo de reprodução estão publicados junto com o preprint. É o primeiro braço de um programa maior, não o programa inteiro.",
+      "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais, e não um ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falseadores escritos de antemão. É o primeiro braço de um programa maior, não o programa inteiro.",
       "Minha posição, em poucas palavras: cientista com perguntas, não profeta com respostas. O programa foi construído para poder ser refutado. A ficção não contradiz a física. Todo o site é um convite a verificar os argumentos por conta própria.",
     ],
     agentsHeader: "Imprensa, agentes, editoras",
@@ -1336,7 +1336,7 @@ const es: Dict = {
     title: "Mikhail Savchenko",
     bio: [
       "Veinte años de ingeniería de IA, con un doctorado actualmente en curso. El resto del tiempo va a Neural Cosmology — un programa de investigación sobre la naturaleza de la consciencia, y una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
-      "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales, y no un ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera de esas predicciones la puse a prueba en las curvas de rotación galáctica del catálogo SPARC; el código, los datos y el protocolo de reproducción están publicados junto al preprint. Es el primer brazo de un programa más amplio, no el programa entero.",
+      "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales, y no un ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es el primer brazo de un programa más amplio, no el programa entero.",
       "Mi postura, en pocas palabras: científico con preguntas, no profeta con respuestas. El programa está construido para poder ser refutado. La ficción no contradice la física. Todo el sitio es una invitación a verificar los argumentos por uno mismo.",
     ],
     agentsHeader: "Prensa, agentes, editoriales",

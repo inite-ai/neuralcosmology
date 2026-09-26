@@ -2,7 +2,7 @@
 title: "¿Es el universo una red neuronal? Lo que dicen las pruebas"
 question: "¿Es el universo una red neuronal?"
 answer: "Nadie lo ha demostrado. Dos trabajos de 2020 hacen seria la idea: el modelo de Vitaly Vanchurin, en el que la dinámica de aprendizaje de una red reproduce ecuaciones parecidas a la mecánica cuántica y la gravedad, y la medición de Vazza y Feletti, que mostró que la red neuronal del cerebro y la red cósmica comparten estructura estadística a lo largo de 27 órdenes de magnitud. Ambos son hipótesis en prueba."
-description: "El modelo de Vanchurin del mundo como red neuronal, la comparación de Vazza–Feletti entre el cerebro y la red cósmica, lo que la semejanza prueba y lo que no, y cómo poner a prueba la idea con datos reales de galaxias."
+description: "El modelo de Vanchurin del mundo como red neuronal, la comparación de Vazza–Feletti entre el cerebro y la red cósmica, lo que la semejanza prueba y lo que no, y qué añade a la cuestión un sustrato de red que funciona."
 date: 2026-09-26
 updated: 2026-09-26
 order: 1
@@ -19,7 +19,7 @@ faq:
   - q: "¿Es lo mismo que la hipótesis de la simulación?"
     a: "No. La hipótesis de la simulación necesita un simulador fuera del universo. Un universo-red prescinde de programador: la afirmación es que la propia ley física se comporta como un proceso de aprendizaje."
   - q: "¿Cómo se puede poner a prueba la idea?"
-    a: "Derivando predicciones que el cuadro estándar no hace y contrastándolas con datos. El preprint Pointer Architecture lo hace con las curvas de rotación de 171 galaxias de SPARC, con código y criterios de refutación publicados de antemano."
+    a: "Construyendo un modelo concreto de red, derivando lo que predice y formulando de antemano qué lo refutaría. El preprint Pointer Architecture implementa un sustrato así como código funcional, el lenguaje Sixth, y enumera sus falsadores en el propio manuscrito."
 ---
 
 ## Dos afirmaciones dentro de una pregunta
@@ -52,20 +52,20 @@ El modelo es una propuesta. Todavía no ha producido una medición que solo él 
 
 En 2010, Erik Verlinde argumentó que la gravedad podría ser emergente, consecuencia de cómo se distribuye la información en superficies, y en 2017 extendió el argumento a la dinámica de galaxias. Si la gravedad viene de la información, y una red es una máquina para mover información, las dos ideas se encuentran: el patrón de la gravedad sería el patrón de conexiones de la red. Ese es el paso que da este programa.
 
-## Lo que aporta la Cosmología Neural: una prueba en galaxias
+## Lo que aporta la Cosmología Neural: un sustrato que funciona
 
-El programa de este sitio pregunta qué predeciría un universo-red **para un sistema concreto y medible**, y elige las curvas de rotación de galaxias porque los datos son públicos y el modelo estándar tiene ahí un punto débil conocido.
+El programa de este sitio lleva la afirmación dinámica un nivel más abajo y pregunta cómo sería la red más pequeña capaz de producir estructuras parecidas a la física.
 
-El preprint *Pointer Architecture* compara tres modelos en la muestra de 171 galaxias de SPARC: un modelo informacional-geométrico sin restricciones, el mismo modelo con un prior físico sobre la extensión del halo y un halo estándar de materia oscura (NFW). El modelo con restricción es preferido por el AIC en 60 de 171 galaxias, y la extensión del halo se correlaciona con la masa informacional inferida (ρ = +0,19, q_FDR = 0,04). Cuatro de seis rasgos de la estructura de los residuos se correlacionan con la edad galáctica.
+Su preprint, *Pointer Architecture* v9.0, define un sustrato formal: punteros, reglas de reescritura, commits, un archivo de solo anexado y observadores. Implementa ese sustrato como un pequeño lenguaje de programación, Sixth. Cuarenta demostraciones, comprobadas por 646 aserciones automáticas, suben desde una única distinción hasta la aritmética, el tiempo, el espacio, los observadores y la computación universal, y de ahí a estructuras que se mantienen solas. En el mismo sustrato, una construcción holográfica reproduce la estimación estándar de la energía oscura en el lenguaje del sustrato, dentro de un factor de alrededor de 0,73 del valor observado.
 
-Es un resultado modesto. El modelo pierde en la mayoría de las galaxias y las correlaciones son pequeñas. Aun así es un resultado real: el código, los datos y los criterios de refutación están publicados, y cualquiera puede repetir el cálculo e intentar romperlo.
+Lo que esto establece es constructivo: una red de este tipo puede generar las estructuras que necesitaría un universo-red. Si nuestro universo funciona sobre una así es otra cuestión, y el artículo formula de antemano qué rompería sus afirmaciones.
 
 ## Qué contaría en contra de la idea
 
-- Que muestras independientes (LITTLE THINGS, THINGS) no reproduzcan el signo de la correlación con la extensión del halo.
-- Que la dependencia de los residuos con la edad resulte ser un artefacto del sondeo.
+- Que una demostración del sustrato falle sus comprobaciones automáticas en el código publicado (falsador F0 del preprint).
+- Que la ley de área se rompa en otras topologías del sustrato, lo que convertiría el resultado de la energía oscura en un artefacto de la retícula elegida (F1).
 - Que la semejanza entre cerebro y red cósmica desaparezca con mejores estadísticas o aparezca igual en redes aleatorias de la misma densidad.
 
 ## Conclusión
 
-El universo como red neuronal es una hipótesis científica viva, con modelos formales, una comparación estructural llamativa y una primera prueba cuantitativa. Todavía no es un descubrimiento. La forma honesta de sostenerla es la de cualquier modelo: por las predicciones que hace y por cómo falla. El libro <BookLink slug="celestial-code">El Código Celestial</BookLink> recorre el argumento completo en lenguaje llano.
+El universo como red neuronal es una hipótesis científica viva, con modelos formales, una comparación estructural llamativa y un primer sustrato funcional construido en código. Todavía no es un descubrimiento. La forma honesta de sostenerla es la de cualquier modelo: por las predicciones que hace y por cómo falla. El libro <BookLink slug="celestial-code">El Código Celestial</BookLink> recorre el argumento completo en lenguaje llano.
