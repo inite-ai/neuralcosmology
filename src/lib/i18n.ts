@@ -399,7 +399,7 @@ const en: Dict = {
       lead1:
         "Neural Cosmology is an attempt to bring five anomalies of the standard picture of the world into one model.",
       lead2:
-        "Galaxy rotation, the matter–antimatter asymmetry, the measurement problem, consciousness, cellular bioelectricity: apart, five mysteries; together, one picture.",
+        "Galaxy rotation, the matter–antimatter asymmetry, the measurement problem, consciousness and cellular bioelectricity are studied by five different sciences, and each explains its own puzzle in its own way. The programme checks whether all five grow out of one computational structure.",
       leadMechanism:
         "If the universe works as a learning network, the five anomalies turn out to be expressions of one computational structure, from the cosmic web to cellular bioelectricity. Consciousness then becomes a measurable quantity that depends on how connections are arranged, and the model's predictions can be tested by experiment.",
       lead3:
@@ -719,7 +719,7 @@ const ru: Dict = {
       lead1:
         "Нейронная космология сводит пять аномалий стандартной картины мира в единую модель.",
       lead2:
-        "Вращение галактик, асимметрия материи и антиматерии, проблема измерения, сознание, биоэлектричество клеток: по отдельности это пять загадок, вместе — одна картина.",
+        "Вращением галактик, асимметрией материи и антиматерии, проблемой измерения, сознанием и биоэлектричеством клеток занимаются пять разных наук, и каждая объясняет свою загадку по-своему. Программа проверяет, не вырастают ли все пять из одной вычислительной структуры.",
       leadMechanism:
         "Если Вселенная работает как обучающаяся сеть, пять аномалий оказываются проявлениями одной вычислительной структуры, от космической паутины до биоэлектричества клеток. Сознание в этой картине — измеримая величина, которая зависит от того, как устроены связи, а предсказания модели можно проверить экспериментом.",
       lead3:
@@ -1038,7 +1038,7 @@ const pt: Dict = {
       lead1:
         "A Cosmologia Neural é uma tentativa de reunir cinco anomalias da imagem padrão do mundo num único modelo.",
       lead2:
-        "Rotação das galáxias, assimetria entre matéria e antimatéria, problema da medição, consciência, bioeletricidade celular: separados, são cinco enigmas; juntos, uma só imagem.",
+        "A rotação das galáxias, a assimetria entre matéria e antimatéria, o problema da medição, a consciência e a bioeletricidade celular são estudados por cinco ciências diferentes, e cada uma explica o seu enigma à sua maneira. O programa verifica se os cinco nascem de uma mesma estrutura computacional.",
       leadMechanism:
         "Se o universo funciona como uma rede em aprendizado, as cinco anomalias passam a ser manifestações de uma única estrutura computacional, da teia cósmica à bioeletricidade celular. A consciência vira então uma grandeza mensurável, que depende de como as conexões estão dispostas, e as previsões do modelo podem ser testadas em experimentos.",
       lead3:
@@ -1356,7 +1356,7 @@ const es: Dict = {
       lead1:
         "La Cosmología Neural es un intento de reunir cinco anomalías de la imagen estándar del mundo en un solo modelo.",
       lead2:
-        "La rotación de las galaxias, la asimetría entre materia y antimateria, el problema de la medición, la consciencia, la bioelectricidad celular: por separado son cinco enigmas; juntos, una sola imagen.",
+        "De la rotación de las galaxias, la asimetría entre materia y antimateria, el problema de la medición, la consciencia y la bioelectricidad celular se ocupan cinco ciencias distintas, y cada una explica su enigma a su manera. El programa comprueba si los cinco nacen de una misma estructura computacional.",
       leadMechanism:
         "Si el universo funciona como una red que aprende, las cinco anomalías resultan ser manifestaciones de una sola estructura computacional, desde la red cósmica hasta la bioelectricidad celular. La consciencia pasa a ser una magnitud medible, que depende de cómo están dispuestas las conexiones, y las predicciones del modelo pueden comprobarse con experimentos.",
       lead3:
