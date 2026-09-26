@@ -13,7 +13,9 @@ export const PRICES: Record<"book" | "library", Record<Currency, number>> = {
   library: prices.library,
 };
 
-export const isCurrency = (v: unknown): v is Currency => CURRENCIES.includes(v as Currency);
+// Валюты, в которых реально можно заплатить картой (см. prices.json → active).
+export const ACTIVE_CURRENCIES = CURRENCIES.filter((c) => (prices.active as string[]).includes(c));
+export const isCurrency = (v: unknown): v is Currency => ACTIVE_CURRENCIES.includes(v as Currency);
 
 export function priceCodeFor(item: string, currency: Currency = "USD"): string {
   const cur = currency.toLowerCase();
@@ -25,6 +27,11 @@ export const kindOf = (item: string): "book" | "library" => (item === LIBRARY_IT
 // Валюта по языкам браузера: русский → рубли, бразильский португальский → реалы,
 // аргентинский испанский → песо, остальные → доллары.
 export function currencyFromLanguages(langs: readonly string[]): Currency {
+  const c = preferredCurrency(langs);
+  return ACTIVE_CURRENCIES.includes(c) ? c : "USD";
+}
+
+function preferredCurrency(langs: readonly string[]): Currency {
   for (const raw of langs) {
     const l = raw.toLowerCase().trim();
     if (/^ru\b/.test(l)) return "RUB";

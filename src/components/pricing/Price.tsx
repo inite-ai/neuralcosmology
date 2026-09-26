@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import {
-  CURRENCIES,
+  ACTIVE_CURRENCIES,
   CURRENCY_COOKIE,
   PRICES,
   currencyFromLanguages,
@@ -42,13 +42,14 @@ export function Price({ item }: { item: "book" | "library" }) {
 
 export function CurrencyPicker({ className }: { className?: string }) {
   const cur = useCurrency();
+  if (ACTIVE_CURRENCIES.length < 2) return null;
   const set = (c: Currency) => {
     document.cookie = `${CURRENCY_COOKIE}=${c}; path=/; max-age=31536000; samesite=lax`;
     window.dispatchEvent(new Event(EVENT));
   };
   return (
     <span className={className}>
-      {CURRENCIES.map((c, i) => (
+      {ACTIVE_CURRENCIES.map((c, i) => (
         <span key={c}>
           {i > 0 && <span className="text-line"> · </span>}
           <button
