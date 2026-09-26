@@ -1,0 +1,63 @@
+---
+title: "Integrated information theory (IIT) explained: Φ, predictions and criticism"
+question: "What is integrated information theory?"
+answer: "Integrated information theory (IIT), proposed by Giulio Tononi in 2004, says that consciousness is integrated information: how much a system as a whole constrains its own past and future beyond what its parts do, measured by a quantity called Φ. It predicts that consciousness depends on the causal structure of the posterior cortex. It is influential, hard to compute and heavily debated."
+description: "IIT in plain language: the axioms, what Φ measures, the posterior hot zone, the perturbational complexity index used in clinics, the adversarial tests against global workspace theory, and the main criticisms."
+date: 2026-09-26
+updated: 2026-09-26
+order: 10
+image: "/og/media/neurons.jpg"
+keywords: [integrated information theory, IIT, phi consciousness, Tononi, IIT 4.0, perturbational complexity index, theory of consciousness]
+essays: [whisper-of-stones, topology-of-mind, attention-as-load]
+books: [celestial-code, conscious-selection]
+paper: true
+faq:
+  - q: "What does Φ (phi) measure?"
+    a: "Φ measures how much a system's cause–effect structure is irreducible: how much would be lost if you cut the system into independent parts. A system with Φ = 0 is just a collection of parts; a system with high Φ acts as an integrated whole."
+  - q: "Is IIT used in medicine?"
+    a: "An offshoot is. The perturbational complexity index (PCI), developed by Marcello Massimini's group, stimulates the cortex with a magnetic pulse and measures how complex the EEG response is. It separates wakefulness, sleep, anaesthesia and disorders of consciousness and is being used to assess unresponsive patients."
+  - q: "Why is IIT controversial?"
+    a: "Φ cannot be computed for real brains, some simple lattice-like systems would have enormous Φ, and the theory implies consciousness in many systems people find implausible. In 2023 over a hundred researchers signed a letter calling it pseudoscience, which many others rejected."
+  - q: "Can AI be conscious according to IIT?"
+    a: "IIT ties consciousness to physical causal structure, not to behaviour or software. On standard digital hardware, IIT predicts very low Φ regardless of how intelligent the program seems."
+---
+
+## The core idea
+
+Most theories of consciousness start from the brain and ask which activity is conscious. Giulio Tononi started from experience itself. Every experience, he argued, is **integrated** (you see a red ball, not a separate red and a separate round) and **informative** (it is one specific experience out of a vast number possible). A physical system can support consciousness only if it has the same properties.
+
+From this, IIT (*BMC Neuroscience*, 2004; latest version IIT 4.0, Albantakis et al., *PLOS Computational Biology*, 2023) defines consciousness as integrated information and measures it with **Φ**.
+
+## What Φ measures
+
+Take a system of interacting parts. Ask how much its current state constrains its past and future states as a whole, and compare that with what you would get if you cut it into independent pieces along the weakest seam. The difference is Φ.
+
+- A pile of sand has almost no Φ: cutting it changes nothing.
+- A feed-forward circuit, where signals flow one way, has zero Φ however complex it is.
+- A densely recurrent network, where parts constantly influence each other, can have high Φ.
+
+IIT also says which part of a system is conscious: the subset with maximal Φ, called the main complex.
+
+## Predictions
+
+- **Posterior cortex.** IIT predicts that the core of experience lies in densely interconnected posterior regions of the cortex, a "posterior hot zone", more than in the frontal areas that report and plan.
+- **Loss of consciousness.** In deep sleep and anaesthesia, integration should break down even if activity continues. The perturbational complexity index (Casali et al., *Science Translational Medicine*, 2013) tests this: a magnetic pulse to the cortex produces a complex, widespread echo in waking and dreaming, and a simple local one in dreamless sleep and anaesthesia.
+- **Machines.** Because Φ depends on physical causal structure, a conventional computer running any program has very low Φ.
+
+## The tests against global workspace theory
+
+A consortium of labs (Cogitate) designed preregistered experiments in which IIT and global neuronal workspace theory predict different outcomes. The results, published in *Nature* in 2025, supported some predictions of each and contradicted others: the sustained synchronisation within posterior cortex that IIT predicted did not appear. The exercise changed the field more than the verdict did: theories of consciousness now compete on predictions that can fail.
+
+## Criticism
+
+- **Computability.** Exact Φ requires checking every way of cutting a system, which is impossible for a brain.
+- **Counterintuitive cases.** Scott Aaronson showed in 2014 that simple grid-like arrangements of logic gates can have Φ far higher than a human brain, which many take as a reductio.
+- **Testability.** In 2023 more than a hundred researchers called IIT pseudoscience in an open letter; others replied that it makes more testable predictions than most rivals. The disagreement is still live.
+
+## Alternatives to Φ
+
+Several groups propose other integration measures that are cheaper to compute. The *Pointer Architecture* preprint on this site defines a substrate-side measure, **Φ_PA**, which is non-zero only for an observer that reads its own state back, with non-trivial scope and lifespan. It predicts, for example, zero for a single transformer forward pass and a positive value when the model reuses its own cache. The predictions are so far checked on toy encodings. Details are on the [preprint page](/en/science/pointer-architecture).
+
+## Bottom line
+
+IIT is the most mathematically developed theory of consciousness. It explains why integration matters and has produced a useful clinical tool. Its central quantity cannot be computed for real brains, and some of its implications strike many researchers as absurd. It is a serious theory that is still under active test.
