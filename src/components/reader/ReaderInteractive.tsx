@@ -19,7 +19,9 @@ type Comment = {
   quote: string | null; body: string; status: string; pinned: boolean; created_at: string;
   mine: boolean; likes: number; liked: boolean;
 };
-type Sel = { anchor: string; quote: string; start: number; end: number; rect: DOMRect };
+type Part = { anchor: string; quote: string; start: number; end: number };
+// anchor/start/end — первый абзац выделения; parts — все абзацы, которых оно касается.
+type Sel = Part & { parts: Part[]; rect: DOMRect; endRect: DOMRect };
 type Tab = "discuss" | "notes" | "ai";
 type ChatMsg = { role: "user" | "assistant"; content: string };
 
@@ -74,9 +76,6 @@ const COLORS = ["accent", "yellow", "green", "rose"] as const;
 
 // ---------- DOM helpers ----------
 
-const paraOf = (node: Node | null): HTMLElement | null =>
-  (node instanceof Element ? node : node?.parentElement)?.closest<HTMLElement>(".reader-prose p[data-a]") ?? null;
-
 function offsetIn(p: HTMLElement, node: Node, off: number): number {
   const r = document.createRange();
   r.selectNodeContents(p);
@@ -102,6 +101,33 @@ function rangeFor(p: HTMLElement, start: number, end: number): Range | null {
     pos += len;
   }
   return null;
+}
+
+// Текст абзаца без кнопки на полях (.nc-margin дописывается в конец p).
+const textOf = (p: HTMLElement) =>
+  [...p.childNodes].filter((n) => !(n instanceof Element && n.classList.contains("nc-margin"))).map((n) => n.textContent ?? "").join("");
+
+// Выделение → абзацы, которых оно касается. Тройной клик и протяжка через
+// несколько абзацев дают диапазон, чей конец лежит в следующем абзаце
+// (или вне p вовсе), поэтому абзацы ищем пересечением, а не по контейнерам.
+function readSelection(): Sel | null {
+  const s = window.getSelection();
+  if (!s || s.isCollapsed || !s.rangeCount) return null;
+  const r = s.getRangeAt(0);
+  const ps = [...document.querySelectorAll<HTMLElement>(".reader-prose p[data-a]")].filter((p) => r.intersectsNode(p));
+  const parts: Part[] = [];
+  ps.forEach((p) => {
+    const text = textOf(p);
+    const start = p.contains(r.startContainer) ? Math.min(offsetIn(p, r.startContainer, r.startOffset), text.length) : 0;
+    const end = p.contains(r.endContainer) ? Math.min(offsetIn(p, r.endContainer, r.endOffset), text.length) : text.length;
+    const quote = text.slice(start, end).trim();
+    if (end > start && quote) parts.push({ anchor: p.dataset.a!, quote, start, end });
+  });
+  const quote = parts.map((x) => x.quote).join("\n\n");
+  if (!parts.length || quote.length < 2) return null;
+  const rects = [...r.getClientRects()].filter((x) => x.width > 0 && x.height > 0);
+  const whole = r.getBoundingClientRect();
+  return { ...parts[0], quote: quote.slice(0, 2000), parts, rect: rects[0] ?? whole, endRect: rects[rects.length - 1] ?? whole };
 }
 
 const para = (anchor: string) => document.querySelector<HTMLElement>(`.reader-prose p[data-a="${CSS.escape(anchor)}"]`);
@@ -212,31 +238,38 @@ export default function ReaderInteractive({
   }, [mine, counts, t.discuss]);
 
   // --- selection toolbar ---
+  // Панель следует за выделением через selectionchange: так её видят и тройной
+  // клик, и выделение с клавиатуры, и ручки выделения на телефоне (их протяжка
+  // не порождает touchend). Пока мышь зажата, панель не мешает тянуть.
   useEffect(() => {
-    const onUp = () =>
-      setTimeout(() => {
-        const s = window.getSelection();
-        if (!s || s.isCollapsed || !s.rangeCount) return setSel(null);
-        const r = s.getRangeAt(0);
-        const p = paraOf(r.startContainer);
-        if (!p || paraOf(r.endContainer) !== p) return setSel(null);
-        const quote = r.toString().trim();
-        if (quote.length < 2) return setSel(null);
-        setSel({
-          anchor: p.dataset.a!,
-          quote: quote.slice(0, 2000),
-          start: offsetIn(p, r.startContainer, r.startOffset),
-          end: offsetIn(p, r.endContainer, r.endOffset),
-          rect: r.getBoundingClientRect(),
-        });
-      }, 10);
+    let down = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const update = (delay: number) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (!down) setSel(readSelection());
+      }, delay);
+    };
+    const onDown = (e: MouseEvent) => {
+      if ((e.target as Element | null)?.closest?.('[role="toolbar"]')) return;
+      down = true;
+    };
+    const onUp = () => {
+      down = false;
+      update(10);
+    };
+    const onChange = () => update(250);
+    // При прокрутке выделение остаётся на месте в тексте — панель едет за ним.
+    const onScroll = () => setSel((prev) => (prev ? readSelection() : prev));
+    document.addEventListener("mousedown", onDown);
     document.addEventListener("mouseup", onUp);
-    document.addEventListener("touchend", onUp);
-    const onScroll = () => setSel(null);
+    document.addEventListener("selectionchange", onChange);
     addEventListener("scroll", onScroll, { passive: true });
     return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", onDown);
       document.removeEventListener("mouseup", onUp);
-      document.removeEventListener("touchend", onUp);
+      document.removeEventListener("selectionchange", onChange);
       removeEventListener("scroll", onScroll);
     };
   }, []);
@@ -275,17 +308,23 @@ export default function ReaderInteractive({
   const annotate = async (kind: Annotation["kind"], extra: Partial<{ color: string; note: string }> = {}) => {
     if (!sel) return;
     if (!signedIn) return (location.href = loginHref);
-    const r = await fetch("/api/reader/annotations", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ book, lang, chapter, anchor: sel.anchor, kind, quote: sel.quote, start: sel.start, end: sel.end, ...extra }),
-    });
-    if (r.ok) {
-      const a = await r.json();
-      setAnnotations((prev) => [...prev, a]);
+    // Цветное выделение ложится на каждый затронутый абзац; заметка и закладка
+    // крепятся к первому абзацу и хранят всю цитату.
+    const items = kind === "highlight" ? sel.parts : [{ anchor: sel.anchor, quote: sel.quote, start: sel.start, end: sel.end }];
+    const saved: Annotation[] = [];
+    for (const it of items) {
+      const r = await fetch("/api/reader/annotations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ book, lang, chapter, ...it, kind, ...extra }),
+      });
+      if (r.ok) saved.push(await r.json());
+    }
+    if (saved.length) {
+      setAnnotations((prev) => [...prev, ...saved]);
       window.getSelection()?.removeAllRanges();
       setSel(null);
-      if (kind === "note") setPanel({ tab: "notes", anchor: a.anchor });
+      if (kind === "note") setPanel({ tab: "notes", anchor: saved[0].anchor });
     }
   };
 
@@ -770,7 +809,12 @@ function SelectionToolbar({
   onDiscuss: () => void; onExplain: () => void; onCopied: () => void;
 }) {
   const mobile = typeof window !== "undefined" && innerWidth < 768;
-  const above = sel.rect.top > 90;
+  // Над первой строкой, если она видна; иначе под последней. Длинное выделение
+  // может уходить за оба края экрана — тогда панель прижимается к видимой зоне.
+  const above = sel.rect.top > 90 && sel.rect.top < innerHeight;
+  const anchorRect = above ? sel.rect : sel.endRect;
+  const top = above ? sel.rect.top - 60 : Math.min(Math.max(sel.endRect.bottom + 12, 70), innerHeight - 70);
+  const pinned = !above && top !== sel.endRect.bottom + 12;
   const text = `«${sel.quote.length > 240 ? `${sel.quote.slice(0, 237)}…` : sel.quote}» — ${bookTitle}`;
   const card = `/api/quote-card?${new URLSearchParams({ q: sel.quote.slice(0, 280), b: bookTitle })}`;
   const cell =
@@ -788,8 +832,8 @@ function SelectionToolbar({
         mobile
           ? undefined
           : {
-              left: Math.min(Math.max(sel.rect.left + sel.rect.width / 2, 260), innerWidth - 260),
-              top: above ? sel.rect.top - 60 : sel.rect.bottom + 12,
+              left: Math.min(Math.max(anchorRect.left + anchorRect.width / 2, 260), innerWidth - 260),
+              top,
             }
       }
     >
@@ -854,7 +898,7 @@ function SelectionToolbar({
           </>
         )}
       </div>
-      {!mobile && (
+      {!mobile && !pinned && (
         <span
           aria-hidden
           className={cn(
