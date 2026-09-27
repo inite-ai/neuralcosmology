@@ -1,10 +1,13 @@
 import "server-only";
 import { cookies } from "next/headers";
 import { SignJWT, jwtVerify, createRemoteJWKSet, base64url } from "jose";
+import { db, dbConfigured } from "@/lib/db";
 
 // Вход через INITE Auth (auth-api.inite.ai): authorization code + PKCE на
 // сервере, id_token проверяется по JWKS, дальше живём на своей подписанной
 // httpOnly-сессии. Токены IdP в браузер не попадают и нигде не хранятся.
+// Выход в INITE доходит сюда back-channel-уведомлением (/api/auth/backchannel-logout):
+// момент выхода пишется в auth_logouts, и сессии, выданные раньше, больше не принимаются.
 
 export interface Session {
   sub: string;
@@ -202,6 +205,7 @@ export async function getSession(): Promise<Session | null> {
   try {
     const { payload } = await jwtVerify(raw, secret());
     if (!payload.sub) return null;
+    if (await loggedOutSince(payload.sub, payload.iat ?? 0)) return null;
     return {
       sub: payload.sub,
       email: payload.email as string | undefined,
@@ -209,5 +213,54 @@ export async function getSession(): Promise<Session | null> {
     };
   } catch {
     return null;
+  }
+}
+
+// ---------- back-channel logout ----------
+
+const BACKCHANNEL_EVENT = "http://schemas.openid.net/event/backchannel-logout";
+
+// Момент последнего выхода на пользователя. Кэш на минуту, чтобы не ходить в базу
+// на каждый запрос; выход, принятый этим процессом, действует сразу.
+const logouts = new Map<string, { at: number; checked: number }>();
+const LOGOUT_CACHE_MS = 60_000;
+
+async function loggedOutSince(sub: string, issuedAt: number): Promise<boolean> {
+  if (!dbConfigured()) return false;
+  let hit = logouts.get(sub);
+  if (!hit || Date.now() - hit.checked > LOGOUT_CACHE_MS) {
+    try {
+      const sql = await db();
+      const [row] = await sql<{ at: Date }[]>`SELECT at FROM auth_logouts WHERE sub = ${sub}`;
+      hit = { at: row ? Math.floor(row.at.getTime() / 1000) : 0, checked: Date.now() };
+      logouts.set(sub, hit);
+    } catch {
+      return false;
+    }
+  }
+  return hit.at >= issuedAt;
+}
+
+/**
+ * OIDC Back-Channel Logout: INITE присылает logout_token, когда пользователь
+ * выходит у себя. Проверяем подпись, издателя, аудиторию и событие; все сессии
+ * пользователя, выданные до этого момента, перестают действовать.
+ */
+export async function acceptLogoutToken(token: string): Promise<boolean> {
+  try {
+    const { payload } = await jwtVerify(token, await getJwks(), {
+      issuer: issuer(),
+      audience: clientId(),
+      maxTokenAge: "10m",
+    });
+    const events = payload.events as Record<string, unknown> | undefined;
+    if (!payload.sub || !events || !(BACKCHANNEL_EVENT in events) || "nonce" in payload) return false;
+    const sql = await db();
+    await sql`INSERT INTO auth_logouts (sub, at) VALUES (${payload.sub}, now())
+      ON CONFLICT (sub) DO UPDATE SET at = now()`;
+    logouts.set(payload.sub, { at: Math.floor(Date.now() / 1000), checked: Date.now() });
+    return true;
+  } catch {
+    return false;
   }
 }

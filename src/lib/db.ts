@@ -66,6 +66,9 @@ CREATE TABLE IF NOT EXISTS notify_log (
 CREATE TABLE IF NOT EXISTS ai_cache (
   key text PRIMARY KEY, value text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
 );
+CREATE TABLE IF NOT EXISTS auth_logouts (
+  sub text PRIMARY KEY, at timestamptz NOT NULL DEFAULT now()
+);
 CREATE TABLE IF NOT EXISTS shares (
   id text PRIMARY KEY, book text NOT NULL, lang text NOT NULL, chapter text NOT NULL,
   anchor text NOT NULL, quote text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
