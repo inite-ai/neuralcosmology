@@ -61,7 +61,6 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     description: d.chapter.excerpt,
     alternates: { canonical },
     robots: d.chapter.free ? { index: true, follow: true } : { index: false, follow: true },
-    // Цитаты делятся короткой ссылкой /q/{id} со своей карточкой; старый ?q= больше не рисует превью.
     ...social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image: `/og/covers/${slug}.png` }),
   };
 }
