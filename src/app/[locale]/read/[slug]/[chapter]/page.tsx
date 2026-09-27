@@ -48,28 +48,21 @@ const THROTTLE: Record<string, { label: string; body: string }> = {
   es: { label: "Pausa", body: "Demasiados capítulos abiertos en pocos minutos. La lectura continúa en unos diez minutos." },
 };
 
-export async function generateMetadata({ params, searchParams }: { params: Params; searchParams: Promise<{ q?: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale: raw, slug, chapter: id } = await params;
-  const shared = ((await searchParams).q || "").slice(0, 280);
   const d = load(raw, slug, id);
   if (!d) return {};
   const bookTitle = pickLocalized(d.book.titles, d.lang);
   const title = `${d.chapter.title} — ${bookTitle}`;
   // Если книги нет на языке интерфейса, канонической считаем версию на языке текста.
   const canonical = `${BASE}/${d.lang}/read/${slug}/${id}`;
-  const quote = `${BASE}/api/quote-card?${new URLSearchParams({ q: shared, b: bookTitle })}`;
   return {
     title,
     description: d.chapter.excerpt,
     alternates: { canonical },
     robots: d.chapter.free ? { index: true, follow: true } : { index: false, follow: true },
-    ...(shared
-      ? {
-          // Ссылка «Поделиться» с цитатой — превью-карточка с этой цитатой.
-          openGraph: { title, description: `«${shared}»`, url: canonical, type: "article", images: [quote] },
-          twitter: { card: "summary_large_image", title, description: `«${shared}»`, images: [quote] },
-        }
-      : social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image: `/og/covers/${slug}.png` })),
+    // Цитаты делятся короткой ссылкой /q/{id} со своей карточкой; старый ?q= больше не рисует превью.
+    ...social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image: `/og/covers/${slug}.png` }),
   };
 }
 

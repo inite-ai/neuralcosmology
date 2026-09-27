@@ -4,6 +4,8 @@ import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
 import { MessageCircle, Bookmark, Sparkles, Focus, PenLine, Share2, Link2, Download, ArrowLeft } from "lucide-react";
 import { loadProgress } from "./progress";
+import { excerpt, plainQuote, signed } from "@/lib/reader/quote";
+import { BRAND, BrandIcon } from "./brand-icons";
 
 // Интерактивный слой читалки: пометки (закладки, выделения, заметки), обсуждения
 // на полях, ИИ-компаньон, пересказ прошлых глав, режим фокуса, синхронизация места.
@@ -27,7 +29,7 @@ type ChatMsg = { role: "user" | "assistant"; content: string };
 
 const T: Record<Lang, Record<string, string>> = {
   ru: {
-    highlight: "Выделить", note: "Заметка", bookmark: "Закладка", discuss: "Обсудить", explain: "Объяснить", share: "Поделиться",
+    highlight: "Выделить", note: "Заметка", bookmark: "Закладка", discuss: "Обсудить", explain: "Объяснить", share: "Поделиться", more: "Ещё", shareTitle: "Поделиться цитатой", copyLink: "Скопировать ссылку", card: "Картинка",
     tabDiscuss: "Обсуждение", tabNotes: "Пометки", tabAi: "ИИ", chapterThread: "Обсуждение главы", placeThread: "Обсуждение места",
     write: "Написать", reply: "Ответить", send: "Отправить", signIn: "Войдите, чтобы участвовать", empty: "Пока тихо. Начните разговор.",
     noNotes: "Выделите текст, чтобы сохранить цитату, заметку или закладку.", askPh: "Спросите о прочитанном…", ask: "Спросить",
@@ -38,7 +40,7 @@ const T: Record<Lang, Record<string, string>> = {
     rejected: "Сообщение не прошло модерацию.", close: "Закрыть", all: "Вся глава", delete: "Удалить",
   },
   en: {
-    highlight: "Highlight", note: "Note", bookmark: "Bookmark", discuss: "Discuss", explain: "Explain", share: "Share",
+    highlight: "Highlight", note: "Note", bookmark: "Bookmark", discuss: "Discuss", explain: "Explain", share: "Share", more: "More", shareTitle: "Share this quote", copyLink: "Copy link", card: "Image",
     tabDiscuss: "Discussion", tabNotes: "Notes", tabAi: "AI", chapterThread: "Chapter discussion", placeThread: "On this passage",
     write: "Write", reply: "Reply", send: "Send", signIn: "Sign in to join", empty: "Quiet so far. Start the conversation.",
     noNotes: "Select text to save a quote, a note or a bookmark.", askPh: "Ask about what you've read…", ask: "Ask",
@@ -49,7 +51,7 @@ const T: Record<Lang, Record<string, string>> = {
     rejected: "The message didn't pass moderation.", close: "Close", all: "Whole chapter", delete: "Delete",
   },
   pt: {
-    highlight: "Destacar", note: "Nota", bookmark: "Marcador", discuss: "Discutir", explain: "Explicar", share: "Compartilhar",
+    highlight: "Destacar", note: "Nota", bookmark: "Marcador", discuss: "Discutir", explain: "Explicar", share: "Compartilhar", more: "Mais", shareTitle: "Compartilhar citação", copyLink: "Copiar link", card: "Imagem",
     tabDiscuss: "Discussão", tabNotes: "Notas", tabAi: "IA", chapterThread: "Discussão do capítulo", placeThread: "Sobre este trecho",
     write: "Escrever", reply: "Responder", send: "Enviar", signIn: "Entre para participar", empty: "Silêncio por enquanto. Comece a conversa.",
     noNotes: "Selecione um trecho para salvar citação, nota ou marcador.", askPh: "Pergunte sobre o que leu…", ask: "Perguntar",
@@ -60,7 +62,7 @@ const T: Record<Lang, Record<string, string>> = {
     rejected: "A mensagem não passou na moderação.", close: "Fechar", all: "Capítulo inteiro", delete: "Excluir",
   },
   es: {
-    highlight: "Resaltar", note: "Nota", bookmark: "Marcador", discuss: "Comentar", explain: "Explicar", share: "Compartir",
+    highlight: "Resaltar", note: "Nota", bookmark: "Marcador", discuss: "Comentar", explain: "Explicar", share: "Compartir", more: "Más", shareTitle: "Compartir cita", copyLink: "Copiar enlace", card: "Imagen",
     tabDiscuss: "Conversación", tabNotes: "Notas", tabAi: "IA", chapterThread: "Conversación del capítulo", placeThread: "Sobre este pasaje",
     write: "Escribir", reply: "Responder", send: "Enviar", signIn: "Inicia sesión para participar", empty: "Todo tranquilo. Empieza la conversación.",
     noNotes: "Selecciona texto para guardar una cita, nota o marcador.", askPh: "Pregunta sobre lo que has leído…", ask: "Preguntar",
@@ -103,6 +105,8 @@ function rangeFor(p: HTMLElement, start: number, end: number): Range | null {
   return null;
 }
 
+const WORD = /[\p{L}\p{N}]/u;
+
 // Текст абзаца без кнопки на полях (.nc-margin дописывается в конец p).
 const textOf = (p: HTMLElement) =>
   [...p.childNodes].filter((n) => !(n instanceof Element && n.classList.contains("nc-margin"))).map((n) => n.textContent ?? "").join("");
@@ -118,9 +122,16 @@ function readSelection(): Sel | null {
   const parts: Part[] = [];
   ps.forEach((p) => {
     const text = textOf(p);
-    const start = p.contains(r.startContainer) ? Math.min(offsetIn(p, r.startContainer, r.startOffset), text.length) : 0;
-    const end = p.contains(r.endContainer) ? Math.min(offsetIn(p, r.endContainer, r.endOffset), text.length) : text.length;
-    const quote = text.slice(start, end).trim();
+    let start = p.contains(r.startContainer) ? Math.min(offsetIn(p, r.startContainer, r.startOffset), text.length) : 0;
+    let end = p.contains(r.endContainer) ? Math.min(offsetIn(p, r.endContainer, r.endOffset), text.length) : text.length;
+    // Выделение, начатое или законченное посреди слова, расширяется до целых слов:
+    // иначе в цитату попадает «1884 году» вместо «В 1884 году».
+    while (start > 0 && WORD.test(text[start - 1]) && WORD.test(text[start] ?? "")) start--;
+    while (end < text.length && WORD.test(text[end]) && WORD.test(text[end - 1] ?? "")) end++;
+    // Буквицу (::first-letter, float) мышью не зацепить: выделение от второго слова
+    // первого абзаца теряет «В». Один-два символа перед началом — это она.
+    if (start > 0 && text.slice(0, start).trim().length <= 2 && getComputedStyle(p, "::first-letter").cssFloat === "left") start = 0;
+    const quote = plainQuote(text.slice(start, end));
     if (end > start && quote) parts.push({ anchor: p.dataset.a!, quote, start, end });
   });
   const quote = parts.map((x) => x.quote).join("\n\n");
@@ -341,14 +352,26 @@ export default function ReaderInteractive({
     }
   };
 
+  // «Поделиться»: сервер сверяет цитату с главой и отдаёт короткую ссылку /q/{id}
+  // с карточкой цитаты в превью. Без базы — ссылка на абзац.
+  const [share, setShare] = useState<{ url: string; id: string | null } | null>(null);
   const [shareMode, setShareMode] = useState(false);
-  useEffect(() => setShareMode(false), [sel?.anchor, sel?.start]);
+  useEffect(() => {
+    setShareMode(false);
+    setShare(null);
+  }, [sel?.anchor, sel?.start, sel?.quote]);
 
-  const shareLink = (quote: string, anchor: string) => {
-    const u = new URL(location.href);
-    u.hash = `a-${anchor}`;
-    u.search = new URLSearchParams({ q: quote.slice(0, 280) }).toString();
-    return u.toString();
+  const openShare = async () => {
+    if (!sel) return;
+    setShareMode(true);
+    const fallback = `${location.origin}${location.pathname}#a-${sel.anchor}`;
+    const r = await fetch("/api/reader/share", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ book, lang, chapter, anchor: sel.anchor, quote: sel.quote }),
+    }).catch(() => null);
+    const d = r?.ok ? await r.json().catch(() => null) : null;
+    setShare(d?.url ? { url: d.url, id: d.id } : { url: fallback, id: null });
   };
 
   const [aiSeed, setAiSeed] = useState<{ mode: "explain"; selection: string } | null>(null);
@@ -362,9 +385,11 @@ export default function ReaderInteractive({
         t={t}
         aiEnabled={aiEnabled}
         shareMode={shareMode}
-        onShareMode={setShareMode}
+        onShare={openShare}
+        onBack={() => setShareMode(false)}
+        share={share}
         bookTitle={bookTitle}
-        link={shareLink(sel.quote, sel.anchor)}
+        lang={lang}
         onColor={(c) => annotate("highlight", { color: c })}
         onNote={() => annotate("note")}
         onBookmark={() => annotate("bookmark")}
@@ -789,89 +814,137 @@ function Recap({ book, lang, chapter, ui, t }: { book: string; lang: string; cha
 
 // ---------- Selection toolbar ----------
 
-const SOCIAL: { id: string; name: string; href: (text: string, url: string, title: string) => string }[] = [
-  { id: "tg", name: "Telegram", href: (t, u) => `https://t.me/share/url?${new URLSearchParams({ url: u, text: t })}` },
-  { id: "vk", name: "VK", href: (t, u, title) => `https://vk.com/share.php?${new URLSearchParams({ url: u, title, comment: t })}` },
-  { id: "x", name: "X", href: (t, u) => `https://twitter.com/intent/tweet?${new URLSearchParams({ text: t, url: u })}` },
-  { id: "wa", name: "WhatsApp", href: (t, u) => `https://wa.me/?${new URLSearchParams({ text: `${t}\n${u}` })}` },
-  { id: "fb", name: "Facebook", href: (_t, u) => `https://www.facebook.com/sharer/sharer.php?${new URLSearchParams({ u })}` },
-  { id: "in", name: "LinkedIn", href: (_t, u) => `https://www.linkedin.com/sharing/share-offsite/?${new URLSearchParams({ url: u })}` },
-  { id: "th", name: "Threads", href: (t, u) => `https://www.threads.net/intent/post?${new URLSearchParams({ text: `${t}\n${u}` })}` },
+// Как сеть собирает сообщение: у одних есть поле текста, другие берут всё из превью ссылки.
+// Длина подписи — под лимиты сети (X: 280 вместе со ссылкой).
+const SOCIAL: { id: string; name: string; max: number; href: (text: string, url: string) => string }[] = [
+  { id: "tg", name: "Telegram", max: 300, href: (t, u) => `https://t.me/share/url?${new URLSearchParams({ url: u, text: t })}` },
+  { id: "vk", name: "VK", max: 0, href: (_t, u) => `https://vk.com/share.php?${new URLSearchParams({ url: u })}` },
+  { id: "x", name: "X", max: 170, href: (t, u) => `https://x.com/intent/post?${new URLSearchParams({ text: t, url: u })}` },
+  { id: "wa", name: "WhatsApp", max: 300, href: (t, u) => `https://wa.me/?${new URLSearchParams({ text: `${t}\n${u}` })}` },
+  { id: "fb", name: "Facebook", max: 0, href: (_t, u) => `https://www.facebook.com/sharer/sharer.php?${new URLSearchParams({ u })}` },
+  { id: "in", name: "LinkedIn", max: 0, href: (_t, u) => `https://www.linkedin.com/sharing/share-offsite/?${new URLSearchParams({ url: u })}` },
+  { id: "th", name: "Threads", max: 300, href: (t, u) => `https://www.threads.net/intent/post?${new URLSearchParams({ text: `${t}\n${u}` })}` },
 ];
 
 const SWATCH: Record<(typeof COLORS)[number], string> = { accent: "#6d74f0", yellow: "#f2c230", green: "#3fbf7f", rose: "#f0607a" };
 
 function SelectionToolbar({
-  sel, t, aiEnabled, shareMode, onShareMode, bookTitle, link, onColor, onNote, onBookmark, onDiscuss, onExplain, onCopied,
+  sel, t, aiEnabled, shareMode, onShare, onBack, share, bookTitle, lang, onColor, onNote, onBookmark, onDiscuss, onExplain, onCopied,
 }: {
-  sel: Sel; t: Record<string, string>; aiEnabled: boolean; shareMode: boolean; onShareMode: (v: boolean) => void;
-  bookTitle: string; link: string; onColor: (c: (typeof COLORS)[number]) => void; onNote: () => void; onBookmark: () => void;
+  sel: Sel; t: Record<string, string>; aiEnabled: boolean; shareMode: boolean; onShare: () => void; onBack: () => void;
+  share: { url: string; id: string | null } | null; bookTitle: string; lang: string; onColor: (c: (typeof COLORS)[number]) => void; onNote: () => void; onBookmark: () => void;
   onDiscuss: () => void; onExplain: () => void; onCopied: () => void;
 }) {
   const mobile = typeof window !== "undefined" && innerWidth < 768;
   // Над первой строкой, если она видна; иначе под последней. Длинное выделение
   // может уходить за оба края экрана — тогда панель прижимается к видимой зоне.
+  // Над выделением панель висит нижним краем, поэтому её высота не важна.
   const above = sel.rect.top > 90 && sel.rect.top < innerHeight;
   const anchorRect = above ? sel.rect : sel.endRect;
-  const top = above ? sel.rect.top - 60 : Math.min(Math.max(sel.endRect.bottom + 12, 70), innerHeight - 70);
-  const pinned = !above && top !== sel.endRect.bottom + 12;
-  const text = `«${sel.quote.length > 240 ? `${sel.quote.slice(0, 237)}…` : sel.quote}» — ${bookTitle}`;
-  const card = `/api/quote-card?${new URLSearchParams({ q: sel.quote.slice(0, 280), b: bookTitle })}`;
-  const cell =
-    "flex min-h-12 shrink-0 items-center gap-2 px-3.5 text-[0.8125rem] text-[var(--r-fg)] transition-colors hover:bg-[var(--r-faint)] [&+&]:border-l-[0.5px] [&+&]:border-[var(--r-line)]";
+  const below = Math.min(Math.max(sel.endRect.bottom + 12, 70), innerHeight - 70);
+  const pinned = !above && below !== sel.endRect.bottom + 12;
+  const half = shareMode ? 208 : 300;
+  const say = (max: number) => signed(excerpt(sel.quote, max), bookTitle, lang);
+  const canNative = typeof navigator !== "undefined" && typeof navigator.share === "function";
+
+  // Ячейка главной панели: на телефоне — значок над подписью, чтобы всё влезло без прокрутки.
+  const cell = cn(
+    "flex shrink-0 items-center text-[var(--r-fg)] transition-colors hover:bg-[var(--r-faint)] [&+&]:border-l-[0.5px] [&+&]:border-[var(--r-line)]",
+    mobile ? "min-h-14 flex-1 flex-col justify-center gap-1 px-1.5 text-[0.6875rem]" : "min-h-12 gap-2 px-3.5 text-[0.8125rem]",
+  );
+  const action = cn(
+    "flex flex-1 items-center justify-center whitespace-nowrap px-2 text-[var(--r-fg)] transition-colors hover:bg-[var(--r-faint)] [&+&]:border-l-[0.5px] [&+&]:border-[var(--r-line)]",
+    mobile ? "min-h-14 flex-col gap-1 text-[0.6875rem]" : "min-h-11 gap-2 text-[0.8125rem]",
+  );
 
   return (
     <div
       role="toolbar"
       onMouseDown={(e) => e.preventDefault()}
       className={cn(
-        "fixed z-[80] border-[0.5px] border-[var(--r-line)] bg-[var(--r-panel)] shadow-[0_18px_50px_-18px_rgb(0_0_0/.45)]",
-        mobile ? "inset-x-2 bottom-[calc(env(safe-area-inset-bottom)+0.5rem)] rounded-md" : "-translate-x-1/2 rounded-md",
+        "fixed z-[80] overflow-hidden border-[0.5px] border-[var(--r-line)] bg-[var(--r-panel)] shadow-[0_18px_50px_-18px_rgb(0_0_0/.45)] rounded-md",
+        mobile ? "inset-x-2 bottom-[calc(env(safe-area-inset-bottom)+0.5rem)]" : cn("-translate-x-1/2", above && "-translate-y-full"),
+        !mobile && "overflow-visible",
       )}
       style={
         mobile
           ? undefined
           : {
-              left: Math.min(Math.max(anchorRect.left + anchorRect.width / 2, 260), innerWidth - 260),
-              top,
+              left: Math.min(Math.max(anchorRect.left + anchorRect.width / 2, half + 12), innerWidth - half - 12),
+              top: above ? sel.rect.top - 12 : below,
             }
       }
     >
-      <div className="flex items-stretch overflow-x-auto" style={{ fontFamily: "var(--font-sans)", scrollbarWidth: "none" }}>
+      <div style={{ fontFamily: "var(--font-sans)" }} className={cn(shareMode && !mobile && "w-[26rem]")}>
         {shareMode ? (
           <>
-            <button type="button" className={cell} onClick={() => onShareMode(false)} aria-label="←">
-              <ArrowLeft className="h-4 w-4" strokeWidth={1.25} />
-            </button>
-            {SOCIAL.map((s) => (
-              <a key={s.id} className={cell} href={s.href(text, link, bookTitle)} target="_blank" rel="noopener noreferrer">
-                {s.name}
-              </a>
-            ))}
-            <button
-              type="button"
-              className={cell}
-              onClick={async () => {
-                try {
-                  await navigator.clipboard.writeText(`${text}\n${link}`);
-                } catch {}
-                onCopied();
-              }}
-            >
-              <Link2 className="h-4 w-4" strokeWidth={1.25} />
-            </button>
-            <a className={cell} href={card} download="quote.png" aria-label="PNG">
-              <Download className="h-4 w-4" strokeWidth={1.25} />
-            </a>
+            <div className="flex items-center r-rule-b">
+              <button type="button" onClick={onBack} aria-label="←" className="flex h-11 w-11 shrink-0 items-center justify-center text-[var(--r-muted)] hover:text-[var(--r-fg)]">
+                <ArrowLeft className="h-4 w-4" strokeWidth={1.25} />
+              </button>
+              <p className="label text-[var(--r-accent)]">{t.shareTitle}</p>
+            </div>
+            <p lang={lang} className="px-4 pt-3 font-display text-[1.0625rem] italic leading-snug text-[var(--r-soft)] line-clamp-2">
+              {excerpt(sel.quote, 160)}
+            </p>
+            <div className={cn("grid grid-cols-7 gap-1 px-3 py-3", !share && "pointer-events-none opacity-40")}>
+              {SOCIAL.map((s) => {
+                const hex = BRAND[s.id]?.hex;
+                const mono = !hex || hex === "#000000";
+                return (
+                  <a
+                    key={s.id}
+                    href={share ? s.href(s.max ? say(s.max) : "", share.url) : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={s.name}
+                    aria-label={s.name}
+                    style={mono ? undefined : ({ "--brand": hex } as React.CSSProperties)}
+                    className={cn(
+                      "flex aspect-square items-center justify-center rounded-md text-[var(--r-soft)] transition-colors hover:bg-[var(--r-faint)]",
+                      mono ? "hover:text-[var(--r-fg)]" : "hover:text-[var(--brand)]",
+                    )}
+                  >
+                    <BrandIcon id={s.id} className="h-[1.15rem] w-[1.15rem]" />
+                  </a>
+                );
+              })}
+            </div>
+            <div className={cn("flex items-stretch r-rule-t", !share && "pointer-events-none opacity-40")}>
+              <button
+                type="button"
+                className={action}
+                onClick={async () => {
+                  if (!share) return;
+                  try {
+                    await navigator.clipboard.writeText(`${say(600)}\n${share.url}`);
+                  } catch {}
+                  onCopied();
+                }}
+              >
+                <Link2 className="h-4 w-4" strokeWidth={1.25} /> {t.copyLink}
+              </button>
+              {share?.id && (
+                <a className={action} href={`/api/quote-card?id=${share.id}`} download="quote.png">
+                  <Download className="h-4 w-4" strokeWidth={1.25} /> {t.card}
+                </a>
+              )}
+              {canNative && share && (
+                <button type="button" className={action} onClick={() => navigator.share({ text: say(300), url: share.url }).catch(() => {})}>
+                  <Share2 className="h-4 w-4" strokeWidth={1.25} /> {t.more}
+                </button>
+              )}
+            </div>
           </>
         ) : (
-          <>
-            <span className={cn(cell, "gap-1.5 hover:bg-transparent")}>
+          <div className="flex items-stretch">
+            <span className={cn(cell, "hover:bg-transparent", mobile ? "grid grid-cols-2 place-content-center gap-1.5 px-3" : "gap-1.5")}>
               {COLORS.map((c) => (
                 <button
                   key={c}
                   type="button"
                   aria-label={`${t.highlight}: ${c}`}
+                  title={t.highlight}
                   onClick={() => onColor(c)}
                   className="h-5 w-5 rounded-full ring-offset-2 ring-offset-[var(--r-panel)] transition hover:ring-1 hover:ring-[var(--r-fg)]"
                   style={{ background: SWATCH[c] }}
@@ -892,10 +965,10 @@ function SelectionToolbar({
                 <Sparkles className="h-4 w-4" strokeWidth={1.25} /> {t.explain}
               </button>
             )}
-            <button type="button" className={cell} onClick={() => onShareMode(true)}>
+            <button type="button" className={cell} onClick={onShare}>
               <Share2 className="h-4 w-4" strokeWidth={1.25} /> {t.share}
             </button>
-          </>
+          </div>
         )}
       </div>
       {!mobile && !pinned && (
