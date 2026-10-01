@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-preface-notebook",
+      "book": "bugs-academy",
+      "chapter": "preface",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An open hardback notebook on a dark table, both pages covered with hand-drawn diagrams: fine lines, nodes and crossings forming an unknown alphabet of patterns. A pen lies in the gutter. A faint glow seems to rise from the drawings.",
+      "alt": {
+        "ru": "Раскрытый блокнот на тёмном столе, обе страницы покрыты рисунками из линий, узлов и пересечений, похожих на неизвестный алфавит; в развороте лежит ручка.",
+        "en": "An open notebook on a dark table, both pages covered in drawings of lines, nodes and crossings like an unknown alphabet, a pen in the gutter.",
+        "pt": "Um caderno aberto numa mesa escura, ambas as páginas cobertas de desenhos de linhas, nós e cruzamentos como um alfabeto desconhecido, uma caneta no meio.",
+        "es": "Un cuaderno abierto sobre una mesa oscura, ambas páginas cubiertas de dibujos de líneas, nudos y cruces como un alfabeto desconocido, un bolígrafo en el centro."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JYwCdACPtxfufT44xAjD0AP7s2S2CTMqMPRe/IjGp8Nf3tHnK7KlGGOHgnGKLdWL/fVGDsD3zlyDG7VVqg+0MI4Y87+QA",
+      "hash": "2b4067324e38e597",
+      "generatedAt": "2026-10-01T01:42:34.308Z"
+    }
+  ]
+}

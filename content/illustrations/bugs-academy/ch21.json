@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch21-fingerprint",
+      "book": "bugs-academy",
+      "chapter": "ch21",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Two transparent glass plates held up together against a window by two hands: on each plate is a pale whorl like a fingerprint, and where the plates overlap the two whorls coincide line for line.",
+      "alt": {
+        "ru": "Две прозрачные стеклянные пластинки подняты к окну: на каждой бледный узор, как отпечаток пальца, и там, где они наложены, узоры совпадают линия в линию.",
+        "en": "Two clear glass plates held up to a window: on each a pale whorl like a fingerprint, and where they overlap the whorls match line for line.",
+        "pt": "Duas placas de vidro transparentes erguidas contra a janela: em cada uma um padrão pálido como uma impressão digital, e onde se sobrepõem os padrões coincidem linha a linha.",
+        "es": "Dos placas de vidrio transparentes alzadas hacia la ventana: en cada una un trazo pálido como una huella dactilar, y donde se superponen coinciden línea a línea."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoYABAAPu1krU2ppaSiMAgBMB2JZQDA3CFS0+O4g38GWpXYAAD+8Mu7xIdmxJlOPkIIWRsOy+0LQzvkQvxd8oEkODBJ2ZFP/1f8Zd+jAo9F00qTF3r0RBk8goq0fyXg/CDHuEwA",
+      "hash": "872fb231c9b6952a",
+      "generatedAt": "2026-10-01T01:40:30.036Z"
+    },
+    {
+      "id": "ba-ch21-woman",
+      "book": "bugs-academy",
+      "chapter": "ch21",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Three people at a wooden table drinking tea in the evening: a man, an old man, and a small woman of about forty-five holding her cup with both hands, her face turned away from the camera toward the man; a lamp between them.",
+      "alt": {
+        "ru": "Вечером трое пьют чай за деревянным столом: мужчина, старик и невысокая женщина лет сорока пяти, держащая чашку обеими руками и повернувшаяся к мужчине.",
+        "en": "Three people drinking tea at a wooden table in the evening: a man, an old man and a small woman of about forty-five holding her cup in both hands, turned toward the man.",
+        "pt": "Três pessoas a beber chá numa mesa de madeira à noite: um homem, um velho e uma mulher baixa de uns quarenta e cinco anos a segurar a chávena com as duas mãos, virada para o homem.",
+        "es": "Tres personas tomando té en una mesa de madera por la noche: un hombre, un anciano y una mujer menuda de unos cuarenta y cinco años que sostiene la taza con ambas manos, vuelta hacia el hombre."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC/OCHgTAOt/rxYrxCgAP7uj8PxWi4tbUxgoalN5xQ1JowLwqaHuwPqnfWhO3K85moAAAA=",
+      "hash": "59e4bad9bac176ae",
+      "generatedAt": "2026-10-01T01:40:31.867Z"
+    }
+  ]
+}

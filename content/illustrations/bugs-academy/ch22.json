@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch22-flicker",
+      "book": "bugs-academy",
+      "chapter": "ch22",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A clearing in a November forest before dawn: a barefoot woman stands in the frosted grass, and her outline flickers and doubles like a faulty film frame, edges smeared with pale light; at the edge of the clearing two men watch, one starting to run toward her.",
+      "alt": {
+        "ru": "Поляна в ноябрьском лесу перед рассветом: босая женщина стоит в инее, её контур мерцает и двоится, как сбойный кадр плёнки; с края поляны к ней бросается мужчина.",
+        "en": "A clearing in a November forest before dawn: a barefoot woman in the frost, her outline flickering and doubling like a faulty film frame; at the edge a man starts to run toward her.",
+        "pt": "Uma clareira numa floresta de novembro antes do amanhecer: uma mulher descalça na geada, o contorno a tremeluzir e duplicar como um fotograma defeituoso; na orla um homem corre para ela.",
+        "es": "Un claro en un bosque de noviembre antes del alba: una mujer descalza en la escarcha, su contorno parpadeando y duplicándose como un fotograma defectuoso; en el borde un hombre echa a correr hacia ella."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC/OCHgAEDaNVl9nz4AAP7ysTP0/Skf4dtsiy7bjS6Pni5rwiCitR3wTSQfHm2qsmpK8CiaHYAA",
+      "hash": "dfa383df9658bf56",
+      "generatedAt": "2026-10-01T01:41:06.543Z"
+    },
+    {
+      "id": "ba-ch22-bridge",
+      "book": "bugs-academy",
+      "chapter": "ch22",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long concrete and steel bridge under construction across a wide river at dusk, the final span not yet joined, a gap of sky between the two ends; cranes and work lights on both sides.",
+      "alt": {
+        "ru": "Длинный бетонно-стальной мост в постройке через широкую реку в сумерках: последний пролёт ещё не сомкнут, между концами полоска неба, по обе стороны краны и прожекторы.",
+        "en": "A long concrete-and-steel bridge under construction over a wide river at dusk: the last span not yet joined, a gap of sky between the ends, cranes and work lights on both sides.",
+        "pt": "Uma longa ponte de betão e aço em construção sobre um rio largo ao anoitecer: o último vão ainda por unir, uma faixa de céu entre as pontas, gruas e projetores dos dois lados.",
+        "es": "Un largo puente de hormigón y acero en construcción sobre un río ancho al anochecer: el último tramo aún sin unir, un hueco de cielo entre los extremos, grúas y focos a ambos lados."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC7AdwA8//ucpCODNwL8yTAAP4+w0vE3EqNR35q9PbOjEiSiKJ4fGeyCWaSz9dGEkAAimF/Npbomlk/iI1lVGpuv/vzb2DIjwx7nV2EKBCI8CbVVTlLUwpvONjFxCoxVDlAAAA=",
+      "hash": "ee108dab19eaf1c3",
+      "generatedAt": "2026-10-01T01:40:59.195Z"
+    }
+  ]
+}

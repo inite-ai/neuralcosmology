@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch19-workshop",
+      "book": "bugs-academy",
+      "chapter": "ch19",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An empty, white, featureless room that seems larger than it should be; in the very centre a young woman with red hair sits on a simple stool with her eyes closed and hands on her knees, seen from a distance, an old man standing quietly at the edge of the room.",
+      "alt": {
+        "ru": "Пустая белая комната, кажущаяся больше, чем есть; в центре на табурете с закрытыми глазами сидит рыжая девушка, у края комнаты тихо стоит старик.",
+        "en": "An empty white room that seems larger than it is; in the centre a red-haired young woman sits on a stool with eyes closed, an old man standing quietly at the edge.",
+        "pt": "Uma sala branca vazia que parece maior do que é; ao centro uma jovem ruiva sentada num banco de olhos fechados, um velho de pé, calado, à margem.",
+        "es": "Una sala blanca y vacía que parece más grande de lo que es; en el centro una joven pelirroja sentada en un taburete con los ojos cerrados, un anciano de pie en silencio en el borde."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoYABAAPu1mq04ppaQiMAgBMB2JZwAAW9Vp1V/z5YWGhWkYAP7u1aao4WYNFlsal4Q5cXM7vJ2JtvNqnFh1ggYaGqx8J31hGwJtcDOmkpcNAuAA",
+      "hash": "42bff61628af0a16",
+      "generatedAt": "2026-10-01T01:40:00.381Z"
+    }
+  ]
+}

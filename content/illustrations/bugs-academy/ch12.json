@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "ba-ch12-porch",
+      "book": "bugs-academy",
+      "chapter": "ch12",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A man stands on the wooden porch of an old dacha at dawn, seen from behind, breathing in cold air, looking at a silent snowy forest; a grey cat sits on the step beside him.",
+      "alt": {
+        "ru": "Мужчина со спины стоит на деревянном крыльце старой дачи на рассвете и смотрит на тихий заснеженный лес; рядом на ступеньке сидит серый кот.",
+        "en": "A man from behind on the wooden porch of an old dacha at dawn, looking at a silent snowy forest, a grey cat on the step beside him.",
+        "pt": "Um homem de costas no alpendre de madeira de uma velha dacha ao amanhecer, a olhar para uma floresta silenciosa com neve, um gato cinzento no degrau ao lado.",
+        "es": "Un hombre de espaldas en el porche de madera de una vieja dacha al amanecer, mirando un bosque nevado y silencioso, un gato gris en el escalón a su lado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwDE2CFsMAD0fNUadQAA/vGAgp1LrAzfzr3rRvKHvZU/B8DrcpB05zRHi85wI/Xh75v4/nH5tHlzux+NYndlQt9l7z82GlPlidN9X1bw1zsduec4HbcAAAA=",
+      "hash": "567b77b7886e65e0",
+      "generatedAt": "2026-10-01T01:37:59.343Z"
+    },
+    {
+      "id": "ba-ch12-clearing",
+      "book": "bugs-academy",
+      "chapter": "ch12",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A forest path in late November with light snow: three people walk toward a clearing, and in the middle of the clearing ahead of them already stands a young woman with dark hair, still and waiting, as if she had always been there. Seen from behind the walkers.",
+      "alt": {
+        "ru": "Лесная тропа в конце ноября, лёгкий снег: трое идут к поляне, а посреди неё их уже ждёт темноволосая девушка, будто стояла там всегда.",
+        "en": "A forest path in late November with light snow: three people walk toward a clearing where a dark-haired young woman already stands waiting, as if she had always been there.",
+        "pt": "Um trilho na floresta no fim de novembro com neve leve: três pessoas caminham para uma clareira onde uma jovem de cabelo escuro já espera, como se sempre lá estivesse.",
+        "es": "Un sendero en el bosque a finales de noviembre con nieve ligera: tres personas caminan hacia un claro donde ya espera una joven de pelo oscuro, como si siempre hubiera estado allí."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYABAAPu1iqk4ppaQiMAgBMB2JZwC/OCHfk1ER/QZ/L0AA/vDLko4IQo2Zgy5LJc4Sr7peoDEB90vGHpL+uFRKztDoiWQWzuIyeoAZ60+vlAA2pvRldAAA",
+      "hash": "2e14ae5112436eb8",
+      "generatedAt": "2026-10-01T01:38:31.423Z"
+    },
+    {
+      "id": "ba-ch12-evening",
+      "book": "bugs-academy",
+      "chapter": "ch12",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Evening on the porch of a dacha deep in a dark forest: four young people sit on the steps and the railing, wrapped in coats, a lantern beside them, the forest a black wall beyond the small circle of light.",
+      "alt": {
+        "ru": "Вечер на крыльце дачи в тёмном лесу: четверо молодых людей в куртках сидят на ступеньках и перилах у фонаря, за кругом света чёрная стена леса.",
+        "en": "Evening on a dacha porch in a dark forest: four young people in coats on the steps and rail by a lantern, the forest a black wall beyond the light.",
+        "pt": "Noite no alpendre de uma dacha numa floresta escura: quatro jovens de casaco nos degraus e no corrimão junto a uma lanterna, a floresta um muro negro.",
+        "es": "Noche en el porche de una dacha en un bosque oscuro: cuatro jóvenes con abrigo en los escalones y la barandilla junto a un farol, el bosque un muro negro."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAgCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAUa02EAD+8W1y7poDq9Pk+aT06guoQJmSD5C5dDlL1HysLIwV7vSSm6L8PIAAAA==",
+      "hash": "c85b02050352540b",
+      "generatedAt": "2026-10-01T01:38:30.978Z"
+    }
+  ]
+}

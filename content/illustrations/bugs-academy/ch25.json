@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "ba-ch25-photo-last",
+      "book": "bugs-academy",
+      "chapter": "ch25",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A man's hand holding an old paper photograph with a bent corner up against the narrow glowing slit of a rift in a November forest; the photo shows a dark-haired woman, blurred and indistinct, and the light of the slit shines through the paper from behind.",
+      "alt": {
+        "ru": "Рука мужчины держит старую фотографию с загнутым уголком перед узкой светящейся щелью в ноябрьском лесу; на снимке размытая темноволосая женщина, свет щели просвечивает бумагу.",
+        "en": "A man's hand holding an old photo with a bent corner before a narrow glowing slit in a November forest; on it a blurred dark-haired woman, the light shining through the paper.",
+        "pt": "A mão de um homem segura uma foto antiga de canto dobrado diante de uma fenda luminosa numa floresta de novembro; nela uma mulher de cabelo escuro desfocada, a luz a atravessar o papel.",
+        "es": "La mano de un hombre sostiene una foto antigua con la esquina doblada ante una estrecha grieta luminosa en un bosque de noviembre; en ella una mujer de pelo oscuro borrosa, la luz atravesando el papel."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACQAwCdASoYABAAPu1kqU4ppaOiMAgBMB2JZwAAW6mIuumkvHX4AP7sw/fehh4PmdhY3s8ltdsqkrzI7VvqIrnpzuvUSHKemf6r4sPdVq71bikRKJu4AA==",
+      "hash": "d338dc15aba5dda0",
+      "generatedAt": "2026-10-01T01:41:38.009Z"
+    },
+    {
+      "id": "ba-ch25-back-to-lab",
+      "book": "bugs-academy",
+      "chapter": "ch25",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The shabby institute lab again: the quantum computer cryostat hangs in the centre, and a woman in a checked shirt sits at three monitors with her back to the door; a man stands in the doorway with his coat still on, looking at her.",
+      "alt": {
+        "ru": "Снова облезлая институтская лаборатория: в центре висит криостат, женщина в клетчатой рубашке сидит спиной к двери у трёх мониторов, в дверях в пальто стоит мужчина и смотрит на неё.",
+        "en": "The shabby institute lab again: the cryostat in the centre, a woman in a checked shirt at three monitors with her back to the door, a man in his coat standing in the doorway.",
+        "pt": "O laboratório degradado do instituto outra vez: o criostato ao centro, uma mulher de camisa xadrez de costas para a porta diante de três monitores, um homem de casaco à porta.",
+        "es": "Otra vez el destartalado laboratorio del instituto: el criostato en el centro, una mujer con camisa de cuadros de espaldas a la puerta ante tres monitores, un hombre con abrigo en el umbral."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZwC/OCHfJjNPZi04vgAA/vDYYFs/AbvVlUhbjRIdTxnhmsFklTMXYzEDJu6WTf2jChBU1Ds2q7AYW3MZ0AAA",
+      "hash": "e2dc656e1c4cae95",
+      "generatedAt": "2026-10-01T01:41:39.894Z"
+    },
+    {
+      "id": "ba-ch25-night-flat",
+      "book": "bugs-academy",
+      "chapter": "ch25",
+      "scene": 9,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small one-room flat at night: a man lies on his back on a bed in the dark, eyes open, the window showing the lattice of the Shukhov tower faintly lit; the narrow hallway with its empty coat rack visible through the open door.",
+      "alt": {
+        "ru": "Однокомнатная квартира ночью: мужчина лежит на спине в темноте с открытыми глазами, в окне слабо подсвеченная решётка Шуховской башни, в открытую дверь видна прихожая с пустой вешалкой.",
+        "en": "A one-room flat at night: a man lies on his back in the dark, eyes open, the Shukhov tower's lattice faintly lit in the window, the hallway with an empty coat rack through the open door.",
+        "pt": "Um apartamento de um quarto à noite: um homem deitado de costas no escuro, olhos abertos, a treliça da torre Chukhov ténue na janela, o corredor com um cabide vazio pela porta aberta.",
+        "es": "Un piso de una habitación de noche: un hombre tumbado boca arriba a oscuras, con los ojos abiertos, la celosía de la torre Shújov tenue en la ventana, el pasillo con un perchero vacío por la puerta abierta."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JaQAAYf0mMv8R7ardYvUAAP7xEa2qSoJDW8scOUjjejn6OE2uhNLBy3ovgyT9yc6KYcw3YFnrzMcCK8I/wAAA",
+      "hash": "a8f8cc36acfca1af",
+      "generatedAt": "2026-10-01T01:42:07.414Z"
+    }
+  ]
+}

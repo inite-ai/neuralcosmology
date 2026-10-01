@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch18-memory",
+      "book": "bugs-academy",
+      "chapter": "ch18",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A kitchen dissolving into another place like a projector slide changing mid-click: half of the frame is a plain dacha kitchen with a cup of tea, the other half is an unfamiliar city flat with beige walls and a window onto apartment blocks, the two images overlapping along a soft seam.",
+      "alt": {
+        "ru": "Кухня, сменяющаяся другим местом, как слайд в проекторе: половина кадра — кухня дачи с чашкой чая, другая — чужая городская квартира с бежевыми стенами, изображения сливаются по мягкому шву.",
+        "en": "A kitchen changing into another place like a projector slide: half the frame a dacha kitchen with a cup of tea, half an unfamiliar city flat with beige walls, overlapping along a soft seam.",
+        "pt": "Uma cozinha a transformar-se noutro lugar como um diapositivo: metade da imagem a cozinha da dacha com uma chávena, metade um apartamento estranho de paredes bege, sobrepostos.",
+        "es": "Una cocina convirtiéndose en otro lugar como una diapositiva: mitad del encuadre la cocina de la dacha con una taza, mitad un piso desconocido de paredes beige, superpuestos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDA3BjpfdmZSD6l+Y8VIAD+5rcPU3GvJp85MmRlVLU3zPMhqHFBa1ypBJjAB61gTQJbzceD7D3m9NIe4w1J7qkmzC7NG8wYKG+UjXBqNgmgekpanljRclX3+x23pElP03Hz6gA=",
+      "hash": "3621eba417f6b1fa",
+      "generatedAt": "2026-10-01T01:40:03.158Z"
+    }
+  ]
+}

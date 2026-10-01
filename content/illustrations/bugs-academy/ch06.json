@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "ba-ch06-taxi",
+      "book": "bugs-academy",
+      "chapter": "ch06",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A yellow Moscow taxi bouncing along a muddy two-rut track through a bare grey November forest of birch and alder, toward a clearing where an ordinary old wooden dacha stands, its windows faintly lit. Seen from behind the car.",
+      "alt": {
+        "ru": "Жёлтое такси подпрыгивает по грязной колее через голый ноябрьский лес к поляне, где стоит старая деревянная дача со слабо светящимися окнами.",
+        "en": "A yellow taxi bouncing along a muddy track through a bare November forest toward a clearing with an old wooden dacha, its windows faintly lit.",
+        "pt": "Um táxi amarelo aos solavancos num trilho lamacento por uma floresta nua de novembro rumo a uma clareira com uma velha dacha de madeira de janelas ténues.",
+        "es": "Un taxi amarillo dando tumbos por un camino embarrado en un bosque desnudo de noviembre hacia un claro con una vieja dacha de madera de ventanas tenuemente iluminadas."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZQAAW4TEJ7/IIxPhnAAA/vDjwOtkAkbsyta/lOaP9dcwU2bD48Y7+QcDc7vshIFD0uBjSH4bhLxfYzewAAAA",
+      "hash": "eb3baab9440ef7aa",
+      "generatedAt": "2026-10-01T01:36:31.303Z"
+    },
+    {
+      "id": "ba-ch06-inside",
+      "book": "bugs-academy",
+      "chapter": "ch06",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The interior of what should be a small wooden dacha, but the hallway inside is impossibly vast: the floorboards stretch into a dim distance, the walls recede and fold like folded paper, a single ordinary door standing open far away. Uncanny but quiet.",
+      "alt": {
+        "ru": "Внутри маленькой деревянной дачи невозможно огромная прихожая: половицы уходят в полумрак, стены отступают и складываются, как бумага, вдали открыта одна обычная дверь.",
+        "en": "Inside a small wooden dacha an impossibly vast hallway: floorboards stretching into dimness, walls receding and folding like paper, one ordinary door open far away.",
+        "pt": "Dentro de uma pequena dacha de madeira, um vestíbulo impossivelmente vasto: tábuas a perder-se na penumbra, paredes a recuar e dobrar como papel, uma porta comum aberta ao longe.",
+        "es": "Dentro de una pequeña dacha de madera, un vestíbulo imposiblemente vasto: tablas que se pierden en la penumbra, paredes que retroceden y se pliegan como papel, una puerta corriente abierta a lo lejos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JZwCdAB6OdJAq3ou7iaHcAP7w36WlkUoamYcm3XAmU9Qb/Bsg7goJXWOeOzYydKN6pv4EM6JxI/UAAAA=",
+      "hash": "55483177f4dd7186",
+      "generatedAt": "2026-10-01T01:36:55.971Z"
+    },
+    {
+      "id": "ba-ch06-table",
+      "book": "bugs-academy",
+      "chapter": "ch06",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long wooden table in a dim room, four people sitting at it with cups of tea in front of them, three women and one man, seen from the doorway and from behind or in shadow; an empty chair at the end waiting for the newcomer.",
+      "alt": {
+        "ru": "Длинный деревянный стол в полутёмной комнате: четверо, три женщины и мужчина, сидят над чашками чая; в конце стола ждёт пустой стул.",
+        "en": "A long wooden table in a dim room: four people, three women and a man, sit over cups of tea; an empty chair waits at the end.",
+        "pt": "Uma longa mesa de madeira numa sala escura: quatro pessoas, três mulheres e um homem, diante de chávenas de chá; uma cadeira vazia espera na ponta.",
+        "es": "Una larga mesa de madera en una sala en penumbra: cuatro personas, tres mujeres y un hombre, ante tazas de té; una silla vacía espera al final."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JaQAAUqrD9sj4E/CcZXAA/vFvBF6h9ZebyZ723yY0niV6peQP23dgZGVctbrvE7nYEKck637zFmwgAAA=",
+      "hash": "cfd75e2b2821ae5b",
+      "generatedAt": "2026-10-01T01:37:00.482Z"
+    }
+  ]
+}

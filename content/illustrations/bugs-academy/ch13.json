@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch13-globe",
+      "book": "bugs-academy",
+      "chapter": "ch13",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old school globe on a wooden table in a dim room, lit by window light; a man sits across from it with his hands folded, staring at it intently, his face in shadow.",
+      "alt": {
+        "ru": "Старый школьный глобус на столе в полутёмной комнате, освещённый из окна; напротив сидит мужчина со сложенными руками и пристально смотрит на него.",
+        "en": "An old school globe on a table in a dim room, lit from the window; a man sits opposite with folded hands, staring at it.",
+        "pt": "Um velho globo escolar numa mesa num quarto escuro, iluminado pela janela; um homem sentado em frente, de mãos cruzadas, a fitá-lo.",
+        "es": "Un viejo globo terráqueo escolar sobre una mesa en una habitación en penumbra, iluminado por la ventana; un hombre sentado enfrente, con las manos juntas, mirándolo fijamente."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDG9B6NJiirHoAA88i/ixVuwUueJH2UzZvXKSW8PDguacgTwFoqpJIhg9LovPEaN4OYpAA=",
+      "hash": "a41fe7b0d7a44668",
+      "generatedAt": "2026-10-01T01:38:30.085Z"
+    },
+    {
+      "id": "ba-ch13-silence",
+      "book": "bugs-academy",
+      "chapter": "ch13",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Night outside the window of a dacha: falling snowflakes hang motionless in mid-air, frozen in place, the forest perfectly still; inside, a man sits up in bed in the dark looking out.",
+      "alt": {
+        "ru": "Ночь за окном дачи: падающие снежинки неподвижно висят в воздухе, лес замер; в темноте комнаты мужчина сел на кровати и смотрит в окно.",
+        "en": "Night outside a dacha window: falling snowflakes hang motionless in mid-air, the forest frozen; inside, a man sits up in bed in the dark, looking out.",
+        "pt": "Noite à janela de uma dacha: flocos de neve parados no ar, a floresta imóvel; lá dentro, um homem sentado na cama no escuro a olhar para fora.",
+        "es": "Noche tras la ventana de una dacha: copos de nieve suspendidos inmóviles en el aire, el bosque congelado; dentro, un hombre incorporado en la cama a oscuras mirando fuera."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAW+u0qXuiKvquQAD+8rGr0v0+hO9dLIs+7MfgMi82XHQf8CiK2hS0ULjOosRT+sVwSB6AAA==",
+      "hash": "4adf6667a4577a3d",
+      "generatedAt": "2026-10-01T01:38:57.901Z"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch07-apple",
+      "book": "bugs-academy",
+      "chapter": "ch07",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A single green apple with a small sticker on it sits in the middle of a bare wooden table in a dim room; two pairs of hands rest on the table on either side of it, one old and still, one younger and tense.",
+      "alt": {
+        "ru": "Одно зелёное яблоко с маленькой наклейкой посреди голого стола в полутёмной комнате, по сторонам две пары рук: старые и спокойные, молодые и напряжённые.",
+        "en": "A single green apple with a small sticker in the middle of a bare table in a dim room, two pairs of hands either side: one old and still, one younger and tense.",
+        "pt": "Uma única maçã verde com um pequeno autocolante no meio de uma mesa nua, dois pares de mãos de cada lado: umas velhas e calmas, outras mais novas e tensas.",
+        "es": "Una sola manzana verde con una pequeña pegatina en medio de una mesa desnuda, dos pares de manos a los lados: unas viejas y quietas, otras más jóvenes y tensas."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPu1mqk4ppaOiMAgBMB2JZwC7AB6Wh/yDDEamtfvEAP7w36Djl0y3dOI6EMuhYiins2lFQiYnVjdcIRHggCLFwrX06thaoLA/+LTrz19S+2ciRgAA",
+      "hash": "53492b9fa6ecda47",
+      "generatedAt": "2026-10-01T01:37:00.181Z"
+    },
+    {
+      "id": "ba-ch07-roots",
+      "book": "bugs-academy",
+      "chapter": "ch07",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A green apple in close-up on a table, and from it, as if seen in a vision, faint luminous lines spread outward and downward like roots and veins: through the table into soil, into a tree trunk, into rain clouds, the whole history of the apple drawn in light.",
+      "alt": {
+        "ru": "Зелёное яблоко крупным планом, а от него, как в видении, расходятся светящиеся линии-корни: через стол в почву, в ствол дерева, в дождевые тучи.",
+        "en": "A green apple in close-up, and from it, as in a vision, luminous lines spread like roots: through the table into soil, into a tree trunk, into rain clouds.",
+        "pt": "Uma maçã verde em grande plano e dela, como numa visão, linhas luminosas espalham-se como raízes: pela mesa até ao solo, ao tronco, às nuvens de chuva.",
+        "es": "Una manzana verde en primer plano y de ella, como en una visión, líneas luminosas se extienden como raíces: por la mesa hacia la tierra, el tronco, las nubes de lluvia."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwCdACEqixLxM4SrcpwQAP7ypQ8hVujPPQ0AloWCzVgcS/tUsSMl7j/K4hR+JquW+otYwxK2udNIG18Gh0CC5kQi5KW2gAA=",
+      "hash": "b4159d93906e8929",
+      "generatedAt": "2026-10-01T01:37:29.229Z"
+    }
+  ]
+}

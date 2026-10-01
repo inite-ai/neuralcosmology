@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-interlude-pdf",
+      "book": "bugs-academy",
+      "chapter": "interlude",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A narrow bed in a plain room at night: a phone glows on the pillow, its screen showing a dense page of a document too small to read; a man's hand holds it, the rest of the room dark.",
+      "alt": {
+        "ru": "Узкая кровать в простой комнате ночью: на подушке светится телефон с плотной страницей текста, мужская рука держит его, остальное в темноте.",
+        "en": "A narrow bed in a plain room at night: a phone glowing on the pillow with a dense page of text, a man's hand holding it, the rest dark.",
+        "pt": "Uma cama estreita num quarto simples à noite: um telemóvel aceso na almofada com uma página densa de texto, a mão de um homem a segurá-lo, o resto escuro.",
+        "es": "Una cama estrecha en una habitación sencilla de noche: un móvil encendido sobre la almohada con una página densa de texto, la mano de un hombre sosteniéndolo, el resto a oscuras."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAetF8oqQAAP7wCRyd3KkbZCLDZEH/Kt7Ds4jz5R55gIWF/cQIsASAAA==",
+      "hash": "4de33515c3f9ff3a",
+      "generatedAt": "2026-10-01T01:42:05.785Z"
+    },
+    {
+      "id": "ba-interlude-dream",
+      "book": "bugs-academy",
+      "chapter": "interlude",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A dreamlike landscape: a vast glowing network stretching from horizon to horizon over dark ground, pulsing nodes connected by luminous threads, each node a tiny point of warm light like a lit window; a tiny figure stands at the edge looking at it.",
+      "alt": {
+        "ru": "Пейзаж из сна: огромная светящаяся сеть от горизонта до горизонта, узлы, как освещённые окна, связаны нитями света; на краю стоит крошечная фигура.",
+        "en": "A dream landscape: a vast glowing network from horizon to horizon, nodes like lit windows joined by threads of light, a tiny figure at the edge.",
+        "pt": "Uma paisagem de sonho: uma vasta rede luminosa de horizonte a horizonte, nós como janelas acesas ligados por fios de luz, uma figura minúscula na margem.",
+        "es": "Un paisaje de sueño: una vasta red luminosa de horizonte a horizonte, nodos como ventanas encendidas unidos por hilos de luz, una figura diminuta al borde."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC/OCHgNSM4/4a3BtzYaAAA/uxVxSRa1VHMubuUPONyBEBWrwuf3sU08GWkStSrRWmsob4T3ied34r4R9gA",
+      "hash": "28c5ae3933b73dbc",
+      "generatedAt": "2026-10-01T01:42:09.922Z"
+    }
+  ]
+}

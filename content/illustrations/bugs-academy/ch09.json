@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch09-glass",
+      "book": "bugs-academy",
+      "chapter": "ch09",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A plain drinking glass full of water on a wooden table, split cleanly from top to bottom by a single perfectly straight vertical crack, water just beginning to bead along the line. A young man's silhouette across the table, staring at it.",
+      "alt": {
+        "ru": "Обычный стакан с водой на столе, расколотый сверху донизу одной идеально ровной вертикальной трещиной; по ту сторону стола на него смотрит силуэт парня.",
+        "en": "A plain glass of water on a table split top to bottom by one perfectly straight crack, a young man's silhouette staring at it across the table.",
+        "pt": "Um copo de água comum numa mesa, rachado de cima a baixo por uma única fissura perfeitamente reta, a silhueta de um jovem a olhá-lo do outro lado.",
+        "es": "Un vaso de agua corriente sobre una mesa, partido de arriba abajo por una única grieta perfectamente recta, la silueta de un joven mirándolo al otro lado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYABAAPu1iqk4ppaQiMAgBMB2JZwDCgCFTEaskA0AngAD+8qt0LUHCv9hs5DLfXhFMFK4lETc25rmH7UDq+rreI5qXlVUdnmpEAAAA",
+      "hash": "e7da0d3ab03d7a63",
+      "generatedAt": "2026-10-01T01:37:25.907Z"
+    }
+  ]
+}

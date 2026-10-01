@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch10-iero",
+      "book": "bugs-academy",
+      "chapter": "ch10",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Breakfast in a long dim room of an old house: five students sit at a table, and a very tall thin stranger has just walked in without knocking, standing in the doorway against the light, his face in shadow. Everyone has gone still.",
+      "alt": {
+        "ru": "Завтрак в длинной полутёмной комнате: пятеро учеников за столом, в дверях без стука встал очень высокий худой незнакомец, лицо в тени, все замерли.",
+        "en": "Breakfast in a long dim room: five students at a table, a very tall thin stranger standing unannounced in the doorway against the light, face in shadow, everyone frozen.",
+        "pt": "Pequeno-almoço numa sala comprida e escura: cinco alunos à mesa, um estranho muito alto e magro à porta contra a luz, rosto na sombra, todos imóveis.",
+        "es": "Desayuno en una sala larga y oscura: cinco alumnos a la mesa, un desconocido muy alto y delgado en la puerta a contraluz, la cara en sombra, todos inmóviles."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZwAAW49BYNRvG49FEwAA/u6TD98GbJT/3YSvK0rFk/3s0F9C6wyesQBvSYjmx5Jv63+rm5OjJNZfYJG2QkastZOaJ3vyyaxc00FWtuLC8sU0XLGAAA==",
+      "hash": "87514b86c2ec9524",
+      "generatedAt": "2026-10-01T01:37:56.753Z"
+    }
+  ]
+}

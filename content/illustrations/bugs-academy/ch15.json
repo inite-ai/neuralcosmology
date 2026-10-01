@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch15-archaeology",
+      "book": "bugs-academy",
+      "chapter": "ch15",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long table covered with old books and manuscripts from many traditions, open on top of each other in layers: scrolls, bound codices, palm-leaf pages, a worn notebook on top; a lamp and a magnifying glass; two people bending over them at the edge of the light.",
+      "alt": {
+        "ru": "Длинный стол, заваленный старыми книгами и рукописями разных традиций, раскрытыми слоями: свитки, кодексы, пальмовые листы, сверху потрёпанный блокнот; лампа и лупа.",
+        "en": "A long table covered in old books and manuscripts of many traditions open in layers: scrolls, codices, palm-leaf pages, a worn notebook on top; a lamp and a magnifier.",
+        "pt": "Uma longa mesa coberta de livros e manuscritos antigos de muitas tradições, abertos em camadas: rolos, códices, folhas de palmeira, um caderno gasto por cima; candeeiro e lupa.",
+        "es": "Una larga mesa cubierta de libros y manuscritos antiguos de muchas tradiciones abiertos en capas: rollos, códices, hojas de palma, un cuaderno gastado encima; lámpara y lupa."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAW+pnDmP55iek34nAAP7ymEfdftnAs0GxQ5eJLZFm1Zu7bEdmVkULYfcBteSkj3sdaHm59H+Dd8Y1812asf4CAA==",
+      "hash": "500b3651eca59d77",
+      "generatedAt": "2026-10-01T01:39:02.401Z"
+    }
+  ]
+}

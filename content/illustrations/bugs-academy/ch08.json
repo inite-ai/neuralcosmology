@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch08-window",
+      "book": "bugs-academy",
+      "chapter": "ch08",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Evening at a window of an old dacha: a man seen from behind sits on the sill looking out at a dark forest, and the trees outside are rendered like overlapping frames of a film, slightly offset, as if the world were a sequence of stills.",
+      "alt": {
+        "ru": "Вечер у окна старой дачи: мужчина со спины смотрит на тёмный лес, а деревья за окном двоятся, как наложенные кадры плёнки.",
+        "en": "Evening at a dacha window: a man from behind looks at a dark forest, the trees outside doubled like overlapping film frames.",
+        "pt": "Fim de tarde à janela de uma dacha: um homem de costas olha a floresta escura, as árvores lá fora duplicadas como fotogramas sobrepostos.",
+        "es": "Atardecer en la ventana de una dacha: un hombre de espaldas mira un bosque oscuro, los árboles duplicados como fotogramas superpuestos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwABHZ/npQbPbUpTw8bEAAD+/koBSCwf6dm482e4+RT3zsr2In8GFjpJB11Juh5ftv3tBQe251bn2jaz6Z12UhH/Euf3B7UnAx2/uhhcgAAA",
+      "hash": "6d3008f91268ad0c",
+      "generatedAt": "2026-10-01T01:37:28.342Z"
+    }
+  ]
+}

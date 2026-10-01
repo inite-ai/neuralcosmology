@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch17-incubator",
+      "book": "bugs-academy",
+      "chapter": "ch17",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old laboratory egg incubator with a glass lid on a bench in a dim room; inside, instead of eggs, a small glowing blue planet rests in the warm light of the incubator lamp, wisps of cloud visible on it.",
+      "alt": {
+        "ru": "Старый лабораторный инкубатор со стеклянной крышкой на столе в полутёмной комнате; внутри вместо яиц в тёплом свете лампы лежит маленькая светящаяся планета с облаками.",
+        "en": "An old lab incubator with a glass lid on a bench in a dim room; inside, instead of eggs, a small glowing planet with wisps of cloud rests in the warm lamplight.",
+        "pt": "Uma velha incubadora de laboratório com tampa de vidro numa sala escura; lá dentro, em vez de ovos, um pequeno planeta luminoso com nuvens repousa sob a lâmpada.",
+        "es": "Una vieja incubadora de laboratorio con tapa de cristal en una sala en penumbra; dentro, en lugar de huevos, un pequeño planeta luminoso con nubes descansa bajo la lámpara."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwCkgB5TFaf3mxBgAAD+70xGaemjgQlNgPtdS83GaBhrblqIWhve2i9BpFVXB4zA/YGhMYLVrxjjKAA=",
+      "hash": "a2553034d037b9d3",
+      "generatedAt": "2026-10-01T01:39:32.197Z"
+    },
+    {
+      "id": "ba-ch17-porch-talk",
+      "book": "bugs-academy",
+      "chapter": "ch17",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Night on a dacha porch: a man sits on the steps with a grey cat on his knees, and a young dark-haired woman has quietly sat down beside him; both look out at the black forest, a faint light from the house behind them.",
+      "alt": {
+        "ru": "Ночь на крыльце дачи: мужчина сидит на ступеньках с серым котом на коленях, рядом тихо села темноволосая девушка, оба смотрят на чёрный лес.",
+        "en": "Night on a dacha porch: a man on the steps with a grey cat on his knees, a dark-haired young woman quietly sitting beside him, both looking at the black forest.",
+        "pt": "Noite no alpendre de uma dacha: um homem nos degraus com um gato cinzento nos joelhos, uma jovem de cabelo escuro sentada ao lado, ambos a olhar a floresta negra.",
+        "es": "Noche en el porche de una dacha: un hombre en los escalones con un gato gris en las rodillas, una joven de pelo oscuro sentada a su lado, ambos mirando el bosque negro."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQC2yCHJYc+BQAD9wIXxbQ0gh9p8XZ7TRsfi402cxCvPL9Q3ILn1WXwMAA==",
+      "hash": "08ffab52dc5ffcab",
+      "generatedAt": "2026-10-01T01:40:01.803Z"
+    }
+  ]
+}

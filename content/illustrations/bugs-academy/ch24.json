@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch24-through",
+      "book": "bugs-academy",
+      "chapter": "ch24",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A man seen from behind stepping into a narrow glowing rift in the air of a dark forest; his legs and back are already dissolving into fine lines and points of light where they cross the threshold, while the wet grass behind him remains ordinary.",
+      "alt": {
+        "ru": "Мужчина со спины шагает в узкую светящуюся щель в воздухе тёмного леса; ноги и спина на пороге уже распадаются на тонкие линии и точки света.",
+        "en": "A man from behind stepping into a narrow glowing rift in the air of a dark forest, his legs and back dissolving into fine lines and points of light at the threshold.",
+        "pt": "Um homem de costas a entrar numa fenda luminosa estreita no ar de uma floresta escura, as pernas e as costas a desfazer-se em linhas finas e pontos de luz no limiar.",
+        "es": "Un hombre de espaldas entrando en una estrecha grieta luminosa en el aire de un bosque oscuro, sus piernas y espalda deshaciéndose en finas líneas y puntos de luz en el umbral."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZQC7MoADT82V2ZfJHtnAAP7yo9cm4/E26M5aH1p1AdNSWn+OF64TeViL8PPOosd80AAA",
+      "hash": "452a4f92ddb69b54",
+      "generatedAt": "2026-10-01T01:41:36.257Z"
+    }
+  ]
+}

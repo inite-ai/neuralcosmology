@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch11-threads",
+      "book": "bugs-academy",
+      "chapter": "ch11",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A wooden table at a snowy-window morning, tea cups, a few people sitting around it seen from behind or in shadow; through the air between them run faint warm shimmering currents, like heat haze or threads of light, linking each person to the others and out through the window into the forest.",
+      "alt": {
+        "ru": "Утренний стол у заснеженного окна, чашки, несколько человек; между ними в воздухе тянутся еле заметные тёплые потоки, как марево или нити света, и уходят в лес за окном.",
+        "en": "A morning table by a snowy window, cups, a few people; faint warm currents like heat haze or threads of light run between them and out into the forest.",
+        "pt": "Uma mesa de manhã junto a uma janela com neve, chávenas, algumas pessoas; correntes ténues e quentes, como miragem ou fios de luz, ligam-nas e saem para a floresta.",
+        "es": "Una mesa matinal junto a una ventana nevada, tazas, algunas personas; tenues corrientes cálidas como calima o hilos de luz las unen y salen hacia el bosque."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoYABAAPu1kqU2ppaOiMAgBMB2JZQAD5GoHkedtMm5UE39BOqAAAP7uh6/IyhIXa1TJl01aogl8j3g4BU2ZWGSVUHoHsugyqD9sTH33A5jGSfVXTjvqk9SjR93VHWHqQlDkEoRVaKtOmOQ7uMoSkpJAq/9b0KEAAAA=",
+      "hash": "1818aa46566e067d",
+      "generatedAt": "2026-10-01T01:38:01.960Z"
+    }
+  ]
+}

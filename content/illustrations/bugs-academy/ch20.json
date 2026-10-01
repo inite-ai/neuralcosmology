@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch20-marek",
+      "book": "bugs-academy",
+      "chapter": "ch20",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A plain room with a table, a chair, books and a window, but it feels as cold as a refrigerator: frost creeping across the window panes from the inside, the breath of a visitor visible in the air. A very old man sits at the table drinking tea mechanically, his face in shadow.",
+      "alt": {
+        "ru": "Обычная комната со столом, книгами и окном, но в ней холодно, как в холодильнике: изнутри по стёклам ползёт иней, у гостя видно дыхание; очень старый человек механически пьёт чай.",
+        "en": "A plain room with a table, books and a window, yet cold as a fridge: frost creeping across the panes from inside, a visitor's breath visible; a very old man mechanically drinking tea.",
+        "pt": "Uma sala simples com mesa, livros e janela, mas fria como um frigorífico: geada a cobrir os vidros por dentro, o hálito de um visitante visível; um homem muito velho a beber chá mecanicamente.",
+        "es": "Una sala sencilla con mesa, libros y ventana, pero fría como una nevera: escarcha cubriendo los cristales por dentro, el aliento de un visitante visible; un hombre muy viejo bebiendo té mecánicamente."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwCsABufBh+hGFzPjZzKAAD+5r4OsYg7Cgc3nwkPFIRCyYcdQuHtMLmJsIbYzcNKXm1Q4VdOqMAu64AAAA==",
+      "hash": "1aec8d680b016bce",
+      "generatedAt": "2026-10-01T01:40:30.224Z"
+    }
+  ]
+}

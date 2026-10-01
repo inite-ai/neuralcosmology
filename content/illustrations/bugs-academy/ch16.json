@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch16-three-paths",
+      "book": "bugs-academy",
+      "chapter": "ch16",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A fork in a snowy forest path where it splits into three: one path straight, neat and lined with planted trees; one torn up and littered with fallen trunks; one faint, barely trodden, disappearing among birches. An old man and a younger man stand at the fork from behind.",
+      "alt": {
+        "ru": "Развилка лесной тропы в снегу на три пути: прямой и ровный, разорванный и заваленный стволами, едва протоптанный среди берёз; старик и мужчина помоложе стоят у развилки спиной к нам.",
+        "en": "A snowy forest path forking three ways: one straight and neat, one torn and littered with trunks, one faint among birches; an old man and a younger one at the fork, backs to us.",
+        "pt": "Um trilho com neve a dividir-se em três: um reto e arrumado, um rasgado e cheio de troncos, um ténue entre bétulas; um velho e um homem mais novo na bifurcação, de costas.",
+        "es": "Un sendero nevado que se divide en tres: uno recto y ordenado, otro roto y lleno de troncos, otro tenue entre abedules; un anciano y un hombre más joven en la bifurcación, de espaldas."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDA3CF59Aqf6TmZGKdPS1jQlgAA/ubKtbhtkAWrLA8fHM6ReffF/CoscOm/9l3I39ssEs4gVsltltejWBbp1+rvnLqTHLZT+WgJy/Tf21qpNFwsmrYYO9TXSK9pxI0wXHelwQAAAA==",
+      "hash": "e6bc5cb8c065d53f",
+      "generatedAt": "2026-10-01T01:39:29.763Z"
+    },
+    {
+      "id": "ba-ch16-pines",
+      "book": "bugs-academy",
+      "chapter": "ch16",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A bend in a forest path between two tall pines at dusk: a slight young woman with dark hair stands in the middle of the path with her arms at her sides, perfectly still, and the air around her seems dense and heavy, the snow on the ground pressed flat in a circle around her feet.",
+      "alt": {
+        "ru": "Поворот лесной тропы между двумя соснами в сумерках: посреди тропы неподвижно стоит хрупкая темноволосая девушка, воздух вокруг неё будто тяжелеет, снег вокруг ног примят кругом.",
+        "en": "A bend in a forest path between two pines at dusk: a slight dark-haired young woman stands perfectly still, the air around her seemingly heavy, the snow pressed flat in a circle around her feet.",
+        "pt": "Uma curva de um trilho entre dois pinheiros ao anoitecer: uma jovem franzina de cabelo escuro, imóvel, o ar à volta pesado, a neve achatada num círculo à volta dos pés.",
+        "es": "Una curva del sendero entre dos pinos al anochecer: una joven menuda de pelo oscuro, inmóvil, el aire a su alrededor como más pesado, la nieve aplastada en un círculo a sus pies."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoYABAAPu1kqk4ppaQiMAgBMB2JZwAAXGoiXvVmxLcaWTzB8AD+8rERuNtDDZ48Uj53wr0lTzjxj6njJmAOSIuETxcuWY/D5owAAA==",
+      "hash": "837799d814ffad70",
+      "generatedAt": "2026-10-01T01:39:33.620Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch23-rift",
+      "book": "bugs-academy",
+      "chapter": "ch23",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A forest clearing at dusk where the air itself has torn open: a narrow vertical rift hangs above the grass, and through it pours a pale, fractal, wave-like light; a few figures stand at a distance, one of them leaning back as if hit by a wind.",
+      "alt": {
+        "ru": "Лесная поляна в сумерках, где разорвался сам воздух: над травой висит узкая вертикальная щель, из неё льётся бледный фрактальный свет волной; поодаль стоят фигуры, одну будто отбросило ветром.",
+        "en": "A forest clearing at dusk where the air has torn: a narrow vertical rift above the grass pouring pale fractal light like a wave; figures at a distance, one leaning back as if hit by wind.",
+        "pt": "Uma clareira ao anoitecer onde o próprio ar se rasgou: uma fenda vertical estreita sobre a relva a verter uma luz pálida e fractal como uma onda; figuras ao longe, uma a recuar como empurrada pelo vento.",
+        "es": "Un claro al anochecer donde el propio aire se ha rasgado: una estrecha grieta vertical sobre la hierba vierte una luz pálida y fractal como una ola; figuras a distancia, una echada hacia atrás como por el viento."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZQC7ABhzk7F6P8LbDf0AAP7vTAPC4jVaeY3+0Wkd925wm1K/f5ZKll2/bwBpva7ChcneJF4C2NrJjSz2mFveAAA=",
+      "hash": "272a91c9d4b1a2e3",
+      "generatedAt": "2026-10-01T01:41:07.814Z"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "ba-ch02-floor",
+      "book": "bugs-academy",
+      "chapter": "ch02",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The narrow entrance corridor of a small Moscow flat in grey early-morning light: a man lies asleep on the floor between a coat rack and the bathroom door, in shorts and one sock, as if he had simply dropped there. Seen from the doorway, his face turned away.",
+      "alt": {
+        "ru": "Узкая прихожая маленькой квартиры в сером утреннем свете: на полу между вешалкой и дверью в ванную спит мужчина в трусах и одном носке, лицом от нас.",
+        "en": "The narrow hallway of a small flat in grey morning light: a man asleep on the floor between the coat rack and the bathroom door, in shorts and one sock, face turned away.",
+        "pt": "O corredor estreito de um pequeno apartamento na luz cinzenta da manhã: um homem a dormir no chão entre o cabide e a porta da casa de banho, de cuecas e uma meia, de rosto virado.",
+        "es": "El estrecho recibidor de un piso pequeño con la luz gris de la mañana: un hombre dormido en el suelo entre el perchero y la puerta del baño, en calzoncillos y un calcetín, con la cara vuelta."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JZQAAWnLxIJ6FewQAAP70KNvwRHbEnBW8MCm3MhZ5H4xLlGyfMDQTKgbvz/hpJmlBXzBNVdYQt+wQXxUhPhpS9Rg4VfOAgAA=",
+      "hash": "1fd079d583238554",
+      "generatedAt": "2026-10-01T01:35:28.708Z"
+    },
+    {
+      "id": "ba-ch02-zoya",
+      "book": "bugs-academy",
+      "chapter": "ch02",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A bench by a Moscow institute in November at lunchtime: a young woman with dark hair and a fringe, seen in profile from a distance with her face lowered, sketches in a notebook on her knees; wet leaves on the path, bare trees, a man in a jacket standing a few steps away looking at her drawings.",
+      "alt": {
+        "ru": "Скамейка у института в ноябрьский обед: темноволосая девушка с чёлкой, низко склонившись, рисует в блокноте на коленях, в нескольких шагах стоит мужчина и смотрит на рисунки.",
+        "en": "A bench by an institute at lunchtime in November: a dark-haired young woman with a fringe bends low over a notebook on her knees, a man a few steps away looking at her drawings.",
+        "pt": "Um banco junto a um instituto à hora de almoço em novembro: uma jovem de cabelo escuro e franja, debruçada sobre um caderno nos joelhos, um homem a poucos passos a olhar para os desenhos.",
+        "es": "Un banco junto a un instituto a la hora de comer en noviembre: una joven de pelo oscuro y flequillo, inclinada sobre un cuaderno en las rodillas, un hombre a unos pasos mirando sus dibujos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAASpVu+wBNGTl4rWGAAP7ysoc2D18FrqmCYPKIWKwYARdh+MmaSNVlEXpZIZfqitfnOlgd7mHGdC/sUrMWrEes/eKis7f4AKlImMjTsLAsPl2MvoD7XbVrYPAAAAA=",
+      "hash": "22e44896b240bc08",
+      "generatedAt": "2026-10-01T01:35:32.110Z"
+    },
+    {
+      "id": "ba-ch02-drawings",
+      "book": "bugs-academy",
+      "chapter": "ch02",
+      "scene": 8,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Evening in a small flat: a cup of tea and a notebook under a desk lamp, its pages filled with hand-drawn patterns of lines, nodes and intersections, the same elements recombined page after page like letters of one alphabet. A man's hand turns a page.",
+      "alt": {
+        "ru": "Вечер в маленькой квартире: под лампой чай и блокнот, страницы заполнены узорами из линий, узлов и пересечений, рука мужчины переворачивает страницу.",
+        "en": "Evening in a small flat: tea and a notebook under a lamp, its pages full of patterns of lines, nodes and crossings, a man's hand turning a page.",
+        "pt": "Noite num pequeno apartamento: chá e um caderno sob o candeeiro, páginas cheias de padrões de linhas, nós e cruzamentos, a mão de um homem a virar a página.",
+        "es": "Noche en un piso pequeño: té y un cuaderno bajo la lámpara, páginas llenas de patrones de líneas, nudos y cruces, la mano de un hombre pasando la página."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZwAAXAYkOhK4PGUw4hUAAP7uf0rRHQVXwXbPY3U+APwHnzyzHj+659ur7rf3CfdYcRSAPD5mOdRiOuFw4KASKXoTjLwA",
+      "hash": "568846c6dc86c687",
+      "generatedAt": "2026-10-01T01:35:26.357Z"
+    }
+  ]
+}

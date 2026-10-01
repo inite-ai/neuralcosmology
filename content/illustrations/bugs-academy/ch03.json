@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch03-garden",
+      "book": "bugs-academy",
+      "chapter": "ch03",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Neskuchny Garden in Moscow in November: bare trees, wet benches, a gravel path, crows on the branches. On a distant bench sit two men: one in a dark jacket, the other an older East Asian man in a long grey coat, sitting very upright and still.",
+      "alt": {
+        "ru": "Нескучный сад в ноябре: голые деревья, мокрые скамейки, вороны на ветках; на дальней скамейке двое — мужчина в куртке и пожилой азиат в длинном сером пальто, сидящий очень прямо.",
+        "en": "Neskuchny Garden in November: bare trees, wet benches, crows on the branches; on a far bench two men, one in a jacket, the other an older East Asian man in a long grey coat, sitting very upright.",
+        "pt": "O jardim Neskuchny em novembro: árvores nuas, bancos molhados, corvos nos ramos; num banco ao longe dois homens, um de casaco, o outro um asiático mais velho de sobretudo cinzento, muito direito.",
+        "es": "El jardín Neskuchni en noviembre: árboles desnudos, bancos mojados, cuervos en las ramas; en un banco lejano dos hombres, uno con chaqueta y otro, un asiático mayor con abrigo gris largo, muy erguido."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACwAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JaQDE2A/giYr4hDC/gAD+7AW/kSXHejEC42O4ICbjTiHVujGogSKu7v6ZPurpZuON9vUkPACM3eAyyl0cwlL/XS9jd39Ct35xv4mi4C4AAA==",
+      "hash": "09865be081495844",
+      "generatedAt": "2026-10-01T01:35:59.492Z"
+    }
+  ]
+}

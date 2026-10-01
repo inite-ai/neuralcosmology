@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ba-ch05-escalator",
+      "book": "bugs-academy",
+      "chapter": "ch05",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long Moscow metro escalator at rush hour seen from the top: a dense stream of commuters descending, and between them, barely visible, faint threads of light connecting person to person like a living network.",
+      "alt": {
+        "ru": "Длинный эскалатор метро в час пик сверху: плотный поток людей спускается вниз, между ними едва заметно тянутся световые нити, как живая сеть.",
+        "en": "A long metro escalator at rush hour from above: a dense stream of commuters descending, faint threads of light connecting them like a living network.",
+        "pt": "Uma longa escada rolante do metro na hora de ponta vista de cima: um fluxo denso de pessoas a descer, fios de luz ténues a ligá-las como uma rede viva.",
+        "es": "Una larga escalera mecánica del metro en hora punta vista desde arriba: un denso flujo de viajeros bajando, tenues hilos de luz que los unen como una red viva."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC+SCHd8y3x0dQg8qIoAAD+741BR92dfr+8RL1rpbu4styNPj4TsuVriWakRmT0376nKkTfPZJJIB3MaP5uVDNlsd6s8NwUzoCgGbvAAA==",
+      "hash": "c59db137a286cc1d",
+      "generatedAt": "2026-10-01T01:36:28.907Z"
+    },
+    {
+      "id": "ba-ch05-jam",
+      "book": "bugs-academy",
+      "chapter": "ch05",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Moscow avenue in a winter evening traffic jam seen from inside a car: the driver's hands grip the wheel, the windscreen full of red tail lights, and across the whole scene the outlines of the cars and buildings dissolve into fine shimmering lines and nodes.",
+      "alt": {
+        "ru": "Вечерняя пробка на проспекте изнутри машины: руки водителя на руле, лобовое стекло в красных огнях, а контуры машин и домов распадаются на мерцающие линии и узлы.",
+        "en": "An evening traffic jam on an avenue from inside a car: the driver's hands on the wheel, a windscreen of red lights, the outlines of cars and buildings dissolving into shimmering lines and nodes.",
+        "pt": "Um engarrafamento ao anoitecer visto de dentro de um carro: as mãos do condutor no volante, o para-brisas cheio de luzes vermelhas, os contornos dos carros e prédios a desfazer-se em linhas e nós cintilantes.",
+        "es": "Un atasco al anochecer visto desde dentro de un coche: las manos del conductor en el volante, el parabrisas lleno de luces rojas, los contornos de coches y edificios deshaciéndose en líneas y nudos centelleantes."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAASmxzJX3V3U5qBzQA/tzlqkvda8gYqF40Cv/mNU01fC02M0SeS6rfVIFEK7a/uSkR8Bq+4yVpmqNPRX1i7hQJ/3YdQnnWfgvdt1EyyIQss9cfBzhh+F8f+WHYa1xzOAgA",
+      "hash": "85821391396d8a8d",
+      "generatedAt": "2026-10-01T01:36:32.025Z"
+    }
+  ]
+}

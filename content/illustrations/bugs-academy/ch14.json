@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch14-sysadmin",
+      "book": "bugs-academy",
+      "chapter": "ch14",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An immense, featureless space like a grey server hall without walls or ceiling, receding forever; far away, a single solitary figure sits at a small console, tending something endless. Silent and vast.",
+      "alt": {
+        "ru": "Бескрайнее пустое пространство, похожее на серый машинный зал без стен и потолка; далеко-далеко одинокая фигура сидит за маленьким пультом.",
+        "en": "An immense empty space like a grey machine hall without walls or ceiling; far away a single figure sits at a small console.",
+        "pt": "Um espaço imenso e vazio como uma sala de máquinas cinzenta sem paredes nem teto; muito ao longe, uma figura solitária sentada a uma pequena consola.",
+        "es": "Un espacio inmenso y vacío como una sala de máquinas gris sin paredes ni techo; muy a lo lejos, una figura solitaria sentada ante una pequeña consola."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQBACdASoYABAAPu1mq04ppaQiMAgBMB2JZwDE2CHfHdzgZoReJ+WeAAD+8NVkQXvju0jsV20fD9Sa8WAJ49B0YAAAAA==",
+      "hash": "b2ce6a59671f2352",
+      "generatedAt": "2026-10-01T01:38:55.767Z"
+    }
+  ]
+}
