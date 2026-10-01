@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "cs-ch03-cooling",
+      "book": "conscious-selection",
+      "chapter": "ch03",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A server room aisle in near darkness: tall racks of machines with tiny status lights, thick cooling pipes overhead, heat shimmer in the air. At the far end, a single anonymous engineer stands looking at it all.",
+      "alt": {
+        "ru": "Проход машинного зала в полутьме: высокие стойки с огоньками, толстые трубы охлаждения, в конце прохода стоит инженер.",
+        "en": "A server-room aisle in near darkness: tall racks with tiny lights, thick cooling pipes, an engineer standing at the far end.",
+        "pt": "Um corredor de sala de servidores na penumbra: bastidores altos com pequenas luzes, tubos de refrigeração, um engenheiro ao fundo.",
+        "es": "Un pasillo de sala de servidores en penumbra: bastidores altos con lucecitas, gruesas tuberías de refrigeración, un ingeniero al fondo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JaQAAetDODLWAAP7wdadH0Eudmarp+XS2jkaJIdK9C6kZhE4s5wQHcJTDQysAAAA=",
+      "hash": "b8de033a69987310",
+      "generatedAt": "2026-10-01T01:13:51.915Z"
+    },
+    {
+      "id": "cs-ch03-teacup",
+      "book": "conscious-selection",
+      "chapter": "ch03",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A white porcelain teacup with steam rising from it floats in black space, small against an enormous dark sphere whose edge is outlined by a thin bright ring of swirling light. The cup is about to cross the edge.",
+      "alt": {
+        "ru": "Фарфоровая чашка с паром парит в чёрном пространстве у края огромной тёмной сферы, обведённой тонким светящимся кольцом.",
+        "en": "A steaming porcelain cup floats in black space at the edge of a huge dark sphere ringed with thin light.",
+        "pt": "Uma chávena de porcelana fumegante flutua no espaço negro junto à borda de uma enorme esfera escura rodeada por um fino anel de luz.",
+        "es": "Una taza de porcelana humeante flota en el espacio negro junto al borde de una enorme esfera oscura rodeada por un fino anillo de luz."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAXK/296/VqgAA/vQrWLZNYYwivmqCML1eEYXs6NMjX2i4qTvdQv8voXU1Q4AAAA==",
+      "hash": "11d94dfc5005e1d9",
+      "generatedAt": "2026-10-01T01:13:54.071Z"
+    },
+    {
+      "id": "cs-ch03-laptop",
+      "book": "conscious-selection",
+      "chapter": "ch03",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An ordinary closed laptop on a plain wooden table, but glowing from within like a small star: white-hot light pouring from its seams, the table and the walls of the dark room lit by it as if by a furnace.",
+      "alt": {
+        "ru": "Обычный закрытый ноутбук на столе светится изнутри, как маленькая звезда: из щелей бьёт белый свет и освещает тёмную комнату.",
+        "en": "An ordinary closed laptop on a table glows from within like a small star, white light pouring from its seams into the dark room.",
+        "pt": "Um portátil fechado comum numa mesa brilha por dentro como uma pequena estrela, luz branca a sair das frestas para o quarto escuro.",
+        "es": "Un portátil cerrado corriente sobre una mesa brilla por dentro como una pequeña estrella, luz blanca saliendo por las juntas hacia la habitación oscura."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwC/OB6XR9jxtGduHhIngAAA/vK0jX3Il3pP5Tvm3aQ/El8QABSMXAI/Uw9bndS5Z80yjIqkkgv2jjUX8PvVPjtGPrYap3331/C/yavttJWrVcAAAA==",
+      "hash": "47c34c2e7ed5f1fd",
+      "generatedAt": "2026-10-01T01:14:26.079Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude13-thread",
+      "book": "conscious-selection",
+      "chapter": "interlude13",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "In darkness, two hands gently pull a single pale thread out of a dense tangled ball of yarn; the thread comes out smoothly and the ball has begun to unwind across the table.",
+      "alt": {
+        "ru": "В темноте две руки вытягивают одну светлую нить из спутанного клубка, клубок начинает разматываться по столу.",
+        "en": "In darkness, two hands pull a single pale thread from a tangled ball, which begins to unwind across the table.",
+        "pt": "No escuro, duas mãos puxam um único fio claro de um novelo emaranhado, que começa a desenrolar-se sobre a mesa.",
+        "es": "En la oscuridad, dos manos tiran de un solo hilo claro de un ovillo enredado, que empieza a desenrollarse sobre la mesa."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDG9CHfRjCdIeG4l+TSgAD+8L7G8jYf7Ps7lVrD1tUv5STUqoSbCCc8NSakKkx+gwCiDvkSS1AAAAA=",
+      "hash": "39d3817e300a5974",
+      "generatedAt": "2026-10-01T01:17:22.754Z"
+    }
+  ]
+}

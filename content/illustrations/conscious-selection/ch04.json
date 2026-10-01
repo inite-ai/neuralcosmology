@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "cs-ch04-first-day",
+      "book": "conscious-selection",
+      "chapter": "ch04",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old, faded school classroom photograph seen as if half remembered: rows of children from behind at wooden desks, a tall window with autumn light, the edges of the image washed out and partly dissolved as though the memory is being rewritten.",
+      "alt": {
+        "ru": "Старая выцветшая фотография класса: дети со спины за партами, высокое окно, края снимка расплываются, будто воспоминание переписывается.",
+        "en": "An old faded classroom photo: children from behind at desks, a tall window, the edges dissolving as if the memory were being rewritten.",
+        "pt": "Uma velha fotografia desbotada de sala de aula: crianças de costas nas carteiras, uma janela alta, as margens a dissolver-se como uma memória reescrita.",
+        "es": "Una vieja foto descolorida de un aula: niños de espaldas en los pupitres, una ventana alta, los bordes disolviéndose como un recuerdo reescrito."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC06BxswFkwmxqNgq6CsAD+7qGu66CrsxTwjW8W4vXHi13XUAEpjnbbx2uU9iIyRucpQm8ucp6iEtn61gCUx8UVX70wAAA=",
+      "hash": "ff30389fd3a57b6b",
+      "generatedAt": "2026-10-01T01:14:24.021Z"
+    },
+    {
+      "id": "cs-ch04-conditioning",
+      "book": "conscious-selection",
+      "chapter": "ch04",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small laboratory conditioning chamber: a white rat crouches motionless, frozen, on a metal grid floor inside a box; a small loudspeaker is mounted on the wall of the box. A researcher's hand rests on a switch outside. Clinical, quiet.",
+      "alt": {
+        "ru": "Камера для опытов: белая крыса замерла на металлической решётке, на стенке ящика маленький динамик, снаружи рука исследователя на выключателе.",
+        "en": "A conditioning chamber: a white rat frozen on a metal grid, a small speaker on the wall of the box, a researcher's hand on a switch outside.",
+        "pt": "Uma câmara de condicionamento: um rato branco imóvel numa grelha metálica, um pequeno altifalante na parede, a mão de um investigador num interruptor.",
+        "es": "Una cámara de condicionamiento: una rata blanca inmóvil sobre una rejilla metálica, un pequeño altavoz en la pared, la mano de un investigador en un interruptor."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDE2B7DlhM1IAD+8N9nWACEox6adoEW4rFPKOfyLbT2Qji3plUKOdSzmhDmjGXHVCZpmQSQbwp6G8AAAA==",
+      "hash": "9c90264b3fc65d07",
+      "generatedAt": "2026-10-01T01:14:24.006Z"
+    },
+    {
+      "id": "cs-ch04-collision",
+      "book": "conscious-selection",
+      "chapter": "ch04",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A 1970s university seminar room in darkness. An audience of students seen from behind watches a grainy projected film of two cars colliding at an intersection; the projector beam cuts through the air above their heads.",
+      "alt": {
+        "ru": "Затемнённая аудитория 1970-х: студенты со спины смотрят зернистый фильм о столкновении двух машин, над головами луч проектора.",
+        "en": "A darkened 1970s lecture room: students from behind watch a grainy film of two cars colliding, a projector beam overhead.",
+        "pt": "Uma sala de aula dos anos 70 às escuras: estudantes de costas veem um filme granulado de dois carros a colidir, o feixe do projetor por cima.",
+        "es": "Un aula de los años setenta a oscuras: estudiantes de espaldas ven una película granulada de dos coches chocando, el haz del proyector encima."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwC2yCG6a4eNsBJ0lFq4AAD+8NbSk4Q2CJ0cqZ7+lClyf1jhBHoczEXl4hFGP7/J6xYUIT1bo77uHB92mBTE/hB4Ok6JlgAAAA==",
+      "hash": "721846701b47ee0b",
+      "generatedAt": "2026-10-01T01:14:52.792Z"
+    }
+  ]
+}

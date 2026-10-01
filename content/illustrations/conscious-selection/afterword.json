@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-afterword-forest",
+      "book": "conscious-selection",
+      "chapter": "afterword",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old forest at dusk: a huge fallen trunk lies across the ground covered in moss, and around it young trees rise straight and close together; the canopy above is unbroken.",
+      "alt": {
+        "ru": "Старый лес в сумерках: поперёк земли лежит огромный замшелый ствол, вокруг него тесно поднимаются молодые деревья, полог над ними цел.",
+        "en": "An old forest at dusk: a huge mossy fallen trunk across the ground, young trees rising close around it, the canopy unbroken.",
+        "pt": "Uma floresta antiga ao entardecer: um enorme tronco caído coberto de musgo, árvores jovens a erguer-se à volta, a copa intacta.",
+        "es": "Un bosque viejo al anochecer: un enorme tronco caído cubierto de musgo, árboles jóvenes alzándose alrededor, el dosel intacto."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoYABAAPu1Ct1apoqakGAEwHYlnAMb0Id7UIsPDPKgA/vMeez/VJdBbllrwmsCmm8NBVbLXgm6xYW0xWAAAAA==",
+      "hash": "ad8f1a523dee7d66",
+      "generatedAt": "2026-10-01T01:13:28.967Z"
+    }
+  ]
+}

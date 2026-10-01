@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch13-beyond",
+      "book": "conscious-selection",
+      "chapter": "ch13",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A large old map spread on a table in a dark room, lit by a single lamp. A hand rests on the map and points with one finger past its edge, into the unlit darkness of the bare table beyond the paper.",
+      "alt": {
+        "ru": "Старая карта на столе в тёмной комнате, рука указывает пальцем за её край, в неосвещённую пустоту.",
+        "en": "An old map on a table in a dark room, a hand pointing one finger past its edge into the unlit emptiness.",
+        "pt": "Um mapa antigo numa mesa num quarto escuro, uma mão a apontar para lá da borda, para o vazio sem luz.",
+        "es": "Un mapa antiguo sobre una mesa en una habitación oscura, una mano señala más allá de su borde, hacia el vacío sin luz."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDG9CHf4/ZHVhZTEDyAAP7wyd1d0R6eORbthLmCm4XF4ilt2ZSjIzsoQU8YMy+1aZOpEHEAAA==",
+      "hash": "55df53c130d392c6",
+      "generatedAt": "2026-10-01T01:16:45.214Z"
+    }
+  ]
+}

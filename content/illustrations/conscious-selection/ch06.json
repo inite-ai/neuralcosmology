@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cs-ch06-chair",
+      "book": "conscious-selection",
+      "chapter": "ch06",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An ordinary wooden chair alone in a dim room, crossed by a single shaft of window light so dense with drifting dust that the air itself looks like a storm of tiny particles striking the chair from every side.",
+      "alt": {
+        "ru": "Деревянный стул в полутёмной комнате в луче света, полном пыли: кажется, что со всех сторон по нему стучат крошечные частицы.",
+        "en": "A wooden chair in a dim room in a shaft of light thick with dust, as if tiny particles were striking it from every side.",
+        "pt": "Uma cadeira de madeira num quarto escuro, atravessada por um raio de luz cheio de poeira, como se partículas a atingissem de todos os lados.",
+        "es": "Una silla de madera en una habitación en penumbra, atravesada por un haz de luz lleno de polvo, como si partículas la golpearan por todos lados."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDE2CPQNbt799cjHivlJIoAAPa9kYhu781NHLfLb4UOtcrIN7ZpcwymcNpvEViX4Fv1cX0u2Vsm4IAAAA==",
+      "hash": "ae1c3ebfe6d18a4c",
+      "generatedAt": "2026-10-01T01:15:16.513Z"
+    },
+    {
+      "id": "cs-ch06-interferometer",
+      "book": "conscious-selection",
+      "chapter": "ch06",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A physics laboratory in Vienna: a long stainless-steel vacuum tube on an optical table, wrapped in foil and cables, with a small heated oven at one end and a detector at the other. A physicist's silhouette adjusts a valve. Cool fluorescent light.",
+      "alt": {
+        "ru": "Физическая лаборатория: длинная стальная вакуумная труба на оптическом столе, на одном конце печка, на другом детектор, физик крутит вентиль.",
+        "en": "A physics lab: a long steel vacuum tube on an optical table, a small oven at one end and a detector at the other, a physicist turning a valve.",
+        "pt": "Um laboratório de física: um longo tubo de vácuo em aço numa mesa ótica, um pequeno forno numa ponta e um detetor na outra, um físico a rodar uma válvula.",
+        "es": "Un laboratorio de física: un largo tubo de vacío de acero sobre una mesa óptica, un pequeño horno en un extremo y un detector en el otro, un físico girando una válvula."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAwCdASoYABAALrV2u12jqampiYC0S0gABc7BAvQDk8JdlAAA/vhNDN+PSSsdv6U1IiNuxSgk+XsIu35B5l9IPWIRrkA022dNVQAXMYPOMAm6uAA=",
+      "hash": "1ead72ce52848253",
+      "generatedAt": "2026-10-01T01:15:22.976Z"
+    }
+  ]
+}

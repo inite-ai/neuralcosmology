@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude11-garden",
+      "book": "conscious-selection",
+      "chapter": "interlude11",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A botanical garden in a southern Russian city in early summer, late 1990s: two young men seen from behind lie on the grass under a large old tree, a couple of beer bottles beside them, a dirt path winding off between flower beds.",
+      "alt": {
+        "ru": "Ботанический сад южного города конца 1990-х: двое парней со спины лежат на траве под старым деревом, рядом пара пивных бутылок.",
+        "en": "A botanical garden in a southern city in the late 1990s: two young men from behind lying on the grass under an old tree, beer bottles beside them.",
+        "pt": "Um jardim botânico de uma cidade do sul no fim dos anos 90: dois jovens de costas deitados na relva sob uma árvore antiga, garrafas de cerveja ao lado.",
+        "es": "Un jardín botánico de una ciudad del sur a finales de los noventa: dos jóvenes de espaldas tumbados en la hierba bajo un árbol viejo, botellas de cerveza al lado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQBACdASoYABAAPu1kqk4ppaQiMAgBMB2JaQAAXAY6iskt/tYTdqGNAAD+8qQXCNbxVdePAw2glAIkunKeW+5OuNSCycU/X0fWnZlwRQnW59/wexqwCvycj7MUNlOpJ/TFOKb7QPRONLVtgAA=",
+      "hash": "0147d6ad278c9328",
+      "generatedAt": "2026-10-01T01:17:16.035Z"
+    }
+  ]
+}

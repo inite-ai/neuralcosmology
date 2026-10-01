@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude4-lamp",
+      "book": "conscious-selection",
+      "chapter": "interlude4",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Looking straight up from a small child's cot: a round frosted glass ceiling lamp on a short chain, softly glowing, filling most of the view; the edges of a high white ceiling and the rim of the cot just visible.",
+      "alt": {
+        "ru": "Взгляд снизу из детской кроватки: над головой круглая матовая лампа на короткой цепочке, по краям высокий белый потолок.",
+        "en": "Looking up from a child's cot: a round frosted lamp on a short chain overhead, a high white ceiling at the edges.",
+        "pt": "Olhando para cima a partir de um berço: um candeeiro redondo fosco numa corrente curta, um teto branco alto nas margens.",
+        "es": "Mirando hacia arriba desde una cuna: una lámpara redonda esmerilada en una cadena corta, un techo blanco y alto en los bordes."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZwAAUqmJWbI22DnuwAAA/vDfr2ocpFX2ISJ7JjtaPGoLvoQlhccTFTVK+90PrQTwoN6I/AQAAA==",
+      "hash": "f564c2ca0d423870",
+      "generatedAt": "2026-10-01T01:17:50.378Z"
+    },
+    {
+      "id": "cs-interlude4-corridor",
+      "book": "conscious-selection",
+      "chapter": "interlude4",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long Soviet hospital corridor at night: identical round frosted lamps hang in a row down the ceiling into the distance, linoleum floor reflecting them, a gurney parked against the wall.",
+      "alt": {
+        "ru": "Длинный больничный коридор ночью: в даль уходит ряд одинаковых круглых ламп, линолеум их отражает, у стены каталка.",
+        "en": "A long hospital corridor at night: a row of identical round lamps receding, linoleum reflecting them, a gurney by the wall.",
+        "pt": "Um longo corredor de hospital à noite: uma fila de candeeiros redondos idênticos ao longe, o linóleo a refleti-los, uma maca junto à parede.",
+        "es": "Un largo pasillo de hospital de noche: una fila de lámparas redondas idénticas a lo lejos, el linóleo reflejándolas, una camilla junto a la pared."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAW4Ua/gOqBbaHqYzOAAD+8M51PWucD34VycQT3wSl8FYtSmzGwrVD+KVxcPeAO8KddsXvcvLYjab3Vp7r1WlYSndh4Koh8KErFjoJOgIAAAA=",
+      "hash": "94e4e26370ff10e1",
+      "generatedAt": "2026-10-01T01:17:45.308Z"
+    }
+  ]
+}

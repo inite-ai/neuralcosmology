@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude9-ferry",
+      "book": "conscious-selection",
+      "chapter": "interlude9",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A 1990s car-and-passenger ferry crossing a narrow strait in summer haze, seen from its stern deck: a few passengers at the railing from behind, the low shore receding, gulls over the wake.",
+      "alt": {
+        "ru": "Паром 1990-х пересекает пролив в летней дымке: с кормы видны пассажиры у поручней, удаляющийся низкий берег и чайки над следом.",
+        "en": "A 1990s ferry crossing a strait in summer haze: passengers at the stern rail, a low shore receding, gulls over the wake.",
+        "pt": "Um ferry dos anos 90 a atravessar um estreito na neblina de verão: passageiros na amurada da popa, a costa baixa a afastar-se, gaivotas sobre a esteira.",
+        "es": "Un ferry de los noventa cruzando un estrecho en la calima de verano: pasajeros en la borda de popa, la costa baja alejándose, gaviotas sobre la estela."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoYABAAPu1iqk4ppaQiMAgBMB2JZwCsACBz/hMAYS2Ob7YmAAD+TDaaAjT+T9N3Sy6Pjk7ek/+DObZFlwjOTSj2xAMRcmxtc+i+mLHTZ7LVYmAG0/aFMiOmynJn1wzLUKjRzQPYEV1hTHQJtxoVpi217uyZfMbfpAA=",
+      "hash": "1f020e45d6795955",
+      "generatedAt": "2026-10-01T01:18:43.599Z"
+    },
+    {
+      "id": "cs-interlude9-panorama",
+      "book": "conscious-selection",
+      "chapter": "interlude9",
+      "scene": 3,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Siege_of_Sevastopol_fragment_2012_G01.jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Siege_of_Sevastopol_fragment_2012_G01.jpg/1920px-Siege_of_Sevastopol_fragment_2012_G01.jpg",
+        "author": "photo by George Chernilevsky",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      },
+      "alt": {
+        "ru": "Фрагмент огромного кругового полотна: батальная сцена с солдатами, дымом и укреплениями.",
+        "en": "A fragment of a huge circular painting: a battle scene with soldiers, smoke and fortifications.",
+        "pt": "Um fragmento de uma enorme pintura circular: uma cena de batalha com soldados, fumo e fortificações.",
+        "es": "Un fragmento de un enorme lienzo circular: una escena de batalla con soldados, humo y fortificaciones."
+      },
+      "caption": {
+        "ru": "Франц Рубо. Панорама «Оборона Севастополя», 1904. Фрагмент.",
+        "en": "Franz Roubaud, The Defence of Sevastopol panorama, 1904. Detail.",
+        "pt": "Franz Roubaud, panorama A Defesa de Sebastopol, 1904. Pormenor.",
+        "es": "Franz Roubaud, panorama La defensa de Sebastopol, 1904. Detalle."
+      },
+      "width": 1600,
+      "height": 739,
+      "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoYAAsAPu1iqU2ppaOiMAgBMB2JZwAAW/GJB3Z4p+bqrVVAAP7FEfqV92bP0CxLzV8A0TuYvL/hQoYFlkJtc4QZYH23Y11H7+H4YnsuoZOge8rFCAGXYAFwAAA=",
+      "hash": "2f49418259ddb19b",
+      "generatedAt": "2026-10-01T01:18:25.329Z"
+    }
+  ]
+}

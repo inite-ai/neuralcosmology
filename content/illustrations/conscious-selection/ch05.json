@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cs-ch05-mask",
+      "book": "conscious-selection",
+      "chapter": "ch05",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A white carnival mask turned around on a dark table so that its hollow inside faces the camera, lit from one side. Although it is concave, it reads unmistakably as a convex face pushing out of the shadow. Nothing else in the frame.",
+      "alt": {
+        "ru": "Белая карнавальная маска повёрнута к нам изнанкой, но выглядит выпуклым лицом, выступающим из тени.",
+        "en": "A white carnival mask turned inside-out toward us, yet it reads as a convex face emerging from shadow.",
+        "pt": "Uma máscara de carnaval branca virada do avesso para nós, mas parece um rosto convexo a sair da sombra.",
+        "es": "Una máscara de carnaval blanca vuelta del revés hacia nosotros, que aun así parece un rostro convexo saliendo de la sombra."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwDE2Yuu321a1WZHpimS2xNSAAD+6/UK1Trooe3XxNzzWL0E1DDTXytbPIGhMpQFiidcfHRYl8FRRfw/V/2EsjyVzt5fbNKEExHlVhcgAA==",
+      "hash": "60b9989a028c918e",
+      "generatedAt": "2026-10-01T01:14:51.822Z"
+    },
+    {
+      "id": "cs-ch05-dark-room",
+      "book": "conscious-selection",
+      "chapter": "ch05",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A completely empty small room in near darkness, a single wooden chair in the middle, a thin line of light under a closed door. Utterly still, nothing to see, nothing happening.",
+      "alt": {
+        "ru": "Пустая тёмная комната: посередине один деревянный стул, под закрытой дверью тонкая полоска света.",
+        "en": "An empty dark room: a single wooden chair in the middle, a thin line of light under a closed door.",
+        "pt": "Um quarto vazio e escuro: uma única cadeira de madeira ao centro, uma linha fina de luz sob a porta fechada.",
+        "es": "Una habitación vacía y oscura: una sola silla de madera en el centro, una fina línea de luz bajo la puerta cerrada."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABQAgCdASoYABAAA4BaJaQDMHEO+NoU0sCLU3AA/vhLLgYoV2+JHoXBtxGsGymiIKby9tj54wAAAA==",
+      "hash": "c58d1583210a234b",
+      "generatedAt": "2026-10-01T01:14:50.649Z"
+    }
+  ]
+}

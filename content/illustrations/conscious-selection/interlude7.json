@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude7-bus-stop",
+      "book": "conscious-selection",
+      "chapter": "interlude7",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Soviet city street at night in the late 1980s: a bus stop beside a large department store, every other streetlamp lit, a crowd of anonymous people waiting, a mother and a schoolboy standing among them seen from behind. Lit windows in a nine-storey block opposite.",
+      "alt": {
+        "ru": "Вечерняя остановка у универмага конца 1980-х: фонари горят через один, толпа ждёт автобус, среди людей мама со школьником со спины.",
+        "en": "An evening bus stop by a department store in the late 1980s: every other lamp lit, a waiting crowd, a mother and a schoolboy among them seen from behind.",
+        "pt": "Uma paragem de autocarro ao anoitecer junto a um armazém no fim dos anos 80: candeeiros acesos alternados, uma multidão à espera, uma mãe e um aluno de costas.",
+        "es": "Una parada de autobús al anochecer junto a unos grandes almacenes a finales de los ochenta: farolas encendidas una sí y otra no, una multitud esperando, una madre y un escolar de espaldas."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDLLB6JkHDygcSPe1U+AAD+6jLuly45MEKzU/njJL0lsOxZlGRHKGkSz9b3O1BQ5RaT6tqZpq5/rR0Kjcs/OYG5SjSuvuajdjW774HyQ/zV9FNaClBdZ/mQAA==",
+      "hash": "a0f9c08e1367c969",
+      "generatedAt": "2026-10-01T01:18:24.537Z"
+    }
+  ]
+}

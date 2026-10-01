@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude10-modem",
+      "book": "conscious-selection",
+      "chapter": "interlude10",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A teenager's room in the late 1990s at night: a beige desktop computer with a CRT monitor, an external dial-up modem with small glowing lights beside a rotary telephone whose handset lies off the hook. The teenager's silhouette waits in front of the screen.",
+      "alt": {
+        "ru": "Комната подростка в конце 1990-х ночью: бежевый компьютер, внешний модем с огоньками, рядом телефон со снятой трубкой, силуэт у экрана.",
+        "en": "A teenager's room at night in the late 1990s: a beige computer, an external modem with little lights, a phone with its handset off the hook, a silhouette at the screen.",
+        "pt": "Um quarto de adolescente no fim dos anos 90 à noite: um computador bege, um modem externo com luzinhas, um telefone com o auscultador fora do gancho, uma silhueta ao ecrã.",
+        "es": "El cuarto de un adolescente a finales de los noventa de noche: un ordenador beige, un módem externo con lucecitas, un teléfono descolgado, una silueta frente a la pantalla."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAwCdASoYABAAPu1iqk4ppaQiMAgBMB2JZQAAWlZdxfufAwg3wAD+7pOCtQ+dcJskJtF9YHajLxGRcrFYRIE7AZd4GZtNLMj0X30WwKfBO1ZYcq4gjdKgAAA=",
+      "hash": "8ef27575d3a2b17d",
+      "generatedAt": "2026-10-01T01:16:53.393Z"
+    }
+  ]
+}

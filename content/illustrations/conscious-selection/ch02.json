@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "cs-ch02-bulb",
+      "book": "conscious-selection",
+      "chapter": "ch02",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A single small incandescent light bulb, the kind found inside a refrigerator, glowing faintly in total darkness on a laboratory bench next to a preserved human brain resting on a tray. The bulb is the only light; the brain is lit from one side by it.",
+      "alt": {
+        "ru": "В темноте на лабораторном столе горит маленькая лампочка, рядом на подносе лежит человеческий мозг, освещённый только ею.",
+        "en": "In darkness on a lab bench a small bulb glows beside a human brain on a tray, lit only by it.",
+        "pt": "No escuro, numa bancada de laboratório, brilha uma pequena lâmpada ao lado de um cérebro humano numa bandeja, iluminado só por ela.",
+        "es": "En la oscuridad, sobre una mesa de laboratorio, brilla una pequeña bombilla junto a un cerebro humano en una bandeja, iluminado solo por ella."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoYABAAPu1kq04ppaQiMAgBMB2JZwAAW+s+cQqA11IAAP70GnaGjXzS8geByJSHNWaNJUG6ZzKzXKtdwqMSJYcKN4QAAA==",
+      "hash": "b1116a40c40a44c8",
+      "generatedAt": "2026-10-01T01:13:22.687Z"
+    },
+    {
+      "id": "cs-ch02-retina",
+      "book": "conscious-selection",
+      "chapter": "ch02",
+      "scene": 3,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Fundus_photograph-normal_retina_EDA06.JPG",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Fundus_photograph-normal_retina_EDA06.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "author": "unknown",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Снимок глазного дна: оранжевый круг сетчатки, от светлого диска зрительного нерва расходятся сосуды, в центре тёмное пятно.",
+        "en": "A fundus photograph: the orange disc of the retina, vessels branching from the pale optic disc, a darker spot at the centre.",
+        "pt": "Uma fotografia do fundo do olho: o disco alaranjado da retina, vasos a partir do disco ótico claro, uma mancha escura ao centro.",
+        "es": "Una fotografía del fondo de ojo: el disco anaranjado de la retina, vasos que parten del disco óptico claro, una mancha oscura en el centro."
+      },
+      "caption": {
+        "ru": "Глазное дно здорового глаза. Из светлого диска выходит зрительный нерв: около миллиона волокон на сто двадцать миллионов клеток.",
+        "en": "The fundus of a healthy eye. The optic nerve leaves through the pale disc: about a million fibres for a hundred and twenty million cells.",
+        "pt": "O fundo de um olho saudável. O nervo ótico sai pelo disco claro: cerca de um milhão de fibras para cento e vinte milhões de células.",
+        "es": "El fondo de un ojo sano. El nervio óptico sale por el disco claro: cerca de un millón de fibras para ciento veinte millones de células."
+      },
+      "width": 900,
+      "height": 630,
+      "placeholder": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAwBQCdASoYABEAPu1oqk8ppiOiMBgIATAdiWwAnTLVPD+XpMAARKelXCI/N7W4+ESvAAD+40lWOCvqQ1oOpYO6rCKoBRxdKlp1a9sQ0LlPbnJQBENLrmkTlo8omIF4NdEnVX0UoWPNz/Q4gjWF2ZPjz2Oei8HLTl9z8YYY4cV+iTzfEpsZ+SaM/I3zrwFGY+vMwbNnDmorEQNxy4zBoQpAAAA=",
+      "hash": "3725c6bb9e9e81a7",
+      "generatedAt": "2026-10-01T01:12:56.137Z"
+    },
+    {
+      "id": "cs-ch02-fovea",
+      "book": "conscious-selection",
+      "chapter": "ch02",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A busy railway station hall photographed so that only a tiny circle in the centre, the size of a thumbnail at arm's length, is perfectly sharp: one traveller's suitcase handle. Everything outside that circle dissolves progressively into soft blur and grain toward the edges.",
+      "alt": {
+        "ru": "Вокзальный зал, в котором резок только крошечный круг в центре — ручка чемодана; всё остальное к краям расплывается.",
+        "en": "A station hall where only a tiny circle at the centre is sharp, a suitcase handle; everything else blurs toward the edges.",
+        "pt": "Um átrio de estação onde só um pequeno círculo ao centro está nítido, a pega de uma mala; tudo o resto se desfoca para as margens.",
+        "es": "Un vestíbulo de estación donde solo un pequeño círculo central está nítido, el asa de una maleta; todo lo demás se desenfoca hacia los bordes."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQAFEAIZL6zsYKLbYIF+AAD+7uLg1w3y0CrbU8/5wiuHlcA+Fe/KGG10sEVLV7X5ESwuei3ECnNuVVBui2HrQ2IA2PTg6X7Ec7x8Qzs722QeD9/qbmJOmaJ1Q6OhkS/MwpynSAA=",
+      "hash": "e50ce733846b7a73",
+      "generatedAt": "2026-10-01T01:13:27.722Z"
+    }
+  ]
+}

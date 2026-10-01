@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch07-spectrometer",
+      "book": "conscious-selection",
+      "chapter": "ch07",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A chemistry laboratory at night: a mass spectrometer, a tall grey instrument with a glowing monitor beside it showing a jagged pattern of thin vertical peaks. A glass vial in a rack in front. No readable text.",
+      "alt": {
+        "ru": "Химическая лаборатория ночью: высокий масс-спектрометр, рядом монитор с частоколом тонких пиков, впереди пробирка в штативе.",
+        "en": "A chemistry lab at night: a tall mass spectrometer, a monitor beside it with a fence of thin peaks, a vial in a rack in front.",
+        "pt": "Um laboratório de química à noite: um espectrómetro de massa alto, ao lado um monitor com picos finos, um frasco num suporte à frente.",
+        "es": "Un laboratorio de química de noche: un espectrómetro de masas alto, al lado un monitor con picos finos, un vial en una gradilla delante."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAWqAG5HATFmH9U3ZAAP7w3FZNDehlC00rPRbTvRETbWnGHZajlmEtoPccCsqJN0EUGzRTyqAAAAA=",
+      "hash": "c9c221a299a73111",
+      "generatedAt": "2026-10-01T01:15:45.608Z"
+    }
+  ]
+}

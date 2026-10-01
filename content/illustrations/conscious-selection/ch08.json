@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cs-ch08-budapest",
+      "book": "conscious-selection",
+      "chapter": "ch08",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small Budapest apartment study in 1971: a heavy typewriter on a desk by a window, a stack of typed pages beside it, a cup of coffee, an engineer's slide rule. The writer's silhouette leans back in his chair, looking out at rooftops.",
+      "alt": {
+        "ru": "Кабинет в будапештской квартире 1971 года: тяжёлая пишущая машинка у окна, стопка листов, логарифмическая линейка, силуэт автора в кресле.",
+        "en": "A Budapest study in 1971: a heavy typewriter by the window, a stack of typed pages, a slide rule, the writer's silhouette in his chair.",
+        "pt": "Um escritório em Budapeste em 1971: uma máquina de escrever pesada junto à janela, uma pilha de folhas, uma régua de cálculo, a silhueta do autor na cadeira.",
+        "es": "Un estudio en Budapest en 1971: una pesada máquina de escribir junto a la ventana, un montón de folios, una regla de cálculo, la silueta del autor en su silla."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACQAwCdASoYABAAPu1kqk2ppaQiMAgBMB2JZwDE2CFP42vqE8AAAP7w0jnrQvO1hlY02kmcOOByEBRyrmWVvmB/kw3+QqbKH+MscAKF+tQ/oEDPfJZfVIdix8etcc76AmVaCF79p9GiZQmXLhcOis22uYNBxgAA",
+      "hash": "a6839d9cf3aabd31",
+      "generatedAt": "2026-10-01T01:15:44.491Z"
+    },
+    {
+      "id": "cs-ch08-loops",
+      "book": "conscious-selection",
+      "chapter": "ch08",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "On a laboratory bench, three separate glass apparatuses stand side by side, not connected: a circular loop of glass tubing with liquid, a thin soap-film bubble on a wire ring, and a long glass coil like a chain. Gaps of empty bench between them. Clean, cold light.",
+      "alt": {
+        "ru": "На лабораторном столе стоят три отдельных стеклянных прибора: кольцо из трубок с жидкостью, мыльная плёнка на проволочном кольце и длинная стеклянная спираль; между ними пустота.",
+        "en": "Three separate glass apparatuses on a bench: a loop of tubing with liquid, a soap film on a wire ring and a long glass coil, with empty space between them.",
+        "pt": "Três aparelhos de vidro separados numa bancada: um anel de tubos com líquido, uma película de sabão num aro de arame e uma longa espiral de vidro, com espaço vazio entre eles.",
+        "es": "Tres aparatos de vidrio separados sobre una mesa: un anillo de tubos con líquido, una película de jabón en un aro de alambre y una larga espiral de vidrio, con espacio vacío entre ellos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwCdACHgDFIqy1hggSveAAD+8MUT0Gscu+te+snrxICLHjKwOw78wS0aZ4stxDkTcfcqhsg2NXeQI/e/CAAA",
+      "hash": "a4f866d8ec3ec980",
+      "generatedAt": "2026-10-01T01:15:52.547Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch12-catalogue",
+      "book": "conscious-selection",
+      "chapter": "ch12",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old library card catalogue in a dark reading room: rows of small wooden drawers, one drawer pulled out and lit from above, its index cards fanned, everything else in shadow.",
+      "alt": {
+        "ru": "Старый библиотечный каталог в тёмном зале: ряды деревянных ящичков, один выдвинут и освещён, карточки в нём веером.",
+        "en": "An old library card catalogue in a dark reading room: rows of wooden drawers, one pulled out and lit, its cards fanned.",
+        "pt": "Um velho ficheiro de biblioteca numa sala escura: filas de gavetas de madeira, uma puxada e iluminada, as fichas em leque.",
+        "es": "Un viejo fichero de biblioteca en una sala oscura: filas de cajones de madera, uno abierto e iluminado, sus fichas en abanico."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABAAPu1qrU8ppiQiMAgBMB2JaQDE2GlgNAK4r9nXyNMAAP79nanPZGlA9i2ZhSPO6v9PGdOLtmszAF6kNU+hp/Poyud0J4G0geoHIuswSULAgAA=",
+      "hash": "10b8554d91f364e7",
+      "generatedAt": "2026-10-01T01:16:39.996Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude5-autorally",
+      "book": "conscious-selection",
+      "chapter": "interlude5",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Soviet hotel lobby in the early 1980s. In a corner stands a coin-operated arcade racing machine with two small steering wheels and a glowing screen showing a winding road. A father and a small child, seen from behind, each grip a wheel. Potted palm, worn carpet.",
+      "alt": {
+        "ru": "Гостиничное фойе начала 1980-х: в углу игровой автомат с двумя рулями и светящимся экраном, отец и маленький ребёнок со спины держатся за рули.",
+        "en": "A hotel lobby in the early 1980s: an arcade machine with two steering wheels and a glowing screen, a father and a small child at the wheels, seen from behind.",
+        "pt": "Um átrio de hotel no início dos anos 80: uma máquina de jogos com dois volantes e um ecrã aceso, pai e filho pequeno de costas aos volantes.",
+        "es": "Un vestíbulo de hotel a principios de los ochenta: una máquina recreativa con dos volantes y una pantalla encendida, un padre y un niño pequeño de espaldas a los mandos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAwCdASoYABAAPu1kq04ppaQiMAgBMB2JZwAAUz5ErWqx/+NswJgA/uwki50ntgCooCVXrazmj9BO/IX6vutzEG/ZFE+48ktWqZvyNmAezyKS52u4Nrj6ZS3krAAA",
+      "hash": "a8cccab5941668a8",
+      "generatedAt": "2026-10-01T01:17:53.671Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude12-sysops",
+      "book": "conscious-selection",
+      "chapter": "interlude12",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A summer evening in a Saint Petersburg courtyard in the late 1990s: a loose crowd of young people, mostly guys with a couple of girls, standing and talking in small groups, some holding beer, seen at a distance. Tall old buildings around, white-night light.",
+      "alt": {
+        "ru": "Летний вечер в питерском дворе конца 1990-х: компания молодых людей, в основном парни и пара девушек, стоит кучками с пивом, белая ночь.",
+        "en": "A summer evening in a Saint Petersburg courtyard in the late 1990s: a crowd of young people, mostly guys and a couple of girls, standing in groups with beer, white-night light.",
+        "pt": "Um fim de tarde de verão num pátio de São Petersburgo no fim dos anos 90: jovens, sobretudo rapazes e duas raparigas, em grupos com cerveja, luz de noite branca.",
+        "es": "Una tarde de verano en un patio de San Petersburgo a finales de los noventa: jóvenes, sobre todo chicos y un par de chicas, en grupos con cerveza, luz de noche blanca."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaWbvADtFNsrDgAD+8AkizKtLHQbl91fcR0+mAxpj8mZkBP8AAA==",
+      "hash": "20527b6035f08d62",
+      "generatedAt": "2026-10-01T01:17:15.684Z"
+    }
+  ]
+}

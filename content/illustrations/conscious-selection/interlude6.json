@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude6-kindergarten",
+      "book": "conscious-selection",
+      "chapter": "interlude6",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Soviet kindergarten cloakroom: a row of small wooden lockers with painted pictures on the doors (no letters), tiny coats on hooks, felt boots below. The image is overexposed and patchy, like a single flash of memory with darkness around it.",
+      "alt": {
+        "ru": "Раздевалка детского сада: ряд маленьких шкафчиков с картинками, крошечные пальто, валенки; снимок пересвечен, как вспышка памяти.",
+        "en": "A kindergarten cloakroom: a row of small lockers with pictures, tiny coats, felt boots; overexposed like a flash of memory.",
+        "pt": "O vestiário de um jardim de infância: uma fila de cacifos pequenos com desenhos, casacos minúsculos, botas de feltro; sobre-exposto como um lampejo de memória.",
+        "es": "El guardarropa de una guardería: una fila de taquillas pequeñas con dibujos, abrigos diminutos, botas de fieltro; sobreexpuesto como un destello de memoria."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC/OBue07T6J11j/AD+8N96ZaEbPwHj6JVcEXu3HttzcO/HsgD8jbl2DbORo93D0R9MXO0Dj7ErK8pbyr/2ty6JmAAA",
+      "hash": "74825a11c2e1b424",
+      "generatedAt": "2026-10-01T01:18:13.637Z"
+    }
+  ]
+}

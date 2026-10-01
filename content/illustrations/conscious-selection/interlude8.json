@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-interlude8-piano",
+      "book": "conscious-selection",
+      "chapter": "interlude8",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A grandmother's Soviet apartment: a black lacquered upright piano against patterned wallpaper, a round revolving piano stool in front of it, lace on top of the piano with a vase. Afternoon light from the side, the lacquer gleaming.",
+      "alt": {
+        "ru": "Бабушкина квартира: чёрное лакированное пианино у обоев с узором, перед ним круглый винтовой стул, на крышке салфетка и ваза.",
+        "en": "A grandmother's flat: a black lacquered upright piano against patterned wallpaper, a round revolving stool in front, a lace doily and vase on top.",
+        "pt": "O apartamento da avó: um piano vertical lacado a preto contra papel de parede padronizado, um banco giratório redondo, uma toalhinha e uma jarra em cima.",
+        "es": "El piso de la abuela: un piano vertical lacado en negro contra un papel pintado, un taburete giratorio redondo delante, un tapete de encaje y un jarrón encima."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAN0uCklCOvy0P7kAA/ujsmSVSKJ8v2dCeddnws8J5qVInCl99L7CSYTX/veWWQlzxq1HYdKQcR7ECb9gjq3PrbRW28/pzVHAA",
+      "hash": "035ba197346f18f3",
+      "generatedAt": "2026-10-01T01:18:23.077Z"
+    }
+  ]
+}

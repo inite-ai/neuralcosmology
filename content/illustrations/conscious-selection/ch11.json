@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch11-sealed",
+      "book": "conscious-selection",
+      "chapter": "ch11",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A plain desk at night: a sealed paper envelope with a wax seal lies in the circle of a lamp, a closed laptop and a pen beside it. Next to the envelope an hourglass, half run. The prediction is written and locked away before the measurement.",
+      "alt": {
+        "ru": "Стол ночью: в круге лампы запечатанный сургучом конверт, рядом закрытый ноутбук, ручка и песочные часы, наполовину пересыпавшиеся.",
+        "en": "A desk at night: a wax-sealed envelope in the lamplight, a closed laptop, a pen and a half-run hourglass beside it.",
+        "pt": "Uma secretária à noite: um envelope selado com lacre sob o candeeiro, um portátil fechado, uma caneta e uma ampulheta a meio.",
+        "es": "Un escritorio de noche: un sobre sellado con lacre bajo la lámpara, un portátil cerrado, un bolígrafo y un reloj de arena a medias."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoYABAAPu1qrU8ppiQiMAgBMB2JZwDGfCHfwMcN/mttAAD+8pb1C0XzxeAglI4jv+ahaNaX4Zu98fhHAaoQA9wjQeEAAA==",
+      "hash": "514535b57162feeb",
+      "generatedAt": "2026-10-01T01:16:23.381Z"
+    }
+  ]
+}

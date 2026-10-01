@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "cs-ch09-tierra",
+      "book": "conscious-selection",
+      "chapter": "ch09",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An early-1990s computer lab at night: a bulky CRT monitor on a desk glows with a dense swarm of tiny bright dots and streaks, like a colony seen under a microscope. A researcher's silhouette leans toward it. No readable text on screen.",
+      "alt": {
+        "ru": "Компьютерный класс начала 1990-х ночью: громоздкий монитор светится роем крошечных точек, как колония под микроскопом, к нему склонился исследователь.",
+        "en": "An early-1990s computer lab at night: a bulky monitor glows with a swarm of tiny dots like a colony under a microscope, a researcher leaning in.",
+        "pt": "Uma sala de computadores do início dos anos 90 à noite: um monitor volumoso brilha com um enxame de pontos como uma colónia ao microscópio, um investigador inclinado.",
+        "es": "Una sala de ordenadores de principios de los noventa de noche: un monitor voluminoso brilla con un enjambre de puntos como una colonia al microscopio, un investigador inclinado hacia él."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoYABAAPu1orU2ppqSiMAgBMB2JZwDCgB6PlhFZ68Syyb9cO8AA/u6h5CIFvOXJ+/0D9pzcqBmOf/7YIQrpU0ILZCdlrWhc8BJEuvEckvpHX92CogAAAA==",
+      "hash": "6971033ca1d2021f",
+      "generatedAt": "2026-10-01T01:16:13.414Z"
+    },
+    {
+      "id": "cs-ch09-lenski",
+      "book": "conscious-selection",
+      "chapter": "ch09",
+      "scene": 5,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Lenski%27s_12_long-term_lines_of_E._coli_on_25_June_2008.jpg",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/9/99/Lenski%27s_12_long-term_lines_of_E._coli_on_25_June_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "author": "Brian Baer and Neerja Hajela",
+        "license": "CC BY-SA 1.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0"
+      },
+      "alt": {
+        "ru": "Ряд из двенадцати колб с мутноватой жидкостью; одна заметно мутнее остальных.",
+        "en": "A row of twelve flasks of cloudy liquid; one is visibly cloudier than the rest.",
+        "pt": "Uma fila de doze frascos com líquido turvo; um está visivelmente mais turvo.",
+        "es": "Una fila de doce matraces con líquido turbio; uno está visiblemente más turbio que los demás."
+      },
+      "caption": {
+        "ru": "Двенадцать популяций кишечной палочки в опыте Ричарда Ленски, 25 июня 2008 года. Самая мутная колба — линия, научившаяся есть цитрат.",
+        "en": "The twelve E. coli populations of Richard Lenski's experiment, 25 June 2008. The cloudiest flask is the line that learned to eat citrate.",
+        "pt": "As doze populações de E. coli da experiência de Richard Lenski, 25 de junho de 2008. O frasco mais turvo é a linhagem que aprendeu a comer citrato.",
+        "es": "Las doce poblaciones de E. coli del experimento de Richard Lenski, 25 de junio de 2008. El matraz más turbio es la línea que aprendió a comer citrato."
+      },
+      "width": 1038,
+      "height": 423,
+      "placeholder": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQAwCdASoYAAoAPu1iqk2ppaQiMAgBMB2JaQAAYfWCPYdU6ilFEUAA/u9nlQtVwnvyo13SLV5O8v6pDemRGDjTXa0WyimWGPS9fY0U1L3BO83RfBQmUDdA09hUuRowLV+XbYOsOBjkjGcNAHsnOHbEo+Zdl725N3YyOAhpyYraegAA",
+      "hash": "8fdea9e1217250c6",
+      "generatedAt": "2026-10-01T01:15:47.021Z"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "cs-ch10-cmb",
+      "book": "conscious-selection",
+      "chapter": "ch10",
+      "scene": 2,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Cosmic_Microwave_Background_(CMB).jpeg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cosmic_Microwave_Background_%28CMB%29.jpeg/1920px-Cosmic_Microwave_Background_%28CMB%29.jpeg",
+        "author": "ESA and the Planck Collaboration",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      },
+      "alt": {
+        "ru": "Овальная карта всего неба, покрытая пятнами чуть более тёплых и чуть более холодных областей.",
+        "en": "An oval map of the whole sky covered in mottled spots of slightly warmer and slightly colder regions.",
+        "pt": "Um mapa oval de todo o céu coberto de manchas de regiões ligeiramente mais quentes e mais frias.",
+        "es": "Un mapa ovalado de todo el cielo cubierto de manchas de regiones algo más cálidas y algo más frías."
+      },
+      "caption": {
+        "ru": "Реликтовое излучение по данным спутника «Планк»: свет Вселенной в возрасте трёхсот восьмидесяти тысяч лет.",
+        "en": "The cosmic microwave background as measured by Planck: the light of the universe at three hundred and eighty thousand years old.",
+        "pt": "A radiação cósmica de fundo medida pelo Planck: a luz do universo aos trezentos e oitenta mil anos.",
+        "es": "El fondo cósmico de microondas medido por Planck: la luz del universo a los trescientos ochenta mil años."
+      },
+      "width": 1600,
+      "height": 800,
+      "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACQBACdASoYAAwAPu1kqU2ppaQiMAgBMB2JQBdg7UpslkX2esHneFn05mb84AAA/upOHCetbZYBuUKcWPZ9hGYUzPa+oQ9V4d6a/3IGtVqyQph/eyxAEDKuXBvlmcP0Agztkhnn7WS0qXJlKW4+50p2BQw1vhHNWVEScOxKA1kBXIlrs2SWUMrxhBrxke7exZB/C5qsNiMAAA==",
+      "hash": "a91109f64f5784b6",
+      "generatedAt": "2026-10-01T01:15:48.631Z"
+    },
+    {
+      "id": "cs-ch10-night-debug",
+      "book": "conscious-selection",
+      "chapter": "ch10",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A home desk at three in the morning: a single monitor glows with dense lines of code too small to read, a cold cup of tea, crumpled notes, a desk lamp switched off. A man's silhouette with his head in his hands.",
+      "alt": {
+        "ru": "Домашний стол в три часа ночи: монитор с мелкими строчками кода, остывший чай, скомканные записки, силуэт человека, обхватившего голову руками.",
+        "en": "A home desk at three in the morning: a monitor of tiny code, cold tea, crumpled notes, a man's silhouette with his head in his hands.",
+        "pt": "Uma secretária às três da manhã: um monitor com código minúsculo, chá frio, notas amarrotadas, a silhueta de um homem com a cabeça entre as mãos.",
+        "es": "Un escritorio a las tres de la mañana: un monitor con código diminuto, té frío, notas arrugadas, la silueta de un hombre con la cabeza entre las manos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAXKPAsZNFhH/UuRgAAP7w014UMz2O3+UHmULLvkx8QR3z0jffRanmI7iVPaAAAA==",
+      "hash": "1f4f4f4af690a093",
+      "generatedAt": "2026-10-01T01:16:15.602Z"
+    }
+  ]
+}
