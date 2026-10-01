@@ -95,3 +95,26 @@ export function withIllustrations(html: string, items: Illustration[], lang: Lan
 }
 
 export const countScenes = (html: string | null) => (html ? (html.match(SCENE) ?? []).length : 0);
+
+/** Иллюстрация для превью главы: открывающая, иначе первая по тексту. */
+export function leadIllustration(items: Illustration[]): Illustration | null {
+  return items.find((it) => it.scene === 0) ?? [...items].sort((a, b) => a.scene - b.scene)[0] ?? null;
+}
+
+const SITE = "https://neuralcosmology.com";
+
+/** schema.org ImageObject: подпись, автор и лицензия (Google показывает их в «Картинках»). */
+export function imageObject(it: Illustration, lang: Lang) {
+  const s = it.source;
+  return {
+    "@type": "ImageObject",
+    contentUrl: `${SITE}/book/ill/${it.id}.webp`,
+    width: it.width,
+    height: it.height,
+    caption: it.caption?.[lang] ?? it.alt[lang] ?? it.alt.en,
+    description: it.alt[lang] ?? it.alt.en,
+    ...(s
+      ? { creditText: s.author, creator: { "@type": "Person", name: s.author }, license: s.licenseUrl ?? s.page, acquireLicensePage: s.page, copyrightNotice: `${s.author}, ${s.license}` }
+      : { creditText: "Neural Cosmology", creator: { "@type": "Organization", name: "Neural Cosmology", url: SITE } }),
+  };
+}

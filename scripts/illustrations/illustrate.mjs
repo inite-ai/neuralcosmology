@@ -88,6 +88,8 @@ async function write(it, img) {
   const info = await sharp(img).resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 80 }).toFile(join(out, `${it.id}.webp`));
   it.width = info.width;
   it.height = info.height;
+  // 1200×630 для превью ссылок (og:image главы); JPEG, потому что его читают satori и все краулеры.
+  await sharp(img).resize(1200, 630, { fit: "cover", position: "attention" }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(out, `${it.id}.og.jpg`));
   const tiny = await sharp(img).resize(24).webp({ quality: 40 }).toBuffer();
   it.placeholder = `data:image/webp;base64,${tiny.toString("base64")}`;
   it.hash = hashOf(it);

@@ -6,6 +6,7 @@ import { getAllSlugs as lectureSlugs, getLectureBySlug } from "@/lib/lectures";
 import { getAllAnswerSlugs, getAnswer } from "@/lib/answers";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
 import { getManifest, libraryLangs } from "@/lib/library";
+import { illustrations } from "@/lib/illustrations";
 
 // Бесплатные главы читалки берутся с тома библиотеки, которого нет при сборке —
 // sitemap строится на каждый запрос (дёшево, файл небольшой).
@@ -90,19 +91,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: s.priority,
   }));
 
-  // Открытые главы онлайн-читалки: каждая на своём языке текста, без hreflang —
-  // переводы глав не совпадают один к одному.
-  const chapterEntries: MetadataRoute.Sitemap = books.flatMap((b) =>
-    libraryLangs(b.slug).flatMap((lang) =>
+  // Открытые главы онлайн-читалки: каждая на своём языке текста, с hreflang на ту же
+  // главу в других переводах (id глав совпадают) и с иллюстрациями главы.
+  const chapterEntries: MetadataRoute.Sitemap = books.flatMap((b) => {
+    const langs = libraryLangs(b.slug);
+    const has = (lang: (typeof langs)[number], id: string) => getManifest(b.slug, lang)?.chapters.some((c) => c.id === id && c.free);
+    return langs.flatMap((lang) =>
       (getManifest(b.slug, lang)?.chapters ?? [])
         .filter((c) => c.free)
-        .map((c) => ({
-          url: `${BASE}/${lang}/read/${b.slug}/${c.id}`,
-          lastModified: now,
-          priority: 0.6,
-        })),
-    ),
-  );
+        .map((c) => {
+          const peers = langs.filter((l) => has(l, c.id));
+          const images = illustrations(b.slug, c.id).map((it) => `${BASE}/book/ill/${it.id}.webp`);
+          return {
+            url: `${BASE}/${lang}/read/${b.slug}/${c.id}`,
+            lastModified: now,
+            priority: 0.6,
+            ...(peers.length > 1
+              ? { alternates: { languages: Object.fromEntries(peers.map((l) => [l, `${BASE}/${l}/read/${b.slug}/${c.id}`])) } }
+              : {}),
+            ...(images.length ? { images } : {}),
+          };
+        }),
+    );
+  });
 
   return [...localised, ...chapterEntries, ...aiEntries];
 }

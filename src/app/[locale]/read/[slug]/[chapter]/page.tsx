@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { getBookBySlug } from "@/content/books";
 import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
-import { getChapterHtml, getManifest, resolveBookLang, type LibraryChapter } from "@/lib/library";
+import { getChapterHtml, getManifest, libraryLangs, resolveBookLang, type LibraryChapter } from "@/lib/library";
 import { getSession, authConfigured } from "@/lib/auth";
 import { chapterGate, lockedGate, type Gate } from "@/lib/access";
 import { allowPaidView, registerMark, watermark } from "@/lib/protect";
@@ -18,7 +18,7 @@ import ReaderPrefsScript from "@/components/reader/ReaderPrefsScript";
 import { readerFont } from "@/components/reader/font";
 import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumb } from "@/lib/schema";
-import { countScenes, illustrations, withIllustrations } from "@/lib/illustrations";
+import { countScenes, illustrations, imageObject, leadIllustration, withIllustrations } from "@/lib/illustrations";
 
 export const dynamic = "force-dynamic";
 
@@ -57,12 +57,20 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const title = `${d.chapter.title} — ${bookTitle}`;
   // Если книги нет на языке интерфейса, канонической считаем версию на языке текста.
   const canonical = `${BASE}/${d.lang}/read/${slug}/${id}`;
+  // Та же глава на других языках текста: id глав одинаковы во всех переводах.
+  const langs = libraryLangs(slug).filter((l) => getManifest(slug, l)?.chapters.some((c) => c.id === id));
+  const languages = langs.length > 1
+    ? { ...Object.fromEntries(langs.map((l) => [l, `${BASE}/${l}/read/${slug}/${id}`])), "x-default": `${BASE}/${langs.includes("en") ? "en" : langs[0]}/read/${slug}/${id}` }
+    : undefined;
+  // Превью ссылки — иллюстрация главы, если она есть; иначе обложка книги.
+  const lead = leadIllustration(illustrations(slug, id));
+  const image = lead ? `/book/ill/${lead.id}.og.jpg` : `/og/covers/${slug}.png`;
   return {
     title,
     description: d.chapter.excerpt,
-    alternates: { canonical },
+    alternates: { canonical, ...(languages ? { languages } : {}) },
     robots: d.chapter.free ? { index: true, follow: true } : { index: false, follow: true },
-    ...social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image: `/og/covers/${slug}.png` }),
+    ...social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image }),
   };
 }
 
@@ -126,6 +134,7 @@ export default async function ChapterPage({
           inLanguage: lang,
           url: `${BASE}${here}`,
           isAccessibleForFree: chapter.free,
+          ...(figures.length ? { image: figures.map((f) => imageObject(f, lang)) } : {}),
           ...(chapter.free ? {} : { hasPart: { "@type": "WebPageElement", isAccessibleForFree: false, cssSelector: ".reader-locked" } }),
           isPartOf: { "@type": "Book", name: bookTitle, url: `${BASE}/${locale}/books/${slug}` },
           author: { "@type": "Person", name: "Mikhail Savchenko", url: BASE },
