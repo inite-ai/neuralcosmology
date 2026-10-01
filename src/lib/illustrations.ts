@@ -70,28 +70,45 @@ function figure(it: Illustration, lang: Lang, cover: boolean): string {
 
 const SCENE = /<hr class="scene"\s*\/?>/g;
 
+/** Вставка в главу: в начало сцены (сразу после разрыва) или в её конец (перед следующим). */
+export type SceneInsert = { scene: number; at?: "start" | "end"; html: string };
+
 /**
- * Вставляет иллюстрации в HTML главы. sourceScenes — число разрывов сцен в русском
- * оригинале (по нему размечены места); в переводе с другим числом разрывов
- * место берётся пропорционально.
+ * Расставляет вставки по сценам. sourceScenes — число разрывов в русском оригинале
+ * (по нему размечены места); в переводе с другим числом разрывов место берётся
+ * пропорционально. Сцена 0 — до первого разрыва.
  */
-export function withIllustrations(html: string, items: Illustration[], lang: Lang, sourceScenes: number, onlyCover = false): string {
-  if (!items.length) return html;
-  const breaks = [...html.matchAll(SCENE)].map((m) => m.index! + m[0].length);
-  const at = (scene: number) => {
-    if (scene <= 0) return 0;
-    if (!breaks.length) return -1;
-    const n = sourceScenes === breaks.length || !sourceScenes ? scene : Math.max(1, Math.round((scene * breaks.length) / sourceScenes));
-    return breaks[Math.min(n, breaks.length) - 1];
+export function placeAtScenes(html: string, inserts: SceneInsert[], sourceScenes: number): string {
+  if (!inserts.length) return html;
+  const hrs = [...html.matchAll(SCENE)].map((m) => ({ from: m.index!, to: m.index! + m[0].length }));
+  const map = (scene: number) =>
+    sourceScenes === hrs.length || !sourceScenes ? scene : Math.max(1, Math.round((scene * hrs.length) / sourceScenes));
+  const pos = (x: SceneInsert) => {
+    if (x.at === "end") {
+      const n = x.scene <= 0 ? 0 : map(x.scene);
+      if (n > hrs.length) return -1;
+      return n < hrs.length ? hrs[n].from : html.length;
+    }
+    if (x.scene <= 0) return 0;
+    if (!hrs.length) return -1;
+    return hrs[Math.min(map(x.scene), hrs.length) - 1].to;
   };
-  const inserts = items
-    .filter((it) => !onlyCover || it.scene === 0)
-    .map((it) => ({ pos: at(it.scene), html: figure(it, lang, it.scene === 0) }))
-    .filter((x) => x.pos >= 0)
-    .sort((a, b) => b.pos - a.pos);
+  const placed = inserts
+    .map((x, i) => ({ p: pos(x), i, html: x.html }))
+    .filter((x) => x.p >= 0)
+    .sort((a, b) => b.p - a.p || b.i - a.i);
   let out = html;
-  for (const x of inserts) out = out.slice(0, x.pos) + x.html + out.slice(x.pos);
+  for (const x of placed) out = out.slice(0, x.p) + x.html + out.slice(x.p);
   return out;
+}
+
+/** Вставляет иллюстрации в HTML главы (в начало своих сцен). */
+export function withIllustrations(html: string, items: Illustration[], lang: Lang, sourceScenes: number, onlyCover = false): string {
+  return placeAtScenes(
+    html,
+    items.filter((it) => !onlyCover || it.scene === 0).map((it) => ({ scene: it.scene, html: figure(it, lang, it.scene === 0) })),
+    sourceScenes,
+  );
 }
 
 export const countScenes = (html: string | null) => (html ? (html.match(SCENE) ?? []).length : 0);

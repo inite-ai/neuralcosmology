@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cc-ch03-landauer",
+      "book": "celestial-code",
+      "chapter": "ch03",
+      "scene": 1,
+      "at": "end",
+      "widget": "landauer",
+      "title": {
+        "ru": "Сколько стоит стереть бит",
+        "en": "What it costs to erase a bit",
+        "pt": "Quanto custa apagar um bit",
+        "es": "Cuánto cuesta borrar un bit"
+      },
+      "caption": {
+        "ru": "Предел Ландауэра: kT ln 2 на каждый стёртый бит, где k — постоянная Больцмана, T — температура среды. Берю и соавторы измерили его в 2012 году на одной стеклянной бусинке в двойной лазерной ловушке.",
+        "en": "Landauer’s limit: kT ln 2 for every erased bit, where k is Boltzmann’s constant and T the temperature of the surroundings. Bérut and colleagues measured it in 2012 with a single glass bead in a double laser trap.",
+        "pt": "O limite de Landauer: kT ln 2 por bit apagado, em que k é a constante de Boltzmann e T a temperatura do ambiente. Bérut e colegas o mediram em 2012 com uma única conta de vidro numa armadilha laser dupla.",
+        "es": "El límite de Landauer: kT ln 2 por cada bit borrado, donde k es la constante de Boltzmann y T la temperatura del entorno. Bérut y sus colegas lo midieron en 2012 con una sola cuenta de vidrio en una trampa láser doble."
+      }
+    },
+    {
+      "id": "cc-ch03-double-slit",
+      "book": "celestial-code",
+      "chapter": "ch03",
+      "scene": 3,
+      "at": "end",
+      "widget": "double-slit",
+      "title": {
+        "ru": "Две щели, по одному фотону",
+        "en": "Two slits, one photon at a time",
+        "pt": "Duas fendas, um fóton por vez",
+        "es": "Dos rendijas, un fotón cada vez"
+      },
+      "caption": {
+        "ru": "Каждый фотон оставляет на экране одну точку. Без детектора распределение точек — квадрат суммы двух амплитуд, с полосами; с детектором у щелей — сумма двух вероятностей, полос нет. Схема упрощена, вероятности те же, что в учебнике.",
+        "en": "Each photon leaves a single dot on the screen. Without a detector the dots follow the square of the sum of two amplitudes, with fringes; with a detector at the slits, the sum of two probabilities, with none. The setup is simplified; the probabilities are the textbook ones.",
+        "pt": "Cada fóton deixa um único ponto na tela. Sem detector, os pontos seguem o quadrado da soma de duas amplitudes, com franjas; com detector nas fendas, a soma de duas probabilidades, sem franjas. O esquema é simplificado; as probabilidades são as do livro-texto.",
+        "es": "Cada fotón deja un solo punto en la pantalla. Sin detector, los puntos siguen el cuadrado de la suma de dos amplitudes, con franjas; con detector en las rendijas, la suma de dos probabilidades, sin ellas. El esquema está simplificado; las probabilidades son las de manual."
+      }
+    }
+  ]
+}

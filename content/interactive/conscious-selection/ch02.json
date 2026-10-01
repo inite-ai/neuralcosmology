@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch02-blind-spot",
+      "book": "conscious-selection",
+      "chapter": "ch02",
+      "scene": 4,
+      "at": "end",
+      "widget": "blind-spot",
+      "title": {
+        "ru": "Найдите своё слепое пятно",
+        "en": "Find your blind spot",
+        "pt": "Encontre o seu ponto cego",
+        "es": "Encuentre su punto ciego"
+      },
+      "caption": {
+        "ru": "Пятно лежит примерно в пятнадцати градусах от точки взгляда в сторону виска. Первым его описал Эдм Мариотт в 1660-х: на этом месте сетчатки из глаза выходит зрительный нерв.",
+        "en": "The spot lies about fifteen degrees from the point of gaze, toward the temple. Edme Mariotte first described it in the 1660s: at that place on the retina the optic nerve leaves the eye.",
+        "pt": "A mancha fica a uns quinze graus do ponto de fixação, para o lado da têmpora. Edme Mariotte a descreveu primeiro, nos anos 1660: nesse lugar da retina o nervo óptico sai do olho.",
+        "es": "La mancha está a unos quince grados del punto de fijación, hacia la sien. Edme Mariotte la describió primero, en la década de 1660: en ese lugar de la retina el nervio óptico sale del ojo."
+      }
+    }
+  ]
+}

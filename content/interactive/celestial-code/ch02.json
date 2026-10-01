@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-ch02-physarum",
+      "book": "celestial-code",
+      "chapter": "ch02",
+      "scene": 5,
+      "at": "end",
+      "widget": "physarum",
+      "title": {
+        "ru": "Слизевик прокладывает сеть",
+        "en": "A slime mould lays out a network",
+        "pt": "Um bolor limoso traça uma rede",
+        "es": "Un moho mucilaginoso traza una red"
+      },
+      "caption": {
+        "ru": "Модель Джеффа Джонса (2010): девять тысяч частиц чуют след впереди, сворачивают к самому сильному и оставляют свой. По этому же принципу устроен алгоритм, которым Бёрчетт и Элек восстановили нити космической паутины.",
+        "en": "Jeff Jones’s model (2010): nine thousand particles sense the trail ahead, turn toward the strongest and leave their own. The algorithm Burchett and Elek used to recover the filaments of the cosmic web works the same way.",
+        "pt": "O modelo de Jeff Jones (2010): nove mil partículas farejam o rastro à frente, viram para o mais forte e deixam o seu. O algoritmo com que Burchett e Elek reconstituíram os filamentos da teia cósmica funciona do mesmo jeito.",
+        "es": "El modelo de Jeff Jones (2010): nueve mil partículas olfatean el rastro de delante, giran hacia el más fuerte y dejan el suyo. El algoritmo con el que Burchett y Elek reconstruyeron los filamentos de la red cósmica funciona igual."
+      }
+    }
+  ]
+}

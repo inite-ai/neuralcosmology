@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch01-yarbus",
+      "book": "conscious-selection",
+      "chapter": "ch01",
+      "scene": 2,
+      "at": "end",
+      "widget": "yarbus",
+      "title": {
+        "ru": "Семь вопросов к одной картине",
+        "en": "Seven questions, one painting",
+        "pt": "Sete perguntas, um quadro",
+        "es": "Siete preguntas, un cuadro"
+      },
+      "caption": {
+        "ru": "Опыт Ярбуса на репинском «Не ждали», только вместо присоски на глазу — курсор. Задайте себе вопрос, посмотрите двадцать секунд, потом возьмите другой и положите траектории друг на друга. Записи никуда не отправляются.",
+        "en": "Yarbus’s experiment on Repin’s “They Did Not Expect Him”, with a cursor in place of the suction cap on the eye. Ask yourself a question, look for twenty seconds, then take another and lay the paths over each other. Nothing is sent anywhere.",
+        "pt": "O experimento de Yarbus com “Não esperavam”, de Repin, com o cursor no lugar da ventosa no olho. Faça-se uma pergunta, olhe por vinte segundos, depois escolha outra e sobreponha as trajetórias. Nada é enviado a lugar nenhum.",
+        "es": "El experimento de Yarbus con «No lo esperaban», de Repin, con el cursor en lugar de la ventosa en el ojo. Hágase una pregunta, mire veinte segundos, luego elija otra y superponga las trayectorias. No se envía nada a ninguna parte."
+      }
+    }
+  ]
+}

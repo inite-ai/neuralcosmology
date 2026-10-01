@@ -416,6 +416,77 @@
 }
 .reader-prose figure.nc-fig figcaption a { color: inherit; text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 2px; }
 .reader-prose .nc-credit { opacity: 0.75; }
+
+/* Опыты в главах (src/lib/interactive.ts + components/reader/widgets): та же
+   0.5px-рамка, что у пластинок, на панели; моно-кикер, заголовок дисплейным. */
+.reader-prose figure.nc-x {
+  margin: 2.4em 0 2.2em;
+  padding: 1.1rem 1.1rem 1rem;
+  border: 0.5px solid var(--r-line);
+  background: var(--r-panel);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-indent: 0;
+  hyphens: manual;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+@media (min-width: 900px) {
+  .reader-prose figure.nc-x { margin-left: -3rem; margin-right: -3rem; padding: 1.4rem 1.6rem 1.2rem; }
+}
+.reader-prose figure.nc-x + p, .reader-prose figure.nc-x + hr.scene + p { text-indent: 0; }
+.nc-x-head { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+.nc-x-kicker { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--r-accent); }
+.nc-x-title { font-family: var(--font-display); font-size: 1.45rem; line-height: 1.15; letter-spacing: -0.01em; color: var(--r-fg); text-wrap: balance; }
+.nc-x-mount { min-height: 12rem; }
+.nc-x-mount:empty { background: repeating-linear-gradient(135deg, transparent 0 10px, var(--r-faint) 10px 11px); border: 0.5px solid var(--r-faint); }
+.reader-prose figure.nc-x figcaption { margin-top: 0.9rem; font-size: 0.78rem; line-height: 1.5; color: var(--r-muted); }
+.nc-x canvas { display: block; width: 100%; touch-action: none; border: 0.5px solid var(--r-line); background: var(--r-bg); }
+.nc-x-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.75rem; }
+.nc-x-bar .nc-x-spacer { flex: 1; }
+.nc-x-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  min-height: 2.25rem; padding: 0 0.85rem;
+  border: 0.5px solid var(--r-line); border-radius: 2px;
+  font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.02em;
+  color: var(--r-fg); background: transparent; cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+.nc-x-btn:hover { border-color: var(--r-fg); }
+.nc-x-btn[aria-pressed="true"], .nc-x-btn--primary { background: var(--r-fg); color: var(--r-bg); border-color: var(--r-fg); }
+.nc-x-btn:disabled { opacity: 0.4; cursor: default; }
+.nc-x-btn svg { width: 14px; height: 14px; }
+.nc-x-seg { display: inline-flex; flex-wrap: wrap; border: 0.5px solid var(--r-line); border-radius: 2px; }
+.nc-x-seg .nc-x-btn { border: 0; border-radius: 0; }
+.nc-x-seg .nc-x-btn + .nc-x-btn { border-left: 0.5px solid var(--r-line); }
+.nc-x-stat { font-family: var(--font-mono); font-size: 0.72rem; color: var(--r-muted); }
+.nc-x-stat b { font-weight: 400; color: var(--r-fg); }
+.nc-x-hint { font-size: 0.78rem; color: var(--r-soft); margin-top: 0.6rem; }
+.nc-x input[type="range"] { accent-color: var(--r-accent); width: 9rem; }
+.nc-x-num { font-family: var(--font-sans); font-weight: 300; font-size: 1.7rem; letter-spacing: -0.02em; line-height: 1; color: var(--r-fg); }
+.nc-x-facts { margin: 1.1rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.35rem; }
+.reader-prose .nc-x-facts li { list-style: none; margin: 0; padding-left: 1rem; position: relative; color: var(--r-soft); font-size: 0.85rem; }
+.nc-x-facts li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.45rem; height: 0.5px; background: var(--r-accent); }
+.nc-x-spark {
+  position: absolute; left: 50%; top: 10%; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%;
+  background: #e8793a; box-shadow: 0 0 8px 2px rgba(232, 121, 58, 0.6); pointer-events: none;
+  animation: nc-x-spark 0.9s ease-out forwards;
+}
+@keyframes nc-x-spark { from { transform: translateY(0) scale(1); opacity: 1; } to { transform: translateY(-34px) scale(0.3); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .nc-x-spark { animation-duration: 0.01s; } }
+.nc-yarbus { position: relative; overflow: hidden; border: 0.5px solid var(--r-line); cursor: crosshair; user-select: none; -webkit-user-select: none; --fx: 50%; --fy: 50%; --fr: 48px; background: var(--r-faint); }
+.nc-yarbus img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.nc-yarbus-blur { filter: blur(10px) saturate(0.5) brightness(0.62); transform: scale(1.05); }
+.nc-yarbus--look .nc-yarbus-sharp {
+  -webkit-mask-image: radial-gradient(circle at var(--fx) var(--fy), #000 0, #000 calc(var(--fr) * 0.55), transparent var(--fr));
+  mask-image: radial-gradient(circle at var(--fx) var(--fy), #000 0, #000 calc(var(--fr) * 0.55), transparent var(--fr));
+}
+.nc-yarbus--done .nc-yarbus-sharp { filter: saturate(0.35) brightness(0.8); }
+.nc-yarbus-paths { position: absolute; inset: 0; width: 100%; height: 100%; }
+.nc-yarbus-note { position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%); padding: 0.45rem 0.8rem; background: var(--r-bg); color: var(--r-fg); border: 0.5px solid var(--r-line); font-size: 0.78rem; white-space: nowrap; }
+.nc-yarbus-timer { position: absolute; left: 0; right: 0; bottom: 0; height: 1.6rem; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--r-bg) 70%, transparent); }
+.nc-yarbus-timer span { position: absolute; left: 0; top: 0; height: 2px; background: var(--r-accent); transition: width 0.1s linear; }
+.nc-yarbus-timer em { font-style: normal; font-family: var(--font-mono); font-size: 0.7rem; color: var(--r-fg); }
 .reader-prose em { font-style: italic; }
 .reader-prose strong { font-weight: 600; }
 .reader-prose a { color: var(--r-accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }

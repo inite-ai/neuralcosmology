@@ -18,7 +18,9 @@ import ReaderPrefsScript from "@/components/reader/ReaderPrefsScript";
 import { readerFont } from "@/components/reader/font";
 import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumb } from "@/lib/schema";
-import { countScenes, illustrations, imageObject, leadIllustration, withIllustrations } from "@/lib/illustrations";
+import { countScenes, illustrations, imageObject, leadIllustration, placeAtScenes, withIllustrations } from "@/lib/illustrations";
+import { interactive, interactiveInserts } from "@/lib/interactive";
+import ChapterWidgets from "@/components/reader/widgets/ChapterWidgets";
 
 export const dynamic = "force-dynamic";
 
@@ -101,9 +103,11 @@ export default async function ChapterPage({
   if (paid && !throttled) await registerMark(session.sub, session.email);
   const marked = source && paid ? (throttled ? null : watermark(source, session.sub)) : source;
   // Иллюстрации размечены по разрывам сцен русского оригинала.
+  // Опыты (content/interactive) встают так же, по сценам оригинала.
   const figures = illustrations(slug, chapter.id);
-  const sourceScenes = figures.length ? countScenes(lang === "ru" ? source : getChapterHtml(slug, "ru", chapter.id)) : 0;
-  const html = marked && withIllustrations(marked, figures, lang, sourceScenes);
+  const widgets = interactive(slug, chapter.id);
+  const sourceScenes = figures.length || widgets.length ? countScenes(lang === "ru" ? source : getChapterHtml(slug, "ru", chapter.id)) : 0;
+  const html = marked && placeAtScenes(withIllustrations(marked, figures, lang, sourceScenes), interactiveInserts(widgets, lang), sourceScenes);
 
   const bookTitle = pickLocalized(book.titles, lang);
   const hrefBase = `/${locale}/read/${slug}`;
@@ -197,6 +201,7 @@ export default async function ChapterPage({
               <div id="nc-recap-slot" />
               {figures.some((f) => f.kind === "archive") && <PlateFilter />}
               <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
+              {widgets.length > 0 && <ChapterWidgets />}
               <ReaderInteractive
                 book={slug}
                 lang={lang}

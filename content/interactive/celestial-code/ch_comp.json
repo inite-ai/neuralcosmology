@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "cc-comp-life",
+      "book": "celestial-code",
+      "chapter": "ch_comp",
+      "scene": 1,
+      "at": "end",
+      "widget": "life",
+      "title": {
+        "ru": "«Жизнь» Конвея: четыре правила",
+        "en": "Conway’s Life: four rules",
+        "pt": "O Jogo da Vida de Conway: quatro regras",
+        "es": "El Juego de la Vida de Conway: cuatro reglas"
+      },
+      "caption": {
+        "ru": "Ружьё Госпера (1970) — первая найденная фигура, которая растёт бесконечно: каждые тридцать поколений оно выпускает новый глайдер. Конвей обещал за такую фигуру пятьдесят долларов и заплатил.",
+        "en": "Gosper’s glider gun (1970) was the first pattern found to grow forever: every thirty generations it fires another glider. Conway had offered fifty dollars for such a pattern, and paid.",
+        "pt": "O canhão de Gosper (1970) foi o primeiro padrão encontrado que cresce para sempre: a cada trinta gerações dispara mais um planador. Conway tinha oferecido cinquenta dólares por um padrão assim, e pagou.",
+        "es": "El cañón de Gosper (1970) fue el primer patrón hallado que crece para siempre: cada treinta generaciones dispara otro planeador. Conway había ofrecido cincuenta dólares por un patrón así, y pagó."
+      }
+    },
+    {
+      "id": "cc-comp-rule110",
+      "book": "celestial-code",
+      "chapter": "ch_comp",
+      "scene": 3,
+      "at": "end",
+      "widget": "rule110",
+      "props": { "rule": 110 },
+      "title": {
+        "ru": "Все 256 правил Вольфрама",
+        "en": "All 256 of Wolfram’s rules",
+        "pt": "As 256 regras de Wolfram",
+        "es": "Las 256 reglas de Wolfram"
+      },
+      "caption": {
+        "ru": "Номер правила — восемь ответов, прочитанные как двоичное число. Универсальность правила 110 доказал Мэтью Кук, работавший у Вольфрама; доказательство опубликовано в 2004 году.",
+        "en": "A rule’s number is its eight answers read as a binary number. Rule 110’s universality was proved by Matthew Cook, who worked for Wolfram; the proof was published in 2004.",
+        "pt": "O número da regra são as oito respostas lidas como um número binário. A universalidade da Regra 110 foi provada por Matthew Cook, que trabalhava para Wolfram; a prova saiu em 2004.",
+        "es": "El número de la regla son sus ocho respuestas leídas como un número binario. La universalidad de la Regla 110 la demostró Matthew Cook, que trabajaba para Wolfram; la prueba se publicó en 2004."
+      }
+    }
+  ]
+}
