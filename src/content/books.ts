@@ -92,13 +92,13 @@ export const books: Book[] = [
     },
     synopsis: {
       en:
-        "A science-fiction novel in which reality is a running program and a handful of systems engineers are the last line of defence against the exceptions eating it alive. Fast, funny and grounded in real physics: the bugs behave exactly like the anomalies catalogued in the research programme behind the book.",
+        "A Moscow quantum physicist has seen the folds of reality since childhood and has learned to keep quiet about it. After he saves a stranger's life by accident, an ageless teacher takes him to an Academy for people like him, the bugs in the system, and shows him that the world is a running system with its own maintainers. Science fiction with real physics, written fast and with humour, and at its centre a mother who vanished twenty-one years ago.",
       ru:
-        "Научная фантастика, где реальность — запущенная программа, а горстка системных инженеров — последняя линия защиты против пожирающих её исключений. Написано быстро и с юмором, но физика настоящая: баги ведут себя в точности как аномалии из исследовательской программы, на которой стоит книга.",
+        "Московский физик-квантовик с детства видит складки реальности и давно научился об этом молчать. Случайно спасив незнакомцу жизнь, он попадает к нестареющему учителю в Академию для таких же «багов» системы, где выясняется, что мир — работающая система со своими сисадминами. Фантастика с настоящей физикой, написанная быстро и с юмором, а в центре сюжета — мать, пропавшая двадцать один год назад.",
       pt:
-        "Um romance de ficção científica em que a realidade é um programa em execução e um punhado de engenheiros de sistemas é a última linha de defesa contra as exceções que a devoram. Rápido, bem-humorado e apoiado em física de verdade: os bugs se comportam exatamente como as anomalias catalogadas no programa de pesquisa por trás do livro.",
+        "Um físico quântico de Moscovo vê as dobras da realidade desde criança e aprendeu a calar-se sobre isso. Depois de salvar por acaso a vida de um desconhecido, um mestre que não envelhece leva-o para uma Academia de pessoas como ele, os bugs do sistema, e mostra-lhe que o mundo é um sistema em funcionamento com os seus próprios administradores. Ficção científica com física de verdade, escrita com ritmo e humor, e no centro uma mãe desaparecida há vinte e um anos.",
       es:
-        "Una novela de ciencia ficción en la que la realidad es un programa en ejecución y un puñado de ingenieros de sistemas son la última línea de defensa contra las excepciones que la devoran. Rápida, divertida y anclada en física real: los bugs se comportan exactamente como las anomalías catalogadas en el programa de investigación que está detrás del libro.",
+        "Un físico cuántico de Moscú ve los pliegues de la realidad desde niño y ha aprendido a callarlo. Tras salvar por accidente la vida de un desconocido, un maestro que no envejece lo lleva a una Academia para gente como él, los bugs del sistema, y le muestra que el mundo es un sistema en marcha con sus propios administradores. Ciencia ficción con física real, escrita con ritmo y humor, y en el centro una madre desaparecida hace veintiún años.",
     },
     status: "forthcoming",
     statusLabel: {
