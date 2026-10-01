@@ -34,12 +34,14 @@ const DEFAULT_IMAGE: Record<string, string> = {
 
 const MIME: Record<string, string> = { jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png" };
 
-// Только растровые файлы из public/og — никаких внешних URL и выхода из папки.
+// Только растровые файлы из public/og и кадры иллюстраций книг (public/book/ill/*.og.jpg) —
+// никаких внешних URL и выхода из папки.
 async function localImage(path: string | null): Promise<{ src: string; cover: boolean } | null> {
   if (!path) return null;
   const clean = normalize(path).replace(/^\/+/, "");
   const ext = clean.split(".").pop()?.toLowerCase() ?? "";
-  if (!clean.startsWith("og/") || clean.includes("..") || !MIME[ext]) return null;
+  const allowed = clean.startsWith("og/") || (clean.startsWith("book/ill/") && clean.endsWith(".og.jpg"));
+  if (!allowed || clean.includes("..") || !MIME[ext]) return null;
   try {
     const buf = await readFile(join(process.cwd(), "public", clean));
     return { src: `data:${MIME[ext]};base64,${buf.toString("base64")}`, cover: clean.startsWith("og/covers/") };
