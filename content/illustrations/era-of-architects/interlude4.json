@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-interlude4-macro",
+      "book": "era-of-architects",
+      "chapter": "interlude4",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A study in spring light: three people sit in a loose circle on chairs and a mat with their eyes closed, two women and a man, and above them the air holds a faint web of luminous threads joining them into one shape; an old man stands by the window watching.",
+      "alt": {
+        "ru": "Кабинет в весеннем свете: трое — две женщины и мужчина — сидят кругом с закрытыми глазами, над ними в воздухе слабая паутина светящихся нитей связывает их в одну фигуру; у окна смотрит старик.",
+        "en": "A study in spring light: two women and a man sit in a loose circle with eyes closed, a faint web of luminous threads above joining them into one shape; an old man watching by the window.",
+        "pt": "Um escritório na luz da primavera: duas mulheres e um homem sentados em círculo de olhos fechados, uma teia ténue de fios luminosos por cima a uni-los; um velho a observar à janela.",
+        "es": "Un estudio con luz de primavera: dos mujeres y un hombre sentados en círculo con los ojos cerrados, una tenue red de hilos luminosos sobre ellos que los une; un anciano mirando junto a la ventana."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQDCgB6Rrox26lhgPHJR8AAA/q2QF/DfGnE7/j6cZJjYE8YWYXNHl1fYefeU9hRRwap97m34DooAaYqnJF/4P78ZJHtBEcuoAAAA",
+      "hash": "8986490e3baaef74",
+      "generatedAt": "2026-10-01T01:51:30.306Z"
+    }
+  ]
+}

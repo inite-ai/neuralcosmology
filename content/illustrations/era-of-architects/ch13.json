@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch13-cabin",
+      "book": "era-of-architects",
+      "chapter": "ch13",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small log cabin in a forest clearing in early spring: snow melted down to the grass around an old log beehive at the corner, a wooden well a few steps from the door, smoke from the chimney, a family of three approaching on foot.",
+      "alt": {
+        "ru": "Маленький сруб на лесной поляне ранней весной: у старой колоды-улья снег растаял до травы, в нескольких шагах колодец, из трубы дым, к избушке пешком подходят трое.",
+        "en": "A small log cabin in a forest clearing in early spring: snow melted to the grass by an old log beehive, a well a few steps away, chimney smoke, a family of three approaching on foot.",
+        "pt": "Uma pequena cabana de troncos numa clareira no início da primavera: neve derretida até à relva junto a uma velha colmeia, um poço a poucos passos, fumo na chaminé, uma família de três a chegar a pé.",
+        "es": "Una pequeña cabaña de troncos en un claro a principios de primavera: nieve derretida hasta la hierba junto a una vieja colmena de tronco, un pozo a pocos pasos, humo en la chimenea, una familia de tres llegando a pie."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoYABAAPu1kqU2ppaOiMAgBMB2JZwAAQVcx347UIpB7AAD+7qFejB8s20yYyrIq/niGz6cVmaVfczmN8dg5bOJjaxcy+om1XQ93uhIY3u/XPG1AMNVJjQjjP9HaKL7WlImx5RvVLuZAAA==",
+      "hash": "7b7b1dcbd1d26eed",
+      "generatedAt": "2026-10-01T01:49:20.227Z"
+    },
+    {
+      "id": "ea-ch13-carry",
+      "book": "era-of-architects",
+      "chapter": "ch13",
+      "scene": 10,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A forest road at dusk in early spring, puddles and patches of snow: a father walks away from us carrying a tired girl of about ten on his back, her arms around his neck; a woman walks beside them.",
+      "alt": {
+        "ru": "Лесная дорога в весенних сумерках, лужи и остатки снега: отец уходит, неся на спине уставшую девочку лет десяти, обнявшую его за шею, рядом идёт женщина.",
+        "en": "A forest road at spring dusk, puddles and patches of snow: a father walks away carrying a tired girl of about ten on his back, her arms round his neck, a woman beside them.",
+        "pt": "Uma estrada na floresta ao anoitecer de primavera, poças e restos de neve: um pai afasta-se com uma menina cansada de uns dez anos às costas, braços ao pescoço dele, uma mulher ao lado.",
+        "es": "Un camino forestal al anochecer de primavera, charcos y restos de nieve: un padre se aleja con una niña cansada de unos diez años a la espalda, abrazada a su cuello, una mujer a su lado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYABAAPu1kqk4ppaQiMAgBMB2JaQAAXJFZ03cv2ebUuaqmAAD+8qQ15591SdThKVO0sYhz+AlmPEcBM8qCpq318lcpMnJGwNjGzG1DgujZORIdTkPEtxViA9y2JdbgAAA=",
+      "hash": "ad9c3a31fdef75e7",
+      "generatedAt": "2026-10-01T01:49:30.188Z"
+    }
+  ]
+}

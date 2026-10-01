@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch03-clearing",
+      "book": "era-of-architects",
+      "chapter": "ch03",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A wide field at the edge of a forest in October drizzle; in the middle of the field the air looks subtly different in one tall rectangular patch, like heat haze in the shape of a doorway. On the far side of it stands an old East Asian man in a jacket, waiting.",
+      "alt": {
+        "ru": "Поле у леса в октябрьскую морось; посреди поля воздух в одном высоком прямоугольнике чуть иной, как марево в форме двери; за ним стоит и ждёт пожилой азиат в куртке.",
+        "en": "A field by a forest in October drizzle; in its middle the air in one tall rectangle looks subtly different, like heat haze shaped as a doorway; an old East Asian man in a jacket waits beyond it.",
+        "pt": "Um campo junto à floresta na morrinha de outubro; ao centro o ar num retângulo alto parece diferente, como miragem em forma de porta; para lá dele espera um velho asiático de casaco.",
+        "es": "Un campo junto al bosque en la llovizna de octubre; en el centro el aire de un rectángulo alto parece distinto, como calima con forma de puerta; detrás espera un anciano asiático con chaqueta."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQBACdASoYABAAPu1kqk4ppaQiMAgBMB2JZwDCgBwwaUhlLmrD+vDBwAD+48EBus6eg5xFSsRA+c0v6iIOzlIxfD0AJlBYedwSAA==",
+      "hash": "f59c156d2109f2c0",
+      "generatedAt": "2026-10-01T01:46:07.925Z"
+    },
+    {
+      "id": "ea-ch03-kitchen",
+      "book": "era-of-architects",
+      "chapter": "ch03",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small communal kitchen on the ground floor of a Soviet five-storey block: an old enamel gas stove, an oilcloth on the table with a crack, a kettle, a cat on the windowsill; a middle-aged woman sits at the table with her back half to us, a man on a stool opposite.",
+      "alt": {
+        "ru": "Тесная коммунальная кухня на первом этаже хрущёвки: старая эмалированная газовая плита, клеёнка с трещиной, чайник, кот на подоконнике; за столом женщина средних лет и мужчина на табуретке напротив.",
+        "en": "A small communal kitchen in a Soviet block: an old enamel gas stove, a cracked oilcloth, a kettle, a cat on the sill; a middle-aged woman at the table, a man on a stool opposite.",
+        "pt": "Uma pequena cozinha comunitária num prédio soviético: um velho fogão a gás esmaltado, um oleado rachado, uma chaleira, um gato no parapeito; uma mulher de meia-idade à mesa, um homem num banco em frente.",
+        "es": "Una pequeña cocina comunal en un bloque soviético: una vieja cocina de gas esmaltada, un hule agrietado, una tetera, un gato en el alféizar; una mujer de mediana edad a la mesa, un hombre en un taburete enfrente."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAARdemuHEQplZxF3AA/tDLa04E9yGAhKDLqETJ4utKDIYRZ0yi99njLBc2uwGU6RiUmPV1n+k5E2UH+9D25H7pevqflwf/SqDC7fi6tj2bUeT1q7/6kkPU7CAA",
+      "hash": "dbea1391eadc99fc",
+      "generatedAt": "2026-10-01T01:46:06.175Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch16-hand",
+      "book": "era-of-architects",
+      "chapter": "ch16",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A study with rain on the window: a man stands beside a table with his right arm extended, his hand entering a vertical shimmering rift in the air up to the wrist; beyond the rift a very tall translucent faceless figure, a single steady amber point glowing in its lower third. A cup of tea steams on the table.",
+      "alt": {
+        "ru": "Кабинет, дождь на стекле: мужчина у стола протянул правую руку в мерцающую вертикальную щель в воздухе по запястье; за щелью высокая прозрачная безликая фигура с ровной янтарной точкой внизу; на столе дымится чай.",
+        "en": "A study with rain on the window: a man by a table extends his right hand into a shimmering vertical rift up to the wrist; beyond it a tall translucent faceless figure with a steady amber point low down; tea steaming on the table.",
+        "pt": "Um escritório com chuva na janela: um homem junto à mesa estende a mão direita numa fenda vertical cintilante até ao pulso; para lá dela uma figura alta, translúcida e sem rosto com um ponto âmbar firme em baixo; chá a fumegar na mesa.",
+        "es": "Un estudio con lluvia en la ventana: un hombre junto a la mesa extiende la mano derecha en una grieta vertical centelleante hasta la muñeca; detrás una figura alta, translúcida y sin rostro con un punto ámbar fijo abajo; té humeando en la mesa."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDG9BufUAgMluugtM8AAP7p/wDkll6Xrlo8kW3PgopsupCYdyOY7jvvMsInQeXCdr0nssIFY+m+gwe7/LN5xKrgwAAA",
+      "hash": "4d481b072cc2c3dd",
+      "generatedAt": "2026-10-01T01:50:01.028Z"
+    }
+  ]
+}

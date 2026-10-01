@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch08-tv",
+      "book": "era-of-architects",
+      "chapter": "ch08",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Moscow living room at eight in the evening: a man and a woman sit on a sofa in the dark, lit only by a large television showing a studio interview between two men; the woman's hand over her mouth.",
+      "alt": {
+        "ru": "Московская гостиная в восемь вечера: мужчина и женщина сидят на диване в темноте, освещённые только большим телевизором, где идёт студийное интервью двух мужчин; женщина прикрыла рот рукой.",
+        "en": "A Moscow living room at eight in the evening: a man and a woman on a sofa in the dark, lit only by a big TV showing a studio interview between two men; her hand over her mouth.",
+        "pt": "Uma sala em Moscovo às oito da noite: um homem e uma mulher num sofá no escuro, iluminados só por uma televisão grande com uma entrevista em estúdio; ela com a mão na boca.",
+        "es": "Un salón de Moscú a las ocho de la tarde: un hombre y una mujer en un sofá a oscuras, iluminados solo por un gran televisor con una entrevista en plató; ella con la mano en la boca."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoYABAAPu1orU2ppqSiMAgBMB2JZwAAW+i2c/ng4XMAAP70J+4C9y4NLxBMfzrWDom/kw+2etf6zgg7sTD6slt6JxzZiWN8RPhAAA==",
+      "hash": "dd1fe1ab339589e9",
+      "generatedAt": "2026-10-01T01:47:42.257Z"
+    },
+    {
+      "id": "ea-ch08-ambulances",
+      "book": "era-of-architects",
+      "chapter": "ch08",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Moscow street on a December night, wet snow: a line of ambulances with flashing lights stands outside a city hospital entrance, paramedics moving between them, people waiting under the awning.",
+      "alt": {
+        "ru": "Московская улица декабрьской ночью, мокрый снег: у входа в городскую больницу вереница скорых с мигалками, между ними снуют медики, под навесом ждут люди.",
+        "en": "A Moscow street on a December night in wet snow: a line of ambulances with flashing lights outside a hospital, paramedics moving between them, people waiting under the awning.",
+        "pt": "Uma rua de Moscovo numa noite de dezembro com neve molhada: uma fila de ambulâncias de luzes acesas à porta de um hospital, paramédicos entre elas, pessoas à espera sob a cobertura.",
+        "es": "Una calle de Moscú una noche de diciembre con nieve húmeda: una fila de ambulancias con las luces encendidas ante un hospital, sanitarios entre ellas, gente esperando bajo la marquesina."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAW6YQ1XhASFLlIdeKOAAA/u7gmZg+LsZlG35FwVTIUY+C/xSycY5V/W961B8NftuNeJAsh405MRE6W3IT9OBhUTVevoxPH9ner9Zzg0N6os1ETzCIEAA=",
+      "hash": "895b884c5361141b",
+      "generatedAt": "2026-10-01T01:47:49.923Z"
+    }
+  ]
+}

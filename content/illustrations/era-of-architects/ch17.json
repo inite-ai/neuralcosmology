@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch17-forest-edge",
+      "book": "era-of-architects",
+      "chapter": "ch17",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The edge of a deep forest in late September: a teenage girl and a tall young man with backpacks walk into the trees down a narrow path, and at the forest edge a man and a woman stand watching them go, the woman wiping her cheek with a gloved hand.",
+      "alt": {
+        "ru": "Опушка глухого леса в конце сентября: девушка-подросток и высокий парень с рюкзаками уходят по узкой тропе в лес, на опушке смотрят им вслед мужчина и женщина, она вытирает щёку перчаткой.",
+        "en": "The edge of a deep forest in late September: a teenage girl and a tall young man with backpacks walk into the trees, a man and a woman watching from the edge, she wiping her cheek with a gloved hand.",
+        "pt": "A orla de uma floresta densa no fim de setembro: uma adolescente e um jovem alto de mochila entram no bosque, um homem e uma mulher a vê-los partir, ela a limpar a face com a luva.",
+        "es": "El borde de un bosque espeso a finales de septiembre: una adolescente y un joven alto con mochilas se adentran entre los árboles, un hombre y una mujer los miran irse desde el linde, ella secándose la mejilla con un guante."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoYABAAPu1iqk4ppaQiMAgBMB2JaQDE2B6Prg9+MDVgIWoAAP7ytHod57jnLpo2VbDm9PTrf4DdZEHYjRMYYeEYTBu0aAAA",
+      "hash": "49acdd510dc2444c",
+      "generatedAt": "2026-10-01T01:50:28.596Z"
+    },
+    {
+      "id": "ea-ch17-dacha",
+      "book": "era-of-architects",
+      "chapter": "ch17",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old two-storey wooden dacha with a veranda at dusk in late September, unpruned apple trees heavy with fruit, a lamp just coming on in the veranda window; a man and a woman sit on the porch steps, a black cat at their feet.",
+      "alt": {
+        "ru": "Старая двухэтажная деревянная дача с верандой в сумерках конца сентября, необрезанные яблони в плодах, в окне веранды зажигается лампа; на ступеньках сидят мужчина и женщина, у ног чёрный кот.",
+        "en": "An old two-storey wooden dacha with a veranda at late-September dusk, unpruned apple trees heavy with fruit, a lamp coming on in the veranda window; a man and a woman on the steps, a black cat at their feet.",
+        "pt": "Uma velha dacha de madeira de dois pisos com varanda ao anoitecer no fim de setembro, macieiras por podar carregadas, um candeeiro a acender na varanda; um homem e uma mulher nos degraus, um gato preto aos pés.",
+        "es": "Una vieja dacha de madera de dos plantas con galería al anochecer de finales de septiembre, manzanos sin podar cargados de fruta, una lámpara encendiéndose en la galería; un hombre y una mujer en los escalones, un gato negro a sus pies."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDKABget7PZXiAAAP7vS3q+7CstslG7F6LNqut/hQSCeqa9686j8IEE8Kolty1Cq9IqdtnpcVeSoV5guPJYpEAAAA==",
+      "hash": "f6d8d57dd4e07a44",
+      "generatedAt": "2026-10-01T01:50:25.123Z"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch04-visitor",
+      "book": "era-of-architects",
+      "chapter": "ch04",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An apartment front door opened onto a stairwell landing on a Saturday afternoon: a composed woman of about forty in thin metal-framed glasses, dark hair in a low ponytail, holding a closed tablet against her chest, seen from inside the flat over the shoulder of a man.",
+      "alt": {
+        "ru": "Открытая дверь квартиры на лестничную площадку в субботу днём: собранная женщина лет сорока в тонких металлических очках, волосы в низком хвосте, прижимает к груди закрытый планшет.",
+        "en": "A flat's door open onto the landing on a Saturday afternoon: a composed woman of about forty in thin metal glasses, dark hair in a low ponytail, a closed tablet held to her chest.",
+        "pt": "A porta de um apartamento aberta para o patamar num sábado à tarde: uma mulher composta de uns quarenta anos com óculos finos de metal, cabelo escuro num rabo baixo, um tablet fechado contra o peito.",
+        "es": "La puerta de un piso abierta al rellano un sábado por la tarde: una mujer serena de unos cuarenta años con gafas finas de metal, pelo oscuro en una coleta baja, una tableta cerrada contra el pecho."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBACdASoYABAAPu1kqU2ppaQiMAgBMB2JZwC/OCIO2KgeBPhjS/iuAAD+7okHT7lJMHaXeIB8mJJSmuY64adfboeFB9pCV7HfebQDd7y4X0+n+bmdG0OmGW0Ml8ouxoHvgAAA",
+      "hash": "cb3e4cebb11e9302",
+      "generatedAt": "2026-10-01T01:46:36.832Z"
+    },
+    {
+      "id": "ea-ch04-oz",
+      "book": "era-of-architects",
+      "chapter": "ch04",
+      "scene": 7,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A kitchen doorway in a Moscow flat: a small child seen from behind stands in the doorway holding a big illustrated storybook against her side with one finger keeping the page; at the kitchen table beyond sit a man and a woman in glasses, both turned toward her.",
+      "alt": {
+        "ru": "Дверной проём кухни: маленькая девочка со спины стоит на пороге с большой книжкой сказок, заложив палец между страниц; за столом мужчина и женщина в очках повернулись к ней.",
+        "en": "A kitchen doorway: a small girl from behind stands holding a big storybook with a finger keeping the page; at the table a man and a woman in glasses turn toward her.",
+        "pt": "A porta de uma cozinha: uma menina pequena de costas segura um grande livro de contos com o dedo a marcar a página; à mesa um homem e uma mulher de óculos viram-se para ela.",
+        "es": "La puerta de una cocina: una niña pequeña de espaldas sostiene un gran libro de cuentos con un dedo marcando la página; a la mesa un hombre y una mujer con gafas se vuelven hacia ella."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZwAAQvLbBZLSiZh4JFZAAP7ytLhiwN7vmCtIlsFUkYSU5cy/9Zt/EumFqBWs62MTJKnoh7O2VyQc9Y6UilHmNMmpBJsg6DJzOJoCAAA=",
+      "hash": "6c5eb0de525f9153",
+      "generatedAt": "2026-10-01T01:46:40.590Z"
+    }
+  ]
+}

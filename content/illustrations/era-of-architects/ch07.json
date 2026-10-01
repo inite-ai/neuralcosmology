@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch07-chronicles",
+      "book": "era-of-architects",
+      "chapter": "ch07",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A bare study in winter light: a little girl sits cross-legged on a mat with her eyes open, staring at a point on a bookshelf, a notebook on her knees; a slim young woman with dark hair sits beside her, and an old man and a father watch from chairs by the wall.",
+      "alt": {
+        "ru": "Пустой кабинет в зимнем свете: девочка сидит на мате скрестив ноги и смотрит в точку на полке, блокнот на коленях; рядом стройная темноволосая девушка, у стены на стульях смотрят старик и отец.",
+        "en": "A bare study in winter light: a little girl cross-legged on a mat staring at a point on a shelf, a notebook on her knees; a slim dark-haired young woman beside her, an old man and a father watching from chairs.",
+        "pt": "Um escritório despido na luz de inverno: uma menina sentada de pernas cruzadas num tapete a olhar para um ponto na estante, um caderno nos joelhos; ao lado uma jovem esguia de cabelo escuro, um velho e um pai a observar.",
+        "es": "Un estudio desnudo con luz invernal: una niña sentada con las piernas cruzadas en una esterilla mirando un punto del estante, un cuaderno en las rodillas; a su lado una joven delgada de pelo oscuro, un anciano y un padre observando."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwCw7BubJR/DyfjssAD9AfSLZIzVH2a93ZKE6tuTELaQ3E1RXa5E1iTJ+mIv2HYauI7CKm/KN3A6qnn8ojMFpVmAAA==",
+      "hash": "d762bbe048f7e714",
+      "generatedAt": "2026-10-01T01:47:43.850Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-interlude3-memo",
+      "book": "era-of-architects",
+      "chapter": "interlude3",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An official government memo lying on a grey office desk: several typed pages with a round stamp and a signature, too small to read, a paper clip, a ballpoint pen, a cup of cold tea; fluorescent light, a window onto a grey city.",
+      "alt": {
+        "ru": "Служебная записка на сером офисном столе: несколько машинописных листов с круглой печатью и подписью, скрепка, шариковая ручка, остывший чай; свет люминесцентных ламп.",
+        "en": "An official memo on a grey office desk: several typed pages with a round stamp and signature, a paper clip, a ballpoint pen, cold tea; fluorescent light.",
+        "pt": "Um memorando oficial numa secretária cinzenta: várias páginas datilografadas com carimbo redondo e assinatura, um clipe, uma esferográfica, chá frio; luz fluorescente.",
+        "es": "Un memorando oficial sobre una mesa gris de oficina: varias páginas mecanografiadas con sello redondo y firma, un clip, un bolígrafo, té frío; luz fluorescente."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwC/OBgERzPtaHKuW5LCaXAA/vDfpqXVq8R/Pk2EogHcrNpXI/o5izOHBleslWbh1Cc6ryYq/IPzmP7z8SYhUzKuz1pTzLxs5LJ+Kpoodj4bNjej82Uz0IL3wlFAeYq46hiuBqY9AqcOyaCuL4AA",
+      "hash": "ae75fc9d094bbdd5",
+      "generatedAt": "2026-10-01T01:51:25.935Z"
+    }
+  ]
+}

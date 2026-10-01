@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch05-academy",
+      "book": "era-of-architects",
+      "chapter": "ch05",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A two-storey whitewashed country house with wooden verandas at the edge of a forest in late autumn, a large larch in the yard, a gate with a woman in a dark blue cardigan standing by it; a family of three walking up the path from a parked car.",
+      "alt": {
+        "ru": "Двухэтажный белёный дом с деревянными верандами на краю леса поздней осенью, во дворе большая лиственница, у калитки женщина в тёмно-синей кофте; от машины к дому идёт семья из трёх человек.",
+        "en": "A two-storey whitewashed house with wooden verandas at a forest edge in late autumn, a large larch in the yard, a woman in a dark blue cardigan at the gate; a family of three walking up from a car.",
+        "pt": "Uma casa caiada de dois pisos com varandas de madeira à beira da floresta no fim do outono, um grande lariço no pátio, uma mulher de casaco azul-escuro ao portão; uma família de três a subir o caminho.",
+        "es": "Una casa encalada de dos plantas con galerías de madera al borde del bosque a finales de otoño, un gran alerce en el patio, una mujer con rebeca azul oscuro en la verja; una familia de tres subiendo desde un coche."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAWfsCLdHokH26WAAA/uw+oOXOV8DE/cEwAHEpTfGCmQIZI+lipp6f9ZMZJ4bF0a0CuwHiNhTsNFIm6Xu8+cwuoEEgHFG3FvSKA/wAAA==",
+      "hash": "cf04f60e0794056f",
+      "generatedAt": "2026-10-01T01:46:46.142Z"
+    },
+    {
+      "id": "ea-ch05-triad",
+      "book": "era-of-architects",
+      "chapter": "ch05",
+      "scene": 8,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A yard of a country house in autumn: at a weathered table three young teenagers sit close together with a small old speaker, and a tall seventeen-year-old stands near them; fifteen metres away a little girl in a blue jacket sits on a birch log with a book; a faint thin turquoise thread of light stretches between the tall boy and the girl.",
+      "alt": {
+        "ru": "Двор загородного дома осенью: за старым столом трое подростков с маленькой колонкой, рядом высокий семнадцатилетний парень; поодаль на берёзовом полене девочка в синей куртке с книгой; между парнем и девочкой тянется тонкая бирюзовая нить света.",
+        "en": "A country-house yard in autumn: three young teens at a weathered table with a small speaker, a tall seventeen-year-old beside them; at a distance a little girl in a blue jacket on a birch log with a book; a thin turquoise thread of light between the boy and the girl.",
+        "pt": "O pátio de uma casa de campo no outono: três adolescentes numa mesa gasta com uma pequena coluna, um rapaz alto de dezassete anos ao lado; ao longe uma menina de casaco azul num tronco de bétula com um livro; um fio turquesa de luz entre o rapaz e a menina.",
+        "es": "El patio de una casa de campo en otoño: tres adolescentes en una mesa gastada con un pequeño altavoz, un chico alto de diecisiete años al lado; a distancia una niña con chaqueta azul en un tronco de abedul con un libro; un fino hilo turquesa de luz entre el chico y la niña."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAW/DY6nvl8TWokradAAD+8xkB9U6npPssOtePGPuoVwedwiyay4fMRQAA",
+      "hash": "7c1e72cb9eb0f22b",
+      "generatedAt": "2026-10-01T01:47:15.522Z"
+    }
+  ]
+}

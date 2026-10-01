@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-preface-hallway",
+      "book": "era-of-architects",
+      "chapter": "preface",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The hallway of a Moscow flat at night, lit from the kitchen: on the coat hooks hang a man's jacket, a woman's coat and a small child's coat side by side, three pairs of shoes below, a grey cat sitting by the door.",
+      "alt": {
+        "ru": "Прихожая московской квартиры ночью: на крючках рядом висят мужская куртка, женское пальто и маленькое детское пальто, внизу три пары обуви, у двери сидит серый кот.",
+        "en": "A Moscow flat's hallway at night: a man's jacket, a woman's coat and a small child's coat side by side on the hooks, three pairs of shoes below, a grey cat by the door.",
+        "pt": "O corredor de um apartamento de Moscovo à noite: um casaco de homem, um de mulher e um casaquinho de criança lado a lado, três pares de sapatos, um gato cinzento junto à porta.",
+        "es": "El recibidor de un piso de Moscú de noche: una chaqueta de hombre, un abrigo de mujer y un abriguito infantil lado a lado, tres pares de zapatos, un gato gris junto a la puerta."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDG9BujgRBPdQKkSteAAAD+9DJY0q6d84spUTMNd6sok36cnUa/BSh17cOes7MCk7qzeCa852wIiY9AAr4A",
+      "hash": "459ef4d1c4d8abd1",
+      "generatedAt": "2026-10-01T01:51:59.048Z"
+    }
+  ]
+}

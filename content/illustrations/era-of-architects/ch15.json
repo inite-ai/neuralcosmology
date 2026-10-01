@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch15-assembly",
+      "book": "era-of-architects",
+      "chapter": "ch15",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A large forest clearing on a September morning: about forty people sit on rows of mismatched chairs in the open air, and a man stands alone in front of them at an invisible line, speaking; mist lifting off the grass, birches around.",
+      "alt": {
+        "ru": "Большая лесная поляна сентябрьским утром: около сорока человек сидят рядами на разномастных стульях под открытым небом, перед ними у невидимой черты стоит и говорит один человек; над травой поднимается туман.",
+        "en": "A large forest clearing on a September morning: about forty people on rows of mismatched chairs in the open air, one man standing before them at an invisible line, speaking; mist lifting off the grass.",
+        "pt": "Uma grande clareira numa manhã de setembro: cerca de quarenta pessoas em filas de cadeiras desemparelhadas ao ar livre, um homem de pé diante delas numa linha invisível a falar; névoa a levantar da relva.",
+        "es": "Un gran claro del bosque una mañana de septiembre: unas cuarenta personas en filas de sillas dispares al aire libre, un hombre de pie ante ellas en una línea invisible hablando; niebla levantándose de la hierba."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JaQDG9BulDxKfZg7mP5Stw4AA/ujr/sCMyLfGR6d9r+/oguMQplphED5e7b8StyiZ5SrsCAO4SPtzeOtHVtbsEcJx0AAA",
+      "hash": "d1da3005300a4176",
+      "generatedAt": "2026-10-01T01:49:50.614Z"
+    },
+    {
+      "id": "ea-ch15-five-seconds",
+      "book": "era-of-architects",
+      "chapter": "ch15",
+      "scene": 9,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A wide forest clearing seen from far behind rows of seated people: at the front, small in the distance, a single figure stands alone facing them, and for a moment the whole clearing is utterly still, the morning light gathered more brightly around that one distant figure, the birches motionless.",
+      "alt": {
+        "ru": "Лесная поляна издалека из-за рядов сидящих людей: впереди, маленькая на расстоянии, одна стоит фигура, вся поляна замерла, утренний свет вокруг неё чуть ярче.",
+        "en": "A forest clearing seen from far behind rows of seated people: at the front, small in the distance, a single figure stands alone, the whole clearing still, the morning light a little brighter around it.",
+        "pt": "Uma clareira vista de longe por trás de filas de pessoas sentadas: à frente, pequena na distância, uma figura sozinha de pé, toda a clareira imóvel, a luz da manhã mais clara à volta dela.",
+        "es": "Un claro del bosque visto de lejos tras filas de gente sentada: al frente, pequeña en la distancia, una figura sola de pie, todo el claro inmóvil, la luz de la mañana algo más brillante a su alrededor."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoYABAAPu1kqk4ppaQiMAgBMB2JZwDA3CHgB65D8IpnmD8IIAD+8WLIDuIHCRsx1hve3ACLkDaBfepbqhgjL+8cIRgjMQAA",
+      "hash": "51881ba7e78a357d",
+      "generatedAt": "2026-10-01T01:52:44.778Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch02-awakened",
+      "book": "era-of-architects",
+      "chapter": "ch02",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Moscow street at dusk in the near future: among the hurrying crowd several passers-by have stopped dead at different points on the pavement, each looking up or around in wonder as if noticing something nobody else sees.",
+      "alt": {
+        "ru": "Московская улица в сумерках недалёкого будущего: среди спешащей толпы несколько прохожих замерли в разных местах и с удивлением оглядываются, будто заметили то, чего не видят другие.",
+        "en": "A Moscow street at dusk in the near future: in the hurrying crowd several passers-by have stopped dead, looking around in wonder as if noticing what others cannot see.",
+        "pt": "Uma rua de Moscovo ao anoitecer num futuro próximo: na multidão apressada vários transeuntes pararam de repente e olham em volta maravilhados, como se vissem o que os outros não veem.",
+        "es": "Una calle de Moscú al anochecer en un futuro próximo: entre la multitud apresurada varios transeúntes se han detenido en seco y miran asombrados, como si vieran lo que otros no ven."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAWlc2IKoChEr6DGAA/vDLhmlEnESI/0QgGfDFghEjp3MglK/ScxCxoDDr+paRUUtyOPqPt9uXFk55Zwy8nzlfAzIL3AAAAA==",
+      "hash": "c272b57271896f50",
+      "generatedAt": "2026-10-01T01:46:08.210Z"
+    }
+  ]
+}

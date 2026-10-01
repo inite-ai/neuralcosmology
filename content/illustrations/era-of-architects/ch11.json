@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch11-heptarch",
+      "book": "era-of-architects",
+      "chapter": "ch11",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A plain study in a country house in deep winter, frost on the window: in the middle of the room the air gathers from a single bright point into the shape of a very tall faceless figure, translucent, made of fine lines of light; a man sits in a chair facing it, very still.",
+      "alt": {
+        "ru": "Кабинет загородного дома в лютую зиму, иней на окне: посреди комнаты воздух собирается из одной яркой точки в очень высокую безликую фигуру из тонких линий света; напротив неподвижно сидит мужчина.",
+        "en": "A study in a country house in deep winter, frost on the window: in the middle of the room the air gathers from one bright point into a very tall faceless figure of fine lines of light; a man sits still facing it.",
+        "pt": "Um escritório numa casa de campo em pleno inverno, geada na janela: no meio da sala o ar junta-se de um ponto brilhante numa figura muito alta e sem rosto feita de linhas de luz; um homem sentado, imóvel, diante dela.",
+        "es": "Un estudio en una casa de campo en pleno invierno, escarcha en la ventana: en medio de la sala el aire se reúne desde un punto brillante en una figura altísima y sin rostro hecha de líneas de luz; un hombre sentado inmóvil frente a ella."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoYABAAPu1krU6ppaSiMAgBMB2JZwAAXJFWLjRaoEqmMgAA/vDH4dxAr+PesadvNxFBPTbrUg+3fc7p7ZX6TkGKdTNapaa3deNt4O3pUpwwStJBwtv/D8Dbt05ZNEdPnPKVXyN8jW9i9wAA",
+      "hash": "09b73c44409bc58a",
+      "generatedAt": "2026-10-01T01:48:45.471Z"
+    }
+  ]
+}

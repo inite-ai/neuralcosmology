@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-interlude1-form",
+      "book": "era-of-architects",
+      "chapter": "interlude1",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An official printed government form with many small checkboxes and dense lines, clipped to a clipboard on a kindergarten table, too small to read; beside it lies a child's crayon drawing of a house with thin bright threads rising from its roof into the sky.",
+      "alt": {
+        "ru": "Официальный бланк с множеством мелких клеточек на планшете на столе детского сада; рядом детский рисунок мелками: дом, от крыши в небо поднимаются тонкие яркие нити.",
+        "en": "An official form with many small checkboxes on a clipboard on a kindergarten table; beside it a child's crayon drawing of a house with thin bright threads rising from its roof.",
+        "pt": "Um formulário oficial com muitas quadrículas numa prancheta numa mesa de jardim de infância; ao lado um desenho a lápis de cera de uma casa com fios brilhantes a subir do telhado.",
+        "es": "Un formulario oficial con muchas casillas en una carpeta sobre una mesa de guardería; al lado un dibujo infantil a ceras de una casa con hilos brillantes que suben del tejado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC/OCHhp8cx+6xhvtiPkIqwAAD+8Nho6t/1kXxU5quHzSCs3mgDZNEIi0T6azgX9T9JqfAGQVHzUwC+5aTT4oDfQaw25r6mJaIx0S5aj9/Ec8PpKLJwSpi8pSzRtPLWaN+8AAA=",
+      "hash": "0b61689c127e2c05",
+      "generatedAt": "2026-10-01T01:50:57.151Z"
+    }
+  ]
+}

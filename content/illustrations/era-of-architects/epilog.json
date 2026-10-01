@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-epilog-swing",
+      "book": "era-of-architects",
+      "chapter": "epilog",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A dacha garden in June, seven years later: old apple trees, a wooden swing with an oak seat hanging from a branch, a veranda with a man and a woman in their late forties sitting on the steps, a black cat stretched out on the lowest step. Long summer evening light.",
+      "alt": {
+        "ru": "Дачный сад в июне через семь лет: старые яблони, качели с дубовой доской на ветке, на ступеньках веранды сидят мужчина и женщина под пятьдесят, на нижней ступени растянулся чёрный кот.",
+        "en": "A dacha garden in June seven years on: old apple trees, a swing with an oak seat on a branch, a man and a woman near fifty on the veranda steps, a black cat stretched on the lowest step.",
+        "pt": "Um jardim de dacha em junho, sete anos depois: macieiras velhas, um baloiço com assento de carvalho num ramo, um homem e uma mulher perto dos cinquenta nos degraus da varanda, um gato preto estendido no último degrau.",
+        "es": "Un jardín de dacha en junio, siete años después: manzanos viejos, un columpio con asiento de roble en una rama, un hombre y una mujer cerca de los cincuenta en los escalones de la galería, un gato negro tumbado en el último escalón."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDCgCFlz5Bvh5FnxAw+GAAA/u7VOVWMC55phvrm0G4tXCQ9m9LJ0DbtrvNs+t59ilmJvinFYlht8eutuMu3GbnG9TeRHrW/syNpE44rIeJGV9WjVtclO2sZBht9M0AAAA==",
+      "hash": "ef4b2536a5bfbf8d",
+      "generatedAt": "2026-10-01T01:50:35.255Z"
+    },
+    {
+      "id": "ea-epilog-niva",
+      "book": "era-of-architects",
+      "chapter": "epilog",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A country road beside a dacha gate in summer: an old white-and-blue off-road car pulls away down the dirt road, dust rising in the evening sun; at the open gate a man and a woman stand watching it go.",
+      "alt": {
+        "ru": "Деревенская дорога у дачной калитки летом: старый бело-голубой внедорожник уезжает по грунтовке, за ним в вечернем солнце пыль; у открытой калитки стоят и смотрят мужчина и женщина.",
+        "en": "A country road by a dacha gate in summer: an old white-and-blue off-roader drives off down the dirt road, dust rising in the evening sun; a man and a woman watch from the open gate.",
+        "pt": "Uma estrada rural junto ao portão de uma dacha no verão: um velho todo-o-terreno branco e azul afasta-se pela terra batida, pó ao sol da tarde; um homem e uma mulher veem-no partir do portão.",
+        "es": "Un camino rural junto a la verja de una dacha en verano: un viejo todoterreno blanco y azul se aleja por el camino de tierra, polvo al sol de la tarde; un hombre y una mujer lo miran desde la verja abierta."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC/OBoiRIjH+0bnQAD+7Asx51P6bVUx67p41Gbv5u7JUAP7+6r08SwLMFX/V4M21pX746KEAQoLy+zwmyNWEzAls9bdBofuAAAA",
+      "hash": "9094c2eb5732eb11",
+      "generatedAt": "2026-10-01T01:50:59.126Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch14-dawn",
+      "book": "era-of-architects",
+      "chapter": "ch14",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A kitchen in a Moscow flat at dawn: a father and his teenage daughter sit silently at the table with cups of tea, seen from behind against the window, the lattice of the Shukhov tower faint in the grey light outside, a cat on the floor between them.",
+      "alt": {
+        "ru": "Кухня московской квартиры на рассвете: отец и дочь-подросток молча сидят за столом с чаем, спиной к нам, у окна; за окном в сером свете решётка Шуховской башни, на полу кот.",
+        "en": "A Moscow kitchen at dawn: a father and teenage daughter sit silently over tea, backs to us against the window, the Shukhov tower faint outside, a cat on the floor.",
+        "pt": "Uma cozinha em Moscovo ao amanhecer: um pai e a filha adolescente sentados em silêncio com chá, de costas, contra a janela, a torre Chukhov ténue lá fora, um gato no chão.",
+        "es": "Una cocina de Moscú al amanecer: un padre y su hija adolescente sentados en silencio con té, de espaldas, contra la ventana, la torre Shújov tenue fuera, un gato en el suelo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JZwAAX8rBN0Mt//+VQuAA/vKzxkYh5fgjPsHQud5zHEJrTL5wFkQdmEzKbQTc4tm8PniIIDyvoGxEWSgxNpoovbGpXCU/54a9YWkj/8BGpcG9CAA=",
+      "hash": "81c86479a899efbf",
+      "generatedAt": "2026-10-01T01:49:21.739Z"
+    }
+  ]
+}

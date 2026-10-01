@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-interlude5-red-pencil",
+      "book": "era-of-architects",
+      "chapter": "interlude5",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A child's notebook lying open on a wooden table, a few lines written large in red pencil, too blurred to read, the red pencil beside it worn short; spring light from a window.",
+      "alt": {
+        "ru": "Детский блокнот раскрыт на деревянном столе, несколько строк крупно написаны красным карандашом, рядом короткий исписанный красный карандаш; весенний свет из окна.",
+        "en": "A child's notebook open on a wooden table, a few lines written large in red pencil, the worn-down red pencil beside it; spring light from a window.",
+        "pt": "Um caderno de criança aberto numa mesa de madeira, algumas linhas escritas em grande a lápis vermelho, o lápis gasto ao lado; luz de primavera da janela.",
+        "es": "Un cuaderno infantil abierto sobre una mesa de madera, unas líneas escritas en grande con lápiz rojo, el lápiz gastado al lado; luz de primavera por la ventana."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAXy9e0QrGLtiBKZPAAP38+jI/X9zmLSKw83NzMVCGpX8prsIZ104BvzECA7piWemh3aqo6m8xwUjiQwxt7HM6OmKGMoTXy797sjxLG71IoOVh/CDzzben00CAAAA=",
+      "hash": "7cdc580ca2693a13",
+      "generatedAt": "2026-10-01T01:51:39.355Z"
+    }
+  ]
+}

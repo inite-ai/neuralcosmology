@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch10-synth",
+      "book": "era-of-architects",
+      "chapter": "ch10",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small workshop in a country house: on a workbench a half-built modular synthesizer, a rack of panels with knobs and patch cables, a soldering iron smoking faintly; a tall teenage boy bent over it from behind, a desk lamp the only light.",
+      "alt": {
+        "ru": "Мастерская в загородном доме: на верстаке недособранный модульный синтезатор с ручками и патч-кабелями, слегка дымит паяльник, над ним склонился высокий подросток.",
+        "en": "A workshop in a country house: a half-built modular synthesizer with knobs and patch cables on the bench, a faintly smoking soldering iron, a tall teenage boy bent over it.",
+        "pt": "Uma oficina numa casa de campo: um sintetizador modular meio montado com botões e cabos na bancada, um ferro de soldar a fumegar, um adolescente alto debruçado sobre ele.",
+        "es": "Un taller en una casa de campo: un sintetizador modular a medio montar con mandos y cables en el banco, un soldador humeando levemente, un adolescente alto inclinado sobre él."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoYABAAPu1kqk4ppaQiMAgBMB2JZwDCgCHhnfb9x88gwRVsEAD+8NJGeiZ3o3WVlFMbhuyKP1MupjBQafzwrsnj6SRLN16dRa5QAA==",
+      "hash": "60ab14d442f04d1d",
+      "generatedAt": "2026-10-01T01:48:16.245Z"
+    },
+    {
+      "id": "ea-ch10-switch",
+      "book": "era-of-architects",
+      "chapter": "ch10",
+      "scene": 7,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A summer lawn in front of a country house porch: a teenage boy kneels on the grass beside a small synthesizer module on a cable, his finger on a toggle switch; a girl of about ten stands next to him, and on the porch steps a woman sits absolutely still watching. A soft glow rises from the module.",
+      "alt": {
+        "ru": "Летняя лужайка перед крыльцом: подросток стоит на коленях в траве у маленького модуля синтезатора, палец на тумблере; рядом девочка лет десяти, на ступеньках неподвижно сидит и смотрит женщина; от модуля поднимается мягкое свечение.",
+        "en": "A summer lawn before a porch: a teenage boy kneels by a small synth module, finger on a toggle; a girl of about ten beside him, a woman sitting motionless on the steps watching; a soft glow rising from the module.",
+        "pt": "Um relvado de verão diante de um alpendre: um adolescente ajoelhado junto a um pequeno módulo de sintetizador, dedo no interruptor; uma menina de uns dez anos ao lado, uma mulher imóvel nos degraus a observar; um brilho suave a subir do módulo.",
+        "es": "Un césped de verano ante un porche: un adolescente arrodillado junto a un pequeño módulo de sintetizador, el dedo en el interruptor; una niña de unos diez años a su lado, una mujer inmóvil en los escalones mirando; un suave brillo sube del módulo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC+SCHey3ixT7+VxSzEAAD+6+ODfE3LpYZ2y2Kadd8DUliSXGeo6AH0sf9/WHtgrpZrTT874SCqHpVuTbgA",
+      "hash": "c155dd45f283d306",
+      "generatedAt": "2026-10-01T01:48:21.991Z"
+    }
+  ]
+}

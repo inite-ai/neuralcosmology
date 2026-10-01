@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-interlude2-winter",
+      "book": "era-of-architects",
+      "chapter": "interlude2",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A snowy yard of a small forest school in winter seen through a classroom window frosted at the edges: children in coats playing in the snow, tall dark firs behind, a single bird on the fence.",
+      "alt": {
+        "ru": "Заснеженный двор маленькой лесной школы сквозь окно с инеем по краям: дети в пальто играют в снегу, за ними тёмные ели, на заборе одна птица.",
+        "en": "The snowy yard of a small forest school seen through a window frosted at the edges: children in coats playing in the snow, dark firs behind, one bird on the fence.",
+        "pt": "O pátio com neve de uma pequena escola na floresta visto por uma janela gelada nas bordas: crianças de casaco a brincar, abetos escuros atrás, um pássaro na cerca.",
+        "es": "El patio nevado de una pequeña escuela del bosque visto por una ventana escarchada en los bordes: niños con abrigo jugando, abetos oscuros detrás, un pájaro en la valla."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwCuHBtFzh6Q8fYnjrAA/tA140TOMUPCLkdq1L7uLOyXUfWqH/VZ2cPjSLNWO8Vqcs7nKkzhWKhIo+zQxTuIihHj5FJJ5NMJzWLoX0vkWHP5xqjdW8XQvLX8AAAA",
+      "hash": "50166a58efa9c92b",
+      "generatedAt": "2026-10-01T01:51:11.063Z"
+    }
+  ]
+}

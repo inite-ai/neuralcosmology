@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "ea-ch06-study",
+      "book": "era-of-architects",
+      "chapter": "ch06",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A sparse study on the upper floor of an old country house in winter: a table, chairs, a low sofa, shelves of books in many different scripts; on a shelf a smooth black egg-shaped object; snow falling past the window; a man sits facing the north wall with his eyes closed.",
+      "alt": {
+        "ru": "Скромный кабинет на втором этаже загородного дома зимой: стол, стулья, низкий диван, полки с книгами на многих письменностях, на полке чёрное яйцо, за окном снег; мужчина сидит лицом к стене с закрытыми глазами.",
+        "en": "A sparse upstairs study in a country house in winter: table, chairs, low sofa, shelves of books in many scripts, a black egg on a shelf, snow outside; a man sits facing the wall with eyes closed.",
+        "pt": "Um escritório despido no piso de cima de uma casa de campo no inverno: mesa, cadeiras, sofá baixo, estantes com livros em muitas escritas, um ovo preto numa prateleira, neve lá fora; um homem sentado virado para a parede de olhos fechados.",
+        "es": "Un estudio austero en el piso de arriba de una casa de campo en invierno: mesa, sillas, sofá bajo, estantes con libros en muchas escrituras, un huevo negro en un estante, nieve fuera; un hombre sentado de cara a la pared con los ojos cerrados."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAQthH3lUajg0v0+qkgeAA/t40miKF+Vb5f5vt9kRxYGcanv7679pBHjz1DiQZS6lRw9TmHPtAgXUO+Rjgw8HEVVrXFSL8+al9TgCIvo4Bu9NFEf2Yg5kI1Qd2WU0EodjQA75LHUIAAAA=",
+      "hash": "27ab3fe68901d39a",
+      "generatedAt": "2026-10-01T01:47:11.732Z"
+    },
+    {
+      "id": "ea-ch06-scale",
+      "book": "era-of-architects",
+      "chapter": "ch06",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A view from far above the night side of the Earth: city lights, the thin glowing rim of the atmosphere, and across the darkness beyond the planet a few faint distant points arranged in a loose ring, as if other worlds were watching.",
+      "alt": {
+        "ru": "Вид с большой высоты на ночную сторону Земли: огни городов, тонкий светящийся край атмосферы, а в темноте вокруг планеты неплотным кольцом несколько далёких слабых точек, будто другие миры смотрят.",
+        "en": "A view from high above Earth's night side: city lights, the thin glowing rim of the atmosphere, and in the darkness around it a loose ring of faint distant points, as if other worlds were watching.",
+        "pt": "Uma vista do alto sobre o lado noturno da Terra: luzes das cidades, o fino rebordo luminoso da atmosfera e, na escuridão à volta, um anel solto de pontos distantes, como se outros mundos observassem.",
+        "es": "Una vista desde muy arriba del lado nocturno de la Tierra: luces de ciudades, el fino borde luminoso de la atmósfera y, en la oscuridad alrededor, un anillo suelto de puntos lejanos, como si otros mundos observaran."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoYABAAPu1krU6ppaSiMAgBMB2JZwDKACHfwMftvBB6dgAAAP7yllVXoFoEysfo93Jn1Y7tu8o5VZVytPJegwhzT3vD5yrAAAA=",
+      "hash": "5f1377dffe3eb3fb",
+      "generatedAt": "2026-10-01T01:47:13.414Z"
+    }
+  ]
+}

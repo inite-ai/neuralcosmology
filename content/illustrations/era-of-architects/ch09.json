@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch09-press",
+      "book": "era-of-architects",
+      "chapter": "ch09",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small press hall on the second floor of an old building on Tverskaya: rows of journalists with cameras and raised phones, a single speaker at a lectern under bright lights, seen from the back of the room; tall old windows with heavy curtains.",
+      "alt": {
+        "ru": "Небольшой пресс-зал на втором этаже старого здания на Тверской: ряды журналистов с камерами и телефонами, один выступающий за трибуной под яркими лампами, вид из конца зала.",
+        "en": "A small press hall on the second floor of an old building on Tverskaya: rows of journalists with cameras and phones, a single speaker at a lectern under bright lights, seen from the back.",
+        "pt": "Uma pequena sala de imprensa no segundo andar de um edifício antigo na Tverskaya: filas de jornalistas com câmaras e telemóveis, um orador num púlpito sob luzes fortes, visto do fundo.",
+        "es": "Una pequeña sala de prensa en el segundo piso de un edificio antiguo de Tverskaya: filas de periodistas con cámaras y móviles, un orador en un atril bajo luces intensas, visto desde el fondo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC7ABufOVl2WxjkwLL0AAD+8SDtvf6PkVK10Mfxg3sTIKdrKx5cC2Y2+Pio+21HfI+LXbeyAm3MqJ1eiWaXl8mZo4jcmZiYf7jo5tzIAA==",
+      "hash": "98db54b5f22c64b9",
+      "generatedAt": "2026-10-01T01:48:16.758Z"
+    }
+  ]
+}
