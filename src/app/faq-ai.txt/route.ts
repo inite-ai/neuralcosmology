@@ -40,7 +40,7 @@ Q: Is Neural Cosmology peer-reviewed?
 A: The preprint is at version 9.0. It has not yet been submitted to arXiv or a refereed journal. Its falsifiers (F0–F5) are written into the manuscript, and CLAIMS.md in the code repository separates tested results from conjecture. Peer review is welcome — contact info@neuralcosmology.com.
 
 Q: Where is the code and data?
-A: The operational substrate is the Sixth language at https://github.com/Mikefluff/sixth. "make verify" runs the full regression and ends with "artifact status: reproducible".
+A: The operational substrate is the Sixth language at https://github.com/neuralcosmology/sixth. "make verify" runs the full regression and ends with "artifact status: reproducible".
 
 [Books]
 

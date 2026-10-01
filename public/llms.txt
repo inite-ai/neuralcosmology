@@ -56,7 +56,7 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 
 - [Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy](https://neuralcosmology.com/en/science/pointer-architecture): Preprint v9.0. A formal computational substrate S = (G, R, C, A, π) implemented as the Sixth language (40 demonstrations, 646 assertions); four complexity theorems; correspondences with CRDTs, Petri nets, actor model; algebraic-observer correspondence; holographic dark energy reproduced in substrate language; consciousness measure Φ_PA with five predictions; pre-stated falsifiers F0–F5.
 - [PDF — Pointer Architecture v9.0](https://neuralcosmology.com/pdfs/pointer-architecture-v9.pdf): The full preprint.
-- [Code — Sixth](https://github.com/Mikefluff/sixth): The operational substrate; `make verify` reproduces every demonstration.
+- [Code — Sixth](https://github.com/neuralcosmology/sixth): The operational substrate; `make verify` reproduces every demonstration.
 - [Science index](https://neuralcosmology.com/en/science): Landing page for all research outputs.
 
 ## Books

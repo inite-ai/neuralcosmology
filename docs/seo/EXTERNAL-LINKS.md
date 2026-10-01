@@ -25,28 +25,15 @@
 
 | Что | Сейчас | Должно быть |
 |---|---|---|
-| Описание репозитория `Mikefluff/sixth` | «38 primitives, 31 emergence demos» | «38 primitives, 40 emergence demonstrations, 646 assertions. Reference implementation of Pointer Architecture v9.0.» |
-| Организация `github.com/neuralcosmology` | пустая, а сайт ссылается на неё как на rel="me" | профиль-README (текст ниже) и перенос `sixth` в организацию (Settings → Transfer; GitHub сам редиректит старые ссылки) |
+| Репозиторий Sixth | был `Mikefluff/sixth`, описание с устаревшими цифрами | **сделано 2026-10-01:** перенесён в `neuralcosmology/sixth`, описание и темы обновлены, CITATION.cff и `.zenodo.json` готовы |
+| Организация `github.com/neuralcosmology` | была пустой | **сделано 2026-10-01:** название, описание, ссылка на сайт, README профиля |
 | Синопсис «Академии Багов» в `books.ts` | исправлено 2026-10-01 | — |
 | Telegram-канал `@neuralcosmology` | проверить описание | первая строка — ссылка `neuralcosmology.com`, закреп — пост со ссылкой на `/ru/books` и `/ru/answers` |
 | LinkedIn `in/mikefluff` | проверить | в Featured — ссылки на `neuralcosmology.com/en/about` и препринт; в разделе Publications — препринт (после DOI) |
 | X `@mikefluff` | проверить | в bio — `neuralcosmology.com` |
 | Подпись в почте | — | `Mikhail Savchenko · neuralcosmology.com · ORCID 0009-0006-2873-9925` |
 
-README для `github.com/neuralcosmology` (файл `profile/README.md` в репозитории `neuralcosmology/.github`):
-
-```markdown
-# Neural Cosmology
-
-A falsifiable research programme by Mikhail Savchenko on consciousness and the universe as a learning network.
-
-- **Preprint:** Pointer Architecture v9.0 — a formal computational substrate with a working implementation and falsifiers stated in advance → https://neuralcosmology.com/en/science/pointer-architecture
-- **Code:** [Sixth](https://github.com/neuralcosmology/sixth) — a Forth-like language in 38 primitives; 40 emergence demonstrations, 646 assertions
-- **Books:** The Celestial Code, Conscious Selection, Bugs Academy, Era of Architects → https://neuralcosmology.com/en/books
-- **Answers:** short evidence-based pages on the cosmic web, IIT, Landauer's principle, bioelectricity and more → https://neuralcosmology.com/en/answers
-
-Site in English, Russian, Portuguese and Spanish: https://neuralcosmology.com
-```
+README профиля организации опубликован: https://github.com/neuralcosmology/.github/blob/main/profile/README.md
 
 ---
 
@@ -66,7 +53,7 @@ Site in English, Russian, Portuguese and Spanish: https://neuralcosmology.com
 **Био, абзац (RU)**
 > Михаил Савченко двадцать лет занимается инженерией ИИ и пишет PhD. «Нейронная космология» — его исследовательская программа о сознании: она проверяет, не работают ли мозг, космическая паутина и живая материя на одном вычислительном субстрате, и заранее называет, что её опровергнет. Формальное ядро программы — препринт Pointer Architecture (v9.0) с работающей реализацией на языке Sixth. Пишет книги и эссе на русском и английском. neuralcosmology.com
 
-**Препринт:** «Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy», Mikhail Savchenko, 2026, v9.0. Страница: `https://neuralcosmology.com/en/science/pointer-architecture`. Код: `https://github.com/Mikefluff/sixth`.
+**Препринт:** «Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy», Mikhail Savchenko, 2026, v9.0. Страница: `https://neuralcosmology.com/en/science/pointer-architecture`. Код: `https://github.com/neuralcosmology/sixth`.
 
 **Профили:** ORCID `0009-0006-2873-9925` · GitHub `Mikefluff`, `neuralcosmology` · LinkedIn `in/mikefluff` · X `@mikefluff` · Telegram `@neuralcosmology` (канал), `@mikefluff`.
 
@@ -116,7 +103,7 @@ Site in English, Russian, Portuguese and Spanish: https://neuralcosmology.com
 ### 1.2 arXiv
 Зачем: главный канал видимости для физиков; поисковики и модели считают arXiv авторитетным.
 - Категории: основная `gr-qc` или `hep-th` (holographic dark energy, algebraic observers), кросс-листинг `cs.LO` (формальный субстрат), `q-bio.NC` (Φ_PA).
-- Нужен endorsement от автора, публиковавшегося в категории. Кого просить: авторов работ из списка литературы препринта, с которыми есть пересечение, — вежливое письмо с PDF и одной фразой, почему именно они (шаблон 9.4).
+- Нужен endorsement от автора, публиковавшегося в категории. Кого просить: авторов работ из списка литературы препринта, с которыми есть пересечение, — вежливое письмо с PDF и одной фразой, почему именно они (`kit/08`).
 - Если endorsement не найдётся быстро — не ждать: Zenodo + PhilArchive + OSF дают DOI и индексацию уже сейчас.
 
 ### 1.3 Другие репозитории препринтов (бесплатно, каждый — отдельная индексируемая запись)
@@ -144,7 +131,7 @@ Site in English, Russian, Portuguese and Spanish: https://neuralcosmology.com
 - OpenAlex подтягивается автоматически из Crossref/DataCite; проверить через месяц `api.openalex.org/authors?search=Mikhail Savchenko`.
 
 ### 1.6 Software Heritage и каталоги кода
-- softwareheritage.org → Save code now → `github.com/Mikefluff/sixth`. Вечный архив с SWHID — его тоже можно указать в препринте.
+- softwareheritage.org → Save code now → `github.com/neuralcosmology/sixth`. Вечный архив с SWHID — его тоже можно указать в препринте.
 - Papers with Code закрыт; вместо него — Hugging Face Papers (после arXiv): страница статьи + ссылка на код.
 
 ### 1.7 Wikidata (главный рычаг для узнаваемости в ChatGPT, Gemini, Google Knowledge Graph)
@@ -200,7 +187,7 @@ LAST	Den	"Forth-like programming language, reference implementation of Pointer A
 LAST	Dru	"Forth-подобный язык программирования, эталонная реализация Pointer Architecture"
 LAST	P31	Q9143
 LAST	P178	QAUTHOR
-LAST	P1324	"https://github.com/Mikefluff/sixth"
+LAST	P1324	"https://github.com/neuralcosmology/sixth"
 LAST	P856	"https://neuralcosmology.com/en/science/pointer-architecture"
 LAST	P348	"9.0"
 ```
@@ -273,15 +260,15 @@ Sixth — самый «ссылочный» актив: технари охот�
 
 | Площадка | Что сделать | Ссылка |
 |---|---|---|
-| **Esolang wiki** (esolangs.org) | статья о Sixth (черновик 9.6): синтаксис, примитивы, пример, ссылка на репозиторий и препринт | GitHub + страница препринта |
+| **Esolang wiki** (esolangs.org) | статья о Sixth (`kit/06`): синтаксис, примитивы, пример, ссылка на репозиторий и препринт | GitHub + страница препринта |
 | **Rosetta Code** | добавить Sixth как язык и решить 10–20 типовых задач (Hello world, FizzBuzz, Fibonacci, Towers of Hanoi) | страница языка ссылается на репозиторий |
-| **awesome-списки на GitHub** | PR в awesome-forth, awesome-esolangs, awesome-concatenative, awesome-artificial-life (текст PR 9.7) | GitHub sixth |
+| **awesome-списки на GitHub** | PR в awesome-forth, awesome-esolangs, awesome-concatenative, awesome-artificial-life (`kit/07`) | GitHub sixth |
 | **r/Forth**, **comp.lang.forth**, форум forth-ev.de | пост «A Forth-like language where 40 demos build observers from one distinction» с кодом | GitHub |
 | **Concatenative wiki** (concatenative.org) | добавить Sixth в список языков | GitHub |
 | **Racket Discourse** (Sixth написан на Racket) | «Show & Tell» | GitHub |
-| **Hacker News** — Show HN | «Show HN: Sixth – a Forth-like language where 40 demos grow observers and time from one distinction» (текст 9.2) | GitHub, в первом комментарии — препринт |
+| **Hacker News** — Show HN | «Show HN: Sixth – a Forth-like language with a pre-registered log of its failures» (`kit/05`) | GitHub, в первом комментарии — препринт |
 | **Lobsters** | нужно приглашение; теги `plt`, `science` | GitHub |
-| **Хабр** | статья «Язык из 38 примитивов, на котором из одного различия вырастают время, пространство и наблюдатели» (план 9.1); хабы: Программирование, Научно-популярное, Ненормальное программирование | GitHub + `/ru/answers/is-the-universe-a-neural-network` |
+| **Хабр** | статья «Язык из 38 примитивов, на котором из одного различия вырастают время, пространство и наблюдатели» (`kit/04`); хабы: Программирование, Научно-популярное, Ненормальное программирование | GitHub + `/ru/answers/is-the-universe-a-neural-network` |
 | **dev.to**, **Medium** | кросспост EN-версии статьи с canonical на сайт | то же |
 | **Artificial Life** — сообщество ISAL, рассылка | короткое письмо о демонстрациях автопоэзиса и космогенеза на субстрате | препринт |
 
@@ -294,7 +281,7 @@ Sixth — самый «ссылочный» актив: технари охот�
 | **LessWrong** | link post или пост о проверяемости теорий сознания с явными фальсификаторами (Φ_PA, P1–P5) | `/en/science/pointer-architecture` |
 | **Effective Altruism Forum / AI Alignment Forum** | только если пост про P1–P2 (Φ трансформеров, KV-кэш) — это вопрос о сознании ИИ | препринт |
 | **Essentia Foundation** | гостевое эссе (они в выдаче по теме brain–cosmic web) | `/en/answers/is-the-universe-a-neural-network` |
-| **IAI News**, **Aeon/Psyche**, **Nautilus**, **Big Think**, **The Conversation** (нужна академическая аффилиация) | питч эссе (шаблон 9.5) | страница-ответ по теме эссе |
+| **IAI News**, **Aeon/Psyche**, **Nautilus**, **Big Think**, **The Conversation** (нужна академическая аффилиация) | питч эссе (`kit/09`) | страница-ответ по теме эссе |
 | **Qualia Research Institute**, **Models of Consciousness** (конференция), **ASSC**, **The Science of Consciousness (Tucson)** | подача тезиса; программа конференции публикуется и индексируется | препринт |
 | **PhilPapers** | раздел 1.3 | — |
 | **Reddit**: r/consciousness, r/cosmology, r/Physics (weekly threads), r/philosophyofmind, r/slatestarcodex, r/singularity (для P1–P2), r/Futurology | ответы в тредах, где страница-ответ закрывает вопрос; свой пост — не чаще раза в месяц на сабреддит | страницы-ответы |
@@ -314,7 +301,7 @@ Sixth — самый «ссылочный» актив: технари охот�
 
 **PT/ES:** «Ciência Suja», «Naruhodo» (BR), «Ciencia de Sofá», «Coffee Break: Señal y Ruido» (ES).
 
-Питч — шаблон 9.5. Отдельная страница «Press & podcasts» на сайте (могу сделать) с медиакитом: био трёх длин, фото, темы, ссылки — облегчает приглашение.
+Питчи и адресаты — `kit/09`. Отдельная страница «Press & podcasts» на сайте (могу сделать) с медиакитом: био трёх длин, фото, темы, ссылки — облегчает приглашение.
 
 Лекции: если записи лежат на YouTube/VK/Rutube — в описании каждого ролика первой строкой ссылка на соответствующую страницу `/lectures/<slug>` и на `/answers` по теме.
 
@@ -348,7 +335,7 @@ Sixth — самый «ссылочный» актив: технари охот�
 | Stephen Wolfram / Jonathan Gorard | Wolfram model, гиперграфовые переписывания — Sixth близок по духу; у Wolfram Physics есть сообщество и форум |
 | Авторы из списка литературы препринта (Witten, Chandrasekaran–Longo–Penington–Witten и др.) | кандидаты в endorsement arXiv; писать коротко и только тем, чья работа реально использована |
 
-Шаблон — 9.4.
+Шаблоны — `kit/08`.
 
 ---
 
@@ -363,75 +350,9 @@ Sixth — самый «ссылочный» актив: технари охот�
 
 ## 9. Готовые тексты
 
-### 9.1 Хабр: план статьи
-**Заголовок:** Язык из 38 примитивов, на котором из одного различия вырастают время, пространство и наблюдатели
-1. Задача: можно ли построить формальный субстрат, в котором физика и наблюдатель — следствия, а не входные данные, и проверить это кодом, а не словами.
-2. Sixth: Forth-подобный стек, 38 примитивов, почему стек (одна операция — одно различие).
-3. Три демонстрации с кодом: число из различия, время как порядок коммитов, наблюдатель как петля, читающая собственный архив.
-4. 646 проверок: как устроены тесты, что считается провалом (F0).
-5. Что из этого получается в физике (голографическая тёмная энергия в пределах множителя 0,73) и чего не получается (отрицательный результат на Pythia).
-6. Где это ломается — фальсификаторы F0–F5.
-7. Ссылки: репозиторий, препринт, `/ru/answers/is-the-universe-a-neural-network`.
+Все тексты вынесены в `kit/` и сверены с репозиторием и сайтом: Wikidata (`01`), Zenodo (`02`), профили (`03`), статья для Хабра (`04`), Show HN и англоязычные посты (`05`), Esolang wiki и Rosetta Code (`06`), awesome-списки (`07`), письма исследователям (`08`), питчи (`09`), ответы для Reddit, Quora и SE (`10`).
 
-### 9.2 Show HN
-**Title:** Show HN: Sixth – a Forth-like language where 40 demos grow observers and time from one distinction
-**Text:**
-> Sixth is a small stack language (38 primitives, hosted on Racket) that I wrote as the reference implementation of a formal substrate called Pointer Architecture. The repository has 40 "emergence demonstrations" — from a single distinction to arithmetic, time, space, observers, autopoiesis and a toy cosmogenesis — checked by 646 assertions. The accompanying preprint states its falsifiers up front, including a negative result on Pythia activations. I'd love feedback on the language design and on whether the demonstrations prove what they claim.
->
-> Code: https://github.com/Mikefluff/sixth · Preprint: https://neuralcosmology.com/en/science/pointer-architecture
-
-Постить вторник–четверг, 15:00–17:00 UTC; первые два часа отвечать на комментарии.
-
-### 9.3 Reddit: как отвечать
-Сначала ответ по существу в 3–6 предложениях, потом одна строка: «I wrote a longer evidence-based summary with sources here: <ссылка>». Не больше одной своей ссылки на тред, никаких ссылок в первые дни после регистрации аккаунта.
-
-### 9.4 Письмо исследователю (EN)
-**Subject:** Your [paper] used as a test case in a falsifiable substrate model
-> Dear Professor [Name],
->
-> I am an AI engineer working on a PhD. In a recent preprint, Pointer Architecture (v9.0), I use your [paper, year] as [what exactly: a benchmark / a correspondence / a point of departure]. Specifically, [one sentence about the result and how it relates to their work].
->
-> The model states its falsifiers in advance, and the code is public (646 automated checks). If you have a moment, I would value your view on whether I have read your result correctly — and if not, where the reading breaks.
->
-> Preprint: https://neuralcosmology.com/en/science/pointer-architecture
-> Code: https://github.com/Mikefluff/sixth
->
-> With respect,
-> Mikhail Savchenko
-> ORCID 0009-0006-2873-9925
-
-Для endorsement arXiv — тот же текст плюс последний абзац: «I am submitting it to arXiv (gr-qc) and need an endorsement as a first-time submitter. If after reading you think it meets the bar, the endorsement code is [code]. I fully understand if not.»
-
-### 9.5 Питч подкасту / изданию (EN, RU)
-**EN:**
-> Hi [Name], I'm Mikhail Savchenko, an AI engineer who spent the last years testing in public whether the brain, the cosmic web and living matter share one computational substrate. The part your listeners may find unusual: the model comes with code and a list of results that would prove it wrong, and I report the ones that already went against me (a whole chapter of my last book is about my own failed measurements). Possible angles: why the cosmic web and the cortex are statistically similar and what that does not prove; a measurable consciousness quantity that says a single transformer forward pass is not conscious; what an AI engineer learns from Michael Levin's planaria. Bio and links: https://neuralcosmology.com/en/about
-
-**RU:**
-> Здравствуйте! Я Михаил Савченко, инженер ИИ. Несколько лет публично проверяю, не работают ли мозг, космическая паутина и живая материя на одном вычислительном субстрате. Необычное для слушателей: у модели есть код и список результатов, которые её опровергнут, и я рассказываю о тех, что уже вышли против меня (о собственных проваленных измерениях у меня целая глава в последней книге). Возможные темы: почему кора мозга и космическая паутина статистически похожи и чего это не доказывает; величина сознания, по которой один проход трансформера не сознателен; чему инженер ИИ учится у планарий Майкла Левина. Обо мне и ссылки: https://neuralcosmology.com/ru/about
-
-### 9.6 Esolang wiki: черновик статьи «Sixth»
-```
-'''Sixth''' is a stack-based, Forth-like programming language designed by Mikhail Savchenko in 2025–2026 as the reference implementation of Pointer Architecture, a formal computational substrate. It is hosted on Racket and has 38 primitives.
-
-== Overview ==
-Programs manipulate a directed graph of pointers through a data stack. Every primitive either creates a distinction, rewrites pointers, or commits a change to an append-only archive. The repository contains 40 "emergence demonstrations" that build arithmetic, time, space, observers and universal computation from a single distinction, checked by 646 assertions.
-
-== Example ==
-<!-- вставить короткий пример из демо 01 -->
-
-== External links ==
-* [https://github.com/Mikefluff/sixth Source code]
-* [https://neuralcosmology.com/en/science/pointer-architecture Pointer Architecture preprint]
-
-[[Category:Languages]] [[Category:2026]] [[Category:Stack-based]] [[Category:Implemented]] [[Category:Turing complete]]
-```
-
-### 9.7 PR в awesome-список
-**Строка:** `- [Sixth](https://github.com/Mikefluff/sixth) - Forth-like language in 38 primitives; 40 demos build arithmetic, time and observers from one distinction.`
-**Описание PR:** «Adds Sixth, a small Forth-like language hosted on Racket, with a test suite of 646 assertions. Happy to adjust the wording or section.»
-
-### 9.8 Описание Telegram-канала
-> Нейронная космология — исследовательская программа Михаила Савченко о сознании и Вселенной как обучающейся сети. Книги, препринт, эссе, новые главы. neuralcosmology.com
+Цифры: препринт v9.0 — 38 примитивов, 40 демонстраций, 646 проверок; репозиторий сейчас — 49 примитивов, 197 демонстраций, 2500 проверок, 52 заранее зарегистрированных цикла. О статье говорить первыми, о коде — вторыми.
 
 ---
 
@@ -456,7 +377,7 @@ Programs manipulate a directed graph of pointers through a data stack. Every pri
 
 - Вписать DOI, Q-номера Wikidata, профили Goodreads, PhilPeople, ResearchGate и т. д. в sameAs, JSON-LD, identity.json, llms.txt, страницу «Об авторе» — как только они появятся.
 - Сделать страницу «Press & podcasts» с медиакитом.
-- Написать статью для Хабра и EN-версию для dev.to/Medium по плану 9.1.
+- ~~Статья для Хабра, Show HN, Esolang wiki, письма, питчи, ответы~~ — готовы в `kit/` (2026-10-01).
 - Подготовить EPUB/FB2 «Академии Багов» из актуальных исходников и аннотации для площадок.
 - Написать статью Esolang wiki целиком, с примерами из демонстраций.
 - ~~Исправить синопсис «Академии Багов» на сайте~~ — сделано 2026-10-01 во всех четырёх языках.

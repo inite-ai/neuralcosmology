@@ -30,7 +30,7 @@ export const papers: Paper[] = [
       "F5: if Φ_PA fails to discriminate any of P1–P5 in the predicted direction, the consciousness measure is inadequate and the framework falls back to the operational substrate alone.",
     ],
     pdfPath: "/pdfs/pointer-architecture-v9.pdf",
-    codeUrl: "https://github.com/Mikefluff/sixth",
+    codeUrl: "https://github.com/neuralcosmology/sixth",
     companionBookSlug: "celestial-code",
     license: "CC-BY-4.0",
     licenseUrl: "https://creativecommons.org/licenses/by/4.0/",

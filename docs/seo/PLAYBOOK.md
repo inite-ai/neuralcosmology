@@ -8,7 +8,7 @@
 - Раздел `/answers`: 7 страниц-ответов × 4 языка (прямой ответ, разбор, FAQ, ссылки на препринт, эссе, книги), Article + FAQPage + speakable, markdown-версии `/raw.md`, llms.txt.
 - Поисковые `<title>` разделов под спрос (`src/content/seo.ts`), H1 не тронуты.
 - IndexNow пингуется после каждого деплоя (Bing, Yandex, Seznam).
-- Препринт на сайте переведён на PA v9.0 (SPARC убран отовсюду: страница препринта, FAQ, эссе, ответы, llms.txt). Код — `github.com/Mikefluff/sixth`, туда добавлены CITATION.cff (с ORCID), homepage и topics.
+- Препринт на сайте переведён на PA v9.0 (SPARC убран отовсюду: страница препринта, FAQ, эссе, ответы, llms.txt). Код — `github.com/neuralcosmology/sixth`, туда добавлены CITATION.cff (с ORCID), homepage и topics.
 
 ## Что нужно сделать тебе (аккаунты)
 
@@ -19,7 +19,7 @@
 4. Bing Webmaster Tools → «Import from Google Search Console» (одна кнопка), либо `BING_VERIFICATION` так же, как Яндекс.
 
 ### 2. Zenodo DOI для препринта (15 минут, самый важный научный сигнал)
-1. zenodo.org → войти через GitHub → Settings → GitHub → включить `Mikefluff/sixth`.
+1. zenodo.org → войти через GitHub → Settings → GitHub → включить `neuralcosmology/sixth`.
 2. На GitHub создать релиз `v9.0` в `sixth` — Zenodo сам выпустит DOI (CITATION.cff уже там). PDF препринта v9.0 можно загрузить на Zenodo отдельной записью типа Preprint.
 3. Прислать DOI — я пропишу его в `papers.ts`, JSON-LD, llms.txt и на странице препринта.
 4. Опционально: перенести `sixth` в организацию `neuralcosmology` (Settings → Transfer). Старые ссылки GitHub редиректит сам. Организация сейчас пустая, а rel="me" на сайте ссылается на неё.

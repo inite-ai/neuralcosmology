@@ -38,7 +38,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Is the code available?",
         answer:
-          "Yes. The operational substrate is the Sixth language at github.com/Mikefluff/sixth. `make verify` runs the full regression and ends with “artifact status: reproducible”. A CLAIMS.md file separates what is proved by tests, what is demonstrated by construction and what is philosophical conjecture.",
+          "Yes. The operational substrate is the Sixth language at github.com/neuralcosmology/sixth. `make verify` runs the full regression and ends with “artifact status: reproducible”. A CLAIMS.md file separates what is proved by tests, what is demonstrated by construction and what is philosophical conjecture.",
       },
       {
         question: "How does this relate to the books?",
@@ -99,7 +99,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Код открыт?",
         answer:
-          "Да. Операционный субстрат — язык Sixth: github.com/Mikefluff/sixth. `make verify` прогоняет всю регрессию и заканчивается строкой «artifact status: reproducible». Файл CLAIMS.md разделяет то, что доказано тестами, то, что показано построением, и философские гипотезы.",
+          "Да. Операционный субстрат — язык Sixth: github.com/neuralcosmology/sixth. `make verify` прогоняет всю регрессию и заканчивается строкой «artifact status: reproducible». Файл CLAIMS.md разделяет то, что доказано тестами, то, что показано построением, и философские гипотезы.",
       },
       {
         question: "Как это связано с книгами?",
@@ -160,7 +160,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O código está disponível?",
         answer:
-          "Sim. O substrato operacional é a linguagem Sixth, em github.com/Mikefluff/sixth. `make verify` roda toda a regressão e termina com “artifact status: reproducible”. Um arquivo CLAIMS.md separa o que é provado por testes, o que é demonstrado por construção e o que é conjectura filosófica.",
+          "Sim. O substrato operacional é a linguagem Sixth, em github.com/neuralcosmology/sixth. `make verify` roda toda a regressão e termina com “artifact status: reproducible”. Um arquivo CLAIMS.md separa o que é provado por testes, o que é demonstrado por construção e o que é conjectura filosófica.",
       },
       {
         question: "Como isso se relaciona com os livros?",
@@ -221,7 +221,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Está disponible el código?",
         answer:
-          "Sí. El sustrato operativo es el lenguaje Sixth, en github.com/Mikefluff/sixth. `make verify` ejecuta toda la regresión y termina con “artifact status: reproducible”. Un archivo CLAIMS.md separa lo demostrado por tests, lo mostrado por construcción y lo que es conjetura filosófica.",
+          "Sí. El sustrato operativo es el lenguaje Sixth, en github.com/neuralcosmology/sixth. `make verify` ejecuta toda la regresión y termina con “artifact status: reproducible”. Un archivo CLAIMS.md separa lo demostrado por tests, lo mostrado por construcción y lo que es conjetura filosófica.",
       },
       {
         question: "¿Cómo se relaciona con los libros?",
