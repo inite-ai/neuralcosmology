@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "cc-ch_comp-life",
+      "book": "celestial-code",
+      "chapter": "ch_comp",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A sheet of squared graph paper on a dark desk, lit from above: some squares are filled in with pencil, forming small regular patterns, and a stream of small identical shapes travels diagonally across the sheet like a flock. An eraser and a pencil beside it.",
+      "alt": {
+        "ru": "Лист бумаги в клетку на тёмном столе: часть клеток закрашена карандашом, по диагонали тянется вереница одинаковых маленьких фигур, рядом ластик и карандаш.",
+        "en": "A sheet of squared paper on a dark desk: some squares pencilled in, a stream of identical little shapes travelling diagonally, an eraser and pencil beside it.",
+        "pt": "Uma folha quadriculada numa mesa escura: alguns quadrados pintados a lápis, uma fila de pequenas formas iguais na diagonal, borracha e lápis ao lado.",
+        "es": "Una hoja cuadriculada sobre una mesa oscura: algunas casillas rellenas a lápiz, una hilera de formas pequeñas idénticas en diagonal, una goma y un lápiz al lado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1mq04ppaQiMAgBMB2JZwC/OCIg/oVgSsBd+4FugAD+8qujMxt1GI2UZ8qARDhyQYj/cj4+PvW/akj8K49l2w+AFmxdS4EPb5ncYYOJPxgP0nB196BIKk3H7gAAAA==",
+      "hash": "bbf2a5f3792d0322",
+      "generatedAt": "2026-10-01T01:27:16.192Z"
+    },
+    {
+      "id": "cc-ch_comp-z3",
+      "book": "celestial-code",
+      "chapter": "ch_comp",
+      "scene": 2,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Z3_Deutsches_Museum.JPG",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "author": "Venusianer at German Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "alt": {
+        "ru": "Музейная реконструкция вычислительной машины: стойки с телефонными реле и пульт с клавишами и лампочками.",
+        "en": "A museum reconstruction of a computing machine: racks of telephone relays and a console with keys and lamps.",
+        "pt": "Uma reconstrução museológica de uma máquina de calcular: bastidores de relés telefónicos e uma consola com teclas e lâmpadas.",
+        "es": "Una reconstrucción de museo de una máquina de calcular: bastidores de relés telefónicos y una consola con teclas y lámparas."
+      },
+      "caption": {
+        "ru": "Реконструкция Z3 Конрада Цузе (1941) в Немецком музее в Мюнхене: первый программируемый компьютер, собранный из телефонных реле.",
+        "en": "A reconstruction of Konrad Zuse's Z3 (1941) at the Deutsches Museum, Munich: the first programmable computer, built from telephone relays.",
+        "pt": "Reconstrução do Z3 de Konrad Zuse (1941) no Deutsches Museum, Munique: o primeiro computador programável, feito de relés telefónicos.",
+        "es": "Reconstrucción del Z3 de Konrad Zuse (1941) en el Deutsches Museum de Múnich: el primer ordenador programable, hecho con relés telefónicos."
+      },
+      "width": 1600,
+      "height": 1200,
+      "placeholder": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAwBQCdASoYABIAPu1qrFEppaQiqAqpMB2JYwCzgd0KOcUv/hyl+q5HJgt1koyh2bqKAADJYqImhFwHbKKpQ3gzh2XgD3b9Sg4tL5qU1CNQPBfbfcRqBTeYg73R4/C5SkyJosiVK3h4RUP43NK5b+pWqm89CBbCFdRkUQxI9XLaPuFv7hkfExZJReiAvn4HR3HisfwX7416JM2Jy1ppQjbDIMsU/+FxagkLqGDwAAA=",
+      "hash": "4eb57f62b5c11c03",
+      "generatedAt": "2026-10-01T01:26:51.820Z"
+    }
+  ]
+}

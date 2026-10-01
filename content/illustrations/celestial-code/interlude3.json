@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude3-nigredo",
+      "book": "celestial-code",
+      "chapter": "interlude3",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An alchemist's glass flask on an old wooden bench in a dark cellar: inside, a black mass at the bottom, a pale white mist above it and a faint glowing red drop at the top, three layers in one vessel. A candle stub beside it.",
+      "alt": {
+        "ru": "Алхимическая колба на старом столе в тёмном подвале: внизу чёрная масса, выше белёсая дымка, наверху слабо светящаяся красная капля.",
+        "en": "An alchemist's flask on an old bench in a dark cellar: a black mass at the bottom, a pale mist above, a faint glowing red drop at the top.",
+        "pt": "Um frasco de alquimista numa velha bancada de uma cave escura: massa negra no fundo, névoa pálida por cima, uma gota vermelha luminosa no topo.",
+        "es": "Un matraz de alquimista sobre un viejo banco en un sótano oscuro: una masa negra en el fondo, una neblina pálida encima, una gota roja luminosa arriba."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwDCgCHfUah61GJ+/xxgWAAA/vDJHbPzdKMa3QBqdAkcW6yaJxy1ZF0HHt5//+hiV2jmks6CEsTDC+ktUDhoaa8gAA==",
+      "hash": "89f9d517ae13af06",
+      "generatedAt": "2026-10-01T01:28:55.193Z"
+    }
+  ]
+}

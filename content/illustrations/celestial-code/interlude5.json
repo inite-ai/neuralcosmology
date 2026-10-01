@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude5-eurotour",
+      "book": "celestial-code",
+      "chapter": "interlude5",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The back seat of a car on a European motorway at night in the mid-1990s: a nine-year-old boy seen from behind presses his forehead to the window, watching the lights of an unfamiliar city slide past. Another child asleep beside him.",
+      "alt": {
+        "ru": "Заднее сиденье машины на ночном европейском шоссе середины 1990-х: мальчик лет девяти прижался лбом к стеклу и смотрит на огни чужого города.",
+        "en": "The back seat of a car on a European motorway at night in the mid-1990s: a boy of nine presses his forehead to the window, watching a strange city's lights.",
+        "pt": "O banco de trás de um carro numa autoestrada europeia à noite, meados dos anos 90: um rapaz de nove anos encosta a testa ao vidro e vê as luzes de uma cidade estranha.",
+        "es": "El asiento trasero de un coche en una autopista europea de noche a mediados de los noventa: un niño de nueve años apoya la frente en la ventanilla y mira las luces de una ciudad extraña."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAXBqRn2eswWYIAAD+7ykLt1bwQbr60cLSAVN7CncIb/5GAWNhj8t6P5QA0h/LvAAA",
+      "hash": "7bb4eaa56ec6249e",
+      "generatedAt": "2026-10-01T01:29:26.332Z"
+    },
+    {
+      "id": "cc-interlude5-memory-palace",
+      "book": "celestial-code",
+      "chapter": "interlude5",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long enfilade of empty rooms in an old house, doors open one after another into the distance. In each room a single ordinary object stands alone in a pool of light: an apple, a boot, a clock, a teapot, a key. Quiet, orderly, dreamlike.",
+      "alt": {
+        "ru": "Анфилада пустых комнат старого дома, двери открыты одна за другой; в каждой комнате в пятне света стоит один предмет: яблоко, ботинок, часы, чайник, ключ.",
+        "en": "An enfilade of empty rooms in an old house, doors open one after another; in each room a single object in a pool of light: an apple, a boot, a clock, a teapot, a key.",
+        "pt": "Uma enfiada de salas vazias numa casa antiga, portas abertas umas após outras; em cada sala um único objeto num foco de luz: maçã, bota, relógio, bule, chave.",
+        "es": "Una enfilada de habitaciones vacías en una casa antigua, puertas abiertas una tras otra; en cada sala un solo objeto en un círculo de luz: manzana, bota, reloj, tetera, llave."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZwC7ACHhyWkJPGHuqWAA/vKqk9OJ0WqjwAUJvNLr0HGi6WLyTu4fe9PfDJLx3uf6SU2pDwJON1Ko9m8OKEAA",
+      "hash": "4d0202ef6bb199c6",
+      "generatedAt": "2026-10-01T01:29:32.009Z"
+    }
+  ]
+}

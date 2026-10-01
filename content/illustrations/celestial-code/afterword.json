@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-afterword-lectern",
+      "book": "celestial-code",
+      "chapter": "afterword",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An ancient book lies open on a wooden lectern in a dark stone room, lit by one candle; its pages are covered in faded marks too worn to read, and dust hangs in the candlelight.",
+      "alt": {
+        "ru": "Древняя книга раскрыта на деревянном аналое в тёмной каменной комнате при одной свече; знаки на страницах стёрлись, в свете висит пыль.",
+        "en": "An ancient book open on a wooden lectern in a dark stone room by one candle, its marks worn unreadable, dust in the light.",
+        "pt": "Um livro antigo aberto numa estante de madeira numa sala de pedra escura, à luz de uma vela, os sinais gastos e ilegíveis, pó no ar.",
+        "es": "Un libro antiguo abierto en un atril de madera en una sala de piedra oscura, a la luz de una vela, los signos gastados e ilegibles, polvo en el aire."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDG9B6O5vHtEJB/nQgAAP7N8LG3km2s/Fp2rIq3Zxb0qIUNSXihdWXq5AuTEt9GzjPqEtT4Jnlw21yNYQUrs8AAAA==",
+      "hash": "aabe568839d8a1e7",
+      "generatedAt": "2026-10-01T01:24:21.649Z"
+    }
+  ]
+}

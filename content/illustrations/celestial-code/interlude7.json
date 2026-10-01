@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude7-motel",
+      "book": "celestial-code",
+      "chapter": "interlude7",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A plain roadside-motel conference room near the Gulf of Finland at dusk: rows of chairs facing a simple table with a cloth and two candlesticks, tall pines and a grey sea visible through the window. A few men in dark suits from behind.",
+      "alt": {
+        "ru": "Конференц-зал придорожного мотеля у Финского залива в сумерках: ряды стульев перед столом со скатертью и двумя подсвечниками, за окном сосны и серое море.",
+        "en": "A roadside-motel conference room by the Gulf of Finland at dusk: rows of chairs before a table with a cloth and two candlesticks, pines and a grey sea outside.",
+        "pt": "Uma sala de conferências de um motel de estrada junto ao golfo da Finlândia ao entardecer: filas de cadeiras diante de uma mesa com toalha e dois castiçais, pinheiros e mar cinzento lá fora.",
+        "es": "Una sala de conferencias de un motel de carretera junto al golfo de Finlandia al anochecer: filas de sillas ante una mesa con mantel y dos candelabros, pinos y un mar gris fuera."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoYABAAPu1iqk4ppaQiMAgBMB2JZQC2yCFrtcyqgr3ryr83/QAA/vDYvdL8nQRUSSYxzZ5b1zTYpLRiAZPEOgileLhQ+IamQEzN1tkGinsHT+KjQsIQuQDh1MLQUdgAAAA=",
+      "hash": "5027d66b729f7d80",
+      "generatedAt": "2026-10-01T01:29:54.073Z"
+    }
+  ]
+}

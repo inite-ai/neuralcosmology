@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude13-elista",
+      "book": "celestial-code",
+      "chapter": "interlude13",
+      "scene": 0,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Golden_Abode_Of_Buddha_Shakyamuni_(198230281).jpeg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Golden_Abode_Of_Buddha_Shakyamuni_%28198230281%29.jpeg/1920px-Golden_Abode_Of_Buddha_Shakyamuni_%28198230281%29.jpeg",
+        "author": "Aleksei Kharin",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "alt": {
+        "ru": "Белый буддийский храм с золотыми крышами под открытым небом, перед ним ступы.",
+        "en": "A white Buddhist temple with golden roofs under an open sky, stupas in front.",
+        "pt": "Um templo budista branco com telhados dourados sob céu aberto, estupas à frente.",
+        "es": "Un templo budista blanco con tejados dorados bajo el cielo abierto, estupas delante."
+      },
+      "caption": {
+        "ru": "Золотая обитель Будды Шакьямуни, Элиста: буддийская республика посреди европейской степи.",
+        "en": "The Golden Abode of Buddha Shakyamuni, Elista: a Buddhist republic in the middle of the European steppe.",
+        "pt": "A Morada Dourada de Buda Shakyamuni, Elista: uma república budista no meio da estepe europeia.",
+        "es": "La Morada Dorada de Buda Shakyamuni, Elistá: una república budista en medio de la estepa europea."
+      },
+      "width": 1600,
+      "height": 1067,
+      "placeholder": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBOgZYAlOu2S/4NThwvTSUAA5+subXdPqQ3yQeVIENrxIRwo5Kb+v2aNV6ddS0LGFFTztxs65fj5WBO7vjl5Np/cTK91DVBn/bM2Rx/xOd+B2GNHGzqhEbo3X3hLB4rRE6dBX/LR+wX0KAgYlUWlkHBz/tUzpQGU4AAA",
+      "hash": "e855ee2c66a5fefd",
+      "generatedAt": "2026-10-01T01:27:53.143Z"
+    },
+    {
+      "id": "cc-interlude13-shrine",
+      "book": "celestial-code",
+      "chapter": "interlude13",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small roadside spirit house and Buddha shrine at a busy Thai crossroads at night: garlands of flowers, incense smoke, a cup of offering; scooters streak past in blurred light behind it.",
+      "alt": {
+        "ru": "Маленький придорожный алтарь с Буддой на оживлённом тайском перекрёстке ночью: цветочные гирлянды, дым благовоний, позади пролетают размытые скутеры.",
+        "en": "A small roadside Buddha shrine at a busy Thai crossroads at night: flower garlands, incense smoke, blurred scooters streaking past behind.",
+        "pt": "Um pequeno altar de Buda à beira da estrada num cruzamento movimentado na Tailândia à noite: grinaldas, fumo de incenso, scooters desfocadas a passar.",
+        "es": "Un pequeño altar de Buda junto a la carretera en un cruce concurrido de Tailandia de noche: guirnaldas, humo de incienso, motos borrosas pasando detrás."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwAAW+/+VnIfQYyQXssIAAD+8WDRvgWHW9Sm1X1rw7Abzr1wHjQpzov+whIT4WRAvXECRUHi4qcXGEvH9s8xOeExdQzuHTX2E6sfgJssMZq5uZqUAAAA",
+      "hash": "632cb100ab1f7ae9",
+      "generatedAt": "2026-10-01T01:28:27.508Z"
+    }
+  ]
+}

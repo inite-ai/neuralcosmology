@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "id": "cc-ch11-stack",
+      "book": "celestial-code",
+      "chapter": "ch11",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A stack of old flat wooden trays or plates piled one on top of another on a workbench, the top one lifted slightly by a hand; beside them a small old terminal glowing in the dark. The stack is the subject: simple, last in, first out.",
+      "alt": {
+        "ru": "Стопка старых деревянных подносов на верстаке, верхний чуть приподнят рукой; рядом в темноте светится маленький старый терминал.",
+        "en": "A stack of old wooden trays on a workbench, the top one lifted slightly by a hand; a small old terminal glowing beside it in the dark.",
+        "pt": "Uma pilha de velhos tabuleiros de madeira numa bancada, o de cima levantado por uma mão; ao lado, no escuro, um pequeno terminal antigo aceso.",
+        "es": "Una pila de viejas bandejas de madera sobre un banco de trabajo, la de arriba levantada por una mano; al lado, en la oscuridad, un pequeño terminal antiguo encendido."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAUqtPn2GLbNzga4AA/vQyxnlphvTQDrR+JI0cH2QJSqMvZQ01oTgpfMSN0YeQAA==",
+      "hash": "847cec9b9d3c22da",
+      "generatedAt": "2026-10-01T01:26:47.372Z"
+    },
+    {
+      "id": "cc-ch11-graph",
+      "book": "celestial-code",
+      "chapter": "ch11",
+      "scene": 16,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A sheet of paper on a dark table, lit by a lamp: a hand has drawn dozens of small dots connected by fine pencil arrows, some dots receiving many arrows and growing dense clusters, others almost alone. The pencil rests on the sheet.",
+      "alt": {
+        "ru": "Лист бумаги на тёмном столе: от руки нарисованы десятки точек, соединённых тонкими стрелками; к одним сходится много стрелок, другие почти одиноки.",
+        "en": "A sheet of paper on a dark table: dozens of hand-drawn dots joined by fine arrows; some gather many arrows, others are almost alone.",
+        "pt": "Uma folha numa mesa escura: dezenas de pontos desenhados à mão ligados por setas finas; uns recebem muitas setas, outros estão quase sozinhos.",
+        "es": "Una hoja sobre una mesa oscura: decenas de puntos dibujados a mano unidos por finas flechas; unos reciben muchas flechas, otros están casi solos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAW4Ua6vIwtKwzJ9ygAP70K1tXAMSYDNZvOO+BEGJKIyTrI7NcacG0kYVJuh9zy4533pZJy9iRQGV8EIZ3UTNm/HPQRZqMAAAA",
+      "hash": "036734e4c8b6415b",
+      "generatedAt": "2026-10-01T01:26:49.549Z"
+    },
+    {
+      "id": "cc-ch11-m87",
+      "book": "celestial-code",
+      "chapter": "ch11",
+      "scene": 21,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Black_hole_-_Messier_87_crop_max_res.jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg/1920px-Black_hole_-_Messier_87_crop_max_res.jpg",
+        "author": "Event Horizon Telescope, uploader cropped and converted TIF to JPG",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      },
+      "alt": {
+        "ru": "Размытое оранжевое кольцо света вокруг тёмного центра на чёрном фоне.",
+        "en": "A blurred orange ring of light around a dark centre on a black background.",
+        "pt": "Um anel de luz laranja desfocado à volta de um centro escuro sobre fundo negro.",
+        "es": "Un anillo de luz naranja difuso alrededor de un centro oscuro sobre fondo negro."
+      },
+      "caption": {
+        "ru": "Первое изображение тени чёрной дыры: центр галактики M87, телескоп «Горизонт событий», 2019.",
+        "en": "The first image of a black hole's shadow: the centre of the galaxy M87, Event Horizon Telescope, 2019.",
+        "pt": "A primeira imagem da sombra de um buraco negro: o centro da galáxia M87, Event Horizon Telescope, 2019.",
+        "es": "La primera imagen de la sombra de un agujero negro: el centro de la galaxia M87, Event Horizon Telescope, 2019."
+      },
+      "width": 1600,
+      "height": 1600,
+      "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQBACdASoYABgAPu1crE4ppKSiMBgMATAdiWwAAC51oMZvC7THj1+SIkJWhAAA/vQbYMCsupzHYGWOo88vlU+AXB7zq6B8xdhXk9nXVbnjouhesR87XI+XvDjNaGU7AAA=",
+      "hash": "8100e5c42bc54979",
+      "generatedAt": "2026-10-01T01:26:32.571Z"
+    },
+    {
+      "id": "cc-ch11-fold",
+      "book": "celestial-code",
+      "chapter": "ch11",
+      "scene": 26,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A large sheet of thin paper printed with a dense regular pattern of dots, folded once so that two distant parts of the pattern touch along the crease; light from below shines through where they overlap.",
+      "alt": {
+        "ru": "Большой лист тонкой бумаги с частым узором точек сложен так, что две далёкие части узора соприкасаются по сгибу; снизу сквозь наложение пробивается свет.",
+        "en": "A large sheet of thin paper with a dense dot pattern, folded so two distant parts of the pattern touch along the crease; light shines through where they overlap.",
+        "pt": "Uma grande folha de papel fino com um padrão denso de pontos, dobrada para que duas partes distantes se toquem na dobra; a luz atravessa onde se sobrepõem.",
+        "es": "Una gran hoja de papel fino con un denso patrón de puntos, doblada para que dos partes lejanas se toquen en el pliegue; la luz atraviesa donde se superponen."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAW+zqBt54q6nqQoAA/vDAUn56obKNvTSedbv/0o1YJZivoUBrIuAAAA==",
+      "hash": "ec791dd1391479d0",
+      "generatedAt": "2026-10-01T01:27:04.185Z"
+    }
+  ]
+}

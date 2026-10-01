@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude9-letters",
+      "book": "celestial-code",
+      "chapter": "interlude9",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Two bundles of old letters tied with string lie on a desk under a lamp, one in pale envelopes and one in darker ones, with a few letters spilled between them; a fountain pen and a pair of round spectacles nearby.",
+      "alt": {
+        "ru": "Две пачки старых писем, перевязанные бечёвкой, на столе под лампой; между ними рассыпано несколько писем, рядом перьевая ручка и круглые очки.",
+        "en": "Two bundles of old letters tied with string on a desk under a lamp, a few spilled between them, a fountain pen and round spectacles nearby.",
+        "pt": "Dois maços de cartas antigas atados com cordel numa secretária sob o candeeiro, algumas espalhadas entre eles, uma caneta de tinta permanente e óculos redondos.",
+        "es": "Dos fajos de cartas antiguas atados con cordel sobre un escritorio bajo la lámpara, algunas esparcidas entre ellos, una pluma estilográfica y gafas redondas."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAQcpFGG92QOqoAP7w5dVsepNMtY2YFQmxu0k5xrJDIt8ayRUD5iv4Ovw5UmpEPhmB9frSw8g+nQpMRgjQVOLUobun2ydCXgAA",
+      "hash": "c7b3f3e67f54f7a9",
+      "generatedAt": "2026-10-01T01:30:12.966Z"
+    }
+  ]
+}

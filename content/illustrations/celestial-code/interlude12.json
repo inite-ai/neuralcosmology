@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude12-cape",
+      "book": "celestial-code",
+      "chapter": "interlude12",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The harbour of Cape Town at dawn seen from the water: the long flat-topped wall of Table Mountain behind the city, a thin cloud spilling over its edge like a tablecloth, cargo cranes and old sailing masts in the foreground.",
+      "alt": {
+        "ru": "Кейптаунская гавань на рассвете с воды: за городом плоская стена Столовой горы, через край переливается тонкое облако, на переднем плане краны и мачты.",
+        "en": "Cape Town harbour at dawn from the water: the flat wall of Table Mountain behind the city, a thin cloud spilling over its edge, cranes and masts in front.",
+        "pt": "O porto da Cidade do Cabo ao amanhecer visto da água: a muralha plana da Montanha da Mesa, uma nuvem fina a transbordar da borda, gruas e mastros à frente.",
+        "es": "El puerto de Ciudad del Cabo al amanecer desde el agua: la muralla plana de la Montaña de la Mesa, una nube fina derramándose por el borde, grúas y mástiles delante."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAwCdASoYABAAPu1kq04ppaQiMAgBMB2JZwAAUorg7fyzWD9gAP7Bs97ItsNiY2QX87jqxVzbC10RQkHLxMvKBIibC5OQzPcahRr5nBA3PXIrn2gkOpIN9EXvzz3fosUMNRmCmeAAAA==",
+      "hash": "03d4e345337f62c4",
+      "generatedAt": "2026-10-01T01:28:07.101Z"
+    },
+    {
+      "id": "cc-interlude12-karoo",
+      "book": "celestial-code",
+      "chapter": "interlude12",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A desert dirt road at night in the Karoo: two cars in convoy, their headlights lighting a column of red dust behind them, and above an enormous sky blazing with the Milky Way from horizon to horizon.",
+      "alt": {
+        "ru": "Грунтовая дорога в пустыне Кару ночью: две машины друг за другом, фары подсвечивают столб пыли, над ними во всё небо Млечный Путь.",
+        "en": "A desert dirt road in the Karoo at night: two cars in convoy, headlights lighting a column of dust, the Milky Way across the whole sky above.",
+        "pt": "Uma estrada de terra no deserto do Karoo à noite: dois carros em coluna, os faróis a iluminar uma nuvem de pó, a Via Láctea a cobrir o céu.",
+        "es": "Un camino de tierra en el desierto del Karoo de noche: dos coches en caravana, los faros iluminando una columna de polvo, la Vía Láctea cruzando todo el cielo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoYABAAPu1kqU4ppaOiMAgBMB2JZwAASoqc1glJM+VrbUw8VAD+7qFXbeCNy03vCU3QLa/6KFjKL9169JZ8IY0ljT+D3oe9r9SIRn6YyXB7AAAA",
+      "hash": "a5387d0d2ddf5464",
+      "generatedAt": "2026-10-01T01:28:19.893Z"
+    }
+  ]
+}

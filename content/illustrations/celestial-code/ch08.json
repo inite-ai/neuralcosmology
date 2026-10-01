@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "id": "cc-ch08-darwin-tree",
+      "book": "celestial-code",
+      "chapter": "ch08",
+      "scene": 0,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/1/10/Darwin_Tree_1837.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "author": "Charles Darwin",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Страница записной книжки с рукописным ветвящимся деревом и подписями от руки.",
+        "en": "A notebook page with a hand-drawn branching tree and handwritten notes.",
+        "pt": "Uma página de caderno com uma árvore ramificada desenhada à mão e notas manuscritas.",
+        "es": "Una página de cuaderno con un árbol ramificado dibujado a mano y notas manuscritas."
+      },
+      "caption": {
+        "ru": "Чарльз Дарвин. Первый набросок древа жизни в записной книжке «B», 1837. Сверху его пометка «I think».",
+        "en": "Charles Darwin's first sketch of the tree of life in Notebook B, 1837, under his note 'I think'.",
+        "pt": "O primeiro esboço da árvore da vida de Charles Darwin no Caderno B, 1837, sob a nota 'I think'.",
+        "es": "El primer esbozo del árbol de la vida de Charles Darwin en el Cuaderno B, 1837, bajo su nota 'I think'."
+      },
+      "width": 1390,
+      "height": 2265,
+      "placeholder": "data:image/webp;base64,UklGRhABAABXRUJQVlA4IAQBAABQBgCdASoYACcAPu1oqE8ppiOiKqwBMB2JaQDIXy3+BdVPpOrm71y8wrDnvmrqqR5IM+iSY3jiMwI68AD+sR8KeIKMv6Hv2rTDlnc6PYrgZn5QNckKQ2pTQIc2SgV4zKZNo8yikni2ztoahBhBfeQdnmB2Bvs9Os+bY7qQoEq6J5vC7eXgpWKascXtigSjNcHqaAAcH0uc+2DKyO8R/uEsCI2ZhhJY2P2QbG/RNbKnBAAsYhm5vSdZtFi6Hr6tu27rEZRUrqMVtTLC6gem+l4EMfkDPzUOd/bAGvaMx/WShf9BTr91P6RZiXgVFU/W6AoUeragqLEsB+3/JIN2hfm67gAAAA==",
+      "hash": "89edfdfd1437c4f9",
+      "generatedAt": "2026-10-01T01:25:51.646Z"
+    },
+    {
+      "id": "cc-ch08-octopus-eye",
+      "book": "celestial-code",
+      "chapter": "ch08",
+      "scene": 7,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Extreme close-up of an octopus eye in dark water: the horizontal slit pupil, the iris folds, the textured skin around it; the eye is unmistakably a camera eye, built like ours by an entirely separate lineage.",
+      "alt": {
+        "ru": "Крупный план глаза осьминога в тёмной воде: горизонтальный зрачок-щель, складки радужки, фактурная кожа вокруг.",
+        "en": "Close-up of an octopus eye in dark water: the horizontal slit pupil, folds of the iris, textured skin around it.",
+        "pt": "Grande plano do olho de um polvo em água escura: pupila horizontal em fenda, pregas da íris, pele texturada à volta.",
+        "es": "Primer plano del ojo de un pulpo en agua oscura: pupila horizontal en ranura, pliegues del iris, piel texturada alrededor."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAgCdASoYABAAA4BaJZwDCgEPAqMT+luErv8jrCqxAAD++RBPCgpvATlOphgYcj9wtryD7HNYQ5riTwqQv4qbrXVi2Dz6Uq/vu3UgsZd5JpraO16RD1jtvx0zwAAA",
+      "hash": "4afac75ecc7696dd",
+      "generatedAt": "2026-10-01T01:26:22.641Z"
+    }
+  ]
+}

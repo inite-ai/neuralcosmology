@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude6-rocket",
+      "book": "celestial-code",
+      "chapter": "interlude6",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Soviet military academy courtyard in Saint Petersburg on a grey morning: a row of young cadets seen from behind in greatcoats, and beyond the railings an old space-rocket monument pointing at a low sky.",
+      "alt": {
+        "ru": "Двор военной академии в Петербурге серым утром: шеренга курсантов в шинелях со спины, за оградой старый памятник-ракета смотрит в низкое небо.",
+        "en": "A military academy courtyard in Saint Petersburg on a grey morning: a row of cadets in greatcoats from behind, an old rocket monument beyond the railings.",
+        "pt": "O pátio de uma academia militar em São Petersburgo numa manhã cinzenta: uma fila de cadetes de capote, de costas, e um velho monumento-foguetão além das grades.",
+        "es": "El patio de una academia militar en San Petersburgo en una mañana gris: una fila de cadetes con capote, de espaldas, y un viejo monumento-cohete tras la verja."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDCgCBvEsn9mFY1pD+sAAD+3X6vZqzrai6pwplditN4IZrRghR/wWhUu24cy4SLzPFAyfrjVta2tp2gdHZN0YU5unRxgfrD/kmFLfCYAA==",
+      "hash": "53243bf943993200",
+      "generatedAt": "2026-10-01T01:29:38.908Z"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": "cc-ch02-survey",
+      "book": "celestial-code",
+      "chapter": "ch02",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An astronomer's desk in the early 1980s: a large sheet of paper with a hand-plotted fan-shaped wedge of thousands of dots, the dots clearly forming bubbles, walls and filaments rather than a uniform spread. A ruler, a pencil and a stack of punched cards beside it. The astronomer's hands hover over it.",
+      "alt": {
+        "ru": "Стол астронома начала 1980-х: на большом листе вручную нанесён веер из тысяч точек, которые складываются в пузыри, стены и нити; рядом линейка и перфокарты.",
+        "en": "An astronomer's desk in the early 1980s: a large sheet with a hand-plotted fan of thousands of dots forming bubbles, walls and filaments; a ruler and punched cards beside it.",
+        "pt": "A secretária de um astrónomo no início dos anos 80: uma folha grande com um leque de milhares de pontos desenhados à mão, formando bolhas, paredes e filamentos; régua e cartões perfurados ao lado.",
+        "es": "La mesa de un astrónomo a principios de los ochenta: una hoja grande con un abanico de miles de puntos trazados a mano que forman burbujas, paredes y filamentos; una regla y tarjetas perforadas al lado."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwAwCdASoYABAAPu1kq04ppaQiMAgBMB2JZwC/OB6QPlPuW3XNaVPwAP7ytJX2fJSWV9E0xEN2ULy67FUdvt1P485LrWCSb3q7jqIZ653fmzlevb5ws2xlOvQrLfdVSVOrMKR5zKMIxDFvYU7ZSLz6gYBZfwiLUpYAAA==",
+      "hash": "8d209fc7ef3d6eaf",
+      "generatedAt": "2026-10-01T01:24:22.651Z"
+    },
+    {
+      "id": "cc-ch02-physarum",
+      "book": "celestial-code",
+      "chapter": "ch02",
+      "scene": 5,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Physarum_polycephalum_Schwein_570529_crop.jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Physarum_polycephalum_Schwein_570529_crop.jpg/1920px-Physarum_polycephalum_Schwein_570529_crop.jpg",
+        "author": "This image was created by user Bill Sheehan (B_Sheehan) at Mushroom Observer, a source for",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "alt": {
+        "ru": "Жёлтый слизевик расползается по поверхности сетью ветвящихся прожилок.",
+        "en": "A yellow slime mould spreading over a surface in a network of branching veins.",
+        "pt": "Um bolor limoso amarelo a espalhar-se numa rede de veias ramificadas.",
+        "es": "Un moho mucilaginoso amarillo extendiéndose en una red de venas ramificadas."
+      },
+      "caption": {
+        "ru": "Слизевик Physarum polycephalum: одна клетка без нервной системы, которая прокладывает к пище сеть кратчайших путей.",
+        "en": "The slime mould Physarum polycephalum: a single cell with no nervous system that lays down a network of shortest paths to food.",
+        "pt": "O bolor limoso Physarum polycephalum: uma única célula sem sistema nervoso que traça uma rede de caminhos mais curtos até ao alimento.",
+        "es": "El moho mucilaginoso Physarum polycephalum: una sola célula sin sistema nervioso que traza una red de caminos más cortos hacia el alimento."
+      },
+      "width": 1600,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQBACdASoYAA8APu1iqU2ppaOiMAgBMB2JaACdMoGv/i1m03aLxV0iCxi3LrVggAD+dJH9lq47+OUlgltFNtFOB2Oq6AapgFOz7FDnk8VDxVhzTtnrEQRDU3wC2QynVNyAXIRDDg7oKZ4oyWdvIzLB2L+MbMxBoO4NnR0AAAA=",
+      "hash": "78358fb7ae87efec",
+      "generatedAt": "2026-10-01T01:23:52.867Z"
+    },
+    {
+      "id": "cc-ch02-slime-web",
+      "book": "celestial-code",
+      "chapter": "ch02",
+      "scene": 6,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Map_of_the_cosmic_web_generated_from_slime_mould_algorithm_(49644052578).jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Map_of_the_cosmic_web_generated_from_slime_mould_algorithm_%2849644052578%29.jpg/1920px-Map_of_the_cosmic_web_generated_from_slime_mould_algorithm_%2849644052578%29.jpg",
+        "author": "European Space Agency",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "alt": {
+        "ru": "Карта космической паутины: светящиеся нити, соединяющие скопления галактик, на тёмном фоне.",
+        "en": "A map of the cosmic web: glowing filaments connecting clusters of galaxies on a dark background.",
+        "pt": "Um mapa da teia cósmica: filamentos luminosos a ligar enxames de galáxias sobre fundo escuro.",
+        "es": "Un mapa de la red cósmica: filamentos luminosos que conectan cúmulos de galaxias sobre fondo oscuro."
+      },
+      "caption": {
+        "ru": "Космическая паутина, восстановленная алгоритмом, который подражает слизевику. NASA, ESA и J. Burchett, O. Elek (Калифорнийский университет в Санта-Крусе).",
+        "en": "The cosmic web reconstructed by an algorithm modelled on the slime mould. NASA, ESA and J. Burchett, O. Elek (UC Santa Cruz).",
+        "pt": "A teia cósmica reconstruída por um algoritmo inspirado no bolor limoso. NASA, ESA e J. Burchett, O. Elek (UC Santa Cruz).",
+        "es": "La red cósmica reconstruida por un algoritmo inspirado en el moho mucilaginoso. NASA, ESA y J. Burchett, O. Elek (UC Santa Cruz)."
+      },
+      "width": 1600,
+      "height": 1150,
+      "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoYABEAPu1oqk+ppiOiMBgIATAdiUAYZoId/PuFXonZkGW4KxgA/vQig1fNNAAlroWQ7s7OonaUd7nxCNwGPDtC+V0pvP/8r2QgFhnWUXAfJgPc5ovJ2b8a5T8/l6IVW42sblpDL6V0PY9DwIt+n4/5ti4YAAAA",
+      "hash": "02f13fc56c5cce8d",
+      "generatedAt": "2026-10-01T01:23:53.760Z"
+    }
+  ]
+}

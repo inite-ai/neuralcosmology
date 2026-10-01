@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude2-boom",
+      "book": "celestial-code",
+      "chapter": "interlude2",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A huge open-air festival on the shore of a lake in a dry, lunar landscape at night: thousands of dancers before a wooden stage structure lit from within, smoke drifting over the water, hills dark in the distance.",
+      "alt": {
+        "ru": "Огромный фестиваль под открытым небом на берегу озера в лунном пейзаже ночью: тысячи танцующих перед деревянной сценой, дым над водой.",
+        "en": "A huge open-air festival on a lakeshore in a lunar landscape at night: thousands dancing before a wooden stage, smoke over the water.",
+        "pt": "Um enorme festival ao ar livre na margem de um lago numa paisagem lunar à noite: milhares a dançar diante de um palco de madeira, fumo sobre a água.",
+        "es": "Un enorme festival al aire libre a orillas de un lago en un paisaje lunar de noche: miles bailando ante un escenario de madera, humo sobre el agua."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JaQAAW62uk9q+omF1A5AA/vEL4gC+bIyL3QxHHYoRmXUHEvVfaSHpf1p6sjNCj1MuacNW9Ymk4BFu72IAAA==",
+      "hash": "46df6224cbe71c76",
+      "generatedAt": "2026-10-01T01:28:41.212Z"
+    },
+    {
+      "id": "cc-interlude2-cave",
+      "book": "celestial-code",
+      "chapter": "interlude2",
+      "scene": 5,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Jan_Pietersz_Saenredam_after_Cornelis_Cornelisz_van_Haarlem,_Plato%27s_Cave,_1604,_NGA_62542.jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Jan_Pietersz_Saenredam_after_Cornelis_Cornelisz_van_Haarlem%2C_Plato%27s_Cave%2C_1604%2C_NGA_62542.jpg/1920px-Jan_Pietersz_Saenredam_after_Cornelis_Cornelisz_van_Haarlem%2C_Plato%27s_Cave%2C_1604%2C_NGA_62542.jpg",
+        "author": "After Cornelis van Haarlem / Jan Saenredam",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "alt": {
+        "ru": "Гравюра: в пещере люди смотрят на тени на стене, у выхода в свет стоят фигуры.",
+        "en": "An engraving: people in a cave look at shadows on the wall, figures stand at the opening to the light.",
+        "pt": "Uma gravura: numa caverna, pessoas olham para sombras na parede, figuras à entrada da luz.",
+        "es": "Un grabado: en una cueva, personas miran sombras en la pared, figuras en la salida hacia la luz."
+      },
+      "caption": {
+        "ru": "Ян Санредам по Корнелису ван Харлему. «Пещера Платона», 1604. Национальная галерея искусства, Вашингтон.",
+        "en": "Jan Saenredam after Cornelis van Haarlem, Plato's Cave, 1604. National Gallery of Art, Washington.",
+        "pt": "Jan Saenredam segundo Cornelis van Haarlem, A Caverna de Platão, 1604. National Gallery of Art, Washington.",
+        "es": "Jan Saenredam según Cornelis van Haarlem, La caverna de Platón, 1604. National Gallery of Art, Washington."
+      },
+      "width": 1600,
+      "height": 1199,
+      "placeholder": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoYABIAPu1qrVEppaQiqAqpMB2JZwDG9BGYGce+L4wcTLKphdtOgAD83enYMXuQMv2wPD6W4RdOBVctAAzomjLE+/Pxa42hdAZT2W+S6yFotqMw47RBViGDdI4GLdsohNcGHFJ4p9Ss7ZhUJw3sB786ba8oba1OYXHUV+VAHsAAAA==",
+      "hash": "f8b76c9b378025fb",
+      "generatedAt": "2026-10-01T01:28:20.806Z"
+    }
+  ]
+}

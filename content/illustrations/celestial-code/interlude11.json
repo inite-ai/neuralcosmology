@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude11-burn",
+      "book": "celestial-code",
+      "chapter": "interlude11",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A desert at night: a huge wooden sculpture burns in the middle of a flat dry plain, sparks rising into a vast starry sky, a ring of thousands of people standing in silhouette around the fire at a distance.",
+      "alt": {
+        "ru": "Ночная пустыня: посреди равнины горит огромная деревянная скульптура, искры летят в звёздное небо, вокруг огня кольцом стоят тысячи силуэтов.",
+        "en": "A desert at night: a huge wooden sculpture burns on a flat plain, sparks rising into a starry sky, thousands of silhouettes ringed around the fire.",
+        "pt": "Um deserto à noite: uma enorme escultura de madeira arde numa planície, faíscas a subir para o céu estrelado, milhares de silhuetas em círculo à volta do fogo.",
+        "es": "Un desierto de noche: una enorme escultura de madera arde en una llanura, chispas subiendo al cielo estrellado, miles de siluetas en círculo alrededor del fuego."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZwAAW+y76Y9WEF7msClwAP7yoYg5O5f6/lgVO8k3S62iFg/DKoxPYuAeO749As5y7zok0OAAAA==",
+      "hash": "c5fda4d42e63629c",
+      "generatedAt": "2026-10-01T01:27:50.828Z"
+    }
+  ]
+}

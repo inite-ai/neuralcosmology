@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cc-ch07-robin",
+      "book": "celestial-code",
+      "chapter": "ch07",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A European robin perched on a bare branch at night, its eye catching a faint light, the dark sky behind it crossed by the very faint arc of a compass-like field of lines, as though the bird sees something we cannot.",
+      "alt": {
+        "ru": "Малиновка на голой ветке ночью, в глазу отблеск; за ней в тёмном небе едва заметные дуги линий, будто птица видит то, чего не видим мы.",
+        "en": "A robin on a bare branch at night, a glint in its eye; behind it in the dark sky faint arcs of lines, as if the bird sees what we cannot.",
+        "pt": "Um pisco num ramo nu à noite, um reflexo no olho; atrás, no céu escuro, arcos ténues de linhas, como se a ave visse o que não vemos.",
+        "es": "Un petirrojo en una rama desnuda de noche, un destello en el ojo; detrás, en el cielo oscuro, tenues arcos de líneas, como si el ave viera lo que no vemos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDG9CHfiyxHvAD+8pdeAiNN089u7SG86bgFpYAAAA==",
+      "hash": "09530c2132e0c789",
+      "generatedAt": "2026-10-01T01:25:45.914Z"
+    },
+    {
+      "id": "cc-ch07-leaf",
+      "book": "celestial-code",
+      "chapter": "ch07",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Extreme close-up of a green leaf held against the light in a dark greenhouse: the fine veins glowing, sunlight passing through cells, droplets of water on the surface. Quiet, microscopic, alive.",
+      "alt": {
+        "ru": "Крупный план листа на просвет в тёмной оранжерее: светятся тонкие прожилки, солнце проходит сквозь клетки, на поверхности капли воды.",
+        "en": "Close-up of a leaf against the light in a dark greenhouse: fine veins glowing, sunlight passing through the cells, water droplets on the surface.",
+        "pt": "Grande plano de uma folha contra a luz numa estufa escura: nervuras finas a brilhar, a luz a atravessar as células, gotas de água na superfície.",
+        "es": "Primer plano de una hoja a contraluz en un invernadero oscuro: finas nervaduras brillando, la luz atravesando las células, gotas de agua en la superficie."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwAAWlzXzzqQ178/AejSAAD+9CUY9PQNZeG7AGx3Tp4tW7tw8JbyJxv19xm7Av/YRPlkoazGnD9Jn2XISG1xbzvzgNyLIH0sdiLO48I09D7HChiVpZgA",
+      "hash": "4c6373f54e787851",
+      "generatedAt": "2026-10-01T01:25:57.648Z"
+    }
+  ]
+}

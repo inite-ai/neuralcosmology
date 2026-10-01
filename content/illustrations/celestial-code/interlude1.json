@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude1-rave",
+      "book": "celestial-code",
+      "chapter": "interlude1",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A late-1990s trance party in a warehouse: a dense crowd of dancers in silhouette, arms raised, beams of light slicing through thick smoke above them, one figure standing still in the middle of the movement.",
+      "alt": {
+        "ru": "Транс-вечеринка конца 1990-х в ангаре: толпа танцующих силуэтов с поднятыми руками, лучи света в дыму, одна фигура посередине стоит неподвижно.",
+        "en": "A late-1990s trance party in a warehouse: a crowd of dancing silhouettes, arms raised, light beams in smoke, one figure standing still in the middle.",
+        "pt": "Uma festa trance do fim dos anos 90 num armazém: multidão de silhuetas a dançar, braços no ar, feixes de luz no fumo, uma figura imóvel ao centro.",
+        "es": "Una fiesta trance de finales de los noventa en una nave: una multitud de siluetas bailando, brazos en alto, haces de luz en el humo, una figura inmóvil en el centro."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoYABAAPu1kqU2ppaOiMAgBMB2JZwDA3BuJmQ6wE/IHII0gAP7mm8av1FqhssKsaUkRthRK9J97YVhKy51WBt08gGdXNxzwdXRKsl7mnbJ8gGg95R+fs7HvWtyNt26MV8P5ZBfT6S6NNf5vIYoWr3aWNORvwAAA",
+      "hash": "b188995c04d1c550",
+      "generatedAt": "2026-10-01T01:27:36.223Z"
+    }
+  ]
+}

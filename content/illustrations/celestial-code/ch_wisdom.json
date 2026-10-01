@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-ch_wisdom-stair",
+      "book": "celestial-code",
+      "chapter": "ch_wisdom",
+      "scene": 8,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Looking straight down a tall spiral staircase in an old building: floor after floor nested inside each other, each landing a smaller ring of light, down to a single bright point at the bottom.",
+      "alt": {
+        "ru": "Взгляд сверху в пролёт высокой винтовой лестницы: этаж за этажом вложены друг в друга кольцами света, внизу одна яркая точка.",
+        "en": "Looking straight down a tall spiral staircase: floor after floor nested in rings of light, a single bright point at the bottom.",
+        "pt": "Olhando para baixo numa alta escada em caracol: andar após andar encaixados em anéis de luz, um só ponto brilhante ao fundo.",
+        "es": "Mirando hacia abajo una alta escalera de caracol: piso tras piso anidados en anillos de luz, un solo punto brillante al fondo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwDE2CF58d7VUc7xmO4TAAD+8qnyF7MX/KN5a9BMOlUpkPY4KiJ5+sWxz29uUwlgAA==",
+      "hash": "81eaf856d146bde9",
+      "generatedAt": "2026-10-01T01:27:22.011Z"
+    }
+  ]
+}

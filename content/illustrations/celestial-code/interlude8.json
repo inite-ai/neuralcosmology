@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude8-spectrum",
+      "book": "celestial-code",
+      "chapter": "interlude8",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Soviet apartment in the late 1980s: a five-year-old boy seen from behind sits on the floor in front of an old television connected to a small home-made computer keyboard with a cassette recorder; the TV screen glows with a coloured border and blocky stripes. The parents' sofa in the shadows.",
+      "alt": {
+        "ru": "Советская квартира конца 1980-х: пятилетний мальчик со спины сидит на полу перед телевизором, подключённым к самодельному компьютеру с магнитофоном; экран светится цветной рамкой.",
+        "en": "A Soviet flat in the late 1980s: a five-year-old boy from behind on the floor before a TV hooked to a home-made computer and a tape recorder, the screen glowing with a coloured border.",
+        "pt": "Um apartamento soviético no fim dos anos 80: um rapaz de cinco anos, de costas, no chão diante de uma televisão ligada a um computador caseiro e a um gravador, o ecrã com uma moldura colorida.",
+        "es": "Un piso soviético a finales de los ochenta: un niño de cinco años de espaldas en el suelo ante un televisor conectado a un ordenador casero y una grabadora, la pantalla con un borde de color."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZQAAWzgAtw01kOWuceSOMAD+8qkSfLlx5NYLoUSImwBZKH/Add7MKE2manbA77vrGjnGoDAlq8cRsovClc0LQHf6w2Dn5AbeS64BAAA=",
+      "hash": "32166c435f10b9b5",
+      "generatedAt": "2026-10-01T01:30:04.406Z"
+    }
+  ]
+}

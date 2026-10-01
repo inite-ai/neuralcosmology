@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "id": "cc-ch03-shannon-thesis",
+      "book": "celestial-code",
+      "chapter": "ch03",
+      "scene": 0,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Page_1_from_A_Symbolic_Analysis_of_Relay_and_Switching_Circuits.png",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/1/19/Page_1_from_A_Symbolic_Analysis_of_Relay_and_Switching_Circuits.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "author": "Claude Shannon",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Машинописный титульный лист диссертации с именем автора, университетом и датами.",
+        "en": "A typewritten thesis title page with the author's name, university and dates.",
+        "pt": "Uma folha de rosto datilografada de uma dissertação, com o nome do autor, a universidade e as datas.",
+        "es": "Una portada mecanografiada de tesis con el nombre del autor, la universidad y las fechas."
+      },
+      "caption": {
+        "ru": "Титульный лист магистерской диссертации Клода Шеннона «Символический анализ релейных и переключательных схем», MIT, 1937: логика Буля, переведённая в электрические контакты.",
+        "en": "The title page of Claude Shannon's master's thesis, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: Boole's logic turned into electrical contacts.",
+        "pt": "A folha de rosto da dissertação de mestrado de Claude Shannon, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: a lógica de Boole convertida em contactos elétricos.",
+        "es": "La portada de la tesis de maestría de Claude Shannon, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: la lógica de Boole convertida en contactos eléctricos."
+      },
+      "width": 1600,
+      "height": 2071,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoYAB8APu1sq1EppiOiqAqpMB2JaQAAPgX4V1KSky7w4AD+8MCnJnPjrvg7U3LQebxwW1jd7W0+sAwcwkkSn8J8yAAAAA==",
+      "hash": "0711df1dfce32ec3",
+      "generatedAt": "2026-10-01T01:23:55.302Z"
+    },
+    {
+      "id": "cc-ch03-core-memory",
+      "book": "celestial-code",
+      "chapter": "ch03",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Extreme close-up of a 1960s magnetic core memory plane: a fine grid of copper wires threaded through hundreds of tiny ferrite rings. One single ring in the middle glows faintly warm, as if it has just been erased and given off heat.",
+      "alt": {
+        "ru": "Крупный план ферритовой памяти 1960-х: сетка медных проводов, продетых через сотни крошечных колец; одно кольцо в центре слегка светится теплом.",
+        "en": "Close-up of 1960s core memory: a grid of copper wires through hundreds of tiny rings; one ring in the middle glows faintly warm.",
+        "pt": "Grande plano de uma memória de núcleos dos anos 60: uma grelha de fios de cobre através de centenas de anéis; um anel ao centro brilha levemente quente.",
+        "es": "Primer plano de una memoria de núcleos de los sesenta: una rejilla de hilos de cobre a través de cientos de anillos; un anillo central brilla levemente cálido."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaTuAHzfHkxiljHabAAD+78atTd0Ek+0ygtj7O6tz5kudbAk8IKdgKz2d6VTFul9rFbArJk3z5v7Lnxxeu2B42C2xoms2ijFug+nUctIuWOCmVhkAwMic7vgfR5cAAAA=",
+      "hash": "31a5f4cd6cccd7fa",
+      "generatedAt": "2026-10-01T01:24:23.129Z"
+    },
+    {
+      "id": "cc-ch03-double-slit",
+      "book": "celestial-code",
+      "chapter": "ch03",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A dark optics laboratory: a thin laser beam crosses an optical table, passes through a small plate with two narrow slits, and paints a row of bright and dark interference stripes on a white screen at the far end.",
+      "alt": {
+        "ru": "Тёмная оптическая лаборатория: тонкий луч лазера проходит через пластинку с двумя щелями и рисует на дальнем экране полосы света и тени.",
+        "en": "A dark optics lab: a thin laser beam passes through a plate with two slits and paints bright and dark stripes on a far screen.",
+        "pt": "Um laboratório de ótica escuro: um feixe laser fino atravessa uma placa com duas fendas e pinta riscas claras e escuras num ecrã ao fundo.",
+        "es": "Un laboratorio de óptica oscuro: un fino haz láser atraviesa una placa con dos rendijas y pinta franjas claras y oscuras en una pantalla al fondo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAwCdASoYABAALrV2u12jqampiYC0S0sZ8s8BTM2IMKrAAAD+86qxUCaXezHnrwHFem9CdzXcxzIvU4gqHlttIx33y9WC4Cc+sa2AAAA=",
+      "hash": "13890527b02b6916",
+      "generatedAt": "2026-10-01T01:24:48.953Z"
+    },
+    {
+      "id": "cc-ch03-hologram",
+      "book": "celestial-code",
+      "chapter": "ch03",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A glass holographic plate held upright in a dark room and lit by a single beam: within the flat glass a three-dimensional image of a small sphere appears to float, clearly deeper than the plate itself.",
+      "alt": {
+        "ru": "Стеклянная голографическая пластинка в тёмной комнате, освещённая лучом: внутри плоского стекла словно парит объёмный шар.",
+        "en": "A glass holographic plate in a dark room, lit by a beam: a three-dimensional sphere seems to float inside the flat glass.",
+        "pt": "Uma placa holográfica de vidro num quarto escuro, iluminada por um feixe: uma esfera tridimensional parece flutuar dentro do vidro plano.",
+        "es": "Una placa holográfica de vidrio en una habitación oscura, iluminada por un haz: una esfera tridimensional parece flotar dentro del vidrio plano."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoYABAALrV2u12jqampiYC0SzgGN6Ibs3fZX4cAAP75E7uvpgVi4puYvBW3RrWUox9h6vZa/JNgAA==",
+      "hash": "bc05835a451794a6",
+      "generatedAt": "2026-10-01T01:24:48.397Z"
+    }
+  ]
+}

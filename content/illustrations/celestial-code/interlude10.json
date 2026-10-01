@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude10-phangan",
+      "book": "celestial-code",
+      "chapter": "interlude10",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A tropical beach party under a full moon on an island in Thailand: hundreds of dancers on the sand in silhouette, fire spinners, the moon's path across the sea, bungalows and palms dark behind.",
+      "alt": {
+        "ru": "Вечеринка полнолуния на тайском острове: сотни танцующих силуэтов на песке, огненное шоу, лунная дорожка на море, пальмы и бунгало в темноте.",
+        "en": "A full-moon beach party on a Thai island: hundreds of dancing silhouettes on the sand, fire spinners, the moon's path on the sea, palms and bungalows in shadow.",
+        "pt": "Uma festa de lua cheia numa ilha tailandesa: centenas de silhuetas a dançar na areia, malabaristas de fogo, o rasto da lua no mar, palmeiras e bungalows na sombra.",
+        "es": "Una fiesta de luna llena en una isla tailandesa: cientos de siluetas bailando en la arena, malabaristas de fuego, la estela de la luna en el mar, palmeras y bungalós en sombra."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAWxnZnYGkTofOLQAA/vQjYZpFNn3Jn8ahixkIklWMf3ia7Sn+oiXvhCc/yB5Xt1CY+Jt/Goc71CaUIGHieXt4TidH+AA=",
+      "hash": "c3ec926ccf34efe8",
+      "generatedAt": "2026-10-01T01:27:48.843Z"
+    }
+  ]
+}

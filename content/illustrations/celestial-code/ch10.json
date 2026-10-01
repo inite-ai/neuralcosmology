@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-ch10-floors",
+      "book": "celestial-code",
+      "chapter": "ch10",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A cutaway view of an old wooden house at night, as if sliced open: beneath the lit living room floor there is another floor, and beneath that another, and another, each a little darker, descending far below ground.",
+      "alt": {
+        "ru": "Старый дом в разрезе ночью: под освещённым полом гостиной ещё один пол, под ним ещё и ещё, каждый темнее, уходят далеко под землю.",
+        "en": "An old house in cutaway at night: beneath the lit living-room floor another floor, and another below, each darker, descending far underground.",
+        "pt": "Uma casa antiga em corte à noite: sob o soalho iluminado da sala outro piso, e outro, cada um mais escuro, a descer bem fundo.",
+        "es": "Una casa antigua en sección de noche: bajo el suelo iluminado del salón otro piso, y otro más, cada uno más oscuro, descendiendo bajo tierra."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZwAAWp8duXHAAP7w2L3r7sdijsSQOlhYfjJckPK4PxU1bIpmWfyUIAA=",
+      "hash": "981563596103c8d7",
+      "generatedAt": "2026-10-01T01:26:31.351Z"
+    }
+  ]
+}

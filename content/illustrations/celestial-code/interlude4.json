@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cc-interlude4-bishkek",
+      "book": "celestial-code",
+      "chapter": "interlude4",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A wide Bishkek avenue in late autumn: Soviet apartment blocks, bare poplars, a few people walking, and behind the city the wall of snow-capped Tian Shan mountains rising very close and very high.",
+      "alt": {
+        "ru": "Широкий проспект Бишкека поздней осенью: советские дома, голые тополя, редкие прохожие, а за городом совсем близко встают снежные горы.",
+        "en": "A wide Bishkek avenue in late autumn: Soviet blocks, bare poplars, a few passers-by, and snowy mountains rising very close behind the city.",
+        "pt": "Uma larga avenida de Bishkek no fim do outono: prédios soviéticos, choupos nus, poucos transeuntes e montanhas nevadas muito perto atrás da cidade.",
+        "es": "Una amplia avenida de Biskek a finales de otoño: bloques soviéticos, álamos desnudos, pocos transeúntes y montañas nevadas muy cerca tras la ciudad."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC7ABuUSXVco2OIu/L5qoAA/q2O0NXE19eG0edmgulohjvZzRjkv3xi5YUCW1Chl5lmqR4Re13J7fWuwuoevP8fLctfwfQWdndtLSAHKfi/qLkyy+8D3JGhR44A",
+      "hash": "32db0cc4e3b151fa",
+      "generatedAt": "2026-10-01T01:29:01.561Z"
+    },
+    {
+      "id": "cc-interlude4-yellow-book",
+      "book": "celestial-code",
+      "chapter": "interlude4",
+      "scene": 4,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A worn yellow paperback lying on a bare wooden shelf in an otherwise empty room, its spine cracked and pages swollen from years of travel, lit by a single beam from a window. No readable text.",
+      "alt": {
+        "ru": "Потрёпанная жёлтая книжка в мягкой обложке на пустой деревянной полке, корешок треснул, страницы разбухли; на неё падает луч из окна.",
+        "en": "A worn yellow paperback on an empty wooden shelf, spine cracked and pages swollen, lit by a beam from a window.",
+        "pt": "Um livro de bolso amarelo gasto numa prateleira de madeira vazia, lombada estalada e páginas inchadas, iluminado por um raio de janela.",
+        "es": "Un libro de bolsillo amarillo gastado en un estante de madera vacío, el lomo agrietado y las páginas hinchadas, iluminado por un rayo de la ventana."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JaQAAWp7Eo+e7laKT9wAA/brGvg7is7TNSX7qKOb44K3emluyHPuT2stRuiuIMKWBo0n3ypCX9p2xXPIU6I/+16CxtW73k6VCYrEvAAA=",
+      "hash": "9d798e758acf29cd",
+      "generatedAt": "2026-10-01T01:29:08.444Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-preface-gears",
+      "book": "celestial-code",
+      "chapter": "preface",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A pocket watch taken apart on a dark cloth: dozens of tiny brass gears, springs and jewels laid out in a slow spiral that looks like a galaxy, the empty watch case open at the centre like an eye looking up.",
+      "alt": {
+        "ru": "Разобранные карманные часы на тёмной ткани: крошечные шестерёнки и пружины выложены спиралью, похожей на галактику, в центре открытый корпус.",
+        "en": "A pocket watch taken apart on dark cloth: tiny gears and springs laid out in a spiral like a galaxy, the open case at the centre.",
+        "pt": "Um relógio de bolso desmontado sobre pano escuro: engrenagens e molas dispostas numa espiral como uma galáxia, a caixa aberta ao centro.",
+        "es": "Un reloj de bolsillo desmontado sobre tela oscura: engranajes y muelles dispuestos en una espiral como una galaxia, la caja abierta en el centro."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQBACdASoYABAAPu1iqk2ppaQiMAgBMB2JZwDG9Yq+39+nbOleyJrAhNuwy+gA/vKobANLGgcCp5wTwMOvhVSE1vzYzRF2XqOcl+qMt33FQtm8D3W7jmB0AAA=",
+      "hash": "4aa458eecd68be4a",
+      "generatedAt": "2026-10-01T01:30:38.678Z"
+    }
+  ]
+}

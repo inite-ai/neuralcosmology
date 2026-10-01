@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "cc-ch04-network",
+      "book": "celestial-code",
+      "chapter": "ch04",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A vast dark space filled with a three-dimensional lattice of faint glowing points connected by fine threads, some threads thicker and brighter than others, receding to infinity; it reads at once as a neural network and as a map of galaxies.",
+      "alt": {
+        "ru": "Тёмное пространство, заполненное объёмной решёткой слабо светящихся точек, соединённых нитями разной толщины: одновременно нейронная сеть и карта галактик.",
+        "en": "A dark space filled with a three-dimensional lattice of faint glowing points joined by threads of varying thickness: at once a neural network and a map of galaxies.",
+        "pt": "Um espaço escuro cheio de uma rede tridimensional de pontos luminosos ligados por fios de espessura variável: ao mesmo tempo rede neuronal e mapa de galáxias.",
+        "es": "Un espacio oscuro lleno de una red tridimensional de puntos luminosos unidos por hilos de grosor variable: a la vez red neuronal y mapa de galaxias."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZ2HgU0AVAAdNsgAA/vAI6b8VDBBpaK0ub9yRSPauOvCzpymogeNwYfTuTihooQ9zE/VgAAA=",
+      "hash": "73c9373b4df5b383",
+      "generatedAt": "2026-10-01T01:24:52.794Z"
+    },
+    {
+      "id": "cc-ch04-emergence",
+      "book": "celestial-code",
+      "chapter": "ch04",
+      "scene": 9,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A murmuration of thousands of starlings over a winter field at dusk, the flock folding into a single flowing shape in the sky, a lone observer standing small on a path below.",
+      "alt": {
+        "ru": "Тысячи скворцов над зимним полем в сумерках складываются в одну текучую фигуру, внизу на тропинке маленькая фигура наблюдателя.",
+        "en": "Thousands of starlings over a winter field at dusk folding into one flowing shape, a small figure watching from a path below.",
+        "pt": "Milhares de estorninhos sobre um campo de inverno ao entardecer formam uma só figura fluida, um pequeno observador num caminho em baixo.",
+        "es": "Miles de estorninos sobre un campo invernal al anochecer forman una sola figura fluida, un pequeño observador en un camino abajo."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYABAAPu1kqU4ppaOiMAgBMB2JZwAAW+bjRRz7SPPdJgD+vEZpO7MwEJG3KVmG2tsejNGokxPQslG7YTbeMO+CkoDB6O+3hr9F3vKP4su77GX1/VAAAA==",
+      "hash": "b6b232f115d2498c",
+      "generatedAt": "2026-10-01T01:25:16.494Z"
+    }
+  ]
+}

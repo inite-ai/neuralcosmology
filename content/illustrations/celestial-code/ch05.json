@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "id": "cc-ch05-planaria",
+      "book": "celestial-code",
+      "chapter": "ch05",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "alt": {
+        "ru": "Чашка Петри на тёмном столе с подсветкой снизу: по воде скользят маленькие плоские черви с двумя точками глаз, рядом обрезки червя, у каждого уже растёт новая голова.",
+        "en": "A petri dish lit from below on a dark bench: small flatworms with two eyespots glide through the water, beside them fragments of a cut worm, each already growing a new head.",
+        "pt": "Uma placa de Petri iluminada por baixo numa bancada escura: pequenas planárias com dois olhos deslizam na água, ao lado fragmentos de um verme cortado, cada um já a formar uma nova cabeça.",
+        "es": "Una placa de Petri iluminada desde abajo sobre una mesa oscura: pequeñas planarias con dos ojos se deslizan por el agua, al lado fragmentos de un gusano cortado, cada uno ya con una nueva cabeza creciendo."
+      },
+      "prompt": "A shallow glass petri dish on a dark laboratory bench, lit from below: several small flat planarian worms glide across the water, each with two dark eyespots on its arrowhead-shaped head; next to them, separate fragments of a cut worm, each already beginning to grow a new head.",
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZQAAW+zHJq6HLo28SDhnnAD+8qPJ8GA5zgMI/Q9lHk7y4qMDBy94nQ8YLj/y2NvXOwEed4jndrbb+X/9Pzz4uP7CCqt7824now5tW8TfoQflfvbFQqN7zzNlLpK1ZzLvRjgA",
+      "hash": "6563ac68d9362457",
+      "generatedAt": "2026-10-01T01:31:37.867Z"
+    },
+    {
+      "id": "cc-ch05-bioelectric",
+      "book": "celestial-code",
+      "chapter": "ch05",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A developing frog embryo under a laboratory microscope, seen on a dark monitor where a faint voltage map glows over it: patches of light and shadow on the cells sketching the future face before any face exists. A researcher's hand on the focus knob.",
+      "alt": {
+        "ru": "Зародыш лягушки под микроскопом на тёмном мониторе: поверх клеток светится карта напряжений, намечая будущее лицо раньше, чем оно появится.",
+        "en": "A frog embryo under a microscope on a dark monitor: a voltage map glows over the cells, sketching the future face before it exists.",
+        "pt": "Um embrião de rã ao microscópio num monitor escuro: um mapa de voltagem brilha sobre as células, esboçando o rosto futuro antes de existir.",
+        "es": "Un embrión de rana al microscopio en un monitor oscuro: un mapa de voltaje brilla sobre las células, esbozando la cara futura antes de que exista."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYABAALrV2u12jqampiYC0SzgABdBqHN8OUQB3YhxgJaAA/vkR/TB9Trc3AbOaFQtThVDFI7DiN2zSHMzXHXJ7B+Pyh8k9YMhtZuW58h3oAAAA",
+      "hash": "4d36600f98212d15",
+      "generatedAt": "2026-10-01T01:25:17.936Z"
+    },
+    {
+      "id": "cc-ch05-merian",
+      "book": "celestial-code",
+      "chapter": "ch05",
+      "scene": 5,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Maria_Merian_Metamorphosis_Insectorum_Surinamensium_MIA_P18717.jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Maria_Merian_Metamorphosis_Insectorum_Surinamensium_MIA_P18717.jpg/1920px-Maria_Merian_Metamorphosis_Insectorum_Surinamensium_MIA_P18717.jpg",
+        "author": "Maria Sibylla Merian",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Старинная гравюра с растением, на котором гусеница, куколка и бабочка.",
+        "en": "An old engraving of a plant with a caterpillar, a pupa and a butterfly on it.",
+        "pt": "Uma gravura antiga de uma planta com uma lagarta, uma crisálida e uma borboleta.",
+        "es": "Un grabado antiguo de una planta con una oruga, una crisálida y una mariposa."
+      },
+      "caption": {
+        "ru": "Мария Сибилла Мериан. Лист из «Метаморфоза насекомых Суринама», 1705: гусеница, куколка и бабочка на одном растении.",
+        "en": "Maria Sibylla Merian, a plate from Metamorphosis insectorum Surinamensium, 1705: caterpillar, pupa and butterfly on one plant.",
+        "pt": "Maria Sibylla Merian, prancha de Metamorphosis insectorum Surinamensium, 1705: lagarta, crisálida e borboleta na mesma planta.",
+        "es": "Maria Sibylla Merian, lámina de Metamorphosis insectorum Surinamensium, 1705: oruga, crisálida y mariposa en una misma planta."
+      },
+      "width": 1600,
+      "height": 2313,
+      "placeholder": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAADQBQCdASoYACMAPu1am02ppKIiNVgBMB2JZQDH5BZtfS4cqMgjF+EQ/qWekUWaURTMvz2S4OhAAP7qaFkOhcqzS+n9dchtX8x1e1F7LUKX22AUadSX4Bmc5ApewLlP4Get+IcWuw9ivuJPIpqXsRO77+sslnfO5DZ48faT+1Vw0OonkAVQ2hi9wpiRB026HY/NpBx7MLv9T8yspi1LlA/ikvXPbnrGEiycOU517Hs80ArPkkVLoQTl0sAAAA==",
+      "hash": "00f5acfdbcf534c0",
+      "generatedAt": "2026-10-01T01:24:55.440Z"
+    },
+    {
+      "id": "cc-ch05-axolotl",
+      "book": "celestial-code",
+      "chapter": "ch05",
+      "scene": 7,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Axolotl_Ambystoma_mexicanum_Aquarium_Zoo_Berlin,_2007.jpg",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Axolotl_Ambystoma_mexicanum_Aquarium_Zoo_Berlin%2C_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "author": "Kristof Magnusson",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "alt": {
+        "ru": "Аксолотль в аквариуме: бледная саламандра с перистыми жабрами вокруг головы.",
+        "en": "An axolotl in an aquarium: a pale salamander with feathery gills around its head.",
+        "pt": "Um axolote num aquário: uma salamandra pálida com brânquias plumosas à volta da cabeça.",
+        "es": "Un ajolote en un acuario: una salamandra pálida con branquias plumosas alrededor de la cabeza."
+      },
+      "caption": {
+        "ru": "Аксолотль: отращивает лапы, хвост, части сердца и мозга. Аквариум Берлинского зоопарка.",
+        "en": "The axolotl regrows legs, tail and parts of its heart and brain. Berlin Zoo Aquarium.",
+        "pt": "O axolote regenera patas, cauda e partes do coração e do cérebro. Aquário do Zoo de Berlim.",
+        "es": "El ajolote regenera patas, cola y partes del corazón y del cerebro. Acuario del Zoo de Berlín."
+      },
+      "width": 1500,
+      "height": 1125,
+      "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACQBQCdASoYABIAPu1mqk8ppaOiKA1RMB2JZQCzjiAAFOUm4yRmCLE/zVcVZsUG7/gCgbBUsAD+8VMSmiM9E6sigLZ6ir93oAdbOM/lGXaxTpqoAkDBj6e8yPmEUFzLZ6dlomxpG1UON9xcek+y8FQz6MYZIHA69VuD7Xz0ln2rXrrQTkNUUh2B7EzvJa7q6d0AOr6AhqeD7FCz1FD34dDwdVgAAA==",
+      "hash": "6833961ba91d7a83",
+      "generatedAt": "2026-10-01T01:24:56.884Z"
+    }
+  ]
+}

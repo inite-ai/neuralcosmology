@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-postscript-pier",
+      "book": "celestial-code",
+      "chapter": "postscript",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small ferry arriving at a wooden pier on a tropical island in the late afternoon: a single passenger with a backpack seen from behind at the bow, palms and a low green hill ahead, calm water.",
+      "alt": {
+        "ru": "Маленький паром подходит к деревянному причалу тропического острова ближе к вечеру: на носу пассажир с рюкзаком со спины, впереди пальмы и зелёный холм.",
+        "en": "A small ferry nearing a wooden pier on a tropical island in late afternoon: a passenger with a backpack at the bow, seen from behind, palms and a green hill ahead.",
+        "pt": "Um pequeno ferry a chegar a um cais de madeira numa ilha tropical ao fim da tarde: um passageiro de mochila à proa, de costas, palmeiras e uma colina verde à frente.",
+        "es": "Un pequeño ferry llegando a un muelle de madera en una isla tropical a última hora de la tarde: un pasajero con mochila en la proa, de espaldas, palmeras y una colina verde delante."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQC+SCHwfGLanhV7U/EIZAD+ScYX1B4qwepJHvFoEnOZbEgsVpAly0qDOwmRGREFI2NxdRgcuDehBk+oMTiZ4JzhnB+XrG4ybrTEQiEGUFB9gGxG/lJ8sOihvlDwR8H/AAAA",
+      "hash": "c49fa50c6d3d2839",
+      "generatedAt": "2026-10-01T01:30:25.061Z"
+    }
+  ]
+}

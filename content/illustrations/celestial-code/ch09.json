@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-ch09-cloud",
+      "book": "celestial-code",
+      "chapter": "ch09",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A wide sky over a flat field at dusk with a single large cumulus cloud that looks unmistakably like an elephant, trunk and all; a lone figure on the field below looks up at it.",
+      "alt": {
+        "ru": "Широкое небо над полем в сумерках: одно большое кучевое облако, очень похожее на слона с хоботом, внизу на поле одинокая фигура смотрит вверх.",
+        "en": "A wide sky over a field at dusk: one big cumulus cloud that looks just like an elephant, trunk and all, a lone figure below looking up.",
+        "pt": "Um céu largo sobre um campo ao entardecer: uma grande nuvem que parece mesmo um elefante, com tromba e tudo, uma figura sozinha a olhar para cima.",
+        "es": "Un cielo amplio sobre un campo al anochecer: una gran nube que parece un elefante con trompa y todo, una figura solitaria abajo mirando hacia arriba."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoYABAAPu1iqk2ppaQiMAgBMB2JZwAASX+TM012BZMh00wA/u6hjkIocx865Hhntxqf1LPAi25mbUUaiWAJcTWGEZFMNtp8eFtfKezU1R1s21MmMZDYzOw080PgAA==",
+      "hash": "97c2902775396c7a",
+      "generatedAt": "2026-10-01T01:26:20.642Z"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "cc-ch06-duino",
+      "book": "celestial-code",
+      "chapter": "ch06",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small old hotel room on the Adriatic coast in 1906, empty: a narrow bed, a writing desk with scattered papers and a pair of spectacles, tall shutters half open onto a pale sea.",
+      "alt": {
+        "ru": "Пустой номер старой гостиницы на Адриатике в 1906 году: узкая кровать, стол с бумагами и очками, высокие ставни приоткрыты на бледное море.",
+        "en": "An empty old hotel room on the Adriatic in 1906: a narrow bed, a desk with papers and spectacles, tall shutters half open onto a pale sea.",
+        "pt": "Um quarto vazio de um velho hotel no Adriático em 1906: cama estreita, secretária com papéis e óculos, portadas altas entreabertas para um mar pálido.",
+        "es": "Una habitación vacía de un viejo hotel en el Adriático en 1906: cama estrecha, escritorio con papeles y gafas, contraventanas altas entreabiertas a un mar pálido."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDCgB4KZkTW0peJD+uo0gAA/ulDqiPwJDnfa2kbcR++pH8KPrtuDFpTeMhimF791T7pk2Gp/it10VqueZpr7MCeX6fWcrqWnkzLzV4LnC6Hu0O09WTdS6wAAA==",
+      "hash": "6a95d18bf50d10a5",
+      "generatedAt": "2026-10-01T01:25:25.153Z"
+    },
+    {
+      "id": "cc-ch06-solvay",
+      "book": "celestial-code",
+      "chapter": "ch06",
+      "scene": 2,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Solvay_conference_1927.jpg",
+        "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Solvay_conference_1927.jpg/1920px-Solvay_conference_1927.jpg",
+        "author": "Benjamin Couprie",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Групповая чёрно-белая фотография: три ряда мужчин в костюмах и одна женщина на фоне здания.",
+        "en": "A black-and-white group photograph: three rows of men in suits and one woman before a building.",
+        "pt": "Uma fotografia de grupo a preto e branco: três filas de homens de fato e uma mulher diante de um edifício.",
+        "es": "Una fotografía de grupo en blanco y negro: tres filas de hombres trajeados y una mujer ante un edificio."
+      },
+      "caption": {
+        "ru": "Пятый Сольвеевский конгресс, Брюссель, 1927. Здесь Эйнштейн и Бор начали спор о квантовой реальности.",
+        "en": "The fifth Solvay Conference, Brussels, 1927, where Einstein and Bohr began their debate on quantum reality.",
+        "pt": "O quinto Congresso Solvay, Bruxelas, 1927, onde Einstein e Bohr começaram o debate sobre a realidade quântica.",
+        "es": "El quinto Congreso Solvay, Bruselas, 1927, donde Einstein y Bohr iniciaron su debate sobre la realidad cuántica."
+      },
+      "width": 1600,
+      "height": 1158,
+      "placeholder": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAACwBACdASoYABEAPu1sq1EppaOiqAqpMB2JaQAAIF6EruQdreHH9PifTr6l1eDAAP7uTivRTBCDHhgfoJcuiK755lPnSCeQhmdXLbxtvyjWQkOAZG2c62iLwuM4UD2RE0UCAfeg0jF6zIjELHxORobA4vu45sTcgMZwkEWfzEOqO6KxxCAiThi5IgDVgj2vfJ+oQLnU94T7SDsWKjpAF9s6VfvgAAAA",
+      "hash": "3583886aebc7fed5",
+      "generatedAt": "2026-10-01T01:25:16.995Z"
+    },
+    {
+      "id": "cc-ch06-lattice",
+      "book": "celestial-code",
+      "chapter": "ch06",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A large flat grid of identical simple switches laid out across a dark floor like a parquet, thousands of them, each with a tiny pilot light; all lights on. It looks vast and utterly unconscious.",
+      "alt": {
+        "ru": "Огромная плоская решётка одинаковых простых переключателей на тёмном полу, у каждого крошечный огонёк; всё горит, и ничего не происходит.",
+        "en": "A vast flat grid of identical simple switches on a dark floor, each with a tiny pilot light; all lit, and nothing happening.",
+        "pt": "Uma vasta grelha plana de interruptores simples idênticos num chão escuro, cada um com uma luzinha; tudo aceso e nada a acontecer.",
+        "es": "Una vasta rejilla plana de interruptores simples idénticos sobre un suelo oscuro, cada uno con una lucecita; todo encendido y nada sucede."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAetESD/QAAP7vySh04li+l96+SFiAtdIawqC6IsB1P3bQAA==",
+      "hash": "e3be46daae3bc66d",
+      "generatedAt": "2026-10-01T01:25:46.898Z"
+    }
+  ]
+}
