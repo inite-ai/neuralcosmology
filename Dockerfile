@@ -46,6 +46,8 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
+# Манифесты иллюстраций книг читаются с диска при выдаче главы (src/lib/illustrations.ts).
+COPY --from=builder /app/content/illustrations ./content/illustrations
 
 # Set the correct permission for prerender cache
 RUN mkdir .next

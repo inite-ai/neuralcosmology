@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "id": "ba-ch01-notebook",
+      "book": "bugs-academy",
+      "chapter": "ch01",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small one-room Moscow flat at night. A man seen from behind sits at a narrow kitchen table writing in a brand-new notebook under a single lamp. Through the window, in fog, the hyperboloid steel lattice of the Shukhov radio tower. Books stacked on the floor, a mug with a broken handle. Still, tired, very late.",
+      "alt": {
+        "ru": "Ночь, однокомнатная квартира: мужчина спиной к нам пишет в новом блокноте под одной лампой, за окном в тумане решётка Шуховской башни.",
+        "en": "Night in a one-room flat: a man with his back to us writes in a new notebook under a single lamp, the lattice of the Shukhov tower in the fog outside.",
+        "pt": "Noite num apartamento de um quarto: um homem de costas escreve num caderno novo sob uma única lâmpada; lá fora, na névoa, a treliça da torre Chukhov.",
+        "es": "Noche en un apartamento de una habitación: un hombre de espaldas escribe en un cuaderno nuevo bajo una sola lámpara; fuera, en la niebla, la celosía de la torre Shújov."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoYABAAPu1kqU2ppaQiMAgBMB2JZwAAW8Z57q452/JhgAD+8QpohuULfBKAU3iR09XUrx4DJZUYu0vMUK2KR/nx9QRFgb6YIPs8v86yOoqBP8AA",
+      "hash": "0866abdec38ef123",
+      "generatedAt": "2026-10-01T00:57:24.352Z"
+    },
+    {
+      "id": "ba-ch01-lab",
+      "book": "bugs-academy",
+      "chapter": "ch01",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A cramped, shabby Russian research-institute laboratory. In the centre hangs the open golden chandelier of a quantum computer's dilution refrigerator: stacked plates, coiled cables, gleaming tubes. To one side a woman in a checked shirt, seen from behind, sits at three monitors with waveforms. Peeling paint, a dead fluorescent tube, a kettle on a filing cabinet. The cryostat is the brightest object.",
+      "alt": {
+        "ru": "Тесная институтская лаборатория: в центре висит раскрытая «люстра» криостата квантового процессора, сбоку женщина в клетчатой рубашке спиной к нам у трёх мониторов.",
+        "en": "A cramped institute lab: the open 'chandelier' of a quantum processor's cryostat hangs in the middle, a woman in a checked shirt sits with her back to us at three monitors.",
+        "pt": "Um laboratório apertado de instituto: ao centro pende o 'lustre' aberto do criostato de um processador quântico; ao lado, uma mulher de camisa xadrez, de costas, diante de três monitores.",
+        "es": "Un laboratorio estrecho de instituto: en el centro cuelga la 'lámpara' abierta del criostato de un procesador cuántico; a un lado, una mujer con camisa de cuadros, de espaldas, frente a tres monitores."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoYABAAPu1kqU2ppaQiMAgBMB2JZwDCgCHrT5H/IhAucmQoqsOAAP7xfZ0D81o8uFVuPN1yU2PFF13ZvoPOlzDtYUtM0yGHk1qvJb92Rp/YU5xY9NAx2WCTqJ4rM6pMecAAAA==",
+      "hash": "7d6a85a786c11235",
+      "generatedAt": "2026-10-01T00:57:28.139Z"
+    },
+    {
+      "id": "ba-ch01-umbrella",
+      "book": "bugs-academy",
+      "chapter": "ch01",
+      "scene": 7,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Moscow avenue in November at six in the evening. Fine drizzle hangs in the air like suspended dust; every streetlamp wears a halo. Two figures walk away from us toward a distant metro entrance, one of them fighting a half-inverted umbrella. Wet asphalt reflects the lamps. Long, quiet perspective.",
+      "alt": {
+        "ru": "Московский проспект в ноябрьских сумерках: морось висит в воздухе, у фонарей ореолы, двое уходят к метро, один воюет с вывернутым зонтом.",
+        "en": "A Moscow avenue at November dusk: drizzle hangs in the air, haloes round the lamps, two people walk toward the metro, one fighting an inverted umbrella.",
+        "pt": "Uma avenida de Moscovo ao entardecer de novembro: a chuva miúda paira no ar, halos à volta dos candeeiros, duas pessoas caminham para o metro, uma luta com o guarda-chuva virado.",
+        "es": "Una avenida de Moscú al anochecer de noviembre: la llovizna flota en el aire, halos en las farolas, dos personas caminan hacia el metro, una pelea con un paraguas dado la vuelta."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC90B4l1fVzUW7ERGqwEgAA/uoiSaO0bW76ImzlMeukDdDZmWWP65+JFN6l9B7FYF1kzYNpNLDfhNp9lZVZQa6GU9XtEpwCMxnXa3RlY2roqbtgAA==",
+      "hash": "e0308eac4476c53a",
+      "generatedAt": "2026-10-01T00:57:24.876Z"
+    },
+    {
+      "id": "ba-ch01-photo",
+      "book": "bugs-academy",
+      "chapter": "ch01",
+      "scene": 9,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Close-up of a kitchen table at night: an old paper photograph with a bent corner leans against a salt shaker. The photo shows a dark-haired woman, out of focus, her face indistinct, looking past the camera. Beside it a cup of tea going cold. Window light from the street, deep shadows.",
+      "alt": {
+        "ru": "Ночной кухонный стол: к солонке прислонена старая фотография с загнутым уголком, на ней размытая темноволосая женщина, рядом остывает чай.",
+        "en": "A kitchen table at night: an old photograph with a bent corner leans on a salt shaker, a blurred dark-haired woman in it, tea going cold beside it.",
+        "pt": "Uma mesa de cozinha à noite: uma fotografia antiga de canto dobrado encostada ao saleiro, nela uma mulher de cabelo escuro desfocada, ao lado um chá a arrefecer.",
+        "es": "Una mesa de cocina de noche: una foto antigua con la esquina doblada apoyada en el salero, en ella una mujer de pelo oscuro desenfocada, al lado un té que se enfría."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoYABAAPu1iqk2ppaQiMAgBMB2JaQDImXP+Mk/qBp5+fDukNvgA/vQl7lAWZzc5fwmblJrKBJdEaZEyDzxAUWe0ddR4t6A8EHhY6lt0BYnrycZX3Uug5vin0fjy9SyvzFpqKF+xcua0X6Tz8dm8Xno8MwQOP05eAtSAAA==",
+      "hash": "221762c30a466640",
+      "generatedAt": "2026-10-01T00:57:54.997Z"
+    }
+  ]
+}

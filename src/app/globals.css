@@ -376,7 +376,9 @@
 .reader-prose p { margin: 0; text-align: left; }
 .reader-prose p + p { text-indent: 1.4em; }
 .reader-prose > p:first-child::first-letter,
-.reader-prose hr.scene + p::first-letter {
+.reader-prose > figure.nc-fig--cover:first-child + p::first-letter,
+.reader-prose hr.scene + p::first-letter,
+.reader-prose hr.scene + figure.nc-fig + p::first-letter {
   float: left;
   font-family: var(--font-display);
   font-size: 3.6em;
@@ -384,7 +386,36 @@
   padding: 0.06em 0.1em 0 0;
   color: var(--r-accent);
 }
-.reader-prose hr.scene + p { text-indent: 0; }
+.reader-prose hr.scene + p,
+.reader-prose figure.nc-fig + p { text-indent: 0; }
+
+/* Иллюстрации книг (src/lib/illustrations.ts): пластинка в 0.5px-рамке, подпись
+   моно-строкой. Архивные фото тонированы в ночь (#nc-plate), оригинал — по наведению. */
+.reader-prose figure.nc-fig { margin: 2.2em 0 2em; }
+.reader-prose figure.nc-fig--cover { margin: 0 0 2.4em; }
+@media (min-width: 900px) {
+  .reader-prose figure.nc-fig { margin-left: -3rem; margin-right: -3rem; }
+}
+.nc-fig-img {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--r-faint);
+  background-size: cover;
+  border: 0.5px solid var(--r-line);
+}
+.nc-fig-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.nc-fig--archive .nc-fig-img img { filter: url(#nc-plate); transition: filter 0.6s ease; }
+.nc-fig--archive:hover .nc-fig-img img { filter: none; }
+.reader-prose figure.nc-fig figcaption {
+  margin-top: 0.8em;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--r-muted);
+  text-indent: 0;
+}
+.reader-prose figure.nc-fig figcaption a { color: inherit; text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 2px; }
+.reader-prose .nc-credit { opacity: 0.75; }
 .reader-prose em { font-style: italic; }
 .reader-prose strong { font-weight: 600; }
 .reader-prose a { color: var(--r-accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }

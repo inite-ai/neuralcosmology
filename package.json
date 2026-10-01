@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "covers:essays": "node scripts/generate-essay-covers.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "illustrations": "node scripts/illustrations/illustrate.mjs",
+    "illustrations:check": "node scripts/illustrations/check.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

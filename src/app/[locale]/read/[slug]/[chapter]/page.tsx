@@ -18,6 +18,7 @@ import ReaderPrefsScript from "@/components/reader/ReaderPrefsScript";
 import { readerFont } from "@/components/reader/font";
 import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumb } from "@/lib/schema";
+import { countScenes, illustrations, withIllustrations } from "@/lib/illustrations";
 
 export const dynamic = "force-dynamic";
 
@@ -90,7 +91,11 @@ export default async function ChapterPage({
   const paid = gate === "open" && !chapter.free && session !== null;
   const throttled = paid && !allowPaidView(session.sub);
   if (paid && !throttled) await registerMark(session.sub, session.email);
-  const html = source && paid ? (throttled ? null : watermark(source, session.sub)) : source;
+  const marked = source && paid ? (throttled ? null : watermark(source, session.sub)) : source;
+  // Иллюстрации размечены по разрывам сцен русского оригинала.
+  const figures = illustrations(slug, chapter.id);
+  const sourceScenes = figures.length ? countScenes(lang === "ru" ? source : getChapterHtml(slug, "ru", chapter.id)) : 0;
+  const html = marked && withIllustrations(marked, figures, lang, sourceScenes);
 
   const bookTitle = pickLocalized(book.titles, lang);
   const hrefBase = `/${locale}/read/${slug}`;
@@ -181,6 +186,7 @@ export default async function ChapterPage({
           {html !== null ? (
             <>
               <div id="nc-recap-slot" />
+              {figures.some((f) => f.kind === "archive") && <PlateFilter />}
               <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
               <ReaderInteractive
                 book={slug}
@@ -201,7 +207,7 @@ export default async function ChapterPage({
             </div>
           ) : (
             <>
-              <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: chapter.teaser }} />
+              <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: withIllustrations(chapter.teaser, figures, lang, sourceScenes, true) }} />
               <div className="reader-locked mt-4 r-hair bg-[var(--r-panel)] p-7 sm:p-10">
                 <p className="label text-[var(--r-accent)]">{gate === "login" ? L.afterSignIn : L.afterPurchase}</p>
                 <h2 className="mt-4 font-display text-[1.875rem] leading-[1.1] sm:text-[2.25rem]">
@@ -260,4 +266,20 @@ export default async function ChapterPage({
 
 function checkoutHref(item: string, returnTo: string): string {
   return `/api/checkout?${new URLSearchParams({ item, returnTo })}`;
+}
+
+// Тонирует архивные фото в палитру сайта: яркость → от ночного индиго к бумаге.
+function PlateFilter() {
+  return (
+    <svg width="0" height="0" aria-hidden className="absolute">
+      <filter id="nc-plate" colorInterpolationFilters="sRGB">
+        <feColorMatrix type="matrix" values="0.3 0.59 0.11 0 0  0.3 0.59 0.11 0 0  0.3 0.59 0.11 0 0  0 0 0 1 0" />
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.04 0.22 0.55 0.93" />
+          <feFuncG type="table" tableValues="0.05 0.24 0.56 0.91" />
+          <feFuncB type="table" tableValues="0.11 0.36 0.66 0.88" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
+  );
 }

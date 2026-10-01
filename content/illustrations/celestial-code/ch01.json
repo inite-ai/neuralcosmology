@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "cc-ch01-colander",
+      "book": "celestial-code",
+      "chapter": "ch01",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An old enamel kitchen colander held up by an anonymous hand against the night sky, seen from below. Starlight shines through its pattern of small holes, so the holes look like a star field, and beyond its rim the real Milky Way continues the same pattern. Quiet, still, a single cold point of light at the centre.",
+      "alt": {
+        "ru": "Старый эмалированный дуршлаг поднят к ночному небу: свет звёзд проходит через отверстия, и узор дырочек продолжается Млечным Путём.",
+        "en": "An old enamel colander held up to the night sky: starlight shines through its holes, and the pattern continues into the Milky Way.",
+        "pt": "Um velho escorredor esmaltado erguido contra o céu noturno: a luz das estrelas atravessa os furos e o padrão continua na Via Láctea.",
+        "es": "Un viejo colador esmaltado alzado contra el cielo nocturno: la luz de las estrellas pasa por los agujeros y el dibujo continúa en la Vía Láctea."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZwDG9BulHEFtVV7WTXcAAP7p13vfYueTIZO8bQZBDMHVK+sIvZlGz0h76QyQLfM5pRxx0AA=",
+      "hash": "5c3f3b189e1f95e0",
+      "generatedAt": "2026-10-01T00:57:52.867Z"
+    },
+    {
+      "id": "cc-ch01-two-plates",
+      "book": "celestial-code",
+      "chapter": "ch01",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Two rectangular glass photographic plates lie side by side on an observatory archive light table. The left plate shows a stained slice of brain cortex: branching neurons and fine fibres. The right plate shows a simulated cosmic web: filaments of galaxies meeting at bright knots around dark voids. At this distance the two plates look almost identical. Hairline plate edges, dust, quiet darkness around them.",
+      "alt": {
+        "ru": "Две стеклянные пластинки на световом столе: слева срез коры мозга с ветвящимися нейронами, справа космическая паутина галактик. Издали их не отличить.",
+        "en": "Two glass plates on a light table: on the left a slice of brain cortex with branching neurons, on the right the cosmic web of galaxies. From a distance they look the same.",
+        "pt": "Duas placas de vidro numa mesa de luz: à esquerda um corte do córtex com neurónios ramificados, à direita a teia cósmica de galáxias. De longe parecem iguais.",
+        "es": "Dos placas de vidrio sobre una mesa de luz: a la izquierda un corte de corteza cerebral con neuronas ramificadas, a la derecha la red cósmica de galaxias. De lejos parecen iguales."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwC7ACHpdj3cRG057IF77oAA/u+QjVm5jBg/ot5zIuOJDghflIinuz+rcBJv4Ji6vwlsjPWEnhAo++LVm+42WWAosGM+bmuWULfmpCGoOmVIrHkiuZoPX76qba6dlQAAAA==",
+      "hash": "31876c95d1aa986d",
+      "generatedAt": "2026-10-01T00:57:55.746Z"
+    },
+    {
+      "id": "cc-ch01-carta-marina",
+      "book": "celestial-code",
+      "chapter": "ch01",
+      "scene": 8,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Carta_Marina.jpeg",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Carta_Marina.jpeg/1920px-Carta_Marina.jpeg",
+        "author": "Olaus Magnus",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Старинная карта Северной Европы: берега, горы, а в море нарисованы чудовища и корабли.",
+        "en": "An old map of northern Europe: coastlines and mountains, with sea monsters and ships drawn in the ocean.",
+        "pt": "Um mapa antigo do norte da Europa: costas e montanhas, com monstros marinhos e navios desenhados no oceano.",
+        "es": "Un mapa antiguo del norte de Europa: costas y montañas, con monstruos marinos y barcos dibujados en el océano."
+      },
+      "caption": {
+        "ru": "Олаус Магнус. Carta marina, 1539: берег проверен, горы видели издалека, а в море — чудовища.",
+        "en": "Olaus Magnus, Carta marina, 1539: the coast surveyed, the mountains seen from afar, and monsters at sea.",
+        "pt": "Olaus Magnus, Carta marina, 1539: a costa verificada, as montanhas vistas de longe e monstros no mar.",
+        "es": "Olaus Magnus, Carta marina, 1539: la costa comprobada, las montañas vistas de lejos y monstruos en el mar."
+      },
+      "width": 1600,
+      "height": 1185,
+      "placeholder": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQBACdASoYABIAPu1irVAppSQisBgIATAdiWVfJFNAC62AXSphBzthmS4AAPhLIMQLJhCG2Fr2JEYaGGpkSrDMChH8umXjk+khlGBa1JVI769kzYWaDEvluLzf4eAA",
+      "hash": "e5a821dc20fdd262",
+      "generatedAt": "2026-10-01T00:55:29.614Z"
+    }
+  ]
+}

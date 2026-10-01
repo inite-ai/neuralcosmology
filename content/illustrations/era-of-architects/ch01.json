@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "id": "ea-ch01-threads",
+      "book": "era-of-architects",
+      "chapter": "ch01",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A child's room at dusk. A small girl in pyjamas, seen from behind, kneels on a windowsill cushion watching a grey cat leap at a fly. The fly trails a faint trail of silver dust in the air. Far below in the window, a car's headlights approach. A single impossibly thin luminous thread rises vertically through the room toward the ceiling.",
+      "alt": {
+        "ru": "Детская в сумерках: девочка в пижаме спиной к нам смотрит, как серый кот прыгает за мухой, за мухой тянется серебряная пыль, через комнату вверх уходит тонкая светящаяся нить.",
+        "en": "A child's room at dusk: a girl in pyjamas, back to us, watches a grey cat leap at a fly trailing silver dust, a thin glowing thread rising through the room.",
+        "pt": "Um quarto de criança ao anoitecer: uma menina de pijama, de costas, vê um gato cinzento saltar atrás de uma mosca que deixa pó prateado; um fio fino e luminoso sobe pelo quarto.",
+        "es": "Un cuarto infantil al anochecer: una niña en pijama, de espaldas, mira cómo un gato gris salta tras una mosca que deja polvo plateado; un hilo fino y luminoso sube por la habitación."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JZwAAXBulT2yMcAD+7pN+VDAEsZ1xLlzcTXeiGVYBbspUp2YAyD4Go6sCbfOTkIAAAA==",
+      "hash": "1f6b7cbf0fb039ca",
+      "generatedAt": "2026-10-01T00:58:24.955Z"
+    },
+    {
+      "id": "ea-ch01-ring",
+      "book": "era-of-architects",
+      "chapter": "ch01",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "Moscow's Third Ring Road at rush hour in the near future, seen from an overpass: where a traffic jam should be, the cars flow freely in long smooth light trails, lanes almost empty. Apartment towers glow on both sides. Long exposure, calm and slightly uncanny.",
+      "alt": {
+        "ru": "Третье кольцо в час пик с эстакады: вместо пробки машины свободно текут длинными световыми следами, полосы почти пустые.",
+        "en": "The Third Ring Road at rush hour from an overpass: instead of a jam, cars flow freely in long light trails, the lanes almost empty.",
+        "pt": "O Terceiro Anel de Moscovo na hora de ponta visto de um viaduto: em vez de engarrafamento, os carros fluem em longos rastos de luz, as faixas quase vazias.",
+        "es": "El Tercer Anillo de Moscú en hora punta desde un paso elevado: en lugar de atasco, los coches fluyen en largas estelas de luz, los carriles casi vacíos."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoYABAAPu1iqk4ppaQiMAgBMB2JZwC/OCHe765tKUv4eh/lGipAAP7u5qgCKd2ObBEUtnZDtKrxqaXKIwOjntBFe9BQ3FDA5BXjTHpebFhazqSHhJJ33fN7iZjnSdRAzz+xz7U5Qk9p4lqAAAA=",
+      "hash": "6e2c652f053348fb",
+      "generatedAt": "2026-10-01T00:58:52.387Z"
+    },
+    {
+      "id": "ea-ch01-shukhov",
+      "book": "era-of-architects",
+      "chapter": "ch01",
+      "scene": 5,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Moscow,_Shukhov_Tower_in_February_2014_(12323741925).jpg",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Moscow%2C_Shukhov_Tower_in_February_2014_%2812323741925%29.jpg/1920px-Moscow%2C_Shukhov_Tower_in_February_2014_%2812323741925%29.jpg",
+        "author": "Sergey Norin",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "alt": {
+        "ru": "Сетчатая стальная башня из нескольких ярусов зимой, над заснеженными деревьями и крышами.",
+        "en": "A lattice steel tower of several tiers in winter, above snowy trees and rooftops.",
+        "pt": "Uma torre de aço em treliça com vários níveis, no inverno, acima de árvores e telhados com neve.",
+        "es": "Una torre de acero en celosía de varios tramos en invierno, sobre árboles y tejados nevados."
+      },
+      "caption": {
+        "ru": "Шуховская башня на Шаболовке, февраль 2014 года. Инженер Владимир Шухов, 1920–1922.",
+        "en": "The Shukhov Tower on Shabolovka, February 2014. Engineer Vladimir Shukhov, 1920–1922.",
+        "pt": "A torre Chukhov em Chabolovka, fevereiro de 2014. Engenheiro Vladimir Chukhov, 1920–1922.",
+        "es": "La torre Shújov en Shabolovka, febrero de 2014. Ingeniero Vladímir Shújov, 1920–1922."
+      },
+      "width": 1600,
+      "height": 1067,
+      "placeholder": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAXJr3Zx+0mKfUY1OAAAD+78M5NTvfjNttqrphl+uhcllNEOspR9dFxpkZWmM4pEcNuQC0gSH3dkurcLIiLYlWn26/kQOL2lAAAAA=",
+      "hash": "21fce1a5d4e10262",
+      "generatedAt": "2026-10-01T01:00:11.148Z"
+    },
+    {
+      "id": "ea-ch01-threshold",
+      "book": "era-of-architects",
+      "chapter": "ch01",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The open front door of a Moscow apartment, seen from a dim stairwell landing. On the threshold a small child sits cross-legged with a notebook, a grey cat stretched out beside her, seen from a distance with her head bowed over the notebook. Warm kitchen light spills from the flat behind her; the stairwell in front is cold and dark. The feeling of someone who has been waiting.",
+      "alt": {
+        "ru": "Открытая дверь квартиры из полутёмного подъезда: на пороге скрестив ноги сидит девочка с блокнотом, рядом растянулся серый кот, за ней тёплый свет кухни.",
+        "en": "An open flat door seen from a dim stairwell: a girl sits cross-legged on the threshold with a notebook, a grey cat stretched beside her, warm kitchen light behind.",
+        "pt": "A porta aberta de um apartamento vista de uma escada escura: no limiar, uma menina de pernas cruzadas com um caderno, um gato cinzento estendido ao lado, luz quente da cozinha atrás.",
+        "es": "La puerta abierta de un piso vista desde una escalera en penumbra: en el umbral, una niña con las piernas cruzadas y un cuaderno, un gato gris tumbado a su lado, luz cálida de cocina detrás."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JaQAAW+mv7+xLLxGNaGBgAP7uu2B5doE7ja45SL9bYDj240GcVU3kid6bMuQ3vZRttlFDfxA1opmOx8GgXrnfPO4cSm21xaOFh0Rewl4AAA==",
+      "hash": "64a00ab08d31ceae",
+      "generatedAt": "2026-10-01T00:59:42.705Z"
+    }
+  ]
+}

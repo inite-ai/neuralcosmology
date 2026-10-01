@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "model": "gpt-image-2",
+  "size": "1536x1024",
+  "quality": "medium",
+  "house": "Depict exactly the scene described above and nothing else: do not add telescopes, observatories, domes, stars or night sky unless the scene asks for them. Render it as a documentary photograph printed as a cool silver-gelatin print on an old glass plate. Palette strictly limited to deep night-indigo blacks, cold silver-blue and slate mid-tones and paper-white highlights; at most one small area may carry a faint cold violet-blue tint, on the subject the eye should land on. Calm composition with generous dark negative space, soft available light, fine photographic grain, faint plate dust and a gentle vignette. People appear as anonymous figures, seen from behind, in silhouette or at a distance; faces are never sharply recognisable. No text, no letters, no numbers, no logos, no watermark, no frame, no border, no UI."
+}

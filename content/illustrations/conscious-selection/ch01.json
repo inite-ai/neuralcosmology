@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "cs-ch01-repin",
+      "book": "conscious-selection",
+      "chapter": "ch01",
+      "scene": 0,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ilya_Repin_Unexpected_visitors.jpg",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ilya_Repin_Unexpected_visitors.jpg/1920px-Ilya_Repin_Unexpected_visitors.jpg",
+        "author": "Ilya Repin",
+        "license": "Public domain"
+      },
+      "alt": {
+        "ru": "Картина: светлая комната, в дверях худой мужчина в тёмном пальто, женщина в кресле привстаёт ему навстречу, за столом у окна сидят дети.",
+        "en": "Painting: a bright room, a thin man in a dark coat in the doorway, a woman in an armchair half rising towards him, children at a table by the window.",
+        "pt": "Pintura: uma sala clara, um homem magro de casaco escuro à porta, uma mulher na poltrona a meio de se levantar, crianças à mesa junto à janela.",
+        "es": "Cuadro: una sala luminosa, un hombre delgado con abrigo oscuro en la puerta, una mujer que empieza a levantarse del sillón, niños a la mesa junto a la ventana."
+      },
+      "caption": {
+        "ru": "Илья Репин. «Не ждали», 1884–1888. Государственная Третьяковская галерея.",
+        "en": "Ilya Repin, Unexpected Visitors, 1884–1888. State Tretyakov Gallery.",
+        "pt": "Ilia Repin, Não esperavam, 1884–1888. Galeria Estatal Tretiakov.",
+        "es": "Iliá Repin, No lo esperaban, 1884–1888. Galería Estatal Tretiakov."
+      },
+      "width": 1600,
+      "height": 1536,
+      "placeholder": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBQCdASoYABcAPu1urlKppiQiqAgBMB2JQBYj5fgv5MUDm23ggk++KTFQqLunhQQAANrBFFQSf5fg/XoTlBjC4TeB99O1xEQABeGCgh2q1Rj6S6FJz5BwS6gj3cPFJLcpa9kwwGK37GTYH0LKdz1ZrbSxPIQceH5uRGgl8OcWgSc0TKL4nLUFGpU61mvum1M/VdylmIC0RdyBpI9njhKasraoJlU4qsAAAA==",
+      "hash": "da61e97fe3e36953",
+      "generatedAt": "2026-10-01T00:55:30.485Z"
+    },
+    {
+      "id": "cs-ch01-yarbus-rig",
+      "book": "conscious-selection",
+      "chapter": "ch01",
+      "scene": 1,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A Soviet physiology laboratory in the 1960s. A volunteer sits in profile at a heavy wooden table, head held still, biting a small wooden bar fixed to a stand. A tiny mirror on a suction cup sits on the eye; a thin pencil beam of light from a lamp reflects off it onto a slowly turning drum of photographic film. A framed reproduction of a painting stands on an easel in front of the volunteer. The light beam is the brightest thing in the room.",
+      "alt": {
+        "ru": "Лаборатория 1960-х: испытуемый в профиль зажал в зубах планку, тонкий луч отражается от зеркальца на глазу на барабан с фотоплёнкой, перед ним на мольберте картина.",
+        "en": "A 1960s laboratory: a volunteer in profile bites a wooden bar, a thin beam reflects off a mirror on the eye onto a drum of film, a painting on an easel in front.",
+        "pt": "Laboratório dos anos 1960: um voluntário de perfil morde uma barra de madeira, um feixe fino reflete de um espelho no olho para um tambor de filme, diante dele um quadro num cavalete.",
+        "es": "Laboratorio de los años sesenta: un voluntario de perfil muerde una barra de madera, un haz fino se refleja en un espejo sobre el ojo hacia un tambor de película, delante un cuadro en un caballete."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JaQAAW+jOynZjRGbsduTAAP7wvoio3Sr3pYwNTANBihr0Y/CQWauKygyqQKRGRl5RICsxsn9d/r+xAFgX7ngBgYAAAA==",
+      "hash": "2c5147aeed816739",
+      "generatedAt": "2026-10-01T00:58:22.888Z"
+    },
+    {
+      "id": "cs-ch01-traces",
+      "book": "conscious-selection",
+      "chapter": "ch01",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A long strip of developed photographic film lies on an archive light table. On it, thousands of hair-thin white lines form a dense tangled scribble, like a hand-drawn constellation: knots and clusters where the eye stopped, long straight jumps between them. Most of the film is dark and empty. A magnifying loupe rests at the edge.",
+      "alt": {
+        "ru": "Плёнка на световом столе: тысячи тонких белых линий движения глаза сплетаются в узлы и скачки, вокруг почти всё пусто, у края лежит лупа.",
+        "en": "Film on a light table: thousands of fine white eye-movement lines knot into clusters and jumps, almost everything else empty, a loupe at the edge.",
+        "pt": "Filme numa mesa de luz: milhares de linhas brancas finas do movimento do olho formam nós e saltos, quase todo o resto vazio, uma lupa na borda.",
+        "es": "Película sobre una mesa de luz: miles de finas líneas blancas del movimiento del ojo forman nudos y saltos, casi todo lo demás vacío, una lupa en el borde."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADQAwCdASoYABAAPu1kqU2ppaOiMAgBMB2JZwDE2B6M2LUHKwk8w4wA/u+NS0GSKV4NuzTE/QRVwhiGmXy2ux31eKTaAF/UpSLfgg9FGYihJp3qxRZJMhc59nH/ILUpj2WcVbxkkvnwUfU/7rs7gtayXi3K/aCexcLA2+Id7fh4fdIwgpTM2btxeLF6MnAZfGnyG47RjBw1awAA",
+      "hash": "ca158cf807cebb00",
+      "generatedAt": "2026-10-01T00:58:21.820Z"
+    }
+  ]
+}
