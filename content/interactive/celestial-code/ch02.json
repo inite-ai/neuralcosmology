@@ -1,6 +1,30 @@
 {
   "items": [
     {
+      "id": "cc-ch02-tokyo",
+      "book": "celestial-code",
+      "chapter": "ch02",
+      "scene": 5,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "BZUQQmcR5-g",
+        "channel": "sjtkg001"
+      },
+      "title": {
+        "ru": "Слизевик проектирует железные дороги Токио",
+        "en": "A slime mould designs Tokyo’s railways",
+        "pt": "Um bolor limoso projeta as ferrovias de Tóquio",
+        "es": "Un moho mucilaginoso diseña los ferrocarriles de Tokio"
+      },
+      "caption": {
+        "ru": "Запись к рисунку 1 статьи Теро и соавторов в Science (2010): овсяные хлопья разложены как города вокруг Токио, слизевик стартует из центра и примерно за сутки связывает их сетью, близкой к железнодорожной.",
+        "en": "The movie for Figure 1 of Tero et al. in Science (2010): oat flakes laid out like the cities around Tokyo; the slime mould starts at the centre and within about a day links them with a network close to the railway map.",
+        "pt": "O filme da figura 1 do artigo de Tero e colegas na Science (2010): flocos de aveia dispostos como as cidades em volta de Tóquio; o bolor parte do centro e em cerca de um dia os liga numa rede parecida com a ferroviária.",
+        "es": "La película de la figura 1 del artículo de Tero y colegas en Science (2010): copos de avena dispuestos como las ciudades alrededor de Tokio; el moho parte del centro y en cerca de un día las une con una red parecida a la ferroviaria."
+      }
+    },
+    {
       "id": "cc-ch02-physarum",
       "book": "celestial-code",
       "chapter": "ch02",

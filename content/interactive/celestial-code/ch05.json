@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "cc-ch05-levin",
+      "book": "celestial-code",
+      "chapter": "ch05",
+      "scene": 0,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "t6EFV2gSSmg",
+        "channel": "Michael Levin | 632nm"
+      },
+      "title": {
+        "ru": "Левин о двухголовых червях",
+        "en": "Levin on two-headed worms",
+        "pt": "Levin sobre os vermes de duas cabeças",
+        "es": "Levin sobre los gusanos de dos cabezas"
+      },
+      "caption": {
+        "ru": "Майкл Левин рассказывает, как биоэлектрический узор решает, где у планарии вырастет голова. Видео на английском.",
+        "en": "Michael Levin explains how a bioelectric pattern decides where a planarian grows its head.",
+        "pt": "Michael Levin explica como um padrão bioelétrico decide onde a planária forma a cabeça. Vídeo em inglês.",
+        "es": "Michael Levin explica cómo un patrón bioeléctrico decide dónde le crece la cabeza a la planaria. Vídeo en inglés."
+      }
+    },
+    {
+      "id": "cc-ch05-planaria",
+      "book": "celestial-code",
+      "chapter": "ch05",
+      "scene": 0,
+      "at": "end",
+      "widget": "planaria",
+      "title": {
+        "ru": "Разрежьте червя",
+        "en": "Cut the worm",
+        "pt": "Corte o verme",
+        "es": "Corte el gusano"
+      },
+      "caption": {
+        "ru": "Схема опыта, не симуляция. Цвет показывает биоэлектрический узор: какой конец станет головой. Гены у всех червей одни и те же, меняется только узор.",
+        "en": "A diagram of the experiment, not a simulation. Colour shows the bioelectric pattern: which end becomes a head. Every worm has the same genes; only the pattern changes.",
+        "pt": "Um esquema do experimento, não uma simulação. A cor mostra o padrão bioelétrico: que ponta vira cabeça. Todos os vermes têm os mesmos genes; muda só o padrão.",
+        "es": "Un esquema del experimento, no una simulación. El color muestra el patrón bioeléctrico: qué extremo será cabeza. Todos los gusanos tienen los mismos genes; solo cambia el patrón."
+      }
+    }
+  ]
+}

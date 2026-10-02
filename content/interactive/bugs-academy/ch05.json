@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "ba-ch05-google",
+      "book": "bugs-academy",
+      "chapter": "ch05",
+      "scene": 2,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "2uV5XwhH6Eg",
+        "channel": "Google"
+      },
+      "title": {
+        "ru": "Криостаты Google Quantum AI",
+        "en": "The cryostats of Google Quantum AI",
+        "pt": "Os criostatos do Google Quantum AI",
+        "es": "Los criostatos de Google Quantum AI"
+      },
+      "caption": {
+        "ru": "Лаборатория Google в Санта-Барбаре: «люстры» криостатов, в которых квантовые процессоры охлаждают почти до абсолютного нуля. Видео на английском.",
+        "en": "Google’s lab in Santa Barbara: the chandelier cryostats that cool quantum processors to nearly absolute zero.",
+        "pt": "O laboratório do Google em Santa Bárbara: os “lustres” de criostatos que resfriam processadores quânticos quase até o zero absoluto. Vídeo em inglês.",
+        "es": "El laboratorio de Google en Santa Bárbara: las «lámparas» de criostatos que enfrían procesadores cuánticos casi hasta el cero absoluto. Vídeo en inglés."
+      }
+    }
+  ]
+}

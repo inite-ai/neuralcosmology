@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-ch11-sixth",
+      "book": "celestial-code",
+      "chapter": "ch11",
+      "scene": 10,
+      "at": "end",
+      "widget": "sixth",
+      "title": {
+        "ru": "Sixth в кармане",
+        "en": "Sixth in your pocket",
+        "pt": "Sixth no bolso",
+        "es": "Sixth en el bolsillo"
+      },
+      "caption": {
+        "ru": "Карманная версия: стековая часть и слова подложки из LANGUAGE.md, узлы нумеруются с единицы, как в настоящем Sixth. Программы ступеней взяты из examples репозитория github.com/neuralcosmology/sixth, там же полная реализация на Racket.",
+        "en": "A pocket version: the stack words and the substrate words from LANGUAGE.md, with nodes numbered from one as in the real Sixth. The rung programs come from examples in github.com/neuralcosmology/sixth, which also holds the full Racket implementation.",
+        "pt": "Uma versão de bolso: as palavras de pilha e as do substrato do LANGUAGE.md, com nós numerados a partir de um, como no Sixth de verdade. Os programas dos degraus vêm de examples em github.com/neuralcosmology/sixth, onde está também a implementação completa em Racket.",
+        "es": "Una versión de bolsillo: las palabras de pila y las del sustrato de LANGUAGE.md, con nodos numerados desde uno, como en el Sixth real. Los programas de los peldaños vienen de examples en github.com/neuralcosmology/sixth, donde está también la implementación completa en Racket."
+      }
+    }
+  ]
+}

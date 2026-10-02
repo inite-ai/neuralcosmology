@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "cs-ch05-mask",
+      "book": "conscious-selection",
+      "chapter": "ch05",
+      "scene": 0,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "BQ6LpYsHRwE",
+        "channel": "Bristol 24/7"
+      },
+      "title": {
+        "ru": "Маска Ричарда Грегори",
+        "en": "Richard Gregory’s mask",
+        "pt": "A máscara de Richard Gregory",
+        "es": "La máscara de Richard Gregory"
+      },
+      "caption": {
+        "ru": "Ричард Грегори показывает полую маску: вогнутую сторону не удаётся увидеть вогнутой, даже когда знаешь, на что смотришь. Видео на английском.",
+        "en": "Richard Gregory shows the hollow mask: the concave side refuses to look concave even when you know what you are seeing.",
+        "pt": "Richard Gregory mostra a máscara oca: o lado côncavo não consegue parecer côncavo, mesmo quando se sabe o que se está vendo. Vídeo em inglês.",
+        "es": "Richard Gregory muestra la máscara hueca: el lado cóncavo no logra verse cóncavo aunque uno sepa lo que está mirando. Vídeo en inglés."
+      }
+    }
+  ]
+}

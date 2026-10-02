@@ -16,6 +16,16 @@ const WIDGETS: Record<string, ComponentType<WidgetProps>> = {
   rule110: dynamic(() => import("./Rule110"), { ssr: false }),
   yarbus: dynamic(() => import("./Yarbus"), { ssr: false }),
   "blind-spot": dynamic(() => import("./BlindSpot"), { ssr: false }),
+  murmuration: dynamic(() => import("./Murmuration"), { ssr: false }),
+  planaria: dynamic(() => import("./Planaria"), { ssr: false }),
+  sixth: dynamic(() => import("./SixthRepl"), { ssr: false }),
+  loftus: dynamic(() => import("./Loftus"), { ssr: false }),
+  assembly: dynamic(() => import("./Assembly"), { ssr: false }),
+  envelope: dynamic(() => import("./Envelope"), { ssr: false }),
+  qubit: dynamic(() => import("./Qubit"), { ssr: false }),
+  synth: dynamic(() => import("./Synth"), { ssr: false }),
+  wow: dynamic(() => import("./Wow"), { ssr: false }),
+  youtube: dynamic(() => import("./YouTube"), { ssr: false }),
 };
 
 type Slot = { id: string; el: HTMLElement; widget: string; lang: Lang; props?: Record<string, unknown> };

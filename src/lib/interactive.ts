@@ -10,7 +10,9 @@ import type { Lang, SceneInsert } from "@/lib/illustrations";
 // и читатели без JS), клиент (ChapterWidgets) оживляет её, когда она подходит к экрану.
 // Проверка: npm run interactive:check.
 
-export type Widget = "physarum" | "double-slit" | "landauer" | "life" | "rule110" | "yarbus" | "blind-spot";
+export type Widget =
+  | "physarum" | "double-slit" | "landauer" | "life" | "rule110" | "yarbus" | "blind-spot" | "murmuration" | "planaria"
+  | "sixth" | "loftus" | "assembly" | "envelope" | "qubit" | "synth" | "wow" | "youtube";
 
 export type InteractiveItem = {
   id: string;
@@ -38,13 +40,18 @@ export function interactive(book: string, chapter: string): InteractiveItem[] {
 
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-export const KICKER: Record<Lang, string> = { ru: "Опыт", en: "Try it", pt: "Experimente", es: "Pruébelo" };
+export const KICKER: Record<"try" | "watch" | "listen", Record<Lang, string>> = {
+  try: { ru: "Опыт", en: "Try it", pt: "Experimente", es: "Pruébelo" },
+  watch: { ru: "Видео", en: "Video", pt: "Vídeo", es: "Vídeo" },
+  listen: { ru: "Послушать", en: "Listen", pt: "Ouça", es: "Escuche" },
+};
 
 function frame(it: InteractiveItem, lang: Lang): string {
+  const kind = it.widget !== "youtube" ? "try" : it.props?.listen ? "listen" : "watch";
   const props = it.props ? ` data-props="${esc(JSON.stringify(it.props))}"` : "";
   return (
-    `<figure class="nc-x" id="x-${esc(it.id)}" data-x="${esc(it.id)}" data-w="${it.widget}" data-lang="${lang}"${props}>` +
-    `<div class="nc-x-head"><span class="nc-x-kicker">${KICKER[lang]}</span><span class="nc-x-title">${esc(it.title[lang] ?? it.title.en)}</span></div>` +
+    `<figure class="nc-x nc-x--${kind}" id="x-${esc(it.id)}" data-x="${esc(it.id)}" data-w="${it.widget}" data-lang="${lang}"${props}>` +
+    `<div class="nc-x-head"><span class="nc-x-kicker">${KICKER[kind][lang]}</span><span class="nc-x-title">${esc(it.title[lang] ?? it.title.en)}</span></div>` +
     `<div class="nc-x-mount"></div>` +
     `<figcaption>${esc(it.caption[lang] ?? it.caption.en)}</figcaption>` +
     `</figure>`

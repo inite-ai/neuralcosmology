@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "ea-ch02-caretaker",
+      "book": "era-of-architects",
+      "chapter": "ch02",
+      "scene": 3,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "K8cZHQk8MFU",
+        "channel": "The Caretaker",
+        "listen": true
+      },
+      "title": {
+        "ru": "Что у неё в правом наушнике",
+        "en": "What’s in her right earbud",
+        "pt": "O que toca no fone direito dela",
+        "es": "Qué suena en su auricular derecho"
+      },
+      "caption": {
+        "ru": "The Caretaker, «It’s just a burning memory» — первая пьеса первой стадии «Everywhere at the End of Time» (2016).",
+        "en": "The Caretaker, “It’s just a burning memory”: the opening piece of the first stage of Everywhere at the End of Time (2016).",
+        "pt": "The Caretaker, “It’s just a burning memory”: a peça de abertura do primeiro estágio de Everywhere at the End of Time (2016).",
+        "es": "The Caretaker, «It’s just a burning memory»: la pieza inicial de la primera etapa de Everywhere at the End of Time (2016)."
+      }
+    }
+  ]
+}

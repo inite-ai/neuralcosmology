@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "ea-ch01-shukhov",
+      "book": "era-of-architects",
+      "chapter": "ch01",
+      "scene": 5,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "Wm-8drYoPQI",
+        "channel": "OJO films"
+      },
+      "title": {
+        "ru": "Шуховская башня",
+        "en": "The Shukhov Tower",
+        "pt": "A Torre Shukhov",
+        "es": "La Torre Shújov"
+      },
+      "caption": {
+        "ru": "Башня на Шаболовке через сто лет после начала строительства. Гиперболоидная сетка Владимира Шухова, 1920–1922.",
+        "en": "The tower on Shabolovka a hundred years after construction began. Vladimir Shukhov’s hyperboloid lattice, 1920–1922. In Russian.",
+        "pt": "A torre da rua Shabolovka cem anos depois do início da obra. A treliça hiperboloide de Vladimir Shukhov, 1920–1922. Em russo.",
+        "es": "La torre de la calle Shabolovka cien años después del inicio de la obra. La celosía hiperboloide de Vladímir Shújov, 1920–1922. En ruso."
+      }
+    }
+  ]
+}

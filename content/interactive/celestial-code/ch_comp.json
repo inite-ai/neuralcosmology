@@ -1,6 +1,30 @@
 {
   "items": [
     {
+      "id": "cc-comp-conway",
+      "book": "celestial-code",
+      "chapter": "ch_comp",
+      "scene": 1,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "E8kUJL04ELA",
+        "channel": "Numberphile"
+      },
+      "title": {
+        "ru": "Конвей о своей «Жизни»",
+        "en": "Conway on his Life",
+        "pt": "Conway sobre o seu Jogo da Vida",
+        "es": "Conway sobre su Juego de la Vida"
+      },
+      "caption": {
+        "ru": "Numberphile: Джон Хортон Конвей объясняет, за что он недолюбливал своё самое знаменитое изобретение. Видео на английском.",
+        "en": "Numberphile: John Horton Conway explains why he had little love for his most famous invention.",
+        "pt": "Numberphile: John Horton Conway explica por que não gostava muito da sua invenção mais famosa. Vídeo em inglês.",
+        "es": "Numberphile: John Horton Conway explica por qué no quería demasiado a su invento más famoso. Vídeo en inglés."
+      }
+    },
+    {
       "id": "cc-comp-life",
       "book": "celestial-code",
       "chapter": "ch_comp",
@@ -27,7 +51,9 @@
       "scene": 3,
       "at": "end",
       "widget": "rule110",
-      "props": { "rule": 110 },
+      "props": {
+        "rule": 110
+      },
       "title": {
         "ru": "Все 256 правил Вольфрама",
         "en": "All 256 of Wolfram’s rules",

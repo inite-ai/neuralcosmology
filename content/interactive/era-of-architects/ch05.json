@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "id": "ea-ch05-furby",
+      "book": "era-of-architects",
+      "chapter": "ch05",
+      "scene": 3,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "GYLBjScgb7o",
+        "channel": "LOOK MUM NO COMPUTER"
+      },
+      "title": {
+        "ru": "Орган из Фёрби",
+        "en": "The Furby organ",
+        "pt": "O órgão de Furbies",
+        "es": "El órgano de Furbys"
+      },
+      "caption": {
+        "ru": "Сэм Бэттл, Look Mum No Computer, собирает музыкальный инструмент из Фёрби. Видео на английском.",
+        "en": "Sam Battle, Look Mum No Computer, builds a musical instrument out of Furbies.",
+        "pt": "Sam Battle, do Look Mum No Computer, monta um instrumento musical com Furbies. Vídeo em inglês.",
+        "es": "Sam Battle, de Look Mum No Computer, construye un instrumento musical con Furbys. Vídeo en inglés."
+      }
+    },
+    {
+      "id": "ea-ch05-poacher",
+      "book": "era-of-architects",
+      "chapter": "ch05",
+      "scene": 5,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "k3FX3BbXxeY",
+        "channel": "Shortwave Investigations",
+        "listen": true
+      },
+      "title": {
+        "ru": "«Линкольнширский браконьер»",
+        "en": "The Lincolnshire Poacher",
+        "pt": "O Lincolnshire Poacher",
+        "es": "El Lincolnshire Poacher"
+      },
+      "caption": {
+        "ru": "Настоящая номерная станция E03: мелодия английской народной песни, потом синтезированный женский голос читает группы цифр. Запись 1994 года.",
+        "en": "The real numbers station E03: an English folk tune, then a synthesised female voice reading groups of digits. Recorded in 1994.",
+        "pt": "A estação de números E03 de verdade: uma melodia folclórica inglesa, depois uma voz feminina sintetizada lendo grupos de algarismos. Gravação de 1994.",
+        "es": "La estación de números E03 real: una melodía popular inglesa y luego una voz femenina sintetizada que lee grupos de cifras. Grabación de 1994."
+      }
+    },
+    {
+      "id": "ea-ch05-autechre",
+      "book": "era-of-architects",
+      "chapter": "ch05",
+      "scene": 7,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "TnsvhczQtGE",
+        "channel": "Autechre — Topic",
+        "listen": true
+      },
+      "title": {
+        "ru": "Autechre — VI Scose Poise",
+        "en": "Autechre — VI Scose Poise",
+        "pt": "Autechre — VI Scose Poise",
+        "es": "Autechre — VI Scose Poise"
+      },
+      "caption": {
+        "ru": "Первая вещь альбома Confield (Warp, 2001), того самого, у которого, по Лие, серо-зелёная тональность.",
+        "en": "The opening track of Confield (Warp, 2001), the album whose tonality Liya calls grey-green.",
+        "pt": "A faixa de abertura de Confield (Warp, 2001), o álbum cuja tonalidade, para Lia, é cinza-esverdeada.",
+        "es": "El tema inicial de Confield (Warp, 2001), el álbum cuya tonalidad, según Lía, es gris verdosa."
+      }
+    }
+  ]
+}

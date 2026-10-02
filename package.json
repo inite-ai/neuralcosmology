@@ -11,7 +11,8 @@
     "prepare": "husky",
     "illustrations": "node scripts/illustrations/illustrate.mjs",
     "illustrations:check": "node scripts/illustrations/check.mjs",
-    "interactive:check": "node scripts/interactive/check.mjs"
+    "interactive:check": "node scripts/interactive/check.mjs",
+    "interactive:posters": "node scripts/interactive/posters.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch11-envelope",
+      "book": "conscious-selection",
+      "chapter": "ch11",
+      "scene": 1,
+      "at": "end",
+      "widget": "envelope",
+      "title": {
+        "ru": "Запечатайте предсказание",
+        "en": "Seal a prediction",
+        "pt": "Lacre uma previsão",
+        "es": "Selle una predicción"
+      },
+      "caption": {
+        "ru": "SHA-256, тот же отпечаток, что в журнале attestations/ledger.txt репозитория Sixth. Текст и отпечаток хранятся только в вашем браузере.",
+        "en": "SHA-256, the same fingerprint as in the attestations/ledger.txt log of the Sixth repository. The text and fingerprint stay in your browser.",
+        "pt": "SHA-256, a mesma impressão do registro attestations/ledger.txt do repositório Sixth. O texto e a impressão ficam só no seu navegador.",
+        "es": "SHA-256, la misma huella que en el registro attestations/ledger.txt del repositorio Sixth. El texto y la huella se quedan solo en su navegador."
+      }
+    }
+  ]
+}

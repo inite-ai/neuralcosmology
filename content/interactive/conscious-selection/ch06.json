@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": "cs-ch06-hot-fullerenes",
+      "book": "conscious-selection",
+      "chapter": "ch06",
+      "scene": 3,
+      "at": "end",
+      "widget": "double-slit",
+      "title": {
+        "ru": "Нагретые молекулы теряют полосы",
+        "en": "Heated molecules lose their fringes",
+        "pt": "Moléculas aquecidas perdem as franjas",
+        "es": "Las moléculas calientes pierden las franjas"
+      },
+      "caption": {
+        "ru": "Хакермюллер и соавторы, Nature, 2004. Кривая видности здесь — схема по описанию в главе: до полутора тысяч кельвинов полосы целы, к трём тысячам гаснут.",
+        "en": "Hackermüller and colleagues, Nature, 2004. The visibility curve here is a sketch following the chapter: fringes survive up to about 1,500 K and fade out by 3,000 K.",
+        "pt": "Hackermüller e colegas, Nature, 2004. A curva de visibilidade aqui é um esboço conforme o capítulo: as franjas resistem até cerca de 1.500 K e somem perto de 3.000 K.",
+        "es": "Hackermüller y colegas, Nature, 2004. La curva de visibilidad aquí es un esbozo según el capítulo: las franjas resisten hasta unos 1.500 K y se apagan hacia los 3.000 K."
+      },
+      "props": {
+        "mode": "heat"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "id": "ea-ch10-synth",
+      "book": "era-of-architects",
+      "chapter": "ch10",
+      "scene": 1,
+      "at": "end",
+      "widget": "synth",
+      "title": {
+        "ru": "Модуль Карла",
+        "en": "Karl’s module",
+        "pt": "O módulo de Karl",
+        "es": "El módulo de Karl"
+      },
+      "caption": {
+        "ru": "Карлов модуль выдуман, звук настоящий: пять расстроенных генераторов, резонансный фильтр и медленная модуляция, всё собрано в Web Audio прямо в браузере.",
+        "en": "Karl’s module is invented; the sound is real: five detuned oscillators, a resonant filter and slow modulation, all built in Web Audio right in your browser.",
+        "pt": "O módulo de Karl é inventado; o som é de verdade: cinco osciladores desafinados, um filtro ressonante e modulação lenta, tudo montado em Web Audio no próprio navegador.",
+        "es": "El módulo de Karl es inventado; el sonido es real: cinco osciladores desafinados, un filtro resonante y modulación lenta, todo armado en Web Audio en el propio navegador."
+      }
+    },
+    {
+      "id": "ea-ch10-coil",
+      "book": "era-of-architects",
+      "chapter": "ch10",
+      "scene": 11,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "95zstq50yqA",
+        "channel": "Dais Records",
+        "listen": true
+      },
+      "title": {
+        "ru": "Coil — Broccoli",
+        "en": "Coil — Broccoli",
+        "pt": "Coil — Broccoli",
+        "es": "Coil — Broccoli"
+      },
+      "caption": {
+        "ru": "С альбома Musick to Play in the Dark (1999) дуэта Coil, Джона Бэлэнса и Питера Кристоферсона. Переиздание Dais Records.",
+        "en": "From Musick to Play in the Dark (1999) by Coil, John Balance and Peter Christopherson. Dais Records reissue.",
+        "pt": "Do álbum Musick to Play in the Dark (1999), do Coil, John Balance e Peter Christopherson. Reedição da Dais Records.",
+        "es": "Del álbum Musick to Play in the Dark (1999), de Coil, John Balance y Peter Christopherson. Reedición de Dais Records."
+      }
+    }
+  ]
+}

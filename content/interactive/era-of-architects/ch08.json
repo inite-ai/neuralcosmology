@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ea-ch08-wow",
+      "book": "era-of-architects",
+      "chapter": "ch08",
+      "scene": 1,
+      "at": "end",
+      "widget": "wow",
+      "title": {
+        "ru": "Расшифруйте Wow!",
+        "en": "Decode the Wow!",
+        "pt": "Decifre o Wow!",
+        "es": "Descifre el Wow!"
+      },
+      "caption": {
+        "ru": "Распечатка радиотелескопа Big Ear (Университет штата Огайо), 15 августа 1977 года. Колонка 6EQUJ5 подлинная, соседние цифры здесь сгенерированы.",
+        "en": "A printout from the Big Ear radio telescope (Ohio State University), 15 August 1977. The 6EQUJ5 column is genuine; the surrounding digits here are generated.",
+        "pt": "Uma impressão do radiotelescópio Big Ear (Universidade Estadual de Ohio), 15 de agosto de 1977. A coluna 6EQUJ5 é autêntica; os algarismos em volta foram gerados aqui.",
+        "es": "Una impresión del radiotelescopio Big Ear (Universidad Estatal de Ohio), 15 de agosto de 1977. La columna 6EQUJ5 es auténtica; las cifras de alrededor están generadas aquí."
+      }
+    }
+  ]
+}

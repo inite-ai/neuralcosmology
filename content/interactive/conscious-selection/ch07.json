@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch07-assembly",
+      "book": "conscious-selection",
+      "chapter": "ch07",
+      "scene": 1,
+      "at": "end",
+      "widget": "assembly",
+      "title": {
+        "ru": "Индекс сборки своими руками",
+        "en": "Assembly index by hand",
+        "pt": "Índice de montagem à mão",
+        "es": "Índice de ensamblaje a mano"
+      },
+      "caption": {
+        "ru": "Правила из главы: буквы даны даром, шаг — склеить два уже собранных куска, и собранное остаётся в запасе. Для слов до шестнадцати букв индекс находится перебором; если перебор не уложился в бюджет, показана верхняя оценка со знаком «≤».",
+        "en": "The chapter’s rules: letters are free, a step joins two pieces already built, and whatever is built stays in stock. For words up to sixteen letters the index is found by search; if the search runs out of budget, an upper bound is shown with “≤”.",
+        "pt": "As regras do capítulo: as letras são grátis, um passo junta dois pedaços já montados, e o que foi montado fica no estoque. Para palavras de até dezesseis letras, o índice sai por busca; se a busca estoura o orçamento, aparece um limite superior com “≤”.",
+        "es": "Las reglas del capítulo: las letras son gratis, un paso une dos piezas ya ensambladas, y lo ensamblado queda en reserva. Para palabras de hasta dieciséis letras, el índice se halla por búsqueda; si la búsqueda agota su presupuesto, se muestra una cota superior con «≤»."
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cc-ch04-murmuration",
+      "book": "celestial-code",
+      "chapter": "ch04",
+      "scene": 9,
+      "at": "end",
+      "widget": "murmuration",
+      "title": {
+        "ru": "Стая из трёх правил",
+        "en": "A flock from three rules",
+        "pt": "Um bando de três regras",
+        "es": "Una bandada de tres reglas"
+      },
+      "caption": {
+        "ru": "Модель Крейга Рейнольдса (1987): три правила и никакого вожака. Настоящие скворцы, как показали Баллерини и соавторы в 2008 году, следят примерно за шестью-семью ближайшими соседями, сколько бы птиц ни было рядом.",
+        "en": "Craig Reynolds’s model (1987): three rules and no leader. Real starlings, Ballerini and colleagues showed in 2008, track about six or seven nearest neighbours, however many birds are close by.",
+        "pt": "O modelo de Craig Reynolds (1987): três regras e nenhum líder. Estorninhos reais, mostraram Ballerini e colegas em 2008, acompanham uns seis ou sete vizinhos mais próximos, quantos pássaros houver por perto.",
+        "es": "El modelo de Craig Reynolds (1987): tres reglas y ningún líder. Los estorninos reales, mostraron Ballerini y colegas en 2008, siguen a unos seis o siete vecinos más cercanos, haya los pájaros que haya cerca."
+      }
+    }
+  ]
+}

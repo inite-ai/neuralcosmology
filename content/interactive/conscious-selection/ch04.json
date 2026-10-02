@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "cs-ch04-loftus",
+      "book": "conscious-selection",
+      "chapter": "ch04",
+      "scene": 4,
+      "at": "end",
+      "widget": "loftus",
+      "title": {
+        "ru": "Одно слово в вопросе",
+        "en": "One word in the question",
+        "pt": "Uma palavra na pergunta",
+        "es": "Una palabra en la pregunta"
+      },
+      "caption": {
+        "ru": "Лофтус и Палмер, 1974. В оригинале студенты смотрели настоящие учебные ролики об авариях, здесь схема. Столбцы — средние оценки скорости из статьи, переведённые в км/ч.",
+        "en": "Loftus and Palmer, 1974. The original subjects watched real driver-safety films of crashes; this is a diagram. The bars are the paper’s mean speed estimates, converted to km/h.",
+        "pt": "Loftus e Palmer, 1974. No original, os estudantes viam filmes reais de acidentes; aqui é um esquema. As barras são as estimativas médias de velocidade do artigo, convertidas em km/h.",
+        "es": "Loftus y Palmer, 1974. En el original, los estudiantes veían películas reales de accidentes; aquí es un esquema. Las barras son las estimaciones medias de velocidad del artículo, convertidas a km/h."
+      }
+    }
+  ]
+}

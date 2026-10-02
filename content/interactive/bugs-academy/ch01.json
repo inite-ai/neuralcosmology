@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "ba-ch01-qubit",
+      "book": "bugs-academy",
+      "chapter": "ch01",
+      "scene": 4,
+      "at": "end",
+      "widget": "qubit",
+      "title": {
+        "ru": "Четырнадцать раз подряд",
+        "en": "Fourteen times in a row",
+        "pt": "Catorze vezes seguidas",
+        "es": "Catorce veces seguidas"
+      },
+      "caption": {
+        "ru": "Идеальный кубит, без шума и дрейфа. Четырнадцать одинаковых исходов подряд при θ = 90° — один шанс из 16 384, те самые «один к шестнадцати тысячам».",
+        "en": "An ideal qubit, with no noise or drift. Fourteen identical outcomes in a row at θ = 90° is one chance in 16,384: the “one in sixteen thousand” from the chapter.",
+        "pt": "Um qubit ideal, sem ruído nem deriva. Catorze resultados iguais seguidos com θ = 90° são uma chance em 16.384: o “um em dezesseis mil” do capítulo.",
+        "es": "Un cúbit ideal, sin ruido ni deriva. Catorce resultados iguales seguidos con θ = 90° son una posibilidad entre 16.384: el «uno entre dieciséis mil» del capítulo."
+      }
+    }
+  ]
+}

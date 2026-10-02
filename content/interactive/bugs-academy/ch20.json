@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "ba-ch20-caretaker",
+      "book": "bugs-academy",
+      "chapter": "ch20",
+      "scene": 3,
+      "at": "end",
+      "widget": "youtube",
+      "props": {
+        "id": "K8cZHQk8MFU",
+        "channel": "The Caretaker",
+        "listen": true
+      },
+      "title": {
+        "ru": "The Caretaker — It’s just a burning memory",
+        "en": "The Caretaker — It’s just a burning memory",
+        "pt": "The Caretaker — It’s just a burning memory",
+        "es": "The Caretaker — It’s just a burning memory"
+      },
+      "caption": {
+        "ru": "Первая пьеса первой стадии «Everywhere at the End of Time» (2016). Шесть стадий вышли с 2016 по 2019 год и повторяют ход деменции.",
+        "en": "The opening piece of the first stage of Everywhere at the End of Time (2016). The six stages came out between 2016 and 2019 and follow the course of dementia.",
+        "pt": "A peça de abertura do primeiro estágio de Everywhere at the End of Time (2016). Os seis estágios saíram entre 2016 e 2019 e seguem o curso da demência.",
+        "es": "La pieza inicial de la primera etapa de Everywhere at the End of Time (2016). Las seis etapas salieron entre 2016 y 2019 y siguen el curso de la demencia."
+      }
+    }
+  ]
+}

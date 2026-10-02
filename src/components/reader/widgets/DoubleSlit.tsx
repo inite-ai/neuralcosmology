@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Pause, Play, Reset, useCanvasSize, useLoop, usePalette, useVisible, prefersReducedMotion, type Dict, type WidgetProps } from "./kit";
 
 // Двухщелевой опыт по одному фотону. Без детектора точка попадания берётся из
 // |ψ₁ + ψ₂|² (полосы), с детектором у щелей — из |ψ₁|² + |ψ₂|² (две размытые
 // полосы без интерференции). Каждый фотон — одна точка; картина складывается сама.
+// Режим heat (опыт Хакермюллер и др., 2004): вместо детектора — нагрев молекул C₇₀.
+// Видность полос V(T) — схема по описанию опыта: до ~1500 K цела, к ~3000 K гаснет.
 
 const T: Dict<{ off: string; on: string; detector: string; play: string; pause: string; clear: string; photons: string; hint: string }> = {
   ru: { off: "не смотрим", on: "смотрим", detector: "Детектор у щелей", play: "Пуск", pause: "Пауза", clear: "Очистить экран", photons: "фотонов", hint: "Фотоны летят по одному. Включите детектор: полосы исчезнут, хотя сами фотоны и щели остались прежними." },
@@ -14,18 +16,35 @@ const T: Dict<{ off: string; on: string; detector: string; play: string; pause: 
   es: { off: "sin mirar", on: "mirando", detector: "Detector en las rendijas", play: "Iniciar", pause: "Pausa", clear: "Limpiar la pantalla", photons: "fotones", hint: "Los fotones pasan de uno en uno. Encienda el detector y las franjas desaparecen, aunque fotones y rendijas sigan iguales." },
 };
 
+const H: Dict<{ temp: string; molecules: string; hint: string }> = {
+  ru: { temp: "Нагрев молекул", molecules: "молекул C₇₀", hint: "Грейте молекулы. Пока они тёплые, полосы целы; раскалённая молекула светится, её фотоны выдают путь — и полосы гаснут, хотя этих фотонов никто не ловит." },
+  en: { temp: "Heating the molecules", molecules: "C₇₀ molecules", hint: "Heat the molecules. While they are warm the fringes survive; a red-hot molecule glows, its photons give away the path, and the fringes fade, though nobody catches those photons." },
+  pt: { temp: "Aquecimento das moléculas", molecules: "moléculas de C₇₀", hint: "Aqueça as moléculas. Enquanto estão mornas, as franjas resistem; a molécula em brasa brilha, seus fótons revelam o caminho e as franjas se apagam, embora ninguém capture esses fótons." },
+  es: { temp: "Calentamiento de las moléculas", molecules: "moléculas de C₇₀", hint: "Caliente las moléculas. Mientras están tibias, las franjas resisten; la molécula al rojo brilla, sus fotones delatan el camino y las franjas se apagan, aunque nadie atrape esos fotones." },
+};
+
+/** Видность полос от температуры молекулы, 0…1. */
+const visibility = (T: number) => (T <= 1500 ? 1 : Math.exp(-(((T - 1500) / 600) ** 2)));
+
+/** Цвет раскалённого тела, грубо: тёмно-красный → оранжевый → белый. */
+function glow(T: number): string {
+  const k = Math.max(0, Math.min(1, (T - 1000) / 2000));
+  const r = 255, g = Math.round(60 + 190 * k), b = Math.round(30 + 200 * Math.max(0, k - 0.4) / 0.6);
+  return `rgb(${r},${g},${b})`;
+}
+
 const BINS = 150;
 const S = 0.2; // смещение щели (в долях полувысоты экрана)
 const SIG = 0.3; // ширина пучка от одной щели
 const K = 34; // частота полос
 
-function pdf(observed: boolean): Float64Array {
+function pdf(v: number): Float64Array {
   const p = new Float64Array(BINS);
   for (let i = 0; i < BINS; i++) {
     const y = (i + 0.5) / BINS * 2 - 1;
     const g1 = Math.exp(-((y - S) ** 2) / (2 * SIG * SIG));
     const g2 = Math.exp(-((y + S) ** 2) / (2 * SIG * SIG));
-    p[i] = observed ? g1 * g1 + g2 * g2 : g1 * g1 + g2 * g2 + 2 * g1 * g2 * Math.cos(K * y);
+    p[i] = g1 * g1 + g2 * g2 + v * 2 * g1 * g2 * Math.cos(K * y);
   }
   let sum = 0;
   for (let i = 0; i < BINS; i++) sum += p[i];
@@ -33,7 +52,7 @@ function pdf(observed: boolean): Float64Array {
   for (let i = 0; i < BINS; i++) p[i] = acc += p[i] / sum;
   return p;
 }
-const CDF = { off: pdf(false), on: pdf(true) };
+const CDF = { off: pdf(1), on: pdf(0) };
 
 function sample(cdf: Float64Array): number {
   const r = Math.random();
@@ -48,8 +67,12 @@ function sample(cdf: Float64Array): number {
 
 type Photon = { t: number; y: number; slit: 0 | 1; observed: boolean };
 
-export default function DoubleSlit({ lang }: WidgetProps) {
+export default function DoubleSlit({ lang, props }: WidgetProps) {
   const t = T[lang];
+  const heat = props?.mode === "heat";
+  const h = H[lang];
+  const [temp, setTemp] = useState(1000);
+  const cdf = useMemo(() => (heat ? pdf(visibility(temp)) : null), [heat, temp]);
   const box = useRef<HTMLDivElement>(null);
   const cv = useRef<HTMLCanvasElement>(null);
   const size = useCanvasSize(cv, 16 / 9, 2);
@@ -65,7 +88,7 @@ export default function DoubleSlit({ lang }: WidgetProps) {
     st.current.hist = new Float32Array(BINS);
     setCount(0);
   };
-  useEffect(clear, [observed]);
+  useEffect(clear, [observed, temp]);
 
   useLoop((dt) => {
     const s = st.current;
@@ -73,7 +96,7 @@ export default function DoubleSlit({ lang }: WidgetProps) {
     s.clock += dt * rate;
     while (s.clock >= 1) {
       s.clock -= 1;
-      const y = sample(observed ? CDF.on : CDF.off);
+      const y = sample(cdf ?? (observed ? CDF.on : CDF.off));
       s.flying.push({ t: 0, y, slit: Math.random() < 0.5 ? 0 : 1, observed });
     }
     for (const p of s.flying) p.t += dt * 1.6;
@@ -186,9 +209,9 @@ export default function DoubleSlit({ lang }: WidgetProps) {
           continue;
         }
       }
-      ctx.fillStyle = pal.accent;
+      ctx.fillStyle = heat ? glow(temp) : pal.accent;
       ctx.beginPath();
-      ctx.arc(x, y, 2.4 * d, 0, Math.PI * 2);
+      ctx.arc(x, y, (heat ? 3.2 : 2.4) * d, 0, Math.PI * 2);
       ctx.fill();
     }
   };
@@ -200,13 +223,23 @@ export default function DoubleSlit({ lang }: WidgetProps) {
 
   return (
     <div ref={box}>
-      <canvas ref={cv} aria-label={t.hint} />
+      <canvas ref={cv} aria-label={heat ? h.hint : t.hint} />
       <div className="nc-x-bar">
-        <span className="nc-x-stat">{t.detector}</span>
-        <span className="nc-x-seg" role="group" aria-label={t.detector}>
-          <button type="button" className="nc-x-btn" aria-pressed={!observed} onClick={() => setObserved(false)}>{t.off}</button>
-          <button type="button" className="nc-x-btn" aria-pressed={observed} onClick={() => setObserved(true)}>{t.on}</button>
-        </span>
+        {heat ? (
+          <label className="nc-x-stat" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+            {h.temp}
+            <input type="range" min={900} max={3000} step={50} value={temp} onChange={(e) => setTemp(Number(e.target.value))} />
+            <b style={{ minWidth: "4.5em" }}>{temp.toLocaleString(lang)} K</b>
+          </label>
+        ) : (
+          <>
+            <span className="nc-x-stat">{t.detector}</span>
+            <span className="nc-x-seg" role="group" aria-label={t.detector}>
+              <button type="button" className="nc-x-btn" aria-pressed={!observed} onClick={() => setObserved(false)}>{t.off}</button>
+              <button type="button" className="nc-x-btn" aria-pressed={observed} onClick={() => setObserved(true)}>{t.on}</button>
+            </span>
+          </>
+        )}
         <button type="button" className="nc-x-btn" onClick={() => setRunning((r) => !r)}>
           {running ? <Pause /> : <Play />} {running ? t.pause : t.play}
         </button>
@@ -214,9 +247,9 @@ export default function DoubleSlit({ lang }: WidgetProps) {
           <Reset /> {t.clear}
         </button>
         <span className="nc-x-spacer" />
-        <span className="nc-x-stat"><b>{count.toLocaleString(lang)}</b> {t.photons}</span>
+        <span className="nc-x-stat"><b>{count.toLocaleString(lang)}</b> {heat ? h.molecules : t.photons}</span>
       </div>
-      <div className="nc-x-hint">{t.hint}</div>
+      <div className="nc-x-hint">{heat ? h.hint : t.hint}</div>
     </div>
   );
 }
