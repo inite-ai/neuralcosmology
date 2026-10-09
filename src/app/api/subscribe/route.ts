@@ -3,6 +3,7 @@ import { isSupportedLocale } from "@/lib/get-locale";
 import { clip, fail, json, noDb } from "@/lib/reader/http";
 import { subscribe, validEmail } from "@/lib/subscribe";
 import { getBookBySlug } from "@/content/books";
+import { capiUser, sendCapi } from "@/lib/meta-capi";
 
 export const dynamic = "force-dynamic";
 
@@ -26,6 +27,14 @@ export async function POST(req: NextRequest) {
   const lang = isSupportedLocale(String(body.lang)) ? (String(body.lang) as "ru" | "en" | "pt" | "es") : "en";
   const bookSlug = clip(body.book, 60);
   const book = bookSlug && getBookBySlug(bookSlug) ? bookSlug : null;
-  const status = await subscribe(email, lang, book, clip(body.source, 40) || null);
+  const source = clip(body.source, 40) || null;
+  const status = await subscribe(email, lang, book, source);
+  // Lead в Meta Conversions API — с тем же event_id, что у пикселя в браузере.
+  const eventId = clip(body.event_id, 64);
+  if (eventId) {
+    const url = req.headers.get("referer");
+    const user = capiUser(req.headers, (n) => req.cookies.get(n)?.value, url);
+    await sendCapi({ name: "Lead", id: eventId, url, custom: { content_name: source ?? undefined, content_category: book ?? undefined } }, { ...user, email });
+  }
   return json({ status });
 }

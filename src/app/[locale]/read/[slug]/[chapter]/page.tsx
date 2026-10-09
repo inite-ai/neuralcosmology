@@ -13,6 +13,7 @@ import { allowPaidView, registerMark, watermark } from "@/lib/protect";
 import { CURRENCY_COOKIE, LIBRARY_ITEM, PRICES, currencyFromAcceptLanguage, isCurrency, kindOf } from "@/content/pricing";
 import { cookies, headers } from "next/headers";
 import { purchaseTxId, recordPurchase } from "@/lib/ga-server";
+import { capiUser } from "@/lib/meta-capi";
 import ReaderChrome from "@/components/reader/ReaderChrome";
 import ReaderInteractive from "@/components/reader/ReaderInteractive";
 import { aiConfigured } from "@/lib/reader/ai";
@@ -105,9 +106,12 @@ export default async function ChapterPage({
   const txId = fresh && session && gate === "open" && !chapter.free ? purchaseTxId(session.sub, boughtItem) : null;
   if (txId && session) {
     const jar = await cookies();
+    const h = await headers();
     const picked = jar.get(CURRENCY_COOKIE)?.value;
-    const cur = isCurrency(picked) ? picked : currencyFromAcceptLanguage((await headers()).get("accept-language"));
-    await recordPurchase(session.sub, boughtItem, PRICES[kindOf(boughtItem)][cur], cur, jar.get("_ga")?.value);
+    const cur = isCurrency(picked) ? picked : currencyFromAcceptLanguage(h.get("accept-language"));
+    const url = `https://neuralcosmology.com/${raw}/read/${slug}/${id}`;
+    const meta = { ...capiUser(h, (n) => jar.get(n)?.value), email: session.email, url };
+    await recordPurchase(session.sub, boughtItem, PRICES[kindOf(boughtItem)][cur], cur, jar.get("_ga")?.value, meta);
   }
   const source = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
   if (gate === "open" && source === null) notFound();

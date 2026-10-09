@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { track } from "@/components/analytics/Analytics";
+import { newEventId, track } from "@/components/analytics/Analytics";
 
 // Подписка на новые главы и опыты без аккаунта (POST /api/subscribe, двойное
 // подтверждение письмом). Ставится под барьером закрытой главы, в конце бесплатных
@@ -47,16 +47,18 @@ export default function Subscribe({ locale, book, source }: { locale: string; bo
     e.preventDefault();
     const company = (new FormData(e.currentTarget).get("company") as string) || "";
     setState("busy");
+    // Один event_id на браузерный и серверный Lead (сервер шлёт его с хешем почты).
+    const eventId = newEventId();
     try {
       const r = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, lang, book, source, company }),
+        body: JSON.stringify({ email, lang, book, source, company, event_id: eventId }),
       });
       const j = (await r.json().catch(() => ({}))) as { status?: State };
       const s = r.ok && j.status ? j.status : "error";
       setState(s);
-      if (s !== "error") track("generate_lead", { method: "email", source, book });
+      if (s !== "error") track("generate_lead", { method: "email", source, book }, eventId);
     } catch {
       setState("error");
     }

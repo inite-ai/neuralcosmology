@@ -102,6 +102,9 @@ jobs:
               - MAILGUN_REPLY_TO=${{ vars.MAILGUN_REPLY_TO }}
               - MAILGUN_REGION=${{ vars.MAILGUN_REGION }}
               - GA_API_SECRET=${{ secrets.GA_API_SECRET }}
+              # Meta Conversions API (lib/meta-capi.ts): токен из Events Manager → набор данных → Settings
+              - META_CAPI_TOKEN=${{ secrets.META_CAPI_TOKEN }}
+              - META_TEST_EVENT_CODE=${{ vars.META_TEST_EVENT_CODE }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:
