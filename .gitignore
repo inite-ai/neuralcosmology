@@ -42,3 +42,7 @@ acme.json
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Рекламные ролики опытов (большие файлы; см. docs/marketing/LAUNCH.md)
+marketing/ads/
+marketing/rec/
