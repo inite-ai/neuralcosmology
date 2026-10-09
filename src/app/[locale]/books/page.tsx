@@ -1,3 +1,4 @@
+import SubscribeNotice from "@/components/subscribe/SubscribeNotice";
 import type { Metadata } from "next";
 import { social } from "@/lib/og";
 import { seoTitle } from "@/content/seo";
@@ -64,6 +65,7 @@ export default async function BooksIndexPage({
           { name: dict.nav.books, path: "/books" },
         ])}
       />
+      <SubscribeNotice locale={locale} />
       <section className="rule-t py-10 md:px-10 md:py-14">
         <div className="grid gap-[0.5px] hairline bg-line sm:grid-cols-2 xl:grid-cols-4">
           {books.map((book, i) => (

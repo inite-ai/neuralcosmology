@@ -1,0 +1,5 @@
+{
+  "_comment": "Главы, открытые на сайте сверх флага free из манифеста godacademy (src/lib/library.ts). Ключ — книга, значение — id глав на всех языках.",
+  "conscious-selection": ["ch02"],
+  "era-of-architects": ["ch02"]
+}

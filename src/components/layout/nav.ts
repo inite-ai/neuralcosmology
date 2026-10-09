@@ -1,6 +1,7 @@
 import type { SupportedLocale } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { answersUi } from "@/content/answers-ui";
+import { experimentsUi } from "@/content/experiments-ui";
 
 // Общие для шапки (клиент) и героя (сервер) ссылки меню и подписи.
 
@@ -16,6 +17,7 @@ export function mainNav(locale: SupportedLocale) {
   return [
     { href: `/${locale}/books`, label: dict.nav.books },
     { href: `/${locale}/science`, label: dict.nav.science },
+    { href: `/${locale}/experiments`, label: experimentsUi[locale].nav },
     { href: `/${locale}/answers`, label: answersUi[locale].nav },
     { href: `/${locale}/essays`, label: dict.nav.essays },
     { href: `/${locale}/lectures`, label: dict.nav.lectures },

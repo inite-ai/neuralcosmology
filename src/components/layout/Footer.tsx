@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { answersUi } from "@/content/answers-ui";
+import { experimentsUi } from "@/content/experiments-ui";
 import { getDict } from "@/lib/i18n";
 
 // Sister-site cross-promo strings. Kept inline (not in the central Dict) to
@@ -48,6 +49,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
     {
       title: dict.footer.columns.research,
       links: [
+        { label: experimentsUi[locale].nav, href: `/${locale}/experiments` },
         { label: answersUi[locale].nav, href: `/${locale}/answers` },
         {
           label: dict.footer.links.pointer,

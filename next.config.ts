@@ -46,13 +46,13 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              // GA4 (gtag.js): скрипт и отправка хитов.
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+              // GA4 (gtag.js), Метрика и рекламные пиксели (content/pixels.ts): скрипты и отправка хитов.
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://mc.yandex.ru https://connect.facebook.net https://top-fwz1.mail.ru https://www.redditstatic.com",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https: blob:",
               "font-src 'self' data:",
-              "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
-              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com",
+              "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://mc.yandex.ru https://mc.yandex.com https://www.facebook.com https://top-fwz1.mail.ru https://alb.reddit.com https://pixel-config.reddit.com",
+              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://mc.yandex.ru https://mc.yandex.com",
               "media-src 'self' blob:",
               "object-src 'none'",
               "base-uri 'self'",

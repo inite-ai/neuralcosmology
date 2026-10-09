@@ -567,6 +567,19 @@
 .nc-yt--listen .nc-yt-play { left: 3.75rem; width: 46px; height: 46px; margin: -23px 0 0 -23px; }
 .nc-yt--listen .nc-yt-meta { left: 7.5rem; top: 0; bottom: 0; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 1rem; background: none; }
 .nc-yt--listen .nc-yt-meta em { margin-left: 0; }
+
+/* Подписка без аккаунта (components/subscribe) — в читалке, на страницах опытов. */
+.nc-sub { margin: 2.4rem 0 0; padding: 1.4rem 1.4rem 1.3rem; border: 0.5px solid var(--r-line, var(--color-line)); background: var(--r-panel, var(--color-bg-raised)); font-family: var(--font-sans); }
+.nc-sub-title { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.2; color: var(--r-fg, var(--color-fg)); text-wrap: balance; }
+.nc-sub-text { margin-top: 0.4rem; font-size: 0.85rem; color: var(--r-soft, var(--color-fg-secondary)); }
+.nc-sub-form { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.nc-sub-form input[type="email"] { flex: 1 1 14rem; min-height: 2.75rem; padding: 0 0.9rem; border: 0.5px solid var(--r-line, var(--color-line)); border-radius: 2px; background: var(--r-bg, var(--color-bg)); color: var(--r-fg, var(--color-fg)); font-size: 1rem; }
+.nc-sub-form input[type="email"]:focus { outline: 1px solid var(--r-accent, var(--color-primary)); outline-offset: -1px; }
+.nc-sub-form button { min-height: 2.75rem; padding: 0 1.3rem; border-radius: 2px; background: var(--r-fg, var(--color-fg)); color: var(--r-bg, var(--color-bg)); font-size: 0.85rem; letter-spacing: 0.02em; cursor: pointer; }
+.nc-sub-form button:disabled { opacity: 0.5; }
+.nc-sub-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.nc-sub-done { margin-top: 1rem; font-size: 0.95rem; color: var(--r-accent, var(--color-primary)); }
+.nc-sub-err { margin-top: 0.5rem; font-size: 0.8rem; color: #d2663a; }
 .reader-prose em { font-style: italic; }
 .reader-prose strong { font-weight: 600; }
 .reader-prose a { color: var(--r-accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }

@@ -4,6 +4,7 @@ import { papers } from "@/content/papers";
 import { getAllSlugs as essaySlugs, getEssayBySlug } from "@/lib/essays";
 import { getAllSlugs as lectureSlugs, getLectureBySlug } from "@/lib/lectures";
 import { getAllAnswerSlugs, getAnswer } from "@/lib/answers";
+import { experiments } from "@/lib/interactive";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
 import { getManifest, libraryLangs } from "@/lib/library";
 import { illustrations } from "@/lib/illustrations";
@@ -32,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/science", priority: 0.9 },
     { path: "/essays", priority: 0.8 },
     { path: "/answers", priority: 0.9 },
+    { path: "/experiments", priority: 0.9 },
     { path: "/lectures", priority: 0.7 },
     { path: "/about", priority: 0.8 },
   ];
@@ -57,7 +59,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return a ? [{ path: `/answers/${slug}`, priority: 0.9, locales: a.availableLocales, modified: a.updated }] : [];
   });
 
-  const all: Entry[] = [...staticPaths, ...answerPaths, ...bookPaths, ...paperPaths, ...essayPaths, ...lecturePaths];
+  const experimentPaths: Entry[] = experiments().map((it) => ({ path: `/experiments/${it.id}`, priority: 0.8 }));
+
+  const all: Entry[] = [...staticPaths, ...answerPaths, ...experimentPaths, ...bookPaths, ...paperPaths, ...essayPaths, ...lecturePaths];
 
   // Только существующие переводы: страница без перевода отдаёт текст на другом языке
   // с каноническим адресом оригинала, в sitemap ей не место.

@@ -10,7 +10,9 @@ import { getChapterHtml, getManifest, libraryLangs, resolveBookLang, type Librar
 import { getSession, authConfigured } from "@/lib/auth";
 import { chapterGate, lockedGate, type Gate } from "@/lib/access";
 import { allowPaidView, registerMark, watermark } from "@/lib/protect";
-import { LIBRARY_ITEM } from "@/content/pricing";
+import { CURRENCY_COOKIE, LIBRARY_ITEM, PRICES, currencyFromAcceptLanguage, isCurrency, kindOf } from "@/content/pricing";
+import { cookies, headers } from "next/headers";
+import { purchaseTxId, recordPurchase } from "@/lib/ga-server";
 import ReaderChrome from "@/components/reader/ReaderChrome";
 import ReaderInteractive from "@/components/reader/ReaderInteractive";
 import { aiConfigured } from "@/lib/reader/ai";
@@ -21,6 +23,8 @@ import { breadcrumb } from "@/lib/schema";
 import { countScenes, illustrations, imageObject, leadIllustration, placeAtScenes, withIllustrations } from "@/lib/illustrations";
 import { interactive, interactiveInserts } from "@/lib/interactive";
 import ChapterWidgets from "@/components/reader/widgets/ChapterWidgets";
+import Subscribe from "@/components/subscribe/Subscribe";
+import ChapterTracker from "@/components/reader/ChapterTracker";
 
 export const dynamic = "force-dynamic";
 
@@ -81,11 +85,12 @@ export default async function ChapterPage({
   searchParams,
 }: {
   params: Params;
-  searchParams: Promise<{ purchased?: string }>;
+  searchParams: Promise<{ purchased?: string; item?: string }>;
 }) {
   const { locale: raw, slug, chapter: id } = await params;
   // Вернулись со страницы оплаты — права перечитываем из биллинга без кэша.
-  const fresh = (await searchParams).purchased === "1";
+  const sp = await searchParams;
+  const fresh = sp.purchased === "1";
   const d = load(raw, slug, id);
   if (!d) notFound();
   const { locale, book, lang, manifest, index, chapter } = d;
@@ -95,6 +100,15 @@ export default async function ChapterPage({
   const session = await getSession();
   const gate = await chapterGate(chapter, slug, session, fresh);
   const locked = await lockedGate(slug, session);
+  // Покупка подтверждена сервером: после оплаты глава открылась → GA4 (Measurement Protocol).
+  const boughtItem = sp.item === LIBRARY_ITEM ? LIBRARY_ITEM : slug;
+  const txId = fresh && session && gate === "open" && !chapter.free ? purchaseTxId(session.sub, boughtItem) : null;
+  if (txId && session) {
+    const jar = await cookies();
+    const picked = jar.get(CURRENCY_COOKIE)?.value;
+    const cur = isCurrency(picked) ? picked : currencyFromAcceptLanguage((await headers()).get("accept-language"));
+    await recordPurchase(session.sub, boughtItem, PRICES[kindOf(boughtItem)][cur], cur, jar.get("_ga")?.value);
+  }
   const source = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
   if (gate === "open" && source === null) notFound();
   // Платная глава: персональный водяной знак и лимит на выкачивание.
@@ -202,6 +216,9 @@ export default async function ChapterPage({
               {figures.some((f) => f.kind === "archive") && <PlateFilter />}
               <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
               {widgets.length > 0 && <ChapterWidgets />}
+              <ChapterTracker book={slug} chapter={chapter.id} />
+              {txId && <span hidden data-nc-tx={txId} />}
+              {chapter.free && !session && <Subscribe locale={locale} book={slug} source="free-chapter" />}
               <ReaderInteractive
                 book={slug}
                 lang={lang}
@@ -247,7 +264,13 @@ export default async function ChapterPage({
                   )}
                 </div>
                 {gate !== "login" && <CurrencyPicker className="mt-4 block label text-[var(--r-soft)]" />}
+                {gate === "purchase" && !session && (
+                  <a href={loginHref} className="mt-4 inline-block label text-[var(--r-soft)] underline decoration-[0.5px] underline-offset-4 hover:text-[var(--r-fg)]">
+                    {L.gateHaveIt}
+                  </a>
+                )}
               </div>
+              <Subscribe locale={locale} book={slug} source="gate" />
             </>
           )}
 

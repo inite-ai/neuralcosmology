@@ -80,9 +80,27 @@ export function resolveBookLang(slug: string, locale: SupportedLocale): Supporte
   return LANG_FALLBACK.find((l) => langs.includes(l)) ?? langs[0] ?? null;
 }
 
+// Главы, которые сайт открывает сверх флага free из экспорта (content/free-chapters.json).
+let extraFree: Record<string, string[]> | null = null;
+function freeOverrides(): Record<string, string[]> {
+  if (extraFree) return extraFree;
+  try {
+    const raw = JSON.parse(readFileSync(join(process.cwd(), "content/free-chapters.json"), "utf8")) as Record<string, unknown>;
+    extraFree = Object.fromEntries(Object.entries(raw).filter(([k, v]) => !k.startsWith("_") && Array.isArray(v))) as Record<string, string[]>;
+  } catch {
+    extraFree = {};
+  }
+  return extraFree;
+}
+
 export function getManifest(slug: string, lang: SupportedLocale): LibraryManifest | null {
   if (!CHAPTER_ID.test(slug)) return null;
-  return readCached(join(libraryDir(), slug, lang, "manifest.json"), JSON.parse);
+  return readCached(join(libraryDir(), slug, lang, "manifest.json"), (raw) => {
+    const m = JSON.parse(raw) as LibraryManifest;
+    const open = freeOverrides()[slug];
+    if (open?.length) m.chapters = m.chapters.map((c) => (open.includes(c.id) ? { ...c, free: true } : c));
+    return m;
+  });
 }
 
 export function getChapterHtml(slug: string, lang: SupportedLocale, id: string): string | null {

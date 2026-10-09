@@ -8,7 +8,7 @@ import type { Lang, WidgetProps } from "./kit";
 // Оживляет рамки опытов, которые сервер поставил в главу (src/lib/interactive.ts):
 // код опыта грузится, только когда рамка подходит к экрану.
 
-const WIDGETS: Record<string, ComponentType<WidgetProps>> = {
+export const WIDGETS: Record<string, ComponentType<WidgetProps>> = {
   physarum: dynamic(() => import("./Physarum"), { ssr: false }),
   "double-slit": dynamic(() => import("./DoubleSlit"), { ssr: false }),
   landauer: dynamic(() => import("./Landauer"), { ssr: false }),

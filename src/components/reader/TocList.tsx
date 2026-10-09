@@ -114,8 +114,17 @@ export default function TocList({
                   st?.tone === "free" || st?.tone === "active" ? c.accent : c.muted,
                 )}
               >
-                {st?.tone === "locked" && <Lock className="mr-1.5 -mt-0.5 inline h-3 w-3" strokeWidth={1.5} aria-hidden />}
-                {st ? st.text : `${it.minutes} ${labels.minutes}`}
+                {/* Закрытые главы — только замок (надпись для экранных чтецов и подсказки): «после покупки» не влезает рядом с длинным названием. */}
+                {st?.tone === "locked" ? (
+                  <span title={st.text}>
+                    <Lock className="-mt-0.5 inline h-3.5 w-3.5" strokeWidth={1.5} aria-hidden />
+                    <span className="sr-only">{st.text}</span>
+                  </span>
+                ) : st ? (
+                  st.text
+                ) : (
+                  `${it.minutes} ${labels.minutes}`
+                )}
               </span>
             </Link>
           </li>

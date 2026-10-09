@@ -69,6 +69,15 @@ CREATE TABLE IF NOT EXISTS ai_cache (
 CREATE TABLE IF NOT EXISTS auth_logouts (
   sub text PRIMARY KEY, at timestamptz NOT NULL DEFAULT now()
 );
+CREATE TABLE IF NOT EXISTS subscribers (
+  email text PRIMARY KEY, lang text NOT NULL, book text, source text,
+  status text NOT NULL DEFAULT 'pending' CHECK (status IN ('pending','confirmed','unsubscribed')),
+  token text NOT NULL, created_at timestamptz NOT NULL DEFAULT now(), confirmed_at timestamptz
+);
+CREATE TABLE IF NOT EXISTS purchases_tracked (
+  user_id text NOT NULL, item text NOT NULL, at timestamptz NOT NULL DEFAULT now(),
+  PRIMARY KEY (user_id, item)
+);
 CREATE TABLE IF NOT EXISTS shares (
   id text PRIMARY KEY, book text NOT NULL, lang text NOT NULL, chapter text NOT NULL,
   anchor text NOT NULL, quote text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()

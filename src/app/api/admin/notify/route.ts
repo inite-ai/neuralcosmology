@@ -56,5 +56,20 @@ export async function POST(req: NextRequest) {
       if (await sendMail(s.email as string, c.subject(title), text)) sent++;
     }
   }
-  return json({ sent, subscribers: subs.length, newChapters: [...fresh.values()].reduce((n, l) => n + l.length, 0), mail: mailConfigured() });
+  // Подписчики без аккаунта (подтверждённые): все книги на их языке, отписка по токену.
+  const list = await sql`SELECT email, lang, token FROM subscribers WHERE status = 'confirmed'`;
+  for (const s of list) {
+    const ui = (s.lang as string) || "en";
+    const c = COPY[ui] ?? COPY.en;
+    for (const b of books) {
+      const lang = resolveBookLang(b.slug, ui as SupportedLocale);
+      const added = lang ? fresh.get(`${b.slug}|${lang}`) : undefined;
+      if (!added) continue;
+      const title = pickLocalized(b.titles, ui as SupportedLocale);
+      const lines = added.map((ch) => `• ${ch.title} — ${site}/${lang}/read/${b.slug}/${ch.id}`).join("\n");
+      const text = `${c.lead}\n\n${lines}\n\n${site}/api/subscribe/unsubscribe?t=${s.token}`;
+      if (await sendMail(s.email as string, c.subject(title), text)) sent++;
+    }
+  }
+  return json({ sent, subscribers: subs.length + list.length, newChapters: [...fresh.values()].reduce((n, l) => n + l.length, 0), mail: mailConfigured() });
 }

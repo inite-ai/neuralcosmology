@@ -1,5 +1,5 @@
 import "server-only";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import type { Lang, SceneInsert } from "@/lib/illustrations";
 
@@ -60,4 +60,27 @@ function frame(it: InteractiveItem, lang: Lang): string {
 
 export function interactiveInserts(items: InteractiveItem[], lang: Lang): SceneInsert[] {
   return items.map((it) => ({ scene: it.scene, at: it.at ?? "end", html: frame(it, lang) }));
+}
+
+/** Все вставки всех книг (для страниц опытов и sitemap). */
+export function allInteractive(): InteractiveItem[] {
+  if (!existsSync(dir)) return [];
+  const out: InteractiveItem[] = [];
+  for (const book of readdirSync(dir).filter((d) => statSync(join(dir, d)).isDirectory()))
+    for (const f of readdirSync(join(dir, book)).filter((f) => f.endsWith(".json")))
+      out.push(...interactive(book, f.slice(0, -5)));
+  return out;
+}
+
+const BOOK_ORDER = ["celestial-code", "conscious-selection", "bugs-academy", "era-of-architects"];
+
+/** Опыты (без видео и записей) в порядке книг и глав. */
+export function experiments(): InteractiveItem[] {
+  return allInteractive()
+    .filter((it) => it.widget !== "youtube")
+    .sort((a, b) => BOOK_ORDER.indexOf(a.book) - BOOK_ORDER.indexOf(b.book));
+}
+
+export function getExperiment(id: string): InteractiveItem | null {
+  return experiments().find((it) => it.id === id) ?? null;
 }

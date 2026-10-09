@@ -97,6 +97,10 @@ jobs:
               - MAILGUN_SMTP_USERNAME=${{ secrets.MAILGUN_SMTP_USERNAME }}
               - MAILGUN_SMTP_PASSWORD=${{ secrets.MAILGUN_SMTP_PASSWORD }}
               - MAILGUN_FROM_EMAIL=${{ vars.MAILGUN_FROM_EMAIL || 'info@neuralcosmology.com' }}
+              - MAILGUN_API_KEY=${{ secrets.MAILGUN_API_KEY }}
+              - MAILGUN_DOMAIN=${{ vars.MAILGUN_DOMAIN }}
+              - MAILGUN_REGION=${{ vars.MAILGUN_REGION }}
+              - GA_API_SECRET=${{ secrets.GA_API_SECRET }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:

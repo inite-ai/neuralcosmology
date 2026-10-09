@@ -50,6 +50,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/content/illustrations ./content/illustrations
 # Опыты в главах (src/lib/interactive.ts) — так же.
 COPY --from=builder /app/content/interactive ./content/interactive
+COPY --from=builder /app/content/free-chapters.json ./content/free-chapters.json
 
 # Set the correct permission for prerender cache
 RUN mkdir .next

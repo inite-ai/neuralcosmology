@@ -86,12 +86,14 @@ export async function chapterGate(
   fresh = false,
 ): Promise<Gate> {
   if (chapter.free) return "open";
-  if (!session) return "login";
+  // С пейволлом анониму честно показываем покупку (вход встроен в оплату);
+  // без пейволла достаточно войти.
+  if (!session) return paywallEnabled() ? "purchase" : "login";
   return (await ownsBook(session, slug, fresh)) ? "open" : "purchase";
 }
 
 /** Какой замок показывать закрытым главам в оглавлении. */
 export async function lockedGate(slug: string, session: Session | null): Promise<Gate> {
-  if (!session) return "login";
+  if (!session) return paywallEnabled() ? "purchase" : "login";
   return (await ownsBook(session, slug)) ? "open" : "purchase";
 }
