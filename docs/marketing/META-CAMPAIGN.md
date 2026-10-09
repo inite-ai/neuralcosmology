@@ -61,3 +61,15 @@ Page ID `1434152923104538` (портфолио `1665261024316659`). Восемь
 Реклама в Instagram уже идёт: в объявлениях выбран профиль @neuralcosmology, площадки Advantage+. Сравнивать Facebook и Instagram — в Ads Manager, «Breakdown» → «By delivery» → «Platform» (и «Placement»): цена клика, CTR, стоимость просмотра посадочной.
 
 Попытка дописать в UTM `utm_term={{site_source_name}}_{{placement}}` (чтобы в GA4 делить `experiment_start` по площадкам) упирается в ошибку #2446880 «WhatsApp number required». Любая правка опубликованного объявления требует номер WhatsApp, потому что в Advantage+ включён WhatsApp Status, а WhatsApp-аккаунта на номере нет. Исключение WhatsApp в группе ошибку не сняло. Черновики сброшены, живая версия не тронута. Вернуться к этому, когда номер будет зарегистрирован в WhatsApp Business, или в новой группе/копии объявлений.
+
+## Аналитика: пиксель, Conversions API, GA4 (9 октября 2026)
+
+**Пиксель.** Events Manager открывается из рекламного аккаунта (`?act=9000158743360364`): пиксель принадлежит личному рекламному аккаунту, а не портфолио, поэтому в настройках портфолио его нет. Пользовательская конверсия «Experiment start» — событие `experiment_start` на neuralcosmology.com. Для `chapter_complete` её можно будет создать, когда событие хоть раз придёт.
+
+Код (`components/analytics/Analytics.tsx`): пиксель ставится из эффекта, у каждого события есть event_id. События, сработавшие до загрузки пикселя (ViewContent при входе в главу), ждут в очереди — раньше они терялись. Стандартные события несут `content_ids`.
+
+**Conversions API** (`lib/meta-capi.ts`). Браузер дублирует события на `/api/e`, сервер пересылает их в Meta с тем же event_id, IP, user agent, `_fbp`/`_fbc` (fbc собирается из fbclid), для вошедших — хеш почты и id. Lead шлёт `/api/subscribe` с хешем почты, Purchase — страница главы после оплаты (event_id = transaction_id). Включается секретом `META_CAPI_TOKEN`: Events Manager → neuralcosmology.com → Settings → Conversions API → Generate access token, затем `gh secret set META_CAPI_TOKEN` и перезапуск деплоя. Проверка: `gh variable set META_TEST_EVENT_CODE --body TEST…` (код со вкладки Test events), после проверки переменную удалить.
+
+Включить руками в Settings пикселя: Automatic advanced matching (почта, внешний id).
+
+**GA4** (property 556044470). Хранение событий — 14 месяцев (было 2). Пользовательские измерения уровня события: item_id, widget, book, chapter, lang, method, source, content_type. Ключевые события: purchase, begin_checkout, generate_lead, sign_up, experiment_start, chapter_complete, login_start (последнее лишнее, снять в Admin → Events). Google Signals выключены сознательно: при малом трафике они включают пороги и прячут строки в отчётах. Measurement Protocol ждёт «Подтверждения сбора пользовательских данных».

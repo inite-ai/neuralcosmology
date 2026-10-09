@@ -64,48 +64,26 @@ function relay(name: string, id: string, custom: Record<string, unknown>) {
 // Lead и Purchase шлёт сервер сам (с почтой и суммой) — сюда их не дублируем.
 const SERVER_SENT = new Set(["generate_lead", "purchase"]);
 
-function loadMetaPixel(id: string) {
-  const w = window as unknown as W & { _fbq?: unknown };
-  if (w.fbq) return;
-  type Q = ((...a: unknown[]) => void) & { callMethod?: (...a: unknown[]) => void; queue: unknown[]; push?: unknown; loaded?: boolean; version?: string };
-  // Как в официальном сниппете: callMethod зовётся с this = fbq, в очередь — arguments.
-  const n = function (this: unknown, ...a: unknown[]) {
-    if (n.callMethod) n.callMethod.apply(n, a);
-    else n.queue.push(arguments);
-  } as Q;
-  n.queue = [];
-  n.push = n;
-  n.loaded = true;
-  n.version = "2.0";
-  w.fbq = n;
-  if (!w._fbq) w._fbq = n;
-  const t = document.createElement("script");
-  t.async = true;
-  t.src = "https://connect.facebook.net/en_US/fbevents.js";
-  document.head.appendChild(t);
-  n("init", id);
-}
-
+// Без fbq (пиксель срезал блокировщик) событие всё равно уходит на сервер.
 function metaPageView() {
   const w = window as unknown as W;
-  if (!w.fbq) return;
   const id = newEventId();
-  w.fbq("track", "PageView", {}, { eventID: id });
+  w.fbq?.("track", "PageView", {}, { eventID: id });
   relay("PageView", id, {});
 }
 
 let pending: (() => void)[] | null = [];
+let adsAllowed = false;
 
 function metaEvent(event: string, params: Record<string, unknown>, money: Record<string, unknown>, eventId?: string) {
   const w = window as unknown as W;
-  if (!w.fbq) return;
   const id = eventId ?? (typeof params.transaction_id === "string" ? params.transaction_id : newEventId());
   const ref = params.item_id ?? params.book;
   const data: Record<string, unknown> = META[event]
     ? { ...money, ...(ref ? { content_ids: [String(ref)], content_type: "product" } : {}) }
     : { item_id: params.item_id, widget: params.widget, book: params.book, chapter: params.chapter, method: params.method };
   const name = META[event] ?? event;
-  w.fbq(META[event] ? "track" : "trackCustom", name, data, { eventID: id });
+  w.fbq?.(META[event] ? "track" : "trackCustom", name, data, { eventID: id });
   if (!SERVER_SENT.has(event)) relay(name, id, data);
 }
 
@@ -119,8 +97,8 @@ export function track(event: string, params: Record<string, unknown> = {}, event
   const money = params.value !== undefined ? { value: params.value, currency: params.currency } : {};
   if (META[event] || CUSTOM.has(event)) {
     // Пиксель ставится после гидрации: ранние события (read_chapter на входе) ждут его в очереди.
-    if (w.fbq) metaEvent(event, params, money, eventId);
-    else pending?.push(() => metaEvent(event, params, money, eventId));
+    if (pending) pending.push(() => metaEvent(event, params, money, eventId));
+    else if (w.fbq || adsAllowed) metaEvent(event, params, money, eventId);
   }
 
   if (w.rdt) {
@@ -204,21 +182,33 @@ export default function Analytics() {
   useEffect(() => {
     const ok = !inEEA() && Boolean(pixels.meta);
     if (!ok) pending = null;
+    adsAllowed = ok;
     setAds(!inEEA());
   }, []);
-  // Пиксель Meta ставим из эффекта, а не через <Script>: первый PageView должен уйти
-  // уже после init и с event_id, общим с серверным дублем.
+  // Пиксель ставит официальный сниппет ниже (без своего PageView). Как только fbq
+  // появился — первый PageView с event_id и события из очереди (read_chapter на входе).
   useEffect(() => {
     if (!ads || !pixels.meta) return;
-    loadMetaPixel(pixels.meta);
-    metaPageView();
-    const q = pending ?? [];
-    pending = null;
-    q.forEach((f) => f());
+    let tries = 0;
+    const t = setInterval(() => {
+      const w = window as unknown as W;
+      if (!w.fbq && ++tries < 100) return;
+      clearInterval(t);
+      metaPageView();
+      const q = pending ?? [];
+      pending = null;
+      q.forEach((f) => f());
+    }, 50);
+    return () => clearInterval(t);
   }, [ads]);
 
   return (
     <>
+      {ads && pixels.meta && (
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${pixels.meta}');`}
+        </Script>
+      )}
       {ads && pixels.vk && (
         <Script id="vk-pixel" strategy="afterInteractive">
           {`var _tmr=window._tmr||(window._tmr=[]);_tmr.push({id:"${pixels.vk}",type:"pageView",start:(new Date()).getTime()});(function(d,w,id){if(d.getElementById(id))return;var ts=d.createElement("script");ts.type="text/javascript";ts.async=true;ts.id=id;ts.src="https://top-fwz1.mail.ru/js/code.js";var f=function(){var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(ts,s);};if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",f,false);}else{f();}})(document,window,"tmr-code");`}
