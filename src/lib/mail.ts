@@ -13,11 +13,14 @@ export function mailConfigured(): boolean {
 }
 
 const FROM = () => `Neural Cosmology <${process.env.MAILGUN_FROM_EMAIL || "info@neuralcosmology.com"}>`;
+// Ответы читателей — на общий ящик (MAILGUN_REPLY_TO), как у остальной почты inite.
+const REPLY_TO = () => process.env.MAILGUN_REPLY_TO || undefined;
 
 async function sendViaApi(to: string, subject: string, text: string, html?: string): Promise<boolean> {
   const host = process.env.MAILGUN_REGION === "eu" ? "api.eu.mailgun.net" : "api.mailgun.net";
   const body = new URLSearchParams({ from: FROM(), to, subject, text });
   if (html) body.set("html", html);
+  if (REPLY_TO()) body.set("h:Reply-To", REPLY_TO()!);
   try {
     const r = await fetch(`https://${host}/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
       method: "POST",
@@ -44,7 +47,7 @@ export async function sendMail(to: string, subject: string, text: string, html?:
     auth: { user: process.env.MAILGUN_SMTP_USERNAME, pass: process.env.MAILGUN_SMTP_PASSWORD },
   });
   try {
-    await transport.sendMail({ from: FROM(), to, subject, text, html });
+    await transport.sendMail({ from: FROM(), to, subject, text, html, replyTo: REPLY_TO() });
     return true;
   } catch (err) {
     console.error("[mail]", err instanceof Error ? err.message : err);

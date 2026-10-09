@@ -99,6 +99,7 @@ jobs:
               - MAILGUN_FROM_EMAIL=${{ vars.MAILGUN_FROM_EMAIL || 'info@neuralcosmology.com' }}
               - MAILGUN_API_KEY=${{ secrets.MAILGUN_API_KEY }}
               - MAILGUN_DOMAIN=${{ vars.MAILGUN_DOMAIN }}
+              - MAILGUN_REPLY_TO=${{ vars.MAILGUN_REPLY_TO }}
               - MAILGUN_REGION=${{ vars.MAILGUN_REGION }}
               - GA_API_SECRET=${{ secrets.GA_API_SECRET }}
             volumes:
