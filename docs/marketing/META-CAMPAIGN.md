@@ -19,7 +19,7 @@
 
 ## Объявления (в каждой группе по четыре)
 
-Креативы: `marketing/ads/{pt|es}-<опыт>-4x5.mp4` (ленты) и `-9x16.mp4` (Reels/Stories, через замену вертикального кропа). Квадрат 1:1 Instagram не берёт (нужно от 4:5 до 9:16), поэтому 4:5 сделан из квадрата полями сверху и снизу: `ffmpeg -i X-1x1.mp4 -vf pad=1080:1350:0:135:color=0x0b0c10 X-4x5.mp4`. Кнопка — «See details» (Meta сама переводит).
+Креативы: `marketing/ads/{pt|es}-<опыт>-4x5.mp4` (ленты) и `-9x16s.mp4` (Reels/Stories, через замену вертикального кропа; заголовок и адрес внутри безопасной зоны 270–1245 px, `scripts/marketing/compose-ads-safe916.py`). Квадрат 1:1 Instagram не берёт (нужно от 4:5 до 9:16), поэтому 4:5 сделан из квадрата полями сверху и снизу: `ffmpeg -i X-1x1.mp4 -vf pad=1080:1350:0:135:color=0x0b0c10 X-4x5.mp4`. Кнопка — «See details» (Meta сама переводит).
 
 UTM задаются в поле «URL parameters» (Tracking), ссылка в объявлении без меток. Отключено: AI-картинки, Video touch-ups, Text improvements, Enhance CTA, Add details to ad layout. Пиксель подключён в Tracking → Website events.
 
