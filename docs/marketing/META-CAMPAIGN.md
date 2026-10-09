@@ -66,7 +66,7 @@ Page ID `1434152923104538` (портфолио `1665261024316659`). Восемь
 
 **Пиксель.** Events Manager открывается из рекламного аккаунта (`?act=9000158743360364`): пиксель принадлежит личному рекламному аккаунту, а не портфолио, поэтому в настройках портфолио его нет. Пользовательская конверсия «Experiment start» — событие `experiment_start` на neuralcosmology.com. Для `chapter_complete` её можно будет создать, когда событие хоть раз придёт.
 
-Код (`components/analytics/Analytics.tsx`): пиксель ставится из эффекта, у каждого события есть event_id. События, сработавшие до загрузки пикселя (ViewContent при входе в главу), ждут в очереди — раньше они терялись. Стандартные события несут `content_ids`.
+Код (`components/analytics/Analytics.tsx`): пиксель ставит официальный сниппет (без своего PageView), у каждого события есть event_id. Самописная загрузка fbevents.js не отправляла события — 9 октября с 21:05 до ~22:20 пиксель молчал, вернули сниппет. События, сработавшие до загрузки пикселя (ViewContent при входе в главу), ждут в очереди — раньше они терялись. Стандартные события несут `content_ids`.
 
 **Conversions API** (`lib/meta-capi.ts`). Браузер дублирует события на `/api/e`, сервер пересылает их в Meta с тем же event_id, IP, user agent, `_fbp`/`_fbc` (fbc собирается из fbclid), для вошедших — хеш почты и id. Lead шлёт `/api/subscribe` с хешем почты, Purchase — страница главы после оплаты (event_id = transaction_id). Включается секретом `META_CAPI_TOKEN`: Events Manager → neuralcosmology.com → Settings → Conversions API → Generate access token, затем `gh secret set META_CAPI_TOKEN` и перезапуск деплоя. Проверка: `gh variable set META_TEST_EVENT_CODE --body TEST…` (код со вкладки Test events), после проверки переменную удалить.
 
