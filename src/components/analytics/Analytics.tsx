@@ -129,7 +129,7 @@ export default function Analytics() {
       const ym = (window as unknown as { ym?: (...a: unknown[]) => void }).ym;
       if (MID && ym) ym(Number(MID), "hit", url.href);
       const w = window as unknown as W;
-      metaPageView();
+      if (adsAllowed) metaPageView();
       w.rdt?.("track", "PageVisit");
       if (pixels.vk) w._tmr?.push({ id: pixels.vk, type: "pageView", url: url.href, start: Date.now() });
     }
