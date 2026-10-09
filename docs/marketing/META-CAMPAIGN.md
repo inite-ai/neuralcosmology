@@ -53,3 +53,11 @@ ES-группа удалена до запуска: испанского пер�
 Page ID `1434152923104538` (портфолио `1665261024316659`). Восемь роликов опытов опубликованы как reels через Business Suite (только Facebook, без Instagram): фуллерены, правило 110, «Жизнь», стая, кубит, планарии, две щели, слизевик. Тексты в два абзаца, PT и EN, ссылка на `/pt/experiments/<id>?utm_source=facebook&utm_medium=social&utm_campaign=page`. Слизевик закреплён. Кнопка «Learn More» ведёт на `https://neuralcosmology.com/?utm_source=facebook&utm_medium=social&utm_campaign=page-button`.
 
 Публиковать надёжнее из композера Business Suite: сначала снять галочку Instagram в «Post to», подождать пару секунд и только потом загружать ролик. Если переключить получателей во время загрузки, обработка зависает. Композер на самой странице Facebook на загрузке зависал.
+
+## Instagram (9 октября 2026)
+
+Восемь тех же опытов опубликованы как reels в @neuralcosmology через instagram.com: Business Suite в режиме «только Instagram» ролик не загружает. Ролики `pt-<опыт>-9x16s.mp4`. У четырёх опытов не из рекламы (стая, правило 110, «Жизнь», фуллерены) исходников записи нет, поэтому их 9:16 собран из квадрата: `ffmpeg -i X-1x1.mp4 -vf "scale=860:860,pad=1080:1920:110:340:color=0x0b0c10" X-9x16s.mp4`, весь текст остаётся внутри безопасной зоны. Подписи PT + EN с «link na bio / link in bio» и пятью хэштегами. Ссылка в шапке профиля: www.neuralcosmology.com.
+
+Реклама в Instagram уже идёт: в объявлениях выбран профиль @neuralcosmology, площадки Advantage+. Сравнивать Facebook и Instagram — в Ads Manager, «Breakdown» → «By delivery» → «Platform» (и «Placement»): цена клика, CTR, стоимость просмотра посадочной.
+
+Попытка дописать в UTM `utm_term={{site_source_name}}_{{placement}}` (чтобы в GA4 делить `experiment_start` по площадкам) упирается в ошибку #2446880 «WhatsApp number required». Любая правка опубликованного объявления требует номер WhatsApp, потому что в Advantage+ включён WhatsApp Status, а WhatsApp-аккаунта на номере нет. Исключение WhatsApp в группе ошибку не сняло. Черновики сброшены, живая версия не тронута. Вернуться к этому, когда номер будет зарегистрирован в WhatsApp Business, или в новой группе/копии объявлений.
