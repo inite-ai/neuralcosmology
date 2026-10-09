@@ -68,9 +68,10 @@ function loadMetaPixel(id: string) {
   const w = window as unknown as W & { _fbq?: unknown };
   if (w.fbq) return;
   type Q = ((...a: unknown[]) => void) & { callMethod?: (...a: unknown[]) => void; queue: unknown[]; push?: unknown; loaded?: boolean; version?: string };
-  const n = function (...a: unknown[]) {
-    if (n.callMethod) n.callMethod(...a);
-    else n.queue.push(a);
+  // Как в официальном сниппете: callMethod зовётся с this = fbq, в очередь — arguments.
+  const n = function (this: unknown, ...a: unknown[]) {
+    if (n.callMethod) n.callMethod.apply(n, a);
+    else n.queue.push(arguments);
   } as Q;
   n.queue = [];
   n.push = n;
