@@ -51,10 +51,10 @@ cérebro», «neurônios e galáxias» — 0–50 в месяц. По темам
   - двойная щель («experimento da dupla fenda», «dupla fenda») → `/pt/experiments/cc-ch03-double-slit`
   - слизевик («bolor limoso», «physarum») → `/pt/experiments/cc-ch02-physarum`
   - клеточные автоматы («jogo da vida conway», «autômato celular») → `/pt/experiments/cc-comp-life`
-  - тёмная материя и космология («matéria escura», «energia escura», «cosmologia»,
-    «origem do universo») → `/pt`
+  - тёмная материя («matéria escura», «matéria escura existe») → `/pt/answers/galaxy-rotation-curves-without-dark-matter`
+  - панпсихизм («panpsiquismo», «consciência cósmica», «universo consciente») → `/pt/answers/panpsychism`
   - книги («livro sobre o universo», «livro física quântica») → страница книги
-- Минус-слова: «pdf», «grátis», «download», «resumo», «trabalho escolar», «wikipedia».
+- Минус-слова: «pdf», «download», «resumo», «trabalho escolar», «wikipedia», «filme».
 - UTM: `utm_source=google&utm_medium=cpc&utm_campaign=nc_br_search&utm_term={keyword}`.
 
 ## Осталось
@@ -65,4 +65,4 @@ cérebro», «neurônios e galáxias» — 0–50 в месяц. По темам
 2. Минус-слова: pdf, download, resumo, trabalho escolar, wikipedia, filme.
 3. Пополнить баланс кабинета (висит «Balance is running low»).
 4. Логотип Cosmologia Neural на уровне кампании.
-4. Через 3–4 дня — YouTube Shorts / Demand Gen с роликами, лучшими в Meta.
+5. Через 3–4 дня — YouTube Shorts / Demand Gen с роликами, лучшими в Meta.
