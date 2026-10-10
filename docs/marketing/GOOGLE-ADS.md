@@ -15,8 +15,11 @@
   цель только Engagements, Maximize clicks с потолком R$1.50, R$25/день, только Google Search,
   Бразилия (presence), португальский, AI Max и text customization / final URL expansion
   выключены, UTM в final URL suffix, 4 sitelinks кампании (эксперименты, книги, ответы, эссе) —
-  перекрывают sitelinks INITE. Группа «Ad group 1» = двойная щель (6 фраз, 10 заголовков,
-  3 описания), на модерации.
+  перекрывают sitelinks INITE. 5 групп (фразовое соответствие, по 10 заголовков):
+  Dupla fenda → cc-ch03-double-slit, Bolor limoso → cc-ch02-physarum,
+  Jogo da vida → cc-comp-life, Matéria escura → answers/galaxy-rotation-curves-without-dark-matter,
+  Panpsiquismo → answers/panpsychism. Минус-слова кампании: pdf, download, baixar, resumo,
+  trabalho escolar, wikipedia, filme.
 - Подвохи интерфейса: пока «Confirm it's you» пропущен (Skip), изменения черновика молча не
   сохраняются (внизу «Changes failed to save»); бюджет требует подтверждения отдельно.
   Новая группа подставляет заголовки/URL предыдущей — поля надо очищать (cmd+A), а не дописывать.
@@ -59,10 +62,9 @@ cérebro», «neurônios e galáxias» — 0–50 в месяц. По темам
 
 ## Осталось
 
-1. Группы: слизевик (`/pt/experiments/cc-ch02-physarum`), игра «Жизнь» (`/pt/experiments/cc-comp-life`),
-   тёмная материя (`/pt/answers/galaxy-rotation-curves-without-dark-matter`),
-   панпсихизм (`/pt/answers/panpsychism`). Переименовать «Ad group 1» → «Dupla fenda».
-2. Минус-слова: pdf, download, resumo, trabalho escolar, wikipedia, filme.
+1. Через 3–4 дня: отчёт по поисковым запросам → новые минус-слова; сравнить стоимость
+   experiment_start с Meta (GA4, utm_source=google vs facebook/instagram).
+2. После 30+ конверсий — перейти на «максимум конверсий».
 3. Пополнить баланс кабинета (висит «Balance is running low»).
 4. Логотип Cosmologia Neural на уровне кампании.
 5. Через 3–4 дня — YouTube Shorts / Demand Gen с роликами, лучшими в Meta.
