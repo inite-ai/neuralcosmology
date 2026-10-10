@@ -177,6 +177,16 @@ export default function Analytics() {
     return () => document.removeEventListener("click", onClick, true);
   }, []);
 
+  // Вошедший читатель → user_id в GA4 (хеш внутреннего id), чтобы склеивать устройства.
+  useEffect(() => {
+    fetch("/api/auth/me", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j: { uid?: string | null } | null) => {
+        if (j?.uid) gtag("set", { user_id: j.uid });
+      })
+      .catch(() => {});
+  }, []);
+
   // Пиксели — только вне ЕЭЗ и только если ID задан.
   const [ads, setAds] = useState(false);
   useEffect(() => {

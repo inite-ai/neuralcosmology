@@ -113,9 +113,10 @@ export async function generateMetadata({
     ...baseMetadata,
     verification: {
       yandex: verification.yandex || undefined,
-      other: verification.bing
-        ? { "msvalidate.01": verification.bing }
-        : undefined,
+      other: {
+        ...(verification.bing ? { "msvalidate.01": verification.bing } : {}),
+        ...(verification.facebook ? { "facebook-domain-verification": verification.facebook } : {}),
+      },
     },
     title: {
       default: seoTitle[locale].home,
