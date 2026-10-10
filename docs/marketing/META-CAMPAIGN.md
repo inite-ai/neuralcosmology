@@ -68,8 +68,20 @@ Page ID `1434152923104538` (портфолио `1665261024316659`). Восемь
 
 Код (`components/analytics/Analytics.tsx`): пиксель ставит официальный сниппет (без своего PageView), у каждого события есть event_id. Самописная загрузка fbevents.js не отправляла события — 9 октября с 21:05 до ~22:20 пиксель молчал, вернули сниппет. События, сработавшие до загрузки пикселя (ViewContent при входе в главу), ждут в очереди — раньше они терялись. Стандартные события несут `content_ids`.
 
-**Conversions API** (`lib/meta-capi.ts`). Браузер дублирует события на `/api/e`, сервер пересылает их в Meta с тем же event_id, IP, user agent, `_fbp`/`_fbc` (fbc собирается из fbclid), для вошедших — хеш почты и id. Lead шлёт `/api/subscribe` с хешем почты, Purchase — страница главы после оплаты (event_id = transaction_id). Включается секретом `META_CAPI_TOKEN`: Events Manager → neuralcosmology.com → Settings → Conversions API → Generate access token, затем `gh secret set META_CAPI_TOKEN` и перезапуск деплоя. Проверка: `gh variable set META_TEST_EVENT_CODE --body TEST…` (код со вкладки Test events), после проверки переменную удалить.
+**Conversions API** (`lib/meta-capi.ts`). Браузер дублирует события на `/api/e`, сервер пересылает их в Meta с тем же event_id, IP, user agent, `_fbp`/`_fbc` (fbc собирается из fbclid), для вошедших — хеш почты и id. Lead шлёт `/api/subscribe` с хешем почты, Purchase — страница главы после оплаты (event_id = transaction_id). Токен — `secrets.META_CAPI_TOKEN` (пиксель 1141000561834089, см. ниже). Проверка: `gh variable set META_TEST_EVENT_CODE --body TEST…` (код со вкладки Test events), после проверки переменную удалить.
 
 Включить руками в Settings пикселя: Automatic advanced matching (почта, внешний id).
 
 **GA4** (property 556044470). Хранение событий — 14 месяцев (было 2). Пользовательские измерения уровня события: item_id, widget, book, chapter, lang, method, source, content_type. Ключевые события: purchase, begin_checkout, generate_lead, sign_up, experiment_start, chapter_complete, login_start (последнее лишнее, снять в Admin → Events). Google Signals выключены сознательно: при малом трафике они включают пороги и прячут строки в отчётах. Measurement Protocol ждёт «Подтверждения сбора пользовательских данных».
+
+## Новый пиксель и группа v2 (10 октября 2026)
+
+Прежний пиксель 1307118051447861 принадлежит личному рекламному аккаунту, а не портфолио, поэтому Meta не даёт на нём включить автоматическое сопоставление и сгенерировать токен Conversions API («You must be an admin for this business portfolio»). Создан пиксель **1141000561834089** в портфолио Neuralcosmology (1665261024316659), подключён к рекламному аккаунту 9000158743360364. На нём включено автоматическое сопоставление (все параметры), сгенерирован токен Conversions API → `secrets.META_CAPI_TOKEN`. Портфельный «Conversions API with Meta» (шлюз Meta) не включали — он дублировал бы наш `/api/e`.
+
+Сайт (`content/pixels.ts`) инициализирует оба пикселя: `meta` — новый, `metaLegacy` — старый, пока на нём старые объявления. Conversions API шлёт только в новый. Когда старая группа остановлена и отработала атрибуция (7 дней), `metaLegacy` убрать.
+
+Группа **PT · Brasil · v2** — копия PT · Brasil: те же 4 ролика, тексты, R$ 50 в день. Отличия: площадки без WhatsApp (Facebook, Instagram, Audience Network, Threads), в объявлениях пиксель 1141000561834089, в UTM добавлено `utm_term={{site_source_name}}_{{placement}}` — в GA4 по `utm_term` видно Facebook/Instagram/Audience Network и плейсмент для каждого `experiment_start`. Старую группу PT · Brasil — на паузу, когда v2 пройдёт проверку.
+
+Пользовательскую конверсию «Experiment start» создать заново на новом пикселе, когда на него придёт первое `experiment_start`.
+
+GA4: «Подтверждение сбора пользовательских данных» принято, секрет Measurement Protocol создан и лежит в `secrets.GA_API_SECRET`; login_start больше не ключевое событие.
