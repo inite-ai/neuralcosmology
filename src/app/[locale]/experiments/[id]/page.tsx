@@ -5,6 +5,7 @@ import { Sheet, Label, Headline, Button, RowLink } from "@/components/system";
 import JsonLd from "@/components/seo/JsonLd";
 import Standalone from "@/components/reader/widgets/Standalone";
 import ChapterTracker from "@/components/reader/ChapterTracker";
+import ExperimentBridge from "@/components/reader/ExperimentBridge";
 import Subscribe from "@/components/subscribe/Subscribe";
 import { experimentsUi } from "@/content/experiments-ui";
 import { experimentView } from "@/lib/experiments";
@@ -90,18 +91,34 @@ export default async function ExperimentPage({ params }: { params: Params }) {
             </div>
           </div>
           <ChapterTracker />
+          {v.chapter && (
+            <ExperimentBridge
+              id={v.id}
+              text={ui.bridge(`${v.chapter.number ? `${v.chapter.number} ` : ""}${locale === "ru" ? `«${v.chapter.title}»` : `“${v.chapter.title}”`}`)}
+              cta={v.chapter.free ? ui.bridgeFree : ui.bridgeRead}
+              href={v.href}
+              close={ui.close}
+            />
+          )}
         </section>
 
         {v.chapter && (
           <section className="rule-t grid gap-6 py-10 md:grid-cols-[12rem_1fr] md:px-10 md:py-14">
-            <Label tone="muted">{ui.fromChapter}</Label>
+            <Label tone="muted">{v.passage.length ? ui.inBook : ui.fromChapter}</Label>
             <div className="max-w-[62ch]">
+              {v.passage.length > 0 && (
+                <blockquote className="mb-8 border-l border-line pl-5 font-display text-lg leading-relaxed md:text-xl">
+                  {v.passage.map((p, i) => (
+                    <p key={i} className={i ? "mt-3" : undefined}>{p}</p>
+                  ))}
+                </blockquote>
+              )}
               <p className="label text-muted">
                 {v.bookTitle}
                 {v.chapter.number ? ` · ${ui.chapter} ${v.chapter.number}` : ""}
               </p>
               <h2 className="mt-2 font-display text-3xl leading-snug">{v.chapter.title}</h2>
-              {v.chapter.excerpt && <p className="mt-4 text-fg-secondary">{v.chapter.excerpt}</p>}
+              {!v.passage.length && v.chapter.excerpt && <p className="mt-4 text-fg-secondary">{v.chapter.excerpt}</p>}
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href={v.href}>{v.chapter.free ? ui.readFree : ui.read} →</Button>
                 <Button href={`/${locale}/books/${v.bookSlug}`} variant="rule">{ui.book}</Button>
