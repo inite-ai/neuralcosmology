@@ -1,6 +1,7 @@
 import "server-only";
 import { randomBytes } from "node:crypto";
 import { db } from "@/lib/db";
+import { emailHtml } from "@/lib/email-layout";
 import { mailConfigured, sendMail } from "@/lib/mail";
 import type { SupportedLocale } from "@/lib/get-locale";
 
@@ -10,22 +11,52 @@ import type { SupportedLocale } from "@/lib/get-locale";
 
 const SITE = "https://neuralcosmology.com";
 
-const COPY: Record<SupportedLocale, { subject: string; body: (confirm: string, unsub: string) => string }> = {
+type Copy = { subject: string; preheader: string; title: string; lead: string; cta: string; notYou: string; footer: string; unsub: string; signature: string };
+
+const COPY: Record<SupportedLocale, Copy> = {
   ru: {
     subject: "Подтвердите подписку на Нейронную космологию",
-    body: (c, u) => `Здравствуйте!\n\nВы оставили этот адрес на neuralcosmology.com. Подтвердите подписку, и я буду писать, когда выходят новые главы и опыты, не чаще раза в неделю:\n\n${c}\n\nЕсли это были не вы, просто не отвечайте. Отписаться можно в любой момент: ${u}\n\nМихаил Савченко`,
+    preheader: "Одно нажатие, и письма о новых главах и опытах будут приходить сюда.",
+    title: "Подтвердите подписку",
+    lead: "Вы оставили этот адрес на neuralcosmology.com. Подтвердите его, и я буду писать, когда выходят новые главы и опыты, не чаще раза в неделю.",
+    cta: "Подтвердить подписку",
+    notYou: "Если это были не вы, просто ничего не делайте: без подтверждения писем не будет.",
+    footer: "Письмо пришло, потому что этот адрес оставили на сайте.",
+    unsub: "Отписаться",
+    signature: "Михаил Савченко",
   },
   en: {
     subject: "Confirm your Neural Cosmology subscription",
-    body: (c, u) => `Hello,\n\nYou left this address on neuralcosmology.com. Confirm the subscription and I will write when new chapters and experiments come out, at most once a week:\n\n${c}\n\nIf this wasn’t you, just ignore this email. Unsubscribe any time: ${u}\n\nMikhail Savchenko`,
+    preheader: "One click, and emails about new chapters and experiments will come here.",
+    title: "Confirm your subscription",
+    lead: "You left this address on neuralcosmology.com. Confirm it and I will write when new chapters and experiments come out, at most once a week.",
+    cta: "Confirm subscription",
+    notYou: "If this wasn’t you, do nothing: without confirmation no emails will follow.",
+    footer: "You’re getting this because the address was entered on the site.",
+    unsub: "Unsubscribe",
+    signature: "Mikhail Savchenko",
   },
   pt: {
     subject: "Confirme a sua inscrição na Cosmologia Neural",
-    body: (c, u) => `Olá!\n\nVocê deixou este endereço em neuralcosmology.com. Confirme a inscrição e eu escreverei quando saírem novos capítulos e experimentos, no máximo uma vez por semana:\n\n${c}\n\nSe não foi você, ignore este e-mail. Cancele quando quiser: ${u}\n\nMikhail Savchenko`,
+    preheader: "Um clique, e os e-mails sobre novos capítulos e experimentos chegarão aqui.",
+    title: "Confirme a sua inscrição",
+    lead: "Você deixou este endereço em neuralcosmology.com. Confirme e eu escreverei quando saírem novos capítulos e experimentos, no máximo uma vez por semana.",
+    cta: "Confirmar inscrição",
+    notYou: "Se não foi você, não faça nada: sem confirmação, nenhum e-mail será enviado.",
+    footer: "Você recebeu este e-mail porque o endereço foi informado no site.",
+    unsub: "Cancelar inscrição",
+    signature: "Mikhail Savchenko",
   },
   es: {
     subject: "Confirme su suscripción a Cosmología Neural",
-    body: (c, u) => `¡Hola!\n\nDejó esta dirección en neuralcosmology.com. Confirme la suscripción y le escribiré cuando salgan capítulos y experimentos nuevos, como mucho una vez por semana:\n\n${c}\n\nSi no fue usted, ignore este correo. Puede darse de baja cuando quiera: ${u}\n\nMikhail Savchenko`,
+    preheader: "Un clic, y los correos sobre capítulos y experimentos nuevos llegarán aquí.",
+    title: "Confirme su suscripción",
+    lead: "Dejó esta dirección en neuralcosmology.com. Confírmela y le escribiré cuando salgan capítulos y experimentos nuevos, como mucho una vez por semana.",
+    cta: "Confirmar suscripción",
+    notYou: "Si no fue usted, no haga nada: sin confirmación no llegará ningún correo.",
+    footer: "Recibe este correo porque la dirección se introdujo en el sitio.",
+    unsub: "Darse de baja",
+    signature: "Mikhail Savchenko",
   },
 };
 
@@ -36,7 +67,20 @@ export async function sendConfirmation(email: string, lang: SupportedLocale, tok
   const c = COPY[lang] ?? COPY.en;
   const confirm = `${SITE}/api/subscribe/confirm?t=${token}`;
   const unsub = `${SITE}/api/subscribe/unsubscribe?t=${token}`;
-  return sendMail(email, c.subject, c.body(confirm, unsub));
+  const text = `${c.title}\n\n${c.lead}\n\n${c.cta}: ${confirm}\n\n${c.notYou}\n\n${c.signature}\n\n${c.footer} ${c.unsub}: ${unsub}`;
+  const html = emailHtml({
+    lang,
+    preheader: c.preheader,
+    title: c.title,
+    blocks: [
+      { kind: "p", text: c.lead },
+      { kind: "button", label: c.cta, href: confirm },
+      { kind: "p", text: c.notYou },
+    ],
+    signature: c.signature,
+    footer: { text: c.footer, link: { label: c.unsub, href: unsub } },
+  });
+  return sendMail(email, c.subject, text, html);
 }
 
 /** Новая или повторная подписка. Возвращает статус, который видит читатель. */
