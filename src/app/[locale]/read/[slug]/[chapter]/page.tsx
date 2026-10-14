@@ -127,6 +127,10 @@ export default async function ChapterPage({
   const sourceScenes = figures.length || widgets.length ? countScenes(lang === "ru" ? source : getChapterHtml(slug, "ru", chapter.id)) : 0;
   const html = marked && placeAtScenes(withIllustrations(marked, figures, lang, sourceScenes), interactiveInserts(widgets, lang), sourceScenes);
 
+  // Бесплатную главу гость дочитывает редко: подписка встаёт и в середине, на разрыв
+  // сцены ближе всего к 45 % текста (без разрывов — на конец абзаца).
+  const midSplit = html && chapter.free && !session ? splitNearMiddle(html) : null;
+
   const bookTitle = pickLocalized(book.titles, lang);
   const hrefBase = `/${locale}/read/${slug}`;
   const here = `${hrefBase}/${chapter.id}`;
@@ -218,7 +222,15 @@ export default async function ChapterPage({
             <>
               <div id="nc-recap-slot" />
               {figures.some((f) => f.kind === "archive") && <PlateFilter />}
-              <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
+              {midSplit ? (
+                <>
+                  <div className="reader-prose" dangerouslySetInnerHTML={{ __html: midSplit[0] }} />
+                  <Subscribe locale={locale} book={slug} source="free-chapter-mid" variant="inline" />
+                  <div className="reader-prose" dangerouslySetInnerHTML={{ __html: midSplit[1] }} />
+                </>
+              ) : (
+                <div className="reader-prose" dangerouslySetInnerHTML={{ __html: html }} />
+              )}
               {widgets.length > 0 && <ChapterWidgets />}
               <ChapterTracker book={slug} chapter={chapter.id} />
               {txId && <span hidden data-nc-tx={txId} />}
@@ -323,4 +335,24 @@ function PlateFilter() {
       </filter>
     </svg>
   );
+}
+
+/** Делит HTML главы около 45 % длины: по разрыву сцены, а если их нет — после абзаца. */
+function splitNearMiddle(html: string): [string, string] | null {
+  if (html.length < 6000) return null;
+  const target = html.length * 0.45;
+  const cuts = [...html.matchAll(/<hr class="scene"\s*\/?>/g)].map((m) => m.index!);
+  // Абзац внутри цитаты, списка или вставки не годится: разрез разорвал бы тег.
+  const topLevel = (i: number) => {
+    const head = html.slice(0, i);
+    return ["blockquote", "ul", "ol", "figure", "aside", "div"].every(
+      (tag) => (head.match(new RegExp(`<${tag}\\b`, "g")) ?? []).length === (head.match(new RegExp(`</${tag}>`, "g")) ?? []).length,
+    );
+  };
+  const fallback = [...html.matchAll(/<\/p>/g)].map((m) => m.index! + 4).filter(topLevel);
+  const pool = cuts.filter((i) => i > html.length * 0.25 && i < html.length * 0.75);
+  const options = pool.length ? pool : fallback.filter((i) => i > html.length * 0.3 && i < html.length * 0.7);
+  if (!options.length) return null;
+  const at = options.reduce((best, i) => (Math.abs(i - target) < Math.abs(best - target) ? i : best));
+  return [html.slice(0, at), html.slice(at)];
 }

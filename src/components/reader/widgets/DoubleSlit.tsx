@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Pause, Play, Reset, useCanvasSize, useLoop, usePalette, useVisible, prefersReducedMotion, type Dict, type WidgetProps } from "./kit";
+import { Pause, Play, Reset, useCanvasSize, useLoop, usePalette, useVisible, prefersReducedMotion, type Dict, type WidgetProps, aha } from "./kit";
 
 // Двухщелевой опыт по одному фотону. Без детектора точка попадания берётся из
 // |ψ₁ + ψ₂|² (полосы), с детектором у щелей — из |ψ₁|² + |ψ₂|² (две размытые
@@ -89,6 +89,15 @@ export default function DoubleSlit({ lang, props }: WidgetProps) {
     setCount(0);
   };
   useEffect(clear, [observed, temp]);
+
+  // The payoff: with the detector on, enough photons have landed to see that the fringes are gone.
+  const ahaSent = useRef(false);
+  useEffect(() => {
+    if (!heat && observed && count >= 150 && !ahaSent.current) {
+      ahaSent.current = true;
+      aha(box.current);
+    }
+  }, [heat, observed, count]);
 
   useLoop((dt) => {
     const s = st.current;

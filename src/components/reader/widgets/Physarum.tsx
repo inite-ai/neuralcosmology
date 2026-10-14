@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Pause, Play, Reset, rgb, useCanvasSize, useLoop, usePalette, useVisible, prefersReducedMotion, type Dict, type WidgetProps } from "./kit";
+import { Pause, Play, Reset, rgb, useCanvasSize, useLoop, usePalette, useVisible, prefersReducedMotion, type Dict, type WidgetProps, aha } from "./kit";
 
 // Модель слизевика Джонса (2010), та же, что легла в основу Monte Carlo Physarum
 // Machine у Бёрчетта и Элека: тысячи частиц нюхают след впереди, поворачивают к
@@ -42,6 +42,8 @@ function scatter(n: number): Food[] {
 export default function Physarum({ lang }: WidgetProps) {
   const t = T[lang];
   const box = useRef<HTMLDivElement>(null);
+  const ahaTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (ahaTimer.current) clearTimeout(ahaTimer.current); }, []);
   const cv = useRef<HTMLCanvasElement>(null);
   const size = useCanvasSize(cv, W / H, 2);
   const pal = usePalette(box);
@@ -204,6 +206,8 @@ export default function Physarum({ lang }: WidgetProps) {
     s.food.push({ x: ((e.clientX - r.left) / r.width) * W, y: ((e.clientY - r.top) / r.height) * H });
     if (s.food.length > 40) s.food.shift();
     setFoodCount(s.food.length);
+    // The payoff: a few seconds after the first food the reader placed, the network has rerouted to it.
+    if (!ahaTimer.current) ahaTimer.current = setTimeout(() => aha(box.current), 6000);
     if (!running) draw();
   };
 

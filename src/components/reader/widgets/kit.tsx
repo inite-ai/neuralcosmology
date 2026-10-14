@@ -85,6 +85,15 @@ export function useLoop(step: (dt: number) => void, running: boolean) {
   }, [running]);
 }
 
+/**
+ * The moment an experiment pays off (the fringes vanish once the detector looks):
+ * a bubbling `nc:aha` from the widget, which the experiment page turns into the
+ * invitation to the chapter. Sent once per mount by the caller.
+ */
+export function aha(el: Element | null) {
+  el?.dispatchEvent(new CustomEvent("nc:aha", { bubbles: true }));
+}
+
 export const prefersReducedMotion = () => typeof window !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /** Канвас под ширину рамки с учётом плотности пикселей; возвращает размер в CSS-пикселях. */

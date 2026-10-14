@@ -37,6 +37,27 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
+// Строчка для плашки: конец цитаты из книги (там обычно вывод) — целые предложения,
+// от 60 до 240 знаков; одно слишком длинное предложение обрезается по слову.
+function bridgeQuote(passage: string[]): string | undefined {
+  const text = passage.join(" ").replace(/\s*…$/, "").trim();
+  if (!text) return undefined;
+  // Конец предложения — знак, пробел и заглавная (или кавычка, тире): «et al., Science» не режется.
+  const sentences = text.split(/(?<=[.!?…]["”»]?)\s+(?=[«“"—A-ZÀ-ÝА-ЯЁ])/u);
+  let out = "";
+  for (let i = sentences.length - 1; i >= 0; i--) {
+    const next = (sentences[i].trim() + " " + out).trim();
+    if (next.length > 240) break;
+    out = next;
+    if (out.length >= 60) break;
+  }
+  if (out) return out;
+  const tail = sentences[sentences.length - 1].trim();
+  return tail.slice(0, tail.lastIndexOf(" ", 200)) + " …";
+}
+
+const quoted = (q: string | undefined, locale: string) => (q ? (locale === "ru" ? `«${q}»` : `“${q}”`) : undefined);
+
 export default async function ExperimentPage({ params }: { params: Params }) {
   const { locale: raw, id } = await params;
   const locale = isSupportedLocale(raw) ? raw : "en";
@@ -94,6 +115,7 @@ export default async function ExperimentPage({ params }: { params: Params }) {
           {v.chapter && (
             <ExperimentBridge
               id={v.id}
+              quote={quoted(bridgeQuote(v.passage), locale)}
               text={ui.bridge(`${v.chapter.number ? `${v.chapter.number} ` : ""}${locale === "ru" ? `«${v.chapter.title}»` : `“${v.chapter.title}”`}`)}
               cta={v.chapter.free ? ui.bridgeFree : ui.bridgeRead}
               href={v.href}

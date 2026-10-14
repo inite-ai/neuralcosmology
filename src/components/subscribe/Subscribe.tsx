@@ -4,8 +4,9 @@ import { useState } from "react";
 import { newEventId, track } from "@/components/analytics/Analytics";
 
 // Подписка на новые главы и опыты без аккаунта (POST /api/subscribe, двойное
-// подтверждение письмом). Ставится под барьером закрытой главы, в конце бесплатных
-// глав и на страницах опытов.
+// подтверждение письмом). Ставится под барьером закрытой главы, в середине и в конце
+// бесплатных глав и на страницах опытов. В середине главы (variant="inline") заголовок
+// обращается к тому, кто уже читает.
 
 type Lang = "ru" | "en" | "pt" | "es";
 type State = "idle" | "busy" | "sent" | "saved" | "already" | "error";
@@ -37,9 +38,16 @@ const T: Record<Lang, { title: string; text: string; placeholder: string; cta: s
   },
 };
 
-export default function Subscribe({ locale, book, source }: { locale: string; book?: string; source: string }) {
+const INLINE: Record<Lang, string> = {
+  ru: "Нравится? Новые главы и опыты — на почту",
+  en: "Enjoying it? New chapters and experiments by email",
+  pt: "Está gostando? Novos capítulos e experimentos no seu e-mail",
+  es: "¿Le gusta? Capítulos y experimentos nuevos en su correo",
+};
+
+export default function Subscribe({ locale, book, source, variant }: { locale: string; book?: string; source: string; variant?: "inline" }) {
   const lang = (["ru", "en", "pt", "es"].includes(locale) ? locale : "en") as Lang;
-  const t = T[lang];
+  const t = variant === "inline" ? { ...T[lang], title: INLINE[lang] } : T[lang];
   const [email, setEmail] = useState("");
   const [state, setState] = useState<State>("idle");
 
