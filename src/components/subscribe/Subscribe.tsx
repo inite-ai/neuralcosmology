@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { newEventId, track } from "@/components/analytics/Analytics";
+import { channels } from "@/content/channels";
 
 // Подписка на новые главы и опыты без аккаунта (POST /api/subscribe, двойное
 // подтверждение письмом). Ставится под барьером закрытой главы, в середине и в конце
@@ -38,6 +39,13 @@ const T: Record<Lang, { title: string; text: string; placeholder: string; cta: s
   },
 };
 
+const WHATSAPP: Record<Lang, string> = {
+  ru: "Или следите в WhatsApp",
+  en: "Or follow on WhatsApp",
+  pt: "Ou siga no WhatsApp",
+  es: "O síganos en WhatsApp",
+};
+
 const INLINE: Record<Lang, string> = {
   ru: "Нравится? Новые главы и опыты — на почту",
   en: "Enjoying it? New chapters and experiments by email",
@@ -45,9 +53,48 @@ const INLINE: Record<Lang, string> = {
   es: "¿Le gusta? Capítulos y experimentos nuevos en su correo",
 };
 
-export default function Subscribe({ locale, book, source, variant }: { locale: string; book?: string; source: string; variant?: "inline" }) {
+// Адрес ради дела: прислать опыт и главу (later) или ссылку, открывающую главу (unlock).
+const ACTION: Record<"later" | "unlock", Record<Lang, { title: (ch?: string) => string; text: string; cta: string; sent: string }>> = {
+  later: {
+    ru: { title: () => "Нет времени сейчас? Пришлём на почту", text: "Опыт и главу, из которой он взят, чтобы открыть спокойно, хоть на компьютере. Без регистрации.", cta: "Прислать", sent: "Готово: письмо уже в почте." },
+    en: { title: () => "No time now? We’ll email it", text: "The experiment and the chapter it comes from, to open later, even on a computer. No account needed.", cta: "Send it", sent: "Done: it’s in your inbox." },
+    pt: { title: () => "Sem tempo agora? Mandamos para o seu e-mail", text: "O experimento e o capítulo de onde ele vem, para abrir com calma, até no computador. Sem cadastro.", cta: "Enviar", sent: "Pronto: já está no seu e-mail." },
+    es: { title: () => "¿Sin tiempo ahora? Se lo enviamos", text: "El experimento y el capítulo de donde viene, para abrirlo con calma, incluso en el ordenador. Sin registro.", cta: "Enviar", sent: "Listo: ya está en su correo." },
+  },
+  unlock: {
+    ru: { title: (c) => (c ? `Глава «${c}» бесплатно — за ваш e-mail` : "Следующая глава бесплатно — за ваш e-mail"), text: "Пришлём ссылку: по ней глава откроется на этом устройстве. Потом — новые главы и опыты, не чаще раза в неделю; отписка в одно нажатие.", cta: "Получить ссылку", sent: "Проверьте почту: ссылка откроет главу." },
+    en: { title: (c) => (c ? `Read “${c}” free with your email` : "The next chapter free with your email"), text: "We’ll send a link that opens the chapter on this device. Then new chapters and experiments, at most once a week; unsubscribe in one click.", cta: "Get the link", sent: "Check your inbox: the link opens the chapter." },
+    pt: { title: (c) => (c ? `Leia “${c}” de graça com o seu e-mail` : "O próximo capítulo de graça com o seu e-mail"), text: "Mandamos um link que abre o capítulo neste aparelho. Depois, novos capítulos e experimentos, no máximo uma vez por semana; cancele com um clique.", cta: "Receber o link", sent: "Veja seu e-mail: o link abre o capítulo." },
+    es: { title: (c) => (c ? `Lea «${c}» gratis con su correo` : "El próximo capítulo gratis con su correo"), text: "Le enviamos un enlace que abre el capítulo en este dispositivo. Después, capítulos y experimentos nuevos, como mucho una vez por semana; baja con un clic.", cta: "Recibir el enlace", sent: "Revise su correo: el enlace abre el capítulo." },
+  },
+};
+
+export default function Subscribe({
+  locale,
+  book,
+  source,
+  variant,
+  kind,
+  item,
+  to,
+  chapterTitle,
+}: {
+  locale: string;
+  book?: string;
+  source: string;
+  variant?: "inline";
+  kind?: "later" | "unlock";
+  item?: string;
+  to?: string;
+  chapterTitle?: string;
+}) {
   const lang = (["ru", "en", "pt", "es"].includes(locale) ? locale : "en") as Lang;
-  const t = variant === "inline" ? { ...T[lang], title: INLINE[lang] } : T[lang];
+  const a = kind ? ACTION[kind][lang] : null;
+  const t = a
+    ? { ...T[lang], title: a.title(chapterTitle), text: a.text, cta: a.cta, done: { ...T[lang].done, sent: a.sent, already: a.sent } }
+    : variant === "inline"
+      ? { ...T[lang], title: INLINE[lang] }
+      : T[lang];
   const [email, setEmail] = useState("");
   const [state, setState] = useState<State>("idle");
 
@@ -61,12 +108,12 @@ export default function Subscribe({ locale, book, source, variant }: { locale: s
       const r = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, lang, book, source, company, event_id: eventId }),
+        body: JSON.stringify({ email, lang, book, source, company, event_id: eventId, kind, item, to }),
       });
       const j = (await r.json().catch(() => ({}))) as { status?: State };
       const s = r.ok && j.status ? j.status : "error";
       setState(s);
-      if (s !== "error") track("generate_lead", { method: "email", source, book }, eventId);
+      if (s !== "error") track("generate_lead", { method: kind ?? "email", source, book }, eventId);
     } catch {
       setState("error");
     }
@@ -87,6 +134,17 @@ export default function Subscribe({ locale, book, source, variant }: { locale: s
         </form>
       )}
       {state === "error" && <p className="nc-sub-err" role="alert">{t.done.error}</p>}
+      {channels.whatsapp && (
+        <a
+          href={channels.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track("join_channel", { method: "whatsapp", source })}
+          className="nc-sub-alt"
+        >
+          {WHATSAPP[lang]} →
+        </a>
+      )}
     </section>
   );
 }

@@ -578,6 +578,8 @@
 .nc-sub-form button { min-height: 2.75rem; padding: 0 1.3rem; border-radius: 2px; background: var(--r-fg, var(--color-fg)); color: var(--r-bg, var(--color-bg)); font-size: 0.85rem; letter-spacing: 0.02em; cursor: pointer; }
 .nc-sub-form button:disabled { opacity: 0.5; }
 .nc-sub-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.nc-sub-alt { display: inline-block; margin-top: 0.9rem; font-size: 0.85rem; color: var(--r-soft, var(--color-fg-secondary)); text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 4px; }
+.nc-sub-alt:hover { color: var(--r-fg, var(--color-fg)); }
 .nc-sub-done { margin-top: 1rem; font-size: 0.95rem; color: var(--r-accent, var(--color-primary)); }
 .nc-sub-err { margin-top: 0.5rem; font-size: 0.8rem; color: #d2663a; }
 .reader-prose em { font-style: italic; }

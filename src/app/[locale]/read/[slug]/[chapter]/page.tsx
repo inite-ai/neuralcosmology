@@ -25,6 +25,7 @@ import { countScenes, illustrations, imageObject, leadIllustration, placeAtScene
 import { interactive, interactiveInserts } from "@/lib/interactive";
 import ChapterWidgets from "@/components/reader/widgets/ChapterWidgets";
 import Subscribe from "@/components/subscribe/Subscribe";
+import { SUB_COOKIE, leadChapterId, subscriberUnlocked } from "@/lib/subscribe";
 import ChapterTracker from "@/components/reader/ChapterTracker";
 
 export const dynamic = "force-dynamic";
@@ -99,7 +100,14 @@ export default async function ChapterPage({
   const L = dict.library;
 
   const session = await getSession();
-  const gate = await chapterGate(chapter, slug, session, fresh);
+  // Первая платная глава открывается гостю, подтвердившему почту (cookie nc-sub из письма).
+  const leadId = leadChapterId(slug, lang);
+  const isLead = !session && chapter.id === leadId;
+  const baseGate = await chapterGate(chapter, slug, session, fresh);
+  const gate =
+    baseGate !== "open" && isLead && (await subscriberUnlocked((await cookies()).get(SUB_COOKIE)?.value).catch(() => false))
+      ? "open"
+      : baseGate;
   const locked = await lockedGate(slug, session);
   // Покупка подтверждена сервером: после оплаты глава открылась → GA4 (Measurement Protocol).
   const boughtItem = sp.item === LIBRARY_ITEM ? LIBRARY_ITEM : slug;
@@ -136,6 +144,7 @@ export default async function ChapterPage({
   const here = `${hrefBase}/${chapter.id}`;
   const prev = manifest.chapters[index - 1];
   const next = manifest.chapters[index + 1];
+  const leadChapter = leadId ? manifest.chapters.find((c) => c.id === leadId) : undefined;
   const loginHref = `/api/auth/login?returnTo=${encodeURIComponent(here)}`;
 
   const toc = manifest.chapters.map((c) => ({
@@ -234,7 +243,11 @@ export default async function ChapterPage({
               {widgets.length > 0 && <ChapterWidgets />}
               <ChapterTracker book={slug} chapter={chapter.id} />
               {txId && <span hidden data-nc-tx={txId} />}
-              {chapter.free && !session && <Subscribe locale={locale} book={slug} source="free-chapter" />}
+              {chapter.free && !session && (leadChapter && manifest.chapters.indexOf(leadChapter) > index ? (
+                <Subscribe locale={locale} book={slug} source="unlock-next" kind="unlock" to={`/${lang}/read/${slug}/${leadChapter.id}`} chapterTitle={leadChapter.title} />
+              ) : (
+                <Subscribe locale={locale} book={slug} source="free-chapter" />
+              ))}
               <ReaderInteractive
                 book={slug}
                 lang={lang}
@@ -255,6 +268,9 @@ export default async function ChapterPage({
           ) : (
             <>
               <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: withIllustrations(chapter.teaser, figures, lang, sourceScenes, true) }} />
+              {isLead && gate !== "open" && (
+                <Subscribe locale={locale} book={slug} source="unlock-gate" kind="unlock" to={`/${lang}/read/${slug}/${chapter.id}`} chapterTitle={chapter.title} />
+              )}
               <div className="reader-locked mt-4 r-hair bg-[var(--r-panel)] p-7 sm:p-10">
                 <p className="label text-[var(--r-accent)]">{gate === "login" ? L.afterSignIn : L.afterPurchase}</p>
                 <h2 className="mt-4 font-display text-[1.875rem] leading-[1.1] sm:text-[2.25rem]">

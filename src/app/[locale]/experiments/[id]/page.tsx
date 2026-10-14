@@ -120,6 +120,7 @@ export default async function ExperimentPage({ params }: { params: Params }) {
               cta={v.chapter.free ? ui.bridgeFree : ui.bridgeRead}
               href={v.href}
               close={ui.close}
+              later={{ label: ui.later, placeholder: ui.laterPlaceholder, send: ui.laterSend, sent: ui.laterSent, error: ui.laterError, lang: locale, book: v.bookSlug }}
             />
           )}
         </section>
@@ -151,7 +152,7 @@ export default async function ExperimentPage({ params }: { params: Params }) {
 
         <section className="rule-t py-4 md:px-10">
           <div className="mx-auto max-w-3xl">
-            <Subscribe locale={locale} book={v.bookSlug} source={`experiment:${id}`} />
+            <Subscribe locale={locale} book={v.bookSlug} source={`experiment:${id}`} kind="later" item={id} />
           </div>
         </section>
 
