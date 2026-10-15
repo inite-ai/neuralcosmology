@@ -666,6 +666,12 @@
   mask-image: linear-gradient(to bottom, #000 35%, transparent);
 }
 
+/* Открытое начало платной главы: текст целиком, гаснут только последние строки */
+.reader-leadin {
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 9em), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 9em), transparent);
+}
+
 /* Интерактив читалки: выделения, закладки, маркеры на полях, фокус */
 .reader {
   --nc-hl-accent: rgb(109 116 240 / 0.3);

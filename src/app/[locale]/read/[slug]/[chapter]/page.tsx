@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { getBookBySlug } from "@/content/books";
 import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
-import { getChapterHtml, getManifest, libraryLangs, resolveBookLang, type LibraryChapter } from "@/lib/library";
+import { chapterIndexable, getChapterHtml, getManifest, leadIn, libraryLangs, resolveBookLang, topLevelAt, type LibraryChapter } from "@/lib/library";
 import { getSession, authConfigured } from "@/lib/auth";
 import { chapterGate, lockedGate, type Gate } from "@/lib/access";
 import { allowPaidView, registerMark, watermark } from "@/lib/protect";
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   // Если книги нет на языке интерфейса, канонической считаем версию на языке текста.
   const canonical = `${BASE}/${d.lang}/read/${slug}/${id}`;
   // Та же глава на других языках текста: id глав одинаковы во всех переводах.
-  const langs = libraryLangs(slug).filter((l) => getManifest(slug, l)?.chapters.some((c) => c.id === id));
+  const langs = libraryLangs(slug).filter((l) => getManifest(slug, l)?.chapters.some((c) => c.id === id && chapterIndexable(slug, l, c)));
   const languages = langs.length > 1
     ? { ...Object.fromEntries(langs.map((l) => [l, `${BASE}/${l}/read/${slug}/${id}`])), "x-default": `${BASE}/${langs.includes("en") ? "en" : langs[0]}/read/${slug}/${id}` }
     : undefined;
@@ -77,7 +77,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title,
     description: d.chapter.excerpt,
     alternates: { canonical, ...(languages ? { languages } : {}) },
-    robots: d.chapter.free ? { index: true, follow: true } : { index: false, follow: true },
+    // Платная глава в индексе с открытым началом; без него (короткие приложения) — нет.
+    robots: chapterIndexable(slug, d.lang, d.chapter) ? { index: true, follow: true } : { index: false, follow: true },
     ...social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image }),
   };
 }
@@ -138,6 +139,8 @@ export default async function ChapterPage({
   // Бесплатную главу гость дочитывает редко: подписка встаёт и в середине, на разрыв
   // сцены ближе всего к 45 % текста (без разрывов — на конец абзаца).
   const midSplit = html && chapter.free && !session ? splitNearMiddle(html) : null;
+  // Закрытая глава: открытое начало (одно на всех, без водяного знака), иначе короткий тизер.
+  const opening = gate !== "open" && !throttled ? leadIn(getChapterHtml(slug, lang, chapter.id)) : null;
 
   const bookTitle = pickLocalized(book.titles, lang);
   const hrefBase = `/${locale}/read/${slug}`;
@@ -267,7 +270,11 @@ export default async function ChapterPage({
             </div>
           ) : (
             <>
-              <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: withIllustrations(chapter.teaser, figures, lang, sourceScenes, true) }} />
+              {opening ? (
+                <div className="reader-prose reader-leadin" dangerouslySetInnerHTML={{ __html: withIllustrations(opening, figures, lang, sourceScenes, true) }} />
+              ) : (
+                <div className="reader-prose reader-teaser" dangerouslySetInnerHTML={{ __html: withIllustrations(chapter.teaser, figures, lang, sourceScenes, true) }} />
+              )}
               {isLead && gate !== "open" && (
                 <Subscribe locale={locale} book={slug} source="unlock-gate" kind="unlock" to={`/${lang}/read/${slug}/${chapter.id}`} chapterTitle={chapter.title} />
               )}
@@ -359,13 +366,7 @@ function splitNearMiddle(html: string): [string, string] | null {
   const target = html.length * 0.45;
   const cuts = [...html.matchAll(/<hr class="scene"\s*\/?>/g)].map((m) => m.index!);
   // Абзац внутри цитаты, списка или вставки не годится: разрез разорвал бы тег.
-  const topLevel = (i: number) => {
-    const head = html.slice(0, i);
-    return ["blockquote", "ul", "ol", "figure", "aside", "div"].every(
-      (tag) => (head.match(new RegExp(`<${tag}\\b`, "g")) ?? []).length === (head.match(new RegExp(`</${tag}>`, "g")) ?? []).length,
-    );
-  };
-  const fallback = [...html.matchAll(/<\/p>/g)].map((m) => m.index! + 4).filter(topLevel);
+  const fallback = [...html.matchAll(/<\/p>/g)].map((m) => m.index! + 4).filter((i) => topLevelAt(html, i));
   const pool = cuts.filter((i) => i > html.length * 0.25 && i < html.length * 0.75);
   const options = pool.length ? pool : fallback.filter((i) => i > html.length * 0.3 && i < html.length * 0.7);
   if (!options.length) return null;

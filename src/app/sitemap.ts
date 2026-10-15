@@ -6,7 +6,7 @@ import { getAllSlugs as lectureSlugs, getLectureBySlug } from "@/lib/lectures";
 import { getAllAnswerSlugs, getAnswer } from "@/lib/answers";
 import { experiments } from "@/lib/interactive";
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from "@/lib/get-locale";
-import { getManifest, libraryLangs } from "@/lib/library";
+import { chapterIndexable, getManifest, libraryLangs } from "@/lib/library";
 import { illustrations } from "@/lib/illustrations";
 
 // Бесплатные главы читалки берутся с тома библиотеки, которого нет при сборке —
@@ -95,17 +95,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: s.priority,
   }));
 
-  // Открытые главы онлайн-читалки: каждая на своём языке текста, с hreflang на ту же
-  // главу в других переводах (id глав совпадают) и с иллюстрациями главы.
+  // Главы онлайн-читалки, открытые поиску (бесплатные и платные с открытым началом):
+  // каждая на своём языке текста, с hreflang на ту же главу в других переводах (id глав
+  // совпадают) и с иллюстрациями, которые на странице видны.
   const chapterEntries: MetadataRoute.Sitemap = books.flatMap((b) => {
     const langs = libraryLangs(b.slug);
-    const has = (lang: (typeof langs)[number], id: string) => getManifest(b.slug, lang)?.chapters.some((c) => c.id === id && c.free);
+    const has = (lang: (typeof langs)[number], id: string) => getManifest(b.slug, lang)?.chapters.some((c) => c.id === id && chapterIndexable(b.slug, lang, c));
     return langs.flatMap((lang) =>
       (getManifest(b.slug, lang)?.chapters ?? [])
-        .filter((c) => c.free)
+        .filter((c) => chapterIndexable(b.slug, lang, c))
         .map((c) => {
           const peers = langs.filter((l) => has(l, c.id));
-          const images = illustrations(b.slug, c.id).map((it) => `${BASE}/book/ill/${it.id}.webp`);
+          // В закрытой главе видна только открывающая иллюстрация.
+          const images = illustrations(b.slug, c.id).filter((it) => c.free || it.scene === 0).map((it) => `${BASE}/book/ill/${it.id}.webp`);
           return {
             url: `${BASE}/${lang}/read/${b.slug}/${c.id}`,
             priority: 0.6,

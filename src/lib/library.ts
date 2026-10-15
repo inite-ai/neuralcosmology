@@ -111,3 +111,33 @@ export function getChapterHtml(slug: string, lang: SupportedLocale, id: string):
 export function libraryGeneratedAt(): string | null {
   return getIndex()?.generatedAt ?? null;
 }
+
+// Открытое начало платной главы — его видят гости и поиск (Google: lead-in при
+// разметке isAccessibleForFree). Режем по разрыву сцены, если первая сцена занимает
+// 15–30 % главы, иначе после абзаца ближе всего к 22 %. Короткие главы не открываем.
+export const LEAD_IN_SHARE = 0.22;
+const LEAD_IN_MIN = 6000;
+
+/** Позиция стоит вне цитаты, списка или вставки — разрез там не рвёт тег. */
+export function topLevelAt(html: string, i: number): boolean {
+  const head = html.slice(0, i);
+  return ["blockquote", "ul", "ol", "figure", "aside", "div", "table"].every(
+    (tag) => (head.match(new RegExp(`<${tag}\\b`, "g")) ?? []).length === (head.match(new RegExp(`</${tag}>`, "g")) ?? []).length,
+  );
+}
+
+export function leadIn(html: string | null): string | null {
+  if (!html || html.length < LEAD_IN_MIN) return null;
+  const n = html.length;
+  const scene = [...html.matchAll(/<hr class="scene"\s*\/?>/g)].map((m) => m.index!).find((i) => i > n * 0.15 && i < n * 0.3);
+  if (scene !== undefined) return html.slice(0, scene);
+  const ends = [...html.matchAll(/<\/p>/g)].map((m) => m.index! + 4).filter((i) => i > n * 0.15 && i < n * 0.3 && topLevelAt(html, i));
+  if (!ends.length) return null;
+  const at = ends.reduce((best, i) => (Math.abs(i - n * LEAD_IN_SHARE) < Math.abs(best - n * LEAD_IN_SHARE) ? i : best));
+  return html.slice(0, at);
+}
+
+/** Глава видна поиску: бесплатная целиком или платная с открытым началом. */
+export function chapterIndexable(slug: string, lang: SupportedLocale, c: LibraryChapter): boolean {
+  return c.free || leadIn(getChapterHtml(slug, lang, c.id)) !== null;
+}
