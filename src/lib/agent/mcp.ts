@@ -158,7 +158,7 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx) {
               ? "Give the reader the checkoutUrl. Once paid, the book opens on the site under their account."
               : "Give the reader the checkoutUrl. After paying they are asked to sign in on the site; signing in with the same email gives them the book.") +
             (res.x402Url
-              ? " If you hold a wallet and the reader agreed to the price, you can pay yourself instead: x402Url speaks x402 (USDC on Base) — GET it for the terms (HTTP 402), then repeat with a signed payment."
+              ? " If you hold a wallet and the reader agreed to the price, you can pay yourself instead: x402Url speaks x402 (USDC on Base) — GET it for the terms (HTTP 402), then repeat with a signed payment. An agent connected to the reader's INITE wallet (https://billing.inite.ai/mcp/wallet) can simply call its `pay` tool with x402Url and the price as maxAmount."
               : ""),
         });
       } catch (err) {

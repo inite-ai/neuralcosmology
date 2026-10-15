@@ -19,6 +19,7 @@ Same-as: https://www.mikefluff.com, https://www.linkedin.com/in/mikefluff/, http
 - MCP server (Streamable HTTP, no sign-in): https://neuralcosmology.com/mcp — tools `search`, `read`, `list_books`, `create_checkout`.
 - MCP as a signed-in reader: https://neuralcosmology.com/mcp/account — OAuth 2.1 through INITE Auth (https://auth-api.inite.ai, dynamic client registration, PKCE); orders go to the reader's account and their books read in full.
 - Buying for a reader: `create_checkout` returns a payment link. Nothing is charged until the reader pays; with an email (no sign-in) the book becomes theirs when they sign in on the site with that email.
+- Paying yourself: when card-free payment is on, `create_checkout` also returns `x402Url` (x402, USDC on Base). An agent connected to the reader's INITE wallet (https://billing.inite.ai/mcp/wallet, scope `wallet:pay`) pays it with its `pay` tool, within the limits the reader approved with their passkey. Guide: https://billing.inite.ai/docs/wallet
 
 ## Author identity
 
