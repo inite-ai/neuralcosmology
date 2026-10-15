@@ -33,9 +33,9 @@
     "server-only": "^0.0.1",
     "tailwind-merge": "^3.2.0",
     "turndown": "^7.2.0",
-    "@inite/billing": "file:vendor/inite-billing-0.0.1-b3678d9.tgz",
-    "@inite/mcp": "file:vendor/inite-mcp-0.0.1-b3678d9.tgz",
-    "@inite/content": "file:vendor/inite-content-0.0.1-b3678d9.tgz"
+    "@inite/billing": "file:vendor/inite-billing-0.0.1-eb66333.tgz",
+    "@inite/mcp": "file:vendor/inite-mcp-0.0.1-eb66333.tgz",
+    "@inite/content": "file:vendor/inite-content-0.0.1-eb66333.tgz"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
