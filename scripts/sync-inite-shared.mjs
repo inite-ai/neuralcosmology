@@ -10,10 +10,13 @@
  * пакетам те же имена и подпути, что в inite-shared: код сайта пишет
  * `@inite/billing/purchases`, как написал бы в workspace.
  *
- * Источник — origin/main, а не рабочая копия: в ней могут быть чужие правки.
+ * Источник — main на GitHub, а не рабочая копия: в ней могут быть чужие
+ * правки. INITE_SHARED_REF собирает другую ветку или PR, чтобы проверить сайт
+ * с изменением до мержа (такие тарболы не коммитим).
  *
  *   node scripts/sync-inite-shared.mjs                    # ~/Documents/inite-shared
  *   node scripts/sync-inite-shared.mjs /path/to/inite-shared
+ *   INITE_SHARED_REF=pull/28/head node scripts/sync-inite-shared.mjs
  */
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
@@ -41,15 +44,16 @@ const run = (cmd, args, cwd) => {
   }
 };
 
-run("git", ["fetch", "-q", "origin", "main"], shared);
-const commit = run("git", ["rev-parse", "--short", "origin/main"], shared);
+const ref = process.env.INITE_SHARED_REF ?? "main";
+run("git", ["fetch", "-q", "origin", ref], shared);
+const commit = run("git", ["rev-parse", "--short", "FETCH_HEAD"], shared);
 // Внутри проекта, но не в node_modules: так tsc находит типы зависимостей
 // сайта и при этом собирает все файлы модуля (из node_modules он их не пишет).
 const work = path.join(root, ".inite-shared-build");
 fs.rmSync(work, { recursive: true, force: true });
 fs.mkdirSync(work, { recursive: true });
 const archive = path.join(work, "src.tar");
-execFileSync("git", ["archive", "-o", archive, "origin/main", ...MODULES.map((m) => `packages/${m.pkg}`)], { cwd: shared });
+execFileSync("git", ["archive", "-o", archive, commit, ...MODULES.map((m) => `packages/${m.pkg}`)], { cwd: shared });
 execFileSync("tar", ["-xf", archive, "-C", work]);
 
 const tsc = path.join(root, "node_modules", ".bin", "tsc");
@@ -121,7 +125,7 @@ for (const m of MODULES) {
   pj.dependencies[m.name] = `file:vendor/${packed}`;
 }
 
-fs.writeFileSync(path.join(vendor, "inite-shared.SOURCE"), `inite-shared ${commit}\n`);
+fs.writeFileSync(path.join(vendor, "inite-shared.SOURCE"), `inite-shared ${commit}${ref === "main" ? "" : ` (${ref})`}\n`);
 fs.writeFileSync(path.join(root, "package.json"), JSON.stringify(pj, null, 2) + "\n");
 fs.rmSync(work, { recursive: true, force: true });
 // npm ставит file:-тарбол по хешу из package-lock: пересобранный под тем же
