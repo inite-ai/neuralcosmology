@@ -7,16 +7,20 @@ import { CheckoutError, createAgentCheckout } from "@/lib/agent/checkout";
 import { ownsBook } from "@/lib/access";
 import { books } from "@/content/books";
 import { siteUrl } from "@/lib/auth";
+import { createSiteMcp, protectedResource, textResult, jsonResult, type SiteTool, type ToolResult } from "@inite/mcp/site";
 
-// MCP-сервер сайта (Streamable HTTP без сессий, ответы JSON). Две точки:
-// /mcp — без входа; /mcp/account — агент вошёл от имени читателя через
-// INITE Auth (OAuth), заказы ложатся на его аккаунт, купленные книги
-// читаются целиком.
+// MCP-сервер сайта на @inite/mcp/site (Streamable HTTP без сессий, ответы
+// JSON). Две точки: /mcp — без входа; /mcp/account — агент вошёл от имени
+// читателя через INITE Auth (OAuth), заказы ложатся на его аккаунт, купленные
+// книги читаются целиком, заказ сразу оплачивается из кошелька INITE, если
+// читатель это разрешил.
 
 export type Reader = { sub: string; email?: string };
-type Ctx = { reader: Reader | null; ip: string };
+export type Ctx = { reader: Reader | null; ip: string };
 
-const PROTOCOL_VERSIONS = ["2025-06-18", "2025-03-26", "2024-11-05"];
+/** /mcp/account: метаданные RFC 9728 и 401, с которого MCP-клиент начинает вход. */
+export const account = () =>
+  protectedResource({ site: siteUrl(), path: "/mcp/account", name: "Neural Cosmology", documentation: `${siteUrl()}/llms.txt` });
 
 const localeSchema = { type: "string", enum: [...SUPPORTED_LOCALES], description: "Language: en, ru, pt or es." };
 
@@ -92,8 +96,8 @@ function tools(ctx: Ctx) {
   return list;
 }
 
-const text = (t: string, isError = false) => ({ content: [{ type: "text", text: t }], ...(isError ? { isError: true } : {}) });
-const json = (v: unknown) => ({ content: [{ type: "text", text: JSON.stringify(v, null, 2) }], structuredContent: v });
+const text = textResult;
+const json = jsonResult;
 
 const str = (v: unknown) => (typeof v === "string" ? v : undefined);
 const loc = (v: unknown): SupportedLocale | undefined => (typeof v === "string" && isSupportedLocale(v) ? v : undefined);
@@ -114,7 +118,7 @@ async function owned(reader: Reader): Promise<Set<string>> {
   return out;
 }
 
-async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx) {
+async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): Promise<ToolResult | null> {
   switch (name) {
     case "search": {
       const query = str(args.query);
@@ -151,6 +155,21 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx) {
           email: ctx.reader ? ctx.reader.email : str(args.email),
           userId: ctx.reader?.sub,
         });
+        if (res.wallet?.status === "paid") {
+          return json({
+            ...res,
+            instructions: res.wallet.confirming
+              ? "Paid from the reader's INITE wallet; the payment is being confirmed on Base and the book opens in a minute or two. Do not send the checkoutUrl."
+              : "Paid from the reader's INITE wallet. The book is open on the site under their account. Do not send the checkoutUrl.",
+          });
+        }
+        if (res.wallet?.status === "needs_approval") {
+          return json({
+            ...res,
+            instructions:
+              "Give the reader the wallet.approveUrl: one page where they allow this site to charge their INITE wallet (with a passkey), top up if needed, and pay this order. Or give them the checkoutUrl to pay by card or PIX.",
+          });
+        }
         return json({
           ...res,
           instructions:
@@ -175,52 +194,22 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx) {
   }
 }
 
-type Rpc = { jsonrpc?: string; id?: string | number | null; method?: string; params?: Record<string, unknown> };
+const INSTRUCTIONS =
+  "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Paid book chapters show an open opening; create_checkout opens a payment link for a reader.";
 
-async function handleOne(msg: Rpc, ctx: Ctx): Promise<object | null> {
-  const id = msg.id ?? null;
-  const ok = (result: unknown) => ({ jsonrpc: "2.0", id, result });
-  const fail = (code: number, message: string) => ({ jsonrpc: "2.0", id, error: { code, message } });
-  if (!msg || msg.jsonrpc !== "2.0" || typeof msg.method !== "string") return fail(-32600, "Invalid request");
-  // Уведомления (без id) ответа не ждут.
-  if (msg.id === undefined) return null;
-  switch (msg.method) {
-    case "initialize": {
-      const asked = str(msg.params?.protocolVersion);
-      return ok({
-        protocolVersion: asked && PROTOCOL_VERSIONS.includes(asked) ? asked : PROTOCOL_VERSIONS[0],
-        capabilities: { tools: { listChanged: false } },
-        serverInfo: { name: "neuralcosmology", title: "Neural Cosmology", version: "1.0.0" },
-        instructions:
-          "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Paid book chapters show an open opening; create_checkout opens a payment link for a reader." +
-          (ctx.reader ? " You are signed in as the reader: their books read in full." : " To act as a signed-in reader, connect to /mcp/account instead."),
-      });
-    }
-    case "ping":
-      return ok({});
-    case "tools/list":
-      return ok({ tools: tools(ctx) });
-    case "tools/call": {
-      const name = str(msg.params?.name) ?? "";
-      const args = (msg.params?.arguments as Record<string, unknown>) ?? {};
-      const result = await callTool(name, args, ctx);
-      return result ? ok(result) : fail(-32602, `Unknown tool: ${name}`);
-    }
-    case "resources/list":
-      return ok({ resources: [] });
-    case "prompts/list":
-      return ok({ prompts: [] });
-    default:
-      return fail(-32601, `Method not found: ${msg.method}`);
-  }
-}
-
-export async function handleMcp(body: unknown, ctx: Ctx): Promise<Response> {
-  const headers = { "Content-Type": "application/json" };
-  if (Array.isArray(body)) {
-    const out = (await Promise.all(body.map((m) => handleOne(m as Rpc, ctx)))).filter(Boolean);
-    return out.length ? new Response(JSON.stringify(out), { headers }) : new Response(null, { status: 202 });
-  }
-  const out = await handleOne(body as Rpc, ctx);
-  return out ? new Response(JSON.stringify(out), { headers }) : new Response(null, { status: 202 });
-}
+export const mcp = createSiteMcp<Ctx>({
+  name: "neuralcosmology",
+  title: "Neural Cosmology",
+  version: "1.1.0",
+  instructions: (ctx) =>
+    INSTRUCTIONS +
+    (ctx.reader
+      ? " You are signed in as the reader: their books read in full, and orders are paid from their INITE wallet when they allowed this site."
+      : " To act as a signed-in reader, connect to /mcp/account instead."),
+  tools: (ctx): SiteTool<Ctx>[] =>
+    tools(ctx).map((tool) => ({
+      ...tool,
+      call: async (args: Record<string, unknown>) =>
+        (await callTool(tool.name, args, ctx)) ?? text(`Unknown tool: ${tool.name}`, true),
+    })),
+});

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { markdownAlternate, markdownRewrite } from "@inite/content/ai";
 import type { NextRequest } from "next/server";
 
 const supportedLocales = ["en", "ru", "pt", "es"] as const;
@@ -32,15 +33,6 @@ function detectLocale(request: NextRequest): Locale {
     }
   }
   return defaultLocale;
-}
-
-/** Accept, в котором markdown назван раньше HTML (или HTML нет вовсе). */
-function prefersMarkdown(accept: string | null): boolean {
-  if (!accept) return false;
-  const md = accept.indexOf("text/markdown");
-  if (md < 0) return false;
-  const html = accept.indexOf("text/html");
-  return html < 0 || md < html;
 }
 
 function pathnameHasLocale(pathname: string): boolean {
@@ -80,7 +72,7 @@ function withSeoHeaders(
   response.headers.set("Vary", "Accept, Accept-Language, Accept-Encoding");
   // Агентам: та же страница в markdown.
   if (pathnameHasLocale(pathname)) {
-    response.headers.set("Link", `<${pathname.replace(/\/$/, "")}.md>; rel="alternate"; type="text/markdown"`);
+    response.headers.set("Link", markdownAlternate(pathname));
   }
 
 
@@ -105,12 +97,10 @@ export function middleware(request: NextRequest) {
 
   // Агентам — markdown той же страницы: /<путь>.md или Accept: text/markdown.
   // Готовые .md-маршруты (транскрипты лекций, препринт) отвечают сами.
-  const wantsMarkdown =
-    (pathname.endsWith(".md") && !/\/(transcript|raw)\.md$/.test(pathname)) ||
-    prefersMarkdown(request.headers.get("accept"));
-  if (wantsMarkdown && !pathname.startsWith("/md/")) {
+  const markdown = markdownRewrite(pathname, request.headers.get("accept"), { skip: /\/(transcript|raw)\.md$/ });
+  if (markdown) {
     const url = request.nextUrl.clone();
-    url.pathname = `/md${pathname.replace(/\.md$/, "") || "/"}`;
+    url.pathname = markdown;
     return NextResponse.rewrite(url);
   }
 

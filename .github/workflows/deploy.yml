@@ -87,6 +87,8 @@ jobs:
               - PAYWALL_ENABLED=${{ vars.PAYWALL_ENABLED || 'false' }}
               - BILLING_API_URL=${{ vars.BILLING_API_URL }}
               - BILLING_API_KEY=${{ secrets.BILLING_API_KEY }}
+              # Оплата из кошелька INITE для вошедшего читателя: включить после живого платежа в проде
+              - WALLET_PAY_ENABLED=${{ vars.WALLET_PAY_ENABLED }}
               # Интерактив читалки: пометки, обсуждения, ИИ
               - DATABASE_URL=${{ secrets.DATABASE_URL }}
               - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}

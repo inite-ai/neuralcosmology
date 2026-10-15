@@ -1,8 +1,7 @@
-import { serveMcp, noStream, preflight } from "@/lib/agent/http";
+import { clientIp } from "@inite/mcp/site";
+import { mcp } from "@/lib/agent/mcp";
 
 export const dynamic = "force-dynamic";
 
 // MCP без входа: поиск, чтение, каталог, заказ на почту читателя.
-export const POST = (req: Request) => serveMcp(req, null);
-export const GET = noStream;
-export const OPTIONS = preflight;
+export const { POST, GET, OPTIONS } = mcp.route({ context: (req) => ({ reader: null, ip: clientIp(req) }) });

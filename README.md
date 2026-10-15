@@ -97,6 +97,20 @@ When sharing links to neuralcosmology.com on social media, they will display ric
 - Description: "You're not in the world. You are the structure. A system of reality navigation through states, memory, and attention."
 - Visual: Custom OG image displaying cosmic theme
 
+## For AI agents
+
+AI agents can read the site and buy books for a reader:
+
+- Every page is also markdown: add `.md` to the URL, or send `Accept: text/markdown`.
+- `/llms.txt`, `/llms-full.txt`, `/catalog.json`, `/.well-known/mcp.json`.
+- MCP server: `/mcp` is open to any agent (search, read, list books, open a checkout tied to the reader's email). `/mcp/account` acts for a reader who signed in with INITE: the agent's MCP client signs them in by itself, their books read in full, and an order is paid straight from their INITE wallet if they allowed this site (switched on by `WALLET_PAY_ENABLED=1`).
+
+The plumbing comes from the shared INITE packages (inite-shared): `@inite/mcp/site`, `@inite/billing/purchases` and `@inite/content/ai`. This site builds with npm, so they live as tarballs in `vendor/`. To update them from inite-shared `main`:
+
+```bash
+node scripts/sync-inite-shared.mjs   # then commit vendor/, package.json, package-lock.json
+```
+
 ## Project Structure
 
 ```
