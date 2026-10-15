@@ -51,3 +51,9 @@ export function social(
     },
   };
 }
+
+/** Сниппет Google обрезает описание около 160 знаков — режем сами, по слову. */
+export function clipDescription(s: string, max = 160): string {
+  if (s.length <= max) return s;
+  return s.slice(0, s.lastIndexOf(" ", max - 2)).replace(/[\s,;:—–-]+$/, "") + " …";
+}

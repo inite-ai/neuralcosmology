@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Price, CurrencyPicker } from "@/components/pricing/Price";
-import { social } from "@/lib/og";
+import { clipDescription, social } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBookBySlug } from "@/content/books";
@@ -75,11 +75,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const image = lead ? `/book/ill/${lead.id}.og.jpg` : `/og/covers/${slug}.png`;
   return {
     title,
-    description: d.chapter.excerpt,
+    description: clipDescription(d.chapter.excerpt),
     alternates: { canonical, ...(languages ? { languages } : {}) },
     // Платная глава в индексе с открытым началом; без него (короткие приложения) — нет.
     robots: chapterIndexable(slug, d.lang, d.chapter) ? { index: true, follow: true } : { index: false, follow: true },
-    ...social({ title: d.chapter.title, subtitle: bookTitle, description: d.chapter.excerpt, url: canonical, kind: "chapter", locale: d.lang, type: "article", image }),
+    ...social({ title: d.chapter.title, subtitle: bookTitle, description: clipDescription(d.chapter.excerpt), url: canonical, kind: "chapter", locale: d.lang, type: "article", image }),
   };
 }
 

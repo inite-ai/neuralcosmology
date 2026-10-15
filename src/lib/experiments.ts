@@ -5,6 +5,8 @@ import { getChapterHtml, getManifest, resolveBookLang } from "@/lib/library";
 import { pickLocalized } from "@/lib/i18n";
 import type { SupportedLocale } from "@/lib/get-locale";
 import type { InteractiveItem } from "@/lib/interactive";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
 // Опыт как самостоятельная страница: книга, глава, ссылка прямо на место в тексте
 // и картинка — иллюстрация той же главы, ближайшая к сцене опыта.
@@ -15,6 +17,8 @@ export type ExperimentView = {
   props?: Record<string, unknown>;
   title: string;
   caption: string;
+  /** Как явление ищут (content/interactive-seo.json): для <title>, description и подзаголовка. */
+  seo: { title: string; description: string } | null;
   bookSlug: string;
   bookTitle: string;
   lang: SupportedLocale;
@@ -39,6 +43,7 @@ export function experimentView(it: InteractiveItem, locale: SupportedLocale): Ex
     props: it.props,
     title: it.title[locale] ?? it.title.en,
     caption: it.caption[locale] ?? it.caption.en,
+    seo: seoFor(it.id, locale),
     bookSlug: it.book,
     bookTitle: pickLocalized(book.titles, locale),
     lang,
@@ -48,6 +53,22 @@ export function experimentView(it: InteractiveItem, locale: SupportedLocale): Ex
     image: ill ? `/book/ill/${ill.id}.webp` : null,
     ogImage: ill ? `/book/ill/${ill.id}.og.jpg` : null,
   };
+}
+
+type SeoEntry = { title: Record<string, string>; description: Record<string, string> };
+let seoCache: Record<string, SeoEntry> | null = null;
+function seoFor(id: string, locale: SupportedLocale): ExperimentView["seo"] {
+  if (!seoCache || process.env.NODE_ENV !== "production") {
+    try {
+      seoCache = JSON.parse(readFileSync(join(process.cwd(), "content/interactive-seo.json"), "utf8")) as Record<string, SeoEntry>;
+    } catch {
+      seoCache = {};
+    }
+  }
+  const e = seoCache[id];
+  const title = e?.title?.[locale];
+  const description = e?.description?.[locale];
+  return title && description ? { title, description } : null;
 }
 
 const MARK = "<!--nc-x-here-->";

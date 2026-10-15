@@ -1,0 +1,171 @@
+{
+  "_comment": "Поисковые <title> и description страниц опытов (/experiments/<id>): названия в книге литературные, а ищут явление по имени. Заголовок до ~50 знаков (суффикс бренда добавит layout), описание до ~155. Объёмы — DataForSEO, 2026-10-15.",
+  "cc-ch03-double-slit": {
+    "title": {
+      "ru": "Опыт с двумя щелями: интерактивная симуляция",
+      "en": "Double-slit experiment: interactive simulation",
+      "pt": "Experimento da dupla fenda: simulação interativa",
+      "es": "Experimento de la doble rendija: simulación"
+    },
+    "description": {
+      "ru": "Пускайте фотоны через две щели по одному и смотрите, как на экране складываются полосы. Поставьте детектор у щелей, и полосы пропадут.",
+      "en": "Send photons through two slits one at a time and watch interference fringes build up on the screen. Put a detector at the slits and the fringes vanish.",
+      "pt": "Mande fótons pela dupla fenda um por vez e veja as franjas de interferência se formarem na tela. Ponha um detector nas fendas e as franjas somem.",
+      "es": "Envíe fotones por la doble rendija uno a uno y vea formarse las franjas de interferencia. Ponga un detector en las rendijas y las franjas desaparecen."
+    }
+  },
+  "cc-comp-life": {
+    "title": {
+      "ru": "Игра «Жизнь» Конвея онлайн",
+      "en": "Conway's Game of Life online",
+      "pt": "Jogo da Vida de Conway online",
+      "es": "Juego de la Vida de Conway en línea"
+    },
+    "description": {
+      "ru": "Игра «Жизнь» Конвея в браузере: четыре правила, планеры и ружьё Госпера, первая фигура, которая растёт бесконечно.",
+      "en": "Conway's Game of Life in your browser: four rules, gliders and Gosper's glider gun, the first pattern found to grow forever.",
+      "pt": "O Jogo da Vida de Conway no navegador: quatro regras, planadores e o canhão de Gosper, o primeiro padrão encontrado que cresce para sempre.",
+      "es": "El Juego de la Vida de Conway en el navegador: cuatro reglas, planeadores y el cañón de Gosper, el primer patrón hallado que crece para siempre."
+    }
+  },
+  "cc-ch02-physarum": {
+    "title": {
+      "ru": "Слизевик Physarum строит сеть: симуляция",
+      "en": "Slime mold Physarum builds a network: simulation",
+      "pt": "Bolor limoso Physarum constrói uma rede: simulação",
+      "es": "Moho mucilaginoso Physarum: simulación de su red"
+    },
+    "description": {
+      "ru": "Модель Джеффа Джонса: девять тысяч частиц идут по следу и сами прокладывают сеть. Тем же алгоритмом восстанавливали нити космической паутины.",
+      "en": "Jeff Jones's slime mold model: nine thousand particles follow the trail and lay out a network. The same algorithm recovered filaments of the cosmic web.",
+      "pt": "O modelo de bolor limoso de Jeff Jones: nove mil partículas seguem o rastro e traçam uma rede. O mesmo algoritmo reconstituiu filamentos da teia cósmica.",
+      "es": "El modelo de moho mucilaginoso de Jeff Jones: nueve mil partículas siguen el rastro y trazan una red. El mismo algoritmo reconstruyó la red cósmica."
+    }
+  },
+  "cc-ch05-planaria": {
+    "title": {
+      "ru": "Планария с двумя головами: опыт Левина",
+      "en": "Two-headed planaria: Michael Levin's experiment",
+      "pt": "Planária de duas cabeças: o experimento de Levin",
+      "es": "Planaria de dos cabezas: el experimento de Levin"
+    },
+    "description": {
+      "ru": "Разрежьте планарию и посмотрите, где вырастет голова. Решают не гены, а биоэлектрический узор: так Майкл Левин получил двухголовых червей.",
+      "en": "Cut a planarian and see where the head regrows. The bioelectric pattern decides, not the genes: that is how Michael Levin made two-headed worms.",
+      "pt": "Corte uma planária e veja onde a cabeça volta a crescer. Quem decide é o padrão bioelétrico, não os genes: assim Michael Levin criou vermes de duas cabeças.",
+      "es": "Corte una planaria y vea dónde vuelve a crecer la cabeza. Decide el patrón bioeléctrico, no los genes: así Michael Levin creó gusanos de dos cabezas."
+    }
+  },
+  "ea-ch08-wow": {
+    "title": {
+      "ru": "Сигнал «Wow!»: расшифруйте 6EQUJ5",
+      "en": "The Wow! signal: decode 6EQUJ5 yourself",
+      "pt": "Sinal Wow!: decifre o 6EQUJ5",
+      "es": "La señal Wow!: descifre el 6EQUJ5"
+    },
+    "description": {
+      "ru": "Распечатка радиотелескопа Big Ear от 15 августа 1977 года. Прочитайте столбец 6EQUJ5 так, как его прочитал Джерри Эйман.",
+      "en": "The Big Ear radio telescope printout of 15 August 1977. Read the 6EQUJ5 column the way Jerry Ehman did and see how strong the signal was.",
+      "pt": "A impressão do radiotelescópio Big Ear de 15 de agosto de 1977. Leia a coluna 6EQUJ5 como Jerry Ehman leu e veja quão forte era o sinal.",
+      "es": "La impresión del radiotelescopio Big Ear del 15 de agosto de 1977. Lea la columna 6EQUJ5 como la leyó Jerry Ehman y vea qué tan fuerte era la señal."
+    }
+  },
+  "cs-ch02-blind-spot": {
+    "title": {
+      "ru": "Тест на слепое пятно: найдите своё",
+      "en": "Blind spot test: find your own",
+      "pt": "Teste do ponto cego: encontre o seu",
+      "es": "Test del punto ciego: encuentre el suyo"
+    },
+    "description": {
+      "ru": "Закройте один глаз и найдите слепое пятно: место на сетчатке, где выходит зрительный нерв. Мозг закрашивает дыру, и вы её не замечаете.",
+      "en": "Close one eye and find your blind spot, where the optic nerve leaves the retina. Your brain fills the hole in, so you never notice it.",
+      "pt": "Feche um olho e encontre o seu ponto cego, onde o nervo óptico sai da retina. O cérebro preenche o buraco, e você nunca o percebe.",
+      "es": "Cierre un ojo y encuentre su punto ciego, donde el nervio óptico sale de la retina. El cerebro rellena el hueco y usted nunca lo nota."
+    }
+  },
+  "cc-ch04-murmuration": {
+    "title": {
+      "ru": "Стая скворцов из трёх правил: симуляция",
+      "en": "Starling murmuration from three rules: simulation",
+      "pt": "Revoada de estorninhos com três regras: simulação",
+      "es": "Bandada de estorninos con tres reglas: simulación"
+    },
+    "description": {
+      "ru": "Модель «бойдов» Крейга Рейнольдса: три правила и никакого вожака. Настоящие скворцы следят за шестью-семью ближайшими соседями.",
+      "en": "Craig Reynolds's boids: three rules and no leader make a murmuration. Real starlings track their six or seven nearest neighbours.",
+      "pt": "Os boids de Craig Reynolds: três regras e nenhum líder formam uma revoada. Estorninhos reais acompanham seis ou sete vizinhos mais próximos.",
+      "es": "Los boids de Craig Reynolds: tres reglas y ningún líder forman una bandada. Los estorninos reales siguen a seis o siete vecinos más cercanos."
+    }
+  },
+  "cc-ch03-landauer": {
+    "title": {
+      "ru": "Принцип Ландауэра: сколько стоит стереть бит",
+      "en": "Landauer's principle: the cost of erasing a bit",
+      "pt": "Princípio de Landauer: quanto custa apagar um bit",
+      "es": "Principio de Landauer: cuánto cuesta borrar un bit"
+    },
+    "description": {
+      "ru": "Предел Ландауэра kT ln 2 на каждый стёртый бит. В 2012 году его измерили на одной стеклянной бусине в двойной лазерной ловушке.",
+      "en": "Landauer's limit, kT ln 2 for every erased bit, measured in 2012 with a single glass bead in a double laser trap. Try the erasure yourself.",
+      "pt": "O limite de Landauer, kT ln 2 por bit apagado, medido em 2012 com uma única conta de vidro numa armadilha laser dupla. Apague um bit você mesmo.",
+      "es": "El límite de Landauer, kT ln 2 por bit borrado, medido en 2012 con una sola cuenta de vidrio en una trampa láser doble. Borre un bit usted mismo."
+    }
+  },
+  "cc-comp-rule110": {
+    "title": {
+      "ru": "Все 256 элементарных автоматов Вольфрама",
+      "en": "Elementary cellular automata: all 256 rules",
+      "pt": "Autômatos celulares: as 256 regras de Wolfram",
+      "es": "Autómatas celulares: las 256 reglas de Wolfram"
+    },
+    "description": {
+      "ru": "Переберите все 256 элементарных клеточных автоматов Вольфрама, включая правило 110, универсальность которого доказал Мэтью Кук.",
+      "en": "Run all 256 of Wolfram's elementary cellular automata, including Rule 110, which Matthew Cook proved Turing-complete in 2004.",
+      "pt": "Rode os 256 autômatos celulares elementares de Wolfram, inclusive a Regra 110, cuja universalidade Matthew Cook provou em 2004.",
+      "es": "Ejecute los 256 autómatas celulares elementales de Wolfram, incluida la Regla 110, cuya universalidad demostró Matthew Cook en 2004."
+    }
+  },
+  "cs-ch04-loftus": {
+    "title": {
+      "ru": "Ложные воспоминания: опыт Лофтус и Палмера",
+      "en": "False memory: the Loftus and Palmer experiment",
+      "pt": "Falsas memórias: o experimento de Loftus e Palmer",
+      "es": "Falsos recuerdos: el experimento de Loftus y Palmer"
+    },
+    "description": {
+      "ru": "Одно слово в вопросе меняет память об аварии. Опыт Элизабет Лофтус и Джона Палмера 1974 года с их настоящими оценками скорости.",
+      "en": "One word in the question changes the memory of a crash. Elizabeth Loftus and John Palmer's 1974 experiment, with the paper's real speed estimates.",
+      "pt": "Uma palavra na pergunta muda a lembrança de um acidente. O experimento de Elizabeth Loftus e John Palmer, de 1974, com as estimativas reais do artigo.",
+      "es": "Una palabra en la pregunta cambia el recuerdo de un choque. El experimento de Elizabeth Loftus y John Palmer de 1974, con las estimaciones reales."
+    }
+  },
+  "cs-ch07-assembly": {
+    "title": {
+      "ru": "Теория сборки: посчитайте индекс сборки",
+      "en": "Assembly theory: calculate an assembly index",
+      "pt": "Teoria da montagem: calcule o índice de montagem",
+      "es": "Teoría del ensamblaje: calcule el índice"
+    },
+    "description": {
+      "ru": "Индекс сборки Ли Кронина и Сары Уокер на словах: сколько шагов нужно, чтобы собрать слово из уже собранных кусков.",
+      "en": "Lee Cronin and Sara Walker's assembly index, worked on words: the fewest joining steps to build a word from pieces already built.",
+      "pt": "O índice de montagem de Lee Cronin e Sara Walker aplicado a palavras: o menor número de passos para montar uma palavra com pedaços já montados.",
+      "es": "El índice de ensamblaje de Lee Cronin y Sara Walker aplicado a palabras: el mínimo de pasos para armar una palabra con piezas ya armadas."
+    }
+  },
+  "cs-ch01-yarbus": {
+    "title": {
+      "ru": "Опыт Ярбуса: движения глаз и картина Репина",
+      "en": "Yarbus eye-tracking experiment: try it",
+      "pt": "Experimento de Yarbus: movimento dos olhos",
+      "es": "Experimento de Yarbus: movimiento ocular"
+    },
+    "description": {
+      "ru": "Опыт Альфреда Ярбуса на картине «Не ждали»: задайте себе вопрос, смотрите двадцать секунд и сравните, куда ходил взгляд.",
+      "en": "Alfred Yarbus's eye-movement experiment on Repin's painting: ask yourself a question, look for twenty seconds and compare where your gaze went.",
+      "pt": "O experimento de Alfred Yarbus com o quadro de Repin: faça-se uma pergunta, olhe por vinte segundos e compare por onde o olhar passou.",
+      "es": "El experimento de Alfred Yarbus con el cuadro de Repin: hágase una pregunta, mire veinte segundos y compare por dónde pasó la mirada."
+    }
+  }
+}

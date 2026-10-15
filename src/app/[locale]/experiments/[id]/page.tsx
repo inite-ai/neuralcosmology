@@ -12,7 +12,7 @@ import { experimentView } from "@/lib/experiments";
 import { experiments, getExperiment } from "@/lib/interactive";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
-import { ogImageUrl, social } from "@/lib/og";
+import { clipDescription, ogImageUrl, social } from "@/lib/og";
 import { breadcrumb } from "@/lib/schema";
 
 // Опыт на своей странице: сам опыт, откуда он (глава и книга), вход в текст,
@@ -29,11 +29,12 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const v = it && experimentView(it, locale);
   if (!v) return {};
   const url = `${BASE}/${locale}/experiments/${id}`;
+  const description = v.seo?.description ?? clipDescription(v.caption);
   return {
-    title: `${v.title} — ${experimentsUi[locale].nav}`,
-    description: v.caption,
+    title: v.seo?.title ?? `${v.title} — ${experimentsUi[locale].nav}`,
+    description,
     alternates: { canonical: url, languages: { ...Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `${BASE}/${l}/experiments/${id}`])), "x-default": `${BASE}/en/experiments/${id}` } },
-    ...social({ title: v.title, subtitle: v.bookTitle, description: v.caption, url, kind: "experiment", locale, image: v.ogImage }),
+    ...social({ title: v.title, subtitle: v.bookTitle, description, url, kind: "experiment", locale, image: v.ogImage }),
   };
 }
 
@@ -79,7 +80,8 @@ export default async function ExperimentPage({ params }: { params: Params }) {
           "@context": "https://schema.org",
           "@type": "LearningResource",
           name: v.title,
-          description: v.caption,
+          ...(v.seo ? { alternateName: v.seo.title } : {}),
+          description: v.seo?.description ?? v.caption,
           url,
           inLanguage: locale,
           learningResourceType: "interactive simulation",
@@ -98,6 +100,7 @@ export default async function ExperimentPage({ params }: { params: Params }) {
             <span className="text-muted"> · {v.bookTitle}</span>
           </Label>
           <Headline as="h1" size="display" className="max-w-5xl">{v.title}</Headline>
+          {v.seo && <p className="mt-5 max-w-3xl text-lg text-fg-secondary">{v.seo.title}</p>}
         </header>
 
         <section className="rule-t py-8 md:px-10 md:py-12">
