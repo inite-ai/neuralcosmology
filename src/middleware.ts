@@ -34,6 +34,15 @@ function detectLocale(request: NextRequest): Locale {
   return defaultLocale;
 }
 
+/** Accept, в котором markdown назван раньше HTML (или HTML нет вовсе). */
+function prefersMarkdown(accept: string | null): boolean {
+  if (!accept) return false;
+  const md = accept.indexOf("text/markdown");
+  if (md < 0) return false;
+  const html = accept.indexOf("text/html");
+  return html < 0 || md < html;
+}
+
 function pathnameHasLocale(pathname: string): boolean {
   const seg = pathname.split("/").filter(Boolean)[0];
   return !!seg && (supportedLocales as readonly string[]).includes(seg);
@@ -68,7 +77,11 @@ function withSeoHeaders(
   response.headers.set("x-content-type-options", "nosniff");
   response.headers.set("x-frame-options", "DENY");
   response.headers.set("referrer-policy", "strict-origin-when-cross-origin");
-  response.headers.set("Vary", "Accept-Language, Accept-Encoding");
+  response.headers.set("Vary", "Accept, Accept-Language, Accept-Encoding");
+  // Агентам: та же страница в markdown.
+  if (pathnameHasLocale(pathname)) {
+    response.headers.set("Link", `<${pathname.replace(/\/$/, "")}.md>; rel="alternate"; type="text/markdown"`);
+  }
 
 
   return response;
@@ -77,7 +90,7 @@ function withSeoHeaders(
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (pathname.startsWith("/_next/") || pathname.startsWith("/api/")) {
+  if (pathname.startsWith("/_next/") || pathname.startsWith("/api/") || pathname === "/mcp" || pathname.startsWith("/mcp/")) {
     return NextResponse.next();
   }
 
@@ -88,6 +101,17 @@ export function middleware(request: NextRequest) {
     url.host = host.slice(4);
     url.port = "";
     return NextResponse.redirect(url, 308);
+  }
+
+  // Агентам — markdown той же страницы: /<путь>.md или Accept: text/markdown.
+  // Готовые .md-маршруты (транскрипты лекций, препринт) отвечают сами.
+  const wantsMarkdown =
+    (pathname.endsWith(".md") && !/\/(transcript|raw)\.md$/.test(pathname)) ||
+    prefersMarkdown(request.headers.get("accept"));
+  if (wantsMarkdown && !pathname.startsWith("/md/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/md${pathname.replace(/\.md$/, "") || "/"}`;
+    return NextResponse.rewrite(url);
   }
 
   if (ROOT_SURFACES.has(pathname)) {

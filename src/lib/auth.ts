@@ -2,6 +2,7 @@ import "server-only";
 import { cookies } from "next/headers";
 import { SignJWT, jwtVerify, createRemoteJWKSet, base64url } from "jose";
 import { db, dbConfigured } from "@/lib/db";
+import { claimGuestPurchases } from "@/lib/agent/claim";
 
 // Вход через INITE Auth (auth-api.inite.ai): authorization code + PKCE на
 // сервере, id_token проверяется по JWKS, дальше живём на своей подписанной
@@ -162,12 +163,36 @@ export async function completeLogin(code: string, state: string): Promise<string
   if (payload.nonce !== flow.nonce) throw new Error("nonce mismatch");
   if (!payload.sub) throw new Error("id_token without sub");
 
+  const email = typeof payload.email === "string" ? payload.email : undefined;
   await setSession({
     sub: payload.sub,
-    email: typeof payload.email === "string" ? payload.email : undefined,
+    email,
     name: typeof payload.name === "string" ? payload.name : undefined,
   });
+  if (email && payload.email_verified === true) await claimGuestPurchases(payload.sub, email);
   return flow.returnTo;
+}
+
+/**
+ * Access token агента (MCP-клиента), выданный INITE Auth от имени читателя.
+ * Принимаем только токены, выпущенные для этого сайта: audience — адрес MCP
+ * или сам сайт (RFC 8707), чужие токены не пропускаем.
+ */
+export async function verifyAgentToken(
+  token: string,
+  audiences: string[],
+): Promise<{ sub: string; email?: string; emailVerified: boolean } | null> {
+  try {
+    const { payload } = await jwtVerify(token, await getJwks(), { issuer: issuer(), audience: audiences });
+    if (!payload.sub) return null;
+    return {
+      sub: payload.sub,
+      email: typeof payload.email === "string" ? payload.email : undefined,
+      emailVerified: payload.email_verified === true,
+    };
+  } catch {
+    return null;
+  }
 }
 
 export async function logoutUrl(returnTo: string): Promise<string> {

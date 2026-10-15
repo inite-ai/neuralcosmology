@@ -11,6 +11,15 @@ Contact: info@neuralcosmology.com
 Canonical site: https://neuralcosmology.com (en, ru, pt, es)
 Same-as: https://www.mikefluff.com, https://www.linkedin.com/in/mikefluff/, https://twitter.com/mikefluff, https://t.me/neuralcosmology, https://t.me/mikefluff, https://github.com/neuralcosmology, https://github.com/mikefluff
 
+## For AI agents
+
+- Markdown of any page: append `.md` to its URL (https://neuralcosmology.com/en/answers/what-is-dark-matter.md) or send `Accept: text/markdown`.
+- Full text in one file (English): https://neuralcosmology.com/llms-full.txt
+- Catalog with books, chapters, languages and prices: https://neuralcosmology.com/catalog.json
+- MCP server (Streamable HTTP, no sign-in): https://neuralcosmology.com/mcp — tools `search`, `read`, `list_books`, `create_checkout`.
+- MCP as a signed-in reader: https://neuralcosmology.com/mcp/account — OAuth 2.1 through INITE Auth (https://auth-api.inite.ai, dynamic client registration, PKCE); orders go to the reader's account and their books read in full.
+- Buying for a reader: `create_checkout` returns a payment link. Nothing is charged until the reader pays; with an email (no sign-in) the book becomes theirs when they sign in on the site with that email.
+
 ## Author identity
 
 Mikhail Savchenko (this site) and Mike Fluff (https://www.mikefluff.com) are
