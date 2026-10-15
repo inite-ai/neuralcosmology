@@ -1,0 +1,96 @@
+{
+  "related": [
+    "is-consciousness-quantum",
+    "landauer-principle"
+  ],
+  "heading": {
+    "ru": "Что такое опыт с двумя щелями",
+    "en": "What the double-slit experiment shows",
+    "pt": "O que é o experimento da dupla fenda",
+    "es": "Qué es el experimento de la doble rendija"
+  },
+  "body": {
+    "ru": [
+      "Свет проходит через две узкие параллельные щели и падает на экран. Если бы свет был потоком частиц, на экране остались бы две светлые полосы напротив щелей. На деле получается много полос: светлые и тёмные чередуются. Так складываются волны: где гребни совпадают, свет усиливается, где гребень встречает впадину, гасится. Томас Юнг показал это в начале XIX века, и опыт стал главным доводом за волновую природу света.",
+      "Странность начинается, когда частицы летят по одной. В 1989 году группа Акиры Тономуры в Hitachi пускала электроны через установку поштучно. Каждый электрон оставлял на экране одну точку, как частица. Но через несколько тысяч точек из них складывались те же полосы, как будто каждый электрон прошёл через обе щели сразу и сам с собой интерферировал.",
+      "Если поставить у щелей детектор, который узнаёт, через какую прошла частица, полосы исчезают, и на экране остаются две размытые полосы. Квантовая механика описывает это без мистики: пока путь не записан, складываются амплитуды двух путей, и картина есть; как только путь записан где угодно, складываются вероятности, и картины нет. Наблюдателю-человеку для этого смотреть не нужно, хватает любого физического следа.",
+      "В 1999 году Маркус Арндт и Антон Цайлингер получили те же полосы для молекул фуллерена C60 из шестидесяти атомов углерода. Если такие молекулы нагреть, они излучают тепловые фотоны, которые выдают их путь, и полосы гаснут. Это видно в опыте про горячие фуллерены."
+    ],
+    "en": [
+      "Light passes through two narrow parallel slits and lands on a screen. If light were a stream of particles, you would see two bright bands opposite the slits. Instead you see many bands, bright and dark in turn. That is how waves add up: where crests meet crests the light grows stronger, where a crest meets a trough it cancels. Thomas Young showed this in the early 1800s, and the experiment became the main evidence that light behaves as a wave.",
+      "The strange part begins when particles go through one at a time. In 1989 Akira Tonomura's group at Hitachi sent electrons through the apparatus singly. Each electron left a single dot on the screen, like a particle. After a few thousand dots, though, the same fringes appeared, as if every electron had passed through both slits and interfered with itself.",
+      "Put a detector at the slits that records which one a particle went through, and the fringes disappear, leaving two blurred bands. Quantum mechanics describes this without mysticism: while the path is unrecorded, the amplitudes of the two paths add and the pattern is there; once the path is recorded anywhere, the probabilities add and the pattern is gone. No human observer has to look. Any physical trace of the path is enough.",
+      "In 1999 Markus Arndt and Anton Zeilinger obtained the same fringes with C60 fullerene molecules, sixty carbon atoms each. Heat those molecules and they emit thermal photons that give away their path, and the fringes fade. The experiment on hot fullerenes shows it."
+    ],
+    "pt": [
+      "A luz passa por duas fendas estreitas e paralelas e chega a uma tela. Se a luz fosse um fluxo de partículas, apareceriam duas faixas claras em frente às fendas. O que aparece são muitas faixas, claras e escuras alternadas. É assim que ondas se somam: onde crista encontra crista, a luz se reforça; onde crista encontra vale, ela se anula. Thomas Young mostrou isso no começo do século XIX, e o experimento virou a principal prova de que a luz se comporta como onda.",
+      "A estranheza começa quando as partículas passam uma de cada vez. Em 1989, o grupo de Akira Tonomura na Hitachi mandou elétrons pelo aparelho um a um. Cada elétron deixou um único ponto na tela, como uma partícula. Mas depois de alguns milhares de pontos surgiram as mesmas franjas, como se cada elétron tivesse passado pelas duas fendas e interferido consigo mesmo.",
+      "Coloque nas fendas um detector que registra por qual delas a partícula passou, e as franjas desaparecem, deixando duas faixas borradas. A mecânica quântica descreve isso sem misticismo: enquanto o caminho não fica registrado, somam-se as amplitudes dos dois caminhos e o padrão existe; quando o caminho fica registrado em qualquer lugar, somam-se as probabilidades e o padrão some. Nenhum observador humano precisa olhar. Basta qualquer rastro físico do caminho.",
+      "Em 1999, Markus Arndt e Anton Zeilinger obtiveram as mesmas franjas com moléculas de fulereno C60, de sessenta átomos de carbono cada. Aquecidas, essas moléculas emitem fótons térmicos que denunciam o caminho, e as franjas se apagam. O experimento dos fulerenos quentes mostra isso."
+    ],
+    "es": [
+      "La luz pasa por dos rendijas estrechas y paralelas y llega a una pantalla. Si la luz fuera un chorro de partículas, aparecerían dos franjas claras frente a las rendijas. Lo que aparece son muchas franjas, claras y oscuras alternadas. Así se suman las ondas: donde una cresta coincide con otra, la luz se refuerza; donde una cresta encuentra un valle, se anula. Thomas Young lo mostró a comienzos del siglo XIX, y el experimento se convirtió en la principal prueba de que la luz se comporta como una onda.",
+      "Lo extraño empieza cuando las partículas pasan de una en una. En 1989, el grupo de Akira Tonomura en Hitachi envió electrones por el aparato uno a uno. Cada electrón dejó un solo punto en la pantalla, como una partícula. Pero tras unos miles de puntos aparecieron las mismas franjas, como si cada electrón hubiera pasado por las dos rendijas e interferido consigo mismo.",
+      "Si se pone en las rendijas un detector que registra por cuál pasó la partícula, las franjas desaparecen y quedan dos bandas borrosas. La mecánica cuántica lo describe sin misticismo: mientras el camino no queda registrado, se suman las amplitudes de los dos caminos y el patrón existe; cuando el camino queda registrado en cualquier parte, se suman las probabilidades y el patrón desaparece. Ningún observador humano tiene que mirar. Basta cualquier rastro físico del camino.",
+      "En 1999, Markus Arndt y Anton Zeilinger obtuvieron las mismas franjas con moléculas de fullereno C60, de sesenta átomos de carbono cada una. Al calentarlas, emiten fotones térmicos que delatan su camino, y las franjas se apagan. El experimento de los fullerenos calientes lo muestra."
+    ]
+  },
+  "faq": {
+    "ru": [
+      {
+        "q": "Почему полосы пропадают, когда ставят детектор?",
+        "a": "Детектор записывает, через какую щель прошла частица. Когда путь известен, амплитуды двух путей больше не складываются, складываются вероятности, а у суммы вероятностей полос нет. Смотреть человеку не обязательно: хватает того, что информация о пути осталась в приборе или в окружении."
+      },
+      {
+        "q": "Ставили ли опыт с одиночными частицами?",
+        "a": "Да. Клаус Йёнссон в 1961 году провёл его с электронами, а группа Акиры Тономуры в 1989 году пускала электроны строго по одному и сняла, как из отдельных точек складываются полосы."
+      },
+      {
+        "q": "Работает ли это с крупными молекулами?",
+        "a": "Да. В 1999 году группа Антона Цайлингера получила интерференцию молекул фуллерена C60, позже опыты проводили с молекулами из тысяч атомов."
+      }
+    ],
+    "en": [
+      {
+        "q": "Why do the fringes disappear when a detector is added?",
+        "a": "The detector records which slit the particle went through. Once the path is known, the amplitudes of the two paths no longer add; the probabilities do, and a sum of probabilities has no fringes. No person needs to look: it is enough that information about the path is left in the device or the surroundings."
+      },
+      {
+        "q": "Has the experiment been done with single particles?",
+        "a": "Yes. Claus Jönsson did it with electrons in 1961, and in 1989 Akira Tonomura's group sent electrons strictly one at a time and filmed the fringes building up from individual dots."
+      },
+      {
+        "q": "Does it work with large molecules?",
+        "a": "Yes. In 1999 Anton Zeilinger's group observed interference of C60 fullerene molecules, and later experiments used molecules of thousands of atoms."
+      }
+    ],
+    "pt": [
+      {
+        "q": "Por que as franjas somem quando se coloca um detector?",
+        "a": "O detector registra por qual fenda a partícula passou. Com o caminho conhecido, as amplitudes dos dois caminhos deixam de se somar; somam-se as probabilidades, e a soma de probabilidades não tem franjas. Ninguém precisa olhar: basta que a informação sobre o caminho fique no aparelho ou no ambiente."
+      },
+      {
+        "q": "O experimento já foi feito com partículas isoladas?",
+        "a": "Sim. Claus Jönsson o fez com elétrons em 1961, e em 1989 o grupo de Akira Tonomura mandou elétrons estritamente um por vez e filmou as franjas se formando a partir de pontos isolados."
+      },
+      {
+        "q": "Funciona com moléculas grandes?",
+        "a": "Sim. Em 1999 o grupo de Anton Zeilinger observou interferência de moléculas de fulereno C60, e experimentos posteriores usaram moléculas de milhares de átomos."
+      }
+    ],
+    "es": [
+      {
+        "q": "¿Por qué desaparecen las franjas cuando se pone un detector?",
+        "a": "El detector registra por qué rendija pasó la partícula. Con el camino conocido, las amplitudes de los dos caminos dejan de sumarse; se suman las probabilidades, y una suma de probabilidades no tiene franjas. Nadie tiene que mirar: basta con que la información sobre el camino quede en el aparato o en el entorno."
+      },
+      {
+        "q": "¿Se ha hecho el experimento con partículas sueltas?",
+        "a": "Sí. Claus Jönsson lo hizo con electrones en 1961, y en 1989 el grupo de Akira Tonomura envió electrones estrictamente de uno en uno y filmó cómo las franjas se forman a partir de puntos aislados."
+      },
+      {
+        "q": "¿Funciona con moléculas grandes?",
+        "a": "Sí. En 1999 el grupo de Anton Zeilinger observó interferencia de moléculas de fullereno C60, y experimentos posteriores usaron moléculas de miles de átomos."
+      }
+    ]
+  }
+}

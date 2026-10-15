@@ -1,0 +1,57 @@
+{
+  "related": ["cosmic-web", "is-the-universe-a-neural-network"],
+  "heading": {
+    "ru": "Что такое слизевик Physarum",
+    "en": "What the slime mold Physarum is",
+    "pt": "O que é o bolor limoso Physarum",
+    "es": "Qué es el moho mucilaginoso Physarum"
+  },
+  "body": {
+    "ru": [
+      "Physarum polycephalum — жёлтый слизевик, который живёт на гниющих листьях и коре во влажном лесу. Его активная форма, плазмодий, — одна огромная клетка с миллионами ядер, она может растянуться на десятки сантиметров. Нейронов у него нет, мозга тоже, и всё же он умеет находить кратчайшие пути.",
+      "В 2000 году Тосиюки Накагаки положил кусочки слизевика в пластиковый лабиринт, а у двух выходов — овсяные хлопья. Слизевик сначала заполнил весь лабиринт, потом убрал отростки из тупиков и оставил одну толстую трубку по кратчайшему пути между едой. Статья вышла в Nature.",
+      "В 2010 году Ацуси Теро, Накагаки и коллеги разложили хлопья на карте так, как расположены города вокруг Токио, и посадили слизевик в центр. Примерно через сутки он соединил их сетью, близкой к настоящей железнодорожной по длине, надёжности и экономности (Science, 2010). Секрет простой: трубки, по которым течёт больше, утолщаются, остальные отмирают.",
+      "Джефф Джонс в 2010 году описал это поведение моделью из тысяч частиц: каждая чует след впереди, поворачивает к самому сильному и оставляет свой. Именно её запускает этот опыт. В 2020 году Джозеф Бёрчетт, Оскар Элек и коллеги применили алгоритм по мотивам этой модели к 37 тысячам галактик и восстановили нити космической паутины между ними, в том числе там, где их не видно напрямую."
+    ],
+    "en": [
+      "Physarum polycephalum is a yellow slime mold that lives on rotting leaves and bark in damp woods. Its active form, the plasmodium, is one giant cell with millions of nuclei that can spread over tens of centimetres. It has no neurons and no brain, yet it finds shortest paths.",
+      "In 2000 Toshiyuki Nakagaki put pieces of the slime mold into a plastic maze with oat flakes at the two exits. The mold first filled the whole maze, then withdrew from the dead ends and left a single thick tube along the shortest route between the food. The paper appeared in Nature.",
+      "In 2010 Atsushi Tero, Nakagaki and colleagues laid out oat flakes like the cities around Tokyo and placed the mold at the centre. Within about a day it linked them with a network comparable to the real railway in length, resilience and cost (Science, 2010). The trick is simple: tubes that carry more flow thicken, and the rest wither.",
+      "In 2010 Jeff Jones captured this behaviour with a model of thousands of particles: each senses the trail ahead, turns toward the strongest and leaves its own. That model is what this experiment runs. In 2020 Joseph Burchett, Oskar Elek and colleagues applied an algorithm based on it to 37,000 galaxies and recovered the filaments of the cosmic web between them, including where they cannot be seen directly."
+    ],
+    "pt": [
+      "Physarum polycephalum é um bolor limoso amarelo que vive em folhas e cascas apodrecidas em matas úmidas. Sua forma ativa, o plasmódio, é uma única célula gigante com milhões de núcleos, capaz de se espalhar por dezenas de centímetros. Não tem neurônios nem cérebro, e mesmo assim encontra caminhos mais curtos.",
+      "Em 2000, Toshiyuki Nakagaki pôs pedaços do bolor num labirinto de plástico, com flocos de aveia nas duas saídas. Primeiro o bolor encheu o labirinto inteiro, depois recolheu os braços dos becos sem saída e deixou um único tubo grosso pelo caminho mais curto entre a comida. O artigo saiu na Nature.",
+      "Em 2010, Atsushi Tero, Nakagaki e colegas dispuseram flocos de aveia como as cidades em volta de Tóquio e puseram o bolor no centro. Em cerca de um dia ele as ligou com uma rede comparável à ferrovia real em comprimento, resistência a falhas e custo (Science, 2010). O truque é simples: os tubos por onde passa mais fluxo engrossam, e os outros murcham.",
+      "Também em 2010, Jeff Jones descreveu esse comportamento com um modelo de milhares de partículas: cada uma fareja o rastro à frente, vira para o mais forte e deixa o seu. É esse modelo que este experimento roda. Em 2020, Joseph Burchett, Oskar Elek e colegas aplicaram um algoritmo baseado nele a 37 mil galáxias e reconstituíram os filamentos da teia cósmica entre elas, inclusive onde não podem ser vistos diretamente."
+    ],
+    "es": [
+      "Physarum polycephalum es un moho mucilaginoso amarillo que vive sobre hojas y cortezas podridas en bosques húmedos. Su forma activa, el plasmodio, es una sola célula gigante con millones de núcleos, capaz de extenderse decenas de centímetros. No tiene neuronas ni cerebro, y aun así encuentra los caminos más cortos.",
+      "En 2000, Toshiyuki Nakagaki puso trozos del moho en un laberinto de plástico con copos de avena en las dos salidas. Primero el moho llenó todo el laberinto, luego retiró los brazos de los callejones sin salida y dejó un solo tubo grueso por el camino más corto entre la comida. El artículo salió en Nature.",
+      "En 2010, Atsushi Tero, Nakagaki y colegas colocaron copos de avena como las ciudades alrededor de Tokio y pusieron el moho en el centro. En cerca de un día las unió con una red comparable al ferrocarril real en longitud, resistencia a fallos y costo (Science, 2010). El truco es simple: los tubos por los que pasa más flujo se engrosan, y los demás se marchitan.",
+      "También en 2010, Jeff Jones describió este comportamiento con un modelo de miles de partículas: cada una olfatea el rastro de delante, gira hacia el más fuerte y deja el suyo. Ese modelo es el que corre este experimento. En 2020, Joseph Burchett, Oskar Elek y colegas aplicaron un algoritmo basado en él a 37 000 galaxias y reconstruyeron los filamentos de la red cósmica entre ellas, incluso donde no se ven directamente."
+    ]
+  },
+  "faq": {
+    "ru": [
+      { "q": "Есть ли у слизевика мозг?", "a": "Нет. Плазмодий Physarum — одна клетка с множеством ядер, без нейронов. Пути он находит за счёт того, что трубки с сильным потоком утолщаются, а слабые отмирают." },
+      { "q": "Правда ли слизевик повторил железные дороги Токио?", "a": "Да, в опыте Теро и Накагаки (Science, 2010) слизевик соединил хлопья, разложенные как города вокруг Токио, сетью, близкой к реальной по длине, устойчивости к обрывам и затратам." },
+      { "q": "При чём тут космическая паутина?", "a": "В 2020 году астрономы применили алгоритм по мотивам модели слизевика к 37 тысячам галактик из обзора SDSS и восстановили нити газа между ними. Результат сверили с поглощением в спектрах далёких квазаров." }
+    ],
+    "en": [
+      { "q": "Does a slime mold have a brain?", "a": "No. The Physarum plasmodium is a single cell with many nuclei and no neurons. It finds paths because tubes with strong flow thicken while weak ones wither." },
+      { "q": "Did a slime mold really reproduce the Tokyo railway?", "a": "Yes. In Tero and Nakagaki's experiment (Science, 2010) the mold linked oat flakes laid out like the cities around Tokyo with a network comparable to the real one in length, fault tolerance and cost." },
+      { "q": "What does it have to do with the cosmic web?", "a": "In 2020 astronomers applied an algorithm based on the slime mold model to 37,000 SDSS galaxies and recovered the gas filaments between them, then checked the result against absorption in the spectra of distant quasars." }
+    ],
+    "pt": [
+      { "q": "O bolor limoso tem cérebro?", "a": "Não. O plasmódio do Physarum é uma única célula com muitos núcleos e nenhum neurônio. Ele acha caminhos porque os tubos com fluxo forte engrossam e os fracos murcham." },
+      { "q": "O bolor limoso realmente reproduziu a ferrovia de Tóquio?", "a": "Sim. No experimento de Tero e Nakagaki (Science, 2010), o bolor ligou flocos de aveia dispostos como as cidades em volta de Tóquio com uma rede comparável à real em comprimento, tolerância a falhas e custo." },
+      { "q": "O que isso tem a ver com a teia cósmica?", "a": "Em 2020, astrônomos aplicaram um algoritmo baseado no modelo do bolor a 37 mil galáxias do levantamento SDSS e reconstituíram os filamentos de gás entre elas; depois conferiram o resultado com a absorção nos espectros de quasares distantes." }
+    ],
+    "es": [
+      { "q": "¿Tiene cerebro el moho mucilaginoso?", "a": "No. El plasmodio de Physarum es una sola célula con muchos núcleos y ninguna neurona. Encuentra caminos porque los tubos con flujo fuerte se engrosan y los débiles se marchitan." },
+      { "q": "¿De verdad un moho reprodujo el ferrocarril de Tokio?", "a": "Sí. En el experimento de Tero y Nakagaki (Science, 2010), el moho unió copos de avena colocados como las ciudades alrededor de Tokio con una red comparable a la real en longitud, tolerancia a fallos y costo." },
+      { "q": "¿Qué tiene que ver con la red cósmica?", "a": "En 2020, unos astrónomos aplicaron un algoritmo basado en el modelo del moho a 37 000 galaxias del sondeo SDSS y reconstruyeron los filamentos de gas entre ellas; luego contrastaron el resultado con la absorción en los espectros de cuásares lejanos." }
+    ]
+  }
+}

@@ -13,7 +13,8 @@ import { experiments, getExperiment } from "@/lib/interactive";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict } from "@/lib/i18n";
 import { clipDescription, ogImageUrl, social } from "@/lib/og";
-import { breadcrumb } from "@/lib/schema";
+import { breadcrumb, faqSchema } from "@/lib/schema";
+import { answersUi } from "@/content/answers-ui";
 
 // Опыт на своей странице: сам опыт, откуда он (глава и книга), вход в текст,
 // подписка и другие опыты. Посадочная для посевов и рекламы.
@@ -92,6 +93,7 @@ export default async function ExperimentPage({ params }: { params: Params }) {
           isPartOf: { "@type": "Book", name: v.bookTitle, url: `${BASE}/${locale}/books/${v.bookSlug}` },
         }}
       />
+      {v.about && v.about.faq.length > 0 && <JsonLd id="experiment-faq" data={faqSchema(locale, `/experiments/${id}`, v.about.faq)} />}
       <JsonLd id="experiment-breadcrumb" data={breadcrumb(locale, [{ name: dict.nav.home, path: "" }, { name: ui.nav, path: "/experiments" }, { name: v.title, path: `/experiments/${id}` }])} />
       <Sheet>
         <header className="pt-14 pb-8 md:px-10 md:pt-20 md:pb-10">
@@ -149,6 +151,42 @@ export default async function ExperimentPage({ params }: { params: Params }) {
                 <Button href={v.href}>{v.chapter.free ? ui.readFree : ui.read} →</Button>
                 <Button href={`/${locale}/books/${v.bookSlug}`} variant="rule">{ui.book}</Button>
               </div>
+            </div>
+          </section>
+        )}
+
+        {v.about && (
+          <section className="rule-t py-10 md:px-10 md:py-14">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="font-display text-3xl leading-snug md:text-4xl">{v.about.heading}</h2>
+              <div className="mt-6 space-y-4 text-lg leading-relaxed text-fg-secondary">
+                {v.about.body.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+              {v.about.related.length > 0 && (
+                <ul className="mt-8 space-y-2">
+                  {v.about.related.map((r) => (
+                    <li key={r.href}>
+                      <Link href={r.href} className="underline decoration-[0.5px] underline-offset-4 hover:text-fg">{r.title} →</Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </section>
+        )}
+
+        {v.about && v.about.faq.length > 0 && (
+          <section className="rule-t py-10 md:px-10 md:py-14">
+            <Label className="mb-6">{answersUi[locale].faq}</Label>
+            <div className="grid grid-cols-1 gap-[0.5px] bg-line hairline md:grid-cols-3 [&>*]:bg-bg">
+              {v.about.faq.map((f) => (
+                <div key={f.question} className="p-7 md:p-8">
+                  <h3 className="font-display text-xl leading-snug">{f.question}</h3>
+                  <p className="mt-4 text-fg-secondary">{f.answer}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}

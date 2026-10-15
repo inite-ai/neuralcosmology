@@ -1,0 +1,57 @@
+{
+  "related": ["michael-levin-bioelectricity"],
+  "heading": {
+    "ru": "Что такое планария и как она регенерирует",
+    "en": "What planaria are and how they regenerate",
+    "pt": "O que é a planária e como ela se regenera",
+    "es": "Qué es la planaria y cómo se regenera"
+  },
+  "body": {
+    "ru": [
+      "Планарии — пресноводные плоские черви длиной от нескольких миллиметров до пары сантиметров, тип плоские черви (Platyhelminthes). На голове у них два светочувствительных глазка, которые смотрят на мир как будто с удивлением. Живут они под камнями в ручьях и прудах и питаются мелкими беспозвоночными.",
+      "Главная их особенность — регенерация. Если разрезать планарию на части, из каждого кусочка вырастает целый червь с головой, мозгом и хвостом. Ещё в 1898 году Томас Хант Морган показал, что для этого хватает фрагмента в 1/279 тела. Работу выполняют необласты, стволовые клетки, разбросанные по всему телу: в 2011 году лаборатория Питера Реддиена показала, что одна такая клетка способна восстановить целого червя.",
+      "Откуда кусочек знает, где у него должна быть голова? Лаборатория Майкла Левина в Университете Тафтса показала, что эту информацию несёт биоэлектрический узор: разница напряжений на мембранах клеток вдоль тела. Если на время изменить этот узор лекарством, которое перекрывает щелевые контакты между клетками, из фрагмента вырастают две головы, по одной на каждом конце.",
+      "Самое удивительное случилось дальше. Двухголовых червей резали снова, уже без всякого лекарства, и из кусочков опять вырастали двухголовые черви. Гены у них остались прежними. Изменилась запись в электрическом узоре, и тело продолжало её читать. Схема опыта на этой странице показывает именно это: цвет обозначает узор, а форма червя следует за ним."
+    ],
+    "en": [
+      "Planarians are freshwater flatworms from a few millimetres to a couple of centimetres long, in the phylum Platyhelminthes. They have two light-sensitive eyespots on the head that give them a permanently surprised look. They live under stones in streams and ponds and feed on small invertebrates.",
+      "Their signature trait is regeneration. Cut a planarian into pieces and each piece grows into a whole worm with a head, a brain and a tail. As early as 1898 Thomas Hunt Morgan showed that a fragment of 1/279 of the body is enough. The work is done by neoblasts, stem cells spread throughout the body: in 2011 Peter Reddien's lab showed that a single such cell can rebuild an entire worm.",
+      "How does a fragment know where its head should go? Michael Levin's lab at Tufts University showed that the information is carried by a bioelectric pattern, the voltage differences across cell membranes along the body. Briefly change that pattern with a drug that blocks the gap junctions between cells, and the fragment grows two heads, one at each end.",
+      "The most surprising part came next. The two-headed worms were cut again, with no drug at all, and the pieces again grew into two-headed worms. Their genes were unchanged. What changed was a record in the electrical pattern, and the body kept reading it. The diagram on this page shows exactly that: colour marks the pattern, and the worm's shape follows it."
+    ],
+    "pt": [
+      "Planárias são vermes achatados de água doce, de alguns milímetros a uns dois centímetros de comprimento, do filo Platyhelminthes. Na cabeça têm dois ocelos sensíveis à luz que lhes dão um ar de eterno espanto. Vivem sob pedras em riachos e lagoas e comem pequenos invertebrados.",
+      "Sua marca registrada é a regeneração. Corte uma planária em pedaços e cada pedaço vira um verme inteiro, com cabeça, cérebro e cauda. Já em 1898 Thomas Hunt Morgan mostrou que basta um fragmento de 1/279 do corpo. Quem faz o trabalho são os neoblastos, células-tronco espalhadas por todo o corpo: em 2011 o laboratório de Peter Reddien mostrou que uma única dessas células consegue reconstruir o verme inteiro.",
+      "Como um fragmento sabe onde deve ficar a cabeça? O laboratório de Michael Levin, na Universidade Tufts, mostrou que essa informação está num padrão bioelétrico: as diferenças de voltagem nas membranas das células ao longo do corpo. Altere esse padrão por um tempo com um remédio que bloqueia as junções comunicantes entre as células, e o fragmento forma duas cabeças, uma em cada ponta.",
+      "O mais surpreendente veio depois. Os vermes de duas cabeças foram cortados de novo, sem remédio nenhum, e os pedaços voltaram a formar vermes de duas cabeças. Os genes continuaram os mesmos. O que mudou foi um registro no padrão elétrico, e o corpo continuou a lê-lo. O esquema nesta página mostra justamente isso: a cor marca o padrão, e a forma do verme o segue."
+    ],
+    "es": [
+      "Las planarias son gusanos planos de agua dulce, de unos milímetros a un par de centímetros de largo, del filo Platyhelminthes. En la cabeza tienen dos ocelos sensibles a la luz que les dan un aire de asombro permanente. Viven bajo las piedras de arroyos y estanques y comen pequeños invertebrados.",
+      "Su rasgo distintivo es la regeneración. Si se corta una planaria en trozos, cada trozo se convierte en un gusano entero, con cabeza, cerebro y cola. Ya en 1898 Thomas Hunt Morgan mostró que basta un fragmento de 1/279 del cuerpo. El trabajo lo hacen los neoblastos, células madre repartidas por todo el cuerpo: en 2011 el laboratorio de Peter Reddien mostró que una sola de esas células puede reconstruir el gusano entero.",
+      "¿Cómo sabe un fragmento dónde debe ir la cabeza? El laboratorio de Michael Levin, en la Universidad Tufts, mostró que esa información está en un patrón bioeléctrico: las diferencias de voltaje en las membranas de las células a lo largo del cuerpo. Si se altera ese patrón durante un tiempo con un fármaco que bloquea las uniones comunicantes entre células, el fragmento forma dos cabezas, una en cada extremo.",
+      "Lo más sorprendente vino después. Los gusanos de dos cabezas se volvieron a cortar, ya sin fármaco, y los trozos volvieron a formar gusanos de dos cabezas. Los genes seguían siendo los mismos. Lo que cambió fue un registro en el patrón eléctrico, y el cuerpo siguió leyéndolo. El esquema de esta página muestra justamente eso: el color marca el patrón, y la forma del gusano lo sigue."
+    ]
+  },
+  "faq": {
+    "ru": [
+      { "q": "Что такое планария?", "a": "Пресноводный плоский червь длиной до пары сантиметров из типа плоских червей (Platyhelminthes). Известна способностью восстанавливать всё тело из небольшого фрагмента." },
+      { "q": "Как планария регенерирует?", "a": "За счёт необластов, стволовых клеток, рассеянных по всему телу. Они делятся и превращаются в недостающие ткани, а куда расти, подсказывает биоэлектрический узор и химические сигналы." },
+      { "q": "Как получили двухголовую планарию?", "a": "В лаборатории Майкла Левина фрагменты червей ненадолго обрабатывали веществом, блокирующим щелевые контакты, и электрический узор менялся. Из таких фрагментов вырастали две головы, и при следующих разрезах червь оставался двухголовым без изменений в генах." }
+    ],
+    "en": [
+      { "q": "What is a planarian?", "a": "A freshwater flatworm up to a couple of centimetres long, in the phylum Platyhelminthes, known for regrowing its entire body from a small fragment." },
+      { "q": "How do planarians regenerate?", "a": "Through neoblasts, stem cells scattered throughout the body. They divide and turn into the missing tissues, while bioelectric and chemical signals tell them what to build where." },
+      { "q": "How were two-headed planarians made?", "a": "In Michael Levin's lab, worm fragments were briefly treated with a substance that blocks gap junctions, which changed the electrical pattern. Those fragments grew two heads, and the worms stayed two-headed through later cuts with no change to their genes." }
+    ],
+    "pt": [
+      { "q": "O que é planária?", "a": "Um verme achatado de água doce de até uns dois centímetros, do filo Platyhelminthes, conhecido por regenerar o corpo inteiro a partir de um pequeno fragmento." },
+      { "q": "Como a planária se regenera?", "a": "Graças aos neoblastos, células-tronco espalhadas pelo corpo todo. Eles se dividem e viram os tecidos que faltam, enquanto sinais bioelétricos e químicos indicam o que construir e onde." },
+      { "q": "Como se criou a planária de duas cabeças?", "a": "No laboratório de Michael Levin, fragmentos de vermes foram tratados por pouco tempo com uma substância que bloqueia as junções comunicantes, o que mudou o padrão elétrico. Esses fragmentos formaram duas cabeças, e os vermes continuaram com duas cabeças nos cortes seguintes, sem mudança nos genes." }
+    ],
+    "es": [
+      { "q": "¿Qué es una planaria?", "a": "Un gusano plano de agua dulce de hasta un par de centímetros, del filo Platyhelminthes, conocido por regenerar el cuerpo entero a partir de un pequeño fragmento." },
+      { "q": "¿Cómo se regenera la planaria?", "a": "Gracias a los neoblastos, células madre repartidas por todo el cuerpo. Se dividen y se convierten en los tejidos que faltan, mientras señales bioeléctricas y químicas indican qué construir y dónde." },
+      { "q": "¿Cómo se creó la planaria de dos cabezas?", "a": "En el laboratorio de Michael Levin, fragmentos de gusanos se trataron brevemente con una sustancia que bloquea las uniones comunicantes, lo que cambió el patrón eléctrico. Esos fragmentos formaron dos cabezas, y los gusanos siguieron con dos cabezas en cortes posteriores, sin cambios en sus genes." }
+    ]
+  }
+}

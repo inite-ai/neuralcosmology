@@ -1,0 +1,57 @@
+{
+  "related": ["is-the-universe-a-simulation", "is-the-universe-a-neural-network"],
+  "heading": {
+    "ru": "Что такое игра «Жизнь» Конвея",
+    "en": "What Conway's Game of Life is",
+    "pt": "O que é o Jogo da Vida de Conway",
+    "es": "Qué es el Juego de la Vida de Conway"
+  },
+  "body": {
+    "ru": [
+      "Игру «Жизнь» придумал английский математик Джон Хортон Конвей в 1970 году, а прославил её Мартин Гарднер колонкой в Scientific American в октябре того же года. Это «игра без игроков»: человек только расставляет живые клетки на бесконечной клетчатой доске, а дальше всё происходит само, поколение за поколением.",
+      "Правил четыре. Живая клетка, у которой меньше двух живых соседей, умирает от одиночества. Живая клетка с двумя или тремя соседями живёт дальше. Живая клетка с больше чем тремя соседями умирает от тесноты. Пустая клетка, у которой ровно три живых соседа, оживает. Соседями считаются восемь клеток вокруг.",
+      "Из этих правил рождается удивительно много. Есть устойчивые фигуры, которые не меняются, есть осцилляторы, которые мигают на месте, есть «глайдеры», пять клеток, которые ползут по доске по диагонали. Конвей обещал пятьдесят долларов тому, кто найдёт фигуру, растущую бесконечно. В 1970 году её нашёл Билл Госпер из MIT: его «ружьё» выпускает новый глайдер каждые тридцать поколений.",
+      "Позже доказали, что на «Жизни» можно собрать любой компьютер: она полна по Тьюрингу. Поэтому она стала любимым примером того, как сложное поведение возникает из простых локальных правил без всякого плана сверху."
+    ],
+    "en": [
+      "The Game of Life was invented by the English mathematician John Horton Conway in 1970 and made famous by Martin Gardner's column in Scientific American that October. It is a zero-player game: you only place live cells on an infinite grid, and everything after that happens by itself, generation after generation.",
+      "There are four rules. A live cell with fewer than two live neighbours dies of loneliness. A live cell with two or three neighbours lives on. A live cell with more than three neighbours dies of overcrowding. An empty cell with exactly three live neighbours comes to life. The neighbours are the eight cells around it.",
+      "A surprising amount comes out of these rules. There are still lifes that never change, oscillators that blink in place, and gliders, five cells that crawl diagonally across the grid. Conway offered fifty dollars to anyone who could find a pattern that grows forever. Bill Gosper of MIT found one in 1970: his glider gun fires a new glider every thirty generations.",
+      "It was later shown that any computer can be built inside Life: it is Turing complete. That is why it became the favourite example of complex behaviour arising from simple local rules with no plan from above."
+    ],
+    "pt": [
+      "O Jogo da Vida foi inventado pelo matemático inglês John Horton Conway em 1970 e ficou famoso pela coluna de Martin Gardner na Scientific American de outubro daquele ano. É um jogo sem jogadores: você só coloca células vivas numa grade infinita, e o resto acontece sozinho, geração após geração.",
+      "São quatro regras. Uma célula viva com menos de duas vizinhas vivas morre de solidão. Uma célula viva com duas ou três vizinhas continua viva. Uma célula viva com mais de três vizinhas morre de superpopulação. Uma célula vazia com exatamente três vizinhas vivas nasce. As vizinhas são as oito células em volta.",
+      "Dessas regras sai uma quantidade surpreendente de coisas. Há formas estáveis que nunca mudam, osciladores que piscam no lugar e planadores, cinco células que atravessam a grade na diagonal. Conway ofereceu cinquenta dólares a quem achasse um padrão que crescesse para sempre. Bill Gosper, do MIT, achou em 1970: o seu canhão dispara um novo planador a cada trinta gerações.",
+      "Mais tarde se provou que dá para montar qualquer computador dentro do Jogo da Vida: ele é Turing-completo. Por isso virou o exemplo favorito de comportamento complexo surgindo de regras locais simples, sem plano nenhum vindo de cima."
+    ],
+    "es": [
+      "El Juego de la Vida lo inventó el matemático inglés John Horton Conway en 1970, y lo hizo famoso la columna de Martin Gardner en Scientific American de octubre de ese año. Es un juego sin jugadores: usted solo coloca células vivas en una cuadrícula infinita, y lo demás ocurre solo, generación tras generación.",
+      "Las reglas son cuatro. Una célula viva con menos de dos vecinas vivas muere de soledad. Una célula viva con dos o tres vecinas sigue viva. Una célula viva con más de tres vecinas muere por superpoblación. Una célula vacía con exactamente tres vecinas vivas nace. Las vecinas son las ocho células de alrededor.",
+      "De estas reglas sale una cantidad sorprendente de cosas. Hay figuras estables que nunca cambian, osciladores que parpadean en su sitio y planeadores, cinco células que cruzan la cuadrícula en diagonal. Conway ofreció cincuenta dólares a quien encontrara un patrón que creciera para siempre. Bill Gosper, del MIT, lo encontró en 1970: su cañón dispara un planeador nuevo cada treinta generaciones.",
+      "Más tarde se demostró que dentro del Juego de la Vida se puede construir cualquier computadora: es Turing completo. Por eso se convirtió en el ejemplo favorito de comportamiento complejo que surge de reglas locales simples, sin ningún plan desde arriba."
+    ]
+  },
+  "faq": {
+    "ru": [
+      { "q": "Какие правила у игры «Жизнь»?", "a": "Живая клетка выживает, если у неё два или три живых соседа, иначе умирает. Пустая клетка оживает, если у неё ровно три живых соседа. Соседи — восемь окружающих клеток, все клетки обновляются одновременно." },
+      { "q": "Кто придумал игру «Жизнь»?", "a": "Английский математик Джон Хортон Конвей в 1970 году. Широкой публике её показал Мартин Гарднер в журнале Scientific American." },
+      { "q": "Можно ли на «Жизни» построить компьютер?", "a": "Да. Игра полна по Тьюрингу: из глайдеров и ружей можно собрать логические элементы, и в 2000 году Пол Ренделл построил внутри неё машину Тьюринга." }
+    ],
+    "en": [
+      { "q": "What are the rules of the Game of Life?", "a": "A live cell survives if it has two or three live neighbours and dies otherwise. An empty cell becomes alive if it has exactly three live neighbours. Neighbours are the eight surrounding cells, and all cells update at once." },
+      { "q": "Who invented the Game of Life?", "a": "The English mathematician John Horton Conway, in 1970. Martin Gardner introduced it to a wide audience in Scientific American." },
+      { "q": "Can you build a computer in the Game of Life?", "a": "Yes. Life is Turing complete: logic gates can be assembled from gliders and guns, and in 2000 Paul Rendell built a Turing machine inside it." }
+    ],
+    "pt": [
+      { "q": "Quais são as regras do Jogo da Vida?", "a": "Uma célula viva sobrevive se tiver duas ou três vizinhas vivas e morre nos outros casos. Uma célula vazia nasce se tiver exatamente três vizinhas vivas. As vizinhas são as oito células em volta, e todas se atualizam ao mesmo tempo." },
+      { "q": "Quem inventou o Jogo da Vida?", "a": "O matemático inglês John Horton Conway, em 1970. Martin Gardner o apresentou ao grande público na Scientific American." },
+      { "q": "Dá para construir um computador no Jogo da Vida?", "a": "Sim. O Jogo da Vida é Turing-completo: portas lógicas podem ser montadas com planadores e canhões, e em 2000 Paul Rendell construiu uma máquina de Turing dentro dele." }
+    ],
+    "es": [
+      { "q": "¿Cuáles son las reglas del Juego de la Vida?", "a": "Una célula viva sobrevive si tiene dos o tres vecinas vivas y muere en los demás casos. Una célula vacía nace si tiene exactamente tres vecinas vivas. Las vecinas son las ocho células de alrededor, y todas se actualizan a la vez." },
+      { "q": "¿Quién inventó el Juego de la Vida?", "a": "El matemático inglés John Horton Conway, en 1970. Martin Gardner lo presentó al gran público en Scientific American." },
+      { "q": "¿Se puede construir una computadora en el Juego de la Vida?", "a": "Sí. Es Turing completo: con planeadores y cañones se arman puertas lógicas, y en 2000 Paul Rendell construyó una máquina de Turing dentro de él." }
+    ]
+  }
+}

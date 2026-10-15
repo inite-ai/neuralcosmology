@@ -1,0 +1,57 @@
+{
+  "related": ["is-the-universe-a-simulation"],
+  "heading": {
+    "ru": "Что такое сигнал «Wow!»",
+    "en": "What the Wow! signal is",
+    "pt": "O que é o sinal Wow!",
+    "es": "Qué es la señal Wow!"
+  },
+  "body": {
+    "ru": [
+      "15 августа 1977 года радиотелескоп Big Ear Университета штата Огайо принял узкополосный сигнал из области созвездия Стрельца. Через несколько дней астроном-волонтёр Джерри Эйман просматривал распечатки, обвёл красной ручкой столбец «6EQUJ5» и написал на полях «Wow!». С тех пор сигнал так и называют.",
+      "Буквы и цифры на распечатке — это мощность сигнала относительно фонового шума. Цифры от 0 до 9 означают свои значения, а дальше идут буквы: A — 10, B — 11 и так до Z — 35. Последовательность 6, E, Q, U, J, 5 показывает, как сигнал нарастал и спадал, пока телескоп, неподвижный относительно Земли, проходил по источнику. Пик «U» значит, что сигнал был примерно в тридцать раз сильнее шума.",
+      "Сигнал длился около 72 секунд, ровно столько, сколько источник находился в луче телескопа, и пришёл на частоте около 1420 МГц. Это частота излучения нейтрального водорода, которую астрономы давно считали естественным каналом для межзвёздной связи. Поэтому сигнал и стал самым известным кандидатом SETI.",
+      "Повторить его не удалось ни Big Ear, ни другим телескопам, хотя искали десятилетиями. Версия про комету в 2017 году не выдержала критики. В 2024 году группа Абеля Мендеса предложила природное объяснение: облако холодного водорода внезапно вспыхнуло, когда его осветил мощный кратковременный источник вроде вспышки магнитара. Пока это гипотеза. В этом опыте настоящий столбец 6EQUJ5 можно расшифровать самому."
+    ],
+    "en": [
+      "On 15 August 1977 Ohio State University's Big Ear radio telescope picked up a narrowband signal from the direction of Sagittarius. A few days later the volunteer astronomer Jerry Ehman, going through the printouts, circled the column “6EQUJ5” in red pen and wrote “Wow!” in the margin. The name stuck.",
+      "The letters and digits on the printout are the signal's strength relative to background noise. The digits 0 to 9 stand for themselves, then come letters: A is 10, B is 11, and so on up to Z at 35. The sequence 6, E, Q, U, J, 5 shows the signal rising and falling as the telescope, fixed relative to the Earth, swept past the source. The peak “U” means the signal was about thirty times stronger than the noise.",
+      "The signal lasted about 72 seconds, exactly as long as a source stays in the telescope's beam, and arrived near 1420 MHz. That is the emission frequency of neutral hydrogen, long considered a natural channel for interstellar communication, which is why the signal became the most famous SETI candidate.",
+      "Neither Big Ear nor any other telescope has detected it again, despite decades of searching. A comet explanation proposed in 2017 did not hold up. In 2024 Abel Méndez's group proposed a natural cause: a cloud of cold hydrogen briefly brightened when a powerful transient source, such as a magnetar flare, lit it up. For now it is a hypothesis. In this experiment you can decode the real 6EQUJ5 column yourself."
+    ],
+    "pt": [
+      "Em 15 de agosto de 1977, o radiotelescópio Big Ear, da Universidade Estadual de Ohio, captou um sinal de banda estreita vindo da direção de Sagitário. Dias depois, o astrônomo voluntário Jerry Ehman, revisando as impressões, circulou com caneta vermelha a coluna “6EQUJ5” e escreveu “Wow!” na margem. O nome pegou.",
+      "As letras e os algarismos da impressão são a intensidade do sinal em relação ao ruído de fundo. Os algarismos de 0 a 9 valem o próprio número, depois vêm letras: A é 10, B é 11, e assim até Z, que é 35. A sequência 6, E, Q, U, J, 5 mostra o sinal subindo e descendo enquanto o telescópio, fixo em relação à Terra, passava pela fonte. O pico “U” quer dizer que o sinal era cerca de trinta vezes mais forte que o ruído.",
+      "O sinal durou uns 72 segundos, exatamente o tempo que uma fonte fica no feixe do telescópio, e chegou perto de 1420 MHz. É a frequência de emissão do hidrogênio neutro, considerada há muito tempo um canal natural para comunicação interestelar. Por isso o sinal virou o candidato mais famoso do SETI.",
+      "Nem o Big Ear nem outro telescópio voltou a captá-lo, apesar de décadas de busca. A explicação por um cometa, proposta em 2017, não se sustentou. Em 2024, o grupo de Abel Méndez propôs uma causa natural: uma nuvem de hidrogênio frio brilhou de repente ao ser iluminada por uma fonte forte e passageira, como uma explosão de magnetar. Por enquanto é uma hipótese. Neste experimento você mesmo pode decifrar a coluna 6EQUJ5 original."
+    ],
+    "es": [
+      "El 15 de agosto de 1977, el radiotelescopio Big Ear de la Universidad Estatal de Ohio captó una señal de banda estrecha procedente de la dirección de Sagitario. Días después, el astrónomo voluntario Jerry Ehman, al revisar las impresiones, rodeó con bolígrafo rojo la columna “6EQUJ5” y escribió “Wow!” en el margen. El nombre se quedó.",
+      "Las letras y los dígitos de la impresión son la intensidad de la señal respecto al ruido de fondo. Los dígitos del 0 al 9 valen su propio número, luego vienen letras: A es 10, B es 11, y así hasta Z, que es 35. La secuencia 6, E, Q, U, J, 5 muestra la señal subiendo y bajando mientras el telescopio, fijo respecto a la Tierra, pasaba por la fuente. El pico “U” significa que la señal era unas treinta veces más fuerte que el ruido.",
+      "La señal duró unos 72 segundos, justo el tiempo que una fuente permanece en el haz del telescopio, y llegó cerca de 1420 MHz. Es la frecuencia de emisión del hidrógeno neutro, considerada desde hace mucho un canal natural para la comunicación interestelar. Por eso la señal se convirtió en el candidato más famoso del SETI.",
+      "Ni Big Ear ni ningún otro telescopio volvió a captarla, pese a décadas de búsqueda. La explicación de un cometa, propuesta en 2017, no se sostuvo. En 2024, el grupo de Abel Méndez propuso una causa natural: una nube de hidrógeno frío brilló de golpe al ser iluminada por una fuente intensa y pasajera, como una erupción de magnetar. Por ahora es una hipótesis. En este experimento usted mismo puede descifrar la columna 6EQUJ5 original."
+    ]
+  },
+  "faq": {
+    "ru": [
+      { "q": "Что означает 6EQUJ5?", "a": "Мощность сигнала относительно шума в шести последовательных измерениях. Цифры означают сами себя, буквы продолжают счёт: A — 10, Z — 35. Пик «U» соответствует примерно тридцатикратному превышению шума." },
+      { "q": "Сигнал «Wow!» прислали инопланетяне?", "a": "Неизвестно. Сигнал больше ни разу не повторился, поэтому проверить искусственное происхождение нельзя. Есть природные гипотезы, последняя из них, 2024 года, связывает его со вспышкой облака водорода." },
+      { "q": "Сигнал «Wow!» повторялся?", "a": "Нет. Его искали Big Ear, телескопы Very Large Array, Allen Telescope Array и другие, но ничего похожего в том направлении не нашли." }
+    ],
+    "en": [
+      { "q": "What does 6EQUJ5 mean?", "a": "The signal's strength relative to noise in six consecutive measurements. Digits stand for themselves and letters continue the count: A is 10, Z is 35. The peak “U” corresponds to about thirty times the noise level." },
+      { "q": "Was the Wow! signal from aliens?", "a": "Nobody knows. The signal never repeated, so an artificial origin cannot be tested. There are natural hypotheses; the latest, from 2024, links it to a hydrogen cloud that briefly brightened." },
+      { "q": "Was the Wow! signal ever detected again?", "a": "No. Big Ear, the Very Large Array, the Allen Telescope Array and others searched that part of the sky and found nothing like it." }
+    ],
+    "pt": [
+      { "q": "O que significa 6EQUJ5?", "a": "A intensidade do sinal em relação ao ruído em seis medições seguidas. Os algarismos valem o próprio número e as letras continuam a contagem: A é 10, Z é 35. O pico “U” corresponde a cerca de trinta vezes o nível do ruído." },
+      { "q": "O sinal Wow! veio de alienígenas?", "a": "Ninguém sabe. O sinal nunca se repetiu, então não há como testar uma origem artificial. Existem hipóteses naturais; a mais recente, de 2024, o liga a uma nuvem de hidrogênio que brilhou por um instante." },
+      { "q": "O sinal Wow! foi captado de novo?", "a": "Não. O Big Ear, o Very Large Array, o Allen Telescope Array e outros vasculharam aquela região do céu e não acharam nada parecido." }
+    ],
+    "es": [
+      { "q": "¿Qué significa 6EQUJ5?", "a": "La intensidad de la señal respecto al ruido en seis mediciones seguidas. Los dígitos valen su propio número y las letras siguen la cuenta: A es 10, Z es 35. El pico “U” corresponde a unas treinta veces el nivel del ruido." },
+      { "q": "¿La señal Wow! vino de extraterrestres?", "a": "Nadie lo sabe. La señal nunca se repitió, así que no hay forma de comprobar un origen artificial. Hay hipótesis naturales; la más reciente, de 2024, la vincula a una nube de hidrógeno que brilló un instante." },
+      { "q": "¿Se volvió a detectar la señal Wow!?", "a": "No. Big Ear, el Very Large Array, el Allen Telescope Array y otros buscaron en esa zona del cielo y no encontraron nada parecido." }
+    ]
+  }
+}

@@ -5,7 +5,8 @@ import { getChapterHtml, getManifest, resolveBookLang } from "@/lib/library";
 import { pickLocalized } from "@/lib/i18n";
 import type { SupportedLocale } from "@/lib/get-locale";
 import type { InteractiveItem } from "@/lib/interactive";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+import { getAnswer } from "@/lib/answers";
 import { join } from "node:path";
 
 // Опыт как самостоятельная страница: книга, глава, ссылка прямо на место в тексте
@@ -19,6 +20,13 @@ export type ExperimentView = {
   caption: string;
   /** Как явление ищут (content/interactive-seo.json): для <title>, description и подзаголовка. */
   seo: { title: string; description: string } | null;
+  /** «Что такое X» (content/interactive-about/<id>.json): объяснение явления, FAQ и ответы по теме. */
+  about: {
+    heading: string;
+    body: string[];
+    faq: { question: string; answer: string }[];
+    related: { href: string; title: string }[];
+  } | null;
   bookSlug: string;
   bookTitle: string;
   lang: SupportedLocale;
@@ -44,6 +52,7 @@ export function experimentView(it: InteractiveItem, locale: SupportedLocale): Ex
     title: it.title[locale] ?? it.title.en,
     caption: it.caption[locale] ?? it.caption.en,
     seo: seoFor(it.id, locale),
+    about: aboutFor(it.id, locale),
     bookSlug: it.book,
     bookTitle: pickLocalized(book.titles, locale),
     lang,
@@ -69,6 +78,30 @@ function seoFor(id: string, locale: SupportedLocale): ExperimentView["seo"] {
   const title = e?.title?.[locale];
   const description = e?.description?.[locale];
   return title && description ? { title, description } : null;
+}
+
+type AboutFile = {
+  related?: string[];
+  heading: Record<string, string>;
+  body: Record<string, string[]>;
+  faq?: Record<string, { q: string; a: string }[]>;
+};
+function aboutFor(id: string, locale: SupportedLocale): ExperimentView["about"] {
+  const f = join(process.cwd(), "content/interactive-about", `${id}.json`);
+  if (!existsSync(f)) return null;
+  const d = JSON.parse(readFileSync(f, "utf8")) as AboutFile;
+  const heading = d.heading[locale];
+  const body = d.body[locale];
+  if (!heading || !body?.length) return null;
+  return {
+    heading,
+    body,
+    faq: (d.faq?.[locale] ?? []).map((x) => ({ question: x.q, answer: x.a })),
+    related: (d.related ?? []).flatMap((slug) => {
+      const a = getAnswer(slug, locale);
+      return a ? [{ href: `/${locale}/answers/${slug}`, title: a.title }] : [];
+    }),
+  };
 }
 
 const MARK = "<!--nc-x-here-->";
