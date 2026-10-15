@@ -55,6 +55,8 @@ export async function GET(req: NextRequest) {
       body: JSON.stringify({
         priceCode: priceCodeFor(item, cur),
         mode: "PAYMENT",
+        // Страница оплаты на языке страницы, с которой пришёл читатель.
+        locale: back.pathname.split("/")[1] || undefined,
         userId: session.sub,
         successUrl: success.toString(),
         errorUrl: back.toString(),
