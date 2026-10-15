@@ -1,0 +1,12 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.neuralcosmology/neuralcosmology",
+  "title": "Neural Cosmology",
+  "description": "Answers, essays, experiments and books on consciousness and cosmology: search, read, buy.",
+  "websiteUrl": "https://neuralcosmology.com",
+  "version": "1.0.0",
+  "remotes": [
+    { "type": "streamable-http", "url": "https://neuralcosmology.com/mcp" },
+    { "type": "streamable-http", "url": "https://neuralcosmology.com/mcp/account" }
+  ]
+}
