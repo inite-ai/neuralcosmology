@@ -63,3 +63,11 @@ export const pricing = {
   book: { amount: PRICES.book.USD, currency: "USD", label: formatPrice(PRICES.book.USD, "USD") },
   library: { amount: PRICES.library.USD, currency: "USD", label: formatPrice(PRICES.library.USD, "USD") },
 } as const;
+
+// Валюта цены в разметке Book (schema.org Offer) по языку страницы: поиск в Бразилии
+// и России показывает цену в своей валюте; остальным — доллары.
+export function schemaOfferFor(item: "book" | "library", locale: string): { price: number; currency: Currency } {
+  const want: Currency = locale === "pt" ? "BRL" : locale === "ru" ? "RUB" : "USD";
+  const currency = ACTIVE_CURRENCIES.includes(want) ? want : "USD";
+  return { price: PRICES[item][currency], currency };
+}

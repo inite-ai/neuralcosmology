@@ -191,7 +191,8 @@ export function bookSchema(args: {
     genre: args.genre,
     bookFormat: "https://schema.org/EBook",
     creativeWorkStatus: bookStatus,
-    image: cover,
+    // Растровая обложка первой: SVG Google в расширенных результатах не берёт.
+    image: [`${SITE_URL}/og/covers/${args.slug}.png`, cover],
     author: { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     isPartOf: { "@id": `${SITE_URL}/#website` },

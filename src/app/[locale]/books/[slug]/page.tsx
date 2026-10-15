@@ -10,7 +10,7 @@ import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/li
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getManifest, resolveBookLang } from "@/lib/library";
 import { paywallEnabled } from "@/lib/access";
-import { pricing } from "@/content/pricing";
+import { schemaOfferFor } from "@/content/pricing";
 import TocList from "@/components/reader/TocList";
 import ContinueReading from "@/components/reader/ContinueReading";
 import JsonLd from "@/components/seo/JsonLd";
@@ -121,7 +121,7 @@ export default async function BookDetailPage({
           license: book.license,
           licenseUrl: book.licenseUrl,
           companionPaperSlug: book.companionPaperSlug,
-          offer: forSale ? { price: pricing.book.amount, currency: pricing.book.currency } : undefined,
+          offer: forSale ? schemaOfferFor("book", locale) : undefined,
           readUrl: chapters[0] ? `https://neuralcosmology.com/${readLang}/read/${book.slug}/${chapters[0].id}` : undefined,
         })}
       />
