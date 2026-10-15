@@ -26,7 +26,8 @@ type Entry = {
 const date = (iso?: string) => (iso && !Number.isNaN(Date.parse(iso)) ? new Date(iso) : undefined);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // lastmod — только настоящая дата правки: «сейчас» у всех страниц Google быстро
+  // перестаёт читать, и сигнал пропадает и для тех, где дата верная.
   const staticPaths: Entry[] = [
     { path: "", priority: 1.0 },
     { path: "/books", priority: 0.9 },
@@ -68,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localised: MetadataRoute.Sitemap = all.flatMap(({ path, priority, locales = SUPPORTED_LOCALES, modified }) =>
     locales.map((locale) => ({
       url: `${BASE}/${locale}${path}`,
-      lastModified: date(modified) ?? now,
+      ...(date(modified) ? { lastModified: date(modified) } : {}),
       priority,
       alternates: {
         languages: {
@@ -91,7 +92,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const aiEntries: MetadataRoute.Sitemap = aiSurfaces.map((s) => ({
     url: `${BASE}${s.path}`,
-    lastModified: now,
     priority: s.priority,
   }));
 
@@ -108,7 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
           const images = illustrations(b.slug, c.id).map((it) => `${BASE}/book/ill/${it.id}.webp`);
           return {
             url: `${BASE}/${lang}/read/${b.slug}/${c.id}`,
-            lastModified: now,
             priority: 0.6,
             ...(peers.length > 1
               ? { alternates: { languages: Object.fromEntries(peers.map((l) => [l, `${BASE}/${l}/read/${b.slug}/${c.id}`])) } }

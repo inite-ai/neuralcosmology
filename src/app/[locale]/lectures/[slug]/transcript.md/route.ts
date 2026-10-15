@@ -22,6 +22,9 @@ export async function GET(
   if (!result || !lecture) notFound();
 
   const canonicalUrl = `https://neuralcosmology.com/${locale}/lectures/${slug}`;
+  // Один и тот же текст лежит по четырём языковым адресам — каноническим считаем
+  // адрес на языке самой расшифровки, иначе Google видит дубли без canonical.
+  const selfUrl = `https://neuralcosmology.com/${result.locale}/lectures/${slug}/transcript.md`;
   const fallbackNote =
     result.locale !== locale
       ? `<!-- Transcript shown in ${result.locale} — no ${locale} version yet. -->\n`
@@ -33,7 +36,7 @@ export async function GET(
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=86400",
       "X-Robots-Tag": "index, follow, max-snippet:-1",
-      Link: `<${canonicalUrl}>; rel="canonical"`,
+      Link: `<${selfUrl}>; rel="canonical"`,
     },
   });
 }
