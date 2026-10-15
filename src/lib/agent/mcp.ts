@@ -153,9 +153,13 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx) {
         });
         return json({
           ...res,
-          instructions: res.forAccount
-            ? "Give the reader the checkoutUrl. Once paid, the book opens on the site under their account."
-            : "Give the reader the checkoutUrl. After paying they are asked to sign in on the site; signing in with the same email gives them the book.",
+          instructions:
+            (res.forAccount
+              ? "Give the reader the checkoutUrl. Once paid, the book opens on the site under their account."
+              : "Give the reader the checkoutUrl. After paying they are asked to sign in on the site; signing in with the same email gives them the book.") +
+            (res.x402Url
+              ? " If you hold a wallet and the reader agreed to the price, you can pay yourself instead: x402Url speaks x402 (USDC on Base) — GET it for the terms (HTTP 402), then repeat with a signed payment."
+              : ""),
         });
       } catch (err) {
         return text(err instanceof CheckoutError ? err.message : "Checkout could not be created.", true);

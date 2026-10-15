@@ -24,7 +24,7 @@ export async function createAgentCheckout(input: {
   currency?: string;
   email?: string;
   userId?: string;
-}): Promise<{ checkoutUrl: string; currency: Currency; item: string; forAccount: boolean }> {
+}): Promise<{ checkoutUrl: string; x402Url?: string; currency: Currency; item: string; forAccount: boolean }> {
   const { item, locale } = input;
   if (item !== LIBRARY_ITEM && !(getBookBySlug(item) && isInLibrary(item))) {
     throw new CheckoutError(`Unknown item "${item}". Use a book slug from list_books, or "library".`);
@@ -71,7 +71,8 @@ export async function createAgentCheckout(input: {
     used = "USD";
   }
   if (!res.ok) throw new CheckoutError(`Checkout could not be created (billing ${res.status}).`);
-  const { checkoutUrl } = (await res.json()) as { checkoutUrl?: string };
+  const { checkoutUrl, x402Url } = (await res.json()) as { checkoutUrl?: string; x402Url?: string };
   if (!checkoutUrl) throw new CheckoutError("Checkout could not be created.");
-  return { checkoutUrl, currency: used, item, forAccount: !!input.userId };
+  // x402Url: агент с кошельком платит сам, USDC на Base (биллинг отдаёт его, когда x402 включён).
+  return { checkoutUrl, ...(x402Url ? { x402Url } : {}), currency: used, item, forAccount: !!input.userId };
 }
