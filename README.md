@@ -105,6 +105,8 @@ AI agents can read the site and buy books for a reader:
 - `/llms.txt`, `/llms-full.txt`, `/catalog.json`, `/.well-known/mcp.json`.
 - MCP server: `/mcp` is open to any agent (search, read, list books, open a checkout tied to the reader's email). `/mcp/account` acts for a reader who signed in with INITE: the agent's MCP client signs them in by itself, their books read in full, and an order is paid straight from their INITE wallet if they allowed this site (switched on by `WALLET_PAY_ENABLED=1`).
 
+In ChatGPT, Claude and other clients that show MCP Apps, `list_books` comes as a card with covers, prices and a Buy button, and `create_checkout` as an order card with every way to pay (INITE wallet, card or PIX). Other clients get the same data as text.
+
 The plumbing comes from the shared INITE packages (inite-shared): `@inite/mcp/site`, `@inite/billing/purchases` and `@inite/content/ai`. This site builds with npm, so they live as tarballs in `vendor/`. To update them from inite-shared `main`:
 
 ```bash

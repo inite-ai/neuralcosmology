@@ -7,7 +7,17 @@ import { CheckoutError, createAgentCheckout } from "@/lib/agent/checkout";
 import { ownsBook } from "@/lib/access";
 import { books } from "@/content/books";
 import { siteUrl } from "@/lib/auth";
-import { createSiteMcp, protectedResource, textResult, jsonResult, type SiteTool, type ToolResult } from "@inite/mcp/site";
+import {
+  catalogApp,
+  createSiteMcp,
+  jsonResult,
+  orderApp,
+  protectedResource,
+  textResult,
+  type SiteTool,
+  type ToolResult,
+} from "@inite/mcp/site";
+import { LIBRARY_ITEM, PRICES, formatPrice, type Currency } from "@/content/pricing";
 
 // MCP-сервер сайта на @inite/mcp/site (Streamable HTTP без сессий, ответы
 // JSON). Две точки: /mcp — без входа; /mcp/account — агент вошёл от имени
@@ -60,7 +70,7 @@ function tools(ctx: Ctx) {
       title: "List books and prices",
       description:
         "The books, their languages, chapters (free, open opening, or paid) and prices of online access in each currency.",
-      inputSchema: { type: "object", properties: {} },
+      inputSchema: { type: "object", properties: { locale: localeSchema } },
       annotations: { readOnlyHint: true, openWorldHint: false },
     },
     {
@@ -141,8 +151,24 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
       const md = markdownFor(path, { unlocked: (slug) => mine.has(slug) });
       return md ? text(md.body) : text(`No page at ${path}. Use search to find one.`, true);
     }
-    case "list_books":
-      return json(catalog());
+    case "list_books": {
+      // The catalog as data, plus `items` for the card in the chat.
+      const site = siteUrl();
+      const locale = loc(args.locale) ?? "en";
+      const items = books
+        .filter((b) => catalog().books.find((c) => c.slug === b.slug)?.online)
+        .map((b) => ({
+          title: b.titles[locale] ?? b.titles.en,
+          subtitle: (b.hook as Record<string, string>)[locale] ?? (b.hook as Record<string, string>).en,
+          image: b.coverImage ? `${site}${b.coverImage}` : undefined,
+          price: formatPrice(PRICES.book.USD, "USD"),
+          url: `${site}/${locale}/books/${b.slug}`,
+          ...(ctx.reader
+            ? { action: { tool: "create_checkout", arguments: { item: b.slug, locale }, label: "Buy" } }
+            : {}),
+        }));
+      return json({ ...catalog(), title: "Neural Cosmology · books", items });
+    }
     case "create_checkout": {
       const item = str(args.item);
       if (!item) return text("item is required", true);
@@ -155,9 +181,20 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
           email: ctx.reader ? ctx.reader.email : str(args.email),
           userId: ctx.reader?.sub,
         });
+        // What the order card shows: the book, the price, and the ways to pay.
+        const book = books.find((b) => b.slug === res.item);
+        const card = {
+          title: res.item === LIBRARY_ITEM ? "The whole library" : (book?.titles.en ?? res.item),
+          image: book?.coverImage ? `${siteUrl()}${book.coverImage}` : undefined,
+          price: formatPrice(PRICES[res.item === LIBRARY_ITEM ? "library" : "book"][res.currency as Currency], res.currency as Currency),
+          status:
+            res.wallet?.status === "paid" ? (res.wallet.confirming ? "confirming" : "paid") : "open",
+          ...(res.wallet?.status === "needs_approval" ? { approveUrl: res.wallet.approveUrl } : {}),
+        };
         if (res.wallet?.status === "paid") {
           return json({
             ...res,
+            ...card,
             instructions: res.wallet.confirming
               ? "Paid from the reader's INITE wallet; the payment is being confirmed on Base and the book opens in a minute or two. Do not send the checkoutUrl."
               : "Paid from the reader's INITE wallet. The book is open on the site under their account. Do not send the checkoutUrl.",
@@ -166,18 +203,20 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
         if (res.wallet?.status === "needs_approval") {
           return json({
             ...res,
+            ...card,
             instructions:
               "Give the reader the wallet.approveUrl: one page where they allow this site to charge their INITE wallet (with a passkey), top up if needed, and pay this order. Or give them the checkoutUrl to pay by card or PIX.",
           });
         }
         return json({
           ...res,
+          ...card,
           instructions:
             (res.forAccount
               ? "Give the reader the checkoutUrl. Once paid, the book opens on the site under their account."
               : "Give the reader the checkoutUrl. After paying they are asked to sign in on the site; signing in with the same email gives them the book.") +
             (res.x402Url
-              ? " If you hold a wallet and the reader agreed to the price, you can pay yourself instead: x402Url speaks x402 (USDC on Base) — GET it for the terms (HTTP 402), then repeat with a signed payment. An agent connected to the reader's INITE wallet (https://billing.inite.ai/mcp/wallet) can simply call its `pay` tool with x402Url and the price as maxAmount."
+              ? " If you hold a wallet and the reader agreed to the price, you can pay yourself instead: x402Url speaks x402 (USDC on Base) — GET it for the terms (HTTP 402), then repeat with a signed payment. An agent connected to the reader's INITE wallet, or one with its own INITE wallet (https://billing.inite.ai/mcp/wallet, tool `pay`), passes x402Url and the price as maxAmount."
               : ""),
         });
       } catch (err) {
@@ -197,8 +236,15 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
 const INSTRUCTIONS =
   "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Paid book chapters show an open opening; create_checkout opens a payment link for a reader.";
 
+// Cards in the chat (ChatGPT, Claude and other MCP Apps hosts).
+const cards = {
+  catalog: catalogApp("neuralcosmology", ["https://neuralcosmology.com"]),
+  order: orderApp("neuralcosmology", ["https://neuralcosmology.com"]),
+};
+
 export const mcp = createSiteMcp<Ctx>({
   name: "neuralcosmology",
+  apps: [cards.catalog, cards.order],
   title: "Neural Cosmology",
   version: "1.1.0",
   instructions: (ctx) =>
@@ -209,6 +255,8 @@ export const mcp = createSiteMcp<Ctx>({
   tools: (ctx): SiteTool<Ctx>[] =>
     tools(ctx).map((tool) => ({
       ...tool,
+      ...(tool.name === "list_books" ? { ui: { app: cards.catalog, invoking: "Looking at the books…", invoked: "Books" } } : {}),
+      ...(tool.name === "create_checkout" ? { ui: { app: cards.order, invoking: "Opening the order…", invoked: "Order" } } : {}),
       call: async (args: Record<string, unknown>) =>
         (await callTool(tool.name, args, ctx)) ?? text(`Unknown tool: ${tool.name}`, true),
     })),
