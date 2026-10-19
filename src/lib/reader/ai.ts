@@ -77,7 +77,7 @@ export function streamAnswer(opts: {
   });
 }
 
-async function complete(systemText: string, user: string, maxTokens: number, effort: "low" | "medium"): Promise<string> {
+export async function complete(systemText: string, user: string, maxTokens: number, effort: "low" | "medium"): Promise<string> {
   const res = await anthropic().beta.messages.create({
     model: MODEL(),
     max_tokens: maxTokens,
