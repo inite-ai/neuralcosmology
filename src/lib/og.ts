@@ -14,7 +14,7 @@ type Card = {
   subtitle?: string;
   kind: OgKind;
   locale: SupportedLocale | string;
-  // Путь в public: /media/*.jpg, /covers/*.svg, /essays/covers/*.png
+  // Путь в public: /media/*.jpg, /covers/*.webp, /essays/covers/*.png
   image?: string | null;
 };
 

@@ -16,7 +16,7 @@ export default function BookCard({ book, locale, index }: { book: Book; locale: 
 
   return (
     <Link href={`/${locale}/books/${book.slug}`} className="group flex flex-col bg-bg p-5 md:p-7 transition-colors hover:bg-bg-raised">
-      <div className="relative aspect-[3/4] overflow-hidden bg-bg-sunk hairline">
+      <div className="relative aspect-[2/3] overflow-hidden bg-bg-sunk hairline">
         <Image
           src={book.coverImage}
           alt={title}

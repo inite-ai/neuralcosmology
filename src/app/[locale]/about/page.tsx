@@ -1,3 +1,4 @@
+import AlsoByAuthor from "@/components/books/AlsoByAuthor";
 import type { Metadata } from "next";
 import { social } from "@/lib/og";
 import { seoTitle } from "@/content/seo";
@@ -160,6 +161,10 @@ export default async function AboutPage({
               {SISTER_ABOUT[locale].cta} →
             </a>
           </div>
+        </section>
+
+        <section className="mt-10">
+          <AlsoByAuthor locale={locale} checker />
         </section>
 
         <section className="mt-10">

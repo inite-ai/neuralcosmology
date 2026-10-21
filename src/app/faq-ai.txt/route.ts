@@ -45,7 +45,7 @@ A: The operational substrate is the Sixth language at https://github.com/neuralc
 [Books]
 
 Q: What books does Mikhail Savchenko write?
-A: Four books: "The Celestial Code" (non-fiction, the argument behind the programme in plain language, ~70% complete, target spring 2027); "Conscious Selection" (non-fiction sequel to The Celestial Code: selection mechanisms across seven levels and the author's own experimental set-ups, including the one where the first book's hypothesis failed; chapter draft in progress, Russian); "Bugs Academy" (sci-fi novel, complete, 231 pp, seeking publisher); "Era of Architects" (literary sci-fi sequel, 3 of 17 chapters in progress).
+A: Four books: "The Celestial Code" (non-fiction: published research on the cosmic web, bioelectricity, learning-network cosmology and consciousness brought into one testable hypothesis; 211 pp, every chapter online); "Conscious Selection" (non-fiction sequel: selection before choice in vision, memory, decoherence and evolution, and what survived of the first book's hypothesis; draft in proofreading); "Bugs Academy" (sci-fi novel, finished, 232 pp, seeking a publisher); "Era of Architects" (sci-fi sequel set in Moscow in 2033, finished, 246 pp). All four can be read online; the first chapters are free.
 URL: ${BASE}/en/books
 
 [Contact]

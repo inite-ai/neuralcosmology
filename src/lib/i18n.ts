@@ -239,24 +239,24 @@ const en: Dict = {
     directionsSectionTitle: "Three directions",
     directionsEyebrow: { books: "Books", science: "Science", essays: "Essays" },
     directionsTitle: {
-      books: "Four books, one universe.",
+      books: "Four books.",
       science: "The research programme.",
       essays: "Long-form writing.",
     },
     directionsBlurb: {
       books:
-        "Two non-fiction volumes, a science-fiction novel and its literary sequel: the same questions asked in two voices.",
+        "Two books about science, where the author builds a hypothesis and then tests it, and two novels about the physicist Dan Reinov and his daughter. The first chapters of each are free to read.",
       science: "A preprint, code and data, built so that they can be proven wrong.",
       essays:
-        "Where physics meets prose: one idea, argued to the end.",
+        "Essays on consciousness, cosmology and memory, each built around one question.",
     },
     exploreCta: "Explore",
   },
   books: {
-    indexEyebrow: "The series",
-    indexTitle: "Four books, one universe, two lines.",
+    indexEyebrow: "Books",
+    indexTitle: "Two books about science and two novels.",
     indexLead:
-      "A non-fiction investigation and its sequel, where the author puts his own hypothesis to the test; a science-fiction novel about the implications, and a literary sequel that follows the characters once the anomalies go quiet. Same questions, asked with evidence and with story.",
+      "In the non-fiction the author gathers published work on the brain, cosmology and biology into one hypothesis, then tests it in the second book and shows what failed. The novels hand the same ideas to people: the physicist Dan Reinov in Bugs Academy, his daughter in Era of Architects. All four can be read online, and the first chapters are free.",
     readMore: "Read more →",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
@@ -559,25 +559,25 @@ const ru: Dict = {
     directionsSectionTitle: "Три двери",
     directionsEyebrow: { books: "Книги", science: "Наука", essays: "Эссе" },
     directionsTitle: {
-      books: "Четыре книги, одна вселенная.",
+      books: "Четыре книги.",
       science: "Исследовательская программа.",
       essays: "Длинная проза.",
     },
     directionsBlurb: {
       books:
-        "Две книги нон-фикшн, фантастический роман и его литературное продолжение: одни и те же вопросы, заданные двумя голосами.",
+        "Две книги о науке, где автор строит гипотезу и затем проверяет её, и два романа о физике Дане Рейнове и его дочери. Первые главы каждой открыты бесплатно.",
       science:
         "Препринт, код и данные. Программа устроена так, чтобы её можно было опровергнуть.",
       essays:
-        "Там, где физика встречается с прозой: одна мысль, доведённая до конца.",
+        "Эссе о сознании, космологии и памяти, каждое построено вокруг одного вопроса.",
     },
     exploreCta: "Открыть",
   },
   books: {
-    indexEyebrow: "Серия",
-    indexTitle: "Четыре книги — одна вселенная, две линии.",
+    indexEyebrow: "Книги",
+    indexTitle: "Две книги о науке и два романа.",
     indexLead:
-      "Нон-фикшн и его продолжение, где автор проверяет собственную гипотезу; фантастический роман на том же материале и продолжение романа. Две линии, одна гипотеза.",
+      "В нон-фикшн автор собирает опубликованные работы о мозге, космологии и биологии в одну гипотезу, а во второй книге проверяет её и показывает, что проверки не выдержало. В романах те же идеи достаются людям: физику Дану Рейнову в «Академии Багов» и его дочери в «Эре Архитекторов». Все четыре книги можно читать онлайн, первые главы открыты бесплатно.",
     readMore: "Подробнее →",
     allBooks: "← Все книги",
     rightsInquiry: "Издателям: права на книгу",
@@ -880,24 +880,24 @@ const pt: Dict = {
     directionsSectionTitle: "Três portas",
     directionsEyebrow: { books: "Livros", science: "Ciência", essays: "Ensaios" },
     directionsTitle: {
-      books: "Quatro livros, um universo.",
+      books: "Quatro livros.",
       science: "O programa de pesquisa.",
       essays: "Prosa longa.",
     },
     directionsBlurb: {
       books:
-        "Dois livros de não ficção, um romance de ficção científica e sua continuação literária: as mesmas perguntas em duas vozes.",
+        "Dois livros sobre ciência, em que o autor constrói uma hipótese e depois a testa, e dois romances sobre o físico Dan Reinov e a filha dele. Os primeiros capítulos de cada um são gratuitos.",
       science: "Um preprint, código e dados, feitos para poderem ser refutados.",
       essays:
-        "Onde a física encontra a prosa: uma ideia levada até o fim.",
+        "Ensaios sobre consciência, cosmologia e memória, cada um construído em torno de uma pergunta.",
     },
     exploreCta: "Entrar",
   },
   books: {
-    indexEyebrow: "A série",
-    indexTitle: "Quatro livros, um universo, duas linhas.",
+    indexEyebrow: "Livros",
+    indexTitle: "Dois livros sobre ciência e dois romances.",
     indexLead:
-      "Uma investigação de não ficção e sua continuação, em que o autor submete a própria hipótese ao teste; um romance de ficção científica sobre suas consequências e uma continuação literária que acompanha os personagens depois que as anomalias silenciam. As mesmas perguntas, com provas e com enredo.",
+      "Na não ficção, o autor reúne trabalhos publicados sobre o cérebro, a cosmologia e a biologia numa só hipótese e, no segundo livro, a testa e mostra o que não resistiu. Os romances entregam as mesmas ideias a pessoas: ao físico Dan Reinov em Academia dos Bugs e à filha dele em Era dos Arquitetos. Os quatro podem ser lidos online, e os primeiros capítulos são gratuitos.",
     readMore: "Ler mais →",
     allBooks: "← Todos os livros",
     rightsInquiry: "Para editoras: direitos",
@@ -1200,23 +1200,23 @@ const es: Dict = {
     directionsSectionTitle: "Tres puertas",
     directionsEyebrow: { books: "Libros", science: "Ciencia", essays: "Ensayos" },
     directionsTitle: {
-      books: "Cuatro libros, un universo.",
+      books: "Cuatro libros.",
       science: "El programa de investigación.",
       essays: "Prosa larga.",
     },
     directionsBlurb: {
       books:
-        "Dos libros de no ficción, una novela de ciencia ficción y su continuación literaria: las mismas preguntas en dos voces.",
+        "Dos libros sobre ciencia, en los que el autor construye una hipótesis y luego la pone a prueba, y dos novelas sobre el físico Dan Reinov y su hija. Los primeros capítulos de cada uno son gratis.",
       science: "Un preprint, código y datos, hechos para poder refutarse.",
-      essays: "Donde la física se cruza con la prosa: una idea llevada hasta el final.",
+      essays: "Ensayos sobre la consciencia, la cosmología y la memoria, cada uno construido en torno a una pregunta.",
     },
     exploreCta: "Entrar",
   },
   books: {
-    indexEyebrow: "La serie",
-    indexTitle: "Cuatro libros, un universo, dos líneas.",
+    indexEyebrow: "Libros",
+    indexTitle: "Dos libros sobre ciencia y dos novelas.",
     indexLead:
-      "Una investigación de no ficción y su continuación, en la que el autor somete su propia hipótesis a prueba; una novela de ciencia ficción sobre sus implicaciones y una continuación literaria que acompaña a los personajes cuando las anomalías callan. Las mismas preguntas, con pruebas y con trama.",
+      "En la no ficción, el autor reúne trabajos publicados sobre el cerebro, la cosmología y la biología en una sola hipótesis y, en el segundo libro, la pone a prueba y muestra lo que no resistió. Las novelas entregan las mismas ideas a personas: al físico Dan Reinov en Academia de los Bugs y a su hija en Era de los Arquitectos. Los cuatro se pueden leer en línea, y los primeros capítulos son gratis.",
     readMore: "Leer más →",
     allBooks: "← Todos los libros",
     rightsInquiry: "Para editoriales: derechos",
