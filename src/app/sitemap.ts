@@ -23,6 +23,10 @@ type Entry = {
   modified?: string;
 };
 
+// Платные главы стали видны поиску (открытое начало, index вместо noindex) этим днём.
+// Google обходил их раньше и помнит noindex; честный lastmod зовёт его перечитать.
+const LEAD_IN_OPENED = new Date("2026-10-15T00:00:00Z");
+
 const date = (iso?: string) => (iso && !Number.isNaN(Date.parse(iso)) ? new Date(iso) : undefined);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -110,6 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           const images = illustrations(b.slug, c.id).filter((it) => c.free || it.scene === 0).map((it) => `${BASE}/book/ill/${it.id}.webp`);
           return {
             url: `${BASE}/${lang}/read/${b.slug}/${c.id}`,
+            ...(c.free ? {} : { lastModified: LEAD_IN_OPENED }),
             priority: 0.6,
             ...(peers.length > 1
               ? { alternates: { languages: Object.fromEntries(peers.map((l) => [l, `${BASE}/${l}/read/${b.slug}/${c.id}`])) } }
