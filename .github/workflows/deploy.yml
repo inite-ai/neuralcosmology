@@ -107,6 +107,14 @@ jobs:
               # Meta Conversions API (lib/meta-capi.ts): токен из Events Manager → набор данных → Settings
               - META_CAPI_TOKEN=${{ secrets.META_CAPI_TOKEN }}
               - META_TEST_EVENT_CODE=${{ vars.META_TEST_EVENT_CODE }}
+              # Автопостинг цитат (lib/social): приложение Meta для Threads и страниц Facebook.
+              # Токены аккаунтов в env не кладутся: автор подключает аккаунты в /ru/account/social,
+              # токены хранятся в базе зашифрованными. SOCIAL_AUTOPOST=off останавливает расписание.
+              - THREADS_APP_ID=${{ vars.THREADS_APP_ID }}
+              - THREADS_APP_SECRET=${{ secrets.THREADS_APP_SECRET }}
+              - META_APP_ID=${{ vars.META_APP_ID }}
+              - META_APP_SECRET=${{ secrets.META_APP_SECRET }}
+              - SOCIAL_AUTOPOST=${{ vars.SOCIAL_AUTOPOST }}
             volumes:
               - /opt/projects/${{ env.PROJECT_NAME }}/library:/app/library:ro
             labels:

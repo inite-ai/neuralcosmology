@@ -82,6 +82,32 @@ CREATE TABLE IF NOT EXISTS shares (
   id text PRIMARY KEY, book text NOT NULL, lang text NOT NULL, chapter text NOT NULL,
   anchor text NOT NULL, quote text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
 );
+CREATE TABLE IF NOT EXISTS social_accounts (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  network text NOT NULL CHECK (network IN ('telegram','threads','facebook')),
+  external_id text NOT NULL, name text NOT NULL, lang text NOT NULL,
+  token text NOT NULL, token_expires_at timestamptz,
+  hour int NOT NULL DEFAULT 10 CHECK (hour BETWEEN 0 AND 23), tz text NOT NULL DEFAULT 'UTC',
+  enabled boolean NOT NULL DEFAULT true,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  UNIQUE (network, external_id)
+);
+CREATE TABLE IF NOT EXISTS social_quotes (
+  share_id text PRIMARY KEY REFERENCES shares(id),
+  lang text NOT NULL, book text NOT NULL, chapter text NOT NULL,
+  skipped boolean NOT NULL DEFAULT false,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS social_quotes_lang ON social_quotes (lang, skipped, created_at);
+CREATE TABLE IF NOT EXISTS social_posts (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  account_id uuid NOT NULL REFERENCES social_accounts(id) ON DELETE CASCADE,
+  slot text NOT NULL, share_id text NOT NULL REFERENCES shares(id),
+  status text NOT NULL DEFAULT 'sending' CHECK (status IN ('sending','posted','failed','unknown')),
+  attempts int NOT NULL DEFAULT 1, container_id text, post_id text, url text, error text,
+  created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now(),
+  UNIQUE (account_id, slot), UNIQUE (account_id, share_id)
+);
 `;
 
 /** Готовый к работе клиент; схема применяется один раз на процесс. */

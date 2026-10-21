@@ -97,6 +97,16 @@ When sharing links to neuralcosmology.com on social media, they will display ric
 - Description: "You're not in the world. You are the structure. A system of reality navigation through states, memory, and attention."
 - Visual: Custom OG image displaying cosmic theme
 
+### Quotes on social media
+
+Once a day the site posts a quote from the books to Telegram, Threads and a Facebook Page. Each post is the quote card (the same PNG the reader's "Share" button makes), the quote signed with the author and book, and a link to the exact paragraph it comes from.
+
+- **Where the quotes come from.** Claude reads a chapter and suggests a few lines that make sense on their own. Every line is checked against the chapter word for word; anything that isn't there is dropped. Accepted lines are saved as ordinary shared quotes (`/q/{id}`), so the link and the card work like any reader's share.
+- **Setting it up.** The author opens **Account → Quotes on social media** (`/ru/account/social`, only for `AUTHOR_EMAILS`). Telegram: create a bot with @BotFather, make it a channel admin, paste its token and the channel name. Threads and Facebook: press "Connect" and sign in with Meta. Each account has its own quote language, posting hour and time zone. Tokens are stored in the database encrypted with a key derived from `SESSION_SECRET`.
+- **Threads and Facebook need a Meta app** (Threads API use case and Facebook Login with `pages_manage_posts`). Put `THREADS_APP_ID`/`META_APP_ID` in repository variables and `THREADS_APP_SECRET`/`META_APP_SECRET` in secrets; register the redirect URIs `https://neuralcosmology.com/api/admin/social/callback/threads` and `…/callback/facebook`.
+- **A post goes out at most once.** Each account gets one slot per day, held by a unique database row, so a second server or a repeated run can't post again. A post is retried only when the network clearly refused it (up to three times). If the network didn't answer, the post is marked "outcome unknown" and never retried automatically; the author checks the feed and marks it.
+- The author sees the upcoming queue and can remove any quote before it goes out, post right away, or pause an account. `SOCIAL_AUTOPOST=off` stops the schedule.
+
 ## For AI agents
 
 AI agents can read the site and buy books for a reader:
