@@ -4,7 +4,7 @@ import { social } from "@/lib/og";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getBookBySlug } from "@/content/books";
+import { coverFor, getBookBySlug, ogCoverFor } from "@/content/books";
 import { Sheet, Label, Headline } from "@/components/system";
 import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
@@ -55,7 +55,7 @@ export async function generateMetadata({
         "x-default": `${base}/en/books/${slug}`,
       },
     },
-    ...social({ title, description: hook, url: `${base}/${locale}/books/${slug}`, kind: "book", locale, type: "book", image: `/og/covers/${slug}.png` }),
+    ...social({ title, description: hook, url: `${base}/${locale}/books/${slug}`, kind: "book", locale, type: "book", image: ogCoverFor(slug, locale) }),
   };
 }
 
@@ -115,7 +115,7 @@ export default async function BookDetailPage({
           synopsis,
           genre: genreLabel[book.genre],
           status: book.status,
-          coverImage: book.coverImage,
+          coverImage: coverFor(book, locale),
           availableTranslations,
           publicationDate: book.publicationDate,
           pages: book.pages,
@@ -145,7 +145,7 @@ export default async function BookDetailPage({
         <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
           <div className="py-10 md:px-10 lg:rule-r lg:py-16">
             <div className="relative mx-auto aspect-[2/3] max-w-sm overflow-hidden hairline lg:max-w-none">
-              <Image src={book.coverImage} alt={title} fill sizes="(min-width: 1024px) 460px, 90vw" className="object-cover" priority />
+              <Image src={coverFor(book, locale)} alt={title} fill sizes="(min-width: 1024px) 460px, 90vw" className="object-cover" priority />
             </div>
           </div>
 
