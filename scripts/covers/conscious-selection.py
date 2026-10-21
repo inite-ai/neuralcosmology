@@ -1,7 +1,25 @@
 # Обложка «Осознанного Отбора» в системе обложек серии (ср. nk-cover.png «Небесного Кода»):
 # тёмное поле, метки обреза, узкий набор вразрядку. Своей обложки у книги в godacademy нет,
 # это рабочий вариант до настоящей. SVG -> PNG через rsvg-convert, затем webp (cwebp или sips).
-import os, random, subprocess
+import os, random, subprocess, sys
+
+# Надписи по языкам; ru — оригинал.
+TEXT = {
+    "ru": dict(top=("ОТБОР ПРОШЁЛ ДО ТОГО,", "КАК ВЫ ВЫБРАЛИ."), title=("ОСОЗНАННЫЙ", "ОТБОР"), author="МИХАИЛ САВЧЕНКО",
+               stages=["ЗРЕНИЕ", "ВНИМАНИЕ", "ПАМЯТЬ", "СРЕДА", "ЭВОЛЮЦИЯ", "ГИПОТЕЗА", "ВЫБОР"],
+               sub="ЧТО ОСТАЁТСЯ ПОСЛЕ ПРОВЕРКИ", series=("НЕЙРОННАЯ КОСМОЛОГИЯ", "КНИГА 2"), bk="КН. 2"),
+    "en": dict(top=("SELECTION HAPPENED", "BEFORE YOU CHOSE."), title=("CONSCIOUS", "SELECTION"), author="MIKHAIL SAVCHENKO",
+               stages=["SIGHT", "ATTENTION", "MEMORY", "ENVIRONMENT", "EVOLUTION", "HYPOTHESIS", "CHOICE"],
+               sub="WHAT REMAINS AFTER TESTING", series=("NEURAL COSMOLOGY", "BOOK 2"), bk="BK. 2"),
+    "pt": dict(top=("A SELEÇÃO ACONTECEU", "ANTES DE VOCÊ ESCOLHER."), title=("SELEÇÃO", "CONSCIENTE"), author="MIKHAIL SAVCHENKO",
+               stages=["VISÃO", "ATENÇÃO", "MEMÓRIA", "AMBIENTE", "EVOLUÇÃO", "HIPÓTESE", "ESCOLHA"],
+               sub="O QUE RESTA DEPOIS DO TESTE", series=("COSMOLOGIA NEURAL", "LIVRO 2"), bk="LIV. 2"),
+    "es": dict(top=("LA SELECCIÓN OCURRIÓ", "ANTES DE QUE ELIGIERAS."), title=("SELECCIÓN", "CONSCIENTE"), author="MIKHAIL SAVCHENKO",
+               stages=["VISTA", "ATENCIÓN", "MEMORIA", "ENTORNO", "EVOLUCIÓN", "HIPÓTESIS", "ELECCIÓN"],
+               sub="LO QUE QUEDA TRAS LA PRUEBA", series=("COSMOLOGÍA NEURAL", "LIBRO 2"), bk="LIB. 2"),
+}
+LANG = sys.argv[1] if len(sys.argv) > 1 else "ru"
+L = TEXT[LANG]
 random.seed(11)
 W, H = 1024, 1536
 BG, FG, MUTED, LINE, AMBER = "#151515", "#ece6da", "#8d877c", "#3a3835", "#d9a441"
@@ -26,23 +44,25 @@ def spaced(y, text, size, fill=MUTED, spacing=8, family=F, weight="normal"):
     a(f'<text x="{W/2}" y="{y}" text-anchor="middle" font-family="{family}" font-weight="{weight}" '
       f'font-size="{size}" letter-spacing="{spacing}" fill="{fill}">{text}</text>')
 
-spaced(112, "ОТБОР ПРОШЁЛ ДО ТОГО,", 25)
-spaced(150, "КАК ВЫ ВЫБРАЛИ.", 25)
+spaced(112, L["top"][0], 25)
+spaced(150, L["top"][1], 25)
 cross(W / 2, 205)
 # Высокий узкий заголовок, как на «Небесном Коде»: обычный гротеск, сжатый по горизонтали.
 def title(y, text, size):
-    a(f'<text transform="translate({W/2},{y}) scale(0.62,1)" text-anchor="middle" font-family="{T}" '
+    # Длинное слово сжимается сильнее, чтобы влезть в поле ~760px.
+    k = min(0.62, 760 / (len(text) * size * 0.66 + 14 * len(text)))
+    a(f'<text transform="translate({W/2},{y}) scale({k:.3f},1)" text-anchor="middle" font-family="{T}" '
       f'font-size="{size}" letter-spacing="14" fill="{FG}">{text}</text>')
 
-title(372, "ОСОЗНАННЫЙ", 170)
-title(512, "ОТБОР", 170)
+title(372, L["title"][0], 170)
+title(512, L["title"][1], 170)
 a(f'<line x1="150" y1="548" x2="{W-150}" y2="548" stroke="{LINE}"/>')
 cross(150, 548, 7); cross(W - 150, 548, 7)
-spaced(612, "МИХАИЛ САВЧЕНКО", 38, FG, 14, F, "bold")
+spaced(612, L["author"], 38, FG, 14, F, "bold")
 cross(W / 2, 668)
 
 # Воронка отбора: на каждом этаже остаётся половина, до одной точки.
-stages = ["ЗРЕНИЕ", "ВНИМАНИЕ", "ПАМЯТЬ", "СРЕДА", "ЭВОЛЮЦИЯ", "ГИПОТЕЗА", "ВЫБОР"]
+stages = L["stages"]
 x0, x1, top, step = 190, 790, 740, 68
 for i, label in enumerate(stages):
     y = top + i * step
@@ -59,21 +79,22 @@ for i, label in enumerate(stages):
         else:
             a(f'<circle cx="{x:.1f}" cy="{y}" r="1.4" fill="{LINE}"/>')
     a(f'<line x1="{x1+16}" y1="{y}" x2="{x1+40}" y2="{y}" stroke="{LINE}"/>')
-    a(f'<text x="{x1+50}" y="{y+6}" font-family="{F}" font-size="18" letter-spacing="3" fill="{AMBER if i == 6 else MUTED}">{label}</text>')
+    a(f'<text x="{x1+50}" y="{y+6}" font-family="{F}" font-size="{18 if len(label) <= 10 else 15}" letter-spacing="{3 if len(label) <= 10 else 2}" fill="{AMBER if i == 6 else MUTED}">{label}</text>')
 
 cross(W / 2, 1258)
-spaced(1330, "ЧТО ОСТАЁТСЯ ПОСЛЕ ПРОВЕРКИ", 34, FG, 9, F, "bold")
+spaced(1330, L["sub"], 34, FG, 9, F, "bold")
 a(f'<line x1="70" y1="1408" x2="{W-70}" y2="1408" stroke="{LINE}"/>')
-a(f'<text x="80" y="1446" font-family="{F}" font-size="18" letter-spacing="3" fill="{MUTED}">НЕЙРОННАЯ КОСМОЛОГИЯ</text>')
-a(f'<text x="80" y="1472" font-family="{F}" font-size="18" letter-spacing="3" fill="{MUTED}">КНИГА 2</text>')
-a(f'<text x="{W-80}" y="1466" text-anchor="end" font-family="PT Serif" font-size="30" fill="{FG}">КН. 2</text>')
+a(f'<text x="80" y="1446" font-family="{F}" font-size="18" letter-spacing="3" fill="{MUTED}">{L["series"][0]}</text>')
+a(f'<text x="80" y="1472" font-family="{F}" font-size="18" letter-spacing="3" fill="{MUTED}">{L["series"][1]}</text>')
+a(f'<text x="{W-80}" y="1466" text-anchor="end" font-family="PT Serif" font-size="30" fill="{FG}">{L["bk"]}</text>')
 a(f'<rect width="{W}" height="{H}" filter="url(#grain)"/>')
 a('</svg>')
 
 here = os.path.dirname(os.path.abspath(__file__))
 out = os.path.join(here, "..", "..", "public", "covers")
-svg = os.path.join(here, "conscious-selection.svg")
-png = os.path.join(here, "conscious-selection.png")
+name = "conscious-selection" + ("" if LANG == "ru" else f"-{LANG}")
+svg = os.path.join(here, f"{name}.svg")
+png = os.path.join(here, f"{name}.png")
 open(svg, "w").write("\n".join(o))
 subprocess.run(["rsvg-convert", "-w", str(W), "-h", str(H), svg, "-o", png], check=True)
 print(png)

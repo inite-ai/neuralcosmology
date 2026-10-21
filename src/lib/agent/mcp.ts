@@ -5,7 +5,7 @@ import { search } from "@/lib/agent/search";
 import { catalog } from "@/lib/agent/catalog";
 import { CheckoutError, createAgentCheckout } from "@/lib/agent/checkout";
 import { ownsBook } from "@/lib/access";
-import { books } from "@/content/books";
+import { books, coverFor } from "@/content/books";
 import { siteUrl } from "@/lib/auth";
 import {
   catalogApp,
@@ -160,7 +160,7 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
         .map((b) => ({
           title: b.titles[locale] ?? b.titles.en,
           subtitle: (b.hook as Record<string, string>)[locale] ?? (b.hook as Record<string, string>).en,
-          image: b.coverImage ? `${site}${b.coverImage}` : undefined,
+          image: b.coverImage ? `${site}${coverFor(b, locale)}` : undefined,
           price: formatPrice(PRICES.book.USD, "USD"),
           url: `${site}/${locale}/books/${b.slug}`,
           ...(ctx.reader

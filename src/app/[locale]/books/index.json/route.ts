@@ -1,4 +1,4 @@
-import { books } from "@/content/books";
+import { books, coverFor } from "@/content/books";
 import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { pickLocalized } from "@/lib/i18n";
 
@@ -29,7 +29,7 @@ export async function GET(
       genre: b.genre,
       pages: b.pages,
       publicationDate: b.publicationDate,
-      coverImage: `https://neuralcosmology.com${b.coverImage}`,
+      coverImage: `https://neuralcosmology.com${coverFor(b, locale)}`,
       companionPaperSlug: b.companionPaperSlug,
       url: `https://neuralcosmology.com/${locale}/books/${b.slug}`,
     })),

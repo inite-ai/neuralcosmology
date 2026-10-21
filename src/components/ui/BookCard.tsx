@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Book } from "@/types/book";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
+import { coverFor } from "@/content/books";
 
 // Ячейка книги: обложка → жанр/статус → название → хук. Без скруглений и теней.
 export default function BookCard({ book, locale, index }: { book: Book; locale: SupportedLocale; index?: number }) {
@@ -18,7 +19,7 @@ export default function BookCard({ book, locale, index }: { book: Book; locale: 
     <Link href={`/${locale}/books/${book.slug}`} className="group flex flex-col bg-bg p-5 md:p-7 transition-colors hover:bg-bg-raised">
       <div className="relative aspect-[2/3] overflow-hidden bg-bg-sunk hairline">
         <Image
-          src={book.coverImage}
+          src={coverFor(book, locale)}
           alt={title}
           fill
           sizes="(min-width: 1280px) 280px, (min-width: 640px) 45vw, 100vw"

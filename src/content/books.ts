@@ -184,6 +184,16 @@ export const books: Book[] = [
   },
 ];
 
+// Обложка на языке страницы: ru — оригинал из книги (/covers/<slug>.webp),
+// en/pt/es — переведённые (/covers/<slug>-<lang>.webp). OG-версии — PNG 600×900 в /og/covers.
+export function coverFor(book: Pick<Book, "coverImage">, locale: string): string {
+  return locale === "ru" ? book.coverImage : book.coverImage.replace(/\.webp$/, `-${locale}.webp`);
+}
+
+export function ogCoverFor(slug: string, locale: string): string {
+  return locale === "ru" ? `/og/covers/${slug}.png` : `/og/covers/${slug}-${locale}.png`;
+}
+
 export function getBookBySlug(slug: string): Book | undefined {
   return books.find((b) => b.slug === slug);
 }

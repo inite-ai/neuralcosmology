@@ -3,7 +3,7 @@ import { Price, CurrencyPicker } from "@/components/pricing/Price";
 import { clipDescription, social } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBookBySlug } from "@/content/books";
+import { getBookBySlug, ogCoverFor } from "@/content/books";
 import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { chapterIndexable, getChapterHtml, getManifest, leadIn, libraryLangs, resolveBookLang, topLevelAt, type LibraryChapter } from "@/lib/library";
@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     : undefined;
   // Превью ссылки — иллюстрация главы, если она есть; иначе обложка книги.
   const lead = leadIllustration(illustrations(slug, id));
-  const image = lead ? `/book/ill/${lead.id}.og.jpg` : `/og/covers/${slug}.png`;
+  const image = lead ? `/book/ill/${lead.id}.og.jpg` : ogCoverFor(slug, d.lang);
   return {
     title,
     description: clipDescription(d.chapter.excerpt),

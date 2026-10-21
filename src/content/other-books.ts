@@ -32,24 +32,24 @@ export const OTHER_BOOKS_COPY: Record<SupportedLocale, { label: string; all: str
     label: "Other books by the author",
     all: "All of Mikhail Savchenko's books, read online",
     checker: "AI text checker",
-    checkerAbout: "tells whether a text in English, Russian, Spanish or Portuguese was written by a language model; runs in the browser",
+    checkerAbout: "highlights the phrases that make a text in English, Russian, Spanish or Portuguese read like ChatGPT; runs in the browser",
   },
   ru: {
     label: "Другие книги автора",
     all: "Все книги Михаила Савченко, читать онлайн",
     checker: "Проверка текста на ИИ",
-    checkerAbout: "показывает, написан ли текст на русском, английском, испанском или португальском языковой моделью; работает в браузере",
+    checkerAbout: "подсвечивает обороты, по которым текст на русском, английском, испанском или португальском читается как написанный ChatGPT; работает в браузере",
   },
   pt: {
     label: "Outros livros do autor",
     all: "Todos os livros de Mikhail Savchenko, para ler online",
     checker: "Verificador de texto de IA",
-    checkerAbout: "mostra se um texto em português, inglês, espanhol ou russo foi escrito por um modelo de linguagem; funciona no navegador",
+    checkerAbout: "destaca as frases que fazem um texto em português, inglês, espanhol ou russo soar como ChatGPT; funciona no navegador",
   },
   es: {
     label: "Otros libros del autor",
     all: "Todos los libros de Mikhail Savchenko, para leer en línea",
     checker: "Detector de texto de IA",
-    checkerAbout: "indica si un texto en español, inglés, portugués o ruso lo escribió un modelo de lenguaje; funciona en el navegador",
+    checkerAbout: "resalta las frases que hacen que un texto en español, inglés, portugués o ruso suene a ChatGPT; funciona en el navegador",
   },
 };
