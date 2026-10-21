@@ -93,6 +93,7 @@ export default async function BookDetailPage({
     { loc: "en" as const, value: book.titles.en },
     { loc: "ru" as const, value: book.titles.ru },
     { loc: "pt" as const, value: book.titles.pt },
+    { loc: "es" as const, value: book.titles.es },
   ].filter((t) => t.value && t.loc !== locale) as { loc: string; value: string }[];
 
   const availableTranslations = SUPPORTED_LOCALES.filter((l) => l !== locale && book.titles[l])
@@ -143,7 +144,7 @@ export default async function BookDetailPage({
 
         <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
           <div className="py-10 md:px-10 lg:rule-r lg:py-16">
-            <div className="relative mx-auto aspect-[3/4] max-w-sm overflow-hidden hairline lg:max-w-none">
+            <div className="relative mx-auto aspect-[2/3] max-w-sm overflow-hidden hairline lg:max-w-none">
               <Image src={book.coverImage} alt={title} fill sizes="(min-width: 1024px) 460px, 90vw" className="object-cover" priority />
             </div>
           </div>

@@ -500,7 +500,7 @@ export function HomeBooks({ locale }: { locale: SupportedLocale }) {
                 tabIndex={-1}
                 className="absolute right-6 bottom-8 hidden w-[34%] max-w-44 rotate-[4deg] shadow-[0_24px_60px_-20px_rgb(0_0_0/.7)] transition-transform duration-700 ease-(--ease-soft) group-hover:-translate-y-2 group-hover:rotate-[2deg] sm:block md:-right-3 md:bottom-auto md:top-24 lg:-right-5"
               >
-                <Image src={b.coverImage} alt="" width={600} height={800} sizes="200px" className="h-auto w-full" />
+                <Image src={b.coverImage} alt="" width={600} height={900} sizes="200px" className="h-auto w-full" />
               </Link>
             </article>
           );

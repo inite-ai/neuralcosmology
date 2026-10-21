@@ -72,10 +72,10 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 
 ## Books
 
-- [The Celestial Code](https://neuralcosmology.com/en/books/celestial-code): Non-fiction. The argument behind the programme, written in plain language. Target spring 2027, 5.5/8 author sheets complete.
-- [Conscious Selection](https://neuralcosmology.com/en/books/conscious-selection): Non-fiction sequel to The Celestial Code. Selection before choice, across seven levels, plus the author's own experiments, including the one where the first book's hypothesis failed. Chapter draft in progress.
-- [Bugs Academy](https://neuralcosmology.com/en/books/bugs-academy): Sci-fi novel. A debugger saves the universe. Complete, 231 pp, seeking publisher.
-- [Era of Architects](https://neuralcosmology.com/en/books/era-of-architects): Literary sci-fi sequel to Bugs Academy. In progress, 3 of 17 chapters.
+- [The Celestial Code](https://neuralcosmology.com/en/books/celestial-code): Non-fiction. Peer-reviewed work on the cosmic web, bioelectricity, the universe as a learning network, integrated information and the interface theory of perception, brought into one hypothesis (Pointer Architecture) with the results that would refute it. 211 pp, every chapter online.
+- [Conscious Selection](https://neuralcosmology.com/en/books/conscious-selection): Non-fiction sequel. How many times the world is filtered before a person chooses (vision, memory, decoherence, evolution), and what was left of the first book's hypothesis after testing. Draft in proofreading, every chapter online.
+- [Bugs Academy](https://neuralcosmology.com/en/books/bugs-academy): Sci-fi novel. A Moscow quantum physicist who sees events assemble a second early is taken to an Academy run by a seven-hundred-year-old teacher. Finished, 232 pp, seeking a publisher.
+- [Era of Architects](https://neuralcosmology.com/en/books/era-of-architects): Sequel to Bugs Academy, Moscow 2033: the state licenses expanded perception, and the hero's daughter is born with it. Finished, 246 pp.
 - [Books index](https://neuralcosmology.com/en/books): All four volumes side by side, with online reading: the opening chapters are free, the rest after purchase.
 
 ## Essays

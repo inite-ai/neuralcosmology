@@ -4,6 +4,7 @@ import { social } from "@/lib/og";
 import { seoTitle } from "@/content/seo";
 import PageShell from "@/components/layout/PageShell";
 import BookCard from "@/components/ui/BookCard";
+import AlsoByAuthor from "@/components/books/AlsoByAuthor";
 import { books } from "@/content/books";
 import { isSupportedLocale, SUPPORTED_LOCALES } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
@@ -72,6 +73,9 @@ export default async function BooksIndexPage({
             <BookCard key={book.slug} book={book} locale={locale} index={i} />
           ))}
         </div>
+      </section>
+      <section className="rule-t py-10 md:px-10 md:py-14">
+        <AlsoByAuthor locale={locale} />
       </section>
     </PageShell>
   );

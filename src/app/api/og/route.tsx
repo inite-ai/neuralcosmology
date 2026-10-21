@@ -105,7 +105,7 @@ export async function GET(req: NextRequest) {
           {img ? (
             <div style={{ display: "flex", width: img.cover ? 330 : 390, borderLeft: `1px solid ${rule}`, alignItems: "center", justifyContent: "center", background: img.cover ? "#efefee" : ink, padding: img.cover ? 34 : 0 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img.src} alt="" width={img.cover ? 262 : 390} height={img.cover ? 349 : 548} style={img.cover ? { boxShadow: "0 12px 30px rgba(0,0,0,0.25)" } : {}} />
+              <img src={img.src} alt="" width={img.cover ? 262 : 390} height={img.cover ? 393 : 548} style={img.cover ? { boxShadow: "0 12px 30px rgba(0,0,0,0.25)" } : {}} />
             </div>
           ) : null}
         </div>
