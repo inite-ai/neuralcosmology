@@ -1,5 +1,6 @@
 import type { SupportedLocale } from "@/lib/get-locale";
 import { SUPPORTED_LOCALES } from "@/lib/get-locale";
+import { ogCoverFor } from "@/content/books";
 
 export const SITE_URL = "https://neuralcosmology.com";
 export const AUTHOR_NAME = "Mikhail Savchenko";
@@ -192,7 +193,7 @@ export function bookSchema(args: {
     bookFormat: "https://schema.org/EBook",
     creativeWorkStatus: bookStatus,
     // Растровая обложка первой: SVG Google в расширенных результатах не берёт.
-    image: [`${SITE_URL}/og/covers/${args.slug}.png`, cover],
+    image: [`${SITE_URL}${ogCoverFor(args.slug, args.locale)}`, cover],
     author: { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     isPartOf: { "@id": `${SITE_URL}/#website` },
