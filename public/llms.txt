@@ -102,6 +102,7 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 - [Books index (JSON)](https://neuralcosmology.com/en/books/index.json): Plain-JSON list of books across all locales.
 - [FAQ (JSON)](https://neuralcosmology.com/en/faq.json): Question–answer pairs for /science and /about sections. Available in en, ru, pt, es.
 - Essays are available as plain markdown at `/{locale}/essays/{slug}/raw.md` — same content as the HTML page, without layout chrome.
+- [Experiments](https://neuralcosmology.com/en/experiments): Interactive simulations from the books (double slit, Conway's Life, slime mould, Landauer, blind spot and more). Any of them can be embedded on another site: `<iframe src="https://neuralcosmology.com/embed/{locale}/{id}">` with a link to `/{locale}/experiments/{id}` under it.
 - Lecture transcripts at `/{locale}/lectures/{slug}/transcript.md` when available. English transcripts are YouTube-sourced (auto-generated or human-made); ru/pt/es are YouTube auto-translations from the English source.
 
 ## Citation
