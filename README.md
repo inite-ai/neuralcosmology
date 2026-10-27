@@ -88,6 +88,12 @@ The site is optimized for search engines with:
 - Responsive design for all devices
 - Optimized Core Web Vitals
 - Sitemap and robots.txt
+- IndexNow (Bing, Yandex): after each deploy `scripts/indexnow.py` sends only the pages that are new or whose `lastmod` changed. It remembers what was sent in `~/.indexnow/` on the deploy server. Sending all 570 pages on every deploy looks like spam to search engines.
+- No cookie on page responses: the page language is remembered by a small script in the browser, so the HTML can be cached.
+
+### Embedding experiments
+
+Every experiment can be embedded on another site. Under the experiment on its page there is an "Embed on your site" button that gives a ready code: an iframe with `/embed/<locale>/<id>` and a plain link to the experiment page under it. Only that link outside the frame counts as a link to us for search engines. The `/embed` pages have no header or footer, are closed from search (`noindex`, canonical points to the experiment page) and can be framed by any site. The theme follows the visitor's system, or `?theme=dark|light`.
 
 ### Social Sharing
 

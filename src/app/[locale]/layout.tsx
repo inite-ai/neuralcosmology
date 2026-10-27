@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Marcellus, Forum, Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import { fontVariables } from "../fonts";
 import RevealObserver from "@/components/system/RevealObserver";
 import Analytics from "@/components/analytics/Analytics";
 import { verification } from "@/content/verification";
@@ -22,32 +22,6 @@ import {
 import { getDict } from "@/lib/i18n";
 import { social } from "@/lib/og";
 import { seoTitle } from "@/content/seo";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin", "latin-ext", "cyrillic"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin", "cyrillic"],
-});
-
-// Заголовки как в образце: Marcellus (латиница) + Forum (кириллица) —
-// одна и та же классическая «расклёшенная» антиква, 400, без жирного.
-const marcellus = Marcellus({
-  variable: "--font-marcellus",
-  subsets: ["latin", "latin-ext"],
-  weight: "400",
-  display: "swap",
-});
-
-const forum = Forum({
-  variable: "--font-forum",
-  subsets: ["cyrillic", "cyrillic-ext", "latin"],
-  weight: "400",
-  display: "swap",
-});
 
 // Корневой layout сайта: <html lang> берётся из сегмента [locale], поэтому страницы
 // остаются статическими (раньше язык читался из заголовков запроса и всё становилось динамическим).
@@ -158,14 +132,15 @@ export default async function LocaleLayout({
     <html
       lang={locale === "pt" ? "pt-BR" : locale}
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${marcellus.variable} ${forum.variable}`}
+      className={fontVariables}
     >
       <head>
-        {/* Анимации проявления включаются только при живом JS */}
+        {/* Анимации проявления включаются только при живом JS; язык страницы запоминается
+            в cookie для редиректа с корня (сервер его не ставит, чтобы HTML кэшировался). */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('nc-theme');if(t==='dark'||t==='light')d.classList.add(t);if(localStorage.getItem('nc-banner')==='library-2026-09')d.classList.add('banner-off')}catch(e){}if(/^\\/[a-z]{2}\\/read\\/[^/]+\\/[^/]+/.test(location.pathname))d.classList.add('banner-off')})()",
+              `(function(){var d=document.documentElement;d.classList.add('js');try{if(!/(^|; )i18nextLng=${locale}(;|$)/.test(document.cookie))document.cookie='i18nextLng=${locale};path=/;max-age=31536000;samesite=lax;secure'}catch(e){}try{var t=localStorage.getItem('nc-theme');if(t==='dark'||t==='light')d.classList.add(t);if(localStorage.getItem('nc-banner')==='library-2026-09')d.classList.add('banner-off')}catch(e){}if(/^\\/[a-z]{2}\\/read\\/[^/]+\\/[^/]+/.test(location.pathname))d.classList.add('banner-off')})()`,
           }}
         />
         {/*

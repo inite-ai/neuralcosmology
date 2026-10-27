@@ -158,17 +158,21 @@ jobs:
           exit 1
         fi
 
+    - name: Checkout IndexNow script
+      if: success()
+      uses: actions/checkout@v4
+      with:
+        sparse-checkout: scripts/indexnow.py
+        sparse-checkout-cone-mode: false
+        path: indexnow-src
+
+    # Только новые и изменённые адреса (lastmod) — состояние в ~/.indexnow на сервере.
     - name: IndexNow (Bing, Yandex, Seznam)
       if: success()
       continue-on-error: true
       run: |
         sleep 20
-        KEY=37027cd598c84365b750d23778b62330
-        URLS=$(curl -fsS https://${{ env.DOMAIN }}/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' | python3 -c 'import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')
-        BODY="{\"host\":\"${{ env.DOMAIN }}\",\"key\":\"$KEY\",\"keyLocation\":\"https://${{ env.DOMAIN }}/$KEY.txt\",\"urlList\":$URLS}"
-        for EP in https://api.indexnow.org/indexnow https://yandex.com/indexnow; do
-          echo "$EP: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: application/json' --data "$BODY" $EP)"
-        done
+        python3 indexnow-src/scripts/indexnow.py ${{ env.DOMAIN }} 37027cd598c84365b750d23778b62330
 
     - name: Cleanup
       if: always()
