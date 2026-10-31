@@ -58,7 +58,11 @@ fi
 
 # Clean up unused images and containers
 echo "🧹 Cleaning up..."
-docker system prune -f
+# Only this repo's own images go: the newest three stay for rollback and
+# an image a container uses cannot be removed. Never a host-wide prune:
+# the host is shared, and `docker system prune` deleted the stopped shared
+# postgres on 25.10 and 30.10.2026.
+docker images --filter "reference=*/neurocosmology" --filter "reference=neurocosmology" --format '{{if eq .Tag "<none>"}}{{.ID}}{{else}}{{.Repository}}:{{.Tag}}{{end}}' | tail -n +4 | xargs -r docker rmi 2>/dev/null || true
 
 echo "🎉 Deployment completed successfully!"
 
