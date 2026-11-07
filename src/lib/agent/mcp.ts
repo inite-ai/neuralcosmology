@@ -18,6 +18,8 @@ import {
   type ToolResult,
 } from "@inite/mcp/site";
 import { LIBRARY_ITEM, PRICES, formatPrice, type Currency } from "@/content/pricing";
+// Версия MCP одна на сайт и реестр; растёт только с тем, что видит агент (scripts/mcp-surface.mjs).
+import serverJson from "../../../server.json";
 
 // MCP-сервер сайта на @inite/mcp/site (Streamable HTTP без сессий, ответы
 // JSON). Две точки: /mcp — без входа; /mcp/account — агент вошёл от имени
@@ -246,7 +248,7 @@ export const mcp = createSiteMcp<Ctx>({
   name: "neuralcosmology",
   apps: [cards.catalog, cards.order],
   title: "Neural Cosmology",
-  version: "1.1.0",
+  version: serverJson.version,
   instructions: (ctx) =>
     INSTRUCTIONS +
     (ctx.reader
