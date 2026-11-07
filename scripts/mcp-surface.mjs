@@ -11,8 +11,8 @@
  * Правила: поверхность изменилась, а версия прежняя — ошибка; версия поднята,
  * а поверхность та же — тоже ошибка. Добавили инструмент или поле — минорная
  * часть, изменили или убрали существующее — мажорная, поправили поведение без
- * изменения схем — патч (тогда поверхность та же, и проверку проходит только
- * --write с новой версией).
+ * изменения схем — патч: поверхность та же, поэтому без новой схемы можно
+ * поднять только патч-часть (и записать её через --write).
  */
 import { createHash } from "node:crypto";
 import fs from "node:fs";
@@ -55,11 +55,14 @@ const live = init.serverInfo.version;
 const declared = serverJson.version;
 const record = fs.existsSync(recordPath) ? JSON.parse(fs.readFileSync(recordPath, "utf8")) : null;
 
+/** 1.1.0 → 1.1: при той же поверхности разрешена только смена патч-части. */
+const minor = (v) => String(v).split(".").slice(0, 2).join(".");
 const problems = [];
 if (live !== declared) problems.push(`serverInfo.version ${live} differs from server.json ${declared}`);
 if (flag === "--write") {
   if (record && record.sha256 !== sha256 && record.version === declared) problems.push(`the surface changed: raise "version" in server.json before writing`);
-  if (record && record.sha256 === sha256 && record.version !== declared) problems.push(`server.json says ${declared}, but nothing an agent sees changed since ${record.version}`);
+  if (record && record.sha256 === sha256 && minor(record.version) !== minor(declared))
+    problems.push(`server.json says ${declared}, but nothing an agent sees changed since ${record.version}: only the patch part may change`);
   if (!problems.length) {
     fs.writeFileSync(recordPath, JSON.stringify({ version: declared, sha256, tools: surface.tools.map((t) => t.name) }, null, 2) + "\n");
     console.log(`mcp-surface.json: ${declared} ${sha256.slice(0, 12)} (${surface.tools.length} tools)`);
