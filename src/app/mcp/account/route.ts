@@ -10,16 +10,19 @@ export const dynamic = "force-dynamic";
 // по которому MCP-клиент сам проводит читателя через вход.
 type Signed = { sub: string; email?: string; emailVerified: boolean };
 
+// Один обработчик на процесс: в нём счётчик лимита частоты (60 в минуту с адреса).
+let route: ReturnType<typeof mcp.route> | undefined;
 const endpoint = () => {
   const site = siteUrl();
-  return mcp.route({
+  return (route ??= mcp.route({
     resource: account(),
     authenticate: (token) => verifyAgentToken(token, [`${site}/mcp/account`, `${site}/mcp`, site]),
     context: (req, principal) => {
       const r = principal as Signed;
       return { reader: { sub: r.sub, email: r.emailVerified ? r.email : undefined }, ip: clientIp(req) };
     },
-  });
+    rateLimit: { limit: 60, windowSeconds: 60 },
+  }));
 };
 
 export const POST = (req: Request) => endpoint().POST(req);

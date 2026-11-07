@@ -4,7 +4,7 @@
   "title": "Neural Cosmology",
   "description": "Answers, essays, experiments and books on consciousness and cosmology: search, read, buy.",
   "websiteUrl": "https://neuralcosmology.com",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "remotes": [
     { "type": "streamable-http", "url": "https://neuralcosmology.com/mcp" },
     { "type": "streamable-http", "url": "https://neuralcosmology.com/mcp/account" }
