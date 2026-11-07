@@ -129,6 +129,10 @@ The plumbing comes from the shared INITE packages (inite-shared): `@inite/mcp/si
 node scripts/sync-inite-shared.mjs   # then commit vendor/, package.json, package-lock.json
 ```
 
+### MCP version
+
+The MCP server has its own version in `server.json`, separate from the site's releases. The same number goes to agents in `initialize` and to the MCP registry. It changes only when what an agent sees changes: a new tool or field raises the minor part, a changed or removed one the major part, a fix in behaviour without schema changes the patch part. `mcp-surface.json` keeps a fingerprint of the open `/mcp` (tools, resources, templates, prompts) with the version it belongs to. After a change to the tools: raise the version, run the site, then `node scripts/mcp-surface.mjs http://localhost:3000 --write`. Each deploy runs the same script against the live site and fails if the fingerprint and the version disagree.
+
 ## Project Structure
 
 ```

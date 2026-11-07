@@ -1,0 +1,10 @@
+{
+  "version": "1.1.1",
+  "sha256": "ed6ae915356f091218f8b8cc08d758da9a0925849d577840448b2eb6ae980fc1",
+  "tools": [
+    "search",
+    "read",
+    "list_books",
+    "create_checkout"
+  ]
+}
