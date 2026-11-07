@@ -47,29 +47,21 @@ function nextWithLocale(request: NextRequest, locale: Locale) {
   return NextResponse.next({ request: { headers } });
 }
 
+// Cookie языка здесь не ставится: ответ с Set-Cookie не кэшируется ни Cloudflare, ни браузером.
+// Язык страницы запоминает скрипт в <head> корневого layout, а редирект с корня ставит cookie сам.
 function withSeoHeaders(
-  request: NextRequest,
   response: NextResponse,
   locale: Locale,
   pathname: string,
 ) {
-  const currentCookie = request.cookies.get("i18nextLng")?.value;
-  if (!currentCookie || currentCookie !== locale) {
-    response.cookies.set("i18nextLng", locale, {
-      maxAge: 365 * 24 * 60 * 60,
-      httpOnly: false,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-    });
-  }
-
   response.headers.set("x-locale", locale);
   response.headers.set("x-pathname", pathname);
   response.headers.set("x-robots-tag", "index, follow");
   response.headers.set("x-content-type-options", "nosniff");
   response.headers.set("x-frame-options", "DENY");
   response.headers.set("referrer-policy", "strict-origin-when-cross-origin");
-  response.headers.set("Vary", "Accept, Accept-Language, Accept-Encoding");
+  // Страница с языком в адресе от Accept-Language не зависит; Accept выбирает markdown.
+  response.headers.set("Vary", "Accept, Accept-Encoding");
   // Агентам: та же страница в markdown.
   if (pathnameHasLocale(pathname)) {
     response.headers.set("Link", markdownAlternate(pathname));
@@ -82,7 +74,8 @@ function withSeoHeaders(
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (pathname.startsWith("/_next/") || pathname.startsWith("/api/") || pathname === "/mcp" || pathname.startsWith("/mcp/")) {
+  // /embed/<locale>/<id> — опыт для встраивания на чужие сайты: язык уже в адресе, рамки разрешены.
+  if (pathname.startsWith("/_next/") || pathname.startsWith("/api/") || pathname === "/mcp" || pathname.startsWith("/mcp/") || pathname.startsWith("/embed/")) {
     return NextResponse.next();
   }
 
@@ -105,7 +98,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (ROOT_SURFACES.has(pathname)) {
-    return withSeoHeaders(request, NextResponse.next(), detectLocale(request), pathname);
+    return withSeoHeaders(NextResponse.next(), detectLocale(request), pathname);
   }
 
   if (pathname.includes(".")) {
@@ -116,7 +109,7 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale(pathname)) {
     const urlLocale = pathname.split("/").filter(Boolean)[0] as Locale;
-    return withSeoHeaders(request, nextWithLocale(request, urlLocale), urlLocale, pathname);
+    return withSeoHeaders(nextWithLocale(request, urlLocale), urlLocale, pathname);
   }
 
   const target = request.nextUrl.clone();

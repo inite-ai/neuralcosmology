@@ -1,5 +1,36 @@
 import type { NextConfig } from "next";
 
+// Заголовки безопасности. Опыты по адресу /embed/<locale>/<id> разрешено встраивать
+// на чужие сайты (iframe), поэтому для них frame-ancestors * и без X-Frame-Options.
+const csp = (frameAncestors: string) =>
+  [
+    "default-src 'self'",
+    // GA4 (gtag.js), Метрика и рекламные пиксели (content/pixels.ts): скрипты и отправка хитов.
+    "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://www.googleadservices.com https://www.google.com https://mc.yandex.ru https://connect.facebook.net https://top-fwz1.mail.ru https://www.redditstatic.com",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https: blob:",
+    "font-src 'self' data:",
+    // С привязкой Google Ads (сигналы, ремаркетинг) gtag шлёт хиты на analytics.google.com
+    // и www.google.com/g/collect — без них GA4 теряет почти весь трафик (так было 10.10.2026).
+    "connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.google.com https://*.doubleclick.net https://www.googleadservices.com https://mc.yandex.ru https://mc.yandex.com https://www.facebook.com https://top-fwz1.mail.ru https://alb.reddit.com https://pixel-config.reddit.com",
+    "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://mc.yandex.ru https://mc.yandex.com https://td.doubleclick.net https://www.googletagmanager.com",
+    "media-src 'self' blob:",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "upgrade-insecure-requests",
+    `frame-ancestors ${frameAncestors}`,
+  ].join("; ");
+
+const securityHeaders = (embeddable: boolean) => [
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  ...(embeddable ? [] : [{ key: "X-Frame-Options", value: "SAMEORIGIN" }]),
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+  { key: "Content-Security-Policy", value: csp(embeddable ? "*" : "'self'") },
+];
+
 const nextConfig: NextConfig = {
   output: 'standalone',
   eslint: {
@@ -26,45 +57,8 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "Strict-Transport-Security",
-            value: "max-age=63072000; includeSubDomains; preload",
-          },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          {
-            key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
-          },
-          {
-            // Lightweight CSP — allows same-origin + YouTube/Vimeo embeds (used by lectures).
-            // report-only first is safer, but we keep enforcement since all surfaces are ours.
-            key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              // GA4 (gtag.js), Метрика и рекламные пиксели (content/pixels.ts): скрипты и отправка хитов.
-              "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://www.googleadservices.com https://www.google.com https://mc.yandex.ru https://connect.facebook.net https://top-fwz1.mail.ru https://www.redditstatic.com",
-              "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https: blob:",
-              "font-src 'self' data:",
-              // С привязкой Google Ads (сигналы, ремаркетинг) gtag шлёт хиты на analytics.google.com
-              // и www.google.com/g/collect — без них GA4 теряет почти весь трафик (так было 10.10.2026).
-              "connect-src 'self' https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.google.com https://*.doubleclick.net https://www.googleadservices.com https://mc.yandex.ru https://mc.yandex.com https://www.facebook.com https://top-fwz1.mail.ru https://alb.reddit.com https://pixel-config.reddit.com",
-              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://mc.yandex.ru https://mc.yandex.com https://td.doubleclick.net https://www.googletagmanager.com",
-              "media-src 'self' blob:",
-              "object-src 'none'",
-              "base-uri 'self'",
-              "form-action 'self'",
-              "frame-ancestors 'self'",
-              "upgrade-insecure-requests",
-            ].join("; "),
-          },
-        ],
-      },
+      { source: "/:path((?!embed/).*)", headers: securityHeaders(false) },
+      { source: "/embed/:path*", headers: securityHeaders(true) },
       {
         source: "/:locale/essays/:slug/raw.md",
         headers: [

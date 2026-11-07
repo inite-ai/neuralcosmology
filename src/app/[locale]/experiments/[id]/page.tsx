@@ -7,6 +7,7 @@ import Standalone from "@/components/reader/widgets/Standalone";
 import ChapterTracker from "@/components/reader/ChapterTracker";
 import ExperimentBridge from "@/components/reader/ExperimentBridge";
 import Subscribe from "@/components/subscribe/Subscribe";
+import EmbedCode from "@/components/experiments/EmbedCode";
 import { experimentsUi } from "@/content/experiments-ui";
 import { experimentView } from "@/lib/experiments";
 import { experiments, getExperiment } from "@/lib/interactive";
@@ -72,6 +73,9 @@ export default async function ExperimentPage({ params }: { params: Params }) {
   const sameBook = others.filter((x) => x.bookSlug === v.bookSlug);
   const more = [...sameBook, ...others.filter((x) => x.bookSlug !== v.bookSlug)].slice(0, 6);
   const url = `${BASE}/${locale}/experiments/${id}`;
+  const name = v.seo?.title ?? v.title;
+  const attr = (x: string) => x.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+  const embed = `<iframe src="${BASE}/embed/${locale}/${id}" width="100%" height="620" style="border:0;max-width:760px" loading="lazy" title="${attr(name)}"></iframe>\n<p><a href="${url}">${attr(name)}</a> · Neural Cosmology</p>`;
 
   return (
     <main className="pt-14">
@@ -115,6 +119,7 @@ export default async function ExperimentPage({ params }: { params: Params }) {
                 <figcaption>{v.caption}</figcaption>
               </figure>
             </div>
+            <EmbedCode code={embed} label={ui.embed} hint={ui.embedHint} copy={ui.copy} copied={ui.copied} />
           </div>
           <ChapterTracker />
           {v.chapter && (
