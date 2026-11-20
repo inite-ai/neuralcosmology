@@ -2,14 +2,14 @@ import "server-only";
 import { anthropicReaderAi, createReader, isRejection, paragraphsFromHtml, type ReaderAi, type ReaderSession, type ReaderSite } from "@inite/reader";
 import { getBookBySlug } from "@/content/books";
 import { chapterGate, ownsBook } from "@/lib/access";
-import { getSession, type Session } from "@/lib/auth";
+import { getSession, type AgentPrincipal, type Session } from "@/lib/auth";
 import { dbConfigured } from "@/lib/db";
 import { isSupportedLocale } from "@/lib/get-locale";
 import { pickLocalized } from "@/lib/i18n";
 import { getChapterHtml, getManifest } from "@/lib/library";
 import { sendMail } from "@/lib/mail";
 import { AI_BETAS, AI_MODEL, aiConfigured, complete } from "@/lib/reader/ai";
-import { AUTHOR_EMAILS } from "@/lib/reader/context";
+import { authorBy } from "@/lib/reader/context";
 import { authorName } from "@/lib/reader/quote";
 import { sqlReaderStore } from "@/lib/reader/store.server";
 
@@ -17,27 +17,26 @@ import { sqlReaderStore } from "@/lib/reader/store.server";
 // наши, правила и маршруты — пакета. Через `reader` идут и /api/reader/*, и MCP.
 
 /**
- * Читатель. В браузере (`web`) — своя сессия сайта: адрес в ней пришёл со входом
- * через INITE и подтверждённым не помечен, автора по нему узнаём как раньше.
- * У агента (MCP) — токен INITE: адрес есть, только если он подтверждён.
+ * Читатель. В браузере — своя сессия сайта (подтверждение адреса и админ взяты из
+ * id_token при входе), у агента (MCP) — токен INITE (email_verified, roles/metadata).
+ * Автор в обоих случаях — по authorBy: админ или подтверждённый адрес из AUTHOR_EMAILS.
  */
-export type SiteSession = ReaderSession & { web?: boolean };
+export type SiteSession = ReaderSession;
 
 export const fromWeb = (s: Session): SiteSession => ({
   sub: s.sub,
   email: s.email?.toLowerCase() ?? null,
-  emailVerified: false,
+  emailVerified: s.emailVerified === true,
   name: s.name ?? null,
-  admin: false,
-  web: true,
+  admin: s.admin === true,
 });
 
-export const fromToken = (t: { sub: string; email?: string; emailVerified: boolean }): SiteSession => ({
+export const fromToken = (t: AgentPrincipal): SiteSession => ({
   sub: t.sub,
-  email: t.emailVerified && t.email ? t.email.toLowerCase() : null,
-  emailVerified: Boolean(t.emailVerified && t.email),
-  name: null,
-  admin: false,
+  email: t.email?.toLowerCase() ?? null,
+  emailVerified: t.emailVerified,
+  name: t.name ?? null,
+  admin: t.admin,
 });
 
 /** Глава издания: книга есть в каталоге и в библиотеке, язык поддержан. */
@@ -111,11 +110,7 @@ const site: ReaderSite = {
   async ownsBook(s, book) {
     return ownsBook(s ? { sub: s.sub } : null, book);
   },
-  isAuthor(s) {
-    if (s.admin) return true;
-    const confirmed = s.emailVerified || Boolean((s as SiteSession).web);
-    return Boolean(s.email && confirmed && AUTHOR_EMAILS().includes(s.email.toLowerCase()));
-  },
+  isAuthor: (s) => authorBy(s),
   // Письма автору — на общий ящик; ответ уходит читателю. Без почты письмо «не ушло».
   async notify(letter) {
     const ok = await sendMail(CONTACT_EMAIL(), letter.subject, letter.text, letter.html, { replyTo: letter.replyTo, fromName: letter.fromName });

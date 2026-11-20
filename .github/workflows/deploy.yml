@@ -92,7 +92,8 @@ jobs:
               # Интерактив читалки: пометки, обсуждения, ИИ
               - DATABASE_URL=${{ secrets.DATABASE_URL }}
               - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
-              - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mikefluff@mikefluff.com' }}
+              - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mike@inite.ai,mikefluff@mikefluff.com' }}
+              - CONTACT_EMAIL=${{ vars.CONTACT_EMAIL || 'info@neuralcosmology.com' }}
               - NOTIFY_SECRET=${{ secrets.NOTIFY_SECRET }}
               - MAILGUN_SMTP_HOST=${{ vars.MAILGUN_SMTP_HOST }}
               - MAILGUN_SMTP_PORT=${{ vars.MAILGUN_SMTP_PORT }}
