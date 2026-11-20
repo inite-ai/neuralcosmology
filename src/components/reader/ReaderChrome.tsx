@@ -246,8 +246,8 @@ export default function ReaderChrome({
         </div>
       </header>
 
-      <div className="lg:grid lg:grid-cols-[21rem_minmax(0,1fr)]">
-        <aside className="hidden lg:block r-rule-r">
+      <div className="reader-body lg:grid lg:grid-cols-[21rem_minmax(0,1fr)]">
+        <aside className="reader-toc hidden lg:block r-rule-r">
           <nav aria-label={labels.contents} className="sticky top-14 max-h-[calc(100vh-3.5rem)] overflow-y-auto pb-10">
             <p className="label px-4 pt-6 pb-3 text-[var(--r-muted)]">{labels.contents}</p>
             <div className="r-rule-t">{tocList()}</div>

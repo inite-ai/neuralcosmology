@@ -1,6 +1,7 @@
 import { clientIp } from "@inite/mcp/site";
 import { account, mcp } from "@/lib/agent/mcp";
 import { siteUrl, verifyAgentToken } from "@/lib/auth";
+import { fromToken } from "@/lib/reader/reader.server";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +20,7 @@ const endpoint = () => {
     authenticate: (token) => verifyAgentToken(token, [`${site}/mcp/account`, `${site}/mcp`, site]),
     context: (req, principal) => {
       const r = principal as Signed;
-      return { reader: { sub: r.sub, email: r.emailVerified ? r.email : undefined }, ip: clientIp(req) };
+      return { reader: { sub: r.sub, email: r.emailVerified ? r.email : undefined }, person: fromToken(r), ip: clientIp(req) };
     },
     rateLimit: { limit: 60, windowSeconds: 60 },
   }));

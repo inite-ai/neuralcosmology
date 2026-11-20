@@ -699,8 +699,25 @@
 @media (width < 64rem) {
   .reader-prose .nc-margin { position: static; display: inline-flex; align-items: center; margin-left: 0.4em; vertical-align: 0.1em; }
 }
-.reader.nc-focus > header, .reader.nc-focus aside { display: none; }
+/* Фокус: без шапки и оглавления. Панель обсуждения — тоже <aside>, её не трогаем;
+   текст без колонки оглавления не должен проваливаться в её узкий трек 21rem. */
+.reader.nc-focus > header, .reader.nc-focus .reader-toc { display: none; }
+.reader.nc-focus .reader-body { grid-template-columns: minmax(0, 1fr); }
 .reader.nc-focus { --r-size: calc(var(--r-size) * 1.05); }
+
+/* Панели общего интерактива (@inite/reader) в типографике сайта: подписи — как .label,
+   цитаты и заголовки — font-display. */
+.reader {
+  --rd-sans: var(--font-sans);
+  --rd-cap-font: var(--font-sans);
+  --rd-title-font: var(--font-display);
+}
+.reader .rd-cap {
+  font-size: var(--text-label);
+  font-weight: 400;
+  line-height: var(--text-label--line-height);
+  letter-spacing: var(--text-label--letter-spacing);
+}
 
 @keyframes marquee {
   to { transform: translateX(-50%); }

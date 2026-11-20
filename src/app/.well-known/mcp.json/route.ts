@@ -12,9 +12,9 @@ export function GET() {
     name: "neuralcosmology",
     title: "Neural Cosmology",
     description:
-      "Answers, essays, interactive experiments and books by Mikhail Savchenko on consciousness, cosmology and computation (en, ru, pt, es). Search, read as markdown, see prices, open a checkout for a reader.",
+      "Answers, essays, interactive experiments and books by Mikhail Savchenko on consciousness, cosmology and computation (en, ru, pt, es). Search, read as markdown, see prices, open a checkout for a reader, read and join chapter discussions.",
     endpoints: [{ path: "/mcp" }, { path: "/mcp/account", resource: account() }],
-    tools: ["search", "read", "list_books", "create_checkout", "my_library"],
+    tools: ["search", "read", "list_books", "create_checkout", "my_library", "get_chapter_discussion", "post_comment", "send_note_to_author", "get_author_inbox", "moderate_comment"],
     documentation: `${site}/llms.txt`,
   });
 }

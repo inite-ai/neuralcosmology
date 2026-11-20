@@ -32,6 +32,9 @@ CREATE TABLE IF NOT EXISTS annotations (
   created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS annotations_user_book ON annotations (user_id, book, lang);
+-- Заметка, отправленная автору письмом (@inite/reader): когда ушла; лимит в сутки считается по ней.
+ALTER TABLE annotations ADD COLUMN IF NOT EXISTS sent_at timestamptz;
+CREATE INDEX IF NOT EXISTS annotations_sent ON annotations (user_id, sent_at) WHERE sent_at IS NOT NULL;
 CREATE TABLE IF NOT EXISTS comments (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   book text NOT NULL, lang text NOT NULL, chapter text NOT NULL, anchor text,
@@ -43,6 +46,9 @@ CREATE TABLE IF NOT EXISTS comments (
   created_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS comments_chapter ON comments (book, lang, chapter, status);
+-- Задержанное модерацией теперь не выбрасывается, а ждёт автора скрытым ('hidden');
+-- 'rejected' пакет больше не пишет, CHECK его ещё допускает ради старых строк.
+UPDATE comments SET status = 'hidden' WHERE status = 'rejected';
 CREATE TABLE IF NOT EXISTS comment_reactions (
   comment_id uuid NOT NULL REFERENCES comments(id) ON DELETE CASCADE,
   user_id text NOT NULL, PRIMARY KEY (comment_id, user_id)
