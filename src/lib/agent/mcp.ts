@@ -6,18 +6,22 @@ import { catalog } from "@/lib/agent/catalog";
 import { CheckoutError, createAgentCheckout } from "@/lib/agent/checkout";
 import { ownsBook } from "@/lib/access";
 import { books, coverFor } from "@/content/books";
-import { siteUrl } from "@/lib/auth";
+import { siteUrl, type AgentPrincipal } from "@/lib/auth";
 import {
   catalogApp,
+  clientIp,
   createSiteMcp,
   jsonResult,
   orderApp,
   protectedResource,
+  result,
   textResult,
   type SiteTool,
   type ToolResult,
 } from "@inite/mcp/site";
 import { LIBRARY_ITEM, PRICES, formatPrice, type Currency } from "@/content/pricing";
+import { readerTools } from "@inite/reader/mcp";
+import { reader as bookReader, fromToken, type SiteSession } from "@/lib/reader/reader.server";
 // Версия MCP одна на сайт и реестр; растёт только с тем, что видит агент (scripts/mcp-surface.mjs).
 import serverJson from "../../../server.json";
 
@@ -28,11 +32,51 @@ import serverJson from "../../../server.json";
 // читатель это разрешил.
 
 export type Reader = { sub: string; email?: string };
-export type Ctx = { reader: Reader | null; ip: string };
+/** `person`: тот же читатель для инструментов читалки (@inite/reader); null на /mcp. */
+export type Ctx = { reader: Reader | null; person: SiteSession | null; ip: string };
 
 /** /mcp/account: метаданные RFC 9728 и 401, с которого MCP-клиент начинает вход. */
+/** Говорить от имени читателя о книге: комментарий в обсуждении главы, заметка автору. */
+export const SCOPE_DISCUSS = "neuralcosmology:discuss";
+/** Почта автора: заметки читателей, задержанные комментарии, публикация и скрытие. Только аккаунту автора. */
+export const SCOPE_AUTHOR = "neuralcosmology:author";
+export const READER_SCOPES = [SCOPE_DISCUSS, SCOPE_AUTHOR] as const;
+/** Что /mcp/account объявляет в RFC 9728: вход (openid, profile, email) и области инструментов читалки. */
+export const ACCOUNT_SCOPES = ["openid", "profile", "email", ...READER_SCOPES];
+
 export const account = () =>
-  protectedResource({ site: siteUrl(), path: "/mcp/account", name: "Neural Cosmology", documentation: `${siteUrl()}/llms.txt` });
+  protectedResource({
+    site: siteUrl(),
+    path: "/mcp/account",
+    name: "Neural Cosmology",
+    scopes: ACCOUNT_SCOPES,
+    documentation: `${siteUrl()}/llms.txt`,
+  });
+
+/**
+ * /mcp/account: токен INITE проверяется (подпись, издатель, срок, audience — этот
+ * ресурс), его области уходят в principal, и @inite/mcp/site сверяет их с областью
+ * инструмента: без нужной — 403 insufficient_scope. Инструменты без области
+ * (read, my_library, create_checkout, …) областей не требуют, как и раньше.
+ * `authenticate` подставляют тесты со своими ключами.
+ */
+export function accountEndpoint(authenticate: (token: string) => Promise<AgentPrincipal | null>) {
+  return mcp.route({
+    resource: account(),
+    authenticate: (token) => authenticate(token),
+    context: (req, principal) => {
+      const r = principal as AgentPrincipal;
+      return { reader: { sub: r.sub, email: r.emailVerified ? r.email : undefined }, person: fromToken(r), ip: clientIp(req) };
+    },
+    rateLimit: { limit: 60, windowSeconds: 60 },
+  });
+}
+
+/** Аудитории, для которых выпущен токен /mcp/account (RFC 8707): сам эндпоинт, /mcp и сайт. */
+export const accountAudiences = () => {
+  const site = siteUrl();
+  return [`${site}/mcp/account`, `${site}/mcp`, site];
+};
 
 const localeSchema = { type: "string", enum: [...SUPPORTED_LOCALES], description: "Language: en, ru, pt or es." };
 
@@ -236,13 +280,44 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
 }
 
 const INSTRUCTIONS =
-  "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Paid book chapters show an open opening; create_checkout opens a payment link for a reader.";
+  "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Paid book chapters show an open opening; create_checkout opens a payment link for a reader. get_chapter_discussion returns what readers say about a chapter.";
 
 // Cards in the chat (ChatGPT, Claude and other MCP Apps hosts).
 const cards = {
   catalog: catalogApp("neuralcosmology", ["https://neuralcosmology.com"]),
   order: orderApp("neuralcosmology", ["https://neuralcosmology.com"]),
 };
+
+// Инструменты читалки (@inite/reader): обсуждение главы, комментарий и заметка автору
+// от имени читателя, почта автора и модерация. Правила и проверки — в пакете: без
+// читателя инструмент с областью отвечает sign_in_required, почту и модерацию пакет
+// отдаёт только автору (isAuthor в reader.server.ts). На /mcp — только чтение обсуждения.
+const READER_TOOLS = readerTools({
+  books: books.map((b) => b.slug),
+  langs: [...SUPPORTED_LOCALES],
+  scopes: { discuss: SCOPE_DISCUSS, author: SCOPE_AUTHOR },
+  bookNoun: "Neural Cosmology book",
+});
+
+function readerSiteTools(ctx: Ctx): SiteTool<Ctx>[] {
+  return READER_TOOLS.filter((t) => ctx.person || t.scope === null).map((t) => ({
+    name: t.name,
+    title: t.title,
+    description: t.description,
+    inputSchema: t.inputSchema,
+    annotations: t.annotations,
+    // Область проверяет @inite/mcp/site по scopes из токена (verifyAgentToken); без неё — 403.
+    ...(t.scope ? { signedIn: { scope: t.scope } } : {}),
+    parse: (args: unknown) => {
+      const r = t.parse(args);
+      return r.ok ? { success: true as const, data: r.value } : { success: false as const, error: r.error };
+    },
+    call: async (args: Record<string, unknown>) => {
+      const res = await t.call(bookReader, args, ctx.person);
+      return result(res.text, res.data, res.isError);
+    },
+  }));
+}
 
 export const mcp = createSiteMcp<Ctx>({
   name: "neuralcosmology",
@@ -254,12 +329,14 @@ export const mcp = createSiteMcp<Ctx>({
     (ctx.reader
       ? " You are signed in as the reader: their books read in full, and orders are paid from their INITE wallet when they allowed this site."
       : " To act as a signed-in reader, connect to /mcp/account instead."),
-  tools: (ctx): SiteTool<Ctx>[] =>
-    tools(ctx).map((tool) => ({
+  tools: (ctx): SiteTool<Ctx>[] => [
+    ...tools(ctx).map((tool) => ({
       ...tool,
       ...(tool.name === "list_books" ? { ui: { app: cards.catalog, invoking: "Looking at the books…", invoked: "Books" } } : {}),
       ...(tool.name === "create_checkout" ? { ui: { app: cards.order, invoking: "Opening the order…", invoked: "Order" } } : {}),
       call: async (args: Record<string, unknown>) =>
         (await callTool(tool.name, args, ctx)) ?? text(`Unknown tool: ${tool.name}`, true),
     })),
+    ...readerSiteTools(ctx),
+  ],
 });

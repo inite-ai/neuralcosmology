@@ -1,6 +1,6 @@
 import "server-only";
 import { cookies } from "next/headers";
-import { SignJWT, jwtVerify, createRemoteJWKSet, base64url } from "jose";
+import { SignJWT, jwtVerify, createRemoteJWKSet, base64url, type JWTVerifyGetKey } from "jose";
 import { db, dbConfigured } from "@/lib/db";
 import { claimGuestPurchases } from "@/lib/agent/claim";
 
@@ -14,6 +14,10 @@ export interface Session {
   sub: string;
   email?: string;
   name?: string;
+  /** INITE подтвердило адрес (email_verified в id_token при входе). */
+  emailVerified?: boolean;
+  /** Админ INITE (roles / metadata.isAdmin в id_token при входе). */
+  admin?: boolean;
 }
 
 const SESSION_COOKIE = "nc_session";
@@ -168,6 +172,8 @@ export async function completeLogin(code: string, state: string): Promise<string
     sub: payload.sub,
     email,
     name: typeof payload.name === "string" ? payload.name : undefined,
+    emailVerified: payload.email_verified === true,
+    admin: isAdminClaims(payload),
   });
   if (email && payload.email_verified === true) await claimGuestPurchases(payload.sub, email);
   return flow.returnTo;
@@ -178,17 +184,43 @@ export async function completeLogin(code: string, state: string): Promise<string
  * Принимаем только токены, выпущенные для этого сайта: audience — адрес MCP
  * или сам сайт (RFC 8707), чужие токены не пропускаем.
  */
-export async function verifyAgentToken(
-  token: string,
-  audiences: string[],
-): Promise<{ sub: string; email?: string; emailVerified: boolean } | null> {
+export interface AgentPrincipal {
+  sub: string;
+  email?: string;
+  emailVerified: boolean;
+  /** Админ INITE (roles или metadata.isAdmin), как и в сессии сайта. */
+  admin: boolean;
+  name?: string;
+  /** Области токена (`scope` строкой или `scopes` списком): @inite/mcp/site сверяет их с областью инструмента. */
+  scopes: string[];
+}
+
+/** Админ INITE: в токене roles содержит "admin" или metadata.isAdmin. */
+export const isAdminClaims = (p: Record<string, unknown>): boolean =>
+  (Array.isArray(p.roles) && p.roles.includes("admin")) ||
+  (p.metadata as { isAdmin?: unknown } | undefined)?.isAdmin === true;
+
+const scopesOf = (p: Record<string, unknown>): string[] =>
+  Array.isArray(p.scopes)
+    ? p.scopes.filter((s): s is string => typeof s === "string")
+    : typeof p.scope === "string"
+      ? p.scope.split(/\s+/).filter(Boolean)
+      : [];
+
+/** Ключи и издатель для проверки: по умолчанию JWKS и issuer INITE Auth; тесты подставляют свои. */
+export type AgentKeys = { keys?: JWTVerifyGetKey; issuer?: string };
+
+export async function verifyAgentToken(token: string, audiences: string[], with_: AgentKeys = {}): Promise<AgentPrincipal | null> {
   try {
-    const { payload } = await jwtVerify(token, await getJwks(), { issuer: issuer(), audience: audiences });
+    const { payload } = await jwtVerify(token, with_.keys ?? (await getJwks()), { issuer: with_.issuer ?? issuer(), audience: audiences });
     if (!payload.sub) return null;
     return {
       sub: payload.sub,
       email: typeof payload.email === "string" ? payload.email : undefined,
       emailVerified: payload.email_verified === true,
+      admin: isAdminClaims(payload),
+      name: typeof payload.name === "string" ? payload.name : undefined,
+      scopes: scopesOf(payload),
     };
   } catch {
     return null;
@@ -214,7 +246,7 @@ export async function logoutUrl(returnTo: string): Promise<string> {
 // ---------- session ----------
 
 async function setSession(s: Session) {
-  const token = await new SignJWT({ email: s.email, name: s.name })
+  const token = await new SignJWT({ email: s.email, name: s.name, ev: s.emailVerified === true, adm: s.admin === true })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(s.sub)
     .setIssuedAt()
@@ -235,6 +267,9 @@ export async function getSession(): Promise<Session | null> {
       sub: payload.sub,
       email: payload.email as string | undefined,
       name: payload.name as string | undefined,
+      // Сессии, выданные до этих полей, их не несут: ни подтверждения, ни админа.
+      emailVerified: payload.ev === true,
+      admin: payload.adm === true,
     };
   } catch {
     return null;

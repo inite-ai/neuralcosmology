@@ -21,7 +21,7 @@ services:
       - BILLING_API_KEY=${BILLING_API_KEY}
       - DATABASE_URL=${DATABASE_URL}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
-      - AUTHOR_EMAILS=${AUTHOR_EMAILS:-mikefluff@mikefluff.com}
+      - AUTHOR_EMAILS=${AUTHOR_EMAILS:-mike@inite.ai,mikefluff@mikefluff.com}
     volumes:
       - ./library:/app/library:ro
     labels:

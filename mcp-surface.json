@@ -1,10 +1,11 @@
 {
-  "version": "1.1.1",
-  "sha256": "ed6ae915356f091218f8b8cc08d758da9a0925849d577840448b2eb6ae980fc1",
+  "version": "1.2.0",
+  "sha256": "b17d617d500f90b9475da9e60f44f1061629ae718f501273eaa7aff1ba330fd1",
   "tools": [
     "search",
     "read",
     "list_books",
-    "create_checkout"
+    "create_checkout",
+    "get_chapter_discussion"
   ]
 }

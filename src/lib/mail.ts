@@ -12,15 +12,20 @@ export function mailConfigured(): boolean {
   return apiConfigured() || smtpConfigured();
 }
 
-const FROM = () => `Neural Cosmology <${process.env.MAILGUN_FROM_EMAIL || "info@neuralcosmology.com"}>`;
+const FROM_EMAIL = () => process.env.MAILGUN_FROM_EMAIL || "info@neuralcosmology.com";
+const FROM = (name = "Neural Cosmology") => `"${name.replace(/["\\\r\n<>]/g, "")}" <${FROM_EMAIL()}>`;
 // Ответы читателей — на общий ящик (MAILGUN_REPLY_TO), как у остальной почты inite.
 const REPLY_TO = () => process.env.MAILGUN_REPLY_TO || undefined;
 
-async function sendViaApi(to: string, subject: string, text: string, html?: string): Promise<boolean> {
+/** Письмо от имени (fromName) с ответом на адрес читателя (replyTo), как у заметок автору. */
+export type MailOptions = { replyTo?: string | null; fromName?: string };
+
+async function sendViaApi(to: string, subject: string, text: string, html?: string, o: MailOptions = {}): Promise<boolean> {
   const host = process.env.MAILGUN_REGION === "eu" ? "api.eu.mailgun.net" : "api.mailgun.net";
-  const body = new URLSearchParams({ from: FROM(), to, subject, text });
+  const body = new URLSearchParams({ from: FROM(o.fromName), to, subject, text });
   if (html) body.set("html", html);
-  if (REPLY_TO()) body.set("h:Reply-To", REPLY_TO()!);
+  const replyTo = o.replyTo || REPLY_TO();
+  if (replyTo) body.set("h:Reply-To", replyTo);
   try {
     const r = await fetch(`https://${host}/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
       method: "POST",
@@ -37,17 +42,18 @@ async function sendViaApi(to: string, subject: string, text: string, html?: stri
 
 let transport: nodemailer.Transporter | null = null;
 
-export async function sendMail(to: string, subject: string, text: string, html?: string): Promise<boolean> {
-  if (apiConfigured()) return sendViaApi(to, subject, text, html);
-  if (!smtpConfigured()) return false;
+export async function sendMail(to: string, subject: string, text: string, html?: string, o: MailOptions = {}): Promise<boolean> {
+  // The site's SMTP mailbox first; the HTTP API only where no mailbox is set.
+  if (!smtpConfigured()) return apiConfigured() ? sendViaApi(to, subject, text, html, o) : false;
   transport ??= nodemailer.createTransport({
     host: process.env.MAILGUN_SMTP_HOST || "smtp.mailgun.org",
-    port: parseInt(process.env.MAILGUN_SMTP_PORT || "587"),
+    // 2525: DigitalOcean closes 25, 465 and 587.
+    port: parseInt(process.env.MAILGUN_SMTP_PORT || "2525"),
     secure: process.env.MAILGUN_SMTP_PORT === "465",
     auth: { user: process.env.MAILGUN_SMTP_USERNAME, pass: process.env.MAILGUN_SMTP_PASSWORD },
   });
   try {
-    await transport.sendMail({ from: FROM(), to, subject, text, html, replyTo: REPLY_TO() });
+    await transport.sendMail({ from: FROM(o.fromName), to, subject, text, html, replyTo: o.replyTo || REPLY_TO() });
     return true;
   } catch (err) {
     console.error("[mail]", err instanceof Error ? err.message : err);

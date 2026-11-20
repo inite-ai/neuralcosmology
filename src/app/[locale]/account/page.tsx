@@ -34,10 +34,10 @@ const A: Record<SupportedLocale, Record<string, string>> = {
 };
 
 const T: Record<SupportedLocale, Record<string, string>> = {
-  ru: { social: "Цитаты в соцсетях", hide: "Скрыть", show: "Показать", del: "Удалить", title: "Кабинет", library: "Моя библиотека", progress: "прочитано", cont: "Продолжить", start: "Начать", owned: "куплено", free: "доступ по входу", buy: "Купить", buyAll: "Вся библиотека", notes: "Пометки", noNotes: "Пока пусто: выделите текст в читалке.", talk: "Мои обсуждения", noTalk: "Вы ещё ничего не писали.", ai: "ИИ сегодня", aiLeft: "осталось вопросов", mod: "Модерация", noMod: "Новых сообщений нет.", out: "Выйти", hidden: "скрыто", rejected: "отклонено ИИ" },
-  en: { social: "Quotes on social media", hide: "Hide", show: "Show", del: "Delete", title: "Account", library: "My library", progress: "read", cont: "Continue", start: "Start", owned: "owned", free: "sign-in access", buy: "Buy", buyAll: "Whole library", notes: "Notes", noNotes: "Nothing yet: select text in the reader.", talk: "My discussions", noTalk: "You haven't written anything yet.", ai: "AI today", aiLeft: "questions left", mod: "Moderation", noMod: "No new messages.", out: "Sign out", hidden: "hidden", rejected: "rejected by AI" },
-  pt: { social: "Citações nas redes sociais", hide: "Ocultar", show: "Mostrar", del: "Excluir", title: "Conta", library: "Minha biblioteca", progress: "lido", cont: "Continuar", start: "Começar", owned: "comprado", free: "acesso com login", buy: "Comprar", buyAll: "Biblioteca inteira", notes: "Notas", noNotes: "Nada ainda: selecione texto no leitor.", talk: "Minhas discussões", noTalk: "Você ainda não escreveu nada.", ai: "IA hoje", aiLeft: "perguntas restantes", mod: "Moderação", noMod: "Sem mensagens novas.", out: "Sair", hidden: "oculto", rejected: "rejeitado pela IA" },
-  es: { social: "Citas en redes sociales", hide: "Ocultar", show: "Mostrar", del: "Eliminar", title: "Cuenta", library: "Mi biblioteca", progress: "leído", cont: "Seguir", start: "Empezar", owned: "comprado", free: "acceso con sesión", buy: "Comprar", buyAll: "Biblioteca completa", notes: "Notas", noNotes: "Nada aún: selecciona texto en el lector.", talk: "Mis conversaciones", noTalk: "Aún no has escrito nada.", ai: "IA hoy", aiLeft: "preguntas restantes", mod: "Moderación", noMod: "No hay mensajes nuevos.", out: "Cerrar sesión", hidden: "oculto", rejected: "rechazado por IA" },
+  ru: { social: "Цитаты в соцсетях", hide: "Скрыть", show: "Показать", del: "Удалить", title: "Кабинет", library: "Моя библиотека", progress: "прочитано", cont: "Продолжить", start: "Начать", owned: "куплено", free: "доступ по входу", buy: "Купить", buyAll: "Вся библиотека", notes: "Пометки", noNotes: "Пока пусто: выделите текст в читалке.", talk: "Мои обсуждения", noTalk: "Вы ещё ничего не писали.", ai: "ИИ сегодня", aiLeft: "осталось вопросов", mod: "Модерация", noMod: "Новых сообщений нет.", out: "Выйти", held: "ждёт проверки автором" },
+  en: { social: "Quotes on social media", hide: "Hide", show: "Show", del: "Delete", title: "Account", library: "My library", progress: "read", cont: "Continue", start: "Start", owned: "owned", free: "sign-in access", buy: "Buy", buyAll: "Whole library", notes: "Notes", noNotes: "Nothing yet: select text in the reader.", talk: "My discussions", noTalk: "You haven't written anything yet.", ai: "AI today", aiLeft: "questions left", mod: "Moderation", noMod: "No new messages.", out: "Sign out", held: "awaiting the author's review" },
+  pt: { social: "Citações nas redes sociais", hide: "Ocultar", show: "Mostrar", del: "Excluir", title: "Conta", library: "Minha biblioteca", progress: "lido", cont: "Continuar", start: "Começar", owned: "comprado", free: "acesso com login", buy: "Comprar", buyAll: "Biblioteca inteira", notes: "Notas", noNotes: "Nada ainda: selecione texto no leitor.", talk: "Minhas discussões", noTalk: "Você ainda não escreveu nada.", ai: "IA hoje", aiLeft: "perguntas restantes", mod: "Moderação", noMod: "Sem mensagens novas.", out: "Sair", held: "aguarda a revisão do autor" },
+  es: { social: "Citas en redes sociales", hide: "Ocultar", show: "Mostrar", del: "Eliminar", title: "Cuenta", library: "Mi biblioteca", progress: "leído", cont: "Seguir", start: "Empezar", owned: "comprado", free: "acceso con sesión", buy: "Comprar", buyAll: "Biblioteca completa", notes: "Notas", noNotes: "Nada aún: selecciona texto en el lector.", talk: "Mis conversaciones", noTalk: "Aún no has escrito nada.", ai: "IA hoy", aiLeft: "preguntas restantes", mod: "Moderación", noMod: "No hay mensajes nuevos.", out: "Cerrar sesión", held: "espera la revisión del autor" },
 };
 
 export default async function AccountPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -60,7 +60,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
   const [usage] = sql ? await sql`SELECT count FROM ai_usage WHERE user_id = ${session.sub} AND day = current_date` : [];
   const queue = sql && author
     ? await sql`SELECT id, book, lang, chapter, anchor, author_name, body, status, pinned, created_at FROM comments
-        WHERE status <> 'published' OR created_at > now() - interval '14 days' ORDER BY created_at DESC LIMIT 100`
+        WHERE status = 'hidden' OR created_at > now() - interval '14 days' ORDER BY created_at DESC LIMIT 100`
     : [];
 
   const shelf = await Promise.all(
@@ -184,7 +184,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
                   <Link href={readHref(c.book, c.chapter, c.anchor)} className="group block">
                     <p className="label text-muted">
                       {chapterTitle(c.book, c.lang, c.chapter)}
-                      {c.status !== "published" && ` · ${c.status === "hidden" ? t.hidden : t.rejected}`}
+                      {c.status !== "published" && ` · ${t.held}`}
                     </p>
                     <p className="mt-1 line-clamp-2 text-fg-secondary group-hover:text-fg">{c.body}</p>
                   </Link>

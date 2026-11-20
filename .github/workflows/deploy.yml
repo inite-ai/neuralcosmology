@@ -92,14 +92,16 @@ jobs:
               # Интерактив читалки: пометки, обсуждения, ИИ
               - DATABASE_URL=${{ secrets.DATABASE_URL }}
               - ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
-              - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mikefluff@mikefluff.com' }}
+              - AUTHOR_EMAILS=${{ vars.AUTHOR_EMAILS || 'mike@inite.ai,mikefluff@mikefluff.com' }}
+              - CONTACT_EMAIL=${{ vars.CONTACT_EMAIL || 'info@neuralcosmology.com' }}
               - NOTIFY_SECRET=${{ secrets.NOTIFY_SECRET }}
-              - MAILGUN_SMTP_HOST=${{ vars.MAILGUN_SMTP_HOST }}
-              - MAILGUN_SMTP_PORT=${{ vars.MAILGUN_SMTP_PORT }}
+              # The site's own Mailgun SMTP mailbox (hello@mail.neuralcosmology.com) on port 2525;
+              # the HTTP API needs the account key, which is for settings, not for apps.
+              - MAILGUN_SMTP_HOST=${{ vars.MAILGUN_SMTP_HOST || 'smtp.mailgun.org' }}
+              - MAILGUN_SMTP_PORT=${{ vars.MAILGUN_SMTP_PORT || '2525' }}
               - MAILGUN_SMTP_USERNAME=${{ secrets.MAILGUN_SMTP_USERNAME }}
               - MAILGUN_SMTP_PASSWORD=${{ secrets.MAILGUN_SMTP_PASSWORD }}
               - MAILGUN_FROM_EMAIL=${{ vars.MAILGUN_FROM_EMAIL || 'info@neuralcosmology.com' }}
-              - MAILGUN_API_KEY=${{ secrets.MAILGUN_API_KEY }}
               - MAILGUN_DOMAIN=${{ vars.MAILGUN_DOMAIN }}
               - MAILGUN_REPLY_TO=${{ vars.MAILGUN_REPLY_TO }}
               - MAILGUN_REGION=${{ vars.MAILGUN_REGION }}
