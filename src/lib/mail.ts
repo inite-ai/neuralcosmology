@@ -43,11 +43,12 @@ async function sendViaApi(to: string, subject: string, text: string, html?: stri
 let transport: nodemailer.Transporter | null = null;
 
 export async function sendMail(to: string, subject: string, text: string, html?: string, o: MailOptions = {}): Promise<boolean> {
-  if (apiConfigured()) return sendViaApi(to, subject, text, html, o);
-  if (!smtpConfigured()) return false;
+  // The site's SMTP mailbox first; the HTTP API only where no mailbox is set.
+  if (!smtpConfigured()) return apiConfigured() ? sendViaApi(to, subject, text, html, o) : false;
   transport ??= nodemailer.createTransport({
     host: process.env.MAILGUN_SMTP_HOST || "smtp.mailgun.org",
-    port: parseInt(process.env.MAILGUN_SMTP_PORT || "587"),
+    // 2525: DigitalOcean closes 25, 465 and 587.
+    port: parseInt(process.env.MAILGUN_SMTP_PORT || "2525"),
     secure: process.env.MAILGUN_SMTP_PORT === "465",
     auth: { user: process.env.MAILGUN_SMTP_USERNAME, pass: process.env.MAILGUN_SMTP_PASSWORD },
   });
