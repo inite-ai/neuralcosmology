@@ -182,6 +182,54 @@ export const books: Book[] = [
     genre: "literary-sci-fi",
     coverImage: "/covers/era-of-architects.webp",
   },
+  {
+    slug: "eternity",
+    titles: {
+      en: "Eternity",
+      ru: "Вечность",
+      pt: "Eternidade",
+      es: "Eternidad",
+    },
+    hook: {
+      en:
+        "The narrator of this book hides in everything at once, from a fridge to a moth, and takes off seven masks one by one: name, memory, character, body, place, time and God. After each one it checks what is left.",
+      ru:
+        "Рассказчик этой книги прячется во всём сразу, от холодильника до мотылька, и по очереди снимает с себя семь масок: имя, память, характер, тело, место, время и Бога. После каждой он проверяет, что осталось.",
+      pt:
+        "O narrador deste livro se esconde em tudo ao mesmo tempo, da geladeira à mariposa, e tira sete máscaras, uma por uma: nome, memória, caráter, corpo, lugar, tempo e Deus. Depois de cada uma, verifica o que sobrou.",
+      es:
+        "El narrador de este libro se esconde en todo a la vez, de la nevera a la polilla, y se quita siete máscaras una tras otra: nombre, memoria, carácter, cuerpo, lugar, tiempo y Dios. Después de cada una comprueba qué queda.",
+    },
+    synopsis: {
+      en:
+        "The one the Indians called Brahman, Spinoza called Nature and Instagram stories call the Universe tells how it hides in a man who spends half the night rereading a single line in an empty file. Chapter by chapter it removes what a self is usually made of, and checks every removal against science: H.M. and Clive Wearing, who lost their memory, Phineas Gage and the iron rod through his skull, place cells and grid cells, the airborne clocks of Hafele and Keating, Einstein’s letter to the Besso family. Kurzweil, cryonics and dopamine fasting turn up as well, and get exactly the reverence they deserve. The word invariant is taken from physics literally: the book looks for a quantity that survives a change of carrier, the loss of memory, copying and stopped clocks. The answer rests on the Pointer Architecture of The Celestial Code, in which no record is ever deleted, and asks whether an eternal record has a reader.",
+      ru:
+        "Тот, кого индийцы звали Брахманом, Спиноза Природой, а сторис зовут Вселенной, рассказывает, как прячется в человеке, который полночи перечитывает одну строчку в пустом файле. Глава за главой он снимает то, из чего обычно собрано «я», и каждое снятие сверяет с наукой: Г. М. и Клайв Уиринг, потерявшие память, Финеас Гейдж с железным ломом через череп, клетки места и клетки решётки, часы Хафеле и Китинга на самолётах, письмо Эйнштейна семье Бессо. Курцвейл, крионика и дофаминовое голодание тоже появляются, и почтения им достаётся ровно столько, сколько они заслужили. Слово «инвариант» взято у физиков буквально: книга ищет величину, которая переживёт замену носителя, потерю памяти, копирование и остановку часов. Ответ опирается на Pointer Architecture из «Небесного кода», где ни одна запись не удаляется, и спрашивает, есть ли у вечной записи читатель.",
+      pt:
+        "Aquele que os indianos chamavam de Brahman, Espinosa de Natureza e os stories chamam de Universo conta como se esconde num homem que passa metade da noite relendo uma única linha num arquivo vazio. Capítulo a capítulo, ele tira aquilo de que um eu costuma ser feito e confere cada retirada com a ciência: H.M. e Clive Wearing, que perderam a memória, Phineas Gage e a barra de ferro que atravessou seu crânio, as células de lugar e as células de grade, os relógios de Hafele e Keating nos aviões, a carta de Einstein à família Besso. Kurzweil, a criônica e o jejum de dopamina também aparecem, e recebem exatamente a reverência que merecem. A palavra invariante vem da física, ao pé da letra: o livro procura uma grandeza que sobreviva à troca de suporte, à perda de memória, à cópia e aos relógios parados. A resposta se apoia na Pointer Architecture de O Código Celestial, em que nenhum registro é apagado, e pergunta se um registro eterno tem leitor.",
+      es:
+        "Aquel a quien los indios llamaban Brahman, Spinoza Naturaleza y las stories llaman Universo cuenta cómo se esconde en un hombre que pasa media noche releyendo una sola línea en un archivo vacío. Capítulo a capítulo se quita aquello de lo que suele estar hecho un yo y contrasta cada pérdida con la ciencia: H.M. y Clive Wearing, que perdieron la memoria, Phineas Gage y la barra de hierro que le atravesó el cráneo, las células de lugar y las células de rejilla, los relojes de Hafele y Keating en los aviones, la carta de Einstein a la familia Besso. Kurzweil, la criónica y el ayuno de dopamina también aparecen, y reciben exactamente la reverencia que merecen. La palabra invariante viene de la física, al pie de la letra: el libro busca una magnitud que sobreviva al cambio de soporte, a la pérdida de memoria, a la copia y a los relojes parados. La respuesta se apoya en la Pointer Architecture de El Código Celestial, en la que ningún registro se borra, y pregunta si un registro eterno tiene lector.",
+    },
+    status: "wip",
+    statusLabel: {
+      en:
+        "First draft · 7 chapters · every chapter online",
+      ru:
+        "Первый черновик · 7 глав · все главы онлайн",
+      pt:
+        "Primeiro rascunho · 7 capítulos · todos os capítulos online",
+      es:
+        "Primer borrador · 7 capítulos · todos los capítulos en línea",
+    },
+    genre: "literary-sci-fi",
+    coverImage: "/covers/eternity.webp",
+    comparables: [
+      "The Book — Alan Watts",
+      "The End of Time — Julian Barbour",
+      "Ficciones — Jorge Luis Borges",
+    ],
+    companionPaperSlug: "pointer-architecture",
+  },
 ];
 
 // Обложка на языке страницы: ru — оригинал из книги (/covers/<slug>.webp),
