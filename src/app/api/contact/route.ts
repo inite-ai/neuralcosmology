@@ -1,130 +1,53 @@
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import type { NextRequest } from "next/server";
+import { db, dbConfigured } from "@/lib/db";
+import { emailHtml } from "@/lib/email-layout";
+import { isSupportedLocale } from "@/lib/get-locale";
+import { ipOf, limiter, sameOrigin } from "@/lib/guard";
+import { sendMail } from "@/lib/mail";
+import { clip, fail, json } from "@/lib/reader/http";
+import { validEmail } from "@/lib/subscribe";
 
-const SMTP_CONFIG = {
-  host: process.env.MAILGUN_SMTP_HOST || "smtp.mailgun.org",
-  port: parseInt(process.env.MAILGUN_SMTP_PORT || "2525"),
-  secure: false,
-  auth: {
-    user: process.env.MAILGUN_SMTP_USERNAME,
-    pass: process.env.MAILGUN_SMTP_PASSWORD,
-  },
-};
+export const dynamic = "force-dynamic";
 
-const MAILGUN_FROM_EMAIL =
-  process.env.MAILGUN_FROM_EMAIL || "info@neuralcosmology.com";
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@neuralcosmology.com";
+// POST { name, email, message, kind?, book?, lang? } — обращение автору. Сначала строка
+// в inquiries, потом письмо: потерянное письмо больше не значит потерянное обращение.
+// «Отправлено» говорим, только если сохранилось или ушло. company — ловушка для ботов.
+const KINDS = ["contact", "rights", "press"] as const;
+const allow = limiter(5, 600_000);
+const CONTACT_EMAIL = () => process.env.CONTACT_EMAIL || "info@neuralcosmology.com";
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  message: string;
-}
+export async function POST(req: NextRequest) {
+  if (!sameOrigin(req)) return fail("forbidden", 403);
+  if (!allow(ipOf(req))) return fail("rate_limited", 429);
+  const b = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+  if (clip(b.company, 100)) return json({ success: true });
+  const name = clip(b.name, 120).replace(/[\r\n]+/g, " ");
+  const email = clip(b.email, 254).toLowerCase();
+  const message = clip(b.message, 8000);
+  if (!name || !message) return fail("fields_required", 400);
+  if (!validEmail(email)) return fail("invalid_email", 400);
+  const kind = KINDS.find((k) => k === b.kind) ?? "contact";
+  const book = clip(b.book, 60) || null;
+  const lang = isSupportedLocale(String(b.lang)) ? String(b.lang) : null;
 
-export async function POST(request: NextRequest) {
-  try {
-    const body: ContactFormData = await request.json();
-    const { name, email, message } = body;
-
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: "All fields are required" },
-        { status: 400 },
-      );
+  let stored = false;
+  if (dbConfigured()) {
+    try {
+      const sql = await db();
+      await sql`INSERT INTO inquiries (kind, name, email, message, book, lang) VALUES (${kind}, ${name}, ${email}, ${message}, ${book}, ${lang})`;
+      stored = true;
+    } catch (err) {
+      console.error("[contact] not stored:", err instanceof Error ? err.message : err);
     }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 },
-      );
-    }
-
-    if (!SMTP_CONFIG.auth.user || !SMTP_CONFIG.auth.pass) {
-      console.error(
-        "SMTP not configured. Set MAILGUN_SMTP_USERNAME and MAILGUN_SMTP_PASSWORD.",
-      );
-      return NextResponse.json(
-        { error: "Email service not configured" },
-        { status: 500 },
-      );
-    }
-
-    const emailSubject = `Neural Cosmology — contact from ${name}`;
-    const emailText = `
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}
-
----
-Sent from neuralcosmology.com contact form
-    `.trim();
-
-    const emailHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #0a1026; color: #e2e8f0;">
-        <h2 style="color: #818cf8; border-bottom: 2px solid #818cf8; padding-bottom: 10px;">
-          Neural Cosmology — new contact
-        </h2>
-
-        <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid rgba(255,255,255,0.1);">
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> <a href="mailto:${email}" style="color: #a5b4fc;">${email}</a></p>
-        </div>
-
-        <div style="margin: 20px 0;">
-          <h3 style="color: #c4b5fd;">Message</h3>
-          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-left: 4px solid #818cf8; border-radius: 4px;">
-            ${message.replace(/\n/g, "<br>")}
-          </div>
-        </div>
-
-        <hr style="margin: 30px 0; border: none; border-top: 1px solid rgba(255,255,255,0.1);">
-        <p style="color: rgba(255,255,255,0.5); font-size: 14px;">
-          Sent from <a href="https://neuralcosmology.com" style="color: #818cf8;">neuralcosmology.com</a>
-        </p>
-      </div>
-    `;
-
-    const transporter = nodemailer.createTransport(SMTP_CONFIG);
-
-    const mailOptions = {
-      from: `"${name} via neuralcosmology.com" <${MAILGUN_FROM_EMAIL}>`,
-      to: CONTACT_EMAIL,
-      replyTo: email,
-      subject: emailSubject,
-      text: emailText,
-      html: emailHtml,
-    };
-
-    const result = await transporter.sendMail(mailOptions);
-    console.log("Contact email sent:", result.messageId);
-
-    return NextResponse.json(
-      { success: true, messageId: result.messageId },
-      { status: 200 },
-    );
-  } catch (error) {
-    console.error("Contact form error:", error);
-    return NextResponse.json(
-      {
-        error: "Failed to send message. Please try again later or write to info@neuralcosmology.com directly.",
-        details: process.env.NODE_ENV === "development" ? String(error) : undefined,
-      },
-      { status: 500 },
-    );
   }
-}
-
-export async function OPTIONS() {
-  return new NextResponse(null, {
-    status: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    },
+  const text = `${name} <${email}>\n${[kind, book, lang].filter(Boolean).join(" · ")}\n\n${message}`;
+  const html = emailHtml({
+    lang: "ru",
+    preheader: message.slice(0, 140),
+    title: `${kind}: ${name}`,
+    blocks: [{ kind: "p", text: [email, book, lang].filter(Boolean).join(" · ") }, ...message.split(/\n{2,}/).map((p) => ({ kind: "p" as const, text: p }))],
+    footer: { text: "neuralcosmology.com" },
   });
+  const sent = await sendMail(CONTACT_EMAIL(), `Neural Cosmology · ${kind}: ${name}`, text, html, { replyTo: email, fromName: `${name} via neuralcosmology.com` });
+  return stored || sent ? json({ success: true }) : fail("not_delivered", 503);
 }

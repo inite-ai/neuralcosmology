@@ -1,0 +1,105 @@
+import type { SupportedLocale } from "@/lib/get-locale";
+
+// Что сайт собирает на самом деле (по коду). Меняете сбор данных — правьте и этот текст.
+export const PRIVACY_UPDATED = "2026-11-24";
+type Doc = { title: string; updated: string; lede: string; sections: { h: string; p: string[] }[] };
+const MAIL = "info@neuralcosmology.com";
+
+export const PRIVACY: Record<SupportedLocale, Doc> = {
+  ru: {
+    title: "Приватность",
+    updated: "Обновлено",
+    lede: "Что собирает этот сайт, зачем и как это удалить.",
+    sections: [
+      { h: "Кто отвечает", p: [`Сайт ведёт Михаил Савченко. Вопросы о данных: ${MAIL}.`] },
+      { h: "Что вы оставляете сами", p: [
+        "Форма связи сохраняет имя, адрес почты и сообщение в базе сайта и отправляет мне письмом.",
+        "Подписка сохраняет адрес, язык и место, где вы его оставили. Письма о новых главах приходят только после подтверждения, отписаться можно по ссылке в каждом из них.",
+        "Если вы вошли, сайт хранит прогресс чтения, пометки, комментарии, настройки и число вопросов к ИИ. Вход идёт через INITE, оплата через INITE Billing и платёжного провайдера. Номера карт сайт не видит.",
+        "Вопросы к ИИ в читалке обрабатывает Anthropic. Комментарии перед публикацией тоже проверяет ИИ.",
+        "В платные главы вшита невидимая метка аккаунта: по ней можно найти, откуда утёк текст.",
+      ] },
+      { h: "Аналитика и реклама", p: [
+        "Google Analytics 4 считает страницы, главы, опыты, покупки. В ЕЭЗ, Великобритании и Швейцарии его куки выключены, туда уходят только обезличенные сигналы. Вошедшему читателю передаётся непрозрачный номер, не сам аккаунт.",
+        "Вне этих стран пиксель Meta и Conversions API получают те же события, IP-адрес, сведения о браузере и, если вы оставили почту, её хеш SHA-256.",
+      ] },
+      { h: "Кто ещё это видит", p: ["Mailgun доставляет письма, Cloudflare проводит трафик, база и сайт стоят на арендованном сервере. Данные не продаются."] },
+      { h: "Сколько хранится и как удалить", p: [
+        "Данные хранятся, пока вы пользуетесь сайтом. В кабинете их можно скачать и удалить. После удаления остаются метка платного текста без адреса, обезличенные комментарии и покупки в биллинге.",
+        `Без аккаунта напишите на ${MAIL} с того же адреса: пришлю копию, исправлю или удалю.`,
+      ] },
+    ],
+  },
+  en: {
+    title: "Privacy",
+    updated: "Updated",
+    lede: "What this site collects, why, and how to have it deleted.",
+    sections: [
+      { h: "Who is responsible", p: [`Mikhail Savchenko runs this site. Questions about your data: ${MAIL}.`] },
+      { h: "What you give yourself", p: [
+        "The contact form stores your name, email address and message in the site’s database and emails them to me.",
+        "A subscription stores the address, your language and where you left it. Emails about new chapters start only after you confirm, and each carries an unsubscribe link.",
+        "If you sign in, the site keeps your reading progress, notes, comments, settings and the number of AI questions. Sign-in goes through INITE, payment through INITE Billing and its payment provider. The site never sees card numbers.",
+        "Questions to the AI in the reader are processed by Anthropic. Comments are also checked by AI before they appear.",
+        "Paid chapters carry an invisible mark of your account, so that a leaked text can be traced.",
+      ] },
+      { h: "Analytics and advertising", p: [
+        "Google Analytics 4 counts pages, chapters, experiments and purchases. In the EEA, the UK and Switzerland its cookies are off and it receives only cookieless signals. A signed-in reader is sent as an opaque number, never as the account.",
+        "Outside those countries the Meta pixel and Conversions API receive the same events, your IP address, browser details and, if you left an email, its SHA-256 hash.",
+      ] },
+      { h: "Who else sees it", p: ["Mailgun delivers the emails, Cloudflare carries the traffic, and the database and site run on a rented server. Nothing is sold."] },
+      { h: "How long, and how to delete it", p: [
+        "Data is kept while you use the site. You can download and delete it in your account. After deletion there remain the mark in paid text without your address, anonymised comments and purchases in billing.",
+        `Without an account, write to ${MAIL} from the same address and I will send a copy, correct it or delete it.`,
+      ] },
+    ],
+  },
+  pt: {
+    title: "Privacidade",
+    updated: "Atualizado em",
+    lede: "O que este site coleta, por quê e como apagar.",
+    sections: [
+      { h: "Quem é responsável", p: [`Mikhail Savchenko mantém este site. Dúvidas sobre seus dados: ${MAIL}.`] },
+      { h: "O que você mesmo informa", p: [
+        "O formulário de contato guarda nome, e-mail e mensagem no banco de dados do site e os envia para mim por e-mail.",
+        "A inscrição guarda o endereço, o idioma e onde ele foi informado. Os e-mails sobre novos capítulos só começam depois da confirmação, e cada um traz um link para cancelar.",
+        "Se você entra na conta, o site guarda progresso de leitura, notas, comentários, configurações e o número de perguntas à IA. O login passa pela INITE, o pagamento pela INITE Billing e pelo provedor de pagamento. O site não vê números de cartão.",
+        "As perguntas à IA no leitor são processadas pela Anthropic. Os comentários também são verificados por IA antes de aparecer.",
+        "Os capítulos pagos levam uma marca invisível da sua conta, para rastrear um texto vazado.",
+      ] },
+      { h: "Análise e publicidade", p: [
+        "O Google Analytics 4 conta páginas, capítulos, experimentos e compras. No EEE, no Reino Unido e na Suíça os cookies ficam desligados e ele recebe apenas sinais sem cookies. O leitor conectado é enviado como um número opaco, nunca como a conta.",
+        "Fora desses países, o pixel da Meta e a Conversions API recebem os mesmos eventos, o endereço IP, dados do navegador e, se você informou o e-mail, o hash SHA-256 dele.",
+      ] },
+      { h: "Quem mais vê", p: ["A Mailgun entrega os e-mails, a Cloudflare conduz o tráfego, e o banco de dados e o site ficam em um servidor alugado. Nada é vendido."] },
+      { h: "Por quanto tempo e como apagar", p: [
+        "Os dados ficam guardados enquanto você usa o site. Na conta você pode baixá-los e apagá-los. Depois permanecem a marca no texto pago sem o seu endereço, os comentários anônimos e as compras no sistema de cobrança.",
+        `Sem conta, escreva para ${MAIL} do mesmo endereço: envio uma cópia, corrijo ou apago.`,
+      ] },
+    ],
+  },
+  es: {
+    title: "Privacidad",
+    updated: "Actualizado el",
+    lede: "Qué recoge este sitio, para qué y cómo borrarlo.",
+    sections: [
+      { h: "Quién responde", p: [`Mikhail Savchenko mantiene este sitio. Preguntas sobre sus datos: ${MAIL}.`] },
+      { h: "Lo que usted mismo deja", p: [
+        "El formulario de contacto guarda nombre, correo y mensaje en la base de datos del sitio y me los envía por correo.",
+        "La suscripción guarda la dirección, el idioma y dónde la dejó. Los correos sobre capítulos nuevos empiezan solo después de confirmar, y cada uno lleva un enlace de baja.",
+        "Si inicia sesión, el sitio guarda el progreso de lectura, las notas, los comentarios, los ajustes y el número de preguntas a la IA. El acceso pasa por INITE, el pago por INITE Billing y su proveedor de pago. El sitio no ve números de tarjeta.",
+        "Las preguntas a la IA en el lector las procesa Anthropic. Los comentarios también se revisan con IA antes de publicarse.",
+        "Los capítulos de pago llevan una marca invisible de su cuenta, para rastrear un texto filtrado.",
+      ] },
+      { h: "Analítica y publicidad", p: [
+        "Google Analytics 4 cuenta páginas, capítulos, experimentos y compras. En el EEE, el Reino Unido y Suiza sus cookies están apagadas y recibe solo señales sin cookies. El lector con sesión se envía como un número opaco, nunca como la cuenta.",
+        "Fuera de esos países, el píxel de Meta y la Conversions API reciben los mismos eventos, la dirección IP, datos del navegador y, si dejó un correo, su hash SHA-256.",
+      ] },
+      { h: "Quién más lo ve", p: ["Mailgun entrega los correos, Cloudflare lleva el tráfico, y la base de datos y el sitio están en un servidor alquilado. Nada se vende."] },
+      { h: "Cuánto tiempo y cómo borrarlo", p: [
+        "Los datos se guardan mientras usa el sitio. En su cuenta puede descargarlos y borrarlos. Después quedan la marca del texto de pago sin su dirección, los comentarios anónimos y las compras en la facturación.",
+        `Sin cuenta, escriba a ${MAIL} desde la misma dirección: le envío una copia, lo corrijo o lo borro.`,
+      ] },
+    ],
+  },
+};

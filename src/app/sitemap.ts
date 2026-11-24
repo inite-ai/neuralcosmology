@@ -41,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/experiments", priority: 0.9 },
     { path: "/lectures", priority: 0.7 },
     { path: "/about", priority: 0.8 },
+    { path: "/privacy", priority: 0.2 },
   ];
   const bookPaths: Entry[] = books.map((b) => ({
     path: `/books/${b.slug}`,

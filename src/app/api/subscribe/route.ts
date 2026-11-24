@@ -4,6 +4,7 @@ import { clip, fail, json, noDb } from "@/lib/reader/http";
 import { READ_PATH, subscribe, validEmail, type SubscribeKind } from "@/lib/subscribe";
 import { getExperiment } from "@/lib/interactive";
 import { getBookBySlug } from "@/content/books";
+import { ipOf, limiter, sameOrigin } from "@/lib/guard";
 import { capiUser, sendCapi } from "@/lib/meta-capi";
 
 export const dynamic = "force-dynamic";
@@ -12,16 +13,13 @@ export const dynamic = "force-dynamic";
 // kind later — прислать опыт item и его главу, kind unlock — ссылку, открывающую главу to.
 // Не больше 5 попыток
 // с одного адреса за 10 минут; поле company — ловушка для ботов.
-const hits = new Map<string, number[]>();
+const allow = limiter(5, 600_000);
 
 export async function POST(req: NextRequest) {
   const blocked = noDb();
   if (blocked) return blocked;
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
-  const now = Date.now();
-  const recent = (hits.get(ip) ?? []).filter((t) => now - t < 600_000);
-  if (recent.length >= 5) return fail("rate_limited", 429);
-  hits.set(ip, [...recent, now]);
+  if (!sameOrigin(req)) return fail("forbidden", 403);
+  if (!allow(ipOf(req))) return fail("rate_limited", 429);
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
   if (clip(body.company, 100)) return json({ status: "sent" });

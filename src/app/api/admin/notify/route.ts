@@ -43,6 +43,8 @@ export async function POST(req: NextRequest) {
 
   const subs = await sql`SELECT email, notify_books, lang FROM reader_prefs WHERE notify AND email IS NOT NULL`;
   let sent = 0;
+  // Адрес, который есть и в кабинете, и в подписке, получает одно письмо.
+  const reached = new Set(subs.map((s) => (s.email as string).toLowerCase()));
   for (const s of subs) {
     const ui = (s.lang as string) || "ru";
     const c = COPY[ui] ?? COPY.en;
@@ -61,6 +63,7 @@ export async function POST(req: NextRequest) {
   // Подписчики без аккаунта (подтверждённые): все книги на их языке, отписка по токену.
   const list = await sql`SELECT email, lang, token FROM subscribers WHERE status = 'confirmed'`;
   for (const s of list) {
+    if (reached.has((s.email as string).toLowerCase())) continue;
     const ui = (s.lang as string) || "en";
     const c = COPY[ui] ?? COPY.en;
     for (const b of books) {
@@ -72,7 +75,7 @@ export async function POST(req: NextRequest) {
       const unsub = `${site}/api/subscribe/unsubscribe?t=${s.token}`;
       const text = `${c.lead}\n\n${lines}\n\n${c.unsubLink}: ${unsub}`;
       const html = chaptersEmail(c, ui, title, added.map((ch) => ({ title: ch.title, href: `${site}/${lang}/read/${b.slug}/${ch.id}` })), unsub);
-      if (await sendMail(s.email as string, c.subject(title), text, html)) sent++;
+      if (await sendMail(s.email as string, c.subject(title), text, html, { unsubscribe: unsub })) sent++;
     }
   }
   return json({ sent, subscribers: subs.length + list.length, newChapters: [...fresh.values()].reduce((n, l) => n + l.length, 0), mail: mailConfigured() });

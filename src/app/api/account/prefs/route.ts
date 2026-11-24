@@ -3,6 +3,7 @@ import { getSession } from "@/lib/auth";
 import { getPrefs, savePrefs } from "@/lib/account";
 import { books } from "@/content/books";
 import { CURRENCY_COOKIE, isCurrency } from "@/content/pricing";
+import { sameOrigin } from "@/lib/guard";
 import { clip, fail, json, noDb } from "@/lib/reader/http";
 
 export const dynamic = "force-dynamic";
@@ -15,6 +16,7 @@ export async function GET() {
 }
 
 export async function PUT(req: NextRequest) {
+  if (!sameOrigin(req)) return fail("forbidden", 403);
   const session = await getSession();
   if (!session) return fail("unauthorized", 401);
   const bad = noDb();

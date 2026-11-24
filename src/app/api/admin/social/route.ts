@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { db } from "@/lib/db";
 import { isSupportedLocale } from "@/lib/get-locale";
+import { sameOrigin } from "@/lib/guard";
 import { clip, fail, json, noDb } from "@/lib/reader/http";
 import { authorSession, saveAccount, validTz } from "@/lib/social/accounts";
 import { facebookConfigured, telegramConnect, threadsConfigured } from "@/lib/social/networks";
@@ -27,6 +28,7 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  if (!sameOrigin(req)) return fail("forbidden", 403);
   const off = noDb();
   if (off) return off;
   if (!(await authorSession())) return fail("forbidden", 403);

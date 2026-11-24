@@ -25,7 +25,7 @@ export default function ContactForm({ locale }: { locale: SupportedLocale }) {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, lang: locale, company: new FormData(e.currentTarget as HTMLFormElement).get("company") ?? "" }),
       });
       if (!res.ok) throw new Error("send failed");
       setStatus("success");
@@ -50,6 +50,7 @@ export default function ContactForm({ locale }: { locale: SupportedLocale }) {
           <input name="email" type="email" autoComplete="email" inputMode="email" value={data.email} onChange={onChange} placeholder={f.emailPlaceholder} required disabled={submitting} className={field} />
         </label>
       </div>
+      <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden className="nc-sub-trap" />
       <label className="block">
         <span className="label text-muted mb-2 block">{f.message}</span>
         <textarea name="message" value={data.message} onChange={onChange} placeholder={f.messagePlaceholder} required disabled={submitting} rows={5} className={cn(field, "resize-y min-h-32")} />
