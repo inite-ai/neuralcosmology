@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "et-ch01-kitchen",
+      "book": "eternity",
+      "chapter": "ch01",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small, narrow city-apartment kitchen at night: a small square table, horizontal blinds with stripes of streetlight on them, an old rounded white refrigerator with a single souvenir magnet showing a tiny mosque, a round frosted-glass ceiling lampshade with one pale moth beating against it, a plain white cup of forgotten tea with a thin film on its surface. A man of about forty in a dark T-shirt, seen from behind, sits over the cup in front of an open laptop whose screen is only a soft blank glow. His hands lie still. The refrigerator stands close beside him.",
+      "alt": {
+        "ru": "Ночная кухня: мужчина спиной к нам сидит перед ноутбуком и чашкой чая, рядом старый холодильник с магнитом, о плафон бьётся мотылёк.",
+        "en": "A kitchen at night: a man with his back to us sits before a laptop and a cup of tea, an old refrigerator with a magnet beside him, a moth at the lampshade.",
+        "pt": "Uma cozinha à noite: um homem de costas sentado diante de um notebook e de uma xícara de chá, ao lado uma geladeira velha com um ímã, uma mariposa na cúpula da luminária.",
+        "es": "Una cocina de noche: un hombre de espaldas ante un portátil y una taza de té, al lado un frigorífico viejo con un imán, una polilla contra la lámpara."
+      },
+      "caption": {
+        "ru": "Половина третьего ночи. Я сижу в холодильнике, в мотыльке и в чае.",
+        "en": "Half past two in the morning. I am sitting in the refrigerator, in the moth and in the tea.",
+        "pt": "Duas e meia da madrugada. Estou dentro da geladeira, da mariposa e do chá.",
+        "es": "Las dos y media de la madrugada. Estoy dentro del frigorífico, de la polilla y del té."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JaQAAWN3o+sryOlUAAP7yo7frvS1toGV+jtXOvcbNevWyzAwHHs6q+EGs+O5kvje/2FIjv/tW82JpI76xeCWplYJ5Bq/tFD8xzG7FCgAAAA==",
+      "hash": "2538cd7db0b366fa",
+      "generatedAt": "2026-11-24T14:25:22.681Z"
+    },
+    {
+      "id": "et-ch01-window",
+      "book": "eternity",
+      "chapter": "ch01",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The same small city-apartment kitchen at night, the horizontal blinds raised. A man of about forty in a dark T-shirt, seen from behind, stands at the black window drinking water from a plain mug. The dark glass reflects the kitchen and only his dim silhouette without features. Behind him on the small square table an open laptop, its screen turned away and pushed aside, and a plain white cup of forgotten tea. A tap over the sink.",
+      "alt": {
+        "ru": "Мужчина спиной к нам пьёт воду у чёрного окна, в стекле отражаются кухня и его тёмный силуэт, на столе отодвинутый ноутбук.",
+        "en": "A man with his back to us drinks water at a black window, the glass reflecting the kitchen and his dark outline, a laptop pushed away on the table.",
+        "pt": "Um homem de costas bebe água diante da janela preta, o vidro reflete a cozinha e sua silhueta escura, na mesa um notebook afastado.",
+        "es": "Un hombre de espaldas bebe agua ante la ventana negra, el cristal refleja la cocina y su silueta oscura, en la mesa un portátil apartado."
+      },
+      "caption": {
+        "ru": "Он прочитал своё имя вслух несколько раз, испугался и пошёл пить воду.",
+        "en": "He read his own name aloud several times, took fright and went to drink some water.",
+        "pt": "Ele leu o próprio nome em voz alta várias vezes, assustou-se e foi beber água.",
+        "es": "Leyó su propio nombre en voz alta varias veces, se asustó y fue a beber agua."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1kqU2ppaQiMAgBMB2JZwDImCHD2On6tBYfcw5OgAD+8M031tpS/yOTHpON3PbmJHxNdihIIOublyht3LG3vyw0CODNB6jYsSZF4c1VCGJKhRjy32/AfJjC5T+AAA==",
+      "hash": "9b4baa6fd36e0f50",
+      "generatedAt": "2026-11-24T14:25:21.587Z"
+    }
+  ]
+}

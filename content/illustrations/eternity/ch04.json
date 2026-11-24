@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "et-ch04-waiting",
+      "book": "eternity",
+      "chapter": "ch04",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The waiting area of a private clinic: white walls, a water cooler with paper cups, a leatherette sofa. The woman, about forty, shoulder-length dark hair, a light raincoat, sits alone on the sofa, seen from behind at a distance, her head bent over a phone. Beside her stands a small wheeled suitcase with one crooked wheel. Polished floor tiles, quiet, much empty space.",
+      "alt": {
+        "ru": "Зал ожидания клиники: женщина в светлом плаще спиной к нам сидит на диване с телефоном, рядом чемодан на колёсиках, у стены кулер.",
+        "en": "A clinic waiting area: a woman in a light raincoat sits with her back to us on a sofa, looking at a phone, a wheeled suitcase beside her, a water cooler by the wall.",
+        "pt": "Sala de espera de uma clínica: uma mulher de capa clara, de costas, num sofá com o celular, ao lado uma mala de rodinhas, um bebedouro junto à parede.",
+        "es": "Sala de espera de una clínica: una mujer con gabardina clara, de espaldas, en un sofá con el teléfono, al lado una maleta con ruedas, un dispensador de agua junto a la pared."
+      },
+      "caption": {
+        "ru": "Она приехала прямо из аэропорта. Одно колесо у чемодана заедало и пищало.",
+        "en": "She came straight from the airport. One wheel of the suitcase stuck and squeaked.",
+        "pt": "Ela veio direto do aeroporto. Uma roda da mala emperrava e guinchava.",
+        "es": "Vino directa del aeropuerto. Una rueda de la maleta se atascaba y chirriaba."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoYABAAPu1kqk4ppaQiMAgBMB2JZwC06Bui7/cIe2TSHBH4AP7ytIyBdkWykimdL2Ey4qGJcPP13IED4IWsP9VuWV53tWRg/quNUq2OkMuU4zPnLft9dhqemURjA6OhmnITyFgA",
+      "hash": "b8450d6d6015cd96",
+      "generatedAt": "2026-11-24T14:25:53.551Z"
+    },
+    {
+      "id": "et-ch04-scanner",
+      "book": "eternity",
+      "chapter": "ch04",
+      "scene": 2,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "An MRI room in a private clinic. A man lies on the sliding table, already inside the round bore of the scanner up to his chest; we see only his legs under a checked blanket and one hand at his side loosely holding a small rubber squeeze bulb on a cable. The dark ring of the machine fills the frame. Cold, even light.",
+      "alt": {
+        "ru": "Аппарат МРТ: мужчина задвинут в трубу, видны ноги под клетчатым пледом и рука с резиновой грушей.",
+        "en": "An MRI scanner: a man slid into the tube, only his legs under a checked blanket and a hand with a rubber bulb visible.",
+        "pt": "Um aparelho de ressonância: um homem dentro do tubo, veem-se só as pernas sob uma manta xadrez e a mão com uma pera de borracha.",
+        "es": "Un aparato de resonancia: un hombre dentro del tubo, solo se ven las piernas bajo una manta de cuadros y la mano con una pera de goma."
+      },
+      "caption": {
+        "ru": "Сорок минут грохота. Грушу он так и не нажал.",
+        "en": "Forty minutes of racket. He never squeezed the bulb.",
+        "pt": "Quarenta minutos de estrondo. Ele não apertou a pera.",
+        "es": "Cuarenta minutos de estruendo. No llegó a apretar la pera."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoYABAAPu1iqU2ppaQiMAgBMB2JZwC06CHe/bdCtrmN3nT2m2AA/vKha5Sx57np3q+4rMF3myLTvnex4V/QS7gk2H90X2fr06FZPtFEQWlqoGgYAAA=",
+      "hash": "2664931831925c07",
+      "generatedAt": "2026-11-24T14:25:55.637Z"
+    }
+  ]
+}
