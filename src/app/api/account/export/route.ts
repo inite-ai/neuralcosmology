@@ -27,6 +27,8 @@ export async function GET() {
     watermark: await sql`SELECT mark, email, created_at FROM watermarks WHERE user_id = ${me}`,
     subscription: email ? await sql`SELECT email, lang, book, source, status, created_at, confirmed_at FROM subscribers WHERE lower(email) = ${email}` : [],
     inquiries: email ? await sql`SELECT kind, name, message, book, lang, created_at FROM inquiries WHERE lower(email) = ${email}` : [],
+    reader: await sql`SELECT email, email_verified, name, first_seen, last_seen FROM readers WHERE user_id = ${me}`,
+    grants: await sql`SELECT book, created_at, revoked_at FROM book_grants WHERE user_id = ${me} OR (${email}::text IS NOT NULL AND lower(email) = ${email})`,
     purchases: await purchases(me),
   };
   return new NextResponse(JSON.stringify(data, null, 2), {

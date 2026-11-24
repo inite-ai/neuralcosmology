@@ -114,7 +114,7 @@ export default function Header({ locale }: { locale: SupportedLocale }) {
             </div>
             <Link
               href={`/${locale}/account`}
-              className={cn("flex items-center rule-l px-4 label transition-colors hover:bg-bg-raised", isActive(`/${locale}/account`) ? "text-primary" : "text-fg-secondary hover:text-fg")}
+              className={cn("flex items-center rule-l px-4 label transition-colors hover:bg-bg-raised", isActive(`/${locale}/account`) || isActive(`/${locale}/admin`) ? "text-primary" : "text-fg-secondary hover:text-fg")}
             >
               {accountLabel[locale]}
             </Link>

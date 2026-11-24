@@ -48,5 +48,5 @@ export async function purchases(userId: string): Promise<Purchase[]> {
 }
 
 /** Всё, что сайт хранит о читателе (для выгрузки и удаления). */
-export const USER_TABLES = ["reading_progress", "annotations", "comment_reactions", "ai_usage", "reader_prefs"] as const;
+export const USER_TABLES = ["reading_progress", "annotations", "comment_reactions", "ai_usage", "reader_prefs", "readers"] as const;
 // watermarks не удаляются: метка нужна, чтобы отследить утечку уже купленного текста.

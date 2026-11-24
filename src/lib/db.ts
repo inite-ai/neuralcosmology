@@ -88,6 +88,28 @@ CREATE TABLE IF NOT EXISTS inquiries (
   created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS inquiries_created ON inquiries (created_at DESC);
+-- Кто входил на сайт: чтобы в бэкофисе читателя можно было найти по почте.
+CREATE TABLE IF NOT EXISTS readers (
+  user_id text PRIMARY KEY, email text, email_verified boolean NOT NULL DEFAULT false, name text,
+  first_seen timestamptz NOT NULL DEFAULT now(), last_seen timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS readers_email ON readers (lower(email));
+-- Доступ, выданный вручную: на почту (действует, когда INITE её подтвердит) или на аккаунт.
+-- book = 'library' — все книги.
+CREATE TABLE IF NOT EXISTS book_grants (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  email text, user_id text, book text NOT NULL, note text, granted_by text NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now(), revoked_at timestamptz,
+  CHECK (email IS NOT NULL OR user_id IS NOT NULL)
+);
+CREATE INDEX IF NOT EXISTS book_grants_email ON book_grants (lower(email));
+CREATE INDEX IF NOT EXISTS book_grants_user ON book_grants (user_id);
+CREATE TABLE IF NOT EXISTS admin_log (
+  id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  actor text NOT NULL, action text NOT NULL, target text NOT NULL, detail jsonb NOT NULL DEFAULT '{}'::jsonb,
+  at timestamptz NOT NULL DEFAULT now()
+);
+ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS note text;
 CREATE TABLE IF NOT EXISTS purchases_tracked (
   user_id text NOT NULL, item text NOT NULL, at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, item)
