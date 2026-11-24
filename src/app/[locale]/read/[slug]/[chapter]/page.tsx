@@ -103,16 +103,16 @@ export default async function ChapterPage({
   const session = await getSession();
   // Первая платная глава открывается гостю, подтвердившему почту (cookie nc-sub из письма).
   const leadId = leadChapterId(slug, lang);
-  const isLead = !session && chapter.id === leadId;
+  // В книге «за контакт» подтверждённая почта открывает все главы.
+  const isLead = !session && !chapter.free && (book.freeForContact || chapter.id === leadId);
   const baseGate = await chapterGate(chapter, slug, session, fresh);
-  const gate =
-    baseGate !== "open" && isLead && (await subscriberUnlocked((await cookies()).get(SUB_COOKIE)?.value).catch(() => false))
-      ? "open"
-      : baseGate;
-  const locked = await lockedGate(slug, session);
+  const unlocked =
+    !session && (isLead || book.freeForContact) && (await subscriberUnlocked((await cookies()).get(SUB_COOKIE)?.value).catch(() => false));
+  const gate = isLead && unlocked ? "open" : baseGate;
+  const locked = book.freeForContact && unlocked ? "open" : await lockedGate(slug, session);
   // Покупка подтверждена сервером: после оплаты глава открылась → GA4 (Measurement Protocol).
   const boughtItem = sp.item === LIBRARY_ITEM ? LIBRARY_ITEM : slug;
-  const txId = fresh && session && gate === "open" && !chapter.free ? purchaseTxId(session.sub, boughtItem) : null;
+  const txId = fresh && !book.freeForContact && session && gate === "open" && !chapter.free ? purchaseTxId(session.sub, boughtItem) : null;
   if (txId && session) {
     const jar = await cookies();
     const h = await headers();
@@ -125,7 +125,7 @@ export default async function ChapterPage({
   const source = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
   if (gate === "open" && source === null) notFound();
   // Платная глава: персональный водяной знак и лимит на выкачивание.
-  const paid = gate === "open" && !chapter.free && session !== null;
+  const paid = gate === "open" && !book.freeForContact && !chapter.free && session !== null;
   const throttled = paid && !allowPaidView(session.sub);
   if (paid && !throttled) await registerMark(session.sub, session.email);
   const marked = source && paid ? (throttled ? null : watermark(source, session.sub)) : source;

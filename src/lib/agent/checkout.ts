@@ -1,6 +1,6 @@
 import "server-only";
 import { BillingError, type WalletPayment } from "@inite/billing/purchases";
-import { getBookBySlug } from "@/content/books";
+import { getBookBySlug, isFreeForContact } from "@/content/books";
 import { isInLibrary } from "@/lib/library";
 import { LIBRARY_ITEM, isCurrency, priceCodeFor, schemaOfferFor, type Currency } from "@/content/pricing";
 import type { SupportedLocale } from "@/lib/get-locale";
@@ -38,6 +38,9 @@ export async function createAgentCheckout(input: {
   const { item, locale } = input;
   if (item !== LIBRARY_ITEM && !(getBookBySlug(item) && isInLibrary(item))) {
     throw new CheckoutError(`Unknown item "${item}". Use a book slug from list_books, or "library".`);
+  }
+  if (isFreeForContact(item)) {
+    throw new CheckoutError(`"${item}" is free: the reader signs in on the site, or confirms an email there, and every chapter opens.`);
   }
   const email = input.email?.trim();
   if (!input.userId && !(email && EMAIL.test(email))) {

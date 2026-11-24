@@ -9,7 +9,7 @@ import { Sheet, Label, Headline } from "@/components/system";
 import { isSupportedLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
 import { getDict, pickLocalized } from "@/lib/i18n";
 import { getManifest, resolveBookLang } from "@/lib/library";
-import { paywallEnabled } from "@/lib/access";
+import { isPaid } from "@/lib/access";
 import { schemaOfferFor } from "@/content/pricing";
 import TocList from "@/components/reader/TocList";
 import ContinueReading from "@/components/reader/ContinueReading";
@@ -26,11 +26,11 @@ export function generateStaticParams() {
 }
 
 // Что получает читатель: объём, бесплатные главы, цена книги и всей библиотеки.
-const OFFER: Record<SupportedLocale, { free: (n: number, t: number) => string; hours: (h: number) => string; forever: string; library: string }> = {
-  en: { free: (n, t) => `${n} of ${t} chapters free`, hours: (h) => `≈ ${h} h of reading`, forever: "one payment, access forever, online and on any device", library: "All four books" },
-  ru: { free: (n, t) => `${n} из ${t} ${t % 10 === 1 && t % 100 !== 11 ? "главы" : "глав"} бесплатно`, hours: (h) => `≈ ${h} ч чтения`, forever: "разовая оплата, доступ навсегда, онлайн на любом устройстве", library: "Все четыре книги" },
-  pt: { free: (n, t) => `${n} de ${t} capítulos grátis`, hours: (h) => `≈ ${h} h de leitura`, forever: "pagamento único, acesso para sempre, online em qualquer dispositivo", library: "Os quatro livros" },
-  es: { free: (n, t) => `${n} de ${t} capítulos gratis`, hours: (h) => `≈ ${h} h de lectura`, forever: "pago único, acceso para siempre, en línea en cualquier dispositivo", library: "Los cuatro libros" },
+const OFFER: Record<SupportedLocale, { free: (n: number, t: number) => string; hours: (h: number) => string; forever: string; contact: string; library: string }> = {
+  en: { free: (n, t) => `${n} of ${t} chapters free`, hours: (h) => `≈ ${h} h of reading`, forever: "one payment, access forever, online and on any device", contact: "the rest is free with your email", library: "All books" },
+  ru: { free: (n, t) => `${n} из ${t} ${t % 10 === 1 && t % 100 !== 11 ? "главы" : "глав"} бесплатно`, hours: (h) => `≈ ${h} ч чтения`, forever: "разовая оплата, доступ навсегда, онлайн на любом устройстве", contact: "остальные бесплатно за ваш e-mail", library: "Вся библиотека" },
+  pt: { free: (n, t) => `${n} de ${t} capítulos grátis`, hours: (h) => `≈ ${h} h de leitura`, forever: "pagamento único, acesso para sempre, online em qualquer dispositivo", contact: "os demais, grátis com o seu e-mail", library: "Toda a biblioteca" },
+  es: { free: (n, t) => `${n} de ${t} capítulos gratis`, hours: (h) => `≈ ${h} h de lectura`, forever: "pago único, acceso para siempre, en línea en cualquier dispositivo", contact: "los demás, gratis con su correo", library: "Toda la biblioteca" },
 };
 
 export async function generateMetadata({
@@ -76,7 +76,7 @@ export default async function BookDetailPage({
   const L = dict.library;
   const readLang = resolveBookLang(book.slug, locale);
   const manifest = readLang ? getManifest(book.slug, readLang) : null;
-  const lockedGate = paywallEnabled() ? ("purchase" as const) : ("login" as const);
+  const lockedGate = isPaid(book.slug) ? ("purchase" as const) : ("login" as const);
   const chapters = manifest?.chapters ?? [];
   const freeCount = chapters.filter((c) => c.free).length;
   const hours = manifest ? Math.max(1, Math.round((manifest.words ?? 0) / 200 / 60)) : 0;
@@ -171,6 +171,7 @@ export default async function BookDetailPage({
               <p className="mt-8 label text-muted">
                 {O.free(freeCount, chapters.length)} · {O.hours(hours)}
                 {forSale && <> · {O.forever}</>}
+                {book.freeForContact && freeCount < chapters.length && <> · {O.contact}</>}
               </p>
             )}
 

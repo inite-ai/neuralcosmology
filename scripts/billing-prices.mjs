@@ -36,7 +36,9 @@ const byCode = new Map(prices.map((p) => [p.code, p]));
 // образцу уже существующей книги: тот же тип и moduleScope, метаданные с новым
 // slug, entitlement neuralcosmology:book:<slug> (его проверяет src/lib/access.ts).
 const booksSrc = await readFile(new URL("../src/content/books.ts", import.meta.url), "utf8");
-const catalog = [...booksSrc.matchAll(/slug: "([^"]+)",\s*titles: \{\s*en: "([^"]+)"/g)].map((m) => ({ slug: m[1], title: m[2] }));
+const catalog = [...booksSrc.matchAll(/slug: "([^"]+)",\s*titles: \{\s*en: "([^"]+)"/g)].map((m, i, all) => ({ slug: m[1], title: m[2], free: /freeForContact: true/.test(booksSrc.slice(m.index, all[i + 1]?.index)) }))
+  // Книги за контакт не продаются: товара в биллинге им не заводим.
+  .filter((b) => !b.free);
 const bookCode = (slug) => `neuralcosmology-book-${slug}-usd`;
 const templatePrice = prices.find((p) => /^neuralcosmology-book-.+-usd$/.test(p.code));
 if (templatePrice) {

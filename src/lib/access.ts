@@ -1,11 +1,13 @@
 import "server-only";
 import type { Session } from "@/lib/auth";
 import type { LibraryChapter } from "@/lib/library";
+import { isFreeForContact } from "@/content/books";
 
 // Кто что может читать.
 //
 //   free-глава (из demo-файла книги)  → всем, индексируется
 //   остальное                          → после входа
+//   книга freeForContact               → после входа или подтверждения почты, без оплаты
 //   PAYWALL_ENABLED=true               → после входа И покупки
 //
 // Покупка проверяется в INITE Billing: у пользователя должен быть активный
@@ -20,6 +22,9 @@ export const entitlementForBook = (slug: string) => `neuralcosmology:book:${slug
 export function paywallEnabled(): boolean {
   return process.env.PAYWALL_ENABLED === "true";
 }
+
+/** Книга продаётся: пейволл включён, и книга не отдаётся за контакт. */
+export const isPaid = (slug: string): boolean => paywallEnabled() && !isFreeForContact(slug);
 
 interface Entitlement {
   key: string;
@@ -74,7 +79,7 @@ export async function ownsBook(
   fresh = false,
 ): Promise<boolean> {
   if (!session) return false;
-  if (!paywallEnabled()) return true;
+  if (!isPaid(slug)) return true;
   const keys = await entitlementKeys(session.sub, fresh);
   return keys.has(ENTITLEMENT_LIBRARY) || keys.has(entitlementForBook(slug));
 }
@@ -88,12 +93,12 @@ export async function chapterGate(
   if (chapter.free) return "open";
   // С пейволлом анониму честно показываем покупку (вход встроен в оплату);
   // без пейволла достаточно войти.
-  if (!session) return paywallEnabled() ? "purchase" : "login";
+  if (!session) return isPaid(slug) ? "purchase" : "login";
   return (await ownsBook(session, slug, fresh)) ? "open" : "purchase";
 }
 
 /** Какой замок показывать закрытым главам в оглавлении. */
 export async function lockedGate(slug: string, session: Session | null): Promise<Gate> {
-  if (!session) return paywallEnabled() ? "purchase" : "login";
+  if (!session) return isPaid(slug) ? "purchase" : "login";
   return (await ownsBook(session, slug)) ? "open" : "purchase";
 }

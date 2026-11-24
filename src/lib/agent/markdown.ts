@@ -79,7 +79,15 @@ function priceLine(item: "book" | "library", locale: SupportedLocale): string {
   return `${label[locale]}: ${prices}`;
 }
 
+const CONTACT_LINE: Record<SupportedLocale, string> = {
+  en: "Free: sign in on the site or confirm an email there, and every chapter opens",
+  ru: "Бесплатно: войдите на сайте или подтвердите там почту, и откроются все главы",
+  pt: "Grátis: entre no site ou confirme ali o seu e-mail, e todos os capítulos se abrem",
+  es: "Gratis: inicie sesión en el sitio o confirme allí su correo, y se abren todos los capítulos",
+};
+
 function purchaseNote(slug: string, locale: SupportedLocale): string {
+  if (getBookBySlug(slug)?.freeForContact) return `${CONTACT_LINE[locale]}: ${abs(`/${locale}/books/${slug}`)}`;
   return [
     "## How to get the full text",
     "",
@@ -148,7 +156,7 @@ function book(locale: SupportedLocale, slug: string): MarkdownDoc | null {
         "",
         ...manifest.chapters.map((c) => {
           const html = c.free ? null : getChapterHtml(slug, manifest.lang, c.id);
-          const state = c.free ? UI.free[locale] : leadIn(html) ? UI.leadIn[locale] : UI.paid[locale];
+          const state = c.free ? UI.free[locale] : b.freeForContact ? CONTACT_LINE[locale] : leadIn(html) ? UI.leadIn[locale] : UI.paid[locale];
           const n = c.number != null ? `${c.number}. ` : "";
           return `- [${n}${c.title}](${mdUrl(`/${manifest.lang}/read/${slug}/${c.id}`)}) (${state}, ${c.minutes} min)`;
         }),
@@ -161,7 +169,7 @@ function book(locale: SupportedLocale, slug: string): MarkdownDoc | null {
     "",
     pick(b.statusLabel, locale),
     manifest ? "" : null,
-    manifest ? priceLine("book", locale) : null,
+    manifest ? (b.freeForContact ? CONTACT_LINE[locale] : priceLine("book", locale)) : null,
     "",
     chapters,
   ]);
@@ -183,7 +191,9 @@ function chapter(locale: SupportedLocale, slug: string, id: string, opts: Markdo
     "",
     "---",
     "",
-    opening
+    b.freeForContact
+      ? "*The rest of this chapter opens after sign-in.*"
+      : opening
       ? "*The rest of this chapter is part of the paid edition.*"
       : "*This chapter is part of the paid edition.*",
     "",
