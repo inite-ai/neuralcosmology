@@ -102,8 +102,8 @@ function tools(ctx: Ctx) {
       name: "read",
       title: "Read a page",
       description: ctx.reader
-        ? "Read any page of the site as markdown: an answer, essay, experiment, book page or chapter. Chapters of books the signed-in reader owns come in full; other paid chapters give their open opening."
-        : "Read any page of the site as markdown: an answer, essay, experiment, book page or chapter. Paid chapters give their open opening and how to buy the book.",
+        ? "Read any page of the site as markdown: an answer, essay, experiment, book page or chapter. Chapters of free books and of books the signed-in reader owns come in full; other paid chapters give their open opening."
+        : "Read any page of the site as markdown: an answer, essay, experiment, book page or chapter. Free books (freeForContact in list_books) come in full, without sign-in. Paid chapters give their open opening and how to buy the book.",
       inputSchema: {
         type: "object",
         properties: { url: { type: "string", description: "Page URL or path, e.g. /en/answers/what-is-dark-matter." } },
@@ -194,7 +194,7 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
         return text("Not a URL or path of this site.", true);
       }
       const mine = ctx.reader ? await owned(ctx.reader) : new Set<string>();
-      const md = markdownFor(path, { unlocked: (slug) => mine.has(slug) });
+      const md = markdownFor(path, { unlocked: (slug) => mine.has(slug), agent: true });
       return md ? text(md.body) : text(`No page at ${path}. Use search to find one.`, true);
     }
     case "list_books": {
@@ -280,7 +280,7 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
 }
 
 const INSTRUCTIONS =
-  "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Paid book chapters show an open opening; create_checkout opens a payment link for a reader. get_chapter_discussion returns what readers say about a chapter.";
+  "Neural Cosmology by Mikhail Savchenko: answers, essays, experiments and books on consciousness, cosmology and computation, in English, Russian, Portuguese and Spanish. Use search, then read. Free books (freeForContact in list_books) read in full, no sign-in or email needed; give a person the book page, where they sign in or confirm an email. Paid book chapters show an open opening; create_checkout opens a payment link for a reader. get_chapter_discussion returns what readers say about a chapter.";
 
 // Cards in the chat (ChatGPT, Claude and other MCP Apps hosts).
 const cards = {

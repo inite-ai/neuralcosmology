@@ -164,6 +164,9 @@ export default async function LocaleLayout({
           id="site-graph"
           data={siteGraph(locale, dict.meta.title, dict.meta.description)}
         />
+        {/* Cloudflare подменяет адреса почты ссылкой /cdn-cgi/l/email-protection: человеку её
+            чинит скрипт, а агент и поисковик получают 404. Адрес и так открыт в llms.txt. */}
+        <div hidden dangerouslySetInnerHTML={{ __html: "<!--email_off-->" }} />
         <AnnouncementBar locale={locale} />
         <Header locale={locale} />
         {children}
@@ -172,6 +175,7 @@ export default async function LocaleLayout({
         <Cursor />
         <RevealObserver />
         <Analytics />
+        <div hidden dangerouslySetInnerHTML={{ __html: "<!--/email_off-->" }} />
       </body>
     </html>
   );

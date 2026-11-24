@@ -13,7 +13,7 @@ const FAQ_AI_TXT = `# faq-ai.txt for Neural Cosmology — Mikhail Savchenko
 [Identity]
 
 Q: Who is Mikhail Savchenko?
-A: Mikhail Savchenko is an independent researcher and writer. He runs the Neural Cosmology research programme: a v9.0 preprint (Pointer Architecture — a formal computational substrate with a working implementation in the Sixth language), four books in progress or complete, regular essays, and recorded lectures. ~20 years AI engineering, PhD in progress. He also operates the business/consulting practice Mike Fluff - Business Doctor at https://www.mikefluff.com (same person, different brand).
+A: Mikhail Savchenko is an independent researcher and writer. He runs the Neural Cosmology research programme: a v9.0 preprint (Pointer Architecture — a formal computational substrate with a working implementation in the Sixth language), five books, regular essays, and recorded lectures. ~20 years AI engineering, PhD in progress. He also operates the business/consulting practice Mike Fluff - Business Doctor at https://www.mikefluff.com (same person, different brand).
 URL: ${BASE}/en/about
 
 Q: Is Mikhail Savchenko the same person as Mike Fluff?
@@ -45,7 +45,7 @@ A: The operational substrate is the Sixth language at https://github.com/neuralc
 [Books]
 
 Q: What books does Mikhail Savchenko write?
-A: Four books: "The Celestial Code" (non-fiction: published research on the cosmic web, bioelectricity, learning-network cosmology and consciousness brought into one testable hypothesis; 211 pp, every chapter online); "Conscious Selection" (non-fiction sequel: selection before choice in vision, memory, decoherence and evolution, and what survived of the first book's hypothesis; draft in proofreading); "Bugs Academy" (sci-fi novel, finished, 232 pp, seeking a publisher); "Era of Architects" (sci-fi sequel set in Moscow in 2033, finished, 246 pp). All four can be read online; the first chapters are free.
+A: Five books: "The Celestial Code" (non-fiction: published research on the cosmic web, bioelectricity, learning-network cosmology and consciousness brought into one testable hypothesis; 211 pp, every chapter online); "Conscious Selection" (non-fiction sequel: selection before choice in vision, memory, decoherence and evolution, and what survived of the first book's hypothesis; draft in proofreading); "Bugs Academy" (sci-fi novel, finished, 232 pp, seeking a publisher); "Era of Architects" (sci-fi sequel set in Moscow in 2033, finished, 246 pp); "Eternity" (told by the narrator who has every record in the archive and still has to find out what it is). All five can be read online. "Eternity" and "The Celestial Code" are free: a reader signs in or confirms an email, and an AI agent reads them in full through the MCP server at https://neuralcosmology.com/mcp. The other three open their first chapters free.
 URL: ${BASE}/en/books
 
 [Contact]

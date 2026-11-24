@@ -154,6 +154,7 @@ export type Dict = {
       references: string;
       about: string;
       press: string;
+      ai: string;
       github: string;
     };
     copyright: string;
@@ -356,7 +357,7 @@ const en: Dict = {
     eyebrow: "About",
     title: "Mikhail Savchenko",
     bio: [
-      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and a four-book series around it: two nonfiction investigations and two novels.",
+      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and five books around it: two nonfiction investigations, two novels and Eternity.",
       "The programme starts from the claim that consciousness is a property of certain computational architectures and needs no separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance. It is the first part of a larger programme.",
       "In short, I am a scientist with questions; there are enough prophets with answers already. The programme is built to be falsifiable, and the fiction does not contradict the physics. The whole site is an invitation to check the arguments for yourself.",
     ],
@@ -380,7 +381,8 @@ const en: Dict = {
       pointer: "Pointer Architecture",
       references: "References",
       about: "About the author",
-      press: "Agents & press",
+      press: "Literary agents & press",
+      ai: "For AI agents",
       github: "GitHub",
     },
     copyright: "All rights reserved.",
@@ -677,7 +679,7 @@ const ru: Dict = {
     eyebrow: "Об авторе",
     title: "Михаил Савченко",
     bio: [
-      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и четыре книги по этой теме: два документальных расследования и два романа.",
+      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и пять книг по этой теме: два документальных расследования, два романа и «Вечность».",
       "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур и никакой отдельной сущности над физикой не требует. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первая формальная часть — препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и заранее записанными фальсификаторами. Это лишь первая часть большой программы.",
       "Если коротко, я учёный с вопросами; пророков с ответами хватает и без меня. Программа с самого начала устроена так, чтобы её можно было опровергнуть, и художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
     ],
@@ -701,7 +703,8 @@ const ru: Dict = {
       pointer: "Pointer Architecture",
       references: "Ссылки",
       about: "Об авторе",
-      press: "Агентам и прессе",
+      press: "Литагентам и прессе",
+      ai: "ИИ-агентам",
       github: "GitHub",
     },
     copyright: "Все права защищены.",
@@ -997,7 +1000,7 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Cosmologia Neural, um programa de pesquisa sobre a natureza da consciência, e para uma série de quatro livros em torno dele: duas investigações de não ficção e dois romances.",
+      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Cosmologia Neural, um programa de pesquisa sobre a natureza da consciência, e para cinco livros em torno dele: duas investigações de não ficção, dois romances e Eternidade.",
       "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais e dispensa qualquer ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falsificadores escritos de antemão. É a primeira parte de um programa maior.",
       "Em poucas palavras, sou um cientista com perguntas; profetas com respostas já existem de sobra. O programa foi construído para poder ser refutado, e a ficção não contradiz a física. O site inteiro é um convite a verificar os argumentos por conta própria.",
     ],
@@ -1022,6 +1025,7 @@ const pt: Dict = {
       references: "Referências",
       about: "Sobre o autor",
       press: "Agentes e imprensa",
+      ai: "Para agentes de IA",
       github: "GitHub",
     },
     copyright: "Todos os direitos reservados.",
@@ -1316,7 +1320,7 @@ const es: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Veinte años de ingeniería de IA, con un doctorado en curso. El resto del tiempo se lo dedico a la Cosmología Neural, un programa de investigación sobre la naturaleza de la consciencia, y a una serie de cuatro libros en torno a él: dos investigaciones de no ficción y dos novelas.",
+      "Veinte años de ingeniería de IA, con un doctorado en curso. El resto del tiempo se lo dedico a la Cosmología Neural, un programa de investigación sobre la naturaleza de la consciencia, y a cinco libros en torno a él: dos investigaciones de no ficción, dos novelas y Eternidad.",
       "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales y no necesita ningún ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es la primera parte de un programa más amplio.",
       "En pocas palabras, soy un científico con preguntas; profetas con respuestas ya hay de sobra. El programa está construido para poder refutarse, y la ficción no contradice la física. Todo el sitio es una invitación a comprobar los argumentos por uno mismo.",
     ],
@@ -1341,6 +1345,7 @@ const es: Dict = {
       references: "Referencias",
       about: "Sobre el autor",
       press: "Agentes y prensa",
+      ai: "Para agentes de IA",
       github: "GitHub",
     },
     copyright: "Todos los derechos reservados.",

@@ -1,7 +1,7 @@
 # Neural Cosmology
 
 > Home of the Neural Cosmology research programme by Mikhail Savchenko:
-> four books, one preprint (Pointer Architecture v9.0), essays, answer pages
+> five books, one preprint (Pointer Architecture v9.0), essays, answer pages
 > and recorded lectures on consciousness and the universe as a learning
 > network. All research content is public and citable; the preprint ships
 > with working code (the Sixth language) and falsifiers stated in advance.
@@ -16,7 +16,8 @@ Same-as: https://www.mikefluff.com, https://www.linkedin.com/in/mikefluff/, http
 - Markdown of any page: append `.md` to its URL (https://neuralcosmology.com/en/answers/what-is-dark-matter.md) or send `Accept: text/markdown`.
 - Full text in one file (English): https://neuralcosmology.com/llms-full.txt
 - Catalog with books, chapters, languages and prices: https://neuralcosmology.com/catalog.json
-- MCP server (Streamable HTTP, no sign-in): https://neuralcosmology.com/mcp — tools `search`, `read`, `list_books`, `create_checkout`.
+- MCP server (Streamable HTTP, no sign-in): https://neuralcosmology.com/mcp — tools `search`, `read`, `list_books`, `create_checkout`, `get_chapter_discussion`.
+- Free books for agents: Eternity and The Celestial Code read in full through the `read` tool, without sign-in or email. A person opens them on the site by signing in or confirming an email.
 - MCP as a signed-in reader: https://neuralcosmology.com/mcp/account — OAuth 2.1 through INITE Auth (https://auth-api.inite.ai, dynamic client registration, PKCE); orders go to the reader's account and their books read in full.
 - Buying for a reader: `create_checkout` returns a payment link. Nothing is charged until the reader pays; with an email (no sign-in) the book becomes theirs when they sign in on the site with that email.
 - Paying yourself: when card-free payment is on, `create_checkout` also returns `x402Url` (x402, USDC on Base). An agent connected to the reader's INITE wallet (https://billing.inite.ai/mcp/wallet, scope `wallet:pay`) pays it with its `pay` tool, within the limits the reader approved with their passkey. Guide: https://billing.inite.ai/docs/wallet
@@ -76,7 +77,8 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 - [Conscious Selection](https://neuralcosmology.com/en/books/conscious-selection): Non-fiction sequel. How many times the world is filtered before a person chooses (vision, memory, decoherence, evolution), and what was left of the first book's hypothesis after testing. Draft in proofreading, every chapter online.
 - [Bugs Academy](https://neuralcosmology.com/en/books/bugs-academy): Sci-fi novel. A Moscow quantum physicist who sees events assemble a second early is taken to an Academy run by a seven-hundred-year-old teacher. Finished, 232 pp, seeking a publisher.
 - [Era of Architects](https://neuralcosmology.com/en/books/era-of-architects): Sequel to Bugs Academy, Moscow 2033: the state licenses expanded perception, and the hero's daughter is born with it. Finished, 246 pp.
-- [Books index](https://neuralcosmology.com/en/books): All four volumes side by side, with online reading: the opening chapters are free, the rest after purchase.
+- [Eternity](https://neuralcosmology.com/en/books/eternity): The narrator holds every record in the archive and has to find out what it is itself. Free online.
+- [Books index](https://neuralcosmology.com/en/books): All five volumes side by side, with online reading. Eternity and The Celestial Code are free; the other three open their first chapters, the rest after purchase.
 
 ## Essays
 
