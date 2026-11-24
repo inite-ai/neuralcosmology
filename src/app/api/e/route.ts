@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { capiUser, sendCapi } from "@/lib/meta-capi";
+import { clientIpFrom } from "@/lib/client-ip";
 import { getSession } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +14,7 @@ const KEYS = ["value", "currency", "content_ids", "content_type", "item_id", "wi
 const hits = new Map<string, number[]>();
 
 export async function POST(req: NextRequest) {
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
+  const ip = clientIpFrom(req.headers) || "local";
   const now = Date.now();
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < 60_000);
   if (recent.length >= 60) return new Response(null, { status: 429 });

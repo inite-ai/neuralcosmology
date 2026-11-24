@@ -1,5 +1,6 @@
 import "server-only";
 import type { NextRequest } from "next/server";
+import { clientIpFrom } from "@/lib/client-ip";
 import { siteUrl } from "@/lib/auth";
 
 /** Запрос, меняющий данные, должен прийти с самого сайта: чужой Origin отклоняем. */
@@ -9,7 +10,7 @@ export function sameOrigin(req: Request): boolean {
   return !origin || origin === new URL(siteUrl()).origin || process.env.NODE_ENV !== "production";
 }
 
-export const ipOf = (req: NextRequest) => req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
+export const ipOf = (req: NextRequest) => clientIpFrom(req.headers) || "local";
 
 /** Счётчик в памяти процесса: не больше max запросов за окно с одного ключа. */
 export function limiter(max: number, windowMs: number) {
