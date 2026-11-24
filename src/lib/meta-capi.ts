@@ -1,5 +1,6 @@
 import "server-only";
 import { createHash } from "node:crypto";
+import { clientIpFrom } from "@/lib/client-ip";
 import { pixels } from "@/content/pixels";
 
 // Meta Conversions API: серверный дубль событий пикселя. Браузер и сервер шлют одно
@@ -14,7 +15,7 @@ export type CapiUser = { ip?: string; ua?: string; fbp?: string; fbc?: string; e
 
 /** IP, user agent и cookies пикселя из запроса; fbc собираем из fbclid, если cookie ещё нет. */
 export function capiUser(h: Headers, cookie: (name: string) => string | undefined, url?: string | null): CapiUser {
-  const ip = h.get("x-forwarded-for")?.split(",")[0]?.trim() || h.get("x-real-ip") || undefined;
+  const ip = clientIpFrom(h) ?? undefined;
   let fbc = cookie("_fbc");
   if (!fbc && url) {
     try {
