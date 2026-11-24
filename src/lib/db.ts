@@ -80,6 +80,14 @@ CREATE TABLE IF NOT EXISTS subscribers (
   status text NOT NULL DEFAULT 'pending' CHECK (status IN ('pending','confirmed','unsubscribed')),
   token text NOT NULL, created_at timestamptz NOT NULL DEFAULT now(), confirmed_at timestamptz
 );
+-- Обращения с сайта: вопрос, права на книгу, пресса. Письмо — только уведомление.
+CREATE TABLE IF NOT EXISTS inquiries (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  kind text NOT NULL DEFAULT 'contact', name text NOT NULL, email text NOT NULL, message text NOT NULL,
+  book text, lang text, status text NOT NULL DEFAULT 'new',
+  created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS inquiries_created ON inquiries (created_at DESC);
 CREATE TABLE IF NOT EXISTS purchases_tracked (
   user_id text NOT NULL, item text NOT NULL, at timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (user_id, item)

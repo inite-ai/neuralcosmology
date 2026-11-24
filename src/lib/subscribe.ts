@@ -193,7 +193,7 @@ async function sendLater(email: string, lang: SupportedLocale, token: string, it
     signature: c.signature,
     footer: { text: c.footer, link: { label: c.unsub, href: unsubUrl(token) } },
   });
-  return sendMail(email, c.subject(v.title), text, html);
+  return sendMail(email, c.subject(v.title), text, html, { unsubscribe: unsubUrl(token) });
 }
 
 async function sendUnlock(email: string, lang: SupportedLocale, token: string, to: string): Promise<boolean> {
@@ -218,7 +218,7 @@ async function sendUnlock(email: string, lang: SupportedLocale, token: string, t
     signature: c.signature,
     footer: { text: c.footer, link: { label: c.unsub, href: unsubUrl(token) } },
   });
-  return sendMail(email, c.subject(chapter.title), text, html);
+  return sendMail(email, c.subject(chapter.title), text, html, { unsubscribe: unsubUrl(token) });
 }
 
 const EMAIL = /^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,24}$/;
@@ -241,7 +241,7 @@ export async function sendConfirmation(email: string, lang: SupportedLocale, tok
     signature: c.signature,
     footer: { text: c.footer, link: { label: c.unsub, href: unsub } },
   });
-  return sendMail(email, c.subject, text, html);
+  return sendMail(email, c.subject, text, html, { unsubscribe: unsubUrl(token) });
 }
 
 /** Новая или повторная подписка. Возвращает статус, который видит читатель. */
@@ -276,7 +276,9 @@ export async function setStatus(token: string, status: "confirmed" | "unsubscrib
   const [row] =
     status === "confirmed"
       ? await sql`UPDATE subscribers SET status = 'confirmed', confirmed_at = now() WHERE token = ${token} AND status <> 'unsubscribed' RETURNING lang`
-      : await sql`UPDATE subscribers SET status = 'unsubscribed' WHERE token = ${token} RETURNING lang`;
+      : await sql`UPDATE subscribers SET status = 'unsubscribed' WHERE token = ${token} RETURNING lang, email`;
+  // Отписка действует на адрес целиком: и на письма, включённые в кабинете.
+  if (row && status === "unsubscribed") await sql`UPDATE reader_prefs SET notify = false WHERE lower(email) = ${row.email}`;
   return row ? { lang: row.lang as string } : null;
 }
 

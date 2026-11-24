@@ -23,6 +23,7 @@ export interface Session {
 const SESSION_COOKIE = "nc_session";
 const FLOW_COOKIE = "nc_oauth";
 const SESSION_TTL = 60 * 60 * 24 * 30;
+const ADMIN_TTL = 60 * 60 * 12;
 
 const issuer = () => process.env.INITE_AUTH_ISSUER || "https://auth-api.inite.ai";
 const clientId = () => requireEnv("INITE_AUTH_CLIENT_ID");
@@ -269,7 +270,8 @@ export async function getSession(): Promise<Session | null> {
       name: payload.name as string | undefined,
       // Сессии, выданные до этих полей, их не несут: ни подтверждения, ни админа.
       emailVerified: payload.ev === true,
-      admin: payload.adm === true,
+      // Роль взята при входе; через 12 часов ей уже не верим — нужен новый вход.
+      admin: payload.adm === true && Date.now() / 1000 - (payload.iat ?? 0) < ADMIN_TTL,
     };
   } catch {
     return null;

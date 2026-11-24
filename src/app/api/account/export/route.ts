@@ -14,6 +14,7 @@ export async function GET() {
   if (bad) return bad;
   const sql = await db();
   const me = session.sub;
+  const email = session.email && session.emailVerified ? session.email.toLowerCase() : null;
   const data = {
     exportedAt: new Date().toISOString(),
     account: { id: me, email: session.email, name: session.name },
@@ -21,6 +22,11 @@ export async function GET() {
     progress: await sql`SELECT book, lang, chapter, anchor, chapters, updated_at FROM reading_progress WHERE user_id = ${me}`,
     annotations: await sql`SELECT book, lang, chapter, anchor, kind, quote, note, color, created_at FROM annotations WHERE user_id = ${me} ORDER BY created_at`,
     comments: await sql`SELECT book, lang, chapter, anchor, quote, body, status, created_at FROM comments WHERE user_id = ${me} ORDER BY created_at`,
+    reactions: await sql`SELECT comment_id FROM comment_reactions WHERE user_id = ${me}`,
+    aiUsage: await sql`SELECT day, count FROM ai_usage WHERE user_id = ${me} ORDER BY day`,
+    watermark: await sql`SELECT mark, email, created_at FROM watermarks WHERE user_id = ${me}`,
+    subscription: email ? await sql`SELECT email, lang, book, source, status, created_at, confirmed_at FROM subscribers WHERE lower(email) = ${email}` : [],
+    inquiries: email ? await sql`SELECT kind, name, message, book, lang, created_at FROM inquiries WHERE lower(email) = ${email}` : [],
     purchases: await purchases(me),
   };
   return new NextResponse(JSON.stringify(data, null, 2), {

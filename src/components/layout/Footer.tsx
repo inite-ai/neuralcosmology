@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { PRIVACY } from "@/content/privacy";
 import { usePathname } from "next/navigation";
 import type { SupportedLocale } from "@/lib/get-locale";
 import { answersUi } from "@/content/answers-ui";
@@ -138,6 +139,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
             <span>
               © {new Date().getFullYear()} {dict.siteName}. {dict.footer.copyright}
             </span>
+            <Link href={`/${locale}/privacy`} className="hover:text-fg transition-colors">{PRIVACY[locale].title}</Link>
             <a href="mailto:info@neuralcosmology.com" className="hover:text-fg transition-colors normal-case tracking-normal">
               info@neuralcosmology.com
             </a>

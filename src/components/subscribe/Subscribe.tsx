@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { newEventId, track } from "@/components/analytics/Analytics";
+import { inEEA, newEventId, track } from "@/components/analytics/Analytics";
 import { channels } from "@/content/channels";
 
 // Подписка на новые главы и опыты без аккаунта (POST /api/subscribe, двойное
@@ -108,7 +108,7 @@ export default function Subscribe({
       const r = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, lang, book, source, company, event_id: eventId, kind, item, to }),
+        body: JSON.stringify({ email, lang, book, source, company, event_id: inEEA() ? undefined : eventId, kind, item, to }),
       });
       const j = (await r.json().catch(() => ({}))) as { status?: State };
       const s = r.ok && j.status ? j.status : "error";

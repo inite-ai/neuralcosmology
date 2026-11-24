@@ -18,7 +18,11 @@ const FROM = (name = "Neural Cosmology") => `"${name.replace(/["\\\r\n<>]/g, "")
 const REPLY_TO = () => process.env.MAILGUN_REPLY_TO || undefined;
 
 /** Письмо от имени (fromName) с ответом на адрес читателя (replyTo), как у заметок автору. */
-export type MailOptions = { replyTo?: string | null; fromName?: string };
+export type MailOptions = { replyTo?: string | null; fromName?: string; unsubscribe?: string };
+
+/** Отписка кнопкой почтового клиента (RFC 2369 и RFC 8058). */
+const unsubHeaders = (o: MailOptions): Record<string, string> =>
+  o.unsubscribe ? { "List-Unsubscribe": `<${o.unsubscribe}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } : {};
 
 async function sendViaApi(to: string, subject: string, text: string, html?: string, o: MailOptions = {}): Promise<boolean> {
   const host = process.env.MAILGUN_REGION === "eu" ? "api.eu.mailgun.net" : "api.mailgun.net";
@@ -26,6 +30,7 @@ async function sendViaApi(to: string, subject: string, text: string, html?: stri
   if (html) body.set("html", html);
   const replyTo = o.replyTo || REPLY_TO();
   if (replyTo) body.set("h:Reply-To", replyTo);
+  for (const [k, v] of Object.entries(unsubHeaders(o))) body.set(`h:${k}`, v);
   try {
     const r = await fetch(`https://${host}/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
       method: "POST",
@@ -53,7 +58,7 @@ export async function sendMail(to: string, subject: string, text: string, html?:
     auth: { user: process.env.MAILGUN_SMTP_USERNAME, pass: process.env.MAILGUN_SMTP_PASSWORD },
   });
   try {
-    await transport.sendMail({ from: FROM(o.fromName), to, subject, text, html, replyTo: o.replyTo || REPLY_TO() });
+    await transport.sendMail({ from: FROM(o.fromName), to, subject, text, html, replyTo: o.replyTo || REPLY_TO(), headers: unsubHeaders(o) });
     return true;
   } catch (err) {
     console.error("[mail]", err instanceof Error ? err.message : err);
