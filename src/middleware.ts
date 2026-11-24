@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { markdownAlternate, markdownRewrite } from "@inite/content/ai";
+import { createIniteAuth } from "@inite/auth/next";
 import type { NextRequest } from "next/server";
 
 const supportedLocales = ["en", "ru", "pt", "es"] as const;
@@ -71,11 +72,20 @@ function withSeoHeaders(
   return response;
 }
 
-export function middleware(request: NextRequest) {
+// Продлевает истёкшую сессию до отрисовки страницы. Без базы (её тут нет): выход в INITE
+// отзывает refresh token, и продление само закончится отказом.
+const edgeAuth = process.env.INITE_AUTH_CLIENT_ID && process.env.INITE_AUTH_CLIENT_SECRET
+  ? createIniteAuth({
+      appUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://neuralcosmology.com",
+      revocations: { revokedAt: async () => null, revoke: async () => {} },
+    })
+  : null;
+
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // /embed/<locale>/<id> — опыт для встраивания на чужие сайты: язык уже в адресе, рамки разрешены.
-  if (pathname.startsWith("/_next/") || pathname.startsWith("/api/") || pathname === "/mcp" || pathname.startsWith("/mcp/") || pathname.startsWith("/embed/")) {
+  if (pathname.startsWith("/_next/") || pathname.startsWith("/api/") || pathname === "/callback" || pathname === "/mcp" || pathname.startsWith("/mcp/") || pathname.startsWith("/embed/")) {
     return NextResponse.next();
   }
 
@@ -86,6 +96,11 @@ export function middleware(request: NextRequest) {
     url.host = host.slice(4);
     url.port = "";
     return NextResponse.redirect(url, 308);
+  }
+
+  if (edgeAuth && request.cookies.size > 0) {
+    const renewed = await edgeAuth.refreshRedirect(request);
+    if (renewed) return renewed;
   }
 
   // Агентам — markdown той же страницы: /<путь>.md или Accept: text/markdown.
