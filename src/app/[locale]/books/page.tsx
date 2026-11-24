@@ -68,7 +68,7 @@ export default async function BooksIndexPage({
       />
       <SubscribeNotice locale={locale} />
       <section className="rule-t py-10 md:px-10 md:py-14">
-        <div className="grid gap-[0.5px] hairline bg-line sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-[0.5px] sm:grid-cols-2 xl:grid-cols-3 [&>*]:outline-[0.5px] [&>*]:outline-line">
           {books.map((book, i) => (
             <BookCard key={book.slug} book={book} locale={locale} index={i} />
           ))}

@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  // Уже куплено (или пейволл выключен) — второй раз не продаём.
+  // Уже куплено, книга отдаётся за контакт (или пейволл выключен) — второй раз не продаём.
   if (!paywallEnabled() || (item !== LIBRARY_ITEM && (await ownsBook(session, item, true)))) {
     return NextResponse.redirect(back);
   }

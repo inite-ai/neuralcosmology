@@ -31,4 +31,6 @@ export type Book = {
   license?: string;
   licenseUrl?: string;
   companionPaperSlug?: string;
+  /** Бесплатно за контакт: вход или подтверждённая почта открывают всю книгу; не продаётся. */
+  freeForContact?: boolean;
 };

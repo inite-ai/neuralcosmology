@@ -207,9 +207,9 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
           title: b.titles[locale] ?? b.titles.en,
           subtitle: (b.hook as Record<string, string>)[locale] ?? (b.hook as Record<string, string>).en,
           image: b.coverImage ? `${site}${coverFor(b, locale)}` : undefined,
-          price: formatPrice(PRICES.book.USD, "USD"),
+          price: b.freeForContact ? "Free with sign-in" : formatPrice(PRICES.book.USD, "USD"),
           url: `${site}/${locale}/books/${b.slug}`,
-          ...(ctx.reader
+          ...(ctx.reader && !b.freeForContact
             ? { action: { tool: "create_checkout", arguments: { item: b.slug, locale }, label: "Buy" } }
             : {}),
         }));

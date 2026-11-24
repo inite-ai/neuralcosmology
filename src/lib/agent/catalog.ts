@@ -1,13 +1,13 @@
 import "server-only";
 import { SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/get-locale";
-import { books } from "@/content/books";
+import { books, isFreeForContact } from "@/content/books";
 import { getChapterHtml, getManifest, leadIn, libraryLangs } from "@/lib/library";
 import { ACTIVE_CURRENCIES, LIBRARY_ITEM, PRICES, priceCodeFor } from "@/content/pricing";
 import { siteUrl } from "@/lib/auth";
 
 // Каталог для агентов: что есть, на каких языках, что открыто, сколько стоит.
 
-export type ChapterAccess = "free" | "lead-in" | "paid";
+export type ChapterAccess = "free" | "contact" | "lead-in" | "paid";
 
 export function catalog() {
   const site = siteUrl();
@@ -38,7 +38,8 @@ export function catalog() {
         genre: b.genre,
         urls: Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `${site}/${l}/books/${b.slug}`])),
         online: langs.length > 0,
-        prices: langs.length > 0 ? prices(b.slug) : [],
+        freeForContact: b.freeForContact === true,
+        prices: langs.length > 0 && !b.freeForContact ? prices(b.slug) : [],
         editions: langs.map((lang) => {
           const m = getManifest(b.slug, lang);
           return {
@@ -60,5 +61,6 @@ export function catalog() {
 
 export function chapterAccess(slug: string, lang: SupportedLocale, c: { id: string; free: boolean }): ChapterAccess {
   if (c.free) return "free";
+  if (isFreeForContact(slug)) return "contact";
   return leadIn(getChapterHtml(slug, lang, c.id)) ? "lead-in" : "paid";
 }

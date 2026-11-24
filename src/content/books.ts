@@ -48,6 +48,7 @@ export const books: Book[] = [
       "The Emperor's New Mind — Roger Penrose",
     ],
     companionPaperSlug: "pointer-architecture",
+    freeForContact: true,
   },
   {
     slug: "conscious-selection",
@@ -192,23 +193,23 @@ export const books: Book[] = [
     },
     hook: {
       en:
-        "The narrator of this book hides in everything at once, from a fridge to a moth, and takes off seven masks one by one: name, memory, character, body, place, time and God. After each one it checks what is left.",
+        "At half past two in the morning a man in a kitchen is writing a book about eternity, and so far he has one line. The story is told by whoever is sitting inside him, and in his fridge, and in the moth by the lamp, and who means to strip him, one by one, of his name, memory, character, body, place and time.",
       ru:
-        "Рассказчик этой книги прячется во всём сразу, от холодильника до мотылька, и по очереди снимает с себя семь масок: имя, память, характер, тело, место, время и Бога. После каждой он проверяет, что осталось.",
+        "В половине третьего ночи человек на кухне пишет книгу о вечности, и пока у него готова одна строчка. Рассказывает об этом тот, кто сидит в нём самом, в его холодильнике и в мотыльке у лампы и собирается по очереди снять с него имя, память, характер, тело, место и время.",
       pt:
-        "O narrador deste livro se esconde em tudo ao mesmo tempo, da geladeira à mariposa, e tira sete máscaras, uma por uma: nome, memória, caráter, corpo, lugar, tempo e Deus. Depois de cada uma, verifica o que sobrou.",
+        "Às duas e meia da madrugada, um homem na cozinha escreve um livro sobre a eternidade e por enquanto tem uma linha pronta. Quem conta é aquele que está dentro dele, da geladeira e da mariposa junto à lâmpada, e que pretende tirar dele, um a um, o nome, a memória, o caráter, o corpo, o lugar e o tempo.",
       es:
-        "El narrador de este libro se esconde en todo a la vez, de la nevera a la polilla, y se quita siete máscaras una tras otra: nombre, memoria, carácter, cuerpo, lugar, tiempo y Dios. Después de cada una comprueba qué queda.",
+        "A las dos y media de la madrugada, un hombre escribe en su cocina un libro sobre la eternidad y de momento tiene una línea. La historia la cuenta quien está dentro de él, de su nevera y de la polilla junto a la lámpara y piensa quitarle, uno tras otro, el nombre, la memoria, el carácter, el cuerpo, el lugar y el tiempo.",
     },
     synopsis: {
       en:
-        "The one the Indians called Brahman, Spinoza called Nature and Instagram stories call the Universe tells how it hides in a man who spends half the night rereading a single line in an empty file. Chapter by chapter it removes what a self is usually made of, and checks every removal against science: H.M. and Clive Wearing, who lost their memory, Phineas Gage and the iron rod through his skull, place cells and grid cells, the airborne clocks of Hafele and Keating, Einstein’s letter to the Besso family. Kurzweil, cryonics and dopamine fasting turn up as well, and get exactly the reverence they deserve. The word invariant is taken from physics literally: the book looks for a quantity that survives a change of carrier, the loss of memory, copying and stopped clocks. The answer rests on the Pointer Architecture of The Celestial Code, in which no record is ever deleted, and asks whether an eternal record has a reader.",
+        "The name comes off for a second, until the first message on his phone brings it back. Without his memory the man wakes at half past nine and sees, for the first time, a crack in the ceiling he has lived under for three years, though his hands still know where the coffee is. The narrator hunts for his character for three days and pieces it together from the pocket of a winter jacket, the way he stirs his coffee, and bank transfers to his mother marked “for medicine”. Meanwhile a woman flies in to him from another time zone and goes with him to a private MRI clinic, where the narrator starts on the body. By the pharmacy, on the way to breakfast, the man stops understanding where he is, and time runs out at the airport around five in the morning, when she flies back. The last mask, God, the narrator has to remove from himself. Between scenes he recalls how science crept up on the same thing: its rats ran their maze again in their sleep, and its four atomic clocks flew around the Earth on tickets made out to “Mr. Clock”.",
       ru:
-        "Тот, кого индийцы звали Брахманом, Спиноза Природой, а сторис зовут Вселенной, рассказывает, как прячется в человеке, который полночи перечитывает одну строчку в пустом файле. Глава за главой он снимает то, из чего обычно собрано «я», и каждое снятие сверяет с наукой: Г. М. и Клайв Уиринг, потерявшие память, Финеас Гейдж с железным ломом через череп, клетки места и клетки решётки, часы Хафеле и Китинга на самолётах, письмо Эйнштейна семье Бессо. Курцвейл, крионика и дофаминовое голодание тоже появляются, и почтения им достаётся ровно столько, сколько они заслужили. Слово «инвариант» взято у физиков буквально: книга ищет величину, которая переживёт замену носителя, потерю памяти, копирование и остановку часов. Ответ опирается на Pointer Architecture из «Небесного кода», где ни одна запись не удаляется, и спрашивает, есть ли у вечной записи читатель.",
+        "Имя удаётся снять на секунду: его возвращает первое же сообщение на телефоне. Без памяти человек просыпается в половине десятого и впервые видит трещину на потолке, под которой прожил три года, хотя руки сами находят, где лежит кофе. Характер рассказчик ищет три дня и собирает по кускам: в кармане зимней куртки, в том, как размешан кофе, в переводах маме с подписью «на лекарства». К человеку тем временем прилетает женщина из другого часового пояса и едет с ним на платное МРТ, где рассказчик берётся за тело. По дороге на завтрак, у аптеки, человек перестаёт понимать, где он, а время кончается в аэропорту около пяти утра, когда она улетает обратно. Последнюю маску, Бога, рассказчику остаётся снимать с себя. Между сценами он вспоминает, как к тому же самому подбиралась наука: крысы у неё во сне заново пробегали лабиринт, а четверо атомных часов летали вокруг Земли по билетам на имя «мистер Часы».",
       pt:
-        "Aquele que os indianos chamavam de Brahman, Espinosa de Natureza e os stories chamam de Universo conta como se esconde num homem que passa metade da noite relendo uma única linha num arquivo vazio. Capítulo a capítulo, ele tira aquilo de que um eu costuma ser feito e confere cada retirada com a ciência: H.M. e Clive Wearing, que perderam a memória, Phineas Gage e a barra de ferro que atravessou seu crânio, as células de lugar e as células de grade, os relógios de Hafele e Keating nos aviões, a carta de Einstein à família Besso. Kurzweil, a criônica e o jejum de dopamina também aparecem, e recebem exatamente a reverência que merecem. A palavra invariante vem da física, ao pé da letra: o livro procura uma grandeza que sobreviva à troca de suporte, à perda de memória, à cópia e aos relógios parados. A resposta se apoia na Pointer Architecture de O Código Celestial, em que nenhum registro é apagado, e pergunta se um registro eterno tem leitor.",
+        "O nome sai por um segundo, até que a primeira mensagem no celular o traz de volta. Sem a memória, o homem acorda às nove e meia e vê pela primeira vez uma rachadura no teto sob o qual mora há três anos, embora as mãos ainda saibam onde está o café. O narrador procura o caráter por três dias e o junta aos pedaços: no bolso de uma jaqueta de inverno, no jeito de mexer o café e nas transferências para a mãe com a anotação “para os remédios”. Enquanto isso, uma mulher chega de outro fuso horário para vê-lo e vai com ele fazer uma ressonância numa clínica particular, onde o narrador começa a tirar o corpo. Em frente à farmácia, a caminho do café da manhã, o homem deixa de entender onde está, e o tempo acaba no aeroporto, perto das cinco da manhã, quando ela voa de volta. A última máscara, Deus, o narrador tem de tirar de si mesmo. Entre as cenas ele lembra como a ciência se aproximou da mesma coisa: os ratos dela percorriam de novo o labirinto enquanto dormiam, e quatro relógios atômicos deram a volta à Terra com passagens em nome do “senhor Relógio”.",
       es:
-        "Aquel a quien los indios llamaban Brahman, Spinoza Naturaleza y las stories llaman Universo cuenta cómo se esconde en un hombre que pasa media noche releyendo una sola línea en un archivo vacío. Capítulo a capítulo se quita aquello de lo que suele estar hecho un yo y contrasta cada pérdida con la ciencia: H.M. y Clive Wearing, que perdieron la memoria, Phineas Gage y la barra de hierro que le atravesó el cráneo, las células de lugar y las células de rejilla, los relojes de Hafele y Keating en los aviones, la carta de Einstein a la familia Besso. Kurzweil, la criónica y el ayuno de dopamina también aparecen, y reciben exactamente la reverencia que merecen. La palabra invariante viene de la física, al pie de la letra: el libro busca una magnitud que sobreviva al cambio de soporte, a la pérdida de memoria, a la copia y a los relojes parados. La respuesta se apoya en la Pointer Architecture de El Código Celestial, en la que ningún registro se borra, y pregunta si un registro eterno tiene lector.",
+        "El nombre solo logra quitárselo un segundo: el primer mensaje del teléfono se lo devuelve. Sin memoria, el hombre se despierta a las nueve y media y ve por primera vez una grieta en el techo bajo el que vive desde hace tres años, aunque las manos aún saben dónde está el café. El narrador busca el carácter durante tres días y lo va juntando a trozos: en el bolsillo de una chaqueta de invierno, en la manera de remover el café y en las transferencias a la madre con la nota «para medicinas». Entretanto, una mujer llega a verlo desde otro huso horario y lo acompaña a hacerse una resonancia en una clínica privada, donde el narrador empieza con el cuerpo. Junto a la farmacia, de camino al desayuno, el hombre deja de entender dónde está, y el tiempo se acaba en el aeropuerto hacia las cinco de la mañana, cuando ella vuela de vuelta. La última máscara, Dios, el narrador tiene que quitársela a sí mismo. Entre escena y escena recuerda cómo la ciencia se acercó a lo mismo: sus ratas volvían a recorrer el laberinto mientras dormían, y cuatro relojes atómicos dieron la vuelta a la Tierra con billetes a nombre de «señor Reloj».",
     },
     status: "wip",
     statusLabel: {
@@ -229,6 +230,7 @@ export const books: Book[] = [
       "Ficciones — Jorge Luis Borges",
     ],
     companionPaperSlug: "pointer-architecture",
+    freeForContact: true,
   },
 ];
 
@@ -241,6 +243,8 @@ export function coverFor(book: Pick<Book, "coverImage">, locale: string): string
 export function ogCoverFor(slug: string, locale: string): string {
   return locale === "ru" ? `/og/covers/${slug}.png` : `/og/covers/${slug}-${locale}.png`;
 }
+
+export const isFreeForContact = (slug: string): boolean => books.some((b) => b.slug === slug && b.freeForContact);
 
 export function getBookBySlug(slug: string): Book | undefined {
   return books.find((b) => b.slug === slug);

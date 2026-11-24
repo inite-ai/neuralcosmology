@@ -6,7 +6,7 @@ import { getSession, authConfigured } from "@/lib/auth";
 import { db, dbConfigured } from "@/lib/db";
 import { books, getBookBySlug } from "@/content/books";
 import { getManifest, resolveBookLang } from "@/lib/library";
-import { ownsBook, paywallEnabled } from "@/lib/access";
+import { isPaid, ownsBook, paywallEnabled } from "@/lib/access";
 import { isAuthor } from "@/lib/reader/context";
 import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { pickLocalized } from "@/lib/i18n";
@@ -107,7 +107,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
                 <div key={b.slug} className="flex flex-col gap-4 bg-bg p-6 md:p-8">
                   <div className="flex items-baseline justify-between gap-3">
                     <Link href={`/${locale}/books/${b.slug}`} className="font-display text-2xl leading-tight hover:text-primary">{pickLocalized(b.titles, locale)}</Link>
-                    <span className="label text-muted whitespace-nowrap">{owned && paywallEnabled() ? t.owned : paywallEnabled() ? "" : t.free}</span>
+                    <span className="label text-muted whitespace-nowrap">{!isPaid(b.slug) ? t.free : owned ? t.owned : ""}</span>
                   </div>
                   <div className="h-px bg-line-soft"><div className="h-px bg-primary" style={{ width: `${pct}%` }} /></div>
                   <p className="text-sm text-muted">{done} / {total} · {t.progress} {pct}%</p>
@@ -117,7 +117,7 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
                         {p ? t.cont : t.start}
                       </Link>
                     )}
-                    {paywallEnabled() && !owned && (
+                    {isPaid(b.slug) && !owned && (
                       <a href={`/api/checkout?${new URLSearchParams({ item: b.slug, returnTo: `/${locale}/account` })}`} className="inline-flex min-h-11 items-center rounded-sm hairline border-fg/60 px-5 label hover:bg-fg hover:text-bg">
                         {t.buy} · <Price item="book" />
                       </a>

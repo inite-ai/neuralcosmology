@@ -239,7 +239,7 @@ const en: Dict = {
     directionsSectionTitle: "Three directions",
     directionsEyebrow: { books: "Books", science: "Science", essays: "Essays" },
     directionsTitle: {
-      books: "Four books.",
+      books: "Five books.",
       science: "The research programme.",
       essays: "Long-form writing.",
     },
@@ -254,9 +254,9 @@ const en: Dict = {
   },
   books: {
     indexEyebrow: "Books",
-    indexTitle: "Two books about science and two novels.",
+    indexTitle: "Two books about science, two novels and Eternity.",
     indexLead:
-      "In the non-fiction the author gathers published work on the brain, cosmology and biology into one hypothesis, then tests it in the second book and shows what failed. The novels hand the same ideas to people: the physicist Dan Reinov in Bugs Academy, his daughter in Era of Architects. All four can be read online, and the first chapters are free.",
+      "In the non-fiction the author gathers published work on the brain, cosmology and biology into one hypothesis, then tests it in the second book and shows what failed. The novels hand the same ideas to people: the physicist Dan Reinov in Bugs Academy, his daughter in Era of Architects. All of them can be read online; The Celestial Code and Eternity are free with your email, and the others open with free chapters.",
     readMore: "Read more →",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
@@ -299,7 +299,7 @@ const en: Dict = {
     gatePurchaseBody: "The opening chapters are free. The full book is available after purchase and stays in your library.",
     gatePurchaseCta: "Buy the book",
     gateHaveIt: "Already bought it? Sign in",
-    gateBuyLibrary: "All four books",
+    gateBuyLibrary: "All books",
     textSize: "Text size",
     theme: "Theme",
     themeDark: "Dark",
@@ -559,7 +559,7 @@ const ru: Dict = {
     directionsSectionTitle: "Три двери",
     directionsEyebrow: { books: "Книги", science: "Наука", essays: "Эссе" },
     directionsTitle: {
-      books: "Четыре книги.",
+      books: "Пять книг.",
       science: "Исследовательская программа.",
       essays: "Длинная проза.",
     },
@@ -575,9 +575,9 @@ const ru: Dict = {
   },
   books: {
     indexEyebrow: "Книги",
-    indexTitle: "Две книги о науке и два романа.",
+    indexTitle: "Две книги о науке, два романа и «Вечность».",
     indexLead:
-      "В нон-фикшн автор собирает опубликованные работы о мозге, космологии и биологии в одну гипотезу, а во второй книге проверяет её и показывает, что проверки не выдержало. В романах те же идеи достаются людям: физику Дану Рейнову в «Академии Багов» и его дочери в «Эре Архитекторов». Все четыре книги можно читать онлайн, первые главы открыты бесплатно.",
+      "В нон-фикшн автор собирает опубликованные работы о мозге, космологии и биологии в одну гипотезу, а во второй книге проверяет её и показывает, что проверки не выдержало. В романах те же идеи достаются людям: физику Дану Рейнову в «Академии Багов» и его дочери в «Эре Архитекторов». Все книги можно читать онлайн: «Небесный Код» и «Вечность» бесплатно за ваш e-mail, у остальных открыты первые главы.",
     readMore: "Подробнее →",
     allBooks: "← Все книги",
     rightsInquiry: "Издателям: права на книгу",
@@ -620,7 +620,7 @@ const ru: Dict = {
     gatePurchaseBody: "Первые главы открыты бесплатно. Полная книга доступна после покупки и остаётся в вашей библиотеке.",
     gatePurchaseCta: "Купить книгу",
     gateHaveIt: "Уже купили? Войдите",
-    gateBuyLibrary: "Все четыре книги",
+    gateBuyLibrary: "Вся библиотека",
     textSize: "Размер текста",
     theme: "Тема",
     themeDark: "Тёмная",
@@ -880,7 +880,7 @@ const pt: Dict = {
     directionsSectionTitle: "Três portas",
     directionsEyebrow: { books: "Livros", science: "Ciência", essays: "Ensaios" },
     directionsTitle: {
-      books: "Quatro livros.",
+      books: "Cinco livros.",
       science: "O programa de pesquisa.",
       essays: "Prosa longa.",
     },
@@ -895,9 +895,9 @@ const pt: Dict = {
   },
   books: {
     indexEyebrow: "Livros",
-    indexTitle: "Dois livros sobre ciência e dois romances.",
+    indexTitle: "Dois livros sobre ciência, dois romances e Eternidade.",
     indexLead:
-      "Na não ficção, o autor reúne trabalhos publicados sobre o cérebro, a cosmologia e a biologia numa só hipótese e, no segundo livro, a testa e mostra o que não resistiu. Os romances entregam as mesmas ideias a pessoas: ao físico Dan Reinov em Academia dos Bugs e à filha dele em Era dos Arquitetos. Os quatro podem ser lidos online, e os primeiros capítulos são gratuitos.",
+      "Na não ficção, o autor reúne trabalhos publicados sobre o cérebro, a cosmologia e a biologia numa só hipótese e, no segundo livro, a testa e mostra o que não resistiu. Os romances entregam as mesmas ideias a pessoas: ao físico Dan Reinov em Academia dos Bugs e à filha dele em Era dos Arquitetos. Todos podem ser lidos online: O Código Celestial e Eternidade, de graça com o seu e-mail; os outros têm os primeiros capítulos abertos.",
     readMore: "Ler mais →",
     allBooks: "← Todos os livros",
     rightsInquiry: "Para editoras: direitos",
@@ -940,7 +940,7 @@ const pt: Dict = {
     gatePurchaseBody: "Os primeiros capítulos são gratuitos. O livro completo fica disponível após a compra e permanece na sua biblioteca.",
     gatePurchaseCta: "Comprar o livro",
     gateHaveIt: "Já comprou? Entre",
-    gateBuyLibrary: "Os quatro livros",
+    gateBuyLibrary: "Toda a biblioteca",
     textSize: "Tamanho do texto",
     theme: "Tema",
     themeDark: "Escuro",
@@ -1200,7 +1200,7 @@ const es: Dict = {
     directionsSectionTitle: "Tres puertas",
     directionsEyebrow: { books: "Libros", science: "Ciencia", essays: "Ensayos" },
     directionsTitle: {
-      books: "Cuatro libros.",
+      books: "Cinco libros.",
       science: "El programa de investigación.",
       essays: "Prosa larga.",
     },
@@ -1214,9 +1214,9 @@ const es: Dict = {
   },
   books: {
     indexEyebrow: "Libros",
-    indexTitle: "Dos libros sobre ciencia y dos novelas.",
+    indexTitle: "Dos libros sobre ciencia, dos novelas y Eternidad.",
     indexLead:
-      "En la no ficción, el autor reúne trabajos publicados sobre el cerebro, la cosmología y la biología en una sola hipótesis y, en el segundo libro, la pone a prueba y muestra lo que no resistió. Las novelas entregan las mismas ideas a personas: al físico Dan Reinov en Academia de los Bugs y a su hija en Era de los Arquitectos. Los cuatro se pueden leer en línea, y los primeros capítulos son gratis.",
+      "En la no ficción, el autor reúne trabajos publicados sobre el cerebro, la cosmología y la biología en una sola hipótesis y, en el segundo libro, la pone a prueba y muestra lo que no resistió. Las novelas entregan las mismas ideas a personas: al físico Dan Reinov en Academia de los Bugs y a su hija en Era de los Arquitectos. Todos se pueden leer en línea: El Código Celestial y Eternidad, gratis con su correo; los demás tienen abiertos los primeros capítulos.",
     readMore: "Leer más →",
     allBooks: "← Todos los libros",
     rightsInquiry: "Para editoriales: derechos",
@@ -1259,7 +1259,7 @@ const es: Dict = {
     gatePurchaseBody: "Los primeros capítulos son gratuitos. El libro completo está disponible tras la compra y queda en tu biblioteca.",
     gatePurchaseCta: "Comprar el libro",
     gateHaveIt: "¿Ya lo compró? Inicie sesión",
-    gateBuyLibrary: "Los cuatro libros",
+    gateBuyLibrary: "Toda la biblioteca",
     textSize: "Tamaño del texto",
     theme: "Tema",
     themeDark: "Oscuro",
