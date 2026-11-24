@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "et-ch05-tyre",
+      "book": "eternity",
+      "chapter": "ch05",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A modest residential courtyard between city apartment blocks on a wet, overcast spring morning: a car tyre painted a pale colour, lying flat in the courtyard and used as a flower bed for low marigolds. Beyond it a path, a pedestrian crossing and, at the edge of frame, a corner pharmacy window with a sun-bleached poster of an indistinct family. A man of about forty in a dark jacket, seen from behind, stands still on the path as if he had forgotten the way. Nobody else.",
+      "alt": {
+        "ru": "Мокрый двор: крашеная шина с бархатцами вместо клумбы, дальше витрина аптеки, на дорожке спиной к нам замер мужчина.",
+        "en": "A wet courtyard: a painted tyre with marigolds for a flower bed, a pharmacy window beyond, a man standing still on the path with his back to us.",
+        "pt": "Um pátio molhado: um pneu pintado com cravos-de-defunto no lugar do canteiro, ao fundo a vitrine da farmácia, um homem parado de costas no caminho.",
+        "es": "Un patio mojado: un neumático pintado con tagetes en lugar de macizo, al fondo el escaparate de la farmacia, un hombre inmóvil de espaldas en el camino."
+      },
+      "caption": {
+        "ru": "Аптека, двор, жёлтая шина. Эту дорогу три года знали его ноги.",
+        "en": "The pharmacy, the courtyard, the yellow tyre. For three years his feet had known this way.",
+        "pt": "A farmácia, o pátio, o pneu amarelo. Havia três anos os pés dele sabiam esse caminho.",
+        "es": "La farmacia, el patio, el neumático amarillo. Sus pies llevaban tres años sabiendo este camino."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZwDA3CPqTL6ehe4v6Dggl9hQAP7u2Xreh3cg0UqB1+epcNvySQIylsIKcOjoQEdbugVaSN5hmUfiJHaaXp8O7TdABCGhwpqq7rIMXdhmQAAA",
+      "hash": "bd49e75e50cc1d7f",
+      "generatedAt": "2026-11-24T14:25:56.860Z"
+    },
+    {
+      "id": "et-ch05-cafe",
+      "book": "eternity",
+      "chapter": "ch05",
+      "scene": 5,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small neighbourhood cafe on a rainy morning, wet umbrellas by the door. Close view of a table: a man's hand laid over a woman's hand, on her wrist a blank paper baggage tag. Two cups, one untouched, a teaspoon on a saucer. Their faces are out of frame. In the blurred background the barista, seen from behind, is busy with a milk jug.",
+      "alt": {
+        "ru": "Столик в кафе: мужская ладонь лежит поверх женской, у женщины на запястье бумажная бирка от багажа, рядом две чашки.",
+        "en": "A cafe table: a man's hand lies over a woman's, a paper baggage tag on her wrist, two cups beside them.",
+        "pt": "Mesa de café: a mão de um homem sobre a de uma mulher, no pulso dela uma etiqueta de papel da bagagem, ao lado duas xícaras.",
+        "es": "Mesa de café: la mano de un hombre sobre la de una mujer, en la muñeca de ella una etiqueta de papel del equipaje, al lado dos tazas."
+      },
+      "caption": {
+        "ru": "Бирку от багажа она забыла снять.",
+        "en": "She had forgotten to take off the baggage tag.",
+        "pt": "A etiqueta da bagagem ela esquecera de tirar.",
+        "es": "La etiqueta del equipaje se le había olvidado quitarla."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDE2YyAldujeR1y9lAA/q0qprqQj33SPfMsZJQ2Bv2NHz7pcK84vXR5sXlDBzTNfEEiWkhJCPLy+oa9VaET6XPu2CQEXZva10Zn+YIGo0d1+NKfPVYNMd1uCU5pLlE33++AAAA=",
+      "hash": "85f391a640cb7251",
+      "generatedAt": "2026-11-24T14:26:15.701Z"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "et-ch02-sleep",
+      "book": "eternity",
+      "chapter": "ch02",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A dark bedroom before dawn in a small city apartment. A man of about forty sleeps on his left side under a light blanket, one palm under his cheek, seen from behind and from a distance, his face in shadow. A white ceiling with one thin crack running from the corner to a plain ceiling lamp. Faint streetlight on the wall.",
+      "alt": {
+        "ru": "Тёмная спальня: мужчина спит на левом боку, подложив ладонь под щёку, на белом потолке тонкая трещина от угла к люстре.",
+        "en": "A dark bedroom: a man asleep on his left side, his palm under his cheek, a thin crack in the white ceiling running from the corner to the lamp.",
+        "pt": "Um quarto escuro: um homem dorme sobre o lado esquerdo, com a mão debaixo do rosto, no teto branco uma rachadura fina do canto até o lustre.",
+        "es": "Un dormitorio oscuro: un hombre duerme sobre el lado izquierdo, con la mano bajo la mejilla, en el techo blanco una grieta fina de la esquina a la lámpara."
+      },
+      "caption": {
+        "ru": "Он заснул в начале четвёртого. Ночью память открыта настежь.",
+        "en": "He fell asleep a little after three. At night memory stands wide open.",
+        "pt": "Ele adormeceu pouco depois das três. De noite a memória fica escancarada.",
+        "es": "Se durmió poco después de las tres. De noche la memoria está abierta de par en par."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoYABAAPu1oqk6ppiQiMAgBMB2JZwAAUqF/ZofuyYoCtwgAAP7w360AT2D+/qdgsHN83+58LLiMpsOCK74ypu++JApsFyi/yCszJtZRcIAAAA==",
+      "hash": "142985319b5c81fc",
+      "generatedAt": "2026-11-24T14:25:20.681Z"
+    },
+    {
+      "id": "et-ch02-call",
+      "book": "eternity",
+      "chapter": "ch02",
+      "scene": 3,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "The same small city-apartment kitchen in late-morning light: a small square table, raised horizontal blinds, an old rounded white refrigerator with a single souvenir magnet showing a tiny mosque. A man of about forty, seen from behind at the table, holds a phone to his ear and looks down at his other hand, open on the table. Beside it a cup of coffee going cold and a coffee tin with a chipped rim.",
+      "alt": {
+        "ru": "Утро на кухне: мужчина спиной к нам говорит по телефону и смотрит на свою раскрытую ладонь, рядом остывает кофе.",
+        "en": "Morning in the kitchen: a man with his back to us talks on the phone and looks at his open palm, coffee going cold beside it.",
+        "pt": "Manhã na cozinha: um homem de costas fala ao celular e olha para a palma aberta da mão, ao lado um café esfriando.",
+        "es": "Mañana en la cocina: un hombre de espaldas habla por teléfono y mira su palma abierta, al lado un café que se enfría."
+      },
+      "caption": {
+        "ru": "За сорок минут он одиннадцать раз спросил её, кто она. Одиннадцать раз она ответила.",
+        "en": "In forty minutes he asked her eleven times who she was. Eleven times she answered.",
+        "pt": "Em quarenta minutos ele perguntou onze vezes quem ela era. Onze vezes ela respondeu.",
+        "es": "En cuarenta minutos le preguntó once veces quién era. Once veces ella contestó."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoYABAAPu1iqk4ppaQiMAgBMB2JZwAAQr353YCLcvRX6kAA/vFsnPxA0U64XfKTUMp2zZbqtF6ewRHAG3Pop1KdqT4UIc3yN9OtpM9ZWiPpiFphXHvfIfaZLM8mB7XC8XAAAA==",
+      "hash": "29d5ce7cf80b204a",
+      "generatedAt": "2026-11-24T14:25:24.940Z"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "et-ch07-moth",
+      "book": "eternity",
+      "chapter": "ch07",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small, narrow city-apartment kitchen at night: a small square table, horizontal blinds with stripes of streetlight on them, an old rounded white refrigerator with a single souvenir magnet showing a tiny mosque, a round frosted-glass ceiling lampshade with one pale moth beating against it, a plain white cup of forgotten tea with a thin film on its surface. Seen from above, from the ceiling, as if by the moth: in the foreground the curve of the lampshade and the moth's blurred wing; far below, the table with the cup and an open laptop with its screen away from us, and the top of the head and shoulders of a man of about forty in a dark T-shirt. A toothpaste cap lies on the floor by the skirting board.",
+      "alt": {
+        "ru": "Кухня сверху, от плафона: рядом крыло мотылька, внизу стол с чашкой чая и ноутбуком, макушка сидящего мужчины.",
+        "en": "The kitchen from above, by the lampshade: a moth's wing close by, below a table with a cup of tea and a laptop, the top of a seated man's head.",
+        "pt": "A cozinha vista de cima, da cúpula da luminária: perto a asa de uma mariposa, embaixo a mesa com uma xícara de chá e um notebook, o topo da cabeça de um homem sentado.",
+        "es": "La cocina desde arriba, junto a la lámpara: cerca el ala de una polilla, abajo la mesa con una taza de té y un portátil, la coronilla de un hombre sentado."
+      },
+      "caption": {
+        "ru": "Мотылёк другой, но той же породы. Чай остывает с той же скоростью.",
+        "en": "The moth is a different one but of the same species. The tea cools at the same speed.",
+        "pt": "A mariposa é outra, mas da mesma espécie. O chá esfria na mesma velocidade.",
+        "es": "La polilla es otra, pero de la misma especie. El té se enfría a la misma velocidad."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JaQDE2BuPL7x+C4aN3QAA/vK0irjzzb98PvSaEljVlTXsT19BHcj+KtoVgcwBQMC9fsRWgc8YIfpcFX2s+qvDXD4EAOhEi9gIWCZ2clAAAA==",
+      "hash": "e3a07b0a0ebc58fd",
+      "generatedAt": "2026-11-24T14:26:26.528Z"
+    },
+    {
+      "id": "et-ch07-poodle",
+      "book": "eternity",
+      "chapter": "ch07",
+      "scene": 6,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A modest residential courtyard between city apartment blocks at night under one streetlight: a car tyre painted a pale colour, lying flat in the courtyard and used as a flower bed for low marigolds. Beside it a black poodle without collar or lead sits very upright, seen from behind at a slight angle, looking up at one lit window with horizontal blinds on a lower floor. Long shadow on wet asphalt.",
+      "alt": {
+        "ru": "Ночной двор под фонарём: у крашеной шины с бархатцами прямо сидит чёрный пудель и смотрит на освещённое окно.",
+        "en": "A courtyard at night under a streetlight: by a painted tyre with marigolds a black poodle sits upright, looking at a lit window.",
+        "pt": "Um pátio à noite sob um poste: junto a um pneu pintado com cravos-de-defunto, um poodle preto sentado bem reto olha para uma janela acesa.",
+        "es": "Un patio de noche bajo una farola: junto a un neumático pintado con tagetes, un caniche negro sentado muy derecho mira una ventana encendida."
+      },
+      "caption": {
+        "ru": "Он сидел очень прямо, как сидят собаки, которые пришли по делу.",
+        "en": "He sat very straight, the way dogs sit when they have come on business.",
+        "pt": "Estava sentado muito reto, como se sentam os cães que vieram a negócios.",
+        "es": "Estaba sentado muy derecho, como los perros que vienen por un asunto."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQAAUz7MZVKu9MhkoAAA/vK0u1ycUFahoVcq6Ffa1HacLvL2fvrZson/P7Qn03u0/jUyhsJtfEcYjZYVgAAA",
+      "hash": "2890b57d4f53ca99",
+      "generatedAt": "2026-11-24T14:26:43.659Z"
+    }
+  ]
+}

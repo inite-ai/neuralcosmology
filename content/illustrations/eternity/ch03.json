@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "id": "et-ch03-sugar",
+      "book": "eternity",
+      "chapter": "ch03",
+      "scene": 0,
+      "kind": "generated",
+      "status": "draft",
+      "prompt": "A small square kitchen table in morning light, seen from above at an angle: a man's hand, sleeve of a dark T-shirt at the edge of frame, holds a teaspoon of sugar over a plain white cup of black coffee. A plain sugar bowl, a few spilled grains of sugar. In the soft background an old rounded white refrigerator with a single souvenir magnet showing a tiny mosque.",
+      "alt": {
+        "ru": "Кухонный стол утром: рука держит ложку сахара над белой чашкой чёрного кофе, рядом сахарница и рассыпанные крупинки.",
+        "en": "A kitchen table in the morning: a hand holds a spoon of sugar over a white cup of black coffee, a sugar bowl and spilled grains beside it.",
+        "pt": "Mesa de cozinha de manhã: uma mão segura uma colher de açúcar sobre uma xícara branca de café preto, ao lado o açucareiro e grãos espalhados.",
+        "es": "Mesa de cocina por la mañana: una mano sostiene una cucharada de azúcar sobre una taza blanca de café solo, al lado el azucarero y granos esparcidos."
+      },
+      "caption": {
+        "ru": "Одна ложка сахара. Три раза по часовой стрелке и один раз против.",
+        "en": "One spoon of sugar. Three times clockwise and once anticlockwise.",
+        "pt": "Uma colher de açúcar. Três vezes no sentido horário e uma no anti-horário.",
+        "es": "Una cucharada de azúcar. Tres vueltas a la derecha y una a la izquierda."
+      },
+      "width": 1536,
+      "height": 1024,
+      "placeholder": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADQAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JaQDA3B4ik4KLY9GUrAgA/q1efXfF89uFt9fsASKSW5a68q1AKVatHEA0MC9QUORwXjHgPOu/5MmmpntfK44S1xiK+K/wVWqq0v45sJ04LR6MJpUAcG4Dp8b3XpwjHKlZEjLnJd61mXm8Mnp7MAAA",
+      "hash": "cd4e44ffcdf1a144",
+      "generatedAt": "2026-11-24T14:25:44.484Z"
+    },
+    {
+      "id": "et-ch03-gage",
+      "book": "eternity",
+      "chapter": "ch03",
+      "scene": 4,
+      "kind": "archive",
+      "status": "draft",
+      "source": {
+        "page": "https://commons.wikimedia.org/wiki/File:Phineas_Gage_Cased_Daguerreotype_WilgusPhoto2008-12-19_EnhancedRetouched_Color.jpg",
+        "download": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Phineas_Gage_Cased_Daguerreotype_WilgusPhoto2008-12-19_EnhancedRetouched_Color.jpg",
+        "author": "Jack and Beverly Wilgus",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "alt": {
+        "ru": "Старый дагеротип в латунной рамке: мужчина с закрытым левым глазом держит в руках длинный железный лом.",
+        "en": "An old daguerreotype in a brass mat: a man with his left eye closed holds a long iron rod.",
+        "pt": "Um daguerreótipo antigo em moldura de latão: um homem de olho esquerdo fechado segura uma longa barra de ferro.",
+        "es": "Un daguerrotipo antiguo con marco de latón: un hombre con el ojo izquierdo cerrado sostiene una larga barra de hierro."
+      },
+      "caption": {
+        "ru": "Финеас Гейдж с тем самым ломом. «Гейдж больше не Гейдж», говорили друзья. Снимок отретуширован.",
+        "en": "Phineas Gage with that very rod. “Gage was no longer Gage,” his friends said. The image has been retouched.",
+        "pt": "Phineas Gage com aquela mesma barra. “Gage não era mais Gage”, diziam os amigos. Imagem retocada.",
+        "es": "Phineas Gage con aquella misma barra. «Gage ya no era Gage», decían sus amigos. Imagen retocada."
+      },
+      "width": 811,
+      "height": 952,
+      "placeholder": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAABwBgCdASoYABwAPu1ur1IppiQiqAgBMB2JbACdMwACm8Aa1QbjUfsrXoGpfkPEKYLm5ybAYiWaZ8wOEAAA+lP9ooKmhfLeUFuX2j7U2troXxQXuaawoRLQoI72T8DbAf1lMgQ4/CTmaGmGOEUsxnYysyMoixrvjuTfFrYErUFQQ4EuCOsBCN/4ZpAJ70z8kMyp5KN2NKIbaEsreup40y4XebB4QS38YR2ePaIW9ltVaeOiPKGtPMbGoFql6Uayo9lOSwcN2YG2IhrJeqFdQTVEfWRu4ZOdNY9JOXxvljmd79xH43vSUoqljFjhxr65M9cP/AAA",
+      "hash": "03d7229ad10d1eef",
+      "generatedAt": "2026-11-24T14:25:25.236Z"
+    }
+  ]
+}
