@@ -62,6 +62,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
       links: [
         { label: dict.footer.links.about, href: `/${locale}/about` },
         { label: dict.footer.links.press, href: "mailto:info@neuralcosmology.com" },
+        { label: dict.footer.links.ai, href: "/llms.txt" },
         { label: "Telegram", href: "https://t.me/neuralcosmology" },
         { label: dict.footer.links.github, href: "https://github.com/neuralcosmology" },
       ],
@@ -93,7 +94,7 @@ export default function Footer({ locale }: { locale: SupportedLocale }) {
                   <p className="label text-muted mb-4">{col.title}</p>
                   <ul>
                     {col.links.map((l) => {
-                      const external = /^(https?:|mailto:)/.test(l.href);
+                      const external = /^(https?:|mailto:|\/llms\.txt)/.test(l.href);
                       const cls = "inline-flex min-h-10 items-center text-fg-secondary hover:text-fg transition-colors";
                       return (
                         <li key={l.href}>

@@ -185,6 +185,9 @@ function chapter(locale: SupportedLocale, slug: string, id: string, opts: Markdo
   const path = `/${locale}/read/${slug}/${id}`;
   const title = `${c.number != null ? `${c.number}. ` : ""}${c.title} · ${pick(b.titles, locale)}`;
   if (c.free || opts.unlocked?.(slug)) return doc(title, path, [htmlToMarkdown(html)]);
+  // Книги за контакт агент читает целиком (только инструмент read): контакт оставляет человек.
+  if (opts.agent && b.freeForContact)
+    return doc(title, path, [htmlToMarkdown(html), "", "---", "", `${CONTACT_LINE[locale]}: ${abs(`/${locale}/books/${slug}`)}`]);
   const opening = leadIn(html);
   return doc(title, path, [
     opening ? htmlToMarkdown(opening) : c.excerpt,
@@ -250,6 +253,8 @@ function lecturesIndex(locale: SupportedLocale): MarkdownDoc {
 export type MarkdownOptions = {
   /** Books the reader owns: their chapters come in full. */
   unlocked?: (slug: string) => boolean;
+  /** Читает агент через MCP: книги freeForContact отдаются целиком. */
+  agent?: boolean;
 };
 
 export function markdownFor(pathname: string, opts: MarkdownOptions = {}): MarkdownDoc | null {

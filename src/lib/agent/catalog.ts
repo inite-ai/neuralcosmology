@@ -39,6 +39,8 @@ export function catalog() {
         urls: Object.fromEntries(SUPPORTED_LOCALES.map((l) => [l, `${site}/${l}/books/${b.slug}`])),
         online: langs.length > 0,
         freeForContact: b.freeForContact === true,
+        // Книгу за контакт агент читает целиком через read, без входа.
+        agentAccess: b.freeForContact ? "full" : "open-parts",
         prices: langs.length > 0 && !b.freeForContact ? prices(b.slug) : [],
         editions: langs.map((lang) => {
           const m = getManifest(b.slug, lang);
