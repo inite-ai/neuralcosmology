@@ -253,7 +253,7 @@ export default async function BookDetailPage({
                 <Label className="mb-4">{L.contents}</Label>
                 <Headline>{L.inLibrary}</Headline>
                 <p className="mt-5 label text-muted">
-                  {manifest.chapters.length} · {manifest.version && `${L.version} ${manifest.version}`}
+                  {manifest.chapters.length}{manifest.version && ` · ${L.version} ${manifest.version}`}
                   {readLang !== locale && ` · ${dict.reader.shownIn} ${readLang}`}
                 </p>
               </div>
