@@ -25,6 +25,9 @@ export const WIDGETS: Record<string, ComponentType<WidgetProps>> = {
   qubit: dynamic(() => import("./Qubit"), { ssr: false }),
   synth: dynamic(() => import("./Synth"), { ssr: false }),
   wow: dynamic(() => import("./Wow"), { ssr: false }),
+  satiation: dynamic(() => import("./Satiation"), { ssr: false }),
+  "place-cells": dynamic(() => import("./PlaceCells"), { ssr: false }),
+  "mr-clock": dynamic(() => import("./MrClock"), { ssr: false }),
   youtube: dynamic(() => import("./YouTube"), { ssr: false }),
 };
 

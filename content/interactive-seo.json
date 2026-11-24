@@ -167,5 +167,47 @@
       "pt": "O experimento de Alfred Yarbus com o quadro de Repin: faça-se uma pergunta, olhe por vinte segundos e compare por onde o olhar passou.",
       "es": "El experimento de Alfred Yarbus con el cuadro de Repin: hágase una pregunta, mire veinte segundos y compare por dónde pasó la mirada."
     }
+  },
+  "et-ch01-satiation": {
+    "title": {
+      "ru": "Семантическое насыщение: опыт со словом",
+      "en": "Semantic satiation: try it with a word",
+      "pt": "Saciação semântica: teste com uma palavra",
+      "es": "Saciedad semántica: pruébela con una palabra"
+    },
+    "description": {
+      "ru": "Повторите слово тридцать раз и послушайте, что от него останется. Опыт с семантическим насыщением, которое описал Леон Якобовиц-Джеймс.",
+      "en": "Repeat a word thirty times and listen to what is left of it. An experiment with the semantic satiation described by Leon Jakobovits James.",
+      "pt": "Repita uma palavra trinta vezes e escute o que sobra dela. Um teste da saciação semântica descrita por Leon Jakobovits James.",
+      "es": "Repita una palabra treinta veces y escuche qué queda de ella. Una prueba de la saciedad semántica que describió Leon Jakobovits James."
+    }
+  },
+  "et-ch05-place-cells": {
+    "title": {
+      "ru": "Клетки места и клетки решётки: симуляция",
+      "en": "Place cells and grid cells: simulation",
+      "pt": "Células de lugar e de grade: simulação",
+      "es": "Células de lugar y de red: simulación"
+    },
+    "description": {
+      "ru": "Проведите крысу по полу и посмотрите, где вспыхивает клетка места О’Кифа и какой рисунок оставляет клетка решётки Мозеров.",
+      "en": "Lead a rat across the floor and see where O’Keefe’s place cell fires and what pattern the Mosers’ grid cell leaves behind.",
+      "pt": "Guie um rato pelo chão e veja onde dispara a célula de lugar de O’Keefe e que desenho deixa a célula de grade dos Moser.",
+      "es": "Guíe a una rata por el suelo y vea dónde se dispara la célula de lugar de O’Keefe y qué dibujo deja la célula de red de los Moser."
+    }
+  },
+  "et-ch06-mr-clock": {
+    "title": {
+      "ru": "Опыт Хафеле–Китинга: часы в самолёте",
+      "en": "Hafele–Keating experiment: flying clocks",
+      "pt": "Experimento de Hafele–Keating: relógios no ar",
+      "es": "Experimento de Hafele–Keating: relojes en vuelo"
+    },
+    "description": {
+      "ru": "Отправьте атомные часы вокруг Земли на восток или на запад и сравните с часами в Вашингтоне: −59 и +273 наносекунды.",
+      "en": "Send atomic clocks around the Earth eastward or westward and compare them with those in Washington: −59 and +273 nanoseconds.",
+      "pt": "Mande relógios atômicos em volta da Terra, para o leste ou para o oeste, e compare com os de Washington: −59 e +273 nanossegundos.",
+      "es": "Envíe relojes atómicos alrededor de la Tierra, al este o al oeste, y compárelos con los de Washington: −59 y +273 nanosegundos."
+    }
   }
 }
