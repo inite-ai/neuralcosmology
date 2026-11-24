@@ -39,6 +39,10 @@ export const fromToken = (t: AgentPrincipal): SiteSession => ({
   admin: t.admin,
 });
 
+/** Для замка: выданный доступ ищется по аккаунту и по подтверждённой почте. */
+const siteReader = (s: SiteSession | null): Session | null =>
+  s ? { sub: s.sub, email: s.email ?? undefined, emailVerified: s.emailVerified, admin: s.admin } : null;
+
 /** Глава издания: книга есть в каталоге и в библиотеке, язык поддержан. */
 function chapterRef(book: string, lang: string, chapter: string) {
   const b = getBookBySlug(book);
@@ -104,11 +108,11 @@ const site: ReaderSite = {
   async canRead(s, { book, lang, chapter }) {
     const ref = chapterRef(book, lang, chapter);
     if (!ref) return false;
-    return (await chapterGate(ref.chapter, book, s ? { sub: s.sub } : null)) === "open";
+    return (await chapterGate(ref.chapter, book, siteReader(s))) === "open";
   },
   // Без пейволла любой вошедший — «владелец» (большой лимит ИИ), как и раньше.
   async ownsBook(s, book) {
-    return ownsBook(s ? { sub: s.sub } : null, book);
+    return ownsBook(siteReader(s), book);
   },
   isAuthor: (s) => authorBy(s),
   // Письма автору — на общий ящик; ответ уходит читателю. Без почты письмо «не ушло».

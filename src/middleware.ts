@@ -124,7 +124,14 @@ export async function middleware(request: NextRequest) {
 
   if (pathnameHasLocale(pathname)) {
     const urlLocale = pathname.split("/").filter(Boolean)[0] as Locale;
-    return withSeoHeaders(nextWithLocale(request, urlLocale), urlLocale, pathname);
+    const page = withSeoHeaders(nextWithLocale(request, urlLocale), urlLocale, pathname);
+    // Бэкофис и кабинет — вне поиска и кэшей.
+    if (/^\/[a-z]{2}\/(admin|account)(\/|$)/.test(pathname)) {
+      page.headers.set("x-robots-tag", "noindex, nofollow");
+      page.headers.set("cache-control", "private, no-store");
+      page.headers.delete("Link");
+    }
+    return page;
   }
 
   const target = request.nextUrl.clone();

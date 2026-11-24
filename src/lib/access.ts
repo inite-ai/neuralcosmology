@@ -2,13 +2,15 @@ import "server-only";
 import type { Session } from "@/lib/auth";
 import type { LibraryChapter } from "@/lib/library";
 import { isFreeForContact } from "@/content/books";
+import { isAuthor } from "@/lib/reader/context";
+import { hasGrant } from "@/lib/grants";
 
 // Кто что может читать.
 //
 //   free-глава (из demo-файла книги)  → всем, индексируется
 //   остальное                          → после входа
 //   книга freeForContact               → после входа или подтверждения почты, без оплаты
-//   PAYWALL_ENABLED=true               → после входа И покупки
+//   PAYWALL_ENABLED=true               → после входа И покупки (или доступа, выданного автором)
 //
 // Покупка проверяется в INITE Billing: у пользователя должен быть активный
 // entitlement `neuralcosmology:library` (вся библиотека) или
@@ -80,6 +82,9 @@ export async function ownsBook(
 ): Promise<boolean> {
   if (!session) return false;
   if (!isPaid(slug)) return true;
+  // Автор читает всё: покупать свои книги ему незачем.
+  if (isAuthor(session)) return true;
+  if (await hasGrant(session, slug)) return true;
   const keys = await entitlementKeys(session.sub, fresh);
   return keys.has(ENTITLEMENT_LIBRARY) || keys.has(entitlementForBook(slug));
 }

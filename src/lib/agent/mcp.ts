@@ -170,7 +170,7 @@ function allowCheckout(ip: string): boolean {
 
 async function owned(reader: Reader): Promise<Set<string>> {
   const out = new Set<string>();
-  for (const b of books) if (await ownsBook({ sub: reader.sub }, b.slug)) out.add(b.slug);
+  for (const b of books) if (await ownsBook({ sub: reader.sub, email: reader.email, emailVerified: Boolean(reader.email) }, b.slug)) out.add(b.slug);
   return out;
 }
 

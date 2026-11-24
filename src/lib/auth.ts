@@ -52,6 +52,12 @@ export function auth() {
     appUrl: siteUrl(),
     revocations,
     onSignIn: async (s) => {
+      if (dbConfigured()) {
+        const sql = await db();
+        await sql`INSERT INTO readers (user_id, email, email_verified, name) VALUES (${s.userId}, ${s.email}, ${s.emailVerified}, ${s.name})
+          ON CONFLICT (user_id) DO UPDATE SET email = EXCLUDED.email, email_verified = EXCLUDED.email_verified,
+            name = COALESCE(EXCLUDED.name, readers.name), last_seen = now()`;
+      }
       if (s.email && s.emailVerified) await claimGuestPurchases(s.userId, s.email);
     },
   });

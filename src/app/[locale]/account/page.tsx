@@ -12,7 +12,6 @@ import { isSupportedLocale, type SupportedLocale } from "@/lib/get-locale";
 import { pickLocalized } from "@/lib/i18n";
 import { LIBRARY_ITEM } from "@/content/pricing";
 import { Sheet, Label } from "@/components/system";
-import ModerationActions from "@/components/account/ModerationActions";
 import AccountSettings from "@/components/account/AccountSettings";
 import DataControls from "@/components/account/DataControls";
 import { getPrefs, purchases } from "@/lib/account";
@@ -34,10 +33,10 @@ const A: Record<SupportedLocale, Record<string, string>> = {
 };
 
 const T: Record<SupportedLocale, Record<string, string>> = {
-  ru: { social: "Цитаты в соцсетях", hide: "Скрыть", show: "Показать", del: "Удалить", title: "Кабинет", library: "Моя библиотека", progress: "прочитано", cont: "Продолжить", start: "Начать", owned: "куплено", free: "доступ по входу", buy: "Купить", buyAll: "Вся библиотека", notes: "Пометки", noNotes: "Пока пусто: выделите текст в читалке.", talk: "Мои обсуждения", noTalk: "Вы ещё ничего не писали.", ai: "ИИ сегодня", aiLeft: "осталось вопросов", mod: "Модерация", noMod: "Новых сообщений нет.", out: "Выйти", held: "ждёт проверки автором" },
-  en: { social: "Quotes on social media", hide: "Hide", show: "Show", del: "Delete", title: "Account", library: "My library", progress: "read", cont: "Continue", start: "Start", owned: "owned", free: "sign-in access", buy: "Buy", buyAll: "Whole library", notes: "Notes", noNotes: "Nothing yet: select text in the reader.", talk: "My discussions", noTalk: "You haven't written anything yet.", ai: "AI today", aiLeft: "questions left", mod: "Moderation", noMod: "No new messages.", out: "Sign out", held: "awaiting the author's review" },
-  pt: { social: "Citações nas redes sociais", hide: "Ocultar", show: "Mostrar", del: "Excluir", title: "Conta", library: "Minha biblioteca", progress: "lido", cont: "Continuar", start: "Começar", owned: "comprado", free: "acesso com login", buy: "Comprar", buyAll: "Biblioteca inteira", notes: "Notas", noNotes: "Nada ainda: selecione texto no leitor.", talk: "Minhas discussões", noTalk: "Você ainda não escreveu nada.", ai: "IA hoje", aiLeft: "perguntas restantes", mod: "Moderação", noMod: "Sem mensagens novas.", out: "Sair", held: "aguarda a revisão do autor" },
-  es: { social: "Citas en redes sociales", hide: "Ocultar", show: "Mostrar", del: "Eliminar", title: "Cuenta", library: "Mi biblioteca", progress: "leído", cont: "Seguir", start: "Empezar", owned: "comprado", free: "acceso con sesión", buy: "Comprar", buyAll: "Biblioteca completa", notes: "Notas", noNotes: "Nada aún: selecciona texto en el lector.", talk: "Mis conversaciones", noTalk: "Aún no has escrito nada.", ai: "IA hoy", aiLeft: "preguntas restantes", mod: "Moderación", noMod: "No hay mensajes nuevos.", out: "Cerrar sesión", held: "espera la revisión del autor" },
+  ru: { office: "Бэкофис", social: "Цитаты в соцсетях", hide: "Скрыть", show: "Показать", del: "Удалить", title: "Кабинет", library: "Моя библиотека", progress: "прочитано", cont: "Продолжить", start: "Начать", owned: "куплено", free: "доступ по входу", buy: "Купить", buyAll: "Вся библиотека", notes: "Пометки", noNotes: "Пока пусто: выделите текст в читалке.", talk: "Мои обсуждения", noTalk: "Вы ещё ничего не писали.", ai: "ИИ сегодня", aiLeft: "осталось вопросов", mod: "Модерация", noMod: "Новых сообщений нет.", out: "Выйти", held: "ждёт проверки автором" },
+  en: { office: "Back office", social: "Quotes on social media", hide: "Hide", show: "Show", del: "Delete", title: "Account", library: "My library", progress: "read", cont: "Continue", start: "Start", owned: "owned", free: "sign-in access", buy: "Buy", buyAll: "Whole library", notes: "Notes", noNotes: "Nothing yet: select text in the reader.", talk: "My discussions", noTalk: "You haven't written anything yet.", ai: "AI today", aiLeft: "questions left", mod: "Moderation", noMod: "No new messages.", out: "Sign out", held: "awaiting the author's review" },
+  pt: { office: "Painel do autor", social: "Citações nas redes sociais", hide: "Ocultar", show: "Mostrar", del: "Excluir", title: "Conta", library: "Minha biblioteca", progress: "lido", cont: "Continuar", start: "Começar", owned: "comprado", free: "acesso com login", buy: "Comprar", buyAll: "Biblioteca inteira", notes: "Notas", noNotes: "Nada ainda: selecione texto no leitor.", talk: "Minhas discussões", noTalk: "Você ainda não escreveu nada.", ai: "IA hoje", aiLeft: "perguntas restantes", mod: "Moderação", noMod: "Sem mensagens novas.", out: "Sair", held: "aguarda a revisão do autor" },
+  es: { office: "Panel del autor", social: "Citas en redes sociales", hide: "Ocultar", show: "Mostrar", del: "Eliminar", title: "Cuenta", library: "Mi biblioteca", progress: "leído", cont: "Seguir", start: "Empezar", owned: "comprado", free: "acceso con sesión", buy: "Comprar", buyAll: "Biblioteca completa", notes: "Notas", noNotes: "Nada aún: selecciona texto en el lector.", talk: "Mis conversaciones", noTalk: "Aún no has escrito nada.", ai: "IA hoy", aiLeft: "preguntas restantes", mod: "Moderación", noMod: "No hay mensajes nuevos.", out: "Cerrar sesión", held: "espera la revisión del autor" },
 };
 
 export default async function AccountPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -58,10 +57,6 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
   const notes = sql ? await sql`SELECT id, book, lang, chapter, anchor, kind, quote, note, created_at FROM annotations WHERE user_id = ${session.sub} ORDER BY created_at DESC LIMIT 200` : [];
   const mine = sql ? await sql`SELECT id, book, lang, chapter, anchor, body, status, created_at FROM comments WHERE user_id = ${session.sub} ORDER BY created_at DESC LIMIT 50` : [];
   const [usage] = sql ? await sql`SELECT count FROM ai_usage WHERE user_id = ${session.sub} AND day = current_date` : [];
-  const queue = sql && author
-    ? await sql`SELECT id, book, lang, chapter, anchor, author_name, body, status, pinned, created_at FROM comments
-        WHERE status = 'hidden' OR created_at > now() - interval '14 days' ORDER BY created_at DESC LIMIT 100`
-    : [];
 
   const shelf = await Promise.all(
     books.map(async (b) => {
@@ -82,14 +77,15 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
       <Sheet>
         <header className="flex flex-col gap-6 pt-14 pb-10 md:flex-row md:items-end md:justify-between md:px-10 md:pt-20">
           <div>
-            <Label className="mb-4">{session.email}</Label>
+            <p className="mb-4 text-sm text-muted">{session.email}{usage?.count ? `, ${t.ai}: ${usage.count}` : ""}</p>
             <h1 className="display-fluid text-balance">{prefs?.displayName || session.name || t.title}</h1>
           </div>
-          <div className="flex items-center gap-6">
-            <div className="text-right">
-              <p className="font-display text-4xl leading-none">{usage?.count ?? 0}</p>
-              <p className="mt-2 label text-muted">{t.ai}</p>
-            </div>
+          <div className="flex flex-wrap items-center gap-4">
+            {author && (
+              <Link href={`/${locale}/admin`} className="inline-flex min-h-11 items-center rounded-sm bg-fg px-5 label text-bg hover:bg-primary">
+                {t.office}
+              </Link>
+            )}
             <a href={`/api/auth/logout?returnTo=/${locale}`} className="inline-flex min-h-11 items-center rounded-sm hairline border-fg/60 px-5 label hover:bg-fg hover:text-bg">
               {t.out}
             </a>
@@ -98,16 +94,16 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
 
         <section className="rule-t py-12 md:px-10">
           <Label className="mb-6">{t.library}</Label>
-          <div className="grid gap-[0.5px] hairline bg-line md:grid-cols-2">
+          <div className="grid gap-[0.5px] md:grid-cols-2">
             {shelf.map(({ b, manifest, p, done, owned }) => {
               const total = manifest?.chapters.length ?? 0;
               const pct = total ? Math.round((done / total) * 100) : 0;
               const next = p?.chapter ?? manifest?.chapters[0]?.id;
               return (
-                <div key={b.slug} className="flex flex-col gap-4 bg-bg p-6 md:p-8">
+                <div key={b.slug} className="flex flex-col gap-4 p-6 outline-[0.5px] outline-line md:p-8">
                   <div className="flex items-baseline justify-between gap-3">
                     <Link href={`/${locale}/books/${b.slug}`} className="font-display text-2xl leading-tight hover:text-primary">{pickLocalized(b.titles, locale)}</Link>
-                    <span className="label text-muted whitespace-nowrap">{!isPaid(b.slug) ? t.free : owned ? t.owned : ""}</span>
+                    <span className="label text-muted whitespace-nowrap">{!isPaid(b.slug) ? t.free : author ? "" : owned ? t.owned : ""}</span>
                   </div>
                   <div className="h-px bg-line-soft"><div className="h-px bg-primary" style={{ width: `${pct}%` }} /></div>
                   <p className="text-sm text-muted">{done} / {total} · {t.progress} {pct}%</p>
@@ -211,38 +207,6 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
           <section className="rule-t py-12 md:px-10">
             <Label className="mb-6">{a.data}</Label>
             <DataControls locale={locale} labels={{ export: a.export, del: a.del, confirm: a.confirm, cancel: a.cancel, done: a.done, note: a.note }} />
-          </section>
-        )}
-
-        {author && (
-          <section className="rule-t py-12 md:px-10">
-            <Link href={`/${locale}/account/social`} className="inline-flex min-h-11 items-center rounded-sm hairline border-fg/60 px-5 label hover:bg-fg hover:text-bg">
-              {t.social} →
-            </Link>
-          </section>
-        )}
-
-        {author && (
-          <section className="rule-t py-12 md:px-10">
-            <Label className="mb-6">{t.mod} · {queue.length}</Label>
-            {queue.length === 0 ? (
-              <p className="text-muted">{t.noMod}</p>
-            ) : (
-              <ul className="rule-t">
-                {queue.map((c) => (
-                  <li key={c.id} className="grid gap-3 rule-b py-4 md:grid-cols-[1fr_auto] md:items-start">
-                    <div>
-                      <p className="label text-muted">
-                        {c.author_name} · {chapterTitle(c.book, c.lang, c.chapter)} ·{" "}
-                        <span className={c.status === "published" ? "text-primary" : ""}>{c.status}</span>
-                      </p>
-                      <Link href={readHref(c.book, c.chapter, c.anchor)} className="mt-1 block text-fg-secondary hover:text-fg">{c.body}</Link>
-                    </div>
-                    <ModerationActions id={c.id} status={c.status} pinned={c.pinned} labels={{ hide: t.hide, show: t.show, del: t.del }} />
-                  </li>
-                ))}
-              </ul>
-            )}
           </section>
         )}
       </Sheet>
