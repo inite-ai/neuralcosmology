@@ -12,7 +12,8 @@ import type { Lang, SceneInsert } from "@/lib/illustrations";
 
 export type Widget =
   | "physarum" | "double-slit" | "landauer" | "life" | "rule110" | "yarbus" | "blind-spot" | "murmuration" | "planaria"
-  | "sixth" | "loftus" | "assembly" | "envelope" | "qubit" | "synth" | "wow" | "youtube";
+  | "sixth" | "loftus" | "assembly" | "envelope" | "qubit" | "synth" | "wow"
+  | "satiation" | "place-cells" | "mr-clock" | "youtube";
 
 export type InteractiveItem = {
   id: string;
@@ -72,7 +73,7 @@ export function allInteractive(): InteractiveItem[] {
   return out;
 }
 
-const BOOK_ORDER = ["celestial-code", "conscious-selection", "bugs-academy", "era-of-architects"];
+const BOOK_ORDER = ["celestial-code", "conscious-selection", "bugs-academy", "era-of-architects", "eternity"];
 
 /** Опыты (без видео и записей) в порядке книг и глав. */
 export function experiments(): InteractiveItem[] {

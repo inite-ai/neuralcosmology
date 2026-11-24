@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": "et-ch06-mr-clock",
+      "book": "eternity",
+      "chapter": "ch06",
+      "scene": 1,
+      "at": "end",
+      "widget": "mr-clock",
+      "title": {
+        "ru": "Мистер Часы летит",
+        "en": "Mr Clock takes a flight",
+        "pt": "O senhor Relógio voa",
+        "es": "El señor Reloj vuela"
+      },
+      "caption": {
+        "ru": "Хафеле и Китинг, 1971. Итоговые числа из опыта; маршрут и рост разницы по пути показаны условно.",
+        "en": "Hafele and Keating, 1971. The final figures are from the experiment; the route and the growth of the difference along the way are schematic.",
+        "pt": "Hafele e Keating, 1971. Os números finais são do experimento; a rota e o aumento da diferença pelo caminho são esquemáticos.",
+        "es": "Hafele y Keating, 1971. Las cifras finales son del experimento; la ruta y el aumento de la diferencia por el camino son esquemáticos."
+      }
+    }
+  ]
+}
