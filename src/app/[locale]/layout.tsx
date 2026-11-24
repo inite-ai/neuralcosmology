@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import { fontVariables } from "../fonts";
 import RevealObserver from "@/components/system/RevealObserver";
+import SessionKeeper from "@/components/account/SessionKeeper";
 import Analytics from "@/components/analytics/Analytics";
 import { verification } from "@/content/verification";
 import Header from "@/components/layout/Header";
@@ -175,6 +176,7 @@ export default async function LocaleLayout({
         <Cursor />
         <RevealObserver />
         <Analytics />
+        <SessionKeeper />
         <div hidden dangerouslySetInnerHTML={{ __html: "<!--/email_off-->" }} />
       </body>
     </html>
