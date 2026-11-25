@@ -1,3 +1,4 @@
+import { getBookBySlug } from "@/content/books";
 import type { NextRequest } from "next/server";
 import { db, dbConfigured } from "@/lib/db";
 import { emailHtml } from "@/lib/email-layout";
@@ -23,11 +24,16 @@ export async function POST(req: NextRequest) {
   if (clip(b.company, 100)) return json({ success: true });
   const name = clip(b.name, 120).replace(/[\r\n]+/g, " ");
   const email = clip(b.email, 254).toLowerCase();
-  const message = clip(b.message, 8000);
+  const kind = KINDS.find((k) => k === b.kind) ?? "contact";
+  // Запрос прав (/[locale]/rights): издательство и территория ложатся в начало
+  // сообщения, отдельных колонок для них нет. Само сообщение там необязательно.
+  const extra = kind === "rights"
+    ? [["Publisher", clip(b.publisher, 120)], ["Territory", clip(b.territory, 120)]].filter(([, v]) => v).map(([k, v]) => `${k}: ${v.replace(/[\r\n]+/g, " ")}`)
+    : [];
+  const message = [extra.join("\n"), clip(b.message, 8000)].filter(Boolean).join("\n\n") || (kind === "rights" ? "Rights inquiry" : "");
   if (!name || !message) return fail("fields_required", 400);
   if (!validEmail(email)) return fail("invalid_email", 400);
-  const kind = KINDS.find((k) => k === b.kind) ?? "contact";
-  const book = clip(b.book, 60) || null;
+  const book = getBookBySlug(clip(b.book, 60)) ? clip(b.book, 60) : null;
   const lang = isSupportedLocale(String(b.lang)) ? String(b.lang) : null;
 
   let stored = false;
