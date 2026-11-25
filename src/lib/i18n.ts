@@ -72,6 +72,8 @@ export type Dict = {
     prev: string;
     next: string;
     backToBook: string;
+    allBooks: string;
+    home: string;
     endOfBook: string;
     signIn: string;
     signOut: string;
@@ -290,6 +292,8 @@ const en: Dict = {
     prev: "Previous",
     next: "Next",
     backToBook: "About the book",
+    allBooks: "All books",
+    home: "Home",
     endOfBook: "End of the book",
     signIn: "Sign in",
     signOut: "Sign out",
@@ -612,6 +616,8 @@ const ru: Dict = {
     prev: "Назад",
     next: "Дальше",
     backToBook: "О книге",
+    allBooks: "Все книги",
+    home: "На главную",
     endOfBook: "Конец книги",
     signIn: "Войти",
     signOut: "Выйти",
@@ -933,6 +939,8 @@ const pt: Dict = {
     prev: "Anterior",
     next: "Próximo",
     backToBook: "Sobre o livro",
+    allBooks: "Todos os livros",
+    home: "Início",
     endOfBook: "Fim do livro",
     signIn: "Entrar",
     signOut: "Sair",
@@ -1253,6 +1261,8 @@ const es: Dict = {
     prev: "Anterior",
     next: "Siguiente",
     backToBook: "Sobre el libro",
+    allBooks: "Todos los libros",
+    home: "Inicio",
     endOfBook: "Fin del libro",
     signIn: "Iniciar sesión",
     signOut: "Cerrar sesión",
