@@ -24,6 +24,8 @@ export interface ReaderChromeLabels extends TocLabels {
   signIn: string;
   signOut: string;
   backToBook: string;
+  allBooks: string;
+  home: string;
 }
 
 const SIZES: ReaderSize[] = ["s", "m", "l", "xl"];
@@ -133,6 +135,18 @@ export default function ReaderChrome({
     };
   }, [tocOpen]);
 
+  const home = "/" + hrefBase.split("/").filter(Boolean)[0];
+  // The way out of the book: on a phone the contents sheet is the only menu there is.
+  const wayOut = (
+    <div className="r-rule-b flex flex-wrap gap-x-5 px-4 py-3 text-[0.9375rem]">
+      <Link href={`${home}/books`} className="inline-flex min-h-11 items-center text-[var(--r-fg)] hover:text-[var(--r-accent)]">
+        ← {labels.allBooks}
+      </Link>
+      <Link href={home} className="inline-flex min-h-11 items-center text-[var(--r-soft)] hover:text-[var(--r-accent)]">
+        {labels.home}
+      </Link>
+    </div>
+  );
   const tocList = (onNavigate?: () => void) => (
     <TocList
       items={toc}
@@ -144,7 +158,6 @@ export default function ReaderChrome({
       onNavigate={onNavigate}
     />
   );
-  const home = "/" + hrefBase.split("/").filter(Boolean)[0];
   const iconBtn =
     "inline-flex h-11 min-w-11 items-center justify-center gap-2 px-2 label text-[var(--r-soft)] transition-colors hover:text-[var(--r-fg)]";
 
@@ -166,6 +179,9 @@ export default function ReaderChrome({
               <span className="block h-px w-5 bg-current" />
             </span>
           </button>
+          <Link href={`${home}/books`} aria-label={labels.allBooks} title={labels.allBooks} className="inline-flex h-11 items-center px-1 font-display text-xl leading-none text-[var(--r-fg)] hover:text-[var(--r-accent)] lg:hidden">
+            N<em className="italic text-[var(--r-soft)]">C</em>
+          </Link>
           <Link href={home} className="hidden px-2 font-display text-xl leading-none text-[var(--r-fg)] hover:text-[var(--r-accent)] lg:block">
             Neural <em className="italic text-[var(--r-soft)]">Cosmology</em>
           </Link>
@@ -249,6 +265,7 @@ export default function ReaderChrome({
       <div className="reader-body lg:grid lg:grid-cols-[21rem_minmax(0,1fr)]">
         <aside className="reader-toc hidden lg:block r-rule-r">
           <nav aria-label={labels.contents} className="sticky top-14 max-h-[calc(100vh-3.5rem)] overflow-y-auto pb-10">
+            {wayOut}
             <p className="label px-4 pt-6 pb-3 text-[var(--r-muted)]">{labels.contents}</p>
             <div className="r-rule-t">{tocList()}</div>
           </nav>
@@ -266,7 +283,7 @@ export default function ReaderChrome({
               <X className="h-5 w-5" strokeWidth={1.25} />
             </button>
           </div>
-          <div className="flex-1 overflow-y-auto pb-10">{tocList(() => setTocOpen(false))}</div>
+          <div className="flex-1 overflow-y-auto pb-10">{wayOut}{tocList(() => setTocOpen(false))}</div>
         </div>
       )}
     </div>
