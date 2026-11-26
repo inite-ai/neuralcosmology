@@ -3,6 +3,8 @@ import { Empty, Pager, Part, SUB, Search, Tabs, Title, day } from "@/components/
 import { deleteSubscriber, stopSubscriber } from "@/lib/admin/actions";
 import { owner } from "@/lib/admin/guard";
 import { bookTitle, subscribers } from "@/lib/admin/data";
+import { importAudience } from "@/lib/admin/actions";
+import { Form, Submit } from "@/components/admin/forms";
 
 type P = { params: Promise<{ locale: string }>; searchParams: Promise<{ q?: string; status?: string; page?: string }> };
 
@@ -53,6 +55,10 @@ export default async function Subscribers({ params, searchParams }: P) {
           </ul>
         </Part>
       )}
+      <Part title="Адресная книга">
+        <p className="mb-4 max-w-[60ch] text-fg-secondary">Переносит старые списки в общую адресную книгу: подтверждённым и включившим письма в кабинете — согласие, отписавшимся — стоп-лист, авторам обращений — контакт. Рассылка о новых главах сверяется со стоп-листом перед каждым письмом. Повторное нажатие ничего не меняет.</p>
+        <Form action={importAudience}><Submit>Перенести в адресную книгу</Submit></Form>
+      </Part>
     </>
   );
 }

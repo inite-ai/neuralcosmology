@@ -1,5 +1,6 @@
 import "server-only";
 import postgres from "postgres";
+import { AUDIENCE_SCHEMA } from "@inite/audience";
 
 // База интерактива читалки: прогресс, пометки, обсуждения, ИИ-кэш и лимиты.
 // Схема создаётся идемпотентно при первом обращении (CREATE ... IF NOT EXISTS).
@@ -156,10 +157,13 @@ CREATE TABLE IF NOT EXISTS social_posts (
 );
 `;
 
+// Адресная книга (@inite/audience): контакты, согласия, стоп-лист, рассылки. Таблицы пакета, как есть.
+const AUDIENCE = AUDIENCE_SCHEMA.join(";\n");
+
 /** Готовый к работе клиент; схема применяется один раз на процесс. */
 export async function db(): Promise<postgres.Sql> {
   const sql = client();
-  globalForDb.__ncSchema ??= sql.unsafe(SCHEMA).then(() => undefined).catch((e) => {
+  globalForDb.__ncSchema ??= sql.unsafe(SCHEMA + ";\n" + AUDIENCE).then(() => undefined).catch((e) => {
     globalForDb.__ncSchema = undefined;
     throw e;
   });

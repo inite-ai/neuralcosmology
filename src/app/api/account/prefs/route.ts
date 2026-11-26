@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { getSession } from "@/lib/auth";
 import { getPrefs, savePrefs } from "@/lib/account";
+import { grantChapters, stopAll } from "@/lib/audience.server";
 import { books } from "@/content/books";
 import { CURRENCY_COOKIE, isCurrency } from "@/content/pricing";
 import { sameOrigin } from "@/lib/guard";
@@ -28,7 +29,14 @@ export async function PUT(req: NextRequest) {
   const notifyBooks = Array.isArray(b.notifyBooks) ? b.notifyBooks.filter((s): s is string => typeof s === "string" && known.has(s)) : [];
   const lang = typeof b.lang === "string" && /^(en|ru|pt|es)$/.test(b.lang) ? b.lang : null;
   const prefs = { displayName: name || null, currency, notify: b.notify === true, notifyBooks, lang };
+  const before = await getPrefs(session.sub);
   await savePrefs(session.sub, session.email, prefs);
+  // The switch in the account is a consent too: on grants it (and lifts this
+  // person's own earlier stop), off is a stop for every list.
+  if (session.email && session.emailVerified && before.notify !== prefs.notify) {
+    if (prefs.notify) await grantChapters(session.email, lang ?? "en", "Account switch: write to me when new chapters come out.", "account");
+    else await stopAll(session.email, "account");
+  }
   const res = json(prefs);
   if (currency) res.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 31536000, sameSite: "lax" });
   return res;

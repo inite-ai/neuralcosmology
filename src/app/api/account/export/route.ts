@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { audience } from "@/lib/audience.server";
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { purchases } from "@/lib/account";
@@ -25,6 +26,7 @@ export async function GET() {
     reactions: await sql`SELECT comment_id FROM comment_reactions WHERE user_id = ${me}`,
     aiUsage: await sql`SELECT day, count FROM ai_usage WHERE user_id = ${me} ORDER BY day`,
     watermark: await sql`SELECT mark, email, created_at FROM watermarks WHERE user_id = ${me}`,
+    addressBook: email ? await (await audience())?.exportPerson(email).catch(() => null) ?? null : null,
     subscription: email ? await sql`SELECT email, lang, book, source, status, created_at, confirmed_at FROM subscribers WHERE lower(email) = ${email}` : [],
     inquiries: email ? await sql`SELECT kind, name, message, book, lang, created_at FROM inquiries WHERE lower(email) = ${email}` : [],
     reader: await sql`SELECT email, email_verified, name, first_seen, last_seen FROM readers WHERE user_id = ${me}`,

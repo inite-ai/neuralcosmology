@@ -1,4 +1,5 @@
 import { getSession } from "@/lib/auth";
+import { audience } from "@/lib/audience.server";
 import { db } from "@/lib/db";
 import { USER_TABLES } from "@/lib/account";
 import { sameOrigin } from "@/lib/guard";
@@ -25,6 +26,8 @@ export async function POST(req: Request) {
   if (session.email && session.emailVerified) {
     const email = session.email.toLowerCase();
     await sql`DELETE FROM subscribers WHERE lower(email) = ${email}`;
+    // The address book forgets it too; a stop, if any, stays as a keyed hash.
+    await (await audience())?.erasePerson(email);
     await sql`DELETE FROM inquiries WHERE lower(email) = ${email}`;
   }
   return json({ ok: true });

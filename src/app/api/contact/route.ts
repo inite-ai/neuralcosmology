@@ -1,4 +1,5 @@
 import { getBookBySlug } from "@/content/books";
+import { rememberContact } from "@/lib/audience.server";
 import type { NextRequest } from "next/server";
 import { db, dbConfigured } from "@/lib/db";
 import { emailHtml } from "@/lib/email-layout";
@@ -42,6 +43,7 @@ export async function POST(req: NextRequest) {
       const sql = await db();
       await sql`INSERT INTO inquiries (kind, name, email, message, book, lang) VALUES (${kind}, ${name}, ${email}, ${message}, ${book}, ${lang})`;
       stored = true;
+      void rememberContact({ email, name, lang, source: `enquiry:${kind}` });
     } catch (err) {
       console.error("[contact] not stored:", err instanceof Error ? err.message : err);
     }

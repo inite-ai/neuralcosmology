@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",
+    "@inite/audience": "file:vendor/inite-audience-0.1.0-915244f.tgz",
     "@inite/auth": "file:vendor/inite-auth-0.3.0-fa1d30a.tgz",
     "@inite/billing": "file:vendor/inite-billing-0.0.1-19c3996.tgz",
     "@inite/content": "file:vendor/inite-content-0.0.1-19c3996.tgz",
