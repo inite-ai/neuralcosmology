@@ -5,7 +5,8 @@ import { getBookBySlug } from "@/content/books";
 import { act, owner } from "@/lib/admin/guard";
 import { STATUSES } from "@/lib/admin/data";
 import { forgetGrants } from "@/lib/grants";
-import { validEmail } from "@/lib/subscribe";
+import { confirmWording, validEmail } from "@/lib/subscribe";
+import { audience, grantChapters, rememberContact, stopAll } from "@/lib/audience.server";
 
 // Действия бэкофиса. Каждое само проверяет владельца и пишет в журнал (act), прежде чем менять.
 
@@ -102,4 +103,44 @@ export async function deleteSubscriber(f: FormData): Promise<void> {
   const sql = await db();
   await sql`DELETE FROM subscribers WHERE lower(email) = ${email}`;
   done();
+}
+
+/**
+ * Brings the old lists into the address book (@inite/audience): every confirmed
+ * subscriber, and every reader with letters switched on in the account, gets the
+ * consent they gave; every unsubscribed address goes on the stop list; every
+ * enquiry becomes a contact. An address the book already has an answer for is
+ * left as it is, so a second press changes nothing.
+ */
+export async function importAudience(_: Result): Promise<Result> {
+  await owner();
+  const a = await audience();
+  if (!a) return { error: "Адресная книга выключена: нет AUDIENCE_SECRET." };
+  const sql = await db();
+  let granted = 0, stoppedN = 0, contacts = 0;
+  const known = async (email: string) => (await sql`SELECT 1 FROM audience_consents WHERE email = ${email.toLowerCase()} LIMIT 1`).length > 0;
+  for (const s of await sql`SELECT email, lang, source, status FROM subscribers`) {
+    const email = (s.email as string).toLowerCase();
+    if (s.status === "unsubscribed") {
+      if (!(await a.suppression(email))) { await stopAll(email, "import"); stoppedN++; }
+    } else if (s.status === "confirmed" && !(await known(email))) {
+      const lang = ["ru", "en", "pt", "es"].includes(s.lang as string) ? (s.lang as string) : "en";
+      await grantChapters(email, lang, confirmWording(lang), `import:subscribe:${(s.source as string | null) ?? "site"}`);
+      granted++;
+    } else {
+      await rememberContact({ email, lang: s.lang as string, source: "subscribe" });
+    }
+  }
+  for (const p of await sql`SELECT email, lang FROM reader_prefs WHERE notify AND email IS NOT NULL`) {
+    const email = (p.email as string).toLowerCase();
+    if (await known(email) || (await a.suppression(email))) continue;
+    await grantChapters(email, (p.lang as string) || "en", "Account switch: write to me when new chapters come out.", "import:account");
+    granted++;
+  }
+  for (const q of await sql`SELECT DISTINCT ON (lower(email)) email, name, lang, kind FROM inquiries ORDER BY lower(email), created_at DESC`) {
+    await rememberContact({ email: q.email as string, name: q.name as string | null, lang: q.lang as string | null, source: `enquiry:${q.kind as string}` });
+    contacts++;
+  }
+  await act("audience.import", "audience", { granted, stopped: stoppedN, contacts });
+  return done(`Согласий перенесено: ${granted}, в стоп-лист: ${stoppedN}, контактов из обращений: ${contacts}.`);
 }

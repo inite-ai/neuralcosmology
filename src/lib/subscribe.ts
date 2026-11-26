@@ -1,4 +1,5 @@
 import "server-only";
+import { grantChapters, stopAll } from "@/lib/audience.server";
 import { randomBytes } from "node:crypto";
 import { db } from "@/lib/db";
 import { emailHtml } from "@/lib/email-layout";
@@ -271,14 +272,23 @@ export async function subscribe(
   return (await sendConfirmation(email, lang, row.token as string)) ? "sent" : "saved";
 }
 
+/** The sentence a subscriber agreed to: the confirmation letter's lead, in their language. */
+export const confirmWording = (lang: string) => COPY[(lang in COPY ? lang : "en") as SupportedLocale].lead;
+
 export async function setStatus(token: string, status: "confirmed" | "unsubscribed"): Promise<{ lang: string } | null> {
   const sql = await db();
   const [row] =
     status === "confirmed"
-      ? await sql`UPDATE subscribers SET status = 'confirmed', confirmed_at = now() WHERE token = ${token} AND status <> 'unsubscribed' RETURNING lang`
+      ? await sql`UPDATE subscribers SET status = 'confirmed', confirmed_at = now() WHERE token = ${token} AND status <> 'unsubscribed' RETURNING lang, email, source`
       : await sql`UPDATE subscribers SET status = 'unsubscribed' WHERE token = ${token} RETURNING lang, email`;
   // Отписка действует на адрес целиком: и на письма, включённые в кабинете.
   if (row && status === "unsubscribed") await sql`UPDATE reader_prefs SET notify = false WHERE lower(email) = ${row.email}`;
+  // Адресная книга: подтверждение — согласие с текстом письма, отписка — общий стоп-лист.
+  if (row && status === "confirmed") {
+    const lang = (row.lang as SupportedLocale) in COPY ? (row.lang as SupportedLocale) : "en";
+    await grantChapters(row.email as string, lang, COPY[lang].lead, `subscribe:${(row.source as string | null) ?? "site"}`);
+  }
+  if (row && status === "unsubscribed") await stopAll(row.email as string, "unsubscribe-link");
   return row ? { lang: row.lang as string } : null;
 }
 

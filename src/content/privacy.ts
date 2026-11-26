@@ -1,7 +1,7 @@
 import type { SupportedLocale } from "@/lib/get-locale";
 
 // Что сайт собирает на самом деле (по коду). Меняете сбор данных — правьте и этот текст.
-export const PRIVACY_UPDATED = "2026-11-25";
+export const PRIVACY_UPDATED = "2026-11-26";
 type Doc = { title: string; updated: string; lede: string; sections: { h: string; p: string[] }[] };
 const MAIL = "info@neuralcosmology.com";
 
@@ -14,7 +14,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       { h: "Кто отвечает", p: [`Сайт ведёт Михаил Савченко. Вопросы о данных: ${MAIL}.`] },
       { h: "Что вы оставляете сами", p: [
         "Форма связи сохраняет имя, адрес почты и сообщение в базе сайта и отправляет мне письмом. Запрос прав для издательств сохраняет ещё издательство, книгу и территорию.",
-        "Подписка сохраняет адрес, язык и место, где вы его оставили. Письма о новых главах приходят только после подтверждения, отписаться можно по ссылке в каждом из них.",
+        "Подписка сохраняет адрес, язык и место, где вы его оставили. Письма о новых главах приходят только после подтверждения, отписаться можно по ссылке в каждом из них. Вместе с согласием хранится текст, на который вы согласились, и дата. Отказ, где бы он ни был сделан (ссылка в письме или кабинет), попадает в общий стоп-лист как необратимый отпечаток адреса: писем не будет и после удаления самого адреса. Туда же попадают адреса, которые не принимают почту или пожаловались на спам.",
         "Если вы вошли, сайт хранит имя и адрес почты, которые передаёт аккаунт, время первого и последнего входа, прогресс чтения, пометки, комментарии, настройки и число вопросов к ИИ. Вход идёт через INITE, оплата через INITE Billing и платёжного провайдера. Номера карт сайт не видит.",
         "Вопросы к ИИ в читалке обрабатывает Anthropic. Комментарии перед публикацией тоже проверяет ИИ.",
         "В платные главы вшита невидимая метка аккаунта: по ней можно найти, откуда утёк текст.",
@@ -39,7 +39,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       { h: "Who is responsible", p: [`Mikhail Savchenko runs this site. Questions about your data: ${MAIL}.`] },
       { h: "What you give yourself", p: [
         "The contact form stores your name, email address and message in the site’s database and emails them to me. The rights request for publishers also stores the publisher, the book and the territory.",
-        "A subscription stores the address, your language and where you left it. Emails about new chapters start only after you confirm, and each carries an unsubscribe link.",
+        "A subscription stores the address, your language and where you left it. Emails about new chapters start only after you confirm, and each carries an unsubscribe link. The wording you agreed to is kept with the date. A stop, wherever you make it (a link in a letter or the account), goes on a shared stop list as a one-way fingerprint of the address, so no letter comes even after the address itself is deleted. Addresses that bounce or report spam go there too.",
         "If you sign in, the site keeps the name and email address the account passes on, when you first and last signed in, your reading progress, notes, comments, settings and the number of AI questions. Sign-in goes through INITE, payment through INITE Billing and its payment provider. The site never sees card numbers.",
         "Questions to the AI in the reader are processed by Anthropic. Comments are also checked by AI before they appear.",
         "Paid chapters carry an invisible mark of your account, so that a leaked text can be traced.",
@@ -64,7 +64,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       { h: "Quem é responsável", p: [`Mikhail Savchenko mantém este site. Dúvidas sobre seus dados: ${MAIL}.`] },
       { h: "O que você mesmo informa", p: [
         "O formulário de contato guarda nome, e-mail e mensagem no banco de dados do site e os envia para mim por e-mail. O pedido de direitos para editoras guarda também a editora, o livro e o território.",
-        "A inscrição guarda o endereço, o idioma e onde ele foi informado. Os e-mails sobre novos capítulos só começam depois da confirmação, e cada um traz um link para cancelar.",
+        "A inscrição guarda o endereço, o idioma e onde ele foi informado. Os e-mails sobre novos capítulos só começam depois da confirmação, e cada um traz um link para cancelar. O texto com que você concordou fica guardado com a data. Um cancelamento, onde quer que seja feito (link no e-mail ou na conta), entra numa lista de bloqueio comum como impressão irreversível do endereço, então não chega e-mail nem depois que o próprio endereço é apagado. Endereços que devolvem e-mail ou denunciam spam também entram nela.",
         "Se você entra na conta, o site guarda o nome e o e-mail que a conta repassa, quando você entrou pela primeira e pela última vez, progresso de leitura, notas, comentários, configurações e o número de perguntas à IA. O login passa pela INITE, o pagamento pela INITE Billing e pelo provedor de pagamento. O site não vê números de cartão.",
         "As perguntas à IA no leitor são processadas pela Anthropic. Os comentários também são verificados por IA antes de aparecer.",
         "Os capítulos pagos levam uma marca invisível da sua conta, para rastrear um texto vazado.",
@@ -89,7 +89,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       { h: "Quién responde", p: [`Mikhail Savchenko mantiene este sitio. Preguntas sobre sus datos: ${MAIL}.`] },
       { h: "Lo que usted mismo deja", p: [
         "El formulario de contacto guarda nombre, correo y mensaje en la base de datos del sitio y me los envía por correo. La consulta de derechos para editoriales guarda además la editorial, el libro y el territorio.",
-        "La suscripción guarda la dirección, el idioma y dónde la dejó. Los correos sobre capítulos nuevos empiezan solo después de confirmar, y cada uno lleva un enlace de baja.",
+        "La suscripción guarda la dirección, el idioma y dónde la dejó. Los correos sobre capítulos nuevos empiezan solo después de confirmar, y cada uno lleva un enlace de baja. El texto que aceptó se guarda con la fecha. Una baja, se haga donde se haga (enlace en un correo o la cuenta), entra en una lista de bloqueo común como huella irreversible de la dirección, así que no llega ningún correo ni después de borrar la propia dirección. Las direcciones que rebotan o denuncian spam también entran en ella.",
         "Si inicia sesión, el sitio guarda el nombre y el correo que transmite la cuenta, cuándo entró por primera y por última vez, el progreso de lectura, las notas, los comentarios, los ajustes y el número de preguntas a la IA. El acceso pasa por INITE, el pago por INITE Billing y su proveedor de pago. El sitio no ve números de tarjeta.",
         "Las preguntas a la IA en el lector las procesa Anthropic. Los comentarios también se revisan con IA antes de publicarse.",
         "Los capítulos de pago llevan una marca invisible de su cuenta, para rastrear un texto filtrado.",

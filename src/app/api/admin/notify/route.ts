@@ -6,6 +6,7 @@ import { pickLocalized } from "@/lib/i18n";
 import { emailHtml } from "@/lib/email-layout";
 import { mailConfigured, sendMail } from "@/lib/mail";
 import { fail, json } from "@/lib/reader/http";
+import { stopped } from "@/lib/audience.server";
 import type { SupportedLocale } from "@/lib/get-locale";
 
 export const dynamic = "force-dynamic";
@@ -46,6 +47,8 @@ export async function POST(req: NextRequest) {
   // Адрес, который есть и в кабинете, и в подписке, получает одно письмо.
   const reached = new Set(subs.map((s) => (s.email as string).toLowerCase()));
   for (const s of subs) {
+    // The shared stop list: an unsubscribe anywhere, a bounce, a complaint.
+    if (await stopped(s.email as string)) continue;
     const ui = (s.lang as string) || "ru";
     const c = COPY[ui] ?? COPY.en;
     for (const b of books) {
@@ -64,6 +67,7 @@ export async function POST(req: NextRequest) {
   const list = await sql`SELECT email, lang, token FROM subscribers WHERE status = 'confirmed'`;
   for (const s of list) {
     if (reached.has((s.email as string).toLowerCase())) continue;
+    if (await stopped(s.email as string)) continue;
     const ui = (s.lang as string) || "en";
     const c = COPY[ui] ?? COPY.en;
     for (const b of books) {
