@@ -118,6 +118,16 @@ CREATE TABLE IF NOT EXISTS shares (
   id text PRIMARY KEY, book text NOT NULL, lang text NOT NULL, chapter text NOT NULL,
   anchor text NOT NULL, quote text NOT NULL, created_at timestamptz NOT NULL DEFAULT now()
 );
+-- Свой счёт сайта (lib/stats.server): без кук и IP. visitor — хеш IP и браузера с солью дня,
+-- соль удаляется назавтра. key — для событий, которые считаются один раз (покупка).
+CREATE TABLE IF NOT EXISTS site_events (
+  id bigserial PRIMARY KEY, at timestamptz NOT NULL DEFAULT now(), name text NOT NULL, visitor text NOT NULL,
+  path text, book text, chapter text, lang text, source text, country text, key text UNIQUE
+);
+CREATE INDEX IF NOT EXISTS site_events_at ON site_events (at);
+CREATE INDEX IF NOT EXISTS site_events_name_at ON site_events (name, at);
+CREATE INDEX IF NOT EXISTS site_events_book_at ON site_events (book, at);
+CREATE TABLE IF NOT EXISTS stats_salts (day text PRIMARY KEY, salt text NOT NULL);
 CREATE TABLE IF NOT EXISTS social_accounts (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   network text NOT NULL CHECK (network IN ('telegram','threads','facebook')),

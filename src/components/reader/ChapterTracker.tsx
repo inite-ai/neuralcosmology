@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { track } from "@/components/analytics/Analytics";
+import { stat } from "@/lib/stats";
 
 // События вовлечения: первое касание опыта или видео (experiment_start / video_play,
 // по разу на вставку) и дочитанная глава (последний абзац показался на экране).
@@ -29,6 +30,7 @@ export default function ChapterTracker({ book, chapter }: { book?: string; chapt
         io = new IntersectionObserver(([en]) => {
           if (!en.isIntersecting) return;
           track("chapter_complete", { book, chapter });
+          stat("chapter_complete", { b: book, c: chapter, l: window.location.pathname.split("/")[1] });
           io?.disconnect();
         });
         io.observe(last);

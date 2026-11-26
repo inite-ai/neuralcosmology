@@ -35,6 +35,7 @@ export default async function AdminLayout({ children, params }: { children: Reac
                 { href: `${base}/readers`, label: "Читатели" },
                 { href: `${base}/subscribers`, label: "Подписчики" },
                 { href: `${base}/books`, label: "Книги" },
+                { href: `${base}/stats`, label: "Статистика" },
                 { href: `${base}/quotes`, label: "Цитаты в соцсетях" },
                 { href: `${base}/log`, label: "Журнал" },
                 { href: `/${locale}/account`, label: "Кабинет читателя" },
