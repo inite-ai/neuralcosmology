@@ -20,6 +20,13 @@ export const AUTHOR_SAME_AS = [
   "https://github.com/mikefluff",
   "https://orcid.org/0009-0006-2873-9925",
 ];
+// Who he is not. The bare name belongs to several people who outrank this site
+// in search: the FC Krasnodar goalkeeping coach with the English Wikipedia
+// article, a Soviet Ukrainian playwright, a Belgorod regional deputy. Answers
+// to "who is Mikhail Savchenko" picked one of them. Kept word for word in step
+// with lib/author.ts on mikefluff.com.
+export const AUTHOR_DISAMBIGUATION =
+  "Mikhail Savchenko, independent researcher behind Neural Cosmology and author of “Nobody Writes Code Anymore” and “Nobody Owns Money”, technology and AI consultant (Mike Fluff, mikefluff.com). Not the footballer and FC Krasnodar goalkeeping coach Mikhail Pavlovich Savchenko, nor the Ukrainian playwright Mykhailo Savchenko, nor the Belgorod regional deputy.";
 export const SITE_NAME = "Neural Cosmology";
 // Локализованные названия программы: под ними её ищут и цитируют на других языках.
 export const SITE_NAME_VARIANTS = ["Neural Cosmology", "Нейронная космология", "Cosmologia Neural", "Cosmología Neural", "neuralcosmology"];
@@ -41,6 +48,7 @@ export function personNode() {
     alternateName: ["Mike Fluff", "Майк Флафф", "Михаил Савченко"],
     url: AUTHOR_URL,
     sameAs: AUTHOR_SAME_AS,
+    disambiguatingDescription: AUTHOR_DISAMBIGUATION,
     jobTitle: "Independent researcher, writer",
     knowsAbout: [
       "cosmology",
