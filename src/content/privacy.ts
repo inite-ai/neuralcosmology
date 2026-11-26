@@ -20,6 +20,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
         "В платные главы вшита невидимая метка аккаунта: по ней можно найти, откуда утёк текст.",
       ] },
       { h: "Аналитика и реклама", p: [
+        "Ещё сайт ведёт собственный счёт: какую страницу открыли, какую главу начали или дочитали, пошли ли платить и купили ли книгу, с какого сайта пришли и из какой страны. Посетитель в этом счёте - хеш IP-адреса и браузера с ключом, который меняется каждый день и потом удаляется, поэтому одного человека нельзя проследить от дня ко дню, а сам IP не сохраняется. Кук для этого нет. Записи удаляются через тринадцать месяцев.",
         "Google Analytics 4 считает страницы, главы, опыты, покупки. В ЕЭЗ, Великобритании и Швейцарии его куки выключены, туда уходят только обезличенные сигналы. Вошедшему читателю передаётся непрозрачный номер, не сам аккаунт.",
         "Вне этих стран пиксель Meta и Conversions API получают те же события, IP-адрес, сведения о браузере и, если вы оставили почту, её хеш SHA-256.",
       ] },
@@ -44,6 +45,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
         "Paid chapters carry an invisible mark of your account, so that a leaked text can be traced.",
       ] },
       { h: "Analytics and advertising", p: [
+        "The site also keeps its own count: which page was opened, which chapter was started or read to the end, a checkout started or a book bought, the referring site and the country. The visitor in that count is a hash of your IP address and browser with a key that changes every day and is then deleted, so the same person cannot be followed from one day to the next and the IP is never stored. No cookie is used for it. Records are deleted after thirteen months.",
         "Google Analytics 4 counts pages, chapters, experiments and purchases. In the EEA, the UK and Switzerland its cookies are off and it receives only cookieless signals. A signed-in reader is sent as an opaque number, never as the account.",
         "Outside those countries the Meta pixel and Conversions API receive the same events, your IP address, browser details and, if you left an email, its SHA-256 hash.",
       ] },
@@ -68,6 +70,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
         "Os capítulos pagos levam uma marca invisível da sua conta, para rastrear um texto vazado.",
       ] },
       { h: "Análise e publicidade", p: [
+        "O site também faz a própria contagem: que página foi aberta, que capítulo foi começado ou lido até o fim, se alguém foi pagar ou comprou um livro, de que site veio e de que país. O visitante nessa contagem é um hash do endereço IP e do navegador com uma chave que muda todo dia e depois é apagada, então a mesma pessoa não pode ser seguida de um dia para o outro e o IP não é guardado. Nenhum cookie é usado para isso. Os registros são apagados depois de treze meses.",
         "O Google Analytics 4 conta páginas, capítulos, experimentos e compras. No EEE, no Reino Unido e na Suíça os cookies ficam desligados e ele recebe apenas sinais sem cookies. O leitor conectado é enviado como um número opaco, nunca como a conta.",
         "Fora desses países, o pixel da Meta e a Conversions API recebem os mesmos eventos, o endereço IP, dados do navegador e, se você informou o e-mail, o hash SHA-256 dele.",
       ] },
@@ -92,6 +95,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
         "Los capítulos de pago llevan una marca invisible de su cuenta, para rastrear un texto filtrado.",
       ] },
       { h: "Analítica y publicidad", p: [
+        "El sitio también lleva su propio recuento: qué página se abrió, qué capítulo se empezó o se leyó hasta el final, si alguien fue a pagar o compró un libro, de qué sitio vino y de qué país. El visitante en ese recuento es un hash de la dirección IP y del navegador con una clave que cambia cada día y luego se borra, así que a la misma persona no se la puede seguir de un día a otro y la IP no se guarda. No se usa ninguna cookie para esto. Los registros se borran a los trece meses.",
         "Google Analytics 4 cuenta páginas, capítulos, experimentos y compras. En el EEE, el Reino Unido y Suiza sus cookies están apagadas y recibe solo señales sin cookies. El lector con sesión se envía como un número opaco, nunca como la cuenta.",
         "Fuera de esos países, el píxel de Meta y la Conversions API reciben los mismos eventos, la dirección IP, datos del navegador y, si dejó un correo, su hash SHA-256.",
       ] },

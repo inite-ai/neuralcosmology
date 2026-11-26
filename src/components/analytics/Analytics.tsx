@@ -1,4 +1,5 @@
 "use client";
+import { stat } from "@/lib/stats";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -135,8 +136,13 @@ export default function Analytics() {
     }
     first.current = false;
 
+    // Свой счёт — каждая страница, первая тоже.
+    stat("page");
     const m = url.pathname.match(/^\/([a-z]{2})\/read\/([^/]+)\/([^/]+)/);
-    if (m) track("read_chapter", { book: m[2], chapter: m[3], lang: m[1] });
+    if (m) {
+      track("read_chapter", { book: m[2], chapter: m[3], lang: m[1] });
+      stat("chapter_open", { b: m[2], c: m[3], l: m[1] });
+    }
 
     // Возврат из оплаты: /…/read/<book>/<chapter>?purchased=1
     if (url.searchParams.get("purchased") === "1") {

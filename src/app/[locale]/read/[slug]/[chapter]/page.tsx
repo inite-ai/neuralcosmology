@@ -13,6 +13,7 @@ import { allowPaidView, registerMark, watermark } from "@/lib/protect";
 import { CURRENCY_COOKIE, LIBRARY_ITEM, PRICES, currencyFromAcceptLanguage, isCurrency, kindOf } from "@/content/pricing";
 import { cookies, headers } from "next/headers";
 import { purchaseTxId, recordPurchase } from "@/lib/ga-server";
+import { recordStat } from "@/lib/stats.server";
 import { capiUser } from "@/lib/meta-capi";
 import ReaderChrome from "@/components/reader/ReaderChrome";
 import ReaderInteractive from "@/components/reader/ReaderInteractive";
@@ -121,6 +122,8 @@ export default async function ChapterPage({
     const url = `https://neuralcosmology.com/${raw}/read/${slug}/${id}`;
     const meta = { ...capiUser(h, (n) => jar.get(n)?.value), email: session.email, url };
     await recordPurchase(session.sub, boughtItem, PRICES[kindOf(boughtItem)][cur], cur, jar.get("_ga")?.value, meta);
+    // Свой счёт: та же покупка один раз, ключ — тот же txId.
+    await recordStat(h, { name: "purchase", book: boughtItem, lang: raw, key: txId });
   }
   const source = gate === "open" ? getChapterHtml(slug, lang, chapter.id) : null;
   if (gate === "open" && source === null) notFound();

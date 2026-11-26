@@ -1,4 +1,5 @@
-import { NextResponse, type NextRequest } from "next/server";
+import { after, NextResponse, type NextRequest } from "next/server";
+import { recordStat } from "@/lib/stats.server";
 import { getSession, safeReturnTo, siteUrl } from "@/lib/auth";
 import { getBookBySlug } from "@/content/books";
 import { CURRENCY_COOKIE, LIBRARY_ITEM, currencyFromAcceptLanguage, isCurrency, priceCodeFor, type Currency } from "@/content/pricing";
@@ -75,6 +76,7 @@ export async function GET(req: NextRequest) {
     if (!res.ok) throw new Error(`billing ${res.status}: ${await res.text()}`);
     const { checkoutUrl } = (await res.json()) as { checkoutUrl?: string };
     if (!checkoutUrl) throw new Error("no checkoutUrl in billing response");
+    after(() => recordStat(req.headers, { name: "checkout", book: item, lang: back.pathname.split("/")[1] || null, path: back.pathname }));
     return NextResponse.redirect(checkoutUrl);
   } catch (err) {
     console.error("[checkout] failed:", err instanceof Error ? err.message : err);
