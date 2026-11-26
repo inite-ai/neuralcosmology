@@ -207,7 +207,7 @@ export default async function BookDetailPage({
                 </a>
               )}
               {[
-                { url: "mailto:info@neuralcosmology.com?subject=Rights%20inquiry", label: dict.books.rightsInquiry },
+                { url: `/${locale}/rights?book=${book.slug}#form`, label: dict.books.rightsInquiry },
                 ...(book.sampleChapters ?? []),
                 ...(book.buyLinks ?? []),
               ].map((l) => (
