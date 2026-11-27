@@ -36,10 +36,10 @@
       "es": "Moho mucilaginoso Physarum: simulación de su red"
     },
     "description": {
-      "ru": "Модель Джеффа Джонса: девять тысяч частиц идут по следу и сами прокладывают сеть. Тем же алгоритмом восстанавливали нити космической паутины.",
-      "en": "Jeff Jones's slime mould model: nine thousand particles follow the trail and lay out a network. The same algorithm recovered filaments of the cosmic web.",
-      "pt": "O modelo de bolor limoso de Jeff Jones: nove mil partículas seguem o rastro e traçam uma rede. O mesmo algoritmo reconstituiu filamentos da teia cósmica.",
-      "es": "El modelo de moho mucilaginoso de Jeff Jones: nueve mil partículas siguen el rastro y trazan una red. El mismo algoritmo reconstruyó filamentos de la red cósmica."
+      "ru": "Модель Джеффа Джонса: девять тысяч частиц идут по следу и сами прокладывают сеть. Алгоритм по её мотивам восстановил нити космической паутины.",
+      "en": "Jeff Jones's slime mould model: nine thousand particles follow the trail and lay out a network. An algorithm modelled on it recovered filaments of the cosmic web.",
+      "pt": "O modelo de bolor limoso de Jeff Jones: nove mil partículas seguem o rastro e traçam uma rede. Um algoritmo inspirado nele reconstituiu filamentos da teia cósmica.",
+      "es": "El modelo de moho mucilaginoso de Jeff Jones: nueve mil partículas siguen el rastro y trazan una red. Un algoritmo inspirado en él reconstruyó filamentos de la red cósmica."
     }
   },
   "cc-ch05-planaria": {

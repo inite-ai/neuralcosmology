@@ -96,7 +96,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       ] },
       { h: "Analítica y publicidad", p: [
         "El sitio también lleva su propio recuento: qué página se abrió, qué capítulo se empezó o se leyó hasta el final, si alguien fue a pagar o compró un libro, de qué sitio vino y de qué país. El visitante en ese recuento es un hash de la dirección IP y del navegador con una clave que cambia cada día y luego se borra, así que a la misma persona no se la puede seguir de un día a otro y la IP no se guarda. No se usa ninguna cookie para esto. Los registros se borran a los trece meses.",
-        "Google Analytics 4 cuenta páginas, capítulos, experimentos y compras. En el EEE, el Reino Unido y Suiza sus cookies están desactivadas y solo recibe datos anónimos sin cookies. Del lector con sesión recibe un número anónimo, nunca la cuenta.",
+        "Google Analytics 4 cuenta páginas, capítulos, experimentos y compras. En el EEE, el Reino Unido y Suiza sus cookies están desactivadas y solo recibe señales sin cookies. Del lector con sesión recibe un identificador opaco, nunca la cuenta.",
         "Fuera de esos países, el píxel de Meta y la Conversions API reciben los mismos eventos, la dirección IP, datos del navegador y, si dejaste un correo, su hash SHA-256.",
       ] },
       { h: "Quién más lo ve", p: ["Mailgun entrega los correos, Cloudflare lleva el tráfico, y la base de datos y el sitio están en un servidor alquilado. Nada se vende."] },

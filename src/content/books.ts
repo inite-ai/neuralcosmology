@@ -13,7 +13,7 @@ export const books: Book[] = [
       en:
         "The network of galaxies and the network of neurons in the brain turned out to have similar connection statistics. The book works through this and other findings from peer-reviewed papers and puts forward a hypothesis together with the results that would refute it.",
       ru:
-        "Сеть галактик и сеть нейронов мозга оказались похожи по статистике связей. Книга разбирает эту и другие находки по рецензируемым статьям и предлагает гипотезу вместе с результатами, которые её опровергнут.",
+        "Сеть галактик и сеть нейронов мозга оказались похожи по статистике связей. Книга разбирает эту и другие находки по рецензируемым статьям и предлагает гипотезу вместе с результатами, которые бы её опровергли.",
       pt:
         "A rede de galáxias e a rede de neurônios do cérebro mostraram estatísticas de conexão parecidas. O livro examina essa e outras descobertas a partir de artigos revisados por pares e propõe uma hipótese junto com os resultados que a refutariam.",
       es:
@@ -23,7 +23,7 @@ export const books: Book[] = [
       en:
         "The first non-fiction book of the series. The author, an AI engineer, brings together work on the large-scale structure of the universe, cellular bioelectricity (Michael Levin), the universe as a learning network (Vitaly Vanchurin), integrated information theory (Giulio Tononi) and the interface theory of perception (Donald Hoffman). Every claim is tied to a published paper, and his own hypothesis, Pointer Architecture, comes with a list of results that would prove it wrong. Between the chapters run autobiographical interludes: a cadet school, a Masonic lodge, the BOOM and AfrikaBurn festivals.",
       ru:
-        "Первая книга нон-фикшн-линии. Автор, инженер ИИ, сводит вместе работы о крупномасштабной структуре Вселенной, биоэлектричестве клеток (Майкл Левин), Вселенной как обучающейся сети (Виталий Ванчурин), теории интегрированной информации (Джулио Тонони) и интерфейсной теории восприятия (Дональд Хоффман). Каждое утверждение опирается на опубликованную статью, а к собственной гипотезе автора, Pointer Architecture, приложен список результатов, которые её опровергнут. Главы перемежаются автобиографическими интерлюдиями: кадетский корпус, масонская ложа, фестивали BOOM и AfrikaBurn.",
+        "Первая книга нон-фикшн-линии. Автор, инженер ИИ, сводит вместе работы о крупномасштабной структуре Вселенной, биоэлектричестве клеток (Майкл Левин), Вселенной как обучающейся сети (Виталий Ванчурин), теории интегрированной информации (Джулио Тонони) и интерфейсной теории восприятия (Дональд Хоффман). Каждое утверждение опирается на опубликованную статью, а к собственной гипотезе автора, Pointer Architecture, приложен список результатов, которые бы её опровергли. Главы перемежаются автобиографическими интерлюдиями: кадетский корпус, масонская ложа, фестивали BOOM и AfrikaBurn.",
       pt:
         "O primeiro livro de não ficção da série. O autor, engenheiro de IA, reúne trabalhos sobre a estrutura em grande escala do universo, a bioeletricidade das células (Michael Levin), o universo como rede que aprende (Vitaly Vanchurin), a teoria da informação integrada (Giulio Tononi) e a teoria da interface da percepção (Donald Hoffman). Cada afirmação se apoia em um artigo publicado, e a hipótese do próprio autor, a Pointer Architecture, vem com a lista de resultados que a derrubariam. Entre os capítulos há interlúdios autobiográficos: uma escola de cadetes, uma loja maçônica, os festivais BOOM e AfrikaBurn.",
       es:

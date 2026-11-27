@@ -23,17 +23,17 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "What are the main results?",
         answer:
-          "Four complexity theorems within explicit scope (pointer equivalence is graph-isomorphism-hard, weighted path observables are #P-hard, a per-step commit-cost bound for M observers, Shannon-rate archive compression); three proved correspondences with CRDTs, Petri nets and the actor model; 40 emergence demonstrations with 646 automated assertions and no failures; a structural correspondence with the algebraic-observer programme in quantum gravity; and a substrate-language reproduction of standard holographic dark energy within a factor of about 0.73 of the observed value.",
+          "Four complexity theorems within explicit scope (pointer equivalence is graph-isomorphism-hard, weighted path observables are #P-hard, a per-step commit-cost bound for M observers, Shannon-rate archive compression); three proved correspondences with CRDTs, Petri nets and the actor model; 40 emergence demonstrations with 646 automated assertions and no failures; a structural correspondence with the algebraic-observer programme in quantum gravity; and a substrate-language reproduction of standard holographic dark energy that comes out at about 0.73 of the observed value.",
       },
       {
         question: "What does it say about consciousness?",
         answer:
-          "PA defines a substrate-side measure, Φ_PA, which is non-zero only for an observer that reads its own state back (self-reference) with non-trivial scope and lifespan. It makes five predictions: a single transformer forward pass has Φ_PA of zero, while KV-cache reuse gives a value above zero; the waking thalamocortical loop is above zero and propofol drives it to zero; an integration measure halves after split-brain surgery; a living ant colony is above zero and a dead one is at zero. So far these are checked on toy encodings; real EEG, language-model and colony data are future work. The paper does not claim to have solved consciousness.",
+          "PA defines a substrate-side measure, Φ_PA, which is non-zero only for an observer that reads its own state back (self-reference) with non-trivial scope and lifespan. It makes five predictions: (P1) a single transformer forward pass has Φ_PA of zero; (P2) KV-cache reuse gives a value above zero; (P3) the waking thalamocortical loop is above zero and propofol drives it to zero; (P4) an integration measure halves after split-brain surgery; (P5) a living ant colony is above zero and a dead one is at zero. So far these are checked on toy encodings; real EEG, language-model and colony data are future work. The paper does not claim to have solved the problem of consciousness.",
       },
       {
         question: "What would falsify it?",
         answer:
-          "The falsifiers are stated in the manuscript: F0, any substrate pilot failing its assertions on the released Sixth code; F1, area scaling breaking on non-cubic substrate topologies; F3, other transformer families behaving differently from Pythia under the same observable; F5, Φ_PA failing to discriminate any of the five predictions once a reasonable encoding is built. If F5 fires, the framework falls back to the operational substrate alone.",
+          "The falsifiers are stated in the manuscript: F0, any substrate pilot failing its assertions on the released Sixth code; F1, area scaling breaking on non-cubic substrate topologies; F3, other transformer families behaving differently from Pythia under the same observable; F5, Φ_PA failing on even one of the five predictions once a reasonable encoding is built. If F5 fires, the framework falls back to the operational substrate alone.",
       },
       {
         question: "Is the code available?",
@@ -48,7 +48,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "What does 'neural cosmology' mean?",
         answer:
-          "It is the working name of a research programme that treats reality as a computational substrate and tests that framing against concrete questions in physics, neuroscience, biology and information theory. The programme is scientific in the strict sense: every claim comes with a falsifier, stated before any external test.",
+          "It is the working name of a research programme that treats reality as a computational substrate and tests that framing against concrete questions in physics, neuroscience, biology and information theory. Every empirical claim in it comes with a falsifier, stated before any external test, and philosophical conjectures are labelled as conjectures.",
       },
     ],
     about: [
@@ -79,17 +79,17 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Что такое Pointer Architecture?",
         answer:
-          "Pointer Architecture (PA) - формальный вычислительный субстрат: граф указателей с правилами переписывания, протоколом коммитов, дописываемым архивом и наблюдателями, S = (G, R, C, A, π). Версия 9.0 даёт ему работающую реализацию на небольшом Forth-подобном языке Sixth и использует его как минимальную исполняемую модель для проверки гипотез о различении, самоотнесении, автопоэзисе и наблюдении.",
+          "Pointer Architecture (PA) - формальный вычислительный субстрат: граф указателей с правилами переписывания, протоколом коммитов, дописываемым архивом и наблюдателями, S = (G, R, C, A, π). В версии 9.0 он реализован на небольшом Forth-подобном языке Sixth и служит минимальной исполняемой моделью для проверки гипотез о различении, самоотнесении, автопоэзисе и наблюдении.",
       },
       {
         question: "Какие главные результаты?",
         answer:
-          "Четыре теоремы о сложности в явных границах (эквивалентность указателей GI-трудна, взвешенные путевые наблюдаемые #P-трудны, оценка стоимости коммита на шаг для M наблюдателей, сжатие архива до шенноновского предела); три доказанных соответствия с CRDT, сетями Петри и акторной моделью; 40 демонстраций эмерджентности, 646 автоматических проверок без единого сбоя; структурное соответствие с программой алгебраических наблюдателей в квантовой гравитации; воспроизведение стандартной голографической тёмной энергии на языке субстрата с точностью до множителя около 0,73 от наблюдаемого значения.",
+          "Четыре теоремы о сложности с явно оговорённой областью применимости (эквивалентность указателей GI-трудна, взвешенные путевые наблюдаемые #P-трудны, оценка стоимости коммита на шаг для M наблюдателей, сжатие архива до шенноновского предела); три доказанных соответствия с CRDT, сетями Петри и акторной моделью; 40 демонстраций эмерджентности, 646 автоматических проверок без единого сбоя; структурное соответствие с программой алгебраических наблюдателей в квантовой гравитации; стандартная голографическая тёмная энергия, воспроизведённая на языке субстрата: около 0,73 от наблюдаемого значения.",
       },
       {
         question: "Что PA говорит о сознании?",
         answer:
-          "PA вводит меру на стороне субстрата, Φ_PA: она больше нуля только у наблюдателя, который читает собственное состояние (самоотнесение), при ненулевом охвате и времени жизни. Отсюда пять предсказаний: при одном прямом проходе трансформера Φ_PA равна нулю, а при переиспользовании KV-кэша больше нуля; у бодрствующей таламокортикальной петли Φ_PA больше нуля, а пропофол сводит её к нулю; мера интеграции вдвое падает после рассечения мозолистого тела; у живой муравьиной колонии мера больше нуля, у мёртвой равна нулю. Пока это проверено на игрушечных кодировках, а реальные данные ЭЭГ, языковых моделей и колоний оставлены для следующей работы. Решённой теорией сознания статья себя не называет.",
+          "PA вводит меру на стороне субстрата, Φ_PA: она больше нуля только у наблюдателя, который читает собственное состояние (самоотнесение), при ненулевом охвате и времени жизни. Отсюда пять предсказаний: (P1) при одном прямом проходе трансформера Φ_PA равна нулю; (P2) при переиспользовании KV-кэша она больше нуля; (P3) у бодрствующей таламокортикальной петли Φ_PA больше нуля, а пропофол сводит её к нулю; (P4) мера интеграции вдвое падает после рассечения мозолистого тела; (P5) у живой муравьиной колонии мера больше нуля, у мёртвой равна нулю. Пока это проверено на игрушечных кодировках, а реальные данные ЭЭГ, языковых моделей и колоний оставлены для следующей работы. Статья не утверждает, что решила проблему сознания.",
       },
       {
         question: "Что опровергло бы модель?",
@@ -99,7 +99,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Код открыт?",
         answer:
-          "Да. Операционный субстрат - это язык Sixth, код лежит на github.com/neuralcosmology/sixth. `make verify` прогоняет всю регрессию и заканчивается строкой «artifact status: reproducible». Файл CLAIMS.md разделяет то, что доказано тестами, то, что показано построением, и философские гипотезы.",
+          "Да. Операционный субстрат - это язык Sixth, код лежит на github.com/neuralcosmology/sixth. `make verify` запускает все регрессионные тесты и заканчивается строкой «artifact status: reproducible». Файл CLAIMS.md разделяет то, что доказано тестами, то, что показано построением, и философские гипотезы.",
       },
       {
         question: "Как это связано с книгами?",
@@ -109,7 +109,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Что означает «нейронная космология»?",
         answer:
-          "Это рабочее название исследовательской программы, которая относится к реальности как к вычислительному субстрату и проверяет такой взгляд на конкретных вопросах физики, нейронауки, биологии и теории информации. Программа научная в строгом смысле: у каждого утверждения есть критерий опровержения, и он записан до любой внешней проверки.",
+          "Это рабочее название исследовательской программы, которая относится к реальности как к вычислительному субстрату и проверяет такой взгляд на конкретных вопросах физики, нейронауки, биологии и теории информации. У каждого её эмпирического утверждения есть критерий опровержения, записанный до любой внешней проверки, а философские гипотезы прямо помечены как гипотезы.",
       },
     ],
     about: [
@@ -126,7 +126,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Работа прошла рецензирование?",
         answer:
-          "Препринт в версии 9.0; на arXiv или в рецензируемый журнал ещё не отправлен. Критерии опровержения записаны прямо в рукописи, а CLAIMS.md в репозитории кода отделяет проверенное тестами от гипотез. Рецензентов автор ждёт: пишите на info@neuralcosmology.com.",
+          "Препринт в версии 9.0; на arXiv или в рецензируемый журнал ещё не отправлен. Критерии опровержения записаны прямо в рукописи, а CLAIMS.md в репозитории кода отделяет проверенное тестами от гипотез. Автор будет рад рецензиям, адрес для рецензентов: info@neuralcosmology.com.",
       },
       {
         question: "Как цитировать эту работу?",
@@ -140,17 +140,17 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O que é a Pointer Architecture?",
         answer:
-          "A Pointer Architecture (PA) é um substrato computacional formal: um grafo de ponteiros com regras de reescrita, um protocolo de commits, um arquivo só de acréscimo e observadores, S = (G, R, C, A, π). A versão 9.0 lhe dá uma implementação funcional numa pequena linguagem ao estilo Forth, Sixth, e a usa como modelo executável mínimo para testar hipóteses sobre diferença, autorreferência, autopoiese e observação.",
+          "A Pointer Architecture (PA) é um substrato computacional formal: um grafo de ponteiros com regras de reescrita, um protocolo de commits, um arquivo só de acréscimo e observadores, S = (G, R, C, A, π). A versão 9.0 o implementa numa pequena linguagem ao estilo Forth, Sixth, e o usa como modelo executável mínimo para testar hipóteses sobre diferença, autorreferência, autopoiese e observação.",
       },
       {
         question: "Quais são os principais resultados?",
         answer:
-          "Quatro teoremas de complexidade dentro de um escopo explícito (equivalência de ponteiros é GI-difícil, observáveis de caminhos ponderados são #P-difíceis, um limite de custo de commit por passo para M observadores, compressão do arquivo à taxa de Shannon); três correspondências provadas com CRDTs, redes de Petri e o modelo de atores; 40 demonstrações de emergência com 646 asserções automáticas e nenhuma falha; uma correspondência estrutural com o programa de observadores algébricos em gravidade quântica; e uma reprodução, na linguagem do substrato, da energia escura holográfica padrão, dentro de um fator de cerca de 0,73 do valor observado.",
+          "Quatro teoremas de complexidade dentro de um escopo explícito (equivalência de ponteiros é GI-difícil, observáveis de caminhos ponderados são #P-difíceis, um limite de custo de commit por passo para M observadores, compressão do arquivo à taxa de Shannon); três correspondências provadas com CRDTs, redes de Petri e o modelo de atores; 40 demonstrações de emergência com 646 asserções automáticas e nenhuma falha; uma correspondência estrutural com o programa de observadores algébricos em gravidade quântica; e uma reprodução, na linguagem do substrato, da energia escura holográfica padrão, que chega a cerca de 0,73 do valor observado.",
       },
       {
         question: "O que ela diz sobre a consciência?",
         answer:
-          "A PA define uma medida do lado do substrato, Φ_PA, que só é diferente de zero para um observador que lê o próprio estado (autorreferência), com escopo e tempo de vida não triviais. Daí cinco previsões: uma única passagem de um transformer tem Φ_PA igual a zero, enquanto o reuso do cache KV dá um valor acima de zero; o laço talamocortical em vigília fica acima de zero e o propofol o leva a zero; uma medida de integração cai pela metade após a calosotomia; uma colônia de formigas viva fica acima de zero e uma morta, em zero. Por ora, isso foi verificado em codificações de brinquedo; dados reais de EEG, modelos de linguagem e colônias ficam para trabalhos futuros. O artigo não afirma ter resolvido a consciência.",
+          "A PA define uma medida do lado do substrato, Φ_PA, que só é diferente de zero para um observador que lê o próprio estado (autorreferência), com escopo e tempo de vida não triviais. Daí cinco previsões: (P1) uma única passagem de um transformer tem Φ_PA igual a zero; (P2) o reuso do cache KV dá um valor acima de zero; (P3) o laço talamocortical em vigília fica acima de zero e o propofol o leva a zero; (P4) uma medida de integração cai pela metade após a calosotomia; (P5) uma colônia de formigas viva fica acima de zero e uma morta, em zero. Por ora, isso foi verificado em codificações de brinquedo; dados reais de EEG, modelos de linguagem e colônias ficam para trabalhos futuros. O artigo não afirma ter resolvido o problema da consciência.",
       },
       {
         question: "O que refutaria o modelo?",
@@ -160,7 +160,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O código está disponível?",
         answer:
-          "Sim. O substrato operacional é a linguagem Sixth, em github.com/neuralcosmology/sixth. `make verify` roda toda a regressão e termina com “artifact status: reproducible”. Um arquivo CLAIMS.md separa o que é provado por testes, o que é demonstrado por construção e o que é conjectura filosófica.",
+          "Sim. O substrato operacional é a linguagem Sixth, em github.com/neuralcosmology/sixth. `make verify` roda todos os testes de regressão e termina com “artifact status: reproducible”. Um arquivo CLAIMS.md separa o que é provado por testes, o que é demonstrado por construção e o que é conjectura filosófica.",
       },
       {
         question: "Como isso se relaciona com os livros?",
@@ -170,7 +170,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O que significa 'cosmologia neural'?",
         answer:
-          "É o nome de trabalho de um programa de pesquisa que trata a realidade como um substrato computacional e testa essa leitura contra questões concretas em física, neurociência, biologia e teoria da informação. O programa é científico no sentido estrito: cada afirmação vem com um critério de refutação, declarado antes de qualquer teste externo.",
+          "É o nome de trabalho de um programa de pesquisa que trata a realidade como um substrato computacional e testa essa leitura contra questões concretas em física, neurociência, biologia e teoria da informação. Cada afirmação empírica dele vem com um critério de refutação, declarado antes de qualquer teste externo, e as conjecturas filosóficas são marcadas como conjecturas.",
       },
     ],
     about: [
@@ -201,17 +201,17 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Qué es la Pointer Architecture?",
         answer:
-          "La Pointer Architecture (PA) es un sustrato computacional formal: un grafo de punteros con reglas de reescritura, un protocolo de commits, un archivo de solo anexado y observadores, S = (G, R, C, A, π). La versión 9.0 le da una implementación funcional en un pequeño lenguaje al estilo Forth, Sixth, y lo usa como modelo ejecutable mínimo para poner a prueba hipótesis sobre la diferencia, la autorreferencia, la autopoiesis y la observación.",
+          "La Pointer Architecture (PA) es un sustrato computacional formal: un grafo de punteros con reglas de reescritura, un protocolo de commits, un archivo de solo anexado y observadores, S = (G, R, C, A, π). La versión 9.0 lo implementa en un pequeño lenguaje al estilo Forth, Sixth, y lo usa como modelo ejecutable mínimo para poner a prueba hipótesis sobre la diferencia, la autorreferencia, la autopoiesis y la observación.",
       },
       {
         question: "¿Cuáles son los resultados principales?",
         answer:
-          "Cuatro teoremas de complejidad dentro de un alcance explícito (la equivalencia de punteros es GI-difícil, los observables de caminos ponderados son #P-difíciles, una cota del coste de commit por paso para M observadores, compresión del archivo a la tasa de Shannon); tres correspondencias demostradas con CRDT, redes de Petri y el modelo de actores; 40 demostraciones de emergencia con 646 aserciones automáticas y ningún fallo; una correspondencia estructural con el programa de observadores algebraicos en gravedad cuántica; y una reproducción, en el lenguaje del sustrato, de la energía oscura holográfica estándar, dentro de un factor de alrededor de 0,73 del valor observado.",
+          "Cuatro teoremas de complejidad dentro de un alcance explícito (la equivalencia de punteros es GI-difícil, los observables de caminos ponderados son #P-difíciles, una cota del coste de commit por paso para M observadores, compresión del archivo a la tasa de Shannon); tres correspondencias demostradas con CRDT, redes de Petri y el modelo de actores; 40 demostraciones de emergencia con 646 aserciones automáticas y ningún fallo; una correspondencia estructural con el programa de observadores algebraicos en gravedad cuántica; y una reproducción, en el lenguaje del sustrato, de la energía oscura holográfica estándar, que da alrededor de 0,73 del valor observado.",
       },
       {
         question: "¿Qué dice sobre la consciencia?",
         answer:
-          "La PA define una medida del lado del sustrato, Φ_PA, que solo es distinta de cero para un observador que lee su propio estado (autorreferencia), con alcance y vida no triviales. De ahí cinco predicciones: una sola pasada de un transformer da un Φ_PA igual a cero, mientras que reutilizar la caché KV da un valor por encima de cero; el bucle talamocortical en vigilia está por encima de cero y el propofol lo lleva a cero; una medida de integración cae a la mitad tras la callosotomía; una colonia de hormigas viva está por encima de cero y una muerta, en cero. Por ahora se ha comprobado en codificaciones de juguete; los datos reales de EEG, modelos de lenguaje y colonias son trabajo futuro. El artículo no afirma haber resuelto la consciencia.",
+          "La PA define una medida del lado del sustrato, Φ_PA, que solo es distinta de cero para un observador que lee su propio estado (autorreferencia), con alcance y vida no triviales. De ahí cinco predicciones: (P1) una sola pasada de un transformer da un Φ_PA igual a cero; (P2) reutilizar la caché KV da un valor por encima de cero; (P3) el bucle talamocortical en vigilia está por encima de cero y el propofol lo lleva a cero; (P4) una medida de integración cae a la mitad tras la callosotomía; (P5) una colonia de hormigas viva está por encima de cero y una muerta, en cero. Por ahora se ha comprobado en codificaciones de juguete; los datos reales de EEG, modelos de lenguaje y colonias son trabajo futuro. El artículo no afirma haber resuelto el problema de la consciencia.",
       },
       {
         question: "¿Qué refutaría el modelo?",
@@ -221,7 +221,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Está disponible el código?",
         answer:
-          "Sí. El sustrato operativo es el lenguaje Sixth, en github.com/neuralcosmology/sixth. `make verify` ejecuta toda la regresión y termina con “artifact status: reproducible”. Un archivo CLAIMS.md separa lo demostrado por tests, lo mostrado por construcción y lo que es conjetura filosófica.",
+          "Sí. El sustrato operativo es el lenguaje Sixth, en github.com/neuralcosmology/sixth. `make verify` ejecuta todos los tests de regresión y termina con “artifact status: reproducible”. Un archivo CLAIMS.md separa lo demostrado por tests, lo mostrado por construcción y lo que es conjetura filosófica.",
       },
       {
         question: "¿Cómo se relaciona con los libros?",
@@ -231,7 +231,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Qué significa 'cosmología neural'?",
         answer:
-          "Es el nombre de trabajo de un programa de investigación que trata la realidad como un sustrato computacional y pone a prueba esa lectura frente a preguntas concretas de física, neurociencia, biología y teoría de la información. El programa es científico en sentido estricto: cada afirmación viene con un falsador, formulado antes de cualquier prueba externa.",
+          "Es el nombre de trabajo de un programa de investigación que trata la realidad como un sustrato computacional y pone a prueba esa lectura frente a preguntas concretas de física, neurociencia, biología y teoría de la información. Cada afirmación empírica suya viene con un falsador, formulado antes de cualquier prueba externa, y las conjeturas filosóficas se marcan como conjeturas.",
       },
     ],
     about: [

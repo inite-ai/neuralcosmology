@@ -989,7 +989,7 @@ const pt: Dict = {
     lead:
       "Ensaios curtos: em cada um, sigo uma ideia da física até o fim.",
     placeholderBody:
-      "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
+      "O primeiro ensaio — Uma função de perda para o universo — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
     placeholderLink1: "preprint Pointer Architecture",
     placeholderLink2: "volume de não ficção",
   },
@@ -1311,7 +1311,7 @@ const es: Dict = {
     lead:
       "Ensayos breves: en cada uno sigo una idea de la física hasta el final.",
     placeholderBody:
-      "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
+      "El primer ensayo — Una función de pérdida para el universo — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
     placeholderLink1: "preprint Pointer Architecture",
     placeholderLink2: "volumen de no ficción",
   },

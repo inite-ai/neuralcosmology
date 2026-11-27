@@ -25,7 +25,7 @@ A: They are sister sites operated by the same author. neuralcosmology.com is the
 [About the Programme]
 
 Q: What is Neural Cosmology?
-A: Neural Cosmology is a research programme that treats reality as a computational substrate and tests that framing against concrete questions in physics, neuroscience, biology, and information theory. The programme is scientific in the strict sense: every claim ships with a falsifier stated before any external test.
+A: Neural Cosmology is a research programme that treats reality as a computational substrate and tests that framing against concrete questions in physics, neuroscience, biology, and information theory. Every empirical claim in it comes with a falsifier stated before any external test, and philosophical conjectures are labelled as conjectures.
 URL: ${BASE}/en
 
 Q: What is Pointer Architecture?
