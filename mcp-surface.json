@@ -1,6 +1,6 @@
 {
-  "version": "1.4.0",
-  "sha256": "ecc9dbb86751ee95f895be16acdd6b8bf8f1c2f04246a71c86e5c9395b768550",
+  "version": "1.5.0",
+  "sha256": "8ff341d9a67155c5e375f09e57399b03318a6831573cf95b3ee5f516ce99c4ba",
   "tools": [
     "search",
     "read",
