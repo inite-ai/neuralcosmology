@@ -11,7 +11,7 @@
       "alt": {
         "ru": "Большая лесная поляна сентябрьским утром: около сорока человек сидят рядами на разномастных стульях под открытым небом, перед ними у невидимой черты стоит и говорит один человек; над травой поднимается туман.",
         "en": "A large forest clearing on a September morning: about forty people on rows of mismatched chairs in the open air, one man standing before them at an invisible line, speaking; mist lifting off the grass.",
-        "pt": "Uma grande clareira numa manhã de setembro: cerca de quarenta pessoas em filas de cadeiras desemparelhadas ao ar livre, um homem de pé diante delas numa linha invisível a falar; névoa a levantar da relva.",
+        "pt": "Uma grande clareira numa manhã de setembro: cerca de quarenta pessoas em fileiras de cadeiras desencontradas ao ar livre, um homem de pé diante delas, numa linha invisível, falando; névoa subindo da grama.",
         "es": "Un gran claro del bosque una mañana de septiembre: unas cuarenta personas en filas de sillas dispares al aire libre, un hombre de pie ante ellas en una línea invisible hablando; niebla levantándose de la hierba."
       },
       "width": 1536,
@@ -29,9 +29,9 @@
       "status": "draft",
       "prompt": "A wide forest clearing seen from far behind rows of seated people: at the front, small in the distance, a single figure stands alone facing them, and for a moment the whole clearing is utterly still, the morning light gathered more brightly around that one distant figure, the birches motionless.",
       "alt": {
-        "ru": "Лесная поляна издалека из-за рядов сидящих людей: впереди, маленькая на расстоянии, одна стоит фигура, вся поляна замерла, утренний свет вокруг неё чуть ярче.",
-        "en": "A forest clearing seen from far behind rows of seated people: at the front, small in the distance, a single figure stands alone, the whole clearing still, the morning light a little brighter around it.",
-        "pt": "Uma clareira vista de longe por trás de filas de pessoas sentadas: à frente, pequena na distância, uma figura sozinha de pé, toda a clareira imóvel, a luz da manhã mais clara à volta dela.",
+        "ru": "Лесная поляна издалека из-за рядов сидящих людей: впереди, вдалеке, стоит одна маленькая фигура, вся поляна замерла, утренний свет вокруг неё чуть ярче.",
+        "en": "A forest clearing seen from far behind rows of seated people: at the front, small in the distance, a lone figure stands, the whole clearing still, the morning light a little brighter around it.",
+        "pt": "Uma clareira vista de longe por trás de fileiras de pessoas sentadas: à frente, pequena na distância, uma figura sozinha de pé, toda a clareira imóvel, a luz da manhã mais clara em volta dela.",
         "es": "Un claro del bosque visto de lejos tras filas de gente sentada: al frente, pequeña en la distancia, una figura sola de pie, todo el claro inmóvil, la luz de la mañana algo más brillante a su alrededor."
       },
       "width": 1536,

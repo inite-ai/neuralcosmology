@@ -12,7 +12,7 @@ const T: Dict<{ hint: string; play: string; pause: string; scatter: string; clea
   ru: { hint: "Нажмите на поле, чтобы положить еду: сеть перестроится к новой точке.", play: "Пуск", pause: "Пауза", scatter: "Рассыпать еду", clear: "Убрать еду", agents: "частиц", food: "источников" },
   en: { hint: "Tap the field to drop food: the network will reroute to the new point.", play: "Play", pause: "Pause", scatter: "Scatter food", clear: "Clear food", agents: "particles", food: "sources" },
   pt: { hint: "Toque no campo para pôr comida: a rede se refaz até o novo ponto.", play: "Iniciar", pause: "Pausar", scatter: "Espalhar comida", clear: "Tirar comida", agents: "partículas", food: "fontes" },
-  es: { hint: "Toque el campo para dejar comida: la red se rehace hacia el nuevo punto.", play: "Iniciar", pause: "Pausa", scatter: "Esparcir comida", clear: "Quitar comida", agents: "partículas", food: "fuentes" },
+  es: { hint: "Toca el campo para dejar comida: la red se reorganiza hacia el nuevo punto.", play: "Iniciar", pause: "Pausa", scatter: "Esparcir comida", clear: "Quitar comida", agents: "partículas", food: "fuentes" },
 };
 
 const W = 320;

@@ -14,10 +14,10 @@
         "es": "Catorce veces seguidas"
       },
       "caption": {
-        "ru": "Идеальный кубит, без шума и дрейфа. Четырнадцать одинаковых исходов подряд при θ = 90° — один шанс из 16 384, те самые «один к шестнадцати тысячам».",
-        "en": "An ideal qubit, with no noise or drift. Fourteen identical outcomes in a row at θ = 90° is one chance in 16,384: the “one in sixteen thousand” from the chapter.",
-        "pt": "Um qubit ideal, sem ruído nem deriva. Catorze resultados iguais seguidos com θ = 90° são uma chance em 16.384: o “um em dezesseis mil” do capítulo.",
-        "es": "Un cúbit ideal, sin ruido ni deriva. Catorce resultados iguales seguidos con θ = 90° son una posibilidad entre 16.384: el «uno entre dieciséis mil» del capítulo."
+        "ru": "Идеальный кубит, без шума и дрейфа. Четырнадцать единиц подряд при θ = 90° выпадают с шансом один из 16 384: это и есть те самые «один к шестнадцати тысячам».",
+        "en": "An ideal qubit, with no noise or drift. At θ = 90°, fourteen ones in a row come up with a chance of one in 16,384: the “one in sixteen thousand” from the chapter.",
+        "pt": "Um qubit ideal, sem ruído nem deriva. Com θ = 90°, catorze uns seguidos saem com chance de um em 16.384: o “um em dezesseis mil” do capítulo.",
+        "es": "Un cúbit ideal, sin ruido ni deriva. Con θ = 90°, catorce unos seguidos salen con una probabilidad de uno entre 16.384: el «uno entre dieciséis mil» del capítulo."
       }
     }
   ]

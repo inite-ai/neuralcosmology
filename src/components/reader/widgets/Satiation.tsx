@@ -31,10 +31,10 @@ const T: Dict<{
     wait: "As letras voltaram ao lugar. Desvie os olhos e depois leia a palavra de novo.", again: "Recomeçar",
   },
   es: {
-    word: "cuchara", hint: "Diga la palabra en voz alta o en un susurro y púlsela cada vez.", press: (w) => `Repetir: ${w}`,
+    word: "cuchara", hint: "Di la palabra en voz alta o en un susurro y púlsala cada vez.", press: (w) => `Repetir: ${w}`,
     own: "Otra palabra", take: "Usar", ask: (w) => `Treinta veces. ¿«${w}» sigue siendo una palabra?`, answers: ["Sí, una palabra", "Quedaron sonidos", "Va y viene"],
-    after: ["Para usted el sentido resistió.", "Usted oyó sonidos sin sentido. Eso es la saciedad semántica.", "El sentido parpadea: aparece y se va."],
-    wait: "Las letras han vuelto a su sitio. Aparte la vista y luego lea la palabra otra vez.", again: "Empezar de nuevo",
+    after: ["Para ti el sentido resistió.", "Oíste sonidos sin sentido. Eso es la saciedad semántica.", "El sentido parpadea: aparece y se va."],
+    wait: "Las letras han vuelto a su sitio. Aparta la vista y luego lee la palabra otra vez.", again: "Empezar de nuevo",
   },
 };
 

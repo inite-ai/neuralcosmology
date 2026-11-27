@@ -11,9 +11,9 @@ const R = 0.06; // радиус соседства в долях ширины
 
 const T: Dict<{ sep: string; ali: string; coh: string; play: string; pause: string; hint: string; birds: string }> = {
   ru: { sep: "Не толкаться", ali: "Лететь как соседи", coh: "Держаться ближе", play: "Пуск", pause: "Пауза", hint: "Ведите курсором или пальцем по небу: это сокол. Стая обходит его волной, хотя ни одна птица не видит дальше соседей.", birds: "птиц" },
-  en: { sep: "Don’t crowd", ali: "Fly like neighbours", coh: "Stay close", play: "Play", pause: "Pause", hint: "Move the cursor or your finger across the sky: that’s a falcon. The flock parts around it in a wave, though no bird sees beyond its neighbours.", birds: "birds" },
-  pt: { sep: "Não se apertar", ali: "Voar como os vizinhos", coh: "Ficar perto", play: "Iniciar", pause: "Pausar", hint: "Passe o cursor ou o dedo pelo céu: é um falcão. O bando se abre em onda à volta dele, embora nenhum pássaro veja além dos vizinhos.", birds: "pássaros" },
-  es: { sep: "No apretarse", ali: "Volar como los vecinos", coh: "Mantenerse cerca", play: "Iniciar", pause: "Pausa", hint: "Pase el cursor o el dedo por el cielo: es un halcón. La bandada se abre en ola a su alrededor, aunque ningún pájaro ve más allá de sus vecinos.", birds: "pájaros" },
+  en: { sep: "Don’t crowd", ali: "Match the neighbours", coh: "Stay close", play: "Play", pause: "Pause", hint: "Move the cursor or your finger across the sky: that’s a falcon. The flock parts around it in a wave, though no bird sees beyond its neighbours.", birds: "birds" },
+  pt: { sep: "Não se amontoar", ali: "Voar como os vizinhos", coh: "Ficar perto", play: "Iniciar", pause: "Pausar", hint: "Passe o cursor ou o dedo pelo céu: é um falcão. O bando se abre em onda em volta dele, embora nenhum pássaro veja além dos vizinhos.", birds: "pássaros" },
+  es: { sep: "No amontonarse", ali: "Volar como los vecinos", coh: "Mantenerse cerca", play: "Iniciar", pause: "Pausa", hint: "Pasa el cursor o el dedo por el cielo: es un halcón. La bandada se abre en ola a su alrededor, aunque ningún pájaro ve más allá de sus vecinos.", birds: "pájaros" },
 };
 
 export default function Murmuration({ lang }: WidgetProps) {

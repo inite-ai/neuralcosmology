@@ -11,7 +11,7 @@
       "alt": {
         "ru": "Стопка старых деревянных подносов на верстаке, верхний чуть приподнят рукой; рядом в темноте светится маленький старый терминал.",
         "en": "A stack of old wooden trays on a workbench, the top one lifted slightly by a hand; a small old terminal glowing beside it in the dark.",
-        "pt": "Uma pilha de velhos tabuleiros de madeira numa bancada, o de cima levantado por uma mão; ao lado, no escuro, um pequeno terminal antigo aceso.",
+        "pt": "Uma pilha de velhas bandejas de madeira numa bancada, a de cima levantada por uma mão; ao lado, no escuro, um pequeno terminal antigo aceso.",
         "es": "Una pila de viejas bandejas de madera sobre un banco de trabajo, la de arriba levantada por una mano; al lado, en la oscuridad, un pequeño terminal antiguo encendido."
       },
       "width": 1536,
@@ -57,7 +57,7 @@
       "alt": {
         "ru": "Размытое оранжевое кольцо света вокруг тёмного центра на чёрном фоне.",
         "en": "A blurred orange ring of light around a dark centre on a black background.",
-        "pt": "Um anel de luz laranja desfocado à volta de um centro escuro sobre fundo negro.",
+        "pt": "Um anel de luz laranja fora de foco em volta de um centro escuro sobre fundo negro.",
         "es": "Un anillo de luz naranja difuso alrededor de un centro oscuro sobre fondo negro."
       },
       "caption": {
@@ -81,7 +81,7 @@
       "status": "draft",
       "prompt": "A large sheet of thin paper printed with a dense regular pattern of dots, folded once so that two distant parts of the pattern touch along the crease; light from below shines through where they overlap.",
       "alt": {
-        "ru": "Большой лист тонкой бумаги с частым узором точек сложен так, что две далёкие части узора соприкасаются по сгибу; снизу сквозь наложение пробивается свет.",
+        "ru": "Большой лист тонкой бумаги с частым узором точек сложен так, что две далёкие части узора соприкасаются по сгибу; там, где части легли друг на друга, снизу пробивается свет.",
         "en": "A large sheet of thin paper with a dense dot pattern, folded so two distant parts of the pattern touch along the crease; light shines through where they overlap.",
         "pt": "Uma grande folha de papel fino com um padrão denso de pontos, dobrada para que duas partes distantes se toquem na dobra; a luz atravessa onde se sobrepõem.",
         "es": "Una gran hoja de papel fino con un denso patrón de puntos, doblada para que dos partes lejanas se toquen en el pliegue; la luz atraviesa donde se superponen."

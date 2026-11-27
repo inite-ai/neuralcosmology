@@ -9,7 +9,7 @@ cover: "/essays/covers/superposition-as-while-true.png"
 
 Quien haya ejecutado alguna vez un bucle generativo conoce la sensación. Mientras el bucle gira, todas las continuaciones posibles *viven en él a la vez*. Basta intervenir —poner un `print`, lanzar un `return`, leer un valor— y de todo el haz de ramas queda una. Las demás, sencillamente, no quedan registradas como "lo que pasó".
 
-La escena se parece tanto a lo que la física llama colapso de la función de onda que la pregunta surge sola: ¿es una metáfora o una pista sobre cómo está hecho el mundo?
+La escena se parece tanto a lo que la física llama colapso de la función de onda que la pregunta surge sola: si es una metáfora o una pista sobre cómo está hecho el mundo.
 
 ## Qué dice el formalismo
 
@@ -19,7 +19,7 @@ Ese paso no está descrito en la ecuación; es lo que se llama *el problema de l
 
 Un ingeniero reconoce aquí la mecánica de los sistemas distribuidos. Mientras la transacción está en curso, el estado está indefinido. El commit fija un corte, y todas las ramas abiertas por el camino se descartan y no llegan a la base de datos final. La decoherencia se parece a la pérdida del aislamiento transaccional: el observador externo ve una rama porque los estados intermedios han quedado fuera de su alcance.
 
-Por ahora es una metáfora. A partir de aquí se pone más interesante.
+Por ahora es una metáfora.
 
 ## El borrador cuántico de elección retardada
 
@@ -39,7 +39,7 @@ Ese es el sentido ingenieril del colapso. El sistema cuántico se comporta como 
 
 En 1989, John Wheeler formuló la tesis "it from bit": toda magnitud física obtiene, en el fondo, su valor de respuestas binarias, "sí" o "no", es decir, de sucesos de información. Durante años sonó a ocurrencia filosófica sin contenido técnico.
 
-Los códigos holográficos (Pastawski, Yoshida, Harlow, Preskill, 2015; el llamado código HaPPY) dieron el primer modelo concreto: el espacio-tiempo como una red de tensores en la que los grados de libertad "profundos" se reconstruyen a partir de los "de frontera" mediante reglas unitarias bien definidas. Si ese cuadro es correcto, la física de los objetos del interior se reduce literalmente a operaciones sobre un grafo de punteros: añadir un nodo, reescribir una arista, reempaquetar una palabra de código.
+Los códigos holográficos (Pastawski, Yoshida, Harlow, Preskill, 2015; el llamado código HaPPY) dieron el primer modelo concreto: el espacio-tiempo como una red de tensores en la que los grados de libertad "profundos" se reconstruyen a partir de los "de frontera" mediante reglas unitarias bien definidas. Si esa imagen es correcta, la física de los objetos del interior se reduce literalmente a operaciones sobre un grafo de punteros: añadir un nodo, reescribir una arista, reempaquetar una palabra de código.
 
 Los códigos holográficos son un objeto matemático concreto sobre el que pueden comprobarse predicciones de reconstrucción, de tolerancia a errores, de relaciones de entropía. Aquí termina la conversación sobre parecidos y empieza la física de ingeniería. La cuestión ya no es si el universo es "como" un ordenador: *parte de su formalismo coincide con el formalismo de una clase concreta de cómputos*.
 
@@ -51,7 +51,7 @@ Y ninguna metáfora convierte la medición en magia. Los experimentos de Bell (D
 
 ## Por qué trazar este paralelo
 
-La mirada de ingeniero es útil porque hace la mecánica cuántica *discutible* para quienes ya tienen una intuición práctica sobre sistemas distribuidos, transacciones y descenso por gradiente; no pretende explicarla entera. Personas así hay hoy millones, y para la física fundamental eso es un público nuevo enorme.
+La mirada de ingeniero es útil porque vuelve la mecánica cuántica *abordable* para quienes ya tienen una intuición práctica sobre sistemas distribuidos, transacciones y descenso por gradiente; no pretende explicarla entera. Personas así hay hoy millones, y para la física fundamental eso es un público nuevo enorme.
 
 El programa de Pointer Architecture, sobre el que se sostiene este sitio, trabaja justo en esa juntura. Su tesis es estrecha y comprobable: *ciertas estructuras formales describen a la vez el cómputo y la física, y de ello se siguen predicciones comprobables*. El eslogan "todo es código" no forma parte de ella.
 

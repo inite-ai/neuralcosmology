@@ -24,15 +24,15 @@ const T: Dict<{
   photo: (j: string) => string; tea: (b: string) => string; brain: (b: string) => string; j: string; ev: string;
 }> = {
   ru: {
-    register: "Регистр из 32 бит: нажмите на ячейку, чтобы записать", erase: "Стереть всё", fill: "Записать случайное", temp: "Температура среды",
+    register: "Регистр из 32 бит: нажмите на ячейку, чтобы записать", erase: "Стереть всё", fill: "Заполнить наугад", temp: "Температура среды",
     perBit: "Цена одного стёртого бита", erased: "Стёрто бит", heat: "Отдано тепла", j: "Дж", ev: "эВ",
     hint: "Стирание не знает, что лежит в ячейке, и платит за каждую. Записать можно почти даром, стереть даром нельзя.",
-    photo: (j) => `Удалить из телефона фотографию на 3 МБ — не меньше ${j} Дж.`,
+    photo: (j) => `Удаление фотографии на 3 МБ из телефона стоит не меньше ${j} Дж.`,
     tea: (b) => `Чтобы нагреть стиранием чашку чая на один градус, пришлось бы стереть ${b} бит.`,
     brain: (b) => `Мозгу на его 20 Вт этот предел позволил бы стирать до ${b} бит в секунду.`,
   },
   en: {
-    register: "A 32-bit register: tap a cell to write", erase: "Erase all", fill: "Write random", temp: "Temperature of the surroundings",
+    register: "A 32-bit register: tap a cell to write", erase: "Erase all", fill: "Fill at random", temp: "Temperature of the surroundings",
     perBit: "Cost of erasing one bit", erased: "Bits erased", heat: "Heat released", j: "J", ev: "eV",
     hint: "Erasure doesn’t know what a cell holds, so it pays for every one. Writing can be nearly free; erasing can’t.",
     photo: (j) => `Deleting a 3 MB photo from your phone costs at least ${j} J.`,
@@ -40,20 +40,20 @@ const T: Dict<{
     brain: (b) => `At its 20 W, a brain held only to this limit could erase up to ${b} bits per second.`,
   },
   pt: {
-    register: "Um registro de 32 bits: toque numa célula para escrever", erase: "Apagar tudo", fill: "Escrever ao acaso", temp: "Temperatura do ambiente",
+    register: "Um registro de 32 bits: toque numa célula para escrever", erase: "Apagar tudo", fill: "Preencher ao acaso", temp: "Temperatura do ambiente",
     perBit: "Custo de apagar um bit", erased: "Bits apagados", heat: "Calor liberado", j: "J", ev: "eV",
     hint: "O apagamento não sabe o que há na célula e paga por todas. Escrever pode sair quase de graça; apagar, não.",
     photo: (j) => `Apagar do celular uma foto de 3 MB custa no mínimo ${j} J.`,
     tea: (b) => `Para aquecer uma xícara de chá em um grau só apagando, seria preciso apagar ${b} bits.`,
-    brain: (b) => `Com seus 20 W, um cérebro limitado só por esse piso poderia apagar até ${b} bits por segundo.`,
+    brain: (b) => `Com seus 20 W, um cérebro sujeito só a esse limite poderia apagar até ${b} bits por segundo.`,
   },
   es: {
-    register: "Un registro de 32 bits: toque una celda para escribir", erase: "Borrar todo", fill: "Escribir al azar", temp: "Temperatura del entorno",
+    register: "Un registro de 32 bits: toca una celda para escribir", erase: "Borrar todo", fill: "Rellenar al azar", temp: "Temperatura del entorno",
     perBit: "Costo de borrar un bit", erased: "Bits borrados", heat: "Calor liberado", j: "J", ev: "eV",
     hint: "El borrado no sabe qué hay en la celda y paga por todas. Escribir puede salir casi gratis; borrar, no.",
     photo: (j) => `Borrar del teléfono una foto de 3 MB cuesta al menos ${j} J.`,
     tea: (b) => `Para calentar una taza de té un grado solo borrando, habría que borrar ${b} bits.`,
-    brain: (b) => `Con sus 20 W, un cerebro limitado solo por este piso podría borrar hasta ${b} bits por segundo.`,
+    brain: (b) => `Con sus 20 W, un cerebro sujeto solo a este límite podría borrar hasta ${b} bits por segundo.`,
   },
 };
 

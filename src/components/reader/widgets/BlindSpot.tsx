@@ -17,8 +17,8 @@ const T: Dict<{ modes: Record<Mode, string>; steps: string[]; after: Record<Mode
   },
   en: {
     modes: { dot: "Dot", line: "Gap in a line", stripes: "Patch on stripes" },
-    steps: ["Close your left eye.", "Look at the cross with your right eye and keep looking.", "Slowly move toward the screen and back, from about 20 to 60 cm."],
-    after: { dot: "At some distance the dot vanishes entirely.", line: "The gap closes: the line looks continuous, though the screen has no line there.", stripes: "The patch vanishes and the stripes run through its place as if it were never there." },
+    steps: ["Close your left eye.", "Fix your right eye on the cross and don’t look away.", "Slowly move closer to the screen and back again, between about 20 and 60 cm."],
+    after: { dot: "At some distance the dot vanishes entirely.", line: "The gap closes: the line looks continuous, though the screen has no line there.", stripes: "The patch vanishes and the stripes run through its place as if it had never been there." },
   },
   pt: {
     modes: { dot: "Círculo", line: "Falha na linha", stripes: "Mancha nas listras" },
@@ -27,8 +27,8 @@ const T: Dict<{ modes: Record<Mode, string>; steps: string[]; after: Record<Mode
   },
   es: {
     modes: { dot: "Círculo", line: "Hueco en la línea", stripes: "Mancha en las rayas" },
-    steps: ["Cierre el ojo izquierdo.", "Con el derecho, mire la cruz sin apartar la vista.", "Acérquese a la pantalla y aléjese despacio, de unos 20 a 60 cm."],
-    after: { dot: "A cierta distancia el círculo desaparece por completo.", line: "El hueco se cierra: la línea parece continua, aunque la pantalla no tiene línea ahí.", stripes: "La mancha desaparece y las rayas pasan por su lugar como si nunca hubiera estado." },
+    steps: ["Cierra el ojo izquierdo.", "Con el derecho, mira la cruz sin apartar la vista.", "Acércate a la pantalla y aléjate despacio, de unos 20 a 60 cm."],
+    after: { dot: "A cierta distancia el círculo desaparece por completo.", line: "El hueco se cierra: la línea parece continua, aunque la pantalla no tiene línea ahí.", stripes: "La mancha desaparece y las rayas pasan por su lugar como si nunca hubiera estado allí." },
   },
 };
 

@@ -14,7 +14,7 @@
         "es": "Cuánto cuesta borrar un bit"
       },
       "caption": {
-        "ru": "Предел Ландауэра: kT ln 2 на каждый стёртый бит, где k — постоянная Больцмана, T — температура среды. Берю и соавторы измерили его в 2012 году на одной стеклянной бусинке в двойной лазерной ловушке.",
+        "ru": "Предел Ландауэра: kT ln 2 на каждый стёртый бит, где k означает постоянную Больцмана, а T температуру среды. Берю и соавторы измерили его в 2012 году на одной стеклянной бусинке в двойной лазерной ловушке.",
         "en": "Landauer’s limit: kT ln 2 for every erased bit, where k is Boltzmann’s constant and T the temperature of the surroundings. Bérut and colleagues measured it in 2012 with a single glass bead in a double laser trap.",
         "pt": "O limite de Landauer: kT ln 2 por bit apagado, em que k é a constante de Boltzmann e T a temperatura do ambiente. Bérut e colegas o mediram em 2012 com uma única conta de vidro numa armadilha laser dupla.",
         "es": "El límite de Landauer: kT ln 2 por cada bit borrado, donde k es la constante de Boltzmann y T la temperatura del entorno. Bérut y sus colegas lo midieron en 2012 con una sola cuenta de vidrio en una trampa láser doble."
@@ -34,10 +34,10 @@
         "es": "Dos rendijas, un fotón cada vez"
       },
       "caption": {
-        "ru": "Каждый фотон оставляет на экране одну точку. Без детектора распределение точек — квадрат суммы двух амплитуд, с полосами; с детектором у щелей — сумма двух вероятностей, полос нет. Схема упрощена, вероятности те же, что в учебнике.",
-        "en": "Each photon leaves a single dot on the screen. Without a detector the dots follow the square of the sum of two amplitudes, with fringes; with a detector at the slits, the sum of two probabilities, with none. The setup is simplified; the probabilities are the textbook ones.",
-        "pt": "Cada fóton deixa um único ponto na tela. Sem detector, os pontos seguem o quadrado da soma de duas amplitudes, com franjas; com detector nas fendas, a soma de duas probabilidades, sem franjas. O esquema é simplificado; as probabilidades são as do livro-texto.",
-        "es": "Cada fotón deja un solo punto en la pantalla. Sin detector, los puntos siguen el cuadrado de la suma de dos amplitudes, con franjas; con detector en las rendijas, la suma de dos probabilidades, sin ellas. El esquema está simplificado; las probabilidades son las de manual."
+        "ru": "Каждый фотон оставляет на экране одну точку. Без детектора точки ложатся по квадрату суммы двух амплитуд, и на экране видны полосы; с детектором у щелей они ложатся по сумме двух вероятностей, и полос нет. Схема упрощена, вероятности те же, что в учебнике.",
+        "en": "Each photon leaves a single dot on the screen. Without a detector the dots follow the square of the sum of two amplitudes, and fringes appear; with a detector at the slits they follow the sum of two probabilities, and there are no fringes. The setup is simplified; the probabilities are the textbook ones.",
+        "pt": "Cada fóton deixa um único ponto na tela. Sem detector, os pontos seguem o quadrado da soma de duas amplitudes, e aparecem franjas; com detector nas fendas, seguem a soma de duas probabilidades, e as franjas somem. O esquema é simplificado; as probabilidades são as do livro-texto.",
+        "es": "Cada fotón deja un solo punto en la pantalla. Sin detector, los puntos siguen el cuadrado de la suma de dos amplitudes y aparecen franjas; con detector en las rendijas, siguen la suma de dos probabilidades y no hay franjas. El esquema está simplificado; las probabilidades son las de manual."
       }
     }
   ]

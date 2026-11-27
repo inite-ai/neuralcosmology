@@ -10,7 +10,7 @@ import { Play, type Dict, type WidgetProps } from "./kit";
 const T: Dict<{ watch: string; listen: string; consent: string }> = {
   ru: { watch: "Смотреть", listen: "Слушать", consent: "Видео загрузится с YouTube" },
   en: { watch: "Watch", listen: "Listen", consent: "The video loads from YouTube" },
-  pt: { watch: "Assistir", listen: "Ouvir", consent: "O vídeo carrega do YouTube" },
+  pt: { watch: "Assistir", listen: "Ouvir", consent: "O vídeo será carregado do YouTube" },
   es: { watch: "Ver", listen: "Escuchar", consent: "El vídeo se carga desde YouTube" },
 };
 

@@ -11,7 +11,7 @@
       "ru": "Пускайте фотоны через две щели по одному и смотрите, как на экране складываются полосы. Поставьте детектор у щелей, и полосы пропадут.",
       "en": "Send photons through two slits one at a time and watch interference fringes build up on the screen. Put a detector at the slits and the fringes vanish.",
       "pt": "Mande fótons pela dupla fenda um por vez e veja as franjas de interferência se formarem na tela. Ponha um detector nas fendas e as franjas somem.",
-      "es": "Envíe fotones por la doble rendija uno a uno y vea formarse las franjas de interferencia. Ponga un detector en las rendijas y las franjas desaparecen."
+      "es": "Envía fotones por la doble rendija uno a uno y mira cómo se forman las franjas de interferencia. Pon un detector en las rendijas y las franjas desaparecen."
     }
   },
   "cc-comp-life": {
@@ -31,15 +31,15 @@
   "cc-ch02-physarum": {
     "title": {
       "ru": "Слизевик Physarum строит сеть: симуляция",
-      "en": "Slime mold Physarum builds a network: simulation",
+      "en": "Slime mould Physarum builds a network: simulation",
       "pt": "Bolor limoso Physarum constrói uma rede: simulação",
       "es": "Moho mucilaginoso Physarum: simulación de su red"
     },
     "description": {
       "ru": "Модель Джеффа Джонса: девять тысяч частиц идут по следу и сами прокладывают сеть. Тем же алгоритмом восстанавливали нити космической паутины.",
-      "en": "Jeff Jones's slime mold model: nine thousand particles follow the trail and lay out a network. The same algorithm recovered filaments of the cosmic web.",
+      "en": "Jeff Jones's slime mould model: nine thousand particles follow the trail and lay out a network. The same algorithm recovered filaments of the cosmic web.",
       "pt": "O modelo de bolor limoso de Jeff Jones: nove mil partículas seguem o rastro e traçam uma rede. O mesmo algoritmo reconstituiu filamentos da teia cósmica.",
-      "es": "El modelo de moho mucilaginoso de Jeff Jones: nueve mil partículas siguen el rastro y trazan una red. El mismo algoritmo reconstruyó la red cósmica."
+      "es": "El modelo de moho mucilaginoso de Jeff Jones: nueve mil partículas siguen el rastro y trazan una red. El mismo algoritmo reconstruyó filamentos de la red cósmica."
     }
   },
   "cc-ch05-planaria": {
@@ -53,7 +53,7 @@
       "ru": "Разрежьте планарию и посмотрите, где вырастет голова. Её место задаёт биоэлектрический узор: меняя его, Майкл Левин получил двухголовых червей.",
       "en": "Cut a planarian and see where the head regrows. A bioelectric pattern sets its place; by changing it, Michael Levin made two-headed worms.",
       "pt": "Corte uma planária e veja onde a cabeça volta a crescer. Um padrão bioelétrico define o lugar; mudando-o, Michael Levin criou vermes de duas cabeças.",
-      "es": "Corte una planaria y vea dónde vuelve a crecer la cabeza. Un patrón bioeléctrico fija su lugar; cambiándolo, Michael Levin creó gusanos de dos cabezas."
+      "es": "Corta una planaria y mira dónde vuelve a crecer la cabeza. Un patrón bioeléctrico fija su lugar; cambiándolo, Michael Levin creó gusanos de dos cabezas."
     }
   },
   "ea-ch08-wow": {
@@ -61,13 +61,13 @@
       "ru": "Сигнал «Wow!»: расшифруйте 6EQUJ5",
       "en": "The Wow! signal: decode 6EQUJ5 yourself",
       "pt": "Sinal Wow!: decifre o 6EQUJ5",
-      "es": "La señal Wow!: descifre el 6EQUJ5"
+      "es": "La señal Wow!: descifra el 6EQUJ5"
     },
     "description": {
       "ru": "Распечатка радиотелескопа Big Ear от 15 августа 1977 года. Прочитайте столбец 6EQUJ5 так, как его прочитал Джерри Эйман.",
       "en": "The Big Ear radio telescope printout of 15 August 1977. Read the 6EQUJ5 column the way Jerry Ehman did and see how strong the signal was.",
       "pt": "A impressão do radiotelescópio Big Ear de 15 de agosto de 1977. Leia a coluna 6EQUJ5 como Jerry Ehman leu e veja quão forte era o sinal.",
-      "es": "La impresión del radiotelescopio Big Ear del 15 de agosto de 1977. Lea la columna 6EQUJ5 como la leyó Jerry Ehman y vea qué tan fuerte era la señal."
+      "es": "La impresión del radiotelescopio Big Ear del 15 de agosto de 1977. Lee la columna 6EQUJ5 como la leyó Jerry Ehman y mira qué tan fuerte era la señal."
     }
   },
   "cs-ch02-blind-spot": {
@@ -75,13 +75,13 @@
       "ru": "Тест на слепое пятно: найдите своё",
       "en": "Blind spot test: find your own",
       "pt": "Teste do ponto cego: encontre o seu",
-      "es": "Test del punto ciego: encuentre el suyo"
+      "es": "Test del punto ciego: encuentra el tuyo"
     },
     "description": {
       "ru": "Закройте один глаз и найдите слепое пятно: место на сетчатке, где выходит зрительный нерв. Мозг закрашивает дыру, и вы её не замечаете.",
       "en": "Close one eye and find your blind spot, where the optic nerve leaves the retina. Your brain fills the hole in, so you never notice it.",
       "pt": "Feche um olho e encontre o seu ponto cego, onde o nervo óptico sai da retina. O cérebro preenche o buraco, e você nunca o percebe.",
-      "es": "Cierre un ojo y encuentre su punto ciego, donde el nervio óptico sale de la retina. El cerebro rellena el hueco y usted nunca lo nota."
+      "es": "Cierra un ojo y encuentra tu punto ciego, donde el nervio óptico sale de la retina. El cerebro rellena el hueco y nunca lo notas."
     }
   },
   "cc-ch04-murmuration": {
@@ -109,7 +109,7 @@
       "ru": "Предел Ландауэра kT ln 2 на каждый стёртый бит. В 2012 году его измерили на одной стеклянной бусине в двойной лазерной ловушке.",
       "en": "Landauer's limit, kT ln 2 for every erased bit, measured in 2012 with a single glass bead in a double laser trap. Try the erasure yourself.",
       "pt": "O limite de Landauer, kT ln 2 por bit apagado, medido em 2012 com uma única conta de vidro numa armadilha laser dupla. Apague um bit você mesmo.",
-      "es": "El límite de Landauer, kT ln 2 por bit borrado, medido en 2012 con una sola cuenta de vidrio en una trampa láser doble. Borre un bit usted mismo."
+      "es": "El límite de Landauer, kT ln 2 por bit borrado, medido en 2012 con una sola cuenta de vidrio en una trampa láser doble. Borra un bit tú mismo."
     }
   },
   "cc-comp-rule110": {
@@ -123,7 +123,7 @@
       "ru": "Переберите все 256 элементарных клеточных автоматов Вольфрама, включая правило 110, универсальность которого доказал Мэтью Кук.",
       "en": "Run all 256 of Wolfram's elementary cellular automata, including Rule 110, which Matthew Cook proved Turing-complete in 2004.",
       "pt": "Rode os 256 autômatos celulares elementares de Wolfram, inclusive a Regra 110, cuja universalidade Matthew Cook provou em 2004.",
-      "es": "Ejecute los 256 autómatas celulares elementales de Wolfram, incluida la Regla 110, cuya universalidad demostró Matthew Cook en 2004."
+      "es": "Ejecuta los 256 autómatas celulares elementales de Wolfram, incluida la Regla 110, cuya universalidad demostró Matthew Cook en 2004."
     }
   },
   "cs-ch04-loftus": {
@@ -145,10 +145,10 @@
       "ru": "Теория сборки: посчитайте индекс сборки",
       "en": "Assembly theory: calculate an assembly index",
       "pt": "Teoria da montagem: calcule o índice de montagem",
-      "es": "Teoría del ensamblaje: calcule el índice"
+      "es": "Teoría del ensamblaje: calcula el índice"
     },
     "description": {
-      "ru": "Индекс сборки Ли Кронина и Сары Уокер на словах: сколько шагов нужно, чтобы собрать слово из уже собранных кусков.",
+      "ru": "Индекс сборки Ли Кронина и Сары Уокер на примере слов: сколько шагов нужно, чтобы собрать слово из уже собранных кусков.",
       "en": "Lee Cronin and Sara Walker's assembly index, worked on words: the fewest joining steps to build a word from pieces already built.",
       "pt": "O índice de montagem de Lee Cronin e Sara Walker aplicado a palavras: o menor número de passos para montar uma palavra com pedaços já montados.",
       "es": "El índice de ensamblaje de Lee Cronin y Sara Walker aplicado a palabras: el mínimo de pasos para armar una palabra con piezas ya armadas."
@@ -162,10 +162,10 @@
       "es": "Experimento de Yarbus: movimiento ocular"
     },
     "description": {
-      "ru": "Опыт Альфреда Ярбуса на картине «Не ждали»: задайте себе вопрос, смотрите двадцать секунд и сравните, куда ходил взгляд.",
+      "ru": "Опыт Альфреда Ярбуса с картиной «Не ждали»: задайте себе вопрос, смотрите двадцать секунд и сравните, куда ходил взгляд.",
       "en": "Alfred Yarbus's eye-movement experiment on Repin's painting: ask yourself a question, look for twenty seconds and compare where your gaze went.",
       "pt": "O experimento de Alfred Yarbus com o quadro de Repin: faça-se uma pergunta, olhe por vinte segundos e compare por onde o olhar passou.",
-      "es": "El experimento de Alfred Yarbus con el cuadro de Repin: hágase una pregunta, mire veinte segundos y compare por dónde pasó la mirada."
+      "es": "El experimento de Alfred Yarbus con el cuadro de Repin: hazte una pregunta, mira veinte segundos y compara por dónde pasó la mirada."
     }
   },
   "et-ch01-satiation": {
@@ -173,13 +173,13 @@
       "ru": "Семантическое насыщение: опыт со словом",
       "en": "Semantic satiation: try it with a word",
       "pt": "Saciação semântica: teste com uma palavra",
-      "es": "Saciedad semántica: pruébela con una palabra"
+      "es": "Saciedad semántica: pruébala con una palabra"
     },
     "description": {
       "ru": "Повторите слово тридцать раз и послушайте, что от него останется. Опыт с семантическим насыщением, которое описал Леон Якобовиц-Джеймс.",
       "en": "Repeat a word thirty times and listen to what is left of it. An experiment with the semantic satiation described by Leon Jakobovits James.",
       "pt": "Repita uma palavra trinta vezes e escute o que sobra dela. Um teste da saciação semântica descrita por Leon Jakobovits James.",
-      "es": "Repita una palabra treinta veces y escuche qué queda de ella. Una prueba de la saciedad semántica que describió Leon Jakobovits James."
+      "es": "Repite una palabra treinta veces y escucha qué queda de ella. Una prueba de la saciedad semántica que describió Leon Jakobovits James."
     }
   },
   "et-ch05-place-cells": {
@@ -193,7 +193,7 @@
       "ru": "Проведите крысу по полу и посмотрите, где вспыхивает клетка места О’Кифа и какой рисунок оставляет клетка решётки Мозеров.",
       "en": "Lead a rat across the floor and see where O’Keefe’s place cell fires and what pattern the Mosers’ grid cell leaves behind.",
       "pt": "Guie um rato pelo chão e veja onde dispara a célula de lugar de O’Keefe e que desenho deixa a célula de grade dos Moser.",
-      "es": "Guíe a una rata por el suelo y vea dónde se dispara la célula de lugar de O’Keefe y qué dibujo deja la célula de red de los Moser."
+      "es": "Guía a una rata por el suelo y mira dónde se dispara la célula de lugar de O’Keefe y qué dibujo deja la célula de red de los Moser."
     }
   },
   "et-ch06-mr-clock": {
@@ -207,7 +207,7 @@
       "ru": "Отправьте атомные часы вокруг Земли на восток или на запад и сравните с часами в Вашингтоне: −59 и +273 наносекунды.",
       "en": "Send atomic clocks around the Earth eastward or westward and compare them with those in Washington: −59 and +273 nanoseconds.",
       "pt": "Mande relógios atômicos em volta da Terra, para o leste ou para o oeste, e compare com os de Washington: −59 e +273 nanossegundos.",
-      "es": "Envíe relojes atómicos alrededor de la Tierra, al este o al oeste, y compárelos con los de Washington: −59 y +273 nanosegundos."
+      "es": "Envía relojes atómicos alrededor de la Tierra, al este o al oeste, y compáralos con los de Washington: −59 y +273 nanosegundos."
     }
   }
 }

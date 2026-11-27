@@ -1,13 +1,13 @@
 ---
 title: "Superposição como `while(true)`: a mecânica quântica com olhos de engenheiro"
-description: "Um laço gerativo no código oferece uma intuição surpreendentemente precisa para o colapso da função de onda e o apagador quântico de escolha retardada. Onde termina a metáfora e começa a física."
+description: "Um laço generativo no código oferece uma intuição surpreendentemente precisa para o colapso da função de onda e o apagador quântico de escolha retardada. Onde termina a metáfora e começa a física."
 date: 2026-05-03
 author: Mikhail Savchenko
 tags: [mecânica-quântica, informação, medição, Wheeler]
 cover: "/essays/covers/superposition-as-while-true.png"
 ---
 
-Quem já rodou um laço gerativo conhece a sensação. Enquanto o laço gira, todas as continuações possíveis *vivem nele ao mesmo tempo*. Basta intervir — pôr um `print`, disparar um `return`, ler um valor — e de todo o feixe de ramos sobra um. Os outros simplesmente não ficam registrados como "o que aconteceu".
+Quem já rodou um laço generativo conhece a sensação. Enquanto o laço gira, todas as continuações possíveis *vivem nele ao mesmo tempo*. Basta intervir — pôr um `print`, disparar um `return`, ler um valor — e de todo o feixe de ramos sobra um. Os outros simplesmente não ficam registrados como "o que aconteceu".
 
 A cena lembra tanto o que a física chama de colapso da função de onda que a pergunta surge sozinha: é metáfora ou uma pista sobre como o mundo é construído?
 
@@ -19,7 +19,7 @@ Esse passo não está descrito na equação; é o que se chama de *problema da m
 
 Um engenheiro reconhece aqui a mecânica dos sistemas distribuídos. Enquanto a transação corre, o estado está indefinido. O commit fixa um recorte, e todos os ramos abertos no caminho são descartados e não chegam ao banco final. A decoerência se parece com a perda do isolamento transacional: o observador externo vê um ramo porque os estados intermediários ficaram fora do seu alcance.
 
-Por enquanto, é metáfora. Daqui em diante fica mais interessante.
+Por enquanto, é metáfora.
 
 ## O apagador quântico de escolha retardada
 
@@ -35,7 +35,7 @@ Na linguagem do aprendizado de máquina, a medição é a função de perda, e a
 
 É esse o sentido de engenharia do colapso. O sistema quântico se comporta como uma estrutura estatística distribuída, em que a escolha da medição define quais distribuições conjuntas ficam ao nosso alcance. A imagem de uma "realidade à espera do observador" só atrapalha.
 
-## "It from bit": uma planta em vez de um slogan
+## "It from bit": um projeto técnico em vez de um slogan
 
 Em 1989, John Wheeler formulou a tese "it from bit": toda grandeza física, no fundo, tira seu valor de respostas binárias, "sim" ou "não", ou seja, de eventos de informação. Durante anos isso soou como uma tirada filosófica sem conteúdo técnico.
 
@@ -47,7 +47,7 @@ Os códigos holográficos são um objeto matemático concreto, sobre o qual se p
 
 O seu `while(true)`, claro, não gera estados quânticos ao pé da letra. Num chip comum a decoerência é instantânea, porque o ambiente está rigidamente acoplado a ele pela dissipação de calor. Para manter a coerência por tempo suficiente para um efeito quântico mensurável, são precisos temperaturas criogênicas, isolamento, graus de liberdade projetados de propósito — tudo aquilo com que se ocupam os laboratórios de computação quântica.
 
-E nenhuma metáfora transforma a medição em mágica. Os experimentos de Bell (Delft, Viena e NIST, todos em 2015) mostraram que o realismo local está morto, ou seja, que a correlação quântica é muito mais estranha do que um "parâmetro oculto guardado no sistema". A imagem do laço gerativo ajuda a captar a forma dessa estranheza, mas não substitui a física.
+E nenhuma metáfora transforma a medição em mágica. Os experimentos de Bell (Delft, Viena e NIST, todos em 2015) mostraram que o realismo local está morto, ou seja, que a correlação quântica é muito mais estranha do que um "parâmetro oculto guardado no sistema". A imagem do laço generativo ajuda a captar a forma dessa estranheza, mas não substitui a física.
 
 ## Por que traçar esse paralelo
 

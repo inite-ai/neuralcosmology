@@ -29,10 +29,10 @@
       "status": "draft",
       "prompt": "Two rectangular glass photographic plates lie side by side on an observatory archive light table. The left plate shows a stained slice of brain cortex: branching neurons and fine fibres. The right plate shows a simulated cosmic web: filaments of galaxies meeting at bright knots around dark voids. At this distance the two plates look almost identical. Hairline plate edges, dust, quiet darkness around them.",
       "alt": {
-        "ru": "Две стеклянные пластинки на световом столе: слева срез коры мозга с ветвящимися нейронами, справа космическая паутина галактик. Издали их не отличить.",
-        "en": "Two glass plates on a light table: on the left a slice of brain cortex with branching neurons, on the right the cosmic web of galaxies. From a distance they look the same.",
-        "pt": "Duas placas de vidro numa mesa de luz: à esquerda um corte do córtex com neurónios ramificados, à direita a teia cósmica de galáxias. De longe parecem iguais.",
-        "es": "Dos placas de vidrio sobre una mesa de luz: a la izquierda un corte de corteza cerebral con neuronas ramificadas, a la derecha la red cósmica de galaxias. De lejos parecen iguales."
+        "ru": "Две стеклянные пластинки на световом столе: слева срез коры мозга с ветвящимися нейронами, справа космическая паутина галактик. Узоры на них почти одинаковые.",
+        "en": "Two glass plates on a light table: on the left a slice of brain cortex with branching neurons, on the right the cosmic web of galaxies. The two patterns are almost the same.",
+        "pt": "Duas placas de vidro numa mesa de luz: à esquerda um corte do córtex com neurônios ramificados, à direita a teia cósmica de galáxias. Os dois padrões são quase iguais.",
+        "es": "Dos placas de vidrio sobre una mesa de luz: a la izquierda un corte de corteza cerebral con neuronas ramificadas, a la derecha la red cósmica de galaxias. Los dos patrones son casi iguales."
       },
       "width": 1536,
       "height": 1024,
@@ -60,10 +60,10 @@
         "es": "Un mapa antiguo del norte de Europa: costas y montañas, con monstruos marinos y barcos dibujados en el océano."
       },
       "caption": {
-        "ru": "Олаус Магнус. Carta marina, 1539: берег проверен, горы видели издалека, а в море — чудовища.",
+        "ru": "Олаус Магнус. Carta marina, 1539: берег на ней выверен, горы нанесены по виду издалека, а в море нарисованы чудовища.",
         "en": "Olaus Magnus, Carta marina, 1539: the coast surveyed, the mountains seen from afar, and monsters at sea.",
-        "pt": "Olaus Magnus, Carta marina, 1539: a costa verificada, as montanhas vistas de longe e monstros no mar.",
-        "es": "Olaus Magnus, Carta marina, 1539: la costa comprobada, las montañas vistas de lejos y monstruos en el mar."
+        "pt": "Olaus Magnus, Carta marina, 1539: a costa medida, as montanhas desenhadas de longe e monstros no mar.",
+        "es": "Olaus Magnus, Carta marina, 1539: la costa medida, las montañas dibujadas de lejos y monstruos en el mar."
       },
       "width": 1600,
       "height": 1185,

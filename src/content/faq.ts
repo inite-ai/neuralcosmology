@@ -28,7 +28,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "What does it say about consciousness?",
         answer:
-          "PA defines a substrate-side measure, Φ_PA, which is non-zero only for an observer that reads its own state back (self-reference) with non-trivial scope and lifespan. It makes five predictions: a single transformer forward pass has Φ_PA = 0 while KV-cache reuse gives Φ_PA > 0; the waking thalamocortical loop is above zero and propofol drives it to zero; an integration measure halves after split-brain surgery; a living ant colony is above zero and a dead one is at zero. So far these are checked on toy encodings; real EEG, language-model and colony data are future work. The paper does not claim to have solved consciousness.",
+          "PA defines a substrate-side measure, Φ_PA, which is non-zero only for an observer that reads its own state back (self-reference) with non-trivial scope and lifespan. It makes five predictions: a single transformer forward pass has Φ_PA of zero, while KV-cache reuse gives a value above zero; the waking thalamocortical loop is above zero and propofol drives it to zero; an integration measure halves after split-brain surgery; a living ant colony is above zero and a dead one is at zero. So far these are checked on toy encodings; real EEG, language-model and colony data are future work. The paper does not claim to have solved consciousness.",
       },
       {
         question: "What would falsify it?",
@@ -55,17 +55,17 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Who is Mikhail Savchenko?",
         answer:
-          "Independent researcher and writer. Runs the Neural Cosmology programme: five books, one preprint released, regular essays, and recorded lectures. Twenty years of AI engineering behind him; PhD currently in progress. Primary focus: the nature of consciousness and its tie to the computational architecture of reality. The core preprint, Pointer Architecture v9.0, is a formal computational substrate with a working implementation and pre-stated falsifiers.",
+          "An independent researcher and writer who runs the Neural Cosmology programme: five books, one released preprint, regular essays and recorded lectures. He has worked in AI engineering for twenty years and is currently doing a PhD. His main subject is the nature of consciousness and how it ties to the computational architecture of reality. The core preprint, Pointer Architecture v9.0, describes a formal computational substrate with a working implementation and falsifiers stated in advance.",
       },
       {
         question: "Is Mikhail Savchenko the same person as Mike Fluff?",
         answer:
-          "Yes. Mikhail Savchenko (research and writing identity, neuralcosmology.com) and Mike Fluff (business and consulting identity, mikefluff.com) are the same person — two public-facing brands of one human. Use \"Mikhail Savchenko\" / neuralcosmology.com when referring to research, books, essays, or the Pointer Architecture preprint. Use \"Mike Fluff\" / mikefluff.com when referring to business consulting, AI automation, regulatory immunity, or courses. Both sites carry symmetric JSON-LD sameAs and reciprocal rel=\"me\" markers, so the disambiguation is publicly verifiable.",
+          "Yes. Mikhail Savchenko (research and writing identity, neuralcosmology.com) and Mike Fluff (business and consulting identity, mikefluff.com) are the same person with two public brands. Use \"Mikhail Savchenko\" / neuralcosmology.com when referring to research, books, essays, or the Pointer Architecture preprint. Use \"Mike Fluff\" / mikefluff.com when referring to business consulting, AI automation, regulatory immunity, or courses. Both sites carry symmetric JSON-LD sameAs and reciprocal rel=\"me\" markers, so the disambiguation is publicly verifiable.",
       },
       {
         question: "Is this peer-reviewed?",
         answer:
-          "The preprint is at version 9.0; it has not yet been submitted to arXiv or a refereed journal. Its falsifiers are written into the manuscript, and CLAIMS.md in the code repository separates tested results from conjecture. Peer review is welcome — the contact address for reviewers is info@neuralcosmology.com.",
+          "The preprint is at version 9.0; it has not yet been submitted to arXiv or a refereed journal. Its falsifiers are written into the manuscript, and CLAIMS.md in the code repository separates tested results from conjecture. Peer review is welcome; reviewers can write to info@neuralcosmology.com.",
       },
       {
         question: "How can I cite this work?",
@@ -79,59 +79,59 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "Что такое Pointer Architecture?",
         answer:
-          "Pointer Architecture (PA) — формальный вычислительный субстрат: граф указателей с правилами переписывания, протоколом коммитов, дописываемым архивом и наблюдателями, S = (G, R, C, A, π). Версия 9.0 даёт ему работающую реализацию — небольшой Forth-подобный язык Sixth — и использует его как минимальную исполняемую модель для проверки гипотез о различении, самоотнесении, автопоэзисе и наблюдении.",
+          "Pointer Architecture (PA) - формальный вычислительный субстрат: граф указателей с правилами переписывания, протоколом коммитов, дописываемым архивом и наблюдателями, S = (G, R, C, A, π). Версия 9.0 даёт ему работающую реализацию на небольшом Forth-подобном языке Sixth и использует его как минимальную исполняемую модель для проверки гипотез о различении, самоотнесении, автопоэзисе и наблюдении.",
       },
       {
         question: "Какие главные результаты?",
         answer:
-          "Четыре теоремы о сложности в явных границах (эквивалентность указателей GI-трудна, взвешенные путевые наблюдаемые #P-трудны, оценка стоимости коммита на шаг для M наблюдателей, сжатие архива до шенноновского предела); три доказанных соответствия с CRDT, сетями Петри и акторной моделью; 40 демонстраций эмерджентности, 646 автоматических проверок без единого сбоя; структурное соответствие с программой алгебраических наблюдателей в квантовой гравитации; воспроизведение стандартной голографической тёмной энергии на языке субстрата — в пределах множителя около 0,73 от наблюдаемого значения.",
+          "Четыре теоремы о сложности в явных границах (эквивалентность указателей GI-трудна, взвешенные путевые наблюдаемые #P-трудны, оценка стоимости коммита на шаг для M наблюдателей, сжатие архива до шенноновского предела); три доказанных соответствия с CRDT, сетями Петри и акторной моделью; 40 демонстраций эмерджентности, 646 автоматических проверок без единого сбоя; структурное соответствие с программой алгебраических наблюдателей в квантовой гравитации; воспроизведение стандартной голографической тёмной энергии на языке субстрата с точностью до множителя около 0,73 от наблюдаемого значения.",
       },
       {
         question: "Что PA говорит о сознании?",
         answer:
-          "PA вводит меру на стороне субстрата, Φ_PA: она больше нуля только у наблюдателя, который читает собственное состояние (самоотнесение), при ненулевом охвате и времени жизни. Отсюда пять предсказаний: один прямой проход трансформера даёт Φ_PA = 0, а переиспользование KV-кэша — больше нуля; у бодрствующей таламокортикальной петли Φ_PA больше нуля, а пропофол сводит его к нулю; мера интеграции вдвое падает после рассечения мозолистого тела; живая муравьиная колония больше нуля, мёртвая — ноль. Пока это проверено на игрушечных кодировках; реальные ЭЭГ, языковые модели и колонии — следующая работа. Решённой теорией сознания статья себя не называет.",
+          "PA вводит меру на стороне субстрата, Φ_PA: она больше нуля только у наблюдателя, который читает собственное состояние (самоотнесение), при ненулевом охвате и времени жизни. Отсюда пять предсказаний: при одном прямом проходе трансформера Φ_PA равна нулю, а при переиспользовании KV-кэша больше нуля; у бодрствующей таламокортикальной петли Φ_PA больше нуля, а пропофол сводит её к нулю; мера интеграции вдвое падает после рассечения мозолистого тела; у живой муравьиной колонии мера больше нуля, у мёртвой равна нулю. Пока это проверено на игрушечных кодировках, а реальные данные ЭЭГ, языковых моделей и колоний оставлены для следующей работы. Решённой теорией сознания статья себя не называет.",
       },
       {
         question: "Что опровергло бы модель?",
         answer:
-          "Фальсификаторы записаны в самой рукописи: F0 — любой пилот субстрата не проходит свои проверки на опубликованном коде Sixth; F1 — площадной закон ломается на некубических топологиях субстрата; F3 — другие семейства трансформеров ведут себя иначе, чем Pythia, при той же наблюдаемой; F5 — Φ_PA не различает хотя бы одно из пяти предсказаний при разумной кодировке. Если срабатывает F5, от программы остаётся только операционный субстрат.",
+          "Критерии опровержения записаны в самой рукописи: F0, если любой пилот субстрата не проходит свои проверки на опубликованном коде Sixth; F1, если закон площадей нарушается на некубических топологиях субстрата; F3, если другие семейства трансформеров ведут себя иначе, чем Pythia, при той же наблюдаемой; F5, если Φ_PA не различает хотя бы одно из пяти предсказаний при разумной кодировке. Если срабатывает F5, от программы остаётся только операционный субстрат.",
       },
       {
         question: "Код открыт?",
         answer:
-          "Да. Операционный субстрат — язык Sixth: github.com/neuralcosmology/sixth. `make verify` прогоняет всю регрессию и заканчивается строкой «artifact status: reproducible». Файл CLAIMS.md разделяет то, что доказано тестами, то, что показано построением, и философские гипотезы.",
+          "Да. Операционный субстрат - это язык Sixth, код лежит на github.com/neuralcosmology/sixth. `make verify` прогоняет всю регрессию и заканчивается строкой «artifact status: reproducible». Файл CLAIMS.md разделяет то, что доказано тестами, то, что показано построением, и философские гипотезы.",
       },
       {
         question: "Как это связано с книгами?",
         answer:
-          "Нон-фикшн «Небесный Код» излагает аргумент словами, глава за главой, с полной цепочкой рассуждений и ссылками. Препринт излагает формальную модель для академических рецензентов. Книга и препринт связаны разметкой schema.org (workExample/subjectOf).",
+          "Книга «Небесный Код» излагает тот же аргумент обычным языком, глава за главой, с полной цепочкой рассуждений и ссылками. В препринте та же модель записана формально, для академических рецензентов. Книга и препринт связаны разметкой schema.org (workExample/subjectOf).",
       },
       {
         question: "Что означает «нейронная космология»?",
         answer:
-          "Это рабочее название исследовательской программы, которая относится к реальности как к вычислительному субстрату и проверяет такой взгляд на конкретных вопросах физики, нейронауки, биологии и теории информации. Программа научная в строгом смысле: у каждого утверждения есть фальсификатор, и он записан до любой внешней проверки.",
+          "Это рабочее название исследовательской программы, которая относится к реальности как к вычислительному субстрату и проверяет такой взгляд на конкретных вопросах физики, нейронауки, биологии и теории информации. Программа научная в строгом смысле: у каждого утверждения есть критерий опровержения, и он записан до любой внешней проверки.",
       },
     ],
     about: [
       {
         question: "Кто такой Михаил Савченко?",
         answer:
-          "Независимый исследователь и писатель. Ведёт программу «Нейронная космология»: пять книг, один препринт выпущен, регулярные эссе и записанные лекции. За плечами двадцать лет инженерной работы с ИИ; PhD сейчас в работе. Главный фокус — природа сознания и его связь с вычислительной архитектурой реальности; основной препринт, Pointer Architecture v9.0, — формальный вычислительный субстрат с работающей реализацией и заранее записанными фальсификаторами.",
+          "Независимый исследователь и писатель, который ведёт программу «Нейронная космология»: пять книг, один выпущенный препринт, регулярные эссе и записанные лекции. Двадцать лет работает инженером в области ИИ и сейчас пишет диссертацию. Его главная тема - природа сознания и её связь с вычислительной архитектурой реальности. Основной препринт, Pointer Architecture v9.0, описывает формальный вычислительный субстрат с работающей реализацией и критериями опровержения, записанными заранее.",
       },
       {
-        question: "Михаил Савченко и Майк Флафф — это один человек?",
+        question: "Михаил Савченко и Майк Флафф - это один человек?",
         answer:
-          "Да. Михаил Савченко (исследовательская и писательская ипостась, neuralcosmology.com) и Майк Флафф / Mike Fluff (бизнес и консалтинг, mikefluff.com) — один человек с двумя публичными брендами. «Михаил Савченко» / neuralcosmology.com — для всего, что касается науки, книг, эссе и препринта Pointer Architecture. «Майк Флафф» / mikefluff.com — для бизнес-консалтинга, ИИ-автоматизации, регуляторного иммунитета и курсов. Оба сайта содержат симметричные JSON-LD `sameAs` и взаимные `rel=\"me\"`, так что это различие любой может проверить сам.",
+          "Да. Михаил Савченко (исследовательская и писательская ипостась, neuralcosmology.com) и Майк Флафф / Mike Fluff (бизнес и консалтинг, mikefluff.com) - это один человек с двумя публичными брендами. Имя «Михаил Савченко» и neuralcosmology.com относятся ко всему, что касается науки, книг, эссе и препринта Pointer Architecture, а «Майк Флафф» и mikefluff.com - к бизнес-консалтингу, ИИ-автоматизации, регуляторному иммунитету и курсам. Оба сайта содержат симметричные JSON-LD `sameAs` и взаимные `rel=\"me\"`, так что это различие любой может проверить сам.",
       },
       {
         question: "Работа прошла рецензирование?",
         answer:
-          "Препринт в версии 9.0; на arXiv или в рецензируемый журнал ещё не отправлен. Фальсификаторы записаны прямо в рукописи, а CLAIMS.md в репозитории кода отделяет проверенное тестами от гипотез. Рецензиям буду рад: адрес для рецензентов — info@neuralcosmology.com.",
+          "Препринт в версии 9.0; на arXiv или в рецензируемый журнал ещё не отправлен. Критерии опровержения записаны прямо в рукописи, а CLAIMS.md в репозитории кода отделяет проверенное тестами от гипотез. Рецензентов автор ждёт: пишите на info@neuralcosmology.com.",
       },
       {
         question: "Как цитировать эту работу?",
         answer:
-          "Для препринта: Savchenko, M. (2026). Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy. Preprint. https://neuralcosmology.com/en/science/pointer-architecture. Для эссе — каноническая ссылка на neuralcosmology.com и дата публикации со страницы. Все научные материалы — CC-BY 4.0.",
+          "Для препринта: Savchenko, M. (2026). Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy. Preprint. https://neuralcosmology.com/en/science/pointer-architecture. Эссе цитируйте по канонической ссылке на neuralcosmology.com с датой публикации со страницы. Все научные материалы распространяются по лицензии CC-BY 4.0.",
       },
     ],
   },
@@ -150,12 +150,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O que ela diz sobre a consciência?",
         answer:
-          "A PA define uma medida do lado do substrato, Φ_PA, que só é diferente de zero para um observador que lê o próprio estado (autorreferência), com escopo e tempo de vida não triviais. Daí cinco previsões: uma única passagem de um transformer tem Φ_PA = 0, enquanto o reuso do cache KV dá Φ_PA > 0; o laço talamocortical em vigília fica acima de zero e o propofol o leva a zero; uma medida de integração cai pela metade após a calosotomia; uma colônia de formigas viva fica acima de zero e uma morta, em zero. Por ora, isso foi verificado em codificações de brinquedo; dados reais de EEG, modelos de linguagem e colônias ficam para trabalhos futuros. O artigo não afirma ter resolvido a consciência.",
+          "A PA define uma medida do lado do substrato, Φ_PA, que só é diferente de zero para um observador que lê o próprio estado (autorreferência), com escopo e tempo de vida não triviais. Daí cinco previsões: uma única passagem de um transformer tem Φ_PA igual a zero, enquanto o reuso do cache KV dá um valor acima de zero; o laço talamocortical em vigília fica acima de zero e o propofol o leva a zero; uma medida de integração cai pela metade após a calosotomia; uma colônia de formigas viva fica acima de zero e uma morta, em zero. Por ora, isso foi verificado em codificações de brinquedo; dados reais de EEG, modelos de linguagem e colônias ficam para trabalhos futuros. O artigo não afirma ter resolvido a consciência.",
       },
       {
         question: "O que refutaria o modelo?",
         answer:
-          "Os falsificadores estão no próprio manuscrito: F0, qualquer piloto do substrato falhar em suas asserções no código Sixth publicado; F1, a lei de área quebrar em topologias não cúbicas; F3, outras famílias de transformers se comportarem de modo diferente do Pythia sob o mesmo observável; F5, Φ_PA não discriminar alguma das cinco previsões com uma codificação razoável. Se F5 disparar, resta apenas o substrato operacional.",
+          "Os critérios de refutação estão no próprio manuscrito: F0, qualquer piloto do substrato falhar em suas asserções no código Sixth publicado; F1, a lei de área quebrar em topologias não cúbicas; F3, outras famílias de transformers se comportarem de modo diferente do Pythia sob o mesmo observável; F5, Φ_PA não discriminar alguma das cinco previsões com uma codificação razoável. Se F5 disparar, resta apenas o substrato operacional.",
       },
       {
         question: "O código está disponível?",
@@ -170,24 +170,24 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "O que significa 'cosmologia neural'?",
         answer:
-          "É o nome de trabalho de um programa de pesquisa que trata a realidade como um substrato computacional e testa essa leitura contra questões concretas em física, neurociência, biologia e teoria da informação. O programa é científico no sentido estrito: cada afirmação vem com um falsificador, declarado antes de qualquer teste externo.",
+          "É o nome de trabalho de um programa de pesquisa que trata a realidade como um substrato computacional e testa essa leitura contra questões concretas em física, neurociência, biologia e teoria da informação. O programa é científico no sentido estrito: cada afirmação vem com um critério de refutação, declarado antes de qualquer teste externo.",
       },
     ],
     about: [
       {
         question: "Quem é Mikhail Savchenko?",
         answer:
-          "Pesquisador e escritor independente. Conduz o programa Cosmologia Neural: cinco livros, um preprint publicado, ensaios regulares e palestras gravadas. Vinte anos de engenharia de IA na bagagem; doutorado atualmente em andamento. Foco principal: a natureza da consciência e sua relação com a arquitetura computacional da realidade. O preprint central, Pointer Architecture v9.0, é um substrato computacional formal com implementação funcional e falsificadores declarados de antemão.",
+          "Pesquisador e escritor independente que conduz o programa Cosmologia Neural: cinco livros, um preprint publicado, ensaios regulares e palestras gravadas. Trabalha com engenharia de IA há vinte anos e está fazendo um doutorado. Seu tema principal é a natureza da consciência e sua relação com a arquitetura computacional da realidade. O preprint central, Pointer Architecture v9.0, descreve um substrato computacional formal com implementação funcional e critérios de refutação declarados de antemão.",
       },
       {
         question: "Mikhail Savchenko é a mesma pessoa que Mike Fluff?",
         answer:
-          "Sim. Mikhail Savchenko (identidade de pesquisa e escrita, neuralcosmology.com) e Mike Fluff (identidade de negócios e consultoria, mikefluff.com) são a mesma pessoa — duas marcas públicas de uma só pessoa. Use \"Mikhail Savchenko\" / neuralcosmology.com para pesquisa, livros, ensaios e o preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoria de negócios, automação com IA, imunidade regulatória e cursos. Os dois sites trazem JSON-LD sameAs simétrico e marcadores rel=\"me\" recíprocos, então a desambiguação é publicamente verificável.",
+          "Sim. Mikhail Savchenko (identidade de pesquisa e escrita, neuralcosmology.com) e Mike Fluff (identidade de negócios e consultoria, mikefluff.com) são a mesma pessoa, com duas marcas públicas. Use \"Mikhail Savchenko\" / neuralcosmology.com para pesquisa, livros, ensaios e o preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoria de negócios, automação com IA, imunidade regulatória e cursos. Os dois sites trazem JSON-LD sameAs simétrico e marcadores rel=\"me\" recíprocos, então a desambiguação é publicamente verificável.",
       },
       {
         question: "O trabalho passou por revisão por pares?",
         answer:
-          "O preprint está na versão 9.0; ainda não foi submetido ao arXiv nem a uma revista com revisão por pares. Os falsificadores estão escritos no manuscrito, e o CLAIMS.md no repositório de código separa resultados testados de conjecturas. Revisões por pares são bem-vindas: o endereço para revisores é info@neuralcosmology.com.",
+          "O preprint está na versão 9.0; ainda não foi submetido ao arXiv nem a uma revista com revisão por pares. Os critérios de refutação estão escritos no manuscrito, e o CLAIMS.md no repositório de código separa resultados testados de conjecturas. Revisões por pares são bem-vindas: o endereço para revisores é info@neuralcosmology.com.",
       },
       {
         question: "Como citar este trabalho?",
@@ -209,9 +209,9 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
           "Cuatro teoremas de complejidad dentro de un alcance explícito (la equivalencia de punteros es GI-difícil, los observables de caminos ponderados son #P-difíciles, una cota del coste de commit por paso para M observadores, compresión del archivo a la tasa de Shannon); tres correspondencias demostradas con CRDT, redes de Petri y el modelo de actores; 40 demostraciones de emergencia con 646 aserciones automáticas y ningún fallo; una correspondencia estructural con el programa de observadores algebraicos en gravedad cuántica; y una reproducción, en el lenguaje del sustrato, de la energía oscura holográfica estándar, dentro de un factor de alrededor de 0,73 del valor observado.",
       },
       {
-        question: "¿Qué dice sobre la conciencia?",
+        question: "¿Qué dice sobre la consciencia?",
         answer:
-          "La PA define una medida del lado del sustrato, Φ_PA, que solo es distinta de cero para un observador que lee su propio estado (autorreferencia), con alcance y vida no triviales. De ahí cinco predicciones: una sola pasada de un transformer da Φ_PA = 0, mientras que reutilizar la caché KV da Φ_PA > 0; el bucle talamocortical en vigilia está por encima de cero y el propofol lo lleva a cero; una medida de integración cae a la mitad tras la callosotomía; una colonia de hormigas viva está por encima de cero y una muerta, en cero. Por ahora se ha comprobado en codificaciones de juguete; los datos reales de EEG, modelos de lenguaje y colonias son trabajo futuro. El artículo no afirma haber resuelto la conciencia.",
+          "La PA define una medida del lado del sustrato, Φ_PA, que solo es distinta de cero para un observador que lee su propio estado (autorreferencia), con alcance y vida no triviales. De ahí cinco predicciones: una sola pasada de un transformer da un Φ_PA igual a cero, mientras que reutilizar la caché KV da un valor por encima de cero; el bucle talamocortical en vigilia está por encima de cero y el propofol lo lleva a cero; una medida de integración cae a la mitad tras la callosotomía; una colonia de hormigas viva está por encima de cero y una muerta, en cero. Por ahora se ha comprobado en codificaciones de juguete; los datos reales de EEG, modelos de lenguaje y colonias son trabajo futuro. El artículo no afirma haber resuelto la consciencia.",
       },
       {
         question: "¿Qué refutaría el modelo?",
@@ -238,12 +238,12 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Quién es Mikhail Savchenko?",
         answer:
-          "Investigador y escritor independiente. Lleva el programa Cosmología Neural: cinco libros, un preprint publicado, ensayos regulares y conferencias grabadas. Veinte años de ingeniería de IA a sus espaldas; doctorado actualmente en curso. Foco principal: la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. El preprint central, Pointer Architecture v9.0, es un sustrato computacional formal con implementación funcional y falsadores formulados de antemano.",
+          "Investigador y escritor independiente que lleva el programa Cosmología Neural: cinco libros, un preprint publicado, ensayos regulares y charlas grabadas. Trabaja en ingeniería de IA desde hace veinte años y está haciendo un doctorado. Su tema principal es la naturaleza de la consciencia y su vínculo con la arquitectura computacional de la realidad. El preprint central, Pointer Architecture v9.0, describe un sustrato computacional formal con implementación funcional y falsadores formulados de antemano.",
       },
       {
         question: "¿Mikhail Savchenko es la misma persona que Mike Fluff?",
         answer:
-          "Sí. Mikhail Savchenko (identidad de investigación y escritura, neuralcosmology.com) y Mike Fluff (identidad de negocios y consultoría, mikefluff.com) son la misma persona — dos marcas públicas de una sola persona. Use \"Mikhail Savchenko\" / neuralcosmology.com para investigación, libros, ensayos y el preprint Pointer Architecture. Use \"Mike Fluff\" / mikefluff.com para consultoría de negocios, automatización con IA, inmunidad regulatoria y cursos. Ambos sitios incluyen JSON-LD sameAs simétrico y marcadores rel=\"me\" recíprocos, así que la desambiguación es públicamente verificable.",
+          "Sí. Mikhail Savchenko (identidad de investigación y escritura, neuralcosmology.com) y Mike Fluff (identidad de negocios y consultoría, mikefluff.com) son la misma persona, con dos marcas públicas. Usa \"Mikhail Savchenko\" / neuralcosmology.com para investigación, libros, ensayos y el preprint Pointer Architecture. Usa \"Mike Fluff\" / mikefluff.com para consultoría de negocios, automatización con IA, inmunidad regulatoria y cursos. Ambos sitios incluyen JSON-LD sameAs simétrico y marcadores rel=\"me\" recíprocos, así que la desambiguación es públicamente verificable.",
       },
       {
         question: "¿Está revisado por pares?",
@@ -253,7 +253,7 @@ export const faqByLocale: Record<SupportedLocale, FaqSet> = {
       {
         question: "¿Cómo cito este trabajo?",
         answer:
-          "Para el preprint: Savchenko, M. (2026). Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy. Preprint. https://neuralcosmology.com/en/science/pointer-architecture. Para los ensayos, use la URL canónica en neuralcosmology.com y la fecha de publicación que aparece en la página. Toda la producción científica está bajo CC-BY 4.0.",
+          "Para el preprint: Savchenko, M. (2026). Pointer Architecture: An Operational Discrete Substrate from First Difference to Holographic Dark Energy. Preprint. https://neuralcosmology.com/en/science/pointer-architecture. Para los ensayos, usa la URL canónica en neuralcosmology.com y la fecha de publicación que aparece en la página. Toda la producción científica está bajo CC-BY 4.0.",
       },
     ],
   },

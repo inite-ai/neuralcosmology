@@ -316,7 +316,7 @@ const STAT_LABELS: Record<SupportedLocale, [string, string, string, string]> = {
   en: ["books", "preprint", "essays", "lectures"],
   ru: ["книги", "препринт", "эссе", "лекции"],
   pt: ["livros", "preprint", "ensaios", "palestras"],
-  es: ["libros", "preprint", "ensayos", "conferencias"],
+  es: ["libros", "preprint", "ensayos", "charlas"],
 };
 
 export function HomeStats({ locale, counts }: { locale: SupportedLocale; counts: [number, number, number, number] }) {
@@ -513,10 +513,10 @@ export function HomeBooks({ locale }: { locale: SupportedLocale }) {
 // ---------- FAQ: ячейки с плюсом ----------
 
 const FAQ_TITLE: Record<SupportedLocale, { label: string; title: string; em: string }> = {
-  en: { label: "FAQ", title: "Questions people ask.", em: "Answered plainly." },
-  ru: { label: "Вопросы", title: "Что обычно спрашивают.", em: "Отвечаю прямо." },
-  pt: { label: "Perguntas", title: "O que costumam perguntar.", em: "Respostas diretas." },
-  es: { label: "Preguntas", title: "Lo que suelen preguntar.", em: "Respuestas directas." },
+  en: { label: "FAQ", title: "What people usually ask", em: "and what I answer." },
+  ru: { label: "Вопросы", title: "Что обычно спрашивают", em: "и что я отвечаю." },
+  pt: { label: "Perguntas", title: "O que costumam perguntar", em: "e o que eu respondo." },
+  es: { label: "Preguntas", title: "Lo que suelen preguntar", em: "y lo que respondo." },
 };
 
 export function HomeFaq({ locale }: { locale: SupportedLocale }) {
@@ -549,32 +549,32 @@ export function HomeFaq({ locale }: { locale: SupportedLocale }) {
 const PRACTICE: Record<SupportedLocale, { eyebrow: string; title: string; body: string; bullets: string[]; cta: string; ctaSecondary: string }> = {
   en: {
     eyebrow: "The applied side",
-    title: "Where the same discipline meets client work",
-    body: "Away from the research desk, the same person runs a business and consulting practice as Mike Fluff, Business Doctor: AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery and three courses. The same scientific habits, applied at the pace of client work.",
-    bullets: ["AI automation & integration", "Regulatory immunity (AI privacy / compliance architecture)", "Three courses ($19 each)"],
+    title: "The same discipline in client work",
+    body: "Away from research, I run a business and consulting practice as Mike Fluff, Business Doctor: AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery and three courses. I bring the same scientific habits there, at the pace client work demands.",
+    bullets: ["AI automation and integration", "Regulatory immunity (AI privacy / compliance architecture)", "Three courses ($19 each)"],
     cta: "Visit mikefluff.com",
     ctaSecondary: "The essay that links the two",
   },
   ru: {
     eyebrow: "Прикладная сторона",
-    title: "Где та же дисциплина встречается с клиентской работой",
-    body: "Помимо исследований, тот же человек ведёт бизнес-практику под именем Mike Fluff, Business Doctor: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, безопасность ИИ, заложенная ещё при проектировании), технологическая хирургия, три курса. Та же научная дисциплина, только в темпе клиентской работы.",
+    title: "Та же дисциплина в работе с клиентами",
+    body: "Помимо исследований я веду бизнес-практику под именем Mike Fluff, Business Doctor: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, безопасность ИИ, заложенная ещё при проектировании), технологическая хирургия и три курса. Научные привычки там те же, только работать приходится в темпе клиентов.",
     bullets: ["ИИ-автоматизация и интеграции", "Регуляторный иммунитет (защита данных и соответствие требованиям для ИИ)", "Три курса ($19 каждый)"],
     cta: "Открыть mikefluff.com",
     ctaSecondary: "Эссе о том, как это связано",
   },
   pt: {
     eyebrow: "O lado aplicado",
-    title: "Onde a mesma disciplina encontra o trabalho com clientes",
-    body: "Longe da mesa de pesquisa, a mesma pessoa conduz uma prática de negócios e consultoria como Mike Fluff, Business Doctor: automação com IA, imunidade regulatória (dados pessoais, GDPR/LGPD/DPA, fluxos de IA seguros desde a concepção), cirurgia tecnológica e três cursos. Os mesmos hábitos científicos, no ritmo do trabalho com clientes.",
+    title: "A mesma disciplina no trabalho com clientes",
+    body: "Fora da pesquisa, conduzo uma consultoria de negócios como Mike Fluff, Business Doctor: automação com IA, imunidade regulatória (dados pessoais, GDPR/LGPD/DPA, fluxos de IA seguros desde a concepção), cirurgia tecnológica e três cursos. Levo para lá os mesmos hábitos científicos, no ritmo que o trabalho com clientes exige.",
     bullets: ["Automação com IA e integrações", "Imunidade regulatória (privacidade/compliance para IA)", "Três cursos ($19 cada)"],
     cta: "Abrir mikefluff.com",
     ctaSecondary: "O ensaio que liga os dois lados",
   },
   es: {
     eyebrow: "El lado aplicado",
-    title: "Donde la misma disciplina encuentra el trabajo con clientes",
-    body: "Lejos de la mesa de investigación, la misma persona lleva una práctica de negocios y consultoría como Mike Fluff, Business Doctor: automatización con IA, inmunidad regulatoria (datos personales, GDPR/LGPD/DPA, flujos de IA seguros desde el diseño), cirugía tecnológica y tres cursos. Los mismos hábitos científicos, al ritmo del trabajo con clientes.",
+    title: "La misma disciplina en el trabajo con clientes",
+    body: "Fuera de la investigación, llevo una consultoría de negocios como Mike Fluff, Business Doctor: automatización con IA, inmunidad regulatoria (datos personales, GDPR/LGPD/DPA, flujos de IA seguros desde el diseño), cirugía tecnológica y tres cursos. Allí aplico los mismos hábitos científicos, al ritmo que exige el trabajo con clientes.",
     bullets: ["Automatización con IA e integraciones", "Inmunidad regulatoria (privacidad/compliance para IA)", "Tres cursos ($19 cada uno)"],
     cta: "Abrir mikefluff.com",
     ctaSecondary: "El ensayo que une ambos lados",

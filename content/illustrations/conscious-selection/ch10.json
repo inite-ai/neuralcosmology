@@ -22,8 +22,8 @@
       },
       "caption": {
         "ru": "Реликтовое излучение по данным спутника «Планк»: свет Вселенной в возрасте трёхсот восьмидесяти тысяч лет.",
-        "en": "The cosmic microwave background as measured by Planck: the light of the universe at three hundred and eighty thousand years old.",
-        "pt": "A radiação cósmica de fundo medida pelo Planck: a luz do universo aos trezentos e oitenta mil anos.",
+        "en": "The cosmic microwave background as measured by Planck: the light of the universe when it was three hundred and eighty thousand years old.",
+        "pt": "A radiação cósmica de fundo medida pelo Planck: a luz do universo aos trezentos e oitenta mil anos de idade.",
         "es": "El fondo cósmico de microondas medido por Planck: la luz del universo a los trescientos ochenta mil años."
       },
       "width": 1600,
@@ -43,7 +43,7 @@
       "alt": {
         "ru": "Домашний стол в три часа ночи: монитор с мелкими строчками кода, остывший чай, скомканные записки, силуэт человека, обхватившего голову руками.",
         "en": "A home desk at three in the morning: a monitor of tiny code, cold tea, crumpled notes, a man's silhouette with his head in his hands.",
-        "pt": "Uma secretária às três da manhã: um monitor com código minúsculo, chá frio, notas amarrotadas, a silhueta de um homem com a cabeça entre as mãos.",
+        "pt": "Uma mesa de trabalho às três da manhã: um monitor com código minúsculo, chá frio, anotações amassadas, a silhueta de um homem com a cabeça entre as mãos.",
         "es": "Un escritorio a las tres de la mañana: un monitor con código diminuto, té frío, notas arrugadas, la silueta de un hombre con la cabeza entre las manos."
       },
       "width": 1536,

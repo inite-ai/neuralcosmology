@@ -10,8 +10,8 @@
       "prompt": "A man stands on the wooden porch of an old dacha at dawn, seen from behind, breathing in cold air, looking at a silent snowy forest; a grey cat sits on the step beside him.",
       "alt": {
         "ru": "Мужчина со спины стоит на деревянном крыльце старой дачи на рассвете и смотрит на тихий заснеженный лес; рядом на ступеньке сидит серый кот.",
-        "en": "A man from behind on the wooden porch of an old dacha at dawn, looking at a silent snowy forest, a grey cat on the step beside him.",
-        "pt": "Um homem de costas no alpendre de madeira de uma velha dacha ao amanhecer, a olhar para uma floresta silenciosa com neve, um gato cinzento no degrau ao lado.",
+        "en": "A man seen from behind on the wooden porch of an old dacha at dawn, looking at a silent snowy forest, a grey cat on the step beside him.",
+        "pt": "Um homem de costas na varanda de madeira de uma velha dacha ao amanhecer, olhando para uma floresta silenciosa com neve, um gato cinzento no degrau ao lado.",
         "es": "Un hombre de espaldas en el porche de madera de una vieja dacha al amanecer, mirando un bosque nevado y silencioso, un gato gris en el escalón a su lado."
       },
       "width": 1536,
@@ -29,10 +29,10 @@
       "status": "draft",
       "prompt": "A forest path in late November with light snow: three people walk toward a clearing, and in the middle of the clearing ahead of them already stands a young woman with dark hair, still and waiting, as if she had always been there. Seen from behind the walkers.",
       "alt": {
-        "ru": "Лесная тропа в конце ноября, лёгкий снег: трое идут к поляне, а посреди неё их уже ждёт темноволосая девушка, будто стояла там всегда.",
-        "en": "A forest path in late November with light snow: three people walk toward a clearing where a dark-haired young woman already stands waiting, as if she had always been there.",
-        "pt": "Um trilho na floresta no fim de novembro com neve leve: três pessoas caminham para uma clareira onde uma jovem de cabelo escuro já espera, como se sempre lá estivesse.",
-        "es": "Un sendero en el bosque a finales de noviembre con nieve ligera: tres personas caminan hacia un claro donde ya espera una joven de pelo oscuro, como si siempre hubiera estado allí."
+        "ru": "Лесная тропа в конце ноября, лёгкий снег: трое идут к поляне, а посреди неё их уже ждёт темноволосая девушка.",
+        "en": "A forest path in late November with light snow: three people walk towards a clearing where a dark-haired young woman already stands waiting.",
+        "pt": "Uma trilha na floresta no fim de novembro, com pouca neve: três pessoas caminham para uma clareira onde uma jovem de cabelo escuro já espera.",
+        "es": "Un sendero en el bosque a finales de noviembre con nieve ligera: tres personas caminan hacia un claro donde ya espera una joven de pelo oscuro."
       },
       "width": 1536,
       "height": 1024,
@@ -51,8 +51,8 @@
       "alt": {
         "ru": "Вечер на крыльце дачи в тёмном лесу: четверо молодых людей в куртках сидят на ступеньках и перилах у фонаря, за кругом света чёрная стена леса.",
         "en": "Evening on a dacha porch in a dark forest: four young people in coats on the steps and rail by a lantern, the forest a black wall beyond the light.",
-        "pt": "Noite no alpendre de uma dacha numa floresta escura: quatro jovens de casaco nos degraus e no corrimão junto a uma lanterna, a floresta um muro negro.",
-        "es": "Noche en el porche de una dacha en un bosque oscuro: cuatro jóvenes con abrigo en los escalones y la barandilla junto a un farol, el bosque un muro negro."
+        "pt": "Noite na varanda de uma dacha numa floresta escura: quatro jovens de casaco nos degraus e no corrimão, perto de um lampião; além da luz, a floresta é um muro negro.",
+        "es": "Noche en el porche de una dacha en un bosque oscuro: cuatro jóvenes con abrigo en los escalones y la barandilla junto a un farol; más allá de la luz, el bosque es un muro negro."
       },
       "width": 1536,
       "height": 1024,

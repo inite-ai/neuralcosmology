@@ -36,13 +36,13 @@
       "alt": {
         "ru": "Снимок глазного дна: оранжевый круг сетчатки, от светлого диска зрительного нерва расходятся сосуды, в центре тёмное пятно.",
         "en": "A fundus photograph: the orange disc of the retina, vessels branching from the pale optic disc, a darker spot at the centre.",
-        "pt": "Uma fotografia do fundo do olho: o disco alaranjado da retina, vasos a partir do disco ótico claro, uma mancha escura ao centro.",
+        "pt": "Uma fotografia do fundo do olho: o disco alaranjado da retina, vasos saindo do disco óptico claro, uma mancha escura no centro.",
         "es": "Una fotografía del fondo de ojo: el disco anaranjado de la retina, vasos que parten del disco óptico claro, una mancha oscura en el centro."
       },
       "caption": {
         "ru": "Глазное дно здорового глаза. Из светлого диска выходит зрительный нерв: около миллиона волокон на сто двадцать миллионов клеток.",
         "en": "The fundus of a healthy eye. The optic nerve leaves through the pale disc: about a million fibres for a hundred and twenty million cells.",
-        "pt": "O fundo de um olho saudável. O nervo ótico sai pelo disco claro: cerca de um milhão de fibras para cento e vinte milhões de células.",
+        "pt": "O fundo de um olho saudável. O nervo óptico sai pelo disco claro: cerca de um milhão de fibras para cento e vinte milhões de células.",
         "es": "El fondo de un ojo sano. El nervio óptico sale por el disco claro: cerca de un millón de fibras para ciento veinte millones de células."
       },
       "width": 900,
@@ -60,9 +60,9 @@
       "status": "draft",
       "prompt": "A busy railway station hall photographed so that only a tiny circle in the centre, the size of a thumbnail at arm's length, is perfectly sharp: one traveller's suitcase handle. Everything outside that circle dissolves progressively into soft blur and grain toward the edges.",
       "alt": {
-        "ru": "Вокзальный зал, в котором резок только крошечный круг в центре — ручка чемодана; всё остальное к краям расплывается.",
-        "en": "A station hall where only a tiny circle at the centre is sharp, a suitcase handle; everything else blurs toward the edges.",
-        "pt": "Um átrio de estação onde só um pequeno círculo ao centro está nítido, a pega de uma mala; tudo o resto se desfoca para as margens.",
+        "ru": "Вокзальный зал, в котором резко видна только ручка чемодана в крошечном круге в центре; всё остальное к краям расплывается.",
+        "en": "A station hall where only a tiny circle at the centre is sharp, a suitcase handle; everything else blurs towards the edges.",
+        "pt": "Um saguão de estação onde só um pequeno círculo no centro está nítido, a alça de uma mala; todo o resto vai ficando desfocado em direção às bordas.",
         "es": "Un vestíbulo de estación donde solo un pequeño círculo central está nítido, el asa de una maleta; todo lo demás se desenfoca hacia los bordes."
       },
       "width": 1536,

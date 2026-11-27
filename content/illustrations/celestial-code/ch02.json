@@ -11,7 +11,7 @@
       "alt": {
         "ru": "Стол астронома начала 1980-х: на большом листе вручную нанесён веер из тысяч точек, которые складываются в пузыри, стены и нити; рядом линейка и перфокарты.",
         "en": "An astronomer's desk in the early 1980s: a large sheet with a hand-plotted fan of thousands of dots forming bubbles, walls and filaments; a ruler and punched cards beside it.",
-        "pt": "A secretária de um astrónomo no início dos anos 80: uma folha grande com um leque de milhares de pontos desenhados à mão, formando bolhas, paredes e filamentos; régua e cartões perfurados ao lado.",
+        "pt": "A mesa de trabalho de um astrônomo no início dos anos 80: uma folha grande com um leque de milhares de pontos desenhados à mão, formando bolhas, paredes e filamentos; régua e cartões perfurados ao lado.",
         "es": "La mesa de un astrónomo a principios de los ochenta: una hoja grande con un abanico de miles de puntos trazados a mano que forman burbujas, paredes y filamentos; una regla y tarjetas perforadas al lado."
       },
       "width": 1536,
@@ -37,13 +37,13 @@
       "alt": {
         "ru": "Жёлтый слизевик расползается по поверхности сетью ветвящихся прожилок.",
         "en": "A yellow slime mould spreading over a surface in a network of branching veins.",
-        "pt": "Um bolor limoso amarelo a espalhar-se numa rede de veias ramificadas.",
+        "pt": "Um bolor limoso amarelo se espalhando numa rede de veias ramificadas.",
         "es": "Un moho mucilaginoso amarillo extendiéndose en una red de venas ramificadas."
       },
       "caption": {
         "ru": "Слизевик Physarum polycephalum: одна клетка без нервной системы, которая прокладывает к пище сеть кратчайших путей.",
         "en": "The slime mould Physarum polycephalum: a single cell with no nervous system that lays down a network of shortest paths to food.",
-        "pt": "O bolor limoso Physarum polycephalum: uma única célula sem sistema nervoso que traça uma rede de caminhos mais curtos até ao alimento.",
+        "pt": "O bolor limoso Physarum polycephalum: uma única célula sem sistema nervoso que traça uma rede de caminhos mais curtos até o alimento.",
         "es": "El moho mucilaginoso Physarum polycephalum: una sola célula sin sistema nervioso que traza una red de caminos más cortos hacia el alimento."
       },
       "width": 1600,
@@ -69,7 +69,7 @@
       "alt": {
         "ru": "Карта космической паутины: светящиеся нити, соединяющие скопления галактик, на тёмном фоне.",
         "en": "A map of the cosmic web: glowing filaments connecting clusters of galaxies on a dark background.",
-        "pt": "Um mapa da teia cósmica: filamentos luminosos a ligar enxames de galáxias sobre fundo escuro.",
+        "pt": "Um mapa da teia cósmica: filamentos luminosos ligando aglomerados de galáxias sobre fundo escuro.",
         "es": "Un mapa de la red cósmica: filamentos luminosos que conectan cúmulos de galaxias sobre fondo oscuro."
       },
       "caption": {

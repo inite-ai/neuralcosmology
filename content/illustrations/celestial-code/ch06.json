@@ -11,7 +11,7 @@
       "alt": {
         "ru": "Пустой номер старой гостиницы на Адриатике в 1906 году: узкая кровать, стол с бумагами и очками, высокие ставни приоткрыты на бледное море.",
         "en": "An empty old hotel room on the Adriatic in 1906: a narrow bed, a desk with papers and spectacles, tall shutters half open onto a pale sea.",
-        "pt": "Um quarto vazio de um velho hotel no Adriático em 1906: cama estreita, secretária com papéis e óculos, portadas altas entreabertas para um mar pálido.",
+        "pt": "Um quarto vazio de um velho hotel no Adriático em 1906: cama estreita, escrivaninha com papéis e óculos, venezianas altas entreabertas para um mar pálido.",
         "es": "Una habitación vacía de un viejo hotel en el Adriático en 1906: cama estrecha, escritorio con papeles y gafas, contraventanas altas entreabiertas a un mar pálido."
       },
       "width": 1536,
@@ -35,8 +35,8 @@
       },
       "alt": {
         "ru": "Групповая чёрно-белая фотография: три ряда мужчин в костюмах и одна женщина на фоне здания.",
-        "en": "A black-and-white group photograph: three rows of men in suits and one woman before a building.",
-        "pt": "Uma fotografia de grupo a preto e branco: três filas de homens de fato e uma mulher diante de um edifício.",
+        "en": "A black-and-white group photograph: three rows of men in suits and one woman in front of a building.",
+        "pt": "Uma foto de grupo em preto e branco: três filas de homens de terno e uma mulher diante de um prédio.",
         "es": "Una fotografía de grupo en blanco y negro: tres filas de hombres trajeados y una mujer ante un edificio."
       },
       "caption": {
@@ -60,10 +60,10 @@
       "status": "draft",
       "prompt": "A large flat grid of identical simple switches laid out across a dark floor like a parquet, thousands of them, each with a tiny pilot light; all lights on. It looks vast and utterly unconscious.",
       "alt": {
-        "ru": "Огромная плоская решётка одинаковых простых переключателей на тёмном полу, у каждого крошечный огонёк; всё горит, и ничего не происходит.",
-        "en": "A vast flat grid of identical simple switches on a dark floor, each with a tiny pilot light; all lit, and nothing happening.",
-        "pt": "Uma vasta grelha plana de interruptores simples idênticos num chão escuro, cada um com uma luzinha; tudo aceso e nada a acontecer.",
-        "es": "Una vasta rejilla plana de interruptores simples idénticos sobre un suelo oscuro, cada uno con una lucecita; todo encendido y nada sucede."
+        "ru": "Огромная плоская решётка одинаковых простых переключателей на тёмном полу, у каждого крошечный огонёк, и все огоньки горят.",
+        "en": "A vast flat grid of identical simple switches on a dark floor, each with a tiny pilot light, all of them lit.",
+        "pt": "Uma vasta grade plana de interruptores simples idênticos num chão escuro, cada um com uma luzinha, todas acesas.",
+        "es": "Una vasta rejilla plana de interruptores simples idénticos sobre un suelo oscuro, cada uno con una lucecita, todas encendidas."
       },
       "width": 1536,
       "height": 1024,

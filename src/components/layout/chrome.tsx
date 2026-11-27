@@ -11,8 +11,8 @@ const READER_ROUTE = /^\/[a-z]{2}\/read\/[^/]+\/[^/]+/;
 const BANNER_ID = "library-2026-09";
 
 const BANNER: Record<SupportedLocale, { lead: string; more: string; cta: string; close: string }> = {
-  en: { lead: "New: the online library.", more: "Opening chapters of every book are free.", cta: "Start reading", close: "Dismiss" },
-  ru: { lead: "Новое: онлайн-библиотека.", more: "Первые главы всех книг — бесплатно.", cta: "Читать", close: "Закрыть" },
+  en: { lead: "New: the online library.", more: "The opening chapters of every book are free.", cta: "Start reading", close: "Dismiss" },
+  ru: { lead: "Новое: онлайн-библиотека.", more: "Первые главы всех книг открыты бесплатно.", cta: "Читать", close: "Закрыть" },
   pt: { lead: "Novo: a biblioteca online.", more: "Os primeiros capítulos de todos os livros são gratuitos.", cta: "Ler agora", close: "Fechar" },
   es: { lead: "Nuevo: la biblioteca en línea.", more: "Los primeros capítulos de todos los libros son gratis.", cta: "Leer", close: "Cerrar" },
 };

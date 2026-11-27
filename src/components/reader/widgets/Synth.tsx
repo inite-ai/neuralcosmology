@@ -10,9 +10,9 @@ import type { Dict, WidgetProps } from "./kit";
 
 const T: Dict<{ toggle: string; on: string; off: string; hint: string; knobs: string[]; minutes: (m: string) => string }> = {
   ru: { toggle: "Тумблер", on: "гудит", off: "выключен", knobs: ["первая ручка", "вторая ручка", "третья ручка"], minutes: (m) => `работает ${m}`, hint: "Включите тумблер и покрутите ручки: тяните вверх-вниз или стрелками. Подписей нет, как у Карла. Звук низкий, сначала убавьте громкость." },
-  en: { toggle: "Toggle", on: "humming", off: "off", knobs: ["first knob", "second knob", "third knob"], minutes: (m) => `running ${m}`, hint: "Flip the toggle and turn the knobs: drag up and down or use the arrow keys. No labels, just like Karl’s. The sound is low; turn your volume down first." },
+  en: { toggle: "Toggle", on: "humming", off: "off", knobs: ["first knob", "second knob", "third knob"], minutes: (m) => `on for ${m}`, hint: "Flip the toggle and turn the knobs: drag up and down or use the arrow keys. No labels, just like Karl’s. The sound is low; turn your volume down first." },
   pt: { toggle: "Interruptor", on: "zumbindo", off: "desligado", knobs: ["primeiro botão", "segundo botão", "terceiro botão"], minutes: (m) => `ligado há ${m}`, hint: "Ligue o interruptor e gire os botões: arraste para cima e para baixo ou use as setas. Sem rótulos, como no do Karl. O som é grave; abaixe o volume antes." },
-  es: { toggle: "Interruptor", on: "zumbando", off: "apagado", knobs: ["primera perilla", "segunda perilla", "tercera perilla"], minutes: (m) => `encendido hace ${m}`, hint: "Encienda el interruptor y gire las perillas: arrastre arriba y abajo o use las flechas. Sin rótulos, como el de Karl. El sonido es grave; baje el volumen antes." },
+  es: { toggle: "Interruptor", on: "zumbando", off: "apagado", knobs: ["primera perilla", "segunda perilla", "tercera perilla"], minutes: (m) => `encendido: ${m}`, hint: "Enciende el interruptor y gira las perillas: arrastra arriba y abajo o usa las flechas. Sin rótulos, como el de Karl. El sonido es grave; baja el volumen antes." },
 };
 
 const RATIOS = [1, 1.5, 2, 2.997, 4.01];

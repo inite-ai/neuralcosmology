@@ -11,23 +11,23 @@ import { getDict } from "@/lib/i18n";
 // avoid widening the typed dictionary for a single recurring blurb.
 const SISTER: Record<SupportedLocale, { eyebrow: string; body: string; cta: string }> = {
   en: {
-    eyebrow: "Sister practice",
-    body: "Same author runs a business and consulting practice as Mike Fluff — AI automation, regulatory immunity, tech surgery, and courses.",
+    eyebrow: "Sister site",
+    body: "I also run a business and consulting practice as Mike Fluff: AI automation, regulatory immunity, tech surgery and courses.",
     cta: "Visit mikefluff.com",
   },
   ru: {
     eyebrow: "Родственный сайт",
-    body: "Тот же автор ведёт бизнес-практику как Майк Флафф — ИИ-автоматизация, регуляторный иммунитет, технологическая хирургия, курсы.",
+    body: "Ещё я веду бизнес-практику под именем Mike Fluff: ИИ-автоматизация, регуляторный иммунитет, технологическая хирургия и курсы.",
     cta: "Открыть mikefluff.com",
   },
   pt: {
     eyebrow: "Site-irmão",
-    body: "O mesmo autor conduz uma prática de negócios como Mike Fluff — automação com IA, imunidade regulatória, cirurgia tecnológica e cursos.",
+    body: "Também conduzo uma consultoria de negócios como Mike Fluff: automação com IA, imunidade regulatória, cirurgia tecnológica e cursos.",
     cta: "Abrir mikefluff.com",
   },
   es: {
     eyebrow: "Sitio hermano",
-    body: "El mismo autor lleva una práctica de negocios como Mike Fluff — automatización con IA, inmunidad regulatoria, cirugía tecnológica y cursos.",
+    body: "También llevo una consultoría de negocios como Mike Fluff: automatización con IA, inmunidad regulatoria, cirugía tecnológica y cursos.",
     cta: "Abrir mikefluff.com",
   },
 };

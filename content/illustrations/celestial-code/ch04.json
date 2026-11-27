@@ -9,10 +9,10 @@
       "status": "draft",
       "prompt": "A vast dark space filled with a three-dimensional lattice of faint glowing points connected by fine threads, some threads thicker and brighter than others, receding to infinity; it reads at once as a neural network and as a map of galaxies.",
       "alt": {
-        "ru": "Тёмное пространство, заполненное объёмной решёткой слабо светящихся точек, соединённых нитями разной толщины: одновременно нейронная сеть и карта галактик.",
-        "en": "A dark space filled with a three-dimensional lattice of faint glowing points joined by threads of varying thickness: at once a neural network and a map of galaxies.",
-        "pt": "Um espaço escuro cheio de uma rede tridimensional de pontos luminosos ligados por fios de espessura variável: ao mesmo tempo rede neuronal e mapa de galáxias.",
-        "es": "Un espacio oscuro lleno de una red tridimensional de puntos luminosos unidos por hilos de grosor variable: a la vez red neuronal y mapa de galaxias."
+        "ru": "Тёмное пространство, заполненное объёмной решёткой слабо светящихся точек, соединённых нитями разной толщины; решётка похожа на нейронную сеть и на карту галактик.",
+        "en": "A dark space filled with a three-dimensional lattice of faint glowing points joined by threads of varying thickness, resembling a neural network and a map of galaxies.",
+        "pt": "Um espaço escuro cheio de uma rede tridimensional de pontos luminosos ligados por fios de espessura variável, semelhante a uma rede neural e a um mapa de galáxias.",
+        "es": "Un espacio oscuro lleno de una red tridimensional de puntos luminosos unidos por hilos de grosor variable, parecida a una red neuronal y a un mapa de galaxias."
       },
       "width": 1536,
       "height": 1024,
@@ -29,9 +29,9 @@
       "status": "draft",
       "prompt": "A murmuration of thousands of starlings over a winter field at dusk, the flock folding into a single flowing shape in the sky, a lone observer standing small on a path below.",
       "alt": {
-        "ru": "Тысячи скворцов над зимним полем в сумерках складываются в одну текучую фигуру, внизу на тропинке маленькая фигура наблюдателя.",
+        "ru": "Тысячи скворцов над зимним полем в сумерках складываются в одно текучее облако, а внизу на тропинке стоит маленький наблюдатель.",
         "en": "Thousands of starlings over a winter field at dusk folding into one flowing shape, a small figure watching from a path below.",
-        "pt": "Milhares de estorninhos sobre um campo de inverno ao entardecer formam uma só figura fluida, um pequeno observador num caminho em baixo.",
+        "pt": "Milhares de estorninhos sobre um campo de inverno ao entardecer formam uma só figura fluida, um pequeno observador num caminho lá embaixo.",
         "es": "Miles de estorninos sobre un campo invernal al anochecer forman una sola figura fluida, un pequeño observador en un camino abajo."
       },
       "width": 1536,

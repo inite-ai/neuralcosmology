@@ -9,10 +9,10 @@
       "status": "draft",
       "prompt": "A strikingly bare apartment in an old Moscow building: a table, two chairs, shelves of books, a low sofa, nothing else; no mug, no cables, no clutter. On one shelf, among the books, sits a smooth black egg-shaped object the size of a melon, catching a single highlight.",
       "alt": {
-        "ru": "Подчёркнуто пустая квартира в старом московском доме: стол, два стула, полки с книгами, низкий диван; на одной полке среди книг гладкое чёрное яйцо размером с дыню.",
-        "en": "A strikingly bare flat in an old Moscow building: a table, two chairs, bookshelves, a low sofa; on one shelf among the books a smooth black egg the size of a melon.",
-        "pt": "Um apartamento invulgarmente despido num prédio antigo de Moscovo: mesa, duas cadeiras, estantes, um sofá baixo; numa prateleira entre os livros, um ovo preto liso do tamanho de um melão.",
-        "es": "Un piso llamativamente vacío en un edificio antiguo de Moscú: mesa, dos sillas, estanterías, un sofá bajo; en un estante entre los libros, un huevo negro liso del tamaño de un melón."
+        "ru": "Почти пустая квартира в старом московском доме: стол, два стула, полки с книгами, низкий диван; на одной полке среди книг гладкое чёрное яйцо размером с дыню.",
+        "en": "A nearly bare flat in an old Moscow building: a table, two chairs, bookshelves, a low sofa; on one shelf among the books a smooth black egg the size of a melon.",
+        "pt": "Um apartamento quase vazio num prédio antigo de Moscou: mesa, duas cadeiras, estantes, um sofá baixo; numa prateleira entre os livros, um ovo preto liso do tamanho de um melão.",
+        "es": "Un piso casi vacío en un edificio antiguo de Moscú: mesa, dos sillas, estanterías, un sofá bajo; en un estante entre los libros, un huevo negro liso del tamaño de un melón."
       },
       "width": 1536,
       "height": 1024,
@@ -29,10 +29,10 @@
       "status": "draft",
       "prompt": "Close view of a bare wooden table between two men whose hands rest on its edges: in the centre stands a smooth black egg-shaped object, its surface so dark it seems to swallow light, a faint reflection of the room curving across it.",
       "alt": {
-        "ru": "Голый деревянный стол между двумя мужчинами, их руки на краях; в центре гладкое чёрное яйцо, поверхность которого будто поглощает свет.",
-        "en": "A bare wooden table between two men, hands on its edges; in the centre a smooth black egg whose surface seems to swallow light.",
-        "pt": "Uma mesa de madeira entre dois homens, mãos nas bordas; ao centro um ovo preto liso cuja superfície parece engolir a luz.",
-        "es": "Una mesa de madera entre dos hombres, manos en los bordes; en el centro un huevo negro liso cuya superficie parece tragarse la luz."
+        "ru": "Голый деревянный стол между двумя мужчинами, их руки на краях; в центре гладкое чёрное яйцо, которое почти не отражает свет.",
+        "en": "A bare wooden table between two men, hands on its edges; in the centre a smooth black egg that reflects almost no light.",
+        "pt": "Uma mesa de madeira entre dois homens, mãos nas bordas; ao centro um ovo preto liso que quase não reflete a luz.",
+        "es": "Una mesa de madera entre dos hombres, manos en los bordes; en el centro un huevo negro liso que apenas refleja la luz."
       },
       "width": 1536,
       "height": 1024,

@@ -9,10 +9,10 @@
       "status": "draft",
       "prompt": "A long Moscow metro escalator at rush hour seen from the top: a dense stream of commuters descending, and between them, barely visible, faint threads of light connecting person to person like a living network.",
       "alt": {
-        "ru": "Длинный эскалатор метро в час пик сверху: плотный поток людей спускается вниз, между ними едва заметно тянутся световые нити, как живая сеть.",
-        "en": "A long metro escalator at rush hour from above: a dense stream of commuters descending, faint threads of light connecting them like a living network.",
-        "pt": "Uma longa escada rolante do metro na hora de ponta vista de cima: um fluxo denso de pessoas a descer, fios de luz ténues a ligá-las como uma rede viva.",
-        "es": "Una larga escalera mecánica del metro en hora punta vista desde arriba: un denso flujo de viajeros bajando, tenues hilos de luz que los unen como una red viva."
+        "ru": "Длинный эскалатор метро в час пик сверху: плотный поток людей спускается вниз, между ними едва заметно тянутся световые нити.",
+        "en": "A long metro escalator at rush hour, seen from above: a dense stream of commuters descending, faint threads of light connecting them.",
+        "pt": "Uma longa escada rolante do metrô no horário de pico, vista de cima: um fluxo denso de pessoas descendo, tênues fios de luz ligando umas às outras.",
+        "es": "Una larga escalera mecánica del metro en hora punta vista desde arriba: un denso flujo de viajeros bajando, tenues hilos de luz que los unen."
       },
       "width": 1536,
       "height": 1024,
@@ -31,7 +31,7 @@
       "alt": {
         "ru": "Вечерняя пробка на проспекте изнутри машины: руки водителя на руле, лобовое стекло в красных огнях, а контуры машин и домов распадаются на мерцающие линии и узлы.",
         "en": "An evening traffic jam on an avenue from inside a car: the driver's hands on the wheel, a windscreen of red lights, the outlines of cars and buildings dissolving into shimmering lines and nodes.",
-        "pt": "Um engarrafamento ao anoitecer visto de dentro de um carro: as mãos do condutor no volante, o para-brisas cheio de luzes vermelhas, os contornos dos carros e prédios a desfazer-se em linhas e nós cintilantes.",
+        "pt": "Um engarrafamento ao anoitecer visto de dentro de um carro: as mãos do motorista no volante, o para-brisa cheio de luzes vermelhas, os contornos dos carros e dos prédios se desfazendo em linhas e nós cintilantes.",
         "es": "Un atasco al anochecer visto desde dentro de un coche: las manos del conductor en el volante, el parabrisas lleno de luces rojas, los contornos de coches y edificios deshaciéndose en líneas y nudos centelleantes."
       },
       "width": 1536,
