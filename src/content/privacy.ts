@@ -13,18 +13,18 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
     sections: [
       { h: "Кто отвечает", p: [`Сайт ведёт Михаил Савченко. Вопросы о данных: ${MAIL}.`] },
       { h: "Что вы оставляете сами", p: [
-        "Форма связи сохраняет имя, адрес почты и сообщение в базе сайта и отправляет мне письмом. Запрос прав для издательств сохраняет ещё издательство, книгу и территорию.",
-        "Подписка сохраняет адрес, язык и место, где вы его оставили. Письма о новых главах приходят только после подтверждения, отписаться можно по ссылке в каждом из них. Вместе с согласием хранится текст, на который вы согласились, и дата. Отказ, где бы он ни был сделан (ссылка в письме или кабинет), попадает в общий стоп-лист как необратимый отпечаток адреса: писем не будет и после удаления самого адреса. Туда же попадают адреса, которые не принимают почту или пожаловались на спам.",
+        "Форма связи сохраняет имя, адрес почты и сообщение в базе сайта и отправляет мне письмом. В запросе прав для издательств к этому добавляются издательство, книга и территория.",
+        "Подписка сохраняет адрес, язык и место, где вы его оставили. Письма о новых главах приходят только после подтверждения, отписаться можно по ссылке в каждом из них. Вместе с согласием хранится текст, на который вы согласились, и дата. Откуда бы вы ни отписались, из письма или из кабинета, адрес попадает в общий стоп-лист как необратимый отпечаток: писем не будет и после удаления самого адреса. Туда же попадают адреса, которые не принимают почту, и адреса, с которых пожаловались на спам.",
         "Если вы вошли, сайт хранит имя и адрес почты, которые передаёт аккаунт, время первого и последнего входа, прогресс чтения, пометки, комментарии, настройки и число вопросов к ИИ. Вход идёт через INITE, оплата через INITE Billing и платёжного провайдера. Номера карт сайт не видит.",
         "Вопросы к ИИ в читалке обрабатывает Anthropic. Комментарии перед публикацией тоже проверяет ИИ.",
         "В платные главы вшита невидимая метка аккаунта: по ней можно найти, откуда утёк текст.",
       ] },
       { h: "Аналитика и реклама", p: [
-        "Ещё сайт ведёт собственный счёт: какую страницу открыли, какую главу начали или дочитали, пошли ли платить и купили ли книгу, с какого сайта пришли и из какой страны. Посетитель в этом счёте - хеш IP-адреса и браузера с ключом, который меняется каждый день и потом удаляется, поэтому одного человека нельзя проследить от дня ко дню, а сам IP не сохраняется. Кук для этого нет. Записи удаляются через тринадцать месяцев.",
-        "Google Analytics 4 считает страницы, главы, опыты, покупки. В ЕЭЗ, Великобритании и Швейцарии его куки выключены, туда уходят только обезличенные сигналы. Вошедшему читателю передаётся непрозрачный номер, не сам аккаунт.",
+        "Ещё сайт сам считает посещения: какую страницу открыли, какую главу начали или дочитали, пошли ли платить и купили ли книгу, с какого сайта пришли и из какой страны. Посетитель в этом подсчёте - хеш IP-адреса и браузера с ключом, который меняется каждый день и потом удаляется, поэтому одного человека нельзя проследить от дня ко дню, а сам IP не сохраняется. Куки для этого сайт не ставит. Записи удаляются через тринадцать месяцев.",
+        "Google Analytics 4 считает страницы, главы, A/B-тесты и покупки. В ЕЭЗ, Великобритании и Швейцарии его куки выключены, и в Google уходят только обезличенные данные без кук. О вошедшем читателе Google получает только номер, а не сам аккаунт.",
         "Вне этих стран пиксель Meta и Conversions API получают те же события, IP-адрес, сведения о браузере и, если вы оставили почту, её хеш SHA-256.",
       ] },
-      { h: "Кто ещё это видит", p: ["Mailgun доставляет письма, Cloudflare проводит трафик, база и сайт стоят на арендованном сервере. Данные не продаются."] },
+      { h: "Кто ещё это видит", p: ["Mailgun доставляет письма, трафик идёт через Cloudflare, база и сайт стоят на арендованном сервере. Данные не продаются."] },
       { h: "Сколько хранится и как удалить", p: [
         "Данные хранятся, пока вы пользуетесь сайтом. В кабинете их можно скачать и удалить. После удаления остаются метка платного текста без адреса, обезличенные комментарии и покупки в биллинге.",
         `Без аккаунта напишите на ${MAIL} с того же адреса: пришлю копию, исправлю или удалю.`,
@@ -37,9 +37,9 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
     lede: "What this site collects, why, and how to have it deleted.",
     sections: [
       { h: "Who is responsible", p: [`Mikhail Savchenko runs this site. Questions about your data: ${MAIL}.`] },
-      { h: "What you give yourself", p: [
+      { h: "What you hand over yourself", p: [
         "The contact form stores your name, email address and message in the site’s database and emails them to me. The rights request for publishers also stores the publisher, the book and the territory.",
-        "A subscription stores the address, your language and where you left it. Emails about new chapters start only after you confirm, and each carries an unsubscribe link. The wording you agreed to is kept with the date. A stop, wherever you make it (a link in a letter or the account), goes on a shared stop list as a one-way fingerprint of the address, so no letter comes even after the address itself is deleted. Addresses that bounce or report spam go there too.",
+        "A subscription stores the address, your language and where you left it. Emails about new chapters start only after you confirm, and each carries an unsubscribe link. The wording you agreed to is kept with the date. An unsubscribe, from an email link or from your account, puts a one-way fingerprint of the address on a shared stop list, so no more email arrives even after the address itself is deleted. Addresses that bounce or report spam go there too.",
         "If you sign in, the site keeps the name and email address the account passes on, when you first and last signed in, your reading progress, notes, comments, settings and the number of AI questions. Sign-in goes through INITE, payment through INITE Billing and its payment provider. The site never sees card numbers.",
         "Questions to the AI in the reader are processed by Anthropic. Comments are also checked by AI before they appear.",
         "Paid chapters carry an invisible mark of your account, so that a leaked text can be traced.",
@@ -51,7 +51,7 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       ] },
       { h: "Who else sees it", p: ["Mailgun delivers the emails, Cloudflare carries the traffic, and the database and site run on a rented server. Nothing is sold."] },
       { h: "How long, and how to delete it", p: [
-        "Data is kept while you use the site. You can download and delete it in your account. After deletion there remain the mark in paid text without your address, anonymised comments and purchases in billing.",
+        "Data is kept while you use the site. You can download and delete it in your account. Deletion leaves the mark in paid text (without your address), anonymised comments and the purchases in billing.",
         `Without an account, write to ${MAIL} from the same address and I will send a copy, correct it or delete it.`,
       ] },
     ],
@@ -64,9 +64,9 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
       { h: "Quem é responsável", p: [`Mikhail Savchenko mantém este site. Dúvidas sobre seus dados: ${MAIL}.`] },
       { h: "O que você mesmo informa", p: [
         "O formulário de contato guarda nome, e-mail e mensagem no banco de dados do site e os envia para mim por e-mail. O pedido de direitos para editoras guarda também a editora, o livro e o território.",
-        "A inscrição guarda o endereço, o idioma e onde ele foi informado. Os e-mails sobre novos capítulos só começam depois da confirmação, e cada um traz um link para cancelar. O texto com que você concordou fica guardado com a data. Um cancelamento, onde quer que seja feito (link no e-mail ou na conta), entra numa lista de bloqueio comum como impressão irreversível do endereço, então não chega e-mail nem depois que o próprio endereço é apagado. Endereços que devolvem e-mail ou denunciam spam também entram nela.",
+        "A inscrição guarda o endereço, o idioma e onde ele foi informado. Os e-mails sobre novos capítulos só começam depois da confirmação, e cada um traz um link para cancelar. O texto com que você concordou fica guardado com a data. Um cancelamento, onde quer que seja feito (link no e-mail ou na conta), põe uma impressão digital irreversível do endereço numa lista de bloqueio comum, então não chega e-mail nem depois que o próprio endereço é apagado. Endereços para os quais o e-mail volta ou que denunciam spam também entram nela.",
         "Se você entra na conta, o site guarda o nome e o e-mail que a conta repassa, quando você entrou pela primeira e pela última vez, progresso de leitura, notas, comentários, configurações e o número de perguntas à IA. O login passa pela INITE, o pagamento pela INITE Billing e pelo provedor de pagamento. O site não vê números de cartão.",
-        "As perguntas à IA no leitor são processadas pela Anthropic. Os comentários também são verificados por IA antes de aparecer.",
+        "As perguntas à IA no leitor são processadas pela Anthropic. Os comentários também são verificados por IA antes de aparecerem.",
         "Os capítulos pagos levam uma marca invisível da sua conta, para rastrear um texto vazado.",
       ] },
       { h: "Análise e publicidade", p: [
@@ -86,23 +86,23 @@ export const PRIVACY: Record<SupportedLocale, Doc> = {
     updated: "Actualizado el",
     lede: "Qué recoge este sitio, para qué y cómo borrarlo.",
     sections: [
-      { h: "Quién responde", p: [`Mikhail Savchenko mantiene este sitio. Preguntas sobre sus datos: ${MAIL}.`] },
-      { h: "Lo que usted mismo deja", p: [
+      { h: "Quién responde", p: [`Mikhail Savchenko mantiene este sitio. Preguntas sobre tus datos: ${MAIL}.`] },
+      { h: "Lo que dejas tú", p: [
         "El formulario de contacto guarda nombre, correo y mensaje en la base de datos del sitio y me los envía por correo. La consulta de derechos para editoriales guarda además la editorial, el libro y el territorio.",
-        "La suscripción guarda la dirección, el idioma y dónde la dejó. Los correos sobre capítulos nuevos empiezan solo después de confirmar, y cada uno lleva un enlace de baja. El texto que aceptó se guarda con la fecha. Una baja, se haga donde se haga (enlace en un correo o la cuenta), entra en una lista de bloqueo común como huella irreversible de la dirección, así que no llega ningún correo ni después de borrar la propia dirección. Las direcciones que rebotan o denuncian spam también entran en ella.",
-        "Si inicia sesión, el sitio guarda el nombre y el correo que transmite la cuenta, cuándo entró por primera y por última vez, el progreso de lectura, las notas, los comentarios, los ajustes y el número de preguntas a la IA. El acceso pasa por INITE, el pago por INITE Billing y su proveedor de pago. El sitio no ve números de tarjeta.",
+        "La suscripción guarda la dirección, el idioma y dónde la dejaste. Los correos sobre capítulos nuevos empiezan solo después de confirmar, y cada uno lleva un enlace de baja. El texto que aceptaste se guarda con la fecha. Una baja, desde el enlace de un correo o desde la cuenta, pone una huella irreversible de la dirección en una lista de bloqueo común, así que no llega ningún correo ni después de borrar la propia dirección. Las direcciones que rebotan o denuncian spam también entran en ella.",
+        "Si inicias sesión, el sitio guarda el nombre y el correo que transmite la cuenta, cuándo entraste por primera y por última vez, el progreso de lectura, las notas, los comentarios, los ajustes y el número de preguntas a la IA. El acceso pasa por INITE, el pago por INITE Billing y su proveedor de pago. El sitio no ve números de tarjeta.",
         "Las preguntas a la IA en el lector las procesa Anthropic. Los comentarios también se revisan con IA antes de publicarse.",
-        "Los capítulos de pago llevan una marca invisible de su cuenta, para rastrear un texto filtrado.",
+        "Los capítulos de pago llevan una marca invisible de tu cuenta, para rastrear un texto filtrado.",
       ] },
       { h: "Analítica y publicidad", p: [
         "El sitio también lleva su propio recuento: qué página se abrió, qué capítulo se empezó o se leyó hasta el final, si alguien fue a pagar o compró un libro, de qué sitio vino y de qué país. El visitante en ese recuento es un hash de la dirección IP y del navegador con una clave que cambia cada día y luego se borra, así que a la misma persona no se la puede seguir de un día a otro y la IP no se guarda. No se usa ninguna cookie para esto. Los registros se borran a los trece meses.",
-        "Google Analytics 4 cuenta páginas, capítulos, experimentos y compras. En el EEE, el Reino Unido y Suiza sus cookies están apagadas y recibe solo señales sin cookies. El lector con sesión se envía como un número opaco, nunca como la cuenta.",
-        "Fuera de esos países, el píxel de Meta y la Conversions API reciben los mismos eventos, la dirección IP, datos del navegador y, si dejó un correo, su hash SHA-256.",
+        "Google Analytics 4 cuenta páginas, capítulos, experimentos y compras. En el EEE, el Reino Unido y Suiza sus cookies están desactivadas y solo recibe datos anónimos sin cookies. Del lector con sesión recibe un número anónimo, nunca la cuenta.",
+        "Fuera de esos países, el píxel de Meta y la Conversions API reciben los mismos eventos, la dirección IP, datos del navegador y, si dejaste un correo, su hash SHA-256.",
       ] },
       { h: "Quién más lo ve", p: ["Mailgun entrega los correos, Cloudflare lleva el tráfico, y la base de datos y el sitio están en un servidor alquilado. Nada se vende."] },
       { h: "Cuánto tiempo y cómo borrarlo", p: [
-        "Los datos se guardan mientras usa el sitio. En su cuenta puede descargarlos y borrarlos. Después quedan la marca del texto de pago sin su dirección, los comentarios anónimos y las compras en la facturación.",
-        `Sin cuenta, escriba a ${MAIL} desde la misma dirección: le envío una copia, lo corrijo o lo borro.`,
+        "Los datos se guardan mientras usas el sitio. En tu cuenta puedes descargarlos y borrarlos. Después quedan la marca del texto de pago sin tu dirección, los comentarios anónimos y las compras en la facturación.",
+        `Sin cuenta, escribe a ${MAIL} desde la misma dirección y te envío una copia, lo corrijo o lo borro.`,
       ] },
     ],
   },
