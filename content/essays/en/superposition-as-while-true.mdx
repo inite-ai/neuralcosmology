@@ -7,19 +7,19 @@ tags: [quantum-mechanics, information, measurement, Wheeler]
 cover: "/essays/covers/superposition-as-while-true.png"
 ---
 
-Anyone who has ever run a generative loop knows the feeling. While the loop runs, every possible continuation *lives in it at the same time*. Step in — drop a `print`, take a `return`, read a value — and from the whole bundle of branches only one survives. The others simply do not get recorded as "what happened."
+Anyone who has ever run a generative loop knows the feeling. While the loop runs, every possible continuation *lives in it at the same time*. Step in — drop a `print`, take a `return`, read a value — and from the whole bundle of branches only one survives. The others simply do not get recorded as "what happened".
 
-That picture sits so close to what physics calls wave function collapse that the question suggests itself: is it a metaphor, or a hint about how the world is built?
+That picture sits so close to what physics calls wave function collapse that one has to ask whether it is a metaphor or a hint about how the world is built.
 
 ## What the formalism actually says
 
-The Schrödinger equation evolves a state unitarily. That means that as long as nobody "looks," the system sits in a linear combination of possible outcomes with known amplitudes. Measurement is the only step that converts amplitudes into probabilities and lets one branch persist.
+The Schrödinger equation evolves a state unitarily. That means that as long as nobody "looks", the system sits in a linear combination of possible outcomes with known amplitudes. Measurement is the only step that converts amplitudes into probabilities and lets one branch persist.
 
-The equation does not describe that step; this is what is called *the measurement problem*. The Copenhagen interpretation (Bohr, Heisenberg) takes collapse as a primitive. Many-worlds (Everett, 1957) claims there is no collapse, only branching of the observer. Decoherence theory (Dieter Zeh in 1970, then Wojciech Zurek) gives a quantitative mechanism: interaction with the environment suppresses the off-diagonal entries of the density matrix and effectively "selects" a measurement basis. To the question "what is left after," decoherence is silent; it explains *why we see definite states rather than their superpositions*.
+The equation does not describe that step; this is what is called *the measurement problem*. The Copenhagen interpretation (Bohr, Heisenberg) takes collapse as a primitive. Many-worlds (Everett, 1957) claims there is no collapse, only branching of the observer. Decoherence theory (Dieter Zeh in 1970, then Wojciech Zurek) gives a quantitative mechanism: interaction with the environment suppresses the off-diagonal entries of the density matrix and effectively "selects" a measurement basis. To the question of what remains afterwards, decoherence is silent; it explains *why we see definite states rather than their superpositions*.
 
 An engineer will recognise the mechanics of distributed systems here. While a transaction is running, the state is undefined. The commit fixes one slice. All other branches that opened along the way are discarded and never reach the final database. Decoherence is the analogue of losing transactional isolation: an external observer "sees" one branch because the intermediate states have ceased to be reachable.
 
-That is still metaphor. From here it gets more interesting.
+That is still metaphor.
 
 ## The delayed-choice quantum eraser
 
@@ -37,7 +37,7 @@ That is the engineering content of collapse. A quantum system behaves as a distr
 
 ## "It from bit": a blueprint instead of a slogan
 
-John Wheeler in 1989 wrote down the line "it from bit": every physical quantity, at bottom, derives its value from binary yes/no answers — that is, from informational events. For years it sounded like a philosophical flourish without technical content.
+In 1989 John Wheeler wrote down the line "it from bit": every physical quantity, at bottom, derives its value from binary yes/no answers — that is, from informational events. For years it sounded like a philosophical flourish without technical content.
 
 Holographic codes (Pastawski, Yoshida, Harlow, Preskill, 2015 — the so-called HaPPY code) gave the first concrete model: spacetime as a network of tensors, with "deep" degrees of freedom reconstructible from "boundary" ones via specified unitary rules. If that picture is right, the physics of bulk objects is literally operations on a graph of pointers: add a node, rewrite an edge, repackage a codeword.
 

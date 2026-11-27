@@ -239,17 +239,17 @@ const en: Dict = {
     contact: "Contact",
   },
   hero: {
-    directionsSectionTitle: "Three directions",
+    directionsSectionTitle: "Three ways in",
     directionsEyebrow: { books: "Books", science: "Science", essays: "Essays" },
     directionsTitle: {
       books: "Five books.",
       science: "The research programme.",
-      essays: "Long-form writing.",
+      essays: "Short essays.",
     },
     directionsBlurb: {
       books:
-        "Two books about science, where the author builds a hypothesis and then tests it, and two novels about the physicist Dan Reinov and his daughter. The first chapters of each are free to read.",
-      science: "A preprint, code and data, built so that they can be proven wrong.",
+        "Two books about science, in which I build a hypothesis and then test it, two novels about the physicist Dan Reinov and his daughter, and Eternity. The opening chapters of every book are free to read.",
+      science: "A preprint with its code and data, set out so that every claim can be falsified.",
       essays:
         "Essays on consciousness, cosmology and memory, each built around one question.",
     },
@@ -259,7 +259,7 @@ const en: Dict = {
     indexEyebrow: "Books",
     indexTitle: "Two books about science, two novels and Eternity.",
     indexLead:
-      "In the non-fiction the author gathers published work on the brain, cosmology and biology into one hypothesis, then tests it in the second book and shows what failed. The novels hand the same ideas to people: the physicist Dan Reinov in Bugs Academy, his daughter in Era of Architects. All of them can be read online; The Celestial Code and Eternity are free with your email, and the others open with free chapters.",
+      "In the first non-fiction book I gather published work on the brain, cosmology and biology into one hypothesis; in the second I test it and show which parts failed. In the novels the same ideas happen to people: to the physicist Dan Reinov in Bugs Academy and to his daughter in Era of Architects. Every book can be read online. The Celestial Code and Eternity open in full once you sign in or confirm your email; the others open with free chapters.",
     readMore: "Read more →",
     allBooks: "← All books",
     rightsInquiry: "Rights / publisher inquiry",
@@ -326,10 +326,10 @@ const en: Dict = {
     preprintBadge: "Preprint · v9.0",
     abstractHeader: "Abstract",
     tldrHeader: "TL;DR",
-    predictionsHeader: "Predictions & falsifiers",
+    predictionsHeader: "Predictions and falsifiers",
     companionHeader: "Companion volume",
     companionBody:
-      "The non-fiction book in the series walks through the argument in plain language, with the full reasoning chain and references.",
+      "The Celestial Code, the first non-fiction book in the series, walks through the same argument in plain language, with the full chain of reasoning and the references.",
     companionCta: "Read about the book →",
     citeHeader: "Cite",
     readPdf: "Read PDF",
@@ -338,18 +338,18 @@ const en: Dict = {
   },
   essays: {
     eyebrow: "Essays",
-    title: "Long-form writing.",
+    title: "Physics in plain language.",
     lead:
-      "Short pieces where physics meets plain language, one idea per essay, followed to the end.",
+      "Short essays, each following one idea from physics to the end.",
     placeholderBody:
-      "The first essay — A Loss Function for the Universe — is in final edit. It walks through the shape that shows up when five independent anomalies are lined up side by side.",
+      "The first essay, A Loss Function for the Universe, is in its final edit. It looks at the shape five independent anomalies share once you line them up side by side.",
     placeholderLink1: "Pointer Architecture preprint",
     placeholderLink2: "non-fiction volume",
   },
   lecturesPage: {
     eyebrow: "Lectures",
     title: "Talks and recordings.",
-    lead: "Talks and conversations by the scientists the programme builds on, and my own walk-throughs as they get recorded.",
+    lead: "Talks and conversations by the scientists whose work the programme builds on, and my own walk-throughs once I record them.",
     placeholderBody:
       "No recordings are online yet. Upcoming: a walk-through of the Pointer Architecture preprint and a reading session around the non-fiction volume. Check back or subscribe for updates.",
     watchCta: "Watch",
@@ -361,18 +361,18 @@ const en: Dict = {
     eyebrow: "About",
     title: "Mikhail Savchenko",
     bio: [
-      "Twenty years of AI engineering, with a PhD currently in progress. The rest of my time goes into Neural Cosmology — a research programme on the nature of consciousness, and five books around it: two nonfiction investigations, two novels and Eternity.",
-      "The programme starts from the claim that consciousness is a property of certain computational architectures and needs no separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance. It is the first part of a larger programme.",
-      "In short, I am a scientist with questions; there are enough prophets with answers already. The programme is built to be falsifiable, and the fiction does not contradict the physics. The whole site is an invitation to check the arguments for yourself.",
+      "I am an engineer and have worked with AI for twenty years; I am also writing a PhD dissertation. The rest of my time goes into Neural Cosmology, a research programme on the nature of consciousness, and into five books on it: two non-fiction investigations, two novels and Eternity.",
+      "The programme starts from the claim that consciousness is a property of certain computational architectures and needs no separate ingredient layered on top of physics. That premise yields observable predictions across physics, biology, and cosmology. The first formal piece of a larger programme is the Pointer Architecture preprint: a computational substrate with a working implementation in the Sixth language and falsifiers written down in advance.",
+      "In short, I am a scientist with questions; there are enough prophets with answers already. The programme is built to be falsifiable, and the fiction does not contradict the physics. I built this site so that you can check every argument yourself.",
     ],
     agentsHeader: "Press, agents, publishers",
     agentsBody:
-      "I am looking for a literary agent for EN and PT-BR rights on the fiction titles in the series, and for reviewers and endorsements on the preprint. Serious inquiries are welcome.",
-    emailCta: "Email — info@neuralcosmology.com",
+      "I am looking for a literary agent for the English and Brazilian Portuguese rights to the novels in the series, and for reviewers and endorsements for the preprint. Serious inquiries are welcome.",
+    emailCta: "Email: info@neuralcosmology.com",
     elsewhereHeader: "Elsewhere",
   },
   footer: {
-    tagline: "The universe as a learning network — in science and in fiction.",
+    tagline: "A research programme and books about the universe as a learning network.",
     columns: {
       read: "Read",
       research: "Research",
@@ -385,7 +385,7 @@ const en: Dict = {
       pointer: "Pointer Architecture",
       references: "References",
       about: "About the author",
-      press: "Literary agents & press",
+      press: "Literary agents and press",
       ai: "For AI agents",
       github: "GitHub",
     },
@@ -409,7 +409,7 @@ const en: Dict = {
       lead2:
         "Galaxy rotation, the matter–antimatter asymmetry, the measurement problem, consciousness and cellular bioelectricity are studied by five different sciences, and each explains its own puzzle in its own way. The programme checks whether all five grow out of one computational structure.",
       leadMechanism:
-        "If the universe works as a learning network, the five anomalies turn out to be expressions of one computational structure, from the cosmic web to cellular bioelectricity. Consciousness then becomes a measurable quantity that depends on how connections are arranged, and the model's predictions can be tested by experiment.",
+        "If the universe does work as a learning network, all five anomalies should follow from that one structure. Consciousness then becomes a measurable quantity that depends on how connections are arranged, and the model's predictions can be tested by experiment.",
       lead3:
         "The argument runs through the books, the preprint and the essays.",
     },
@@ -419,8 +419,8 @@ const en: Dict = {
         "Five facts from five different journals. Together they point the same way.",
         "By several statistical measures the brain and the cosmic web are nearly indistinguishable (Vazza, Feletti, 2020).",
         "Erasing a single bit releases heat (Landauer, 1961; measured 2012). Information is physical.",
-        "Cells 'know' what shape to build, and that knowledge lives in bioelectric patterns as well as in genes (Levin lab, Tufts).",
-        "The universe as a neural network: quantum mechanics and gravity emerge as its limits (Vanchurin, 2020).",
+        "Cells 'know' what shape to build, and part of that knowledge lives outside the genes, in bioelectric patterns (Levin lab, Tufts).",
+        "Treat the universe as a neural network, and quantum mechanics and gravity come out as its limiting cases (Vanchurin, 2020).",
         "Consciousness is a measure of integration, denoted Φ (Tononi, IIT).",
       ],
     },
@@ -445,7 +445,7 @@ const en: Dict = {
           ],
         },
         {
-          title: "Don't dig in the past",
+          title: "Don't dwell on the past",
           desc: [
             "The past weighs nothing by itself; what makes it heavy is a memory that replays it again and again.",
             "Once you see the pattern the loop follows, it comes undone."
@@ -461,7 +461,7 @@ const en: Dict = {
         {
           title: "Break the shell",
           desc: [
-            "A crack in a familiar way of living usually means it is time to step out of it.",
+            "When your usual way of life starts to crack, it is usually time to step out of it.",
             "Better to leave before the shell turns into a cage."
           ],
         },
@@ -487,14 +487,14 @@ const en: Dict = {
           ],
         },
         {
-          title: "Get ahead of yourself",
+          title: "Don't wait for permission",
           desc: [
             "The person you could become is already in view, and waiting for someone's permission to become them is pointless: nobody will hand it out.",
             "Name who you want to be and start acting the way that person would."
           ],
         },
         {
-          title: "Pull yourself together",
+          title: "Make yourself whole",
           desc: [
             "When the self is split, a decision doesn't last until evening, because each half pulls its own way.",
             "You have to gather yourself into one piece or fall apart, and there is rarely a third option."
@@ -523,20 +523,20 @@ const en: Dict = {
     },
     callToClarity: {
       title: "Get in touch",
-      headline: "Working on something close?",
+      headline: "Write if this speaks to you.",
       body:
-        "Write and let's get acquainted. Ideas, criticism, reviews: I read everything.",
+        "I read every message with ideas, criticism or reviews.",
       cta: "Write",
       form: {
         name: "Name",
         email: "Email",
         message: "Message",
-        namePlaceholder: "How should I address you",
+        namePlaceholder: "Your name",
         emailPlaceholder: "your@email.com",
         messagePlaceholder: "What's on your mind…",
         submit: "Send",
         sending: "Sending…",
-        success: "Received. I'll reply once I read it.",
+        success: "Got it. I'll reply once I've read it.",
         error: "Something went wrong. Write directly to info@neuralcosmology.com",
         directEmail: "or directly",
       },
@@ -547,7 +547,7 @@ const en: Dict = {
 const ru: Dict = {
   siteName: "Нейронная космология",
   meta: {
-    title: "Нейронная космология — Михаил Савченко",
+    title: "Нейронная космология - Михаил Савченко",
     description:
       "Исследовательская программа Михаила Савченко «Нейронная космология»: книги, препринт, эссе и лекции о сознании и Вселенной как обучающейся сети.",
     ogLocale: "ru_RU",
@@ -567,11 +567,11 @@ const ru: Dict = {
     directionsTitle: {
       books: "Пять книг.",
       science: "Исследовательская программа.",
-      essays: "Длинная проза.",
+      essays: "Короткие эссе.",
     },
     directionsBlurb: {
       books:
-        "Две книги о науке, где автор строит гипотезу и затем проверяет её, и два романа о физике Дане Рейнове и его дочери. Первые главы каждой открыты бесплатно.",
+        "Две книги о науке, в которых я строю гипотезу и потом проверяю её, два романа о физике Дане Рейнове и его дочери и «Вечность». Первые главы каждой книги открыты бесплатно.",
       science:
         "Препринт, код и данные. Программа устроена так, чтобы её можно было опровергнуть.",
       essays:
@@ -583,7 +583,7 @@ const ru: Dict = {
     indexEyebrow: "Книги",
     indexTitle: "Две книги о науке, два романа и «Вечность».",
     indexLead:
-      "В нон-фикшн автор собирает опубликованные работы о мозге, космологии и биологии в одну гипотезу, а во второй книге проверяет её и показывает, что проверки не выдержало. В романах те же идеи достаются людям: физику Дану Рейнову в «Академии Багов» и его дочери в «Эре Архитекторов». Все книги можно читать онлайн: «Небесный Код» и «Вечность» бесплатно за ваш e-mail, у остальных открыты первые главы.",
+      "В первой книге нон-фикшн я свожу опубликованные работы о мозге, космологии и биологии в одну гипотезу, а во второй проверяю её и показываю, какие её части проверку не прошли. В романах с теми же идеями сталкиваются люди: физик Дан Рейнов в «Академии Багов» и его дочь в «Эре Архитекторов». Все книги можно читать онлайн. «Небесный Код» и «Вечность» открываются целиком и бесплатно, если войти или подтвердить почту, у остальных открыты первые главы.",
     readMore: "Подробнее →",
     allBooks: "← Все книги",
     rightsInquiry: "Издателям: права на книгу",
@@ -641,19 +641,19 @@ const ru: Dict = {
     closeContents: "Закрыть оглавление",
   },
   science: {
-    indexEyebrow: "Программа исследования",
-    indexTitle: "Наука, на которой стоят книги.",
+    indexEyebrow: "Исследовательская программа",
+    indexTitle: "Наука, из которой выросли книги.",
     indexLead:
-      "Препринты, код и данные: то, что нон-фикшн разворачивает в аргумент, а фантастика — в сюжет.",
+      "Препринты, код и данные: то, что нон-фикшн разворачивает в аргумент, а фантастика в сюжет.",
     allResearch: "← Все работы",
     cardCta: "Открыть страницу работы →",
     preprintBadge: "Препринт · v9.0",
     abstractHeader: "Аннотация",
     tldrHeader: "Коротко",
-    predictionsHeader: "Предсказания и фальсификаторы",
-    companionHeader: "Сопутствующая книга",
+    predictionsHeader: "Предсказания и критерии опровержения",
+    companionHeader: "Книга к препринту",
     companionBody:
-      "Нон-фикшн из серии ведёт аргумент простым языком, с полной цепочкой рассуждений и ссылками.",
+      "Первая книга нон-фикшн из серии, «Небесный Код», излагает то же рассуждение простым языком, целиком и со ссылками.",
     companionCta: "О книге →",
     citeHeader: "Цитирование",
     readPdf: "Открыть PDF",
@@ -662,18 +662,18 @@ const ru: Dict = {
   },
   essays: {
     eyebrow: "Эссе",
-    title: "Длинная проза.",
+    title: "Физика обычным языком.",
     lead:
-      "Короткие разборы на стыке физики и обычного языка: одна мысль на текст, доведённая до конца.",
+      "Короткие эссе: в каждом я беру одну мысль из физики и довожу её до конца.",
     placeholderBody:
-      "Первое эссе, «Функция потерь для Вселенной», на финальной правке. Оно проходит по форме, которая проступает, когда ставишь пять независимых аномалий рядом.",
+      "Первое эссе, «Функция потерь для Вселенной», на финальной правке. В нём я разбираю общую форму, которая видна, если поставить рядом пять независимых аномалий.",
     placeholderLink1: "препринт Pointer Architecture",
     placeholderLink2: "нон-фикшн из серии",
   },
   lecturesPage: {
     eyebrow: "Лекции",
     title: "Записи выступлений.",
-    lead: "Лекции и беседы учёных, на чьих работах стоит программа, и мои собственные разборы по мере записи.",
+    lead: "Лекции и беседы учёных, на чьи работы опирается программа, и мои собственные разборы, когда я их запишу.",
     placeholderBody:
       "Пока записей нет. В планах разбор препринта Pointer Architecture и чтение глав из нон-фикшна. Заходите позже или подпишитесь на обновления.",
     watchCta: "Смотреть",
@@ -685,18 +685,18 @@ const ru: Dict = {
     eyebrow: "Об авторе",
     title: "Михаил Савченко",
     bio: [
-      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию» — исследовательскую программу о природе сознания и пять книг по этой теме: два документальных расследования, два романа и «Вечность».",
-      "Программа исходит из того, что сознание — свойство определённых вычислительных архитектур и никакой отдельной сущности над физикой не требует. Отсюда следуют наблюдательные предсказания на стыке физики, биологии и космологии. Первая формальная часть — препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и заранее записанными фальсификаторами. Это лишь первая часть большой программы.",
-      "Если коротко, я учёный с вопросами; пророков с ответами хватает и без меня. Программа с самого начала устроена так, чтобы её можно было опровергнуть, и художественная часть не противоречит физической. Весь сайт — приглашение проверить аргументы своими руками.",
+      "Я инженер, двадцать лет работаю с ИИ. Параллельно пишу диссертацию. Всё остальное время уходит на «Нейронную космологию», исследовательскую программу о природе сознания, и на пять книг по этой теме: два документальных расследования, два романа и «Вечность».",
+      "Программа исходит из того, что сознание - свойство определённых вычислительных архитектур и никакой отдельной сущности над физикой не требует. Отсюда следуют наблюдательные предсказания для физики, биологии и космологии. Первая формальная часть большой программы - препринт Pointer Architecture: вычислительный субстрат с работающей реализацией на языке Sixth и критериями опровержения, записанными заранее.",
+      "Если коротко, я учёный с вопросами; пророков с ответами хватает и без меня. Программа с самого начала устроена так, чтобы её можно было опровергнуть, и художественная часть не противоречит физической. Сайт я сделал, чтобы вы могли проверить каждый аргумент сами.",
     ],
     agentsHeader: "Пресса, агенты, издатели",
     agentsBody:
-      "Ищу литературного агента на англоязычные и бразильские права на художественные книги серии, а также рецензентов и отзывы на препринт. Серьёзным предложениям буду рад.",
-    emailCta: "Email — info@neuralcosmology.com",
+      "Ищу литературного агента, который займётся правами на романы серии для английского и бразильского рынков, а ещё рецензентов для препринта. Серьёзным предложениям буду рад.",
+    emailCta: "Почта: info@neuralcosmology.com",
     elsewhereHeader: "Где ещё",
   },
   footer: {
-    tagline: "Вселенная как обучающаяся сеть — в науке и в прозе.",
+    tagline: "Научная программа и книги о Вселенной как обучающейся сети.",
     columns: {
       read: "Читать",
       research: "Исследования",
@@ -723,7 +723,7 @@ const ru: Dict = {
       subhead:
         "Вселенная работает как обучающаяся сеть. Сознание возникает там, где её связи складываются в определённые конфигурации.",
       subheadExtra:
-        "Препринты, код, эссе и материалы книг: исследование на стыке физики, космологии и природы сознания.",
+        "Препринты, код, эссе и материалы книг одной программы, которая занимается физикой, космологией и природой сознания.",
       cta: "Войти",
     },
     whatIs: {
@@ -733,7 +733,7 @@ const ru: Dict = {
       lead2:
         "Вращением галактик, асимметрией материи и антиматерии, проблемой измерения, сознанием и биоэлектричеством клеток занимаются пять разных наук, и каждая объясняет свою загадку по-своему. Программа проверяет, не вырастают ли все пять из одной вычислительной структуры.",
       leadMechanism:
-        "Если Вселенная работает как обучающаяся сеть, пять аномалий оказываются проявлениями одной вычислительной структуры, от космической паутины до биоэлектричества клеток. Сознание в этой картине — измеримая величина, которая зависит от того, как устроены связи, а предсказания модели можно проверить экспериментом.",
+        "Если Вселенная действительно работает как обучающаяся сеть, все пять аномалий должны следовать из этой одной структуры. Тогда сознание становится измеримой величиной, которая зависит от того, как устроены связи, а предсказания модели можно проверить экспериментом.",
       lead3:
         "Разбор идёт в книгах, препринте и эссе.",
     },
@@ -744,8 +744,8 @@ const ru: Dict = {
         "По ряду статистических показателей мозг и космическая паутина почти неотличимы (Вацца, Фелетти, 2020).",
         "Стирание одного бита информации выделяет тепло (Ландауэр, 1961; измерено в 2012-м). Информация физична.",
         "Клетки «знают», какую форму строить, и часть этого знания записана в биоэлектрических узорах, помимо генов (лаборатория Левина, Тафтс).",
-        "Вселенная как нейронная сеть: квантовая механика и гравитация получаются её пределами (Ванчурин, 2020).",
-        "Сознание — мера интегрированности системы, обозначается Φ (Тонони, IIT).",
+        "Если считать Вселенную нейронной сетью, квантовая механика и гравитация получаются её предельными случаями (Ванчурин, 2020).",
+        "Сознание - мера интегрированности системы, её обозначают Φ (Тонони, IIT).",
       ],
     },
     tablet: {
@@ -755,73 +755,73 @@ const ru: Dict = {
         "Это короткие правила, которые я вывожу для себя из той же модели:\nесли мир учится,\nучиться приходится и нам.",
       commandments: [
         {
-          title: "Сходи с накатанной",
+          title: "Сойдите с накатанной",
           desc: [
             "Жизнь только кажется прямой линией: почти каждый день подбрасывает развилку, которую легко проскочить на автомате.",
-            "Замечать такие места и выбирать на них сознательно — большая часть работы."
+            "Большая часть работы в том, чтобы замечать такие места и выбирать на них сознательно."
           ],
         },
         {
-          title: "Начинай изнутри",
+          title: "Начните изнутри",
           desc: [
             "Внешние знаки ничего не дают, пока внутри не утихнет разлад.",
-            "Сначала разберись с собой, и остальное станет видно уже оттуда."
+            "Сначала разберитесь с собой, и остальное станет видно уже оттуда."
           ],
         },
         {
-          title: "Не копайся в прошлом",
+          title: "Не копайтесь в прошлом",
           desc: [
             "Прошлое само по себе ничего не весит: тяжёлым его делает память, которая снова и снова его прокручивает.",
-            "Когда видишь, по какому узору идёт этот круг, он размыкается."
+            "Когда вы видите, по какому узору идёт этот круг, он размыкается."
           ],
         },
         {
-          title: "Различай голоса",
+          title: "Различайте голоса",
           desc: [
             "Слушать стоит тот голос, после которого в голове становится яснее.",
             "Остальные, сколько бы их ни было и как бы громко они ни звучали, только запутывают."
           ],
         },
         {
-          title: "Ломай скорлупу",
+          title: "Ломайте скорлупу",
           desc: [
-            "Трещина в привычной форме жизни обычно означает, что из неё пора выходить.",
+            "Если привычный уклад жизни дал трещину, обычно это значит, что из него пора выходить.",
             "Лучше выйти, пока скорлупа не превратилась в клетку."
           ],
         },
         {
-          title: "Побудь в паузе",
+          title: "Побудьте в паузе",
           desc: [
-            "Когда что-то рухнуло, не спеши сразу строить заново.",
-            "Пауза тоже работа: побудь в ней, пока не станет понятно, каким будет следующий шаг."
+            "Когда что-то рухнуло, не спешите сразу строить заново.",
+            "Пауза тоже работа: побудьте в ней, пока не станет понятно, каким будет следующий шаг."
           ],
         },
         {
-          title: "Замечай, что возвращается",
+          title: "Замечайте, что возвращается",
           desc: [
-            "Если ситуация повторяется, значит, ты её ещё не разобрал до конца.",
-            "Она будет возвращаться, пока ты не поймёшь, чему она учит."
+            "Если ситуация повторяется, значит, вы её ещё не разобрали до конца.",
+            "Она будет возвращаться, пока вы не поймёте, чему она учит."
           ],
         },
         {
-          title: "Отпускай незавершённое",
+          title: "Отпускайте незавершённое",
           desc: [
             "Не каждая история заканчивается точкой: иногда её обрывает простое понимание, что продолжать незачем.",
             "Такой конец можно принять спокойно, обходясь без долгих объяснений и прощальных сцен."
           ],
         },
         {
-          title: "Опереди себя",
+          title: "Не ждите разрешения",
           desc: [
-            "Человек, которым ты можешь стать, уже виден, и ждать чьего-то разрешения, чтобы им стать, бесполезно: его никто не выдаст.",
-            "Назови, кем хочешь быть, и начни поступать так, как поступал бы он."
+            "Человек, которым вы можете стать, уже виден, а ждать чьего-то разрешения, чтобы им стать, бесполезно: его никто не выдаст.",
+            "Назовите, кем хотите быть, и начните поступать так, как поступал бы этот человек."
           ],
         },
         {
-          title: "Собери себя",
+          title: "Соберите себя",
           desc: [
             "Когда «я» расколото, решение не доживает до вечера, потому что каждая половина тянет в свою сторону.",
-            "Приходится собирать себя в одно целое, иначе рассыпаешься, и третьего обычно не дано."
+            "Приходится собирать себя в одно целое, иначе вы рассыпаетесь, и третьего обычно не дано."
           ],
         },
       ],
@@ -829,12 +829,12 @@ const ru: Dict = {
     practices: {
       title: "Практики внимания",
       list: [
-        "Смотри, какие ситуации повторяются: чаще всего развилки прячутся именно в них.",
-        "Перед важным решением сделай паузу хотя бы на пять минут.",
-        "Отделяй то, что действительно важно, от того, что просто громко звучит.",
-        "Обещай только то, что можешь сделать.",
-        "Если заблудился, остановись и оглядись, прежде чем бежать дальше.",
-        "Делай важное и тогда, когда никто не смотрит.",
+        "Смотрите, какие ситуации повторяются: чаще всего развилки прячутся именно в них.",
+        "Перед важным решением сделайте паузу хотя бы на пять минут.",
+        "Отделяйте то, что действительно важно, от того, что просто громко звучит.",
+        "Обещайте только то, что можете сделать.",
+        "Если заблудились, остановитесь и оглядитесь, прежде чем бежать дальше.",
+        "Делайте важное, даже когда никто не смотрит.",
       ],
       cta: "Подробнее",
     },
@@ -847,19 +847,19 @@ const ru: Dict = {
     },
     callToClarity: {
       title: "Связаться",
-      headline: "Работаете над чем-то близким?",
+      headline: "Напишите, если вам это близко.",
       body:
-        "Напишите, познакомимся. Идеи, критику, рецензии я читаю все.",
+        "Я читаю все письма с идеями, критикой и рецензиями.",
       cta: "Написать",
       form: {
         name: "Имя",
-        email: "Email",
+        email: "Почта",
         message: "Сообщение",
         namePlaceholder: "Как к вам обращаться",
         emailPlaceholder: "your@email.com",
         messagePlaceholder: "Что на уме…",
         submit: "Отправить",
-        sending: "Отправляем…",
+        sending: "Отправляю…",
         success: "Получено. Отвечу, как прочитаю.",
         error: "Что-то пошло не так. Напишите напрямую на info@neuralcosmology.com",
         directEmail: "или напрямую",
@@ -891,12 +891,12 @@ const pt: Dict = {
     directionsTitle: {
       books: "Cinco livros.",
       science: "O programa de pesquisa.",
-      essays: "Prosa longa.",
+      essays: "Ensaios curtos.",
     },
     directionsBlurb: {
       books:
-        "Dois livros sobre ciência, em que o autor constrói uma hipótese e depois a testa, e dois romances sobre o físico Dan Reinov e a filha dele. Os primeiros capítulos de cada um são gratuitos.",
-      science: "Um preprint, código e dados, feitos para poderem ser refutados.",
+        "Dois livros sobre ciência, em que construo uma hipótese e depois a testo, dois romances sobre o físico Dan Reinov e a filha dele, e Eternidade. Os primeiros capítulos de cada livro são gratuitos.",
+      science: "Um preprint com código e dados, organizado para que cada afirmação possa ser refutada.",
       essays:
         "Ensaios sobre consciência, cosmologia e memória, cada um construído em torno de uma pergunta.",
     },
@@ -906,7 +906,7 @@ const pt: Dict = {
     indexEyebrow: "Livros",
     indexTitle: "Dois livros sobre ciência, dois romances e Eternidade.",
     indexLead:
-      "Na não ficção, o autor reúne trabalhos publicados sobre o cérebro, a cosmologia e a biologia numa só hipótese e, no segundo livro, a testa e mostra o que não resistiu. Os romances entregam as mesmas ideias a pessoas: ao físico Dan Reinov em Academia dos Bugs e à filha dele em Era dos Arquitetos. Todos podem ser lidos online: O Código Celestial e Eternidade, de graça com o seu e-mail; os outros têm os primeiros capítulos abertos.",
+      "No primeiro livro de não ficção, reúno trabalhos publicados sobre o cérebro, a cosmologia e a biologia numa só hipótese; no segundo, testo essa hipótese e mostro o que não resistiu. Nos romances, as mesmas ideias acontecem com pessoas: com o físico Dan Reinov em Academia dos Bugs e com a filha dele em Era dos Arquitetos. Todos os livros podem ser lidos online. O Código Celestial e Eternidade abrem por inteiro para quem entra na conta ou confirma o e-mail; os outros têm os primeiros capítulos abertos.",
     readMore: "Ler mais →",
     allBooks: "← Todos os livros",
     rightsInquiry: "Para editoras: direitos",
@@ -973,30 +973,30 @@ const pt: Dict = {
     preprintBadge: "Preprint · v9.0",
     abstractHeader: "Resumo",
     tldrHeader: "Em resumo",
-    predictionsHeader: "Previsões e falsificadores",
+    predictionsHeader: "Previsões e critérios de refutação",
     companionHeader: "Volume complementar",
     companionBody:
-      "O livro de não ficção da série percorre o argumento em linguagem simples, com a cadeia completa de raciocínio e as referências.",
+      "O Código Celestial, primeiro livro de não ficção da série, percorre o mesmo argumento em linguagem simples, com a cadeia completa de raciocínio e as referências.",
     companionCta: "Sobre o livro →",
     citeHeader: "Citar",
     readPdf: "Ler o PDF",
     codeRelease: "Código e dados",
-    contactReview: "Contato para revisão",
+    contactReview: "Contato para parecer",
   },
   essays: {
     eyebrow: "Ensaios",
-    title: "Prosa longa.",
+    title: "Física em linguagem comum.",
     lead:
-      "Textos breves em que a física encontra a linguagem comum: uma ideia por ensaio, levada até o fim.",
+      "Ensaios curtos: em cada um, sigo uma ideia da física até o fim.",
     placeholderBody:
-      "O primeiro ensaio — A Loss Function for the Universe — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
+      "O primeiro ensaio — Uma função de perda para o universo — está na revisão final. Ele percorre a forma que aparece quando cinco anomalias independentes são colocadas lado a lado.",
     placeholderLink1: "preprint Pointer Architecture",
     placeholderLink2: "volume de não ficção",
   },
   lecturesPage: {
     eyebrow: "Palestras",
-    title: "Gravações e falas.",
-    lead: "Palestras e conversas dos cientistas em cujo trabalho o programa se apoia, e minhas próprias análises à medida que forem gravadas.",
+    title: "Palestras e gravações.",
+    lead: "Palestras e conversas dos cientistas em cujo trabalho o programa se apoia, e minhas próprias análises, quando eu as gravar.",
     placeholderBody:
       "Ainda não há gravações online. Em preparação: uma análise do preprint Pointer Architecture e uma leitura do volume de não ficção. Volte depois ou assine para receber atualizações.",
     watchCta: "Assistir",
@@ -1008,18 +1008,18 @@ const pt: Dict = {
     eyebrow: "Sobre",
     title: "Mikhail Savchenko",
     bio: [
-      "Vinte anos de engenharia de IA, com um doutorado em andamento. O resto do tempo vai para a Cosmologia Neural, um programa de pesquisa sobre a natureza da consciência, e para cinco livros em torno dele: duas investigações de não ficção, dois romances e Eternidade.",
-      "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais e dispensa qualquer ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e falsificadores escritos de antemão. É a primeira parte de um programa maior.",
-      "Em poucas palavras, sou um cientista com perguntas; profetas com respostas já existem de sobra. O programa foi construído para poder ser refutado, e a ficção não contradiz a física. O site inteiro é um convite a verificar os argumentos por conta própria.",
+      "Sou engenheiro, trabalho com IA há vinte anos e estou fazendo um doutorado. O resto do tempo vai para a Cosmologia Neural, um programa de pesquisa sobre a natureza da consciência, e para cinco livros em torno dele: duas investigações de não ficção, dois romances e Eternidade.",
+      "O programa parte da ideia de que a consciência é uma propriedade de certas arquiteturas computacionais e dispensa qualquer ingrediente separado sobreposto à física. Dessa premissa decorrem previsões observáveis em física, biologia e cosmologia. A primeira peça formal de um programa maior é o preprint Pointer Architecture: um substrato computacional com implementação funcional na linguagem Sixth e critérios de refutação definidos de antemão.",
+      "Em poucas palavras, sou um cientista com perguntas; profetas com respostas já existem de sobra. O programa foi construído para poder ser refutado, e a ficção não contradiz a física. Fiz este site para que você possa verificar cada argumento por conta própria.",
     ],
     agentsHeader: "Imprensa, agentes, editoras",
     agentsBody:
-      "Busco um agente literário para direitos em EN e PT-BR dos títulos de ficção da série, além de revisores e endossos para o preprint. Propostas sérias são bem-vindas.",
-    emailCta: "Email — info@neuralcosmology.com",
+      "Busco um agente literário para os direitos em inglês e em português do Brasil dos romances da série, e também pareceristas e recomendações para o preprint. Propostas sérias são bem-vindas.",
+    emailCta: "E-mail: info@neuralcosmology.com",
     elsewhereHeader: "Em outros lugares",
   },
   footer: {
-    tagline: "O universo como uma rede em aprendizado — na ciência e na ficção.",
+    tagline: "Um programa de pesquisa e livros sobre o universo como rede em aprendizado.",
     columns: {
       read: "Ler",
       research: "Pesquisa",
@@ -1056,7 +1056,7 @@ const pt: Dict = {
       lead2:
         "A rotação das galáxias, a assimetria entre matéria e antimatéria, o problema da medição, a consciência e a bioeletricidade celular são estudados por cinco ciências diferentes, e cada uma explica o seu enigma à sua maneira. O programa verifica se os cinco nascem de uma mesma estrutura computacional.",
       leadMechanism:
-        "Se o universo funciona como uma rede em aprendizado, as cinco anomalias passam a ser manifestações de uma única estrutura computacional, da teia cósmica à bioeletricidade celular. A consciência vira então uma grandeza mensurável, que depende de como as conexões estão dispostas, e as previsões do modelo podem ser testadas em experimentos.",
+        "Se o universo de fato funciona como uma rede em aprendizado, as cinco anomalias devem decorrer dessa mesma estrutura. A consciência vira então uma grandeza mensurável, que depende de como as conexões estão dispostas, e as previsões do modelo podem ser testadas em experimentos.",
       lead3:
         "O argumento atravessa os livros, o preprint e os ensaios.",
     },
@@ -1067,8 +1067,8 @@ const pt: Dict = {
         "Por vários indicadores estatísticos, o cérebro e a teia cósmica são quase indistinguíveis (Vazza, Feletti, 2020).",
         "Apagar um bit libera calor (Landauer, 1961; medido em 2012). A informação é física.",
         "As células \"sabem\" que forma construir, e parte desse saber está nos padrões bioelétricos, além dos genes (laboratório de Levin, Tufts).",
-        "O universo como rede neural: a mecânica quântica e a gravidade surgem como seus limites (Vanchurin, 2020).",
-        "A consciência como medida de integração, indicada por Φ (Tononi, IIT).",
+        "Se o universo for tratado como uma rede neural, a mecânica quântica e a gravidade aparecem como seus casos-limite (Vanchurin, 2020).",
+        "A consciência é uma medida de integração, indicada por Φ (Tononi, IIT).",
       ],
     },
     tablet: {
@@ -1108,7 +1108,7 @@ const pt: Dict = {
         {
           title: "Quebre a casca",
           desc: [
-            "Uma rachadura na forma habitual de viver costuma avisar que é hora de sair dela.",
+            "Quando o seu jeito habitual de viver começa a rachar, costuma ser hora de sair dele.",
             "Melhor sair antes que a casca vire uma jaula."
           ],
         },
@@ -1134,17 +1134,17 @@ const pt: Dict = {
           ],
         },
         {
-          title: "Adiante-se a si mesmo",
+          title: "Não espere permissão",
           desc: [
             "A pessoa que você pode vir a ser já está à vista, e esperar a permissão de alguém para virar essa pessoa é inútil: ninguém vai concedê-la.",
             "Diga quem você quer ser e comece a agir como essa pessoa agiria."
           ],
         },
         {
-          title: "Reúna-se",
+          title: "Junte seus pedaços",
           desc: [
             "Quando o eu está partido, uma decisão não dura até a noite, porque cada metade puxa para um lado.",
-            "É preciso se reunir numa peça só, ou você se desfaz, e raramente existe uma terceira saída."
+            "É preciso juntar as partes num todo só, ou você se desfaz, e raramente existe uma terceira saída."
           ],
         },
       ],
@@ -1170,15 +1170,15 @@ const pt: Dict = {
     },
     callToClarity: {
       title: "Entrar em contato",
-      headline: "Trabalha em algo próximo?",
+      headline: "Escreva se isso faz sentido para você.",
       body:
-        "Escreva e vamos nos conhecer. Ideias, críticas, resenhas: eu leio tudo.",
+        "Leio todas as mensagens com ideias, críticas e resenhas.",
       cta: "Escrever",
       form: {
         name: "Nome",
-        email: "Email",
+        email: "E-mail",
         message: "Mensagem",
-        namePlaceholder: "Como devo chamar você",
+        namePlaceholder: "Seu nome",
         emailPlaceholder: "seu@email.com",
         messagePlaceholder: "O que está pensando…",
         submit: "Enviar",
@@ -1205,7 +1205,7 @@ const es: Dict = {
     science: "Ciencia",
     essays: "Ensayos",
     lectures: "Charlas",
-    about: "Sobre",
+    about: "El autor",
     contact: "Contacto",
   },
   hero: {
@@ -1214,12 +1214,12 @@ const es: Dict = {
     directionsTitle: {
       books: "Cinco libros.",
       science: "El programa de investigación.",
-      essays: "Prosa larga.",
+      essays: "Ensayos breves.",
     },
     directionsBlurb: {
       books:
-        "Dos libros sobre ciencia, en los que el autor construye una hipótesis y luego la pone a prueba, y dos novelas sobre el físico Dan Reinov y su hija. Los primeros capítulos de cada uno son gratis.",
-      science: "Un preprint, código y datos, hechos para poder refutarse.",
+        "Dos libros sobre ciencia, en los que construyo una hipótesis y luego la pongo a prueba, dos novelas sobre el físico Dan Reinov y su hija, y Eternidad. Los primeros capítulos de cada libro son gratis.",
+      science: "Un preprint con código y datos, organizado para que cada afirmación pueda refutarse.",
       essays: "Ensayos sobre la consciencia, la cosmología y la memoria, cada uno construido en torno a una pregunta.",
     },
     exploreCta: "Entrar",
@@ -1228,7 +1228,7 @@ const es: Dict = {
     indexEyebrow: "Libros",
     indexTitle: "Dos libros sobre ciencia, dos novelas y Eternidad.",
     indexLead:
-      "En la no ficción, el autor reúne trabajos publicados sobre el cerebro, la cosmología y la biología en una sola hipótesis y, en el segundo libro, la pone a prueba y muestra lo que no resistió. Las novelas entregan las mismas ideas a personas: al físico Dan Reinov en Academia de los Bugs y a su hija en Era de los Arquitectos. Todos se pueden leer en línea: El Código Celestial y Eternidad, gratis con su correo; los demás tienen abiertos los primeros capítulos.",
+      "En el primer libro de no ficción reúno trabajos publicados sobre el cerebro, la cosmología y la biología en una sola hipótesis; en el segundo la pongo a prueba y muestro lo que no resistió. En las novelas, esas mismas ideas les pasan a personas: al físico Dan Reinov en Academia de los Bugs y a su hija en Era de los Arquitectos. Todos los libros se pueden leer en línea. El Código Celestial y Eternidad se abren enteros si inicias sesión o confirmas tu correo; los demás tienen abiertos los primeros capítulos.",
     readMore: "Leer más →",
     allBooks: "← Todos los libros",
     rightsInquiry: "Para editoriales: derechos",
@@ -1272,7 +1272,7 @@ const es: Dict = {
     gatePurchaseTitle: "Este capítulo forma parte de la edición completa",
     gatePurchaseBody: "Los primeros capítulos son gratuitos. El libro completo está disponible tras la compra y queda en tu biblioteca.",
     gatePurchaseCta: "Comprar el libro",
-    gateHaveIt: "¿Ya lo compró? Inicie sesión",
+    gateHaveIt: "¿Ya lo compraste? Inicia sesión",
     gateBuyLibrary: "Toda la biblioteca",
     textSize: "Tamaño del texto",
     theme: "Tema",
@@ -1298,7 +1298,7 @@ const es: Dict = {
     predictionsHeader: "Predicciones y falsadores",
     companionHeader: "Volumen complementario",
     companionBody:
-      "El libro de no ficción de la serie recorre el argumento en lenguaje llano, con la cadena completa de razonamiento y las referencias.",
+      "El Código Celestial, el primer libro de no ficción de la serie, recorre el mismo argumento en lenguaje llano, con la cadena completa de razonamiento y las referencias.",
     companionCta: "Sobre el libro →",
     citeHeader: "Citar",
     readPdf: "Leer el PDF",
@@ -1307,18 +1307,18 @@ const es: Dict = {
   },
   essays: {
     eyebrow: "Ensayos",
-    title: "Prosa larga.",
+    title: "Física en lenguaje llano.",
     lead:
-      "Textos breves donde la física se cruza con el lenguaje común: una idea por ensayo, llevada hasta el final.",
+      "Ensayos breves: en cada uno sigo una idea de la física hasta el final.",
     placeholderBody:
-      "El primer ensayo — A Loss Function for the Universe — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
+      "El primer ensayo — Una función de pérdida para el universo — está en revisión final. Recorre la forma que aparece cuando cinco anomalías independientes se ponen una al lado de otra.",
     placeholderLink1: "preprint Pointer Architecture",
     placeholderLink2: "volumen de no ficción",
   },
   lecturesPage: {
     eyebrow: "Charlas",
-    title: "Grabaciones e intervenciones.",
-    lead: "Charlas y conversaciones de los científicos en cuyo trabajo se apoya el programa, y mis propios análisis a medida que se graben.",
+    title: "Charlas y grabaciones.",
+    lead: "Charlas y conversaciones de los científicos en cuyo trabajo se apoya el programa, y mis propios análisis, cuando los grabe.",
     placeholderBody:
       "Aún no hay grabaciones en línea. En preparación: un análisis del preprint Pointer Architecture y una lectura del volumen de no ficción. Vuelve más tarde o suscríbete para novedades.",
     watchCta: "Ver",
@@ -1327,21 +1327,21 @@ const es: Dict = {
     transcript: "Transcripción",
   },
   about: {
-    eyebrow: "Sobre",
+    eyebrow: "El autor",
     title: "Mikhail Savchenko",
     bio: [
-      "Veinte años de ingeniería de IA, con un doctorado en curso. El resto del tiempo se lo dedico a la Cosmología Neural, un programa de investigación sobre la naturaleza de la consciencia, y a cinco libros en torno a él: dos investigaciones de no ficción, dos novelas y Eternidad.",
-      "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales y no necesita ningún ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano. Es la primera parte de un programa más amplio.",
-      "En pocas palabras, soy un científico con preguntas; profetas con respuestas ya hay de sobra. El programa está construido para poder refutarse, y la ficción no contradice la física. Todo el sitio es una invitación a comprobar los argumentos por uno mismo.",
+      "Soy ingeniero, trabajo con IA desde hace veinte años y estoy haciendo un doctorado. El resto del tiempo se lo dedico a la Cosmología Neural, un programa de investigación sobre la naturaleza de la consciencia, y a cinco libros en torno a él: dos investigaciones de no ficción, dos novelas y Eternidad.",
+      "El programa parte de la idea de que la consciencia es una propiedad de ciertas arquitecturas computacionales y no necesita ningún ingrediente aparte superpuesto a la física. De esa premisa se siguen predicciones observables en física, biología y cosmología. La primera pieza formal de un programa más amplio es el preprint Pointer Architecture: un sustrato computacional con implementación funcional en el lenguaje Sixth y falsadores escritos de antemano.",
+      "En pocas palabras, soy un científico con preguntas; profetas con respuestas ya hay de sobra. El programa está construido para poder refutarse, y la ficción no contradice la física. Hice este sitio para que puedas comprobar cada argumento por tu cuenta.",
     ],
     agentsHeader: "Prensa, agentes, editoriales",
     agentsBody:
-      "Busco un agente literario para derechos en EN y PT-BR sobre los títulos de ficción de la serie, así como revisores y respaldos para el preprint. Las consultas serias son bienvenidas.",
-    emailCta: "Email — info@neuralcosmology.com",
+      "Busco un agente literario para los derechos en inglés y en portugués de Brasil de las novelas de la serie, y también revisores y avales para el preprint. Las consultas serias son bienvenidas.",
+    emailCta: "Correo: info@neuralcosmology.com",
     elsewhereHeader: "En otros lugares",
   },
   footer: {
-    tagline: "El universo como una red que aprende — en ciencia y en ficción.",
+    tagline: "Un programa de investigación y libros sobre el universo como red que aprende.",
     columns: {
       read: "Leer",
       research: "Investigación",
@@ -1378,7 +1378,7 @@ const es: Dict = {
       lead2:
         "De la rotación de las galaxias, la asimetría entre materia y antimateria, el problema de la medición, la consciencia y la bioelectricidad celular se ocupan cinco ciencias distintas, y cada una explica su enigma a su manera. El programa comprueba si los cinco nacen de una misma estructura computacional.",
       leadMechanism:
-        "Si el universo funciona como una red que aprende, las cinco anomalías resultan ser manifestaciones de una sola estructura computacional, desde la red cósmica hasta la bioelectricidad celular. La consciencia pasa a ser una magnitud medible, que depende de cómo están dispuestas las conexiones, y las predicciones del modelo pueden comprobarse con experimentos.",
+        "Si el universo de verdad funciona como una red que aprende, las cinco anomalías deberían derivarse de esa misma estructura. La consciencia pasa entonces a ser una magnitud medible, que depende de cómo están dispuestas las conexiones, y las predicciones del modelo pueden comprobarse con experimentos.",
       lead3:
         "El argumento recorre los libros, el preprint y los ensayos.",
     },
@@ -1389,8 +1389,8 @@ const es: Dict = {
         "Según varios indicadores estadísticos, el cerebro y la red cósmica son casi indistinguibles (Vazza, Feletti, 2020).",
         "Borrar un bit libera calor (Landauer, 1961; medido en 2012). La información es física.",
         "Las células \"saben\" qué forma construir, y parte de ese saber está en los patrones bioeléctricos, además de en los genes (laboratorio de Levin, Tufts).",
-        "El universo como red neuronal: la mecánica cuántica y la gravedad surgen como sus límites (Vanchurin, 2020).",
-        "La consciencia como medida de integración, que se denota Φ (Tononi, IIT).",
+        "Si se trata el universo como una red neuronal, la mecánica cuántica y la gravedad aparecen como sus casos límite (Vanchurin, 2020).",
+        "La consciencia es una medida de integración, que se denota Φ (Tononi, IIT).",
       ],
     },
     tablet: {
@@ -1410,7 +1410,7 @@ const es: Dict = {
           title: "Empieza por dentro",
           desc: [
             "Las señales de fuera no sirven de nada mientras por dentro haya discordia.",
-            "Arréglate primero contigo, y el resto se ve ya desde ahí."
+            "Primero ponte en paz contigo, y desde ahí se verá el resto."
           ],
         },
         {
@@ -1430,7 +1430,7 @@ const es: Dict = {
         {
           title: "Rompe la cáscara",
           desc: [
-            "Una grieta en la forma habitual de vivir suele indicar que ha llegado la hora de salir de ella.",
+            "Cuando tu forma habitual de vivir empieza a agrietarse, suele ser hora de salir de ella.",
             "Mejor salir antes de que la cáscara se convierta en jaula."
           ],
         },
@@ -1456,17 +1456,17 @@ const es: Dict = {
           ],
         },
         {
-          title: "Adelántate a ti mismo",
+          title: "No esperes permiso",
           desc: [
             "La persona que puedes llegar a ser ya se ve, y esperar el permiso de alguien para convertirte en ella es inútil: nadie te lo va a dar.",
             "Di quién quieres ser y empieza a actuar como actuaría esa persona."
           ],
         },
         {
-          title: "Recógete entero",
+          title: "Vuelve a ser uno",
           desc: [
             "Cuando el yo está partido, una decisión no llega viva a la noche, porque cada mitad tira hacia su lado.",
-            "Hay que juntarse en una sola pieza o uno se deshace, y casi nunca hay una tercera opción."
+            "Tienes que juntar tus partes en una sola pieza o te deshaces, y casi nunca hay una tercera opción."
           ],
         },
       ],
@@ -1491,16 +1491,16 @@ const es: Dict = {
       seeAll: "Todas las charlas →",
     },
     callToClarity: {
-      title: "Escribir",
-      headline: "¿Trabajas en algo cercano?",
+      title: "Contacto",
+      headline: "Escríbeme si esto te dice algo.",
       body:
-        "Escríbeme y nos conocemos. Ideas, críticas, reseñas: lo leo todo.",
+        "Leo todos los mensajes con ideas, críticas y reseñas.",
       cta: "Escribir",
       form: {
         name: "Nombre",
-        email: "Email",
+        email: "Correo",
         message: "Mensaje",
-        namePlaceholder: "Cómo llamarte",
+        namePlaceholder: "Tu nombre",
         emailPlaceholder: "tu@email.com",
         messagePlaceholder: "Qué tienes en mente…",
         submit: "Enviar",

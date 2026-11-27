@@ -13,26 +13,26 @@ import { faqByLocale } from "@/content/faq";
 // Dict for a single recurring block on /about.
 const SISTER_ABOUT: Record<SupportedLocale, { eyebrow: string; body: string; cta: string; rel: string }> = {
   en: {
-    eyebrow: "Practitioner mode",
-    body: "Outside the research desk I run a business and consulting practice as Mike Fluff — AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery, and three courses. Same person, different brand. For consulting work, courses, or applied AI engineering, that is the right door.",
+    eyebrow: "Applied work",
+    body: "Outside research I run a business and consulting practice as Mike Fluff: AI automation, regulatory immunity (PII handling, GDPR/LGPD/DPA, secure-by-design AI workflows), tech surgery and three courses. It is the same person under another name, and that site is where to go for consulting, courses or applied AI engineering.",
     cta: "Open mikefluff.com",
     rel: "business and consulting practice (same author)",
   },
   ru: {
     eyebrow: "Прикладная практика",
-    body: "Помимо исследований я веду бизнес-практику под именем Майк Флафф: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, безопасность ИИ, заложенная ещё при проектировании), технологическая хирургия, три курса. Человек тот же, бренд другой. С консалтингом, курсами и прикладной ИИ-инженерией — туда.",
+    body: "Помимо исследований я веду бизнес-практику под именем Mike Fluff: ИИ-автоматизация, регуляторный иммунитет (персональные данные, GDPR/LGPD/DPA, безопасность ИИ, заложенная ещё при проектировании), технологическая хирургия и три курса. Это тот же человек под другим именем, и с консалтингом, курсами или прикладной ИИ-инженерией лучше идти туда.",
     cta: "Открыть mikefluff.com",
     rel: "бизнес и консалтинг (тот же автор)",
   },
   pt: {
     eyebrow: "Prática aplicada",
-    body: "Longe da mesa de pesquisa, conduzo uma prática de negócios e consultoria como Mike Fluff: automação com IA, imunidade regulatória (dados pessoais, GDPR/LGPD/DPA, fluxos de IA seguros desde a concepção), cirurgia tecnológica e três cursos. Mesma pessoa, outra marca. Para consultoria, cursos ou engenharia de IA aplicada, a porta é essa.",
+    body: "Fora da pesquisa, conduzo uma consultoria de negócios como Mike Fluff: automação com IA, imunidade regulatória (dados pessoais, GDPR/LGPD/DPA, fluxos de IA seguros desde a concepção), cirurgia tecnológica e três cursos. É a mesma pessoa com outro nome, e é lá que se trata de consultoria, cursos ou engenharia de IA aplicada.",
     cta: "Abrir mikefluff.com",
     rel: "negócios e consultoria (mesmo autor)",
   },
   es: {
     eyebrow: "Práctica aplicada",
-    body: "Lejos de la mesa de investigación, llevo una práctica de negocios y consultoría como Mike Fluff: automatización con IA, inmunidad regulatoria (datos personales, GDPR/LGPD/DPA, flujos de IA seguros desde el diseño), cirugía tecnológica y tres cursos. Misma persona, otra marca. Para consultoría, cursos o ingeniería de IA aplicada, esa es la puerta.",
+    body: "Fuera de la investigación, llevo una consultoría de negocios como Mike Fluff: automatización con IA, inmunidad regulatoria (datos personales, GDPR/LGPD/DPA, flujos de IA seguros desde el diseño), cirugía tecnológica y tres cursos. Es la misma persona con otro nombre, y allí es donde se trata la consultoría, los cursos o la ingeniería de IA aplicada.",
     cta: "Abrir mikefluff.com",
     rel: "negocios y consultoría (mismo autor)",
   },

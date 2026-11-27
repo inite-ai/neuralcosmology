@@ -14,8 +14,8 @@ const T: Dict<{ cut: string; rewrite: string; reset: string; dna: string; gen: (
   ru: {
     cut: "Разрезать всех пополам", rewrite: "Переписать узор первому червю", reset: "Сначала", dna: "ДНК у всех одинаковая", gen: (n) => `разрезов: ${n}`,
     legendHead: "узор «голова»", legendTail: "узор «хвост»",
-    hint: "Переписанный узор форму сразу не меняет: червь живёт как жил. Разрежьте его — и обе половины отрастят по голове на каждом конце. Режьте дальше: двухголовость передаётся без всякого вмешательства.",
-    stage: { start: "Два обычных червя: голова там, где узор «голова».", rewritten: "Узор переписан, ген ни один не тронут. Червь пока выглядит как прежде.", cut: "Обрезки отрастают по своему узору." },
+    hint: "Переписанный узор форму сразу не меняет: червь живёт как жил. Разрежьте его, и обе половины отрастят по голове на каждом конце. Режьте дальше: двухголовость передаётся без всякого вмешательства.",
+    stage: { start: "Два обычных червя: голова там, где узор «голова».", rewritten: "Узор переписан, гены не тронуты. Червь пока выглядит как прежде.", cut: "Обрезки отрастают по своему узору." },
   },
   en: {
     cut: "Cut every worm in half", rewrite: "Rewrite the first worm’s pattern", reset: "Start over", dna: "Same DNA in every worm", gen: (n) => `cuts: ${n}`,
@@ -26,13 +26,13 @@ const T: Dict<{ cut: string; rewrite: string; reset: string; dna: string; gen: (
   pt: {
     cut: "Cortar todos ao meio", rewrite: "Reescrever o padrão do primeiro verme", reset: "Recomeçar", dna: "O mesmo DNA em todos", gen: (n) => `cortes: ${n}`,
     legendHead: "padrão “cabeça”", legendTail: "padrão “cauda”",
-    hint: "O padrão reescrito não muda a forma de imediato: o verme segue como antes. Corte-o, e as duas metades criam uma cabeça em cada ponta. Continue cortando: as duas cabeças passam adiante sem nenhuma intervenção.",
+    hint: "O padrão reescrito não muda a forma de imediato: o verme segue como antes. Corte-o, e as duas metades formam uma cabeça em cada ponta. Continue cortando: a dupla cabeça é herdada sem nenhuma outra intervenção.",
     stage: { start: "Dois vermes comuns: a cabeça fica onde está o padrão “cabeça”.", rewritten: "Padrão reescrito, nenhum gene tocado. O verme ainda parece o mesmo.", cut: "Os pedaços se regeneram segundo o padrão." },
   },
   es: {
     cut: "Cortar a todos por la mitad", rewrite: "Reescribir el patrón del primer gusano", reset: "Empezar de nuevo", dna: "El mismo ADN en todos", gen: (n) => `cortes: ${n}`,
     legendHead: "patrón «cabeza»", legendTail: "patrón «cola»",
-    hint: "El patrón reescrito no cambia la forma enseguida: el gusano sigue como antes. Córtelo, y las dos mitades echan una cabeza en cada extremo. Siga cortando: las dos cabezas se heredan sin intervención alguna.",
+    hint: "El patrón reescrito no cambia la forma enseguida: el gusano sigue como antes. Córtalo, y las dos mitades echan una cabeza en cada extremo. Sigue cortando: la doble cabeza se hereda sin ninguna otra intervención.",
     stage: { start: "Dos gusanos comunes: la cabeza está donde está el patrón «cabeza».", rewritten: "Patrón reescrito, ningún gen tocado. El gusano aún se ve igual.", cut: "Los trozos se regeneran según su patrón." },
   },
 };

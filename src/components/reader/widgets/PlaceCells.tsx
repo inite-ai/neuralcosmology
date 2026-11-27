@@ -24,7 +24,7 @@ const T: Dict<{
 }> = {
   ru: {
     kinds: { place: "Клетка места", grid: "Клетка решётки" }, label: "Пол под крысой. Крысу ведут стрелки.",
-    hint: "Ведите крысу: нажмите на пол, тяните или возьмите стрелки клавиатуры. Точка остаётся там, где нейрон вспыхнул.",
+    hint: "Ведите крысу: нажмите на пол, тяните или управляйте стрелками на клавиатуре. Точка остаётся там, где нейрон вспыхнул.",
     walk: "Пусть бродит сама", stop: "Остановить", clear: "Стереть", spikes: "вспышек", floor: "пола пройдено",
     found: { place: "Нейрон отзывается в одном месте пола и молчит во всех остальных.", grid: "Вспышки легли в узлы шестиугольной решётки. На полу её никто не чертил." },
     next: "Теперь послушайте клетку решётки.", map: "Показать карту",
@@ -44,11 +44,11 @@ const T: Dict<{
     next: "Agora escute uma célula de grade.", map: "Mostrar o mapa",
   },
   es: {
-    kinds: { place: "Célula de lugar", grid: "Célula de red" }, label: "El suelo bajo la rata. Las flechas mueven la rata.",
-    hint: "Guíe a la rata: pulse en el suelo, arrastre o use las flechas del teclado. Queda un punto donde la neurona se disparó.",
+    kinds: { place: "Célula de lugar", grid: "Célula de rejilla" }, label: "El suelo bajo la rata. Las flechas mueven a la rata.",
+    hint: "Guía a la rata: pulsa en el suelo, arrastra o usa las flechas del teclado. Queda un punto donde la neurona se disparó.",
     walk: "Que ande sola", stop: "Parar", clear: "Borrar", spikes: "disparos", floor: "del suelo recorrido",
-    found: { place: "La neurona responde en un punto del suelo y calla en todos los demás.", grid: "Los disparos cayeron en los nodos de una red hexagonal. Nadie la trazó en el suelo." },
-    next: "Ahora escuche una célula de red.", map: "Mostrar el mapa",
+    found: { place: "La neurona responde en un punto del suelo y calla en todos los demás.", grid: "Los disparos cayeron en los nodos de una rejilla hexagonal. Nadie la trazó en el suelo." },
+    next: "Ahora escucha una célula de rejilla.", map: "Mostrar el mapa",
   },
 };
 

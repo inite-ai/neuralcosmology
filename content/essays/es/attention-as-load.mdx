@@ -9,11 +9,11 @@ cover: "/essays/covers/attention-as-load.png"
 
 Una pequeña observación, sacada de una literatura antigua e incómoda. Si se coloca un generador físico de números aleatorios junto a una persona concentrada en un resultado concreto, la estadística de salida se desplaza hacia ese resultado en algo del orden de una parte en diez mil. Es un efecto que solo se separa del ruido *con un número enorme* de ensayos.
 
-El laboratorio de Robert Jahn, Princeton Engineering Anomalies Research, recogió este tipo de datos entre 1979 y 2007: varios millones de sesiones. El desplazamiento medio por sesión rondaba 0,2σ, lo que suma unas cinco sigmas en el conjunto. El laboratorio cerró con una declaración franca: el efecto es robusto, el mecanismo se desconoce, la comunidad académica no aceptó la metodología. Nunca propusieron un mecanismo.
+El laboratorio de Robert Jahn, Princeton Engineering Anomalies Research, recogió este tipo de datos entre 1979 y 2007: varios millones de ensayos. El desplazamiento medio por sesión rondaba 0,2σ, lo que suma unas cinco sigmas en el conjunto. El laboratorio cerró con una declaración franca: el efecto es robusto, el mecanismo se desconoce, la comunidad académica no aceptó la metodología. Nunca propusieron un mecanismo.
 
-El paradigma continuó en el Global Consciousness Project (Roger Nelson, 1998–presente). Una red de unos setenta generadores físicos de números aleatorios, repartidos por el mundo, registra datos sin pausa. Cuando ocurre algo que atrae la atención de multitudes —el 11 de septiembre, una inauguración olímpica, la muerte de una celebridad—, Nelson comprueba si el estadístico agregado se desvía de lo esperado. Se han publicado más de quinientos eventos, con un z compuesto de alrededor de 6,4σ.
+El paradigma continuó en el Global Consciousness Project (Roger Nelson, desde 1998). Una red de unos setenta generadores físicos de números aleatorios, repartidos por el mundo, registra datos sin pausa. Cuando ocurre algo que atrae la atención de multitudes —el 11 de septiembre, una inauguración olímpica, la muerte de una celebridad—, Nelson comprueba si el estadístico agregado se desvía de lo esperado. Se han publicado más de quinientos eventos, con un z compuesto de alrededor de 6,4σ.
 
-Esto resulta incómodo por dos razones. Primera: el efecto parece una violación de la independencia entre procesos físicos en una red geográficamente distribuida. Segunda: las críticas estándar — sesgo de cajón, selección post-hoc, definición flexible de "evento" — son *justas*. No zanjan la cuestión, pero rebajan la confianza en los metaanálisis de PEAR y GCP hasta tal punto que ningún físico prudente los citaría.
+Esto resulta incómodo por dos razones. Primera: el efecto parece una violación de la independencia entre procesos físicos en una red geográficamente distribuida. Segunda: las críticas estándar — efecto cajón, selección a posteriori, definición flexible de "evento" — son *justas*. No zanjan la cuestión, pero rebajan la confianza en los metaanálisis de PEAR y GCP hasta tal punto que ningún físico prudente los citaría.
 
 No hace falta aceptar los datos a ciegas. Basta con fijarse en la *forma* de la predicción que se desprende de ellos.
 
@@ -21,24 +21,24 @@ No hace falta aceptar los datos a ciegas. Basta con fijarse en la *forma* de la 
 
 Si la realidad está organizada como un sistema computacional distribuido con nodos locales y estado compartido, entonces, como todo sistema así, tiene una capacidad de coordinación limitada. Cuando muchos observadores consultan la misma parte del estado a la vez — por ejemplo, viendo una misma transmisión — la carga de sincronización en esa región crece.
 
-Bajo carga debería aparecer lo mismo que en cualquier arquitectura distribuida: más latencia, pequeñas desincronizaciones, desviaciones locales de la estadística estacionaria. En este cuadro la conciencia colectiva no mueve partículas. En el pico de carga, el sistema simplemente mantiene el proceso estacionario local *algo peor*.
+Bajo carga debería aparecer lo mismo que en cualquier arquitectura distribuida: más latencia, pequeñas desincronizaciones, desviaciones locales de la estadística estacionaria. En este esquema la consciencia colectiva no mueve partículas. En el pico de carga, el sistema simplemente mantiene el proceso estacionario local *algo peor*.
 
-El tamaño del efecto en este cuadro tiene que ser muy pequeño y muy persistente. Es lo que encuentran PEAR y GCP, y también lo más difícil de separar de los artefactos de selección sin un protocolo preregistrado.
+Según este esquema, el efecto tiene que ser muy pequeño y muy persistente. Es lo que encuentran PEAR y GCP, y también lo más difícil de separar de los artefactos de selección sin un protocolo preregistrado.
 
 ## Qué haría falta para confirmar la hipótesis o enterrarla con honestidad
 
-Basta un experimento, preregistrado en OSF. Fija de antemano una lista de treinta próximos eventos de escala global, cada uno con una medida de atención, como la audiencia prevista de la retransmisión. Fija la ventana: noventa minutos antes y después del pico. Fija el estadístico: el z compuesto de al menos cincuenta generadores repartidos por el mundo. Y fija el umbral: con el tamaño de efecto que declara el GCP, el agregado de los treinta eventos debe superar 4σ.
+Basta un experimento, preregistrado en OSF. Fija de antemano una lista de doscientos próximos eventos de escala global, cada uno con una medida de atención, como la audiencia prevista de la retransmisión. Fija la ventana: noventa minutos antes y después del pico. Fija el estadístico: el z compuesto de al menos cincuenta generadores repartidos por el mundo. Y fija el umbral: con el tamaño de efecto que declara el GCP, el agregado de los doscientos eventos debería llegar a unas 4σ: unas 0,3σ por evento, como se deduce de 6,4σ en quinientos.
 
-Si se cruza el umbral, hay un argumento serio de que la sincronización en sistemas físicos depende de algo que correlaciona con la atención masiva. Si no, veinte años de publicaciones de PEAR y GCP reciben un veredicto sobrio: probablemente, sesgo de cajón.
+Si se cruza el umbral, hay un argumento serio de que la sincronización en sistemas físicos depende de algo que correlaciona con la atención masiva. Si no, veinte años de publicaciones de PEAR y GCP reciben un veredicto sobrio: probablemente, efecto cajón.
 
 En ambos casos sabremos más que ahora.
 
 ## Por qué este ensayo
 
-Dentro del programa de Pointer Architecture, la mitad formal ya está en terreno comprobable: el preprint implementa el sustrato como código funcional, con falsadores formulados de antemano. La mitad biológica exige colaborar con laboratorios del nivel del de Michael Levin, algo que una sola persona no puede mover.
+Dentro del programa de Pointer Architecture, la mitad formal ya está en terreno comprobable: el preprint implementa el sustrato como código funcional, con falsadores formulados de antemano. La mitad biológica exige colaborar con laboratorios del nivel del de Michael Levin, algo que una sola persona no puede sacar adelante.
 
 Entre las dos hay una prueba observacional que debería ser más barata: equipamiento que ya existe en una red distribuida, y un protocolo que cabe dentro de una sola subvención de tamaño medio.
 
-Si el efecto existe, no lo sé. Sé que *debería existir* si Pointer Architecture es correcta, que tenemos los instrumentos para comprobarlo y que nadie ha hecho aún esa comprobación. Es un hueco fácil de cerrar.
+No sé si el efecto existe. Sé que *debería existir* si Pointer Architecture es correcta, que tenemos los instrumentos para comprobarlo y que nadie ha hecho aún esa comprobación. Es un hueco fácil de cerrar.
 
 El libro acompañante, *El Código Celestial*, recorre el conjunto completo de predicciones. El preprint da el modelo formal. Este ensayo trata de la más barata de las pruebas, la que nadie ha hecho todavía como es debido.

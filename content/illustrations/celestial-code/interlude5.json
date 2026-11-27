@@ -10,9 +10,9 @@
       "prompt": "The back seat of a car on a European motorway at night in the mid-1990s: a nine-year-old boy seen from behind presses his forehead to the window, watching the lights of an unfamiliar city slide past. Another child asleep beside him.",
       "alt": {
         "ru": "Заднее сиденье машины на ночном европейском шоссе середины 1990-х: мальчик лет девяти прижался лбом к стеклу и смотрит на огни чужого города.",
-        "en": "The back seat of a car on a European motorway at night in the mid-1990s: a boy of nine presses his forehead to the window, watching a strange city's lights.",
-        "pt": "O banco de trás de um carro numa autoestrada europeia à noite, meados dos anos 90: um rapaz de nove anos encosta a testa ao vidro e vê as luzes de uma cidade estranha.",
-        "es": "El asiento trasero de un coche en una autopista europea de noche a mediados de los noventa: un niño de nueve años apoya la frente en la ventanilla y mira las luces de una ciudad extraña."
+        "en": "The back seat of a car on a European motorway at night in the mid-1990s: a boy of nine presses his forehead to the window, watching the lights of an unfamiliar city.",
+        "pt": "O banco de trás de um carro numa rodovia europeia à noite, em meados dos anos 90: um menino de nove anos encosta a testa no vidro e vê as luzes de uma cidade desconhecida.",
+        "es": "El asiento trasero de un coche en una autopista europea de noche a mediados de los noventa: un niño de nueve años apoya la frente en la ventanilla y mira las luces de una ciudad desconocida."
       },
       "width": 1536,
       "height": 1024,
@@ -31,7 +31,7 @@
       "alt": {
         "ru": "Анфилада пустых комнат старого дома, двери открыты одна за другой; в каждой комнате в пятне света стоит один предмет: яблоко, ботинок, часы, чайник, ключ.",
         "en": "An enfilade of empty rooms in an old house, doors open one after another; in each room a single object in a pool of light: an apple, a boot, a clock, a teapot, a key.",
-        "pt": "Uma enfiada de salas vazias numa casa antiga, portas abertas umas após outras; em cada sala um único objeto num foco de luz: maçã, bota, relógio, bule, chave.",
+        "pt": "Uma sequência de salas vazias numa casa antiga, portas abertas uma após a outra; em cada sala um único objeto sob um foco de luz: maçã, bota, relógio, bule, chave.",
         "es": "Una enfilada de habitaciones vacías en una casa antigua, puertas abiertas una tras otra; en cada sala un solo objeto en un círculo de luz: manzana, bota, reloj, tetera, llave."
       },
       "width": 1536,

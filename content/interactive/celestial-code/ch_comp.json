@@ -21,7 +21,7 @@
         "ru": "Numberphile: Джон Хортон Конвей объясняет, за что он недолюбливал своё самое знаменитое изобретение. Видео на английском.",
         "en": "Numberphile: John Horton Conway explains why he had little love for his most famous invention.",
         "pt": "Numberphile: John Horton Conway explica por que não gostava muito da sua invenção mais famosa. Vídeo em inglês.",
-        "es": "Numberphile: John Horton Conway explica por qué no quería demasiado a su invento más famoso. Vídeo en inglés."
+        "es": "Numberphile: John Horton Conway explica por qué le tenía poco aprecio a su invento más famoso. Vídeo en inglés."
       }
     },
     {
@@ -38,7 +38,7 @@
         "es": "El Juego de la Vida de Conway: cuatro reglas"
       },
       "caption": {
-        "ru": "Ружьё Госпера (1970) — первая найденная фигура, которая растёт бесконечно: каждые тридцать поколений оно выпускает новый глайдер. Конвей обещал за такую фигуру пятьдесят долларов и заплатил.",
+        "ru": "Ружьё Госпера (1970) стало первой найденной фигурой, которая растёт бесконечно: каждые тридцать поколений оно выпускает новый глайдер. Конвей обещал за такую фигуру пятьдесят долларов и заплатил.",
         "en": "Gosper’s glider gun (1970) was the first pattern found to grow forever: every thirty generations it fires another glider. Conway had offered fifty dollars for such a pattern, and paid.",
         "pt": "O canhão de Gosper (1970) foi o primeiro padrão encontrado que cresce para sempre: a cada trinta gerações dispara mais um planador. Conway tinha oferecido cinquenta dólares por um padrão assim, e pagou.",
         "es": "El cañón de Gosper (1970) fue el primer patrón hallado que crece para siempre: cada treinta generaciones dispara otro planeador. Conway había ofrecido cincuenta dólares por un patrón así, y pagó."
@@ -61,7 +61,7 @@
         "es": "Las 256 reglas de Wolfram"
       },
       "caption": {
-        "ru": "Номер правила — восемь ответов, прочитанные как двоичное число. Универсальность правила 110 доказал Мэтью Кук, работавший у Вольфрама; доказательство опубликовано в 2004 году.",
+        "ru": "Номер правила складывается из восьми ответов, прочитанных как двоичное число. Универсальность правила 110 доказал Мэтью Кук, работавший у Вольфрама; доказательство опубликовано в 2004 году.",
         "en": "A rule’s number is its eight answers read as a binary number. Rule 110’s universality was proved by Matthew Cook, who worked for Wolfram; the proof was published in 2004.",
         "pt": "O número da regra são as oito respostas lidas como um número binário. A universalidade da Regra 110 foi provada por Matthew Cook, que trabalhava para Wolfram; a prova saiu em 2004.",
         "es": "El número de la regla son sus ocho respuestas leídas como un número binario. La universalidad de la Regla 110 la demostró Matthew Cook, que trabajaba para Wolfram; la prueba se publicó en 2004."

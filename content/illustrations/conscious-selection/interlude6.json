@@ -9,10 +9,10 @@
       "status": "draft",
       "prompt": "A Soviet kindergarten cloakroom: a row of small wooden lockers with painted pictures on the doors (no letters), tiny coats on hooks, felt boots below. The image is overexposed and patchy, like a single flash of memory with darkness around it.",
       "alt": {
-        "ru": "Раздевалка детского сада: ряд маленьких шкафчиков с картинками, крошечные пальто, валенки; снимок пересвечен, как вспышка памяти.",
-        "en": "A kindergarten cloakroom: a row of small lockers with pictures, tiny coats, felt boots; overexposed like a flash of memory.",
-        "pt": "O vestiário de um jardim de infância: uma fila de cacifos pequenos com desenhos, casacos minúsculos, botas de feltro; sobre-exposto como um lampejo de memória.",
-        "es": "El guardarropa de una guardería: una fila de taquillas pequeñas con dibujos, abrigos diminutos, botas de fieltro; sobreexpuesto como un destello de memoria."
+        "ru": "Раздевалка детского сада: ряд маленьких шкафчиков с картинками, крошечные пальто, валенки; снимок пересвечен.",
+        "en": "A kindergarten cloakroom: a row of small lockers with pictures, tiny coats, felt boots; the picture is overexposed.",
+        "pt": "O vestiário de um jardim de infância: uma fila de armarinhos com desenhos, casacos minúsculos, botas de feltro; imagem superexposta.",
+        "es": "El guardarropa de una guardería: una fila de taquillas pequeñas con dibujos, abrigos diminutos, botas de fieltro; imagen sobreexpuesta."
       },
       "width": 1536,
       "height": 1024,

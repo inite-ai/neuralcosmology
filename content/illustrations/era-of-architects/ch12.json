@@ -10,8 +10,8 @@
       "prompt": "A stone underground corridor under an old house: a low vaulted ceiling, floor of old wooden boards worn smooth, a single bulb far ahead; two men walk away from us toward a closed door at the end.",
       "alt": {
         "ru": "Каменный подземный коридор под старым домом: низкий свод, пол из старых отполированных досок, далеко впереди одна лампочка; двое уходят к закрытой двери в конце.",
-        "en": "A stone corridor beneath an old house: a low vault, a floor of old boards worn smooth, a single bulb far ahead; two men walking toward a closed door at the end.",
-        "pt": "Um corredor de pedra sob uma casa antiga: abóbada baixa, soalho de tábuas velhas polidas, uma lâmpada lá ao fundo; dois homens a caminhar para uma porta fechada.",
+        "en": "A stone corridor beneath an old house: a low vault, a floor of old boards worn smooth, a single bulb far ahead; two men walking towards a closed door at the end.",
+        "pt": "Um corredor de pedra sob uma casa antiga: abóbada baixa, assoalho de tábuas velhas e gastas, uma lâmpada lá no fundo; dois homens caminhando para uma porta fechada.",
         "es": "Un pasillo de piedra bajo una casa antigua: bóveda baja, suelo de tablas viejas pulidas, una bombilla al fondo; dos hombres caminando hacia una puerta cerrada."
       },
       "width": 1536,
@@ -30,7 +30,7 @@
       "prompt": "A square bare room with stone walls: two candles burn on the floor in the corners, the middle of the room empty, and two wooden chairs stand by the wall angled toward each other; one is occupied by a man in shadow.",
       "alt": {
         "ru": "Квадратная голая комната с каменными стенами: в углах на полу горят две свечи, середина пуста, у стены под углом друг к другу два деревянных стула, на одном человек в тени.",
-        "en": "A bare square stone room: two candles on the floor in the corners, the middle empty, two wooden chairs by the wall angled toward each other, a man in shadow on one.",
+        "en": "A bare square stone room: two candles on the floor in the corners, the middle empty, two wooden chairs by the wall angled towards each other, a man in shadow on one.",
         "pt": "Uma sala quadrada de pedra vazia: duas velas no chão nos cantos, o centro vazio, duas cadeiras de madeira junto à parede viradas uma para a outra, um homem na sombra numa delas.",
         "es": "Una sala cuadrada de piedra vacía: dos velas en el suelo en las esquinas, el centro vacío, dos sillas de madera junto a la pared en ángulo, un hombre en sombra en una."
       },

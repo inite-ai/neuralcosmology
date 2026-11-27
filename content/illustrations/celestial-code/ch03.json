@@ -22,7 +22,7 @@
       "caption": {
         "ru": "Титульный лист магистерской диссертации Клода Шеннона «Символический анализ релейных и переключательных схем», MIT, 1937: логика Буля, переведённая в электрические контакты.",
         "en": "The title page of Claude Shannon's master's thesis, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: Boole's logic turned into electrical contacts.",
-        "pt": "A folha de rosto da dissertação de mestrado de Claude Shannon, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: a lógica de Boole convertida em contactos elétricos.",
+        "pt": "A folha de rosto da dissertação de mestrado de Claude Shannon, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: a lógica de Boole convertida em contatos elétricos.",
         "es": "La portada de la tesis de maestría de Claude Shannon, A Symbolic Analysis of Relay and Switching Circuits, MIT, 1937: la lógica de Boole convertida en contactos eléctricos."
       },
       "width": 1600,
@@ -40,10 +40,10 @@
       "status": "draft",
       "prompt": "Extreme close-up of a 1960s magnetic core memory plane: a fine grid of copper wires threaded through hundreds of tiny ferrite rings. One single ring in the middle glows faintly warm, as if it has just been erased and given off heat.",
       "alt": {
-        "ru": "Крупный план ферритовой памяти 1960-х: сетка медных проводов, продетых через сотни крошечных колец; одно кольцо в центре слегка светится теплом.",
-        "en": "Close-up of 1960s core memory: a grid of copper wires through hundreds of tiny rings; one ring in the middle glows faintly warm.",
-        "pt": "Grande plano de uma memória de núcleos dos anos 60: uma grelha de fios de cobre através de centenas de anéis; um anel ao centro brilha levemente quente.",
-        "es": "Primer plano de una memoria de núcleos de los sesenta: una rejilla de hilos de cobre a través de cientos de anillos; un anillo central brilla levemente cálido."
+        "ru": "Крупный план ферритовой памяти 1960-х: сетка медных проводов, продетых через сотни крошечных колец; одно кольцо в центре слабо светится тёплым светом.",
+        "en": "Close-up of 1960s core memory: a grid of copper wires threaded through hundreds of tiny rings; one ring in the middle glows with a faint warm light.",
+        "pt": "Close de uma memória de núcleos dos anos 60: uma grade de fios de cobre passando por centenas de anéis minúsculos; um anel no centro tem um brilho fraco e quente.",
+        "es": "Primer plano de una memoria de núcleos de los sesenta: una rejilla de hilos de cobre que pasan por cientos de anillos diminutos; un anillo central brilla con una luz tenue y cálida."
       },
       "width": 1536,
       "height": 1024,
@@ -62,7 +62,7 @@
       "alt": {
         "ru": "Тёмная оптическая лаборатория: тонкий луч лазера проходит через пластинку с двумя щелями и рисует на дальнем экране полосы света и тени.",
         "en": "A dark optics lab: a thin laser beam passes through a plate with two slits and paints bright and dark stripes on a far screen.",
-        "pt": "Um laboratório de ótica escuro: um feixe laser fino atravessa uma placa com duas fendas e pinta riscas claras e escuras num ecrã ao fundo.",
+        "pt": "Um laboratório de ótica escuro: um feixe laser fino atravessa uma placa com duas fendas e pinta faixas claras e escuras numa tela ao fundo.",
         "es": "Un laboratorio de óptica oscuro: un fino haz láser atraviesa una placa con dos rendijas y pinta franjas claras y oscuras en una pantalla al fondo."
       },
       "width": 1536,
@@ -80,10 +80,10 @@
       "status": "draft",
       "prompt": "A glass holographic plate held upright in a dark room and lit by a single beam: within the flat glass a three-dimensional image of a small sphere appears to float, clearly deeper than the plate itself.",
       "alt": {
-        "ru": "Стеклянная голографическая пластинка в тёмной комнате, освещённая лучом: внутри плоского стекла словно парит объёмный шар.",
-        "en": "A glass holographic plate in a dark room, lit by a beam: a three-dimensional sphere seems to float inside the flat glass.",
-        "pt": "Uma placa holográfica de vidro num quarto escuro, iluminada por um feixe: uma esfera tridimensional parece flutuar dentro do vidro plano.",
-        "es": "Una placa holográfica de vidrio en una habitación oscura, iluminada por un haz: una esfera tridimensional parece flotar dentro del vidrio plano."
+        "ru": "Стеклянная голографическая пластинка в тёмной комнате, освещённая лучом: внутри плоского стекла виден объёмный шар.",
+        "en": "A glass holographic plate in a dark room, lit by a beam: a three-dimensional sphere is visible inside the flat glass.",
+        "pt": "Uma placa holográfica de vidro numa sala escura, iluminada por um feixe: dentro do vidro plano aparece uma esfera tridimensional.",
+        "es": "Una placa holográfica de vidrio en una habitación oscura, iluminada por un haz: dentro del vidrio plano se ve una esfera tridimensional."
       },
       "width": 1536,
       "height": 1024,

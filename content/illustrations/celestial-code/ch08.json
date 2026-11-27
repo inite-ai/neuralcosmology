@@ -21,9 +21,9 @@
       },
       "caption": {
         "ru": "Чарльз Дарвин. Первый набросок древа жизни в записной книжке «B», 1837. Сверху его пометка «I think».",
-        "en": "Charles Darwin's first sketch of the tree of life in Notebook B, 1837, under his note 'I think'.",
-        "pt": "O primeiro esboço da árvore da vida de Charles Darwin no Caderno B, 1837, sob a nota 'I think'.",
-        "es": "El primer esbozo del árbol de la vida de Charles Darwin en el Cuaderno B, 1837, bajo su nota 'I think'."
+        "en": "Charles Darwin's first sketch of the tree of life in Notebook B, 1837, under his note “I think”.",
+        "pt": "O primeiro esboço da árvore da vida de Charles Darwin no Caderno B, 1837, sob a anotação “I think”.",
+        "es": "El primer esbozo del árbol de la vida de Charles Darwin en el Cuaderno B, 1837, bajo su nota «I think»."
       },
       "width": 1390,
       "height": 2265,
@@ -42,7 +42,7 @@
       "alt": {
         "ru": "Крупный план глаза осьминога в тёмной воде: горизонтальный зрачок-щель, складки радужки, фактурная кожа вокруг.",
         "en": "Close-up of an octopus eye in dark water: the horizontal slit pupil, folds of the iris, textured skin around it.",
-        "pt": "Grande plano do olho de um polvo em água escura: pupila horizontal em fenda, pregas da íris, pele texturada à volta.",
+        "pt": "Close do olho de um polvo em água escura: pupila horizontal em fenda, pregas da íris, pele texturizada em volta.",
         "es": "Primer plano del ojo de un pulpo en agua oscura: pupila horizontal en ranura, pliegues del iris, piel texturada alrededor."
       },
       "width": 1536,

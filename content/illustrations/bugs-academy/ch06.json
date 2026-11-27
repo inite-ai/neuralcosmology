@@ -10,8 +10,8 @@
       "prompt": "A yellow Moscow taxi bouncing along a muddy two-rut track through a bare grey November forest of birch and alder, toward a clearing where an ordinary old wooden dacha stands, its windows faintly lit. Seen from behind the car.",
       "alt": {
         "ru": "Жёлтое такси подпрыгивает по грязной колее через голый ноябрьский лес к поляне, где стоит старая деревянная дача со слабо светящимися окнами.",
-        "en": "A yellow taxi bouncing along a muddy track through a bare November forest toward a clearing with an old wooden dacha, its windows faintly lit.",
-        "pt": "Um táxi amarelo aos solavancos num trilho lamacento por uma floresta nua de novembro rumo a uma clareira com uma velha dacha de madeira de janelas ténues.",
+        "en": "A yellow taxi bouncing along a muddy track through a bare November forest towards a clearing with an old wooden dacha, its windows faintly lit.",
+        "pt": "Um táxi amarelo sacolejando por uma trilha enlameada numa floresta nua de novembro, rumo a uma clareira com uma velha dacha de madeira com as janelas fracamente iluminadas.",
         "es": "Un taxi amarillo dando tumbos por un camino embarrado en un bosque desnudo de noviembre hacia un claro con una vieja dacha de madera de ventanas tenuemente iluminadas."
       },
       "width": 1536,
@@ -29,10 +29,10 @@
       "status": "draft",
       "prompt": "The interior of what should be a small wooden dacha, but the hallway inside is impossibly vast: the floorboards stretch into a dim distance, the walls recede and fold like folded paper, a single ordinary door standing open far away. Uncanny but quiet.",
       "alt": {
-        "ru": "Внутри маленькой деревянной дачи невозможно огромная прихожая: половицы уходят в полумрак, стены отступают и складываются, как бумага, вдали открыта одна обычная дверь.",
-        "en": "Inside a small wooden dacha an impossibly vast hallway: floorboards stretching into dimness, walls receding and folding like paper, one ordinary door open far away.",
-        "pt": "Dentro de uma pequena dacha de madeira, um vestíbulo impossivelmente vasto: tábuas a perder-se na penumbra, paredes a recuar e dobrar como papel, uma porta comum aberta ao longe.",
-        "es": "Dentro de una pequeña dacha de madera, un vestíbulo imposiblemente vasto: tablas que se pierden en la penumbra, paredes que retroceden y se pliegan como papel, una puerta corriente abierta a lo lejos."
+        "ru": "Внутри маленькой деревянной дачи прихожая намного больше самого дома: половицы уходят в полумрак, стены отступают и складываются, как бумага, вдали открыта одна обычная дверь.",
+        "en": "Inside a small wooden dacha, a hallway far bigger than the house itself: floorboards stretching into dimness, walls receding and folding like paper, one ordinary door open far away.",
+        "pt": "Dentro de uma pequena dacha de madeira, um vestíbulo muito maior do que a própria casa: tábuas sumindo na penumbra, paredes recuando e se dobrando como papel, uma porta comum aberta ao longe.",
+        "es": "Dentro de una pequeña dacha de madera, un vestíbulo mucho más grande que la propia casa: tablas que se pierden en la penumbra, paredes que retroceden y se pliegan como papel, una puerta corriente abierta a lo lejos."
       },
       "width": 1536,
       "height": 1024,
@@ -51,7 +51,7 @@
       "alt": {
         "ru": "Длинный деревянный стол в полутёмной комнате: четверо, три женщины и мужчина, сидят над чашками чая; в конце стола ждёт пустой стул.",
         "en": "A long wooden table in a dim room: four people, three women and a man, sit over cups of tea; an empty chair waits at the end.",
-        "pt": "Uma longa mesa de madeira numa sala escura: quatro pessoas, três mulheres e um homem, diante de chávenas de chá; uma cadeira vazia espera na ponta.",
+        "pt": "Uma longa mesa de madeira numa sala escura: quatro pessoas, três mulheres e um homem, diante de xícaras de chá; uma cadeira vazia espera na ponta.",
         "es": "Una larga mesa de madera en una sala en penumbra: cuatro personas, tres mujeres y un hombre, ante tazas de té; una silla vacía espera al final."
       },
       "width": 1536,

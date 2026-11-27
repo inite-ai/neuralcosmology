@@ -9,10 +9,10 @@
       "status": "draft",
       "prompt": "An early-1990s computer lab at night: a bulky CRT monitor on a desk glows with a dense swarm of tiny bright dots and streaks, like a colony seen under a microscope. A researcher's silhouette leans toward it. No readable text on screen.",
       "alt": {
-        "ru": "Компьютерный класс начала 1990-х ночью: громоздкий монитор светится роем крошечных точек, как колония под микроскопом, к нему склонился исследователь.",
-        "en": "An early-1990s computer lab at night: a bulky monitor glows with a swarm of tiny dots like a colony under a microscope, a researcher leaning in.",
-        "pt": "Uma sala de computadores do início dos anos 90 à noite: um monitor volumoso brilha com um enxame de pontos como uma colónia ao microscópio, um investigador inclinado.",
-        "es": "Una sala de ordenadores de principios de los noventa de noche: un monitor voluminoso brilla con un enjambre de puntos como una colonia al microscopio, un investigador inclinado hacia él."
+        "ru": "Компьютерный класс начала 1990-х ночью: громоздкий монитор светится роем крошечных точек, к нему склонился исследователь.",
+        "en": "An early-1990s computer lab at night: a bulky monitor glows with a swarm of tiny dots, a researcher leaning in.",
+        "pt": "Uma sala de computadores do início dos anos 90 à noite: um monitor volumoso brilha com um enxame de pontos, um pesquisador inclinado diante dele.",
+        "es": "Una sala de ordenadores de principios de los noventa de noche: un monitor voluminoso brilla con un enjambre de puntos, un investigador inclinado hacia él."
       },
       "width": 1536,
       "height": 1024,
@@ -37,14 +37,14 @@
       "alt": {
         "ru": "Ряд из двенадцати колб с мутноватой жидкостью; одна заметно мутнее остальных.",
         "en": "A row of twelve flasks of cloudy liquid; one is visibly cloudier than the rest.",
-        "pt": "Uma fila de doze frascos com líquido turvo; um está visivelmente mais turvo.",
+        "pt": "Uma fila de doze frascos com líquido turvo; um está visivelmente mais turvo que os outros.",
         "es": "Una fila de doce matraces con líquido turbio; uno está visiblemente más turbio que los demás."
       },
       "caption": {
-        "ru": "Двенадцать популяций кишечной палочки в опыте Ричарда Ленски, 25 июня 2008 года. Самая мутная колба — линия, научившаяся есть цитрат.",
-        "en": "The twelve E. coli populations of Richard Lenski's experiment, 25 June 2008. The cloudiest flask is the line that learned to eat citrate.",
-        "pt": "As doze populações de E. coli da experiência de Richard Lenski, 25 de junho de 2008. O frasco mais turvo é a linhagem que aprendeu a comer citrato.",
-        "es": "Las doce poblaciones de E. coli del experimento de Richard Lenski, 25 de junio de 2008. El matraz más turbio es la línea que aprendió a comer citrato."
+        "ru": "Двенадцать популяций кишечной палочки в опыте Ричарда Ленски, 25 июня 2008 года. В самой мутной колбе живёт линия, научившаяся есть цитрат.",
+        "en": "The twelve E. coli populations of Richard Lenski's experiment, 25 June 2008. The cloudiest flask holds the line that learned to eat citrate.",
+        "pt": "As doze populações de E. coli do experimento de Richard Lenski, 25 de junho de 2008. No frasco mais turvo vive a linhagem que aprendeu a comer citrato.",
+        "es": "Las doce poblaciones de E. coli del experimento de Richard Lenski, 25 de junio de 2008. En el matraz más turbio vive la línea que aprendió a comer citrato."
       },
       "width": 1038,
       "height": 423,

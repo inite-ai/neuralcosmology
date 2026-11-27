@@ -90,7 +90,7 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 
 ## Lectures
 
-- [Lectures index](https://neuralcosmology.com/en/lectures): Recorded talks and walk-throughs of the programme.
+- [Lectures index](https://neuralcosmology.com/en/lectures): Recorded talks by other scientists whose work the programme builds on.
 
 ## About
 
@@ -109,7 +109,7 @@ Each page is also available in ru, pt and es at /{lang}/answers/{slug}.
 - [FAQ (JSON)](https://neuralcosmology.com/en/faq.json): Question–answer pairs for /science and /about sections. Available in en, ru, pt, es.
 - Essays are available as plain markdown at `/{locale}/essays/{slug}/raw.md` — same content as the HTML page, without layout chrome.
 - [Experiments](https://neuralcosmology.com/en/experiments): Interactive simulations from the books (double slit, Conway's Life, slime mould, Landauer, blind spot and more). Any of them can be embedded on another site: `<iframe src="https://neuralcosmology.com/embed/{locale}/{id}">` with a link to `/{locale}/experiments/{id}` under it.
-- Lecture transcripts at `/{locale}/lectures/{slug}/transcript.md` when available. English transcripts are YouTube-sourced (auto-generated or human-made); ru/pt/es are YouTube auto-translations from the English source.
+- Lecture transcripts at `/{locale}/lectures/{slug}/transcript.md` when available. English transcripts are YouTube-sourced (auto-generated or human-made); the Russian and Portuguese translation of the Vanchurin 2020 interview is a machine translation edited by hand; other ru/pt/es transcripts are YouTube auto-translations.
 
 ## Citation
 
@@ -121,4 +121,4 @@ Attribution to "Mikhail Savchenko" and a link back to https://neuralcosmology.co
 
 ## Languages
 
-The site is published in English (default), Russian, Brazilian Portuguese, and Spanish. Content is human-authored; translations are also human-authored, not auto-generated.
+The site is published in English (default), Russian, Brazilian Portuguese, and Spanish. Content is human-authored, and so are the translations of essays, answers and books; lecture transcripts are the exception described above.

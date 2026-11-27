@@ -21,7 +21,7 @@ const T: Dict<{
     hint: "Выберите, куда полетит мистер Часы.", flying: "Мистер Часы в полёте.",
     landed: { east: "Часы вернулись с востока и отстали от оставшихся на земле на 59 миллиардных секунды.", west: "Часы вернулись с запада и ушли вперёд на 273 миллиардные секунды." },
     other: { east: "Теперь отправьте их на восток.", west: "Теперь отправьте их на запад." },
-    both: "Вокруг одной и той же Земли: на восток отстали, на запад ушли вперёд. Обе цифры совпали с тем, что предсказывал Эйнштейн.",
+    both: "Земля та же, но на восток часы отстали, а на запад ушли вперёд. Обе цифры совпали с предсказанием Эйнштейна.",
     axis: "Разница с часами в Вашингтоне, наносекунды", behind: "отстают", ahead: "спешат",
   },
   en: {
@@ -29,7 +29,7 @@ const T: Dict<{
     hint: "Choose which way Mr Clock will fly.", flying: "Mr Clock is in the air.",
     landed: { east: "Back from the eastward trip, the clocks have lost 59 billionths of a second against those on the ground.", west: "Back from the westward trip, the clocks have gained 273 billionths of a second." },
     other: { east: "Now send them east.", west: "Now send them west." },
-    both: "Around the same Earth: eastward they lost time, westward they gained it. Both figures matched what Einstein had predicted.",
+    both: "The Earth is the same, but eastward the clocks lost time and westward they gained it. Both figures matched what Einstein had predicted.",
     axis: "Difference from the clocks in Washington, nanoseconds", behind: "behind", ahead: "ahead",
   },
   pt: {
@@ -37,15 +37,15 @@ const T: Dict<{
     hint: "Escolha para onde o senhor Relógio vai voar.", flying: "O senhor Relógio está no ar.",
     landed: { east: "Na volta do leste, os relógios atrasaram 59 bilionésimos de segundo em relação aos que ficaram em terra.", west: "Na volta do oeste, os relógios adiantaram 273 bilionésimos de segundo." },
     other: { east: "Agora mande-os para o leste.", west: "Agora mande-os para o oeste." },
-    both: "Em volta da mesma Terra: para o leste atrasaram, para o oeste adiantaram. Os dois números coincidiram com o que Einstein tinha previsto.",
+    both: "A Terra é a mesma, mas para o leste os relógios atrasaram e para o oeste adiantaram. Os dois números coincidiram com o que Einstein tinha previsto.",
     axis: "Diferença em relação aos relógios de Washington, nanossegundos", behind: "atrasados", ahead: "adiantados",
   },
   es: {
     go: { east: "Volar al este", west: "Volar al oeste" }, row: { east: "este", west: "oeste" }, pole: "visto desde encima del Polo Norte", home: "Washington", ns: "ns",
-    hint: "Elija hacia dónde volará el señor Reloj.", flying: "El señor Reloj está en el aire.",
+    hint: "Elige hacia dónde volará el señor Reloj.", flying: "El señor Reloj está en el aire.",
     landed: { east: "Al volver del este, los relojes se habían atrasado 59 milmillonésimas de segundo respecto a los que quedaron en tierra.", west: "Al volver del oeste, los relojes se habían adelantado 273 milmillonésimas de segundo." },
-    other: { east: "Ahora envíelos al este.", west: "Ahora envíelos al oeste." },
-    both: "Alrededor de la misma Tierra: hacia el este se atrasaron, hacia el oeste se adelantaron. Las dos cifras coincidieron con lo que había predicho Einstein.",
+    other: { east: "Ahora envíalos al este.", west: "Ahora envíalos al oeste." },
+    both: "La Tierra es la misma, pero hacia el este los relojes se atrasaron y hacia el oeste se adelantaron. Las dos cifras coincidieron con lo que había predicho Einstein.",
     axis: "Diferencia con los relojes de Washington, nanosegundos", behind: "atrasados", ahead: "adelantados",
   },
 };

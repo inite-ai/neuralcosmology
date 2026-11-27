@@ -13,12 +13,12 @@
     "ru": [
       "Свет проходит через две узкие параллельные щели и падает на экран. Если бы свет был потоком частиц, на экране остались бы две светлые полосы напротив щелей. На деле получается много полос: светлые и тёмные чередуются. Так складываются волны: где гребни совпадают, свет усиливается, где гребень встречает впадину, гасится. Томас Юнг показал это в начале XIX века, и опыт стал главным доводом за волновую природу света.",
       "Странность начинается, когда частицы летят по одной. В 1989 году группа Акиры Тономуры в Hitachi пускала электроны через установку поштучно. Каждый электрон оставлял на экране одну точку, как частица. Но через несколько тысяч точек из них складывались те же полосы, как будто каждый электрон прошёл через обе щели сразу и сам с собой интерферировал.",
-      "Если поставить у щелей детектор, который узнаёт, через какую прошла частица, полосы исчезают, и на экране остаются две размытые полосы. Квантовая механика описывает это без мистики: пока путь не записан, складываются амплитуды двух путей, и картина есть; как только путь записан где угодно, складываются вероятности, и картины нет. Наблюдателю-человеку для этого смотреть не нужно, хватает любого физического следа.",
-      "В 1999 году Маркус Арндт и Антон Цайлингер получили те же полосы для молекул фуллерена C60 из шестидесяти атомов углерода. Если такие молекулы нагреть, они излучают тепловые фотоны, которые выдают их путь, и полосы гаснут. Это видно в опыте про горячие фуллерены."
+      "Если поставить у щелей детектор, который узнаёт, через какую прошла частица, интерференционная картина исчезает, и на экране остаются две размытые полосы напротив щелей. Квантовая механика описывает это без мистики: пока путь не записан, складываются амплитуды двух путей, и картина есть; как только путь записан где угодно, складываются вероятности, и картины нет. Наблюдателю-человеку для этого смотреть не нужно, хватает любого физического следа.",
+      "В 1999 году Маркус Арндт и Антон Цайлингер получили те же полосы для молекул фуллерена C60 из шестидесяти атомов углерода. Если такие молекулы нагреть, они излучают тепловые фотоны, которые выдают их путь, и полосы гаснут. Это показывает опыт с горячими фуллеренами."
     ],
     "en": [
       "Light passes through two narrow parallel slits and lands on a screen. If light were a stream of particles, you would see two bright bands opposite the slits. Instead you see many bands, bright and dark in turn. That is how waves add up: where crests meet crests the light grows stronger, where a crest meets a trough it cancels. Thomas Young showed this in the early 1800s, and the experiment became the main evidence that light behaves as a wave.",
-      "The strange part begins when particles go through one at a time. In 1989 Akira Tonomura's group at Hitachi sent electrons through the apparatus singly. Each electron left a single dot on the screen, like a particle. After a few thousand dots, though, the same fringes appeared, as if every electron had passed through both slits and interfered with itself.",
+      "The strange part begins when particles go through one at a time. In 1989 Akira Tonomura’s group at Hitachi sent electrons through the apparatus singly. Each electron left a single dot on the screen, like a particle. After a few thousand dots, though, the same fringes appeared, as if every electron had passed through both slits and interfered with itself.",
       "Put a detector at the slits that records which one a particle went through, and the fringes disappear, leaving two blurred bands. Quantum mechanics describes this without mysticism: while the path is unrecorded, the amplitudes of the two paths add and the pattern is there; once the path is recorded anywhere, the probabilities add and the pattern is gone. No human observer has to look. Any physical trace of the path is enough.",
       "In 1999 Markus Arndt and Anton Zeilinger obtained the same fringes with C60 fullerene molecules, sixty carbon atoms each. Heat those molecules and they emit thermal photons that give away their path, and the fringes fade. The experiment on hot fullerenes shows it."
     ],
@@ -43,11 +43,11 @@
       },
       {
         "q": "Ставили ли опыт с одиночными частицами?",
-        "a": "Да. Клаус Йёнссон в 1961 году провёл его с электронами, а группа Акиры Тономуры в 1989 году пускала электроны строго по одному и сняла, как из отдельных точек складываются полосы."
+        "a": "Да. С электронами опыт поставил Клаус Йёнссон в 1961 году, а строго по одному их пускала группа Акиры Тономуры в 1989-м. Она же сняла, как из отдельных точек складываются полосы."
       },
       {
         "q": "Работает ли это с крупными молекулами?",
-        "a": "Да. В 1999 году группа Антона Цайлингера получила интерференцию молекул фуллерена C60, позже опыты проводили с молекулами из тысяч атомов."
+        "a": "Да. В 1999 году группа Антона Цайлингера получила интерференцию молекул фуллерена C60, а позже опыты проводили с молекулами из тысяч атомов."
       }
     ],
     "en": [
@@ -57,11 +57,11 @@
       },
       {
         "q": "Has the experiment been done with single particles?",
-        "a": "Yes. Claus Jönsson did it with electrons in 1961, and in 1989 Akira Tonomura's group sent electrons strictly one at a time and filmed the fringes building up from individual dots."
+        "a": "Yes. Claus Jönsson first did it with electrons in 1961, though not one at a time; in 1989 Akira Tonomura’s group sent electrons strictly singly and filmed the fringes building up from individual dots."
       },
       {
         "q": "Does it work with large molecules?",
-        "a": "Yes. In 1999 Anton Zeilinger's group observed interference of C60 fullerene molecules, and later experiments used molecules of thousands of atoms."
+        "a": "Yes. In 1999 Anton Zeilinger’s group observed interference of C60 fullerene molecules, and later experiments used molecules of thousands of atoms."
       }
     ],
     "pt": [
@@ -71,7 +71,7 @@
       },
       {
         "q": "O experimento já foi feito com partículas isoladas?",
-        "a": "Sim. Claus Jönsson o fez com elétrons em 1961, e em 1989 o grupo de Akira Tonomura mandou elétrons estritamente um por vez e filmou as franjas se formando a partir de pontos isolados."
+        "a": "Sim. Claus Jönsson o fez com elétrons em 1961, ainda não um por vez; em 1989, o grupo de Akira Tonomura mandou elétrons estritamente um por vez e filmou as franjas se formando a partir de pontos isolados."
       },
       {
         "q": "Funciona com moléculas grandes?",
@@ -85,7 +85,7 @@
       },
       {
         "q": "¿Se ha hecho el experimento con partículas sueltas?",
-        "a": "Sí. Claus Jönsson lo hizo con electrones en 1961, y en 1989 el grupo de Akira Tonomura envió electrones estrictamente de uno en uno y filmó cómo las franjas se forman a partir de puntos aislados."
+        "a": "Sí. Claus Jönsson lo hizo con electrones en 1961, aunque no de uno en uno; en 1989, el grupo de Akira Tonomura envió electrones estrictamente de uno en uno y filmó cómo las franjas se forman a partir de puntos aislados."
       },
       {
         "q": "¿Funciona con moléculas grandes?",

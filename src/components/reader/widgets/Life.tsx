@@ -14,10 +14,10 @@ const SW = COLS + 2 * M;
 const SH = ROWS + 2 * M;
 
 const T: Dict<{ play: string; pause: string; step: string; clear: string; gen: string; pop: string; hint: string; presets: Record<string, string> }> = {
-  ru: { play: "Пуск", pause: "Пауза", step: "Шаг", clear: "Очистить", gen: "поколение", pop: "живых", hint: "Рисуйте клетки прямо на поле. Глайдер — пять клеток, которые ползут по диагонали; ружьё Госпера выпускает их без конца.", presets: { gun: "Ружьё Госпера", glider: "Глайдеры", r: "R-пентамино", random: "Случайно" } },
+  ru: { play: "Пуск", pause: "Пауза", step: "Шаг", clear: "Очистить", gen: "поколение", pop: "живых", hint: "Рисуйте клетки прямо на поле. Глайдер состоит из пяти клеток, которые ползут по диагонали; ружьё Госпера выпускает их без конца.", presets: { gun: "Ружьё Госпера", glider: "Глайдеры", r: "R-пентамино", random: "Случайно" } },
   en: { play: "Play", pause: "Pause", step: "Step", clear: "Clear", gen: "generation", pop: "alive", hint: "Draw cells right on the grid. A glider is five cells that crawl diagonally; Gosper’s gun fires them forever.", presets: { gun: "Gosper gun", glider: "Gliders", r: "R-pentomino", random: "Random" } },
   pt: { play: "Iniciar", pause: "Pausar", step: "Passo", clear: "Limpar", gen: "geração", pop: "vivas", hint: "Desenhe células direto na grade. Um planador são cinco células que rastejam na diagonal; o canhão de Gosper os dispara sem fim.", presets: { gun: "Canhão de Gosper", glider: "Planadores", r: "R-pentominó", random: "Ao acaso" } },
-  es: { play: "Iniciar", pause: "Pausa", step: "Paso", clear: "Limpiar", gen: "generación", pop: "vivas", hint: "Dibuje células sobre la cuadrícula. Un planeador son cinco células que reptan en diagonal; el cañón de Gosper los dispara sin fin.", presets: { gun: "Cañón de Gosper", glider: "Planeadores", r: "R-pentominó", random: "Al azar" } },
+  es: { play: "Iniciar", pause: "Pausa", step: "Paso", clear: "Limpiar", gen: "generación", pop: "vivas", hint: "Dibuja células sobre la cuadrícula. Un planeador son cinco células que reptan en diagonal; el cañón de Gosper los dispara sin fin.", presets: { gun: "Cañón de Gosper", glider: "Planeadores", r: "R-pentominó", random: "Al azar" } },
 };
 
 const GUN = [

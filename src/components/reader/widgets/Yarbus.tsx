@@ -17,7 +17,7 @@ const T: Dict<{ questions: string[]; pick: string; start: string; again: string;
   ru: {
     questions: ["Просто посмотрите на картину", "Насколько обеспечена эта семья?", "Сколько лет каждому из присутствующих?", "Чем они занимались до прихода гостя?", "Запомните, во что все одеты", "Запомните, где что стоит в комнате", "Как долго вошедший отсутствовал?"],
     pick: "Вопрос перед показом", start: "Смотреть 20 секунд", again: "Ещё вопрос", clear: "Стереть траектории", left: (s) => `осталось ${s} с`,
-    hint: "Ведите курсором или пальцем: резко видно только пятно вокруг него, как у глаза. Мышь — грубая замена глаза, но разница между вопросами видна и так.",
+    hint: "Ведите курсором или пальцем: чётко видно только пятно вокруг него, как у глаза. Мышь заменяет глаз грубо, но разница между вопросами видна и так.",
     yours: "Ваши траектории", idle: "Выберите вопрос и нажмите «Смотреть»", touch: "Ведите пальцем по картине",
   },
   en: {
@@ -33,10 +33,10 @@ const T: Dict<{ questions: string[]; pick: string; start: string; again: string;
     yours: "Suas trajetórias", idle: "Escolha uma pergunta e toque em “Olhar”", touch: "Passe o dedo pelo quadro",
   },
   es: {
-    questions: ["Solo mire el cuadro", "¿Qué tan acomodada es esta familia?", "¿Qué edad tiene cada uno de los presentes?", "¿Qué hacían antes de que llegara el visitante?", "Recuerde cómo va vestido cada uno", "Recuerde dónde está cada cosa en la sala", "¿Cuánto tiempo estuvo ausente el visitante?"],
+    questions: ["Solo mira el cuadro", "¿Qué tan acomodada es esta familia?", "¿Qué edad tiene cada uno de los presentes?", "¿Qué hacían antes de que llegara el visitante?", "Recuerda cómo va vestido cada uno", "Recuerda dónde está cada cosa en la sala", "¿Cuánto tiempo estuvo ausente el visitante?"],
     pick: "La pregunta antes de mirar", start: "Mirar 20 segundos", again: "Otra pregunta", clear: "Borrar trayectorias", left: (s) => `quedan ${s} s`,
-    hint: "Mueva el cursor o el dedo: solo se ve nítida una mancha a su alrededor, como en el ojo. El ratón es un sustituto tosco del ojo, pero la diferencia entre preguntas se ve igual.",
-    yours: "Sus trayectorias", idle: "Elija una pregunta y pulse «Mirar»", touch: "Pase el dedo por el cuadro",
+    hint: "Mueve el cursor o el dedo: solo se ve nítida una mancha a su alrededor, como en el ojo. El ratón es un sustituto tosco del ojo, pero la diferencia entre preguntas se ve igual.",
+    yours: "Tus trayectorias", idle: "Elige una pregunta y pulsa «Mirar»", touch: "Pasa el dedo por el cuadro",
   },
 };
 

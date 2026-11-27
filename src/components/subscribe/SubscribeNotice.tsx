@@ -9,7 +9,7 @@ const T: Record<string, { ok: string; bad: string; off: string }> = {
   ru: { ok: "Подписка подтверждена. Напишу, когда выйдут новые главы и опыты.", bad: "Ссылка устарела или уже использована.", off: "Вы отписались. Писем больше не будет." },
   en: { ok: "Subscription confirmed. I’ll write when new chapters and experiments come out.", bad: "This link has expired or was already used.", off: "You’ve unsubscribed. No more emails." },
   pt: { ok: "Inscrição confirmada. Vou escrever quando saírem novos capítulos e experimentos.", bad: "O link expirou ou já foi usado.", off: "Inscrição cancelada. Não haverá mais e-mails." },
-  es: { ok: "Suscripción confirmada. Le escribiré cuando salgan capítulos y experimentos nuevos.", bad: "El enlace caducó o ya se usó.", off: "Se dio de baja. No habrá más correos." },
+  es: { ok: "Suscripción confirmada. Te escribiré cuando salgan capítulos y experimentos nuevos.", bad: "El enlace caducó o ya se usó.", off: "Te diste de baja. No habrá más correos." },
 };
 
 export default function SubscribeNotice({ locale }: { locale: string }) {

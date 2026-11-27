@@ -9,10 +9,10 @@
       "status": "draft",
       "prompt": "An old, faded school classroom photograph seen as if half remembered: rows of children from behind at wooden desks, a tall window with autumn light, the edges of the image washed out and partly dissolved as though the memory is being rewritten.",
       "alt": {
-        "ru": "Старая выцветшая фотография класса: дети со спины за партами, высокое окно, края снимка расплываются, будто воспоминание переписывается.",
-        "en": "An old faded classroom photo: children from behind at desks, a tall window, the edges dissolving as if the memory were being rewritten.",
-        "pt": "Uma velha fotografia desbotada de sala de aula: crianças de costas nas carteiras, uma janela alta, as margens a dissolver-se como uma memória reescrita.",
-        "es": "Una vieja foto descolorida de un aula: niños de espaldas en los pupitres, una ventana alta, los bordes disolviéndose como un recuerdo reescrito."
+        "ru": "Старая выцветшая фотография класса: дети со спины за партами, высокое окно, края снимка расплываются.",
+        "en": "An old faded classroom photo: children from behind at desks, a tall window, the edges blurring away.",
+        "pt": "Uma velha fotografia desbotada de sala de aula: crianças de costas nas carteiras, uma janela alta, as margens desfocadas.",
+        "es": "Una vieja foto descolorida de un aula: niños de espaldas en los pupitres, una ventana alta, los bordes desdibujados."
       },
       "width": 1536,
       "height": 1024,
@@ -31,7 +31,7 @@
       "alt": {
         "ru": "Камера для опытов: белая крыса замерла на металлической решётке, на стенке ящика маленький динамик, снаружи рука исследователя на выключателе.",
         "en": "A conditioning chamber: a white rat frozen on a metal grid, a small speaker on the wall of the box, a researcher's hand on a switch outside.",
-        "pt": "Uma câmara de condicionamento: um rato branco imóvel numa grelha metálica, um pequeno altifalante na parede, a mão de um investigador num interruptor.",
+        "pt": "Uma câmara de condicionamento: um rato branco imóvel sobre uma grade metálica, um pequeno alto-falante na parede, a mão de um pesquisador num interruptor.",
         "es": "Una cámara de condicionamiento: una rata blanca inmóvil sobre una rejilla metálica, un pequeño altavoz en la pared, la mano de un investigador en un interruptor."
       },
       "width": 1536,
@@ -51,7 +51,7 @@
       "alt": {
         "ru": "Затемнённая аудитория 1970-х: студенты со спины смотрят зернистый фильм о столкновении двух машин, над головами луч проектора.",
         "en": "A darkened 1970s lecture room: students from behind watch a grainy film of two cars colliding, a projector beam overhead.",
-        "pt": "Uma sala de aula dos anos 70 às escuras: estudantes de costas veem um filme granulado de dois carros a colidir, o feixe do projetor por cima.",
+        "pt": "Uma sala de aula dos anos 70 às escuras: estudantes de costas assistem a um filme granulado de dois carros colidindo, o feixe do projetor por cima.",
         "es": "Un aula de los años setenta a oscuras: estudiantes de espaldas ven una película granulada de dos coches chocando, el haz del proyector encima."
       },
       "width": 1536,

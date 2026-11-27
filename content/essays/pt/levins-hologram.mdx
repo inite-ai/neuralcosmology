@@ -11,9 +11,9 @@ Um experimento simples e incômodo do laboratório de Michael Levin, em Tufts. A
 
 Mas se, durante a regeneração, as células da região da ferida recebem à força um certo desenho de potenciais de membrana (o laboratório de Levin faz isso com meios elétricos e farmacológicos), a planária regenera *duas* cabeças em vez de uma. Que o gradiente de voltagem comande a forma, era de esperar.
 
-Mas corte esse verme de duas cabeças ao meio *sem nenhuma intervenção adicional*, e as duas metades voltam a formar duas cabeças cada; o corte seguinte dá o mesmo resultado. A bicefalia se reproduz sozinha, ciclo após ciclo, sem alteração genética e sem estímulo externo contínuo. Durant, Morokuma, Fields, Williams, Adams e Levin descreveram o efeito em 2017 (*Biophysical Journal* 112, 10).
+Agora corte esse verme de duas cabeças ao meio *sem nenhuma intervenção adicional*, e as duas metades voltam a formar duas cabeças cada; o corte seguinte dá o mesmo resultado. A bicefalia se reproduz sozinha, ciclo após ciclo, sem alteração genética e sem estímulo externo contínuo. Durant, Morokuma, Fields, Williams, Adams e Levin descreveram o efeito em 2017 (*Biophysical Journal* 112, 10).
 
-Isso quer dizer que uma parte do "plano do corpo" fica guardada fora do DNA (que é idêntico nos dois fragmentos) e fora das estruturas locais de proteínas, porque depois da regeneração completa todos os tecidos são novos. Em algum lugar entre as células persiste um desenho informacional estável, capaz de recriar a mesma forma a partir de qualquer material que caia no seu "campo".
+Isso quer dizer que uma parte do "plano do corpo" fica guardada fora do DNA (que é o mesmo de um verme comum, de uma cabeça só) e fora das estruturas locais de proteínas, porque depois da regeneração completa todos os tecidos são novos. Em algum lugar entre as células persiste um desenho informacional estável, capaz de recriar a mesma forma a partir de qualquer material que caia no seu "campo".
 
 Levin chama isso de memória bioelétrica. Tecnicamente, são padrões estacionários de potencial de membrana nas redes por onde as células se comunicam. Fenomenologicamente, é um holograma do plano do corpo espalhado pelo tecido vivo.
 
@@ -25,13 +25,13 @@ Daí saem duas previsões testáveis.
 
 Primeira: a memória morfológica não deve se reduzir às cadeias locais de sinalização entre células. Se ela é endereçável, remover fisicamente o tecido da região não a apaga, porque as células novas simplesmente a leem outra vez. Isso já se observa: a bicefalia da planária sobrevive à amputação.
 
-Segunda, e nova: se o padrão é endereçável, deve ser possível *transferi-lo* de um organismo para outro sem transferir material genético. Copiar a paisagem elétrica de uma planária de duas cabeças, impô-la a uma planária comum, e a comum deveria passar a construir duas cabeças no ciclo seguinte de regeneração. É tecnicamente difícil, mas possível em princípio: matrizes de fixação de voltagem e o controle optogenético dos canais iônicos oferecem as ferramentas necessárias. O primeiro passo foi dado em 2012, quando Pai e colegas (*Development* 139, 313) impuseram a células da cauda de um embrião de rã-de-unhas um desenho de potenciais "de olho" e obtiveram ali um olho, com células de retina e de cristalino.
+Segunda, e nova: se o padrão é endereçável, deve ser possível *transferi-lo* de um organismo para outro sem transferir material genético. Se a paisagem elétrica de uma planária de duas cabeças for copiada e imposta a uma planária comum, esta deveria construir duas cabeças no ciclo seguinte de regeneração. É tecnicamente difícil, mas possível em princípio: matrizes de fixação de voltagem e o controle optogenético dos canais iônicos oferecem as ferramentas necessárias. O primeiro passo foi dado em 2012, quando Pai e colegas (*Development* 139, 313) impuseram a células da cauda de um embrião de rã-de-unhas um desenho de potenciais "de olho" e obtiveram ali um olho, com células de retina e de cristalino.
 
-## Xenobots: um corpo sem planta
+## Xenobots: um corpo sem plano
 
-Em 2020, Kriegman, Blackiston, Levin e Bongard descreveram na *PNAS* (117, 4) os xenobots, objetos biológicos auto-organizados que um algoritmo evolutivo montou com células de pele e de músculo cardíaco da rã-de-unhas. Nem o genoma das células nem qualquer plano externo foram alterados. Aglomerados de alguns milhares de células se comportam de modo coordenado: movem-se numa direção, juntam partículas ao redor, consertam pequenos danos.
+Em 2020, Kriegman, Blackiston, Levin e Bongard descreveram na *PNAS* (117, 4) os xenobots, objetos biológicos auto-organizados que um algoritmo evolutivo montou com células de pele e de músculo cardíaco da rã-de-unhas. O genoma das células não foi alterado. Aglomerados de alguns milhares de células se comportam de modo coordenado: movem-se numa direção, juntam partículas ao redor, consertam pequenos danos.
 
-A biologia clássica não tem explicação para isso. O genoma dessas células nunca "viu" o regime de xenobot: elas vêm de um embrião de rã em que seu caminho de desenvolvimento termina no epitélio da pele. Ainda assim, coordenam o comportamento numa escala de centenas de mícrons.
+A biologia clássica não tem explicação para isso. O genoma dessas células nunca "viu" o regime de xenobot: elas vêm de um embrião de rã em que seu caminho de desenvolvimento termina na pele ou no músculo cardíaco. Ainda assim, coordenam o comportamento numa escala de centenas de mícrons.
 
 Se a Pointer Architecture estiver certa, as células sabem pedir a forma a uma estrutura distribuída mesmo quando o genoma não codifica essas formas. A situação local (posição, vizinhos, gradientes iônicos) vira um endereço, e é desse endereço que se lê a resposta.
 
@@ -39,10 +39,10 @@ A previsão aqui é dura: com genomas e tecidos idênticos, condições bioelét
 
 ## O que isso muda para o programa
 
-O programa da Pointer Architecture se apoia em três pilares. O formal já está de pé: o preprint implementa o substrato como código funcional, com falsificadores escritos de antemão. O observacional, descrito no ensaio sobre a atenção, espera um experimento pré-registrado com geradores de números aleatórios.
+O programa da Pointer Architecture se apoia em três pilares. O formal já está de pé: o preprint implementa o substrato como código funcional, com critérios de refutação escritos de antemão. O observacional, descrito no ensaio sobre a atenção, espera um experimento pré-registrado com geradores de números aleatórios.
 
 O teste biológico é o mais caro e o mais forte. A memória bioelétrica da forma ainda não tem uma teoria mecanística consensual. A Pointer Architecture faz aqui uma previsão clara: a memória é endereçável e, portanto, pode ser transferida independentemente do suporte. Se a transferência funcionar, a biologia ganha uma nova linguagem, em que a célula é um cliente que pede à rede o plano da forma. Se não funcionar, a Pointer Architecture perde um dos três pilares.
 
-Esse experimento não se faz sozinho. É trabalho para um laboratório do nível do de Levin ou de capacidade técnica equivalente. Este ensaio existe para deixar a previsão registrada em público *antes* do experimento. É um pré-registro no nível da teoria, e serve pelo mesmo motivo que o pré-registro comum: para que ninguém, nem o próprio autor, possa colar depois num resultado encontrado a frase "era exatamente isso que eu previa".
+Ninguém faz esse experimento sozinho. É trabalho para um laboratório do nível do de Levin ou de capacidade técnica equivalente. Este ensaio existe para deixar a previsão registrada em público *antes* do experimento. É um pré-registro no nível da teoria, e serve pelo mesmo motivo que o pré-registro comum: para que ninguém, nem o próprio autor, possa colar depois num resultado encontrado a frase "era exatamente isso que eu previa".
 
 O livro complementar, *O Código Celestial*, reúne os três pilares do programa num só texto. Este ensaio trata do mais incômodo deles.

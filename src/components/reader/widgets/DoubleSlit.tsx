@@ -11,16 +11,16 @@ import { Pause, Play, Reset, useCanvasSize, useLoop, usePalette, useVisible, pre
 
 const T: Dict<{ off: string; on: string; detector: string; play: string; pause: string; clear: string; photons: string; hint: string }> = {
   ru: { off: "не смотрим", on: "смотрим", detector: "Детектор у щелей", play: "Пуск", pause: "Пауза", clear: "Очистить экран", photons: "фотонов", hint: "Фотоны летят по одному. Включите детектор: полосы исчезнут, хотя сами фотоны и щели остались прежними." },
-  en: { off: "not looking", on: "looking", detector: "Detector at the slits", play: "Play", pause: "Pause", clear: "Clear screen", photons: "photons", hint: "Photons go one at a time. Turn the detector on and the fringes vanish, though the photons and slits are unchanged." },
+  en: { off: "not looking", on: "looking", detector: "Detector at the slits", play: "Play", pause: "Pause", clear: "Clear screen", photons: "photons", hint: "The photons fly one at a time. Turn the detector on and the fringes vanish, though the photons and slits are unchanged." },
   pt: { off: "sem olhar", on: "olhando", detector: "Detector nas fendas", play: "Iniciar", pause: "Pausar", clear: "Limpar a tela", photons: "fótons", hint: "Os fótons passam um de cada vez. Ligue o detector e as franjas somem, embora fótons e fendas sejam os mesmos." },
-  es: { off: "sin mirar", on: "mirando", detector: "Detector en las rendijas", play: "Iniciar", pause: "Pausa", clear: "Limpiar la pantalla", photons: "fotones", hint: "Los fotones pasan de uno en uno. Encienda el detector y las franjas desaparecen, aunque fotones y rendijas sigan iguales." },
+  es: { off: "sin mirar", on: "mirando", detector: "Detector en las rendijas", play: "Iniciar", pause: "Pausa", clear: "Limpiar la pantalla", photons: "fotones", hint: "Los fotones pasan de uno en uno. Enciende el detector y las franjas desaparecen, aunque fotones y rendijas sigan iguales." },
 };
 
 const H: Dict<{ temp: string; molecules: string; hint: string }> = {
-  ru: { temp: "Нагрев молекул", molecules: "молекул C₇₀", hint: "Грейте молекулы. Пока они тёплые, полосы целы; раскалённая молекула светится, её фотоны выдают путь — и полосы гаснут, хотя этих фотонов никто не ловит." },
+  ru: { temp: "Нагрев молекул", molecules: "молекул C₇₀", hint: "Нагревайте молекулы. Пока они тёплые, полосы целы; раскалённая молекула светится, её фотоны выдают путь, и полосы гаснут, хотя этих фотонов никто не ловит." },
   en: { temp: "Heating the molecules", molecules: "C₇₀ molecules", hint: "Heat the molecules. While they are warm the fringes survive; a red-hot molecule glows, its photons give away the path, and the fringes fade, though nobody catches those photons." },
   pt: { temp: "Aquecimento das moléculas", molecules: "moléculas de C₇₀", hint: "Aqueça as moléculas. Enquanto estão mornas, as franjas resistem; a molécula em brasa brilha, seus fótons revelam o caminho e as franjas se apagam, embora ninguém capture esses fótons." },
-  es: { temp: "Calentamiento de las moléculas", molecules: "moléculas de C₇₀", hint: "Caliente las moléculas. Mientras están tibias, las franjas resisten; la molécula al rojo brilla, sus fotones delatan el camino y las franjas se apagan, aunque nadie atrape esos fotones." },
+  es: { temp: "Calentamiento de las moléculas", molecules: "moléculas de C₇₀", hint: "Calienta las moléculas. Mientras están tibias, las franjas resisten; la molécula al rojo brilla, sus fotones delatan el camino y las franjas se apagan, aunque nadie atrape esos fotones." },
 };
 
 /** Видность полос от температуры молекулы, 0…1. */
