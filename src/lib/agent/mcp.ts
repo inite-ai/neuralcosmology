@@ -10,9 +10,14 @@ import { siteUrl, type AgentPrincipal } from "@/lib/auth";
 import {
   catalogApp,
   clientIp,
+  confirmApp,
   createSiteMcp,
   jsonResult,
+  memoryConsentStore,
   orderApp,
+  withConsent,
+  type InputRequired,
+  type ToolTurn,
   protectedResource,
   result,
   textResult,
@@ -21,6 +26,23 @@ import {
 } from "@inite/mcp/site";
 import { LIBRARY_ITEM, PRICES, formatPrice, type Currency } from "@/content/pricing";
 import { readerTools } from "@inite/reader/mcp";
+import { billing } from "@/lib/billing";
+import { db, dbConfigured } from "@/lib/db";
+import { sendMail } from "@/lib/mail";
+
+/** Код подтверждения для клиента без форм и карточек: только на подтверждённую почту читателя. */
+async function sendConsentCode({ principal, message, code, expiresAt }: { principal: string; message: string; code: string; expiresAt: Date }): Promise<boolean> {
+  if (!principal || !dbConfigured()) return false;
+  const sql = await db();
+  const [r] = await sql<{ email: string | null; email_verified: boolean }[]>`SELECT email, email_verified FROM readers WHERE user_id = ${principal}`.catch(() => []);
+  if (!r?.email || !r.email_verified) return false;
+  const minutes = Math.max(1, Math.round((expiresAt.getTime() - Date.now()) / 60_000));
+  return sendMail(
+    r.email,
+    `Your confirmation code: ${code}`,
+    `An AI agent you use asks you to confirm this on neuralcosmology.com:\n\n${message}\n\nIf you agree, tell the agent this code: ${code}\nIt works for ${minutes} minutes. If you did not ask for this, ignore this letter.`,
+  );
+}
 import { reader as bookReader, fromToken, type SiteSession } from "@/lib/reader/reader.server";
 // Версия MCP одна на сайт и реестр; растёт только с тем, что видит агент (scripts/mcp-surface.mjs).
 import serverJson from "../../../server.json";
@@ -174,7 +196,7 @@ async function owned(reader: Reader): Promise<Set<string>> {
   return out;
 }
 
-async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): Promise<ToolResult | null> {
+async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx, turn?: ToolTurn): Promise<ToolResult | InputRequired | null> {
   switch (name) {
     case "search": {
       const query = str(args.query);
@@ -229,6 +251,20 @@ async function callTool(name: string, args: Record<string, unknown>, ctx: Ctx): 
         });
         // What the order card shows: the book, the price, and the ways to pay.
         const book = books.find((b) => b.slug === res.item);
+        // The reader allowed this site to charge their wallet: still, this one purchase is theirs
+        // to confirm, not the model's (owner decision 3, 09.11.2026). Billing refuses without the proof.
+        if (res.wallet?.status === "needs_consent" && ctx.reader) {
+          const title = res.item === LIBRARY_ITEM ? "The whole library" : (book?.titles.en ?? res.item);
+          const price = formatPrice(PRICES[res.item === LIBRARY_ITEM ? "library" : "book"][res.currency as Currency], res.currency as Currency);
+          const yes = turn ? await turn.consent("pay", { message: `Pay ${price} for "${title}" from your INITE wallet?`, summary: { Item: title, Price: price, From: "Your INITE wallet" } }) : null;
+          if (yes?.status === "pending") return yes.result;
+          if (yes?.status === "confirmed") {
+            const paid = await billing().payFromWallet(res.sessionId, ctx.reader.sub, { returnTo: res.returnTo, consent: { via: yes.proof.via, nonce: yes.proof.nonce } });
+            res.wallet = paid.status === "unavailable" || paid.status === "needs_consent" ? undefined : paid;
+          } else {
+            res.wallet = undefined;
+          }
+        }
         const card = {
           title: res.item === LIBRARY_ITEM ? "The whole library" : (book?.titles.en ?? res.item),
           image: book?.coverImage ? `${siteUrl()}${book.coverImage}` : undefined,
@@ -286,6 +322,7 @@ const INSTRUCTIONS =
 const cards = {
   catalog: catalogApp("neuralcosmology", ["https://neuralcosmology.com"]),
   order: orderApp("neuralcosmology", ["https://neuralcosmology.com"]),
+  confirm: confirmApp("neuralcosmology"),
 };
 
 // Инструменты читалки (@inite/reader): обсуждение главы, комментарий и заметка автору
@@ -304,15 +341,23 @@ function readerSiteTools(ctx: Ctx): SiteTool<Ctx>[] {
     name: t.name,
     title: t.title,
     description: t.description,
-    inputSchema: t.inputSchema,
+    inputSchema: t.consent ? withConsent(t.inputSchema as { type: "object"; properties?: Record<string, unknown> }) : t.inputSchema,
     annotations: t.annotations,
     // Область проверяет @inite/mcp/site по scopes из токена (verifyAgentToken); без неё — 403.
     ...(t.scope ? { signedIn: { scope: t.scope } } : {}),
+    ...(t.consent ? { ui: { app: cards.confirm, invoking: "Preparing…", invoked: "Waiting for your confirmation" } } : {}),
     parse: (args: unknown) => {
       const r = t.parse(args);
       return r.ok ? { success: true as const, data: r.value } : { success: false as const, error: r.error };
     },
-    call: async (args: Record<string, unknown>) => {
+    call: async (args: Record<string, unknown>, _ctx: Ctx, turn: ToolTurn) => {
+      // Комментарий или письмо от имени читателя: слова подтверждает он сам, а не модель.
+      const ask = t.consent && ctx.person ? t.consent(args) : null;
+      if (ask) {
+        const yes = await turn.consent("confirm", ask);
+        if (yes.status === "pending") return yes.result;
+        if (yes.status === "declined") return result("The reader did not confirm. Nothing was sent.", { error: "declined" }, true);
+      }
       const res = await t.call(bookReader, args, ctx.person);
       return result(res.text, res.data, res.isError);
     },
@@ -321,21 +366,24 @@ function readerSiteTools(ctx: Ctx): SiteTool<Ctx>[] {
 
 export const mcp = createSiteMcp<Ctx>({
   name: "neuralcosmology",
-  apps: [cards.catalog, cards.order],
+  apps: [cards.catalog, cards.order, cards.confirm],
+  ...(process.env.MCP_STATE_SECRET || process.env.AUDIENCE_SECRET ? { stateSecret: process.env.MCP_STATE_SECRET || `mcp-state:${process.env.AUDIENCE_SECRET}` } : {}),
+  principalOf: (ctx) => ctx.reader?.sub ?? "",
+  consent: { store: memoryConsentStore({ allowInProduction: true }), finishUrl: "https://neuralcosmology.com", deliver: sendConsentCode },
   title: "Neural Cosmology",
   version: serverJson.version,
   instructions: (ctx) =>
     INSTRUCTIONS +
     (ctx.reader
-      ? " You are signed in as the reader: their books read in full, and orders are paid from their INITE wallet when they allowed this site."
+      ? " You are signed in as the reader: their books read in full. An order is paid from their INITE wallet when they allowed this site and confirm that one purchase themselves; a comment or a note in their name also waits for their own confirmation."
       : " To act as a signed-in reader, connect to /mcp/account instead."),
   tools: (ctx): SiteTool<Ctx>[] => [
     ...tools(ctx).map((tool) => ({
       ...tool,
       ...(tool.name === "list_books" ? { ui: { app: cards.catalog, invoking: "Looking at the books…", invoked: "Books" } } : {}),
       ...(tool.name === "create_checkout" ? { ui: { app: cards.order, invoking: "Opening the order…", invoked: "Order" } } : {}),
-      call: async (args: Record<string, unknown>) =>
-        (await callTool(tool.name, args, ctx)) ?? text(`Unknown tool: ${tool.name}`, true),
+      call: async (args: Record<string, unknown>, _ctx: Ctx, turn: ToolTurn) =>
+        (await callTool(tool.name, args, ctx, turn)) ?? text(`Unknown tool: ${tool.name}`, true),
     })),
     ...readerSiteTools(ctx),
   ],

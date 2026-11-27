@@ -34,6 +34,9 @@ export async function createAgentCheckout(input: {
   item: string;
   forAccount: boolean;
   wallet?: WalletPayment;
+  /** Billing's session id and where the reader returns: to pay it later with their consent. */
+  sessionId: string;
+  returnTo: string;
 }> {
   const { item, locale } = input;
   if (item !== LIBRARY_ITEM && !(getBookBySlug(item) && isInLibrary(item))) {
@@ -97,6 +100,8 @@ export async function createAgentCheckout(input: {
     item,
     forAccount: !!input.userId,
     ...(wallet && wallet.status !== "unavailable" ? { wallet } : {}),
+    sessionId: session.sessionId,
+    returnTo: `${site}${readPath}`,
   };
 }
 
